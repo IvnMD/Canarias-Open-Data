@@ -146,19 +146,70 @@ El fichero contiene un array de entidades con estructura normalizada:
 
 ```json
 
-  "id": "string",
-  "name": "string",
-  "type": "string",
-  "island": "string",
-  "portal_url": "string",
-  "api_url": "string",
-  "portal_technology": "string",
-  "data_categories": ["string"],
-  "formats": ["string"],
-  "dataset_count": number,
-  "license": "string",
-  "last_updated": "string",
-  "description": "string"
+{
+  "id": "string (único, slug)",
+  "name": "string (nombre oficial completo)",
+  "type": "enum: gobierno_autonomico | organismo_especializado | organismo_especializado_geoespacial | cabildo | ayuntamiento | empresa_publica",
+  "islands": ["string"] (ej: ["Todas"] o ["Tenerife", "Gran Canaria"]),
+  
+  "portal": {
+    "url": "string (URL principal del portal)",
+    "technology": "string (CKAN | CKAN+OGC | eDatos | Custom | etc.)"
+  },
+  
+  "apis": [
+    {
+      "name": "string",
+      "url": "string",
+      "type": "enum: REST | OGC | SOAP | SPARQL | NTRIP | Catálogo",
+      "description": "string",
+      "access": "enum: Público | Con api-key | Restringido | Híbrido",
+      "documentation": "string (URL)"
+    }
+  ],
+  
+  "data": {
+    "categories": ["string"],
+    "formats": ["string"],
+    "count": "number | null",
+    "count_note": "string | null (si hay aclaraciones)"
+  },
+  
+  "licenses": [
+    {
+      "type": "string (nombre de licencia)",
+      "count": "number | null",
+      "url": "string | null"
+    }
+  ],
+  "license_predominant": "string",
+  
+  "metadata": {
+    "last_updated": "string (YYYY-MM)",
+    "update_frequency": "string (diaria | semanal | mensual | anual | variable | tiempo_real)",
+    "legal_basis": "string | null (leyes/normativa aplicable)"
+  },
+  
+  "organization": {
+    "parent_organization": "string | null",
+    "publishers": ["string"] (quién publica qué)
+  },
+  
+  "infrastructure": {
+    "main_services": ["string"],
+    "tools": ["string"],
+    "compliance": ["string (INSPIRE | DCAT | OGC | SISC | etc.)"]
+  },
+  
+  "geographic": {
+    "coordinates": {
+      "lat": "number | null",
+      "lon": "number | null"
+    },
+    "coverage": "string | null (ej: 'Todas las islas')"
+  },
+  
+  "description": "string (resumen ejecutivo)"
 }
 ```
 
