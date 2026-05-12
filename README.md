@@ -279,6 +279,11 @@ cd open-data-canarias
 
 ---
 
+# 📚 Documentación del equipo
+- [Guía de contribución](./CONTRIBUTING.md)
+- [Gestión de tareas](./GESTION_PROYECTO.md)
+
+---
 # Uso
 
 Generar la web:
