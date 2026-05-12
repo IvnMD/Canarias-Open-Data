@@ -503,5 +503,304 @@
       "lat": 28.35,
       "lon": -16.25
     }
-  }
+  },
+  {
+  "id": "cabildo_tenerife",
+  "name": "Cabildo de Tenerife",
+  "type": "cabildo",
+  "islands": ["Tenerife"],
+
+  "portal": {
+    "url": "https://datos.tenerife.es",
+    "technology": "CKAN"
+  },
+
+  "apis": [
+    {
+      "name": "CKAN API",
+      "url": "https://datos.tenerife.es/api/3/action/package_search",
+      "type": "REST",
+      "description": "API principal de acceso al catálogo y datasets del portal.",
+      "access": "Público",
+      "documentation": "https://datos.tenerife.es/es/datos/api"
+    },
+    {
+      "name": "Servicios geográficos",
+      "url": "https://datos.tenerife.es",
+      "type": "OGC",
+      "description": "Servicios geoespaciales interoperables para mapas y capas territoriales.",
+      "access": "Público",
+      "documentation": "https://datos.tenerife.es"
+    }
+  ],
+
+  "data": {
+    "categories": [
+      "turismo",
+      "movilidad",
+      "transporte público",
+      "medio ambiente",
+      "territorio",
+      "cartografía",
+      "equipamientos",
+      "sector público",
+      "cultura",
+      "deportes",
+      "infraestructuras",
+      "economía"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON",
+      "XLSX",
+      "XML",
+      "KML",
+      "PDF",
+      "API"
+    ],
+    "count": 285,
+    "count_note": "Número aproximado de datasets publicados en el portal."
+  },
+
+  "licenses": [
+    {
+      "type": "CC BY 4.0",
+      "count": null,
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+
+  "license_predominant": "CC BY 4.0",
+
+  "metadata": {
+    "last_updated": "2026-05",
+    "update_frequency": "variable",
+    "legal_basis": "Ley 37/2007 sobre reutilización de la información del sector público y normativa INSPIRE."
+  },
+
+  "organization": {
+    "parent_organization": null,
+    "publishers": [
+      "Cabildo de Tenerife",
+      "Áreas y servicios insulares",
+      "Entidades públicas dependientes"
+    ]
+  },
+
+  "infrastructure": {
+    "main_services": [
+      "Portal Open Data",
+      "API CKAN",
+      "Servicios geográficos OGC",
+      "Descarga masiva de datasets"
+    ],
+    "tools": [
+      "CKAN",
+      "OGC",
+      "GeoServer"
+    ],
+    "compliance": [
+      "DCAT",
+      "OGC",
+      "INSPIRE"
+    ]
+  },
+
+  "geographic": {
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    },
+    "coverage": "Isla de Tenerife"
+  },
+
+  "description": "Portal de datos abiertos del Cabildo de Tenerife con información pública sobre movilidad, turismo, territorio, medio ambiente, cartografía, equipamientos, infraestructuras, cultura y datos institucionales."
+},
+{
+  "id": "ayuntamiento_las_palmas_gc",
+  "name": "Ayuntamiento de Las Palmas de Gran Canaria",
+  "type": "ayuntamiento",
+  "islands": ["Gran Canaria"],
+
+  "portal": {
+    "url": "https://datosabiertos.laspalmasgc.es",
+    "technology": "CKAN"
+  },
+
+  "apis": [
+    {
+      "name": "CKAN API",
+      "url": "https://datosabiertos.laspalmasgc.es/api/3/action/package_search",
+      "type": "REST",
+      "description": "API principal para consulta del catálogo de datos abiertos municipales.",
+      "access": "Público",
+      "documentation": "https://datosabiertos.laspalmasgc.es"
+    }
+  ],
+
+  "data": {
+    "categories": [
+      "movilidad",
+      "transporte",
+      "tráfico",
+      "turismo",
+      "medio ambiente",
+      "urbanismo",
+      "playas",
+      "cultura",
+      "deportes",
+      "presupuestos",
+      "equipamientos",
+      "participación ciudadana"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON"
+    ],
+    "count": 170,
+    "count_note": "Estimación del número de datasets publicados en el portal."
+  },
+
+  "licenses": [
+    {
+      "type": "CC BY 4.0",
+      "count": null,
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+
+  "license_predominant": "CC BY 4.0",
+
+  "metadata": {
+    "last_updated": "2026-05",
+    "update_frequency": "variable",
+    "legal_basis": "Ley 37/2007 sobre reutilización de la información del sector público"
+  },
+
+  "organization": {
+    "parent_organization": null,
+    "publishers": [
+      "Ayuntamiento de Las Palmas de Gran Canaria",
+      "Áreas municipales"
+    ]
+  },
+
+  "infrastructure": {
+    "main_services": [
+      "Portal Open Data",
+      "API CKAN"
+    ],
+    "tools": [
+      "CKAN"
+    ],
+    "compliance": [
+      "DCAT"
+    ]
+  },
+
+  "geographic": {
+    "coordinates": {
+      "lat": 28.1248,
+      "lon": -15.4300
+    },
+    "coverage": "Municipio de Las Palmas de Gran Canaria"
+  },
+
+  "description": "Portal de datos abiertos del Ayuntamiento de Las Palmas de Gran Canaria con información sobre movilidad, turismo, urbanismo, playas, cultura, medio ambiente y datos municipales."
+},{
+  "id": "ayuntamiento_santa_cruz_tenerife",
+  "name": "Ayuntamiento de Santa Cruz de Tenerife",
+  "type": "ayuntamiento",
+  "islands": ["Tenerife"],
+
+  "portal": {
+    "url": "https://opendata.santacruzdetenerife.es",
+    "technology": "CKAN"
+  },
+
+  "apis": [
+    {
+      "name": "CKAN API",
+      "url": "https://opendata.santacruzdetenerife.es/api/3/action/package_search",
+      "type": "REST",
+      "description": "API principal para consulta del catálogo de datos abiertos municipales.",
+      "access": "Público",
+      "documentation": "https://opendata.santacruzdetenerife.es"
+    }
+  ],
+
+  "data": {
+    "categories": [
+      "movilidad",
+      "transporte",
+      "tráfico",
+      "urbanismo",
+      "medio ambiente",
+      "turismo",
+      "cultura",
+      "playas",
+      "seguridad",
+      "equipamientos",
+      "participación ciudadana",
+      "datos institucionales"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON"
+    ],
+    "count": 140,
+    "count_note": "Estimación del número de datasets publicados en el portal."
+  },
+
+  "licenses": [
+    {
+      "type": "CC BY 4.0",
+      "count": null,
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+
+  "license_predominant": "CC BY 4.0",
+
+  "metadata": {
+    "last_updated": "2026-05",
+    "update_frequency": "variable",
+    "legal_basis": "Ley 37/2007 sobre reutilización de la información del sector público"
+  },
+
+  "organization": {
+    "parent_organization": null,
+    "publishers": [
+      "Ayuntamiento de Santa Cruz de Tenerife",
+      "Áreas municipales"
+    ]
+  },
+
+  "infrastructure": {
+    "main_services": [
+      "Portal Open Data",
+      "API CKAN"
+    ],
+    "tools": [
+      "CKAN"
+    ],
+    "compliance": [
+      "DCAT"
+    ]
+  },
+
+  "geographic": {
+    "coordinates": {
+      "lat": 28.4632,
+      "lon": -16.2518
+    },
+    "coverage": "Municipio de Santa Cruz de Tenerife"
+  },
+
+  "description": "Portal de datos abiertos del Ayuntamiento de Santa Cruz de Tenerife con información sobre movilidad, urbanismo, tráfico, playas, turismo, medio ambiente, cultura y servicios municipales."
+}
+
 ]
