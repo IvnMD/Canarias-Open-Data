@@ -1,7 +1,5 @@
 # Practicas-DAM-Datos-Abiertos
 
-Directorio interactivo y visualizador del ecosistema de datos abiertos de las Islas Canarias.
-
 Este proyecto recopila, estructura y presenta información sobre organismos públicos canarios que publican datos abiertos, incluyendo administraciones autonómicas, cabildos, ayuntamientos, organismos estadísticos, entidades geoespaciales y empresas públicas.
 
 La aplicación genera automáticamente una web estática a partir de un fichero JSON centralizado, permitiendo explorar entidades, tecnologías, formatos, APIs y tipologías de datasets publicados en Canarias.
