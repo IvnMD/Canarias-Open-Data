@@ -40,7 +40,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* CARD */
@@ -115,4 +115,15 @@ footer {
   #results {
     grid-template-columns: 1fr;
   }
+}
+
+/* V1: cards igual altura */
+#results {
+  align-items: stretch;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
