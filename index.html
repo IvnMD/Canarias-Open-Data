@@ -1,301 +1,221 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consulta de Datos Abiertos | Canarias</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-      color: #333;
-    }
+<title>Datos Abiertos Canarias</title>
 
-    /* HEADER */
-    header {
-      background-color: #003a8f;
-      color: white;
-      padding: 1.5rem;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 1.6rem;
-    }
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
+header {
+  background: #003a8f;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
 
-    /* MAIN */
-    main {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
+header h1 {
+  margin: 0;
+}
 
-    /* BUSCADOR */
-    .search-box {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
 
-    .search-box input,
-    .search-box select,
-    .search-box button {
-      padding: 0.6rem;
-      font-size: 0.95rem;
-    }
+.search {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.5rem;
+}
 
-    .search-box input {
-      flex: 2;
-      min-width: 250px;
-    }
+.search input, .search select {
+  padding: 0.7rem;
+  font-size: 1rem;
+}
 
-    .search-box select {
-      flex: 1;
-      min-width: 180px;
-    }
+/* RESULTS */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+}
 
-    .search-box button {
-      background-color: #003a8f;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
 
-    .search-box button:hover {
-      background-color: #002c6a;
-    }
 
-    /* RESULTADOS */
-    .results {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-    .card {
-      background-color: white;
-      border-radius: 6px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
+.card h3 {
+  margin-top: 0;
+  color: #003a8f;
+}
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-    }
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #e6ecf5;
+  color: #003a8f;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  margin: 2px;
+}
 
-    .card p {
-      font-size: 0.9rem;
-      color: #555;
-    }
+a {
+  color: #003a8f;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    /* TAGS */
-    .tags {
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
-    }
 
-    .tag {
-      display: inline-block;
-      background-color: #e6ecf5;
-      color: #003a8f;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      margin-right: 0.3rem;
-    }
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
 
-    /* NO RESULTS */
-    .no-results {
-      display: none;
-      margin-top: 2rem;
-      text-align: center;
-      color: #777;
-    }
 
-    /* FOOTER */
-    footer.footer {
-      background-color: #eee;
-      padding: 1rem;
-      font-size: 0.85rem;
-      margin-top: 3rem;
-    }
-
-    .footer-container {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    /* 📱 MÓVIL */
-    @media (max-width: 599px) {
-      .footer-container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-    }
-
-    /* 📟 TABLET */
-    @media (min-width: 600px) and (max-width: 1023px) {
-      .footer-container {
-        justify-content: space-between;
-        text-align: justify;
-      }
-    }
-
-    /* 💻 ESCRITORIO */
-    @media (min-width: 1024px) {
-      .footer-container {
-        justify-content: space-between;
-      }
-
-      .footer-container span:first-child {
-        text-align: left;
-      }
-
-      .footer-container span:last-child {
-        text-align: right;
-      }
-    }
-  </style>
+@media (max-width: 768px) {
+  .search {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Consulta de Datos Abiertos de Canarias</h1>
-  <p>Buscador unificado de datasets públicos</p>
+  <h1>Portal de Datos Abiertos de Canarias</h1>
+  <p>Buscador unificado de instituciones y datasets</p>
 </header>
 
+
+<div class="search">
+  <input id="searchText" placeholder="Buscar (ej: turismo, ISTAC, OSM...)">
+
+  <select id="filterType">
+    <option value="">Todos los tipos</option>
+    <option value="gobierno_autonomico">Gobierno</option>
+    <option value="organismo_especializado">Organismo</option>
+    <option value="organismo_especializado_geoespacial">Geoespacial</option>
+    <option value="cabildo">Cabildo</option>
+    <option value="ayuntamiento">Ayuntamiento</option>
+  </select>
+
+  <select id="filterIsland">
+    <option value="">Todas las islas</option>
+    <option value="canarias">Canarias</option>
+    <option value="Tenerife">Tenerife</option>
+    <option value="Gran Canaria">Gran Canaria</option>
+  </select>
+</div>
+
 <main>
-
-  <!-- BUSCADOR -->
-  <section class="search-box">
-    <input id="searchText" type="text" placeholder="Buscar por palabra clave">
-
-    <select id="searchIsland">
-      <option value="">Todas las islas</option>
-      <option>Tenerife</option>
-      <option>Gran Canaria</option>
-      <option>Lanzarote</option>
-      <option>Fuerteventura</option>
-      <option>La Palma</option>
-      <option>La Gomera</option>
-      <option>El Hierro</option>
-    </select>
-
-    <select id="searchCategory">
-      <option value="">Todas las categorías</option>
-      <option>Estadística</option>
-      <option>Territorio</option>
-      <option>Medio ambiente</option>
-      <option>Transporte</option>
-      <option>Economía</option>
-      <option>Turismo</option>
-    </select>
-
-    <button id="searchBtn">Buscar</button>
-  </section>
-
-  <!-- RESULTADOS -->
-  <section class="results" id="results">
-
-    <div class="card"
-         data-title="población por municipios"
-         data-island="Tenerife"
-         data-category="Estadística">
-      <h3>Población por municipios</h3>
-      <p>Datos demográficos oficiales desagregados por municipio e isla.</p>
-      <div class="tags">
-        <span class="tag">Estadística</span>
-        <span class="tag">ISTAC</span>
-        <span class="tag">CSV</span>
-      </div>
-    </div>
-
-    <div class="card"
-         data-title="red de carreteras"
-         data-island="Gran Canaria"
-         data-category="Territorio">
-      <h3>Red de carreteras</h3>
-      <p>Cartografía de la red viaria insular con información geoespacial.</p>
-      <div class="tags">
-        <span class="tag">Territorio</span>
-        <span class="tag">SITCAN</span>
-        <span class="tag">GeoJSON</span>
-      </div>
-    </div>
-
-    <div class="card"
-         data-title="afluencia turística mensual"
-         data-island="Todas"
-         data-category="Turismo">
-      <h3>Afluencia turística mensual</h3>
-      <p>Series temporales de turistas por isla y país de origen.</p>
-      <div class="tags">
-        <span class="tag">Turismo</span>
-        <span class="tag">Economía</span>
-        <span class="tag">JSON</span>
-      </div>
-    </div>
-
-  </section>
-
-  <p id="noResults" class="no-results">No se encontraron resultados</p>
-
+  <div id="results"></div>
 </main>
 
-<footer class="footer">
-  <div class="footer-container">
-    <span>© 2026 · Datos Abiertos de Canarias</span>
-    <span>Proyecto demostrativo</span>
-  </div>
+<footer>
+  © 2026 · Datos Abiertos Canarias · Demo educativa
 </footer>
 
 <script>
-  document.getElementById("searchBtn").addEventListener("click", filterData);
-  document.getElementById("searchText").addEventListener("keyup", filterData);
-  document.getElementById("searchIsland").addEventListener("change", filterData);
-  document.getElementById("searchCategory").addEventListener("change", filterData);
+let data = [];
 
-  function filterData() {
-    const text = document.getElementById("searchText").value.toLowerCase();
-    const island = document.getElementById("searchIsland").value;
-    const category = document.getElementById("searchCategory").value;
 
-    const cards = document.querySelectorAll(".card");
-    let visibleCount = 0;
+fetch("entidades.json")
+  .then(r => r.json())
+  .then(json => {
+    data = json.flat(); 
+    render(data);
+  });
 
-    cards.forEach(card => {
-      const title = card.dataset.title;
-      const cardIsland = card.dataset.island;
-      const cardCategory = card.dataset.category;
 
-      const matchText = title.includes(text);
-      const matchIsland = !island || cardIsland === island || cardIsland === "Todas";
-      const matchCategory = !category || cardCategory === category;
+document.getElementById("searchText").addEventListener("input", filter);
+document.getElementById("filterType").addEventListener("change", filter);
+document.getElementById("filterIsland").addEventListener("change", filter);
 
-      if (matchText && matchIsland && matchCategory) {
-        card.style.display = "block";
-        visibleCount++;
-      } else {
-        card.style.display = "none";
-      }
-    });
 
-    document.getElementById("noResults").style.display =
-      visibleCount === 0 ? "block" : "none";
-  }
+function filter() {
+  const text = document.getElementById("searchText").value.toLowerCase();
+  const type = document.getElementById("filterType").value;
+  const island = document.getElementById("filterIsland").value;
+
+  const filtered = data.filter(e => {
+
+    const matchText =
+      (e.name || "").toLowerCase().includes(text) ||
+      (e.description || "").toLowerCase().includes(text) ||
+      (e.data_categories || []).join(" ").toLowerCase().includes(text);
+
+    const matchType = !type || e.type === type;
+
+    const matchIsland =
+      !island ||
+      e.island?.includes(island) ||
+      e.islands?.includes(island) ||
+      e.island === "canarias";
+
+    return matchText && matchType && matchIsland;
+  });
+
+  render(filtered);
+}
+
+
+function render(list) {
+  const container = document.getElementById("results");
+  container.innerHTML = "";
+
+  list.forEach(e => {
+
+    const categories = (e.data_categories || []).slice(0, 5);
+    const formats = (e.formats || []).slice(0, 5);
+
+    container.innerHTML += `
+      <div class="card">
+        <h3>${e.name}</h3>
+
+        <p><strong>Tipo:</strong> ${e.type}</p>
+        <p><strong>Portal:</strong> 
+          <a href="${e.portal_url}" target="_blank">Abrir</a>
+        </p>
+
+        <p><strong>Dataset:</strong> ${e.dataset_count || "N/D"}</p>
+
+        <p><strong>Categorías:</strong><br>
+          ${categories.map(c => `<span class="badge">${c}</span>`).join("")}
+        </p>
+
+        <p><strong>Formatos:</strong><br>
+          ${formats.map(f => `<span class="badge">${f}</span>`).join("")}
+        </p>
+
+        ${
+          e.coordinates
+            ? `<p>📍 ${e.coordinates.lat}, ${e.coordinates.lon}</p>`
+            : ""
+        }
+      </div>
+    `;
+  });
+}
 </script>
 
 </body>
