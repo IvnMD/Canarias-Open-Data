@@ -145,24 +145,20 @@ Toda la información del proyecto se centraliza en `entidades.json`.
 El fichero contiene un array de entidades con estructura normalizada:
 
 ```json
-{
-  "id": "cabildo_tenerife",
-  "nombre": "Cabildo de Tenerife",
-  "tipo": "cabildo",
-  "isla": "Tenerife",
-  "portal_url": "https://...",
-  "api_url": "https://...",
-  "tecnologia_portal": "CKAN",
-  "tipos_datos": ["turismo", "movilidad"],
-  "formatos": ["CSV", "JSON"],
-  "num_datasets": 120,
-  "licencia": "CC BY 4.0",
-  "ultimo_actualizado": "2026-05",
-  "descripcion": "Portal de datos abiertos del Cabildo de Tenerife",
-  "coordenadas": {
-    "lat": 28.4636,
-    "lon": -16.2518
-  }
+
+  "id": "string",
+  "name": "string",
+  "type": "string",
+  "island": "string",
+  "portal_url": "string",
+  "api_url": "string",
+  "portal_technology": "string",
+  "data_categories": ["string"],
+  "formats": ["string"],
+  "dataset_count": number,
+  "license": "string",
+  "last_updated": "string",
+  "description": "string"
 }
 ```
 
