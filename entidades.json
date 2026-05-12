@@ -1,4 +1,305 @@
 {
+  "id": "gobierno_canarias",
+  "name": "Gobierno de Canarias – Portal de Datos Abiertos",
+  "type": "gobierno_autonomico",
+  "island": "Todas",
+  "portal_url": "https://datos.canarias.es",
+  "api_url": "https://datos.canarias.es/api/3/action/",
+  "portal_technology": "CKAN",
+  "data_categories": [
+    "Turismo",
+    "Demografía",
+    "Economía",
+    "Empleo",
+    "Medio ambiente",
+    "Salud",
+    "Educación",
+    "Sector público",
+    "Administración",
+    "Transporte",
+    "Urbanismo",
+    "Energía",
+    "Industria",
+    "Comercio",
+    "Hacienda",
+    "Cultura",
+    "Deportes",
+    "Legislación",
+    "Seguridad",
+    "Vivienda",
+    "Medio rural",
+    "Ciencia y Tecnología"
+  ],
+  "formats": [
+    "CSV",
+    "JSON",
+    "XML",
+    "GeoJSON",
+    "KML",
+    "SHP",
+    "GPKG",
+    "PC-Axis",
+    "ODS",
+    "XLSX",
+    "RDF",
+    "RDF-XML",
+    "N3",
+    "Turtle",
+    "HTML",
+    "PDF",
+    "API",
+    "WMS",
+    "WFS",
+    "ATOM",
+    "RSS"
+  ],
+  "dataset_count": 22000,
+  "licenses": [
+    {
+      "type": "Aviso Legal ISTAC",
+      "count": 21755
+    },
+    {
+      "type": "Aviso Legal Gobierno Canarias",
+      "count": 291
+    },
+    {
+      "type": "CC BY 4.0",
+      "count": 285
+    },
+    {
+      "type": "Aviso Legal SITCAN",
+      "count": 24
+    }
+  ],
+  "license_predominant": "Aviso Legal ISTAC",
+  "last_updated": "2026-05",
+  "description": "Portal central que integra datos del Gobierno de Canarias, ISTAC y SITCAN. Más de 22.000 datasets federados con datos.gob.es y European Data Portal.",
+  "coordinates": {
+    "lat": 28.29,
+    "lon": -16.62
+  }
+}
+
+{
+  "id": "istac",
+  "name": "ISTAC – Instituto Canario de Estadística",
+  "type": "organismo_especializado",
+  "island": "Todas",
+  "portal_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/",
+  "api_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/",
+  "portal_technology": "eDatos (Infraestructura de Datos y Metadatos Estadísticos)",
+  "data_categories": [
+    "Demografía",
+    "Población",
+    "Padrón municipal",
+    "Migraciones",
+    "Mercado laboral",
+    "Empleo registrado",
+    "Paro registrado",
+    "Afiliaciones a SS",
+    "Turismo",
+    "Ocupación hotelera",
+    "Pernoctaciones",
+    "Llegadas de viajeros",
+    "Salud",
+    "Epidemiología",
+    "Hospitales",
+    "Vacunación",
+    "Educación",
+    "Formación Profesional",
+    "Universidades",
+    "Economía",
+    "PIB",
+    "Renta per cápita",
+    "Indicadores coyunturales",
+    "Precios",
+    "IPC",
+    "Vivienda",
+    "Régimen de vivienda",
+    "Construcción",
+    "Obras de edificación",
+    "Sector público",
+    "Administración",
+    "Gasto público",
+    "Industria",
+    "Producción industrial",
+    "Energía",
+    "Consumo energético",
+    "Medio ambiente",
+    "Clima",
+    "Temperatura",
+    "Precipitaciones",
+    "Agua",
+    "Recursos hídricos",
+    "Comercio",
+    "Exportaciones",
+    "Importaciones",
+    "Actividad económica",
+    "CNAE",
+    "Agricultura",
+    "Ganadería",
+    "Pesca",
+    "Minería",
+    "Servicios",
+    "Transporte",
+    "Comunicaciones",
+    "Cultura",
+    "Deporte",
+    "Ciencia y Tecnología",
+    "TIC",
+    "I+D"
+  ],
+  "formats": [
+    "PC-Axis (.px)",
+    "JSON",
+    "CSV",
+    "XLSX",
+    "XML",
+    "Google Visualization API",
+    "TSV",
+    "RDF"
+  ],
+  "apis": [
+    {
+      "name": "e-Base API",
+      "description": "Acceso a tablas estadísticas principales",
+      "formats": [
+        "PC-Axis",
+        "JSON",
+        "Google Visualization"
+      ],
+      "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html"
+    },
+    {
+      "name": "e-Cubos API",
+      "description": "Cubos o tablas multidimensionales (sustituto moderno de e-Base)",
+      "formats": [
+        "JSON"
+      ],
+      "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html"
+    },
+    {
+      "name": "e-Indicadores API",
+      "description": "Indicadores por isla, municipio y otras granularidades territoriales",
+      "formats": [
+        "JSON"
+      ],
+      "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html"
+    },
+    {
+      "name": "e-Operaciones API",
+      "description": "Inventario de Operaciones Estadísticas (IOE)",
+      "formats": [
+        "JSON"
+      ],
+      "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html"
+    },
+    {
+      "name": "e-Semántica API",
+      "description": "Recursos estructurales: clasificaciones, conceptos, variables, esquemas DSD",
+      "formats": [
+        "JSON"
+      ],
+      "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html"
+    },
+    {
+      "name": "API Georreferenciación",
+      "description": "Convierte direcciones en coordenadas y viceversa, basado en Pelias",
+      "formats": [
+        "JSON"
+      ],
+      "documentation": "https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Plugin istacqgis",
+      "type": "QGIS",
+      "description": "Acceso directo a datos abiertos ISTAC desde QGIS",
+      "version": "0.4",
+      "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/"
+    },
+    {
+      "name": "Librería Python",
+      "description": "Acceso programático mediante Python",
+      "url": "https://jecas.es/wp-content/uploads/2021/11/12.1.ISTAC_Librer%C3%ADas-R-Python.pdf"
+    },
+    {
+      "name": "Librería R",
+      "description": "Acceso programático mediante R",
+      "url": "https://jecas.es/wp-content/uploads/2021/11/12.1.ISTAC_Librer%C3%ADas-R-Python.pdf"
+    },
+    {
+      "name": "RSS Feeds",
+      "description": "Suscripción a actualizaciones de datos"
+    }
+  ],
+  "data_structure": {
+    "e_base": {
+      "description": "Principal repositorio de datos estadísticos",
+      "format": "PC-Axis (PX)",
+      "status": "Gradualmente sustituido por e-Cubos"
+    },
+    "e_cubos": {
+      "description": "Banco de datos multidimensionales (OLAP)",
+      "format": "JSON",
+      "status": "Nuevo estándar"
+    },
+    "e_indicadores": {
+      "description": "Banco de indicadores por territorio",
+      "granularidad": [
+        "Canarias",
+        "Islas",
+        "Municipios",
+        "Otras divisiones territoriales"
+      ]
+    },
+    "e_operaciones": {
+      "description": "Inventario de Operaciones Estadísticas del Gobierno de Canarias",
+      "visibility": "Solo vía API"
+    },
+    "e_semantica": {
+      "description": "Banco de recursos estructurales para normalización",
+      "resources": [
+        "Clasificaciones",
+        "Conceptos",
+        "Variables",
+        "Esquemas DSD",
+        "Organizaciones",
+        "Temas"
+      ],
+      "visibility": "Solo vía API"
+    }
+  },
+  "dataset_count": 21755,
+  "licenses": [
+    {
+      "type": "Aviso Legal ISTAC",
+      "description": "Licencia abierta del ISTAC (uso comercial y no comercial permitido)",
+      "count": 21755
+    }
+  ],
+  "license_predominant": "Aviso Legal ISTAC",
+  "last_updated": "2026-05",
+  "update_frequency": "Diaria/Semanal (datos demográficos, empleo, turismo)",
+  "description": "Principal fuente estadística de Canarias. 21.755+ datasets con APIs especializadas (eDatos: e-Base, e-Cubos, e-Indicadores, e-Operaciones, e-Semántica). Acceso mediante APIs REST, plugin QGIS, librerías R/Python.",
+  "key_features": [
+    "APIs especializadas eDatos para consultas multidimensionales",
+    "Datos demográficos, laborales, turísticos y económicos con máxima granularidad territorial",
+    "PC-Axis (formato abierto estándar en estadística oficial)",
+    "Plugin QGIS istacqgis para integración directa",
+    "API de georreferenciación para ubicación de direcciones",
+    "Librerías R y Python para acceso programático",
+    "Actualizaciones frecuentes (diarias para datos críticos)"
+  ],
+  "coordinates": {
+    "lat": 28.12,
+    "lon": -15.43
+  }
+}
+
+{
   "id": "grafcan_sitcan",
   "name": "GRAFCAN / SITCAN – Sistema de Información Territorial de Canarias",
   "type": "organismo_especializado_geoespacial",
@@ -129,12 +430,20 @@
     "red_sensores": {
       "name": "Red de Sensores Meteorológicos",
       "description": "Estaciones distribuidas por Canarias con datos en tiempo real",
-      "capabilities": ["Datos meteorológicos en vivo", "Series históricas", "API REST"]
+      "capabilities": [
+        "Datos meteorológicos en vivo",
+        "Series históricas",
+        "API REST"
+      ]
     },
     "red_gnss": {
       "name": "Red de Estaciones Permanentes GNSS",
       "description": "17 estaciones de posicionamiento de alta precisión",
-      "capabilities": ["Descarga RINEX", "Correcciones tiempo real RTCM", "Posicionamiento preciso"]
+      "capabilities": [
+        "Descarga RINEX",
+        "Correcciones tiempo real RTCM",
+        "Posicionamiento preciso"
+      ]
     }
   },
   "data_organization": {
