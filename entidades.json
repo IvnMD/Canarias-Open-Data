@@ -3,7 +3,7 @@
     "id": "gobierno_canarias",
     "name": "Gobierno de Canarias – Portal de Datos Abiertos",
     "type": "gobierno_autonomico",
-    "island": "Todas",
+    "island": "Canarias",
     "portal_url": "https://datos.canarias.es",
     "api_url": "https://datos.canarias.es/api/3/action/",
     "portal_technology": "CKAN",
@@ -85,7 +85,7 @@
     "id": "istac",
     "name": "ISTAC – Instituto Canario de Estadística",
     "type": "organismo_especializado",
-    "island": "Todas",
+    "island": "canarias",
     "portal_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/",
     "api_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/",
     "portal_technology": "eDatos (Infraestructura de Datos y Metadatos Estadísticos)",
@@ -302,7 +302,7 @@
     "id": "grafcan_sitcan",
     "name": "GRAFCAN / SITCAN – Sistema de Información Territorial de Canarias",
     "type": "organismo_especializado_geoespacial",
-    "island": "Todas",
+    "island": "canarias",
     "portal_url": "https://www.grafcan.es/servicios/portal-de-datos-abiertos-opendata/",
     "api_url": "https://www.grafcan.es/servicios/idecanarias/",
     "portal_technology": "CKAN + OGC (WMS/WFS) + Servicios geoespaciales",
@@ -1003,6 +1003,167 @@
         "coverage": "Todas las islas"
       },
       "description": "Portal centralizado de datos abiertos de la Administración Pública de la Comunidad Autónoma de Canarias."
+    },
+    {
+  "id": "openstreetmap-canarias",
+  "name": "OpenStreetMap – Islas Canarias",
+  "type": "organismo_especializado_geoespacial",
+  "islands": ["canarias"],
+
+  "portal": {
+    "url": "https://www.openstreetmap.org",
+    "technology": "Custom + APIs REST + OGC-like"
+  },
+
+  "apis": [
+    {
+      "name": "OpenStreetMap API",
+      "url": "https://api.openstreetmap.org",
+      "type": "REST",
+      "description": "API principal para lectura y edición de datos colaborativos de OpenStreetMap.",
+      "access": "Público",
+      "documentation": "https://wiki.openstreetmap.org/wiki/API"
+    },
+    {
+      "name": "Overpass API",
+      "url": "https://overpass-api.de/api/interpreter",
+      "type": "REST",
+      "description": "API de consultas avanzadas para extracción de datos geoespaciales por filtros.",
+      "access": "Público",
+      "documentation": "https://wiki.openstreetmap.org/wiki/Overpass_API"
     }
+  ],
+
+  "data": {
+    "categories": [
+      "Cartografía",
+      "Transporte",
+      "Infraestructuras",
+      "Medio ambiente",
+      "Servicios públicos",
+      "Toponimia"
+    ],
+    "formats": ["OSM XML", "PBF", "GeoJSON", "Shapefile"],
+    "count": null,
+    "count_note": "El volumen de datos es dinámico y cambia continuamente por contribuciones colaborativas."
+  },
+
+  "licenses": [
+    {
+      "type": "Open Database License (ODbL)",
+      "count": null,
+      "url": "https://opendatacommons.org/licenses/odbl/"
+    }
+  ],
+  "license_predominant": "ODbL",
+
+  "metadata": {
+    "last_updated": "2026-05",
+    "update_frequency": "tiempo_real",
+    "legal_basis": "Licencia Open Database License (ODbL) 1.0"
+  },
+
+  "organization": {
+    "parent_organization": "OpenStreetMap Foundation",
+    "publishers": ["Comunidad global de contribuidores"]
+  },
+
+  "infrastructure": {
+    "main_services": ["Edición colaborativa", "Descarga masiva", "APIs de consulta"],
+    "tools": ["Overpass Turbo", "JOSM", "QGIS"],
+    "compliance": ["OGC (parcial)", "INSPIRE (uso derivado)"]
+  },
+
+  "geographic": {
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    },
+    "coverage": "Todas las islas Canarias"
+  },
+
+  "description": "Proyecto colaborativo global de datos geoespaciales abiertos que proporciona cartografía libre y reutilizable de las Islas Canarias con actualización en tiempo real."
+},
+{
+  "id": "european-data-portal",
+  "name": "European Data Portal (data.europa.eu)",
+  "type": "organismo_especializado",
+  "islands": ["canarias"],
+
+  "portal": {
+    "url": "https://data.europa.eu",
+    "technology": "CKAN federado + DCAT-AP"
+  },
+
+  "apis": [
+    {
+      "name": "EDP CKAN API",
+      "url": "https://data.europa.eu/api/hub/search",
+      "type": "REST",
+      "description": "API para búsqueda y federación de conjuntos de datos europeos, incluidos los de Canarias.",
+      "access": "Público",
+      "documentation": "https://data.europa.eu/en/developers/apis"
+    }
+  ],
+
+  "data": {
+    "categories": [
+      "Estadística",
+      "Economía",
+      "Medio ambiente",
+      "Transporte",
+      "Demografía",
+      "Territorio"
+    ],
+    "formats": ["CSV", "JSON", "XML", "RDF", "GeoJSON"],
+    "count": null,
+    "count_note": "El portal indexa millones de datasets; los de Canarias dependen de la federación desde datos.gob.es y portales regionales."
+  },
+
+  "licenses": [
+    {
+      "type": "Creative Commons BY",
+      "count": null,
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "type": "Creative Commons BY-SA",
+      "count": null,
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "license_predominant": "CC-BY 4.0",
+
+  "metadata": {
+    "last_updated": "2026-05",
+    "update_frequency": "variable",
+    "legal_basis": "Directiva (UE) 2019/1024 sobre datos abiertos y reutilización de la información del sector público"
+  },
+
+  "organization": {
+    "parent_organization": "Comisión Europea",
+    "publishers": [
+      "Gobierno de Canarias",
+      "Cabildos insulares",
+      "Administración General del Estado"
+    ]
+  },
+
+  "infrastructure": {
+    "main_services": ["Federación de catálogos", "Búsqueda semántica", "Descarga indirecta"],
+    "tools": ["CKAN", "SPARQL endpoint", "DCAT-AP"],
+    "compliance": ["DCAT-AP", "INSPIRE", "PSI Directive"]
+  },
+
+  "geographic": {
+    "coordinates": {
+      "lat": null,
+      "lon": null
+    },
+    "coverage": "Unión Europea (incluye Canarias como región ultraperiférica)"
+  },
+
+  "description": "Portal oficial europeo que agrega y armoniza datos abiertos de los Estados miembros, incluyendo datasets de Canarias publicados a través de portales nacionales y autonómicos."
+}
   ]
 ]
