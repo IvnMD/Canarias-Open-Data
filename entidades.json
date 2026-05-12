@@ -1,10 +1,196 @@
-
-
-
-
-
-
-
-
-
-
+{
+  "id": "grafcan_sitcan",
+  "name": "GRAFCAN / SITCAN – Sistema de Información Territorial de Canarias",
+  "type": "organismo_especializado_geoespacial",
+  "island": "Todas",
+  "portal_url": "https://www.grafcan.es/servicios/portal-de-datos-abiertos-opendata/",
+  "api_url": "https://www.grafcan.es/servicios/idecanarias/",
+  "portal_technology": "CKAN + OGC (WMS/WFS) + Servicios geoespaciales",
+  "parent_organization": "GRAFCAN (Cartográfica de Canarias, S.A.)",
+  "legal_basis": "Ley 4/2017, de 13 de julio, del Suelo y de los Espacios Naturales Protegidos de Canarias",
+  "data_categories": [
+    "Cartografía de referencia",
+    "Divisiones administrativas",
+    "Límites administrativos",
+    "Nomenclátor geográfico",
+    "Planeamiento territorial",
+    "Planeamiento urbanístico",
+    "Catastro",
+    "Parcelas",
+    "Usos del suelo",
+    "Cobertura del suelo",
+    "Ortofotos",
+    "Mapa topográfico",
+    "Base topográfica",
+    "Datos de elevación",
+    "MDE (Modelo Digital de Elevaciones)",
+    "Red hidrológica",
+    "Recursos hídricos",
+    "Medio ambiente",
+    "Espacios naturales",
+    "Áreas protegidas",
+    "Parques nacionales",
+    "Biodiversidad",
+    "Sanidad",
+    "Centros sanitarios",
+    "Economía",
+    "Hacienda",
+    "Medio rural",
+    "Agricultura",
+    "Ganadería",
+    "Estadística territorial",
+    "Cartografía estadística",
+    "Infraestructuras",
+    "Red viaria",
+    "Transportes",
+    "Callejeros",
+    "Direcciones",
+    "Toponimia",
+    "Sensores meteorológicos",
+    "Red GNSS",
+    "Posicionamiento",
+    "Fotogrametría"
+  ],
+  "formats": [
+    "GeoJSON",
+    "KML",
+    "KMZ",
+    "Shapefile (SHP)",
+    "GPKG (GeoPackage)",
+    "GML",
+    "GeoTIFF",
+    "GeoPDF",
+    "CSV",
+    "JSON",
+    "XML",
+    "WMS (estándar OGC)",
+    "WFS (estándar OGC)",
+    "WCS (estándar OGC)",
+    "ATOM",
+    "RINEX (para GNSS)",
+    "NetCDF",
+    "DEM (Modelos de elevación)"
+  ],
+  "apis": [
+    {
+      "name": "Servicios WMS (Web Map Service)",
+      "description": "Servicio de mapas telemático conforme a estándares OGC",
+      "type": "OGC Web Service",
+      "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+    },
+    {
+      "name": "Servicios WFS (Web Feature Service)",
+      "description": "Descarga de datos vectoriales conforme a OGC",
+      "type": "OGC Web Service",
+      "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+    },
+    {
+      "name": "Servicios WCS (Web Coverage Service)",
+      "description": "Acceso a coberturas raster (ortofotos, MDE, etc.)",
+      "type": "OGC Web Service",
+      "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+    },
+    {
+      "name": "API Red de Sensores",
+      "description": "Datos meteorológicos de estaciones GRAFCAN en tiempo real",
+      "type": "REST",
+      "access": "Con api-key gratuita",
+      "documentation": "https://sensores.grafcan.es"
+    },
+    {
+      "name": "API GNSS",
+      "description": "Correcciones en tiempo real (RTCM/CMR+) y descargas RINEX",
+      "type": "NTRIP + descarga directa",
+      "access": "Gratuito para administraciones públicas, de pago para otros",
+      "documentation": "https://www.grafcan.es/servicios/red-estaciones-gnss/"
+    },
+    {
+      "name": "Catálogo de metadatos",
+      "description": "Búsqueda y descripción de recursos geoespaciales",
+      "type": "Catálogo de metadatos conforme a INSPIRE",
+      "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+    }
+  ],
+  "infrastructure": {
+    "ide_canarias": {
+      "name": "Infraestructura de Datos Espaciales de Canarias",
+      "description": "Visor centralizado y catálogo de servicios geoespaciales",
+      "url": "https://visor.grafcan.es",
+      "services_count": 200,
+      "daily_sessions": 6000,
+      "annual_requests": 7000000,
+      "compliance": "Directiva INSPIRE (UE), Ley 37/2007 (reutilización), OGC"
+    },
+    "portal_datos_abiertos": {
+      "name": "Portal de Datos Abiertos SITCAN",
+      "description": "Acceso a descargas directas y referencias a recursos geoespaciales",
+      "url": "https://www.grafcan.es/servicios/portal-de-datos-abiertos-opendata/"
+    },
+    "red_sensores": {
+      "name": "Red de Sensores Meteorológicos",
+      "description": "Estaciones distribuidas por Canarias con datos en tiempo real",
+      "capabilities": ["Datos meteorológicos en vivo", "Series históricas", "API REST"]
+    },
+    "red_gnss": {
+      "name": "Red de Estaciones Permanentes GNSS",
+      "description": "17 estaciones de posicionamiento de alta precisión",
+      "capabilities": ["Descarga RINEX", "Correcciones tiempo real RTCM", "Posicionamiento preciso"]
+    }
+  },
+  "data_organization": {
+    "by_organization": [
+      "GRAFCAN (productor principal)",
+      "Otras consejerías del Gobierno de Canarias",
+      "Organismos del SITCAN"
+    ],
+    "by_theme": [
+      "Información geográfica de referencia",
+      "Medio rural",
+      "Medio ambiente",
+      "Sanidad",
+      "Planeamiento",
+      "Economía y hacienda",
+      "Divisiones administrativas"
+    ]
+  },
+  "dataset_count": 120,
+  "dataset_count_note": "Más 200 servicios de mapas disponibles a través de IDECanarias",
+  "licenses": [
+    {
+      "type": "Aviso Legal del SITCAN",
+      "description": "Licencia abierta de GRAFCAN/SITCAN",
+      "count": 120
+    }
+  ],
+  "license_predominant": "Aviso Legal del SITCAN",
+  "last_updated": "2025-02",
+  "update_frequency": "Variable (cartografía: anual; sensores: tiempo real; GNSS: continuo)",
+  "compliance": [
+    "Directiva INSPIRE (2007/2/CE)",
+    "Estándares OGC (WMS, WFS, WCS)",
+    "Ley 4/2017 (Suelo y Espacios Naturales Protegidos de Canarias)",
+    "Ley 37/2007 (Reutilización de información del sector público)",
+    "Directiva UE 2019/1024 (Datos de alto valor)"
+  ],
+  "key_services": [
+    "Visor IDECanarias con >200 capas temáticas",
+    "Portal de descargas directas de datos geoespaciales",
+    "Servicios WMS/WFS/WCS para integración en SIG",
+    "Red de sensores meteorológicos con API",
+    "Red GNSS de 17 estaciones de posicionamiento",
+    "Catálogo de metadatos conforme a INSPIRE"
+  ],
+  "tools_and_integrations": [
+    "Visor web IDECanarias (Leaflet/OpenLayers)",
+    "Descarga directa de ficheros SHP, GPKG, GeoJSON",
+    "Servicios WMS/WFS para QGIS, ArcGIS, gvSIG",
+    "API REST para sensores meteorológicos",
+    "API NTRIP para GNSS en tiempo real",
+    "Catálogo de metadatos para descubrimiento"
+  ],
+  "description": "Sistema de Información Territorial de Canarias (SITCAN). Gestor de la información geográfica oficial de Canarias. Más de 120 datasets geoespaciales + 200 servicios de mapas (WMS/WFS/WCS). Incluye cartografía base, planeamiento, sensores meteorológicos, red GNSS y recursos hidrológicos. Conforme a INSPIRE y estándares OGC.",
+  "coordinates": {
+    "lat": 28.35,
+    "lon": -16.25
+  }
+}
