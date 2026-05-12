@@ -1,0 +1,17 @@
+# Zone Identifier (metadatos de Windows/WSL)
+*:Zone.Identifier
+
+# Archivos comprimidos
+*.zip
+*.tar.gz
+
+# Archivos temporales y del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Entornos virtuales Python
+venv/
+__pycache__/
+*.pyc
