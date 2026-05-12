@@ -1,12 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Sheet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Datos Abiertos | Canarias</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #003a8f;
+      color: white;
+      padding: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    /* MAIN */
+    main {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* BUSCADOR */
+    .search-box {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .search-box input,
+    .search-box select,
+    .search-box button {
+      padding: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .search-box input {
+      flex: 2;
+      min-width: 250px;
+    }
+
+    .search-box select {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .search-box button {
+      background-color: #003a8f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-box button:hover {
+      background-color: #002c6a;
+    }
+
+    /* RESULTADOS */
+    .results {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* TAGS */
+    .tags {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #e6ecf5;
+      color: #003a8f;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-right: 0.3rem;
+    }
+
+    /* NO RESULTS */
+    .no-results {
+      display: none;
+      margin-top: 2rem;
+      text-align: center;
+      color: #777;
+    }
+
+    /* FOOTER */
+    footer.footer {
+      background-color: #eee;
+      padding: 1rem;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    /* 📱 MÓVIL */
+    @media (max-width: 599px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    /* 📟 TABLET */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .footer-container {
+        justify-content: space-between;
+        text-align: justify;
+      }
+    }
+
+    /* 💻 ESCRITORIO */
+    @media (min-width: 1024px) {
+      .footer-container {
+        justify-content: space-between;
+      }
+
+      .footer-container span:first-child {
+        text-align: left;
+      }
+
+      .footer-container span:last-child {
+        text-align: right;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Welcome to a Simple HTML Page</h1>
-    <p>This is a basic HTML sheet created for demonstration.</p>
+
+<header>
+  <h1>Consulta de Datos Abiertos de Canarias</h1>
+  <p>Buscador unificado de datasets públicos</p>
+</header>
+
+<main>
+
+  <!-- BUSCADOR -->
+  <section class="search-box">
+    <input id="searchText" type="text" placeholder="Buscar por palabra clave">
+
+    <select id="searchIsland">
+      <option value="">Todas las islas</option>
+      <option>Tenerife</option>
+      <option>Gran Canaria</option>
+      <option>Lanzarote</option>
+      <option>Fuerteventura</option>
+      <option>La Palma</option>
+      <option>La Gomera</option>
+      <option>El Hierro</option>
+    </select>
+
+    <select id="searchCategory">
+      <option value="">Todas las categorías</option>
+      <option>Estadística</option>
+      <option>Territorio</option>
+      <option>Medio ambiente</option>
+      <option>Transporte</option>
+      <option>Economía</option>
+      <option>Turismo</option>
+    </select>
+
+    <button id="searchBtn">Buscar</button>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="results" id="results">
+
+    <div class="card"
+         data-title="población por municipios"
+         data-island="Tenerife"
+         data-category="Estadística">
+      <h3>Población por municipios</h3>
+      <p>Datos demográficos oficiales desagregados por municipio e isla.</p>
+      <div class="tags">
+        <span class="tag">Estadística</span>
+        <span class="tag">ISTAC</span>
+        <span class="tag">CSV</span>
+      </div>
+    </div>
+
+    <div class="card"
+         data-title="red de carreteras"
+         data-island="Gran Canaria"
+         data-category="Territorio">
+      <h3>Red de carreteras</h3>
+      <p>Cartografía de la red viaria insular con información geoespacial.</p>
+      <div class="tags">
+        <span class="tag">Territorio</span>
+        <span class="tag">SITCAN</span>
+        <span class="tag">GeoJSON</span>
+      </div>
+    </div>
+
+    <div class="card"
+         data-title="afluencia turística mensual"
+         data-island="Todas"
+         data-category="Turismo">
+      <h3>Afluencia turística mensual</h3>
+      <p>Series temporales de turistas por isla y país de origen.</p>
+      <div class="tags">
+        <span class="tag">Turismo</span>
+        <span class="tag">Economía</span>
+        <span class="tag">JSON</span>
+      </div>
+    </div>
+
+  </section>
+
+  <p id="noResults" class="no-results">No se encontraron resultados</p>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <span>© 2026 · Datos Abiertos de Canarias</span>
+    <span>Proyecto demostrativo</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("searchBtn").addEventListener("click", filterData);
+  document.getElementById("searchText").addEventListener("keyup", filterData);
+  document.getElementById("searchIsland").addEventListener("change", filterData);
+  document.getElementById("searchCategory").addEventListener("change", filterData);
+
+  function filterData() {
+    const text = document.getElementById("searchText").value.toLowerCase();
+    const island = document.getElementById("searchIsland").value;
+    const category = document.getElementById("searchCategory").value;
+
+    const cards = document.querySelectorAll(".card");
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const title = card.dataset.title;
+      const cardIsland = card.dataset.island;
+      const cardCategory = card.dataset.category;
+
+      const matchText = title.includes(text);
+      const matchIsland = !island || cardIsland === island || cardIsland === "Todas";
+      const matchCategory = !category || cardCategory === category;
+
+      if (matchText && matchIsland && matchCategory) {
+        card.style.display = "block";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    document.getElementById("noResults").style.display =
+      visibleCount === 0 ? "block" : "none";
+  }
+</script>
+
 </body>
 </html>
