@@ -339,4 +339,4 @@ Posibles mejoras futuras:
 
 # Licencia
 
-Pendiente de definir.
+GPL-3.0 license
