@@ -475,14 +475,30 @@ footer {
 
 /* Asegura que las categorías ocultas salgan debajo */
 [id$="-hidden"] {
-  display: none;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-  width: 100%;
-  margin-top: 0.5rem;
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    width: 100%;
+    margin-top: 0.25rem;
 }
 
 /* Cuando están visibles */
 [id$="-hidden"].show {
-  display: flex;
+    display: flex;
+}
+
+
+/* Contenedor de formatos ocultos que debe ir en nueva línea */
+#formats-hidden,
+[id$="-formats-hidden"] {
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+/* Cuando están visibles, ocupan toda la línea */
+[id$="-formats-hidden"].visible {
+    display: flex;
 }

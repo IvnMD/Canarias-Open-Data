@@ -249,7 +249,7 @@ function render(list) {
     const hiddenCategories = allCategories.slice(visibleCount);
     const hasMore = hiddenCategories.length > 0;
 
-    const formats = e.formats.slice(0, 4);
+    const allFormats = e.formats || [];
     const coords = e.coordinates;
     const hasCoords = coords && (coords.lat || coords.lon);
     const typeIcon = getTypeIcon(e.type);
@@ -297,11 +297,19 @@ function render(list) {
         </div>
       ` : ""}
       
-      ${formats.length > 0 ? `
-        <div class="card-section">
-          <strong>📄 Formatos:</strong>
-          <div class="badge-container">
-            ${formats.map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
+      ${allFormats.length > 0 ? `
+        <div class="card-section" id="${cardId}-formats">
+          <div class="categories-header">
+            <strong>📄 Formatos</strong>
+            ${allFormats.length > 4 ? `
+              <button class="toggle-cat-btn" onclick="toggleFormats('${cardId}')">▶</button>
+            ` : ''}
+          </div>
+          <div class="badge-container" id="${cardId}-formats-visible">
+            ${allFormats.slice(0, 4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
+          </div>
+          <div class="badge-container" id="${cardId}-formats-hidden" style="display:none;">
+            ${allFormats.slice(4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
           </div>
         </div>
       ` : ""}
@@ -476,6 +484,21 @@ function toggleCat(cardId) {
   
   const hiddenDiv = document.getElementById(cardId + '-hidden');
   const btn = document.querySelector(`#${cardId} .toggle-cat-btn`);
+  const isVisible = hiddenDiv.style.display === 'flex';
+  hiddenDiv.style.display = isVisible ? 'none' : 'flex';
+  if (btn) {
+    btn.classList.toggle('rotated');
+  }
+}
+
+/**
+ * Alterna la visibilidad de los formatos extra en una tarjeta
+ * @param {string} cardId - ID único de la tarjeta 
+ */
+function toggleFormats(cardId) {
+
+  const hiddenDiv = document.getElementById(cardId + '-formats-hidden');
+  const btn = document.querySelector(`#${cardId}-formats .toggle-cat-btn`);
   const isVisible = hiddenDiv.style.display === 'flex';
   hiddenDiv.style.display = isVisible ? 'none' : 'flex';
   if (btn) {
