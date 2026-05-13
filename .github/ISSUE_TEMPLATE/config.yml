@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Pregunta general
+    url: https://github.com/
+    about: Usa esta opción si no sabes qué tipo de issue crear.
