@@ -6,7 +6,12 @@
   <meta name="description" content="Buscador unificado de instituciones y datasets de datos abiertos de Canarias">
   <meta name="author" content="Datos Abiertos Canarias">
   <title>Datos Abiertos Canarias | Buscador de Datos Públicos</title>
-  <link rel="stylesheet" href="/static/css/styles.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/base.css">
+  <link rel="stylesheet" href="/static/css/light-mode.css">
+  <link rel="stylesheet" href="/static/css/dark-mode.css">
+  
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 </head>
 
@@ -30,6 +35,7 @@
         <option value="">Todos los tipos</option>
         <option value="gobierno_autonomico">🏢 Gobierno Autonómico</option>
         <option value="organismo_especializado">📋 Organismo Especializado</option>
+        <option value="organismo_especializado_nacional">📃 Organismo Especializado Nacional</option>
         <option value="organismo_especializado_geoespacial">🗺️ Organismo Geoespacial</option>
         <option value="cabildo">🏝️ Cabildo Insular</option>
         <option value="ayuntamiento">🏘️ Ayuntamiento</option>
@@ -40,7 +46,6 @@
       <label for="filterIsland">🗺️ Isla</label>
       <select id="filterIsland">
         <option value="">Todas las islas</option>
-        <option value="canarias">✨ Canarias (ámbito regional)</option>
         <option value="Tenerife">🏝️ Tenerife</option>
         <option value="Gran Canaria">🏝️ Gran Canaria</option>
         <option value="Lanzarote">🏝️ Lanzarote</option>
@@ -54,7 +59,10 @@
   
   <div class="stats-bar" id="statsBar">
     <span id="resultsCount">Cargando...</span>
-    <button id="resetFilters" class="reset-btn" style="display: none;">🗑️ Limpiar filtros</button>
+    <div style="display: flex; gap: 0.5rem;">
+      <button id="darkModeToggle" class="reset-btn" style="display: flex;">🌙 Modo oscuro</button>
+      <button id="resetFilters" class="reset-btn" style="display: none;">🗑️ Limpiar filtros</button>
+    </div>
   </div>
 </div>
 

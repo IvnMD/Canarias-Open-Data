@@ -123,7 +123,7 @@ function updateUI(filteredCount, totalCount, hasActiveFilters) {
  */
 function loadData() {
   showLoading();
-  
+
   // Usando la ruta original que funcionaba
   fetch('/api/entidades')
     .then(r => {
@@ -196,7 +196,7 @@ function filter() {
 
     // Filtro por tipo de institución
     const matchType = !type || e.type === type;
-    
+
     // Filtro por isla (incluye 'canarias' como ámbito regional)
     const matchIsland = !island ||
       e.island?.includes(island) ||
@@ -338,6 +338,7 @@ function formatType(type) {
   const types = {
     'gobierno_autonomico': 'Gobierno Autonómico',
     'organismo_especializado': 'Organismo Especializado',
+    'organismo_especializado_nacional': 'Organismo Especializado Nacional',
     'organismo_especializado_geoespacial': 'Organismo Geoespacial',
     'cabildo': 'Cabildo Insular',
     'ayuntamiento': 'Ayuntamiento'
@@ -362,7 +363,6 @@ function getIslandTag(item) {
     'La Palma': '🏝️ La Palma',
     'La Gomera': '🏝️ La Gomera',
     'El Hierro': '🏝️ El Hierro',
-    'canarias': '✨ Canarias'
   };
 
   const firstIsland = islands[0];
@@ -392,6 +392,40 @@ function truncate(str, length) {
   return str.length > length ? str.substring(0, length) + '...' : str;
 }
 
+// ==================== MODO OSCURO ====================
+
+/**
+ * Inicializa el modo oscuro
+ * - Detecta preferencia guardada en localStorage
+ * - Configura el botón para alternar entre modos
+ * - Persiste la elección del usuario
+ */
+function initDarkMode() {
+  const toggleBtn = document.getElementById('darkModeToggle');
+  if (!toggleBtn) return;
+
+  // Cargar preferencia guardada
+  const savedMode = localStorage.getItem('darkMode');
+  if (savedMode === 'enabled') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.innerHTML = '☀️ Modo claro';
+  }
+
+  // Evento del botón
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.body.classList.contains('dark-mode');
+    if (isDark) {
+      document.body.classList.remove('dark-mode');
+      toggleBtn.innerHTML = '🌙 Modo oscuro';
+      localStorage.setItem('darkMode', 'disabled');
+    } else {
+      document.body.classList.add('dark-mode');
+      toggleBtn.innerHTML = '☀️ Modo claro';
+      localStorage.setItem('darkMode', 'enabled');
+    }
+  });
+}
+
 // ==================== INICIALIZACIÓN ====================
 
 /**
@@ -401,6 +435,7 @@ function truncate(str, length) {
 function init() {
   setupEventListeners();
   loadData();
+  initDarkMode();
 }
 
 /**

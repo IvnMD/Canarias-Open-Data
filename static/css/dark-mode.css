@@ -1,0 +1,173 @@
+/* ============================================
+   MODO OSCURO - ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* Variables del modo oscuro */
+body.dark-mode {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-card: #0f3460;
+    --text-primary: #e8e8e8;
+    --text-secondary: #b0b0b0;
+    --text-header: #e8e8e8;
+    --border-color: #2c3e66;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    --badge-bg: #2c3e66;
+    --badge-text: #74b9ff;
+    --footer-bg: #0f3460;
+    --footer-text: #b0b0b0;
+    --input-bg: #1a1a2e;
+    --input-border: #2c3e66;
+    --spinner-border: #2c3e66;
+    --spinner-top: #74b9ff;
+    --error-bg: #2d1a1a;
+    --error-border: #e74c3c;
+    --empty-bg: #0f3460;
+}
+
+body.dark-mode {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Header modo oscuro */
+body.dark-mode header {
+    background: linear-gradient(135deg, #0f3460 0%, #0a1a3a 100%);
+}
+
+/* Search y stats */
+body.dark-mode .search,
+body.dark-mode .stats-bar {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .search input,
+body.dark-mode .search select {
+    background: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--text-primary);
+}
+
+body.dark-mode .search input::placeholder {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .search input:focus,
+body.dark-mode .search select:focus {
+    border-color: var(--badge-text);
+    box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+}
+
+/* Cards */
+body.dark-mode .card {
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--badge-text);
+}
+
+body.dark-mode .card h3 {
+    color: var(--badge-text);
+}
+
+body.dark-mode .island-tag {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+body.dark-mode .type-text,
+body.dark-mode .card-description,
+body.dark-mode .coordinates {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+body.dark-mode .format-badge {
+    background: #1b5e20;
+    color: #a5d6a7;
+}
+
+body.dark-mode .card-stats {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .stat-value {
+    color: var(--badge-text);
+}
+
+body.dark-mode .stat-label {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .card-section {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .portal-link {
+    color: var(--badge-text);
+}
+
+body.dark-mode .portal-link:hover {
+    color: #a5d6a7;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+/* Loading */
+body.dark-mode .spinner {
+    border-color: var(--spinner-border);
+    border-top-color: var(--spinner-top);
+}
+
+/* Error y empty */
+body.dark-mode .error-message {
+    background: var(--error-bg);
+    border-left: 4px solid var(--error-border);
+    color: var(--text-primary);
+}
+
+body.dark-mode .empty-state {
+    background: var(--empty-bg);
+}
+
+body.dark-mode code {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+/* Botón reset en modo oscuro */
+body.dark-mode .reset-btn {
+    border-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+body.dark-mode .reset-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+/* Botón retry en modo oscuro */
+body.dark-mode .retry-btn,
+body.dark-mode .reset-btn-empty {
+    background: var(--badge-text);
+    color: #1a1a2e;
+}
+
+body.dark-mode .retry-btn:hover,
+body.dark-mode .reset-btn-empty:hover {
+    background: #a5d6a7;
+}
