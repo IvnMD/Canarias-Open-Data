@@ -3,35 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datos Abiertos Canarias</title>
+  <meta name="description" content="Buscador unificado de instituciones y datasets de datos abiertos de Canarias">
+  <meta name="author" content="Datos Abiertos Canarias">
+  <title>Datos Abiertos Canarias | Buscador de Datos Públicos</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 </head>
 
 <body>
 
 <header>
-  <h1>Portal de Datos Abiertos de Canarias</h1>
-  <p>Buscador unificado de instituciones y datasets</p>
+  <h1>📊 Portal de Datos Abiertos de Canarias</h1>
+  <p>Buscador unificado de instituciones, organismos y datasets públicos</p>
 </header>
 
-<div class="search">
-  <input id="searchText" placeholder="Buscar (ej: turismo, ISTAC, OSM...)">
+<div class="search-container">
+  <div class="search">
+    <div class="search-field">
+      <label for="searchText">🔍 Buscar</label>
+      <input id="searchText" placeholder="Ej: turismo, ISTAC, OSM, población, educación..." autocomplete="off">
+    </div>
 
-  <select id="filterType">
-    <option value="">Todos los tipos</option>
-    <option value="gobierno_autonomico">Gobierno</option>
-    <option value="organismo_especializado">Organismo</option>
-    <option value="organismo_especializado_geoespacial">Geoespacial</option>
-    <option value="cabildo">Cabildo</option>
-    <option value="ayuntamiento">Ayuntamiento</option>
-  </select>
+    <div class="search-field">
+      <label for="filterType">🏛️ Tipo de institución</label>
+      <select id="filterType">
+        <option value="">Todos los tipos</option>
+        <option value="gobierno_autonomico">🏢 Gobierno Autonómico</option>
+        <option value="organismo_especializado">📋 Organismo Especializado</option>
+        <option value="organismo_especializado_geoespacial">🗺️ Organismo Geoespacial</option>
+        <option value="cabildo">🏝️ Cabildo Insular</option>
+        <option value="ayuntamiento">🏘️ Ayuntamiento</option>
+      </select>
+    </div>
 
-  <select id="filterIsland">
-    <option value="">Todas las islas</option>
-    <option value="canarias">Canarias</option>
-    <option value="Tenerife">Tenerife</option>
-    <option value="Gran Canaria">Gran Canaria</option>
-  </select>
+    <div class="search-field">
+      <label for="filterIsland">🗺️ Isla</label>
+      <select id="filterIsland">
+        <option value="">Todas las islas</option>
+        <option value="canarias">✨ Canarias (ámbito regional)</option>
+        <option value="Tenerife">🏝️ Tenerife</option>
+        <option value="Gran Canaria">🏝️ Gran Canaria</option>
+        <option value="Lanzarote">🏝️ Lanzarote</option>
+        <option value="Fuerteventura">🏝️ Fuerteventura</option>
+        <option value="La Palma">🏝️ La Palma</option>
+        <option value="La Gomera">🏝️ La Gomera</option>
+        <option value="El Hierro">🏝️ El Hierro</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="stats-bar" id="statsBar">
+    <span id="resultsCount">Cargando...</span>
+    <button id="resetFilters" class="reset-btn" style="display: none;">🗑️ Limpiar filtros</button>
+  </div>
 </div>
 
 <main>
@@ -39,7 +63,8 @@
 </main>
 
 <footer>
-  © 2026 · Datos Abiertos Canarias · Demo educativa
+  <p>© 2026 · Datos Abiertos Canarias · Demo educativa</p>
+  <p style="font-size: 0.8rem; margin-top: 0.5rem;">Datos provenientes de portales oficiales de transparencia y datos abiertos</p>
 </footer>
 
 <script src="js/app.js"></script>
