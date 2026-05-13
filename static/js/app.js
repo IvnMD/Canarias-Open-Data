@@ -230,7 +230,6 @@ function render(list) {
   const container = document.getElementById("results");
   container.innerHTML = "";
 
-  // Estado vacío: no hay resultados
   if (list.length === 0) {
     container.innerHTML = `
       <div class="empty-state">
@@ -242,6 +241,90 @@ function render(list) {
     `;
     return;
   }
+
+  list.forEach(e => {
+    const allCategories = e.data_categories || [];
+    const visibleCount = 4;  // Número de categorías visibles inicialmente
+    const visibleCategories = allCategories.slice(0, visibleCount);
+    const hiddenCategories = allCategories.slice(visibleCount);
+    const hasMore = hiddenCategories.length > 0;
+
+    const allFormats = e.formats || [];
+    const coords = e.coordinates;
+    const hasCoords = coords && (coords.lat || coords.lon);
+    const typeIcon = getTypeIcon(e.type);
+
+    // ID único para cada tarjeta
+    const cardId = 'card-' + Math.random().toString(36).substr(2, 8);
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <div class="card-header">
+        <h3>${escapeHtml(e.name)}</h3>
+        ${getIslandTag(e) ? `<span class="island-tag">${getIslandTag(e)}</span>` : ''}
+      </div>
+      
+      <div class="card-type">
+        <span class="type-icon">${typeIcon}</span>
+        <span class="type-text">${formatType(e.type)}</span>
+      </div>
+      
+      ${e.description ? `<p class="card-description">${truncate(escapeHtml(e.description), 120)}</p>` : ''}
+      
+      <div class="card-stats">
+        <div class="stat">
+          <span class="stat-value">${e.dataset_count}</span>
+          <span class="stat-label">datasets</span>
+        </div>
+      </div>
+      
+      ${allCategories.length > 0 ? `
+        <div class="card-section" id="${cardId}">
+          <div class="categories-header">
+            <strong>📂 Categorías</strong>
+            ${allCategories.length > 4 ? `
+              <button class="toggle-cat-btn" onclick="toggleCat('${cardId}')">▶</button>
+            ` : ''}
+          </div>
+          <div class="badge-container" id="${cardId}-visible">
+            ${allCategories.slice(0, 4).map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
+          </div>
+          <div class="badge-container" id="${cardId}-hidden" style="display:none;">
+            ${allCategories.slice(4).map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
+          </div>
+        </div>
+      ` : ""}
+      
+      ${allFormats.length > 0 ? `
+        <div class="card-section" id="${cardId}-formats">
+          <div class="categories-header">
+            <strong>📄 Formatos</strong>
+            ${allFormats.length > 4 ? `
+              <button class="toggle-cat-btn" onclick="toggleFormats('${cardId}')">▶</button>
+            ` : ''}
+          </div>
+          <div class="badge-container" id="${cardId}-formats-visible">
+            ${allFormats.slice(0, 4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
+          </div>
+          <div class="badge-container" id="${cardId}-formats-hidden" style="display:none;">
+            ${allFormats.slice(4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
+          </div>
+        </div>
+      ` : ""}
+      
+      <div class="card-footer">
+        <a href="${e.portal_url}" target="_blank" rel="noopener noreferrer" class="portal-link">
+          🔗 Acceder al portal <span class="arrow">→</span>
+        </a>
+        ${hasCoords ? `<span class="coordinates">📍 ${coords.lat}, ${coords.lon}</span>` : ""}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
 function renderChart(list) {
 
   const counts = {};
@@ -464,7 +547,46 @@ function initDarkMode() {
     }
   });
 }
+/**
+ * Alterna la visibilidad de las categorías extra en una tarjeta
+ * @param {string} cardId - ID único de la tarjeta (ej: "card-xyz123")
+ * 
+ * Cómo funciona:
+ * - Cuando haces clic en la flecha ▶, busca el div con las categorías ocultas
+ * - Si están ocultas → las muestra y gira la flecha ▼
+ * - Si están visibles → las oculta y vuelve la flecha ▶
+ * 
+ * 1. Buscar el div que contiene las categorías extra (las que están ocultas)
+ * 2. Buscar el botón de la flecha dentro de esta tarjeta
+ * 3. Preguntar si las categorías extra están visibles ahora
+ * 4. Si están visibles → las oculta. Si están ocultas → las muestra
+ * 5. Girar la flecha 90 grados (▶ se convierte en ▼ y viceversa)
+ */
+function toggleCat(cardId) {
+  
+  const hiddenDiv = document.getElementById(cardId + '-hidden');
+  const btn = document.querySelector(`#${cardId} .toggle-cat-btn`);
+  const isVisible = hiddenDiv.style.display === 'flex';
+  hiddenDiv.style.display = isVisible ? 'none' : 'flex';
+  if (btn) {
+    btn.classList.toggle('rotated');
+  }
+}
 
+/**
+ * Alterna la visibilidad de los formatos extra en una tarjeta
+ * @param {string} cardId - ID único de la tarjeta 
+ */
+function toggleFormats(cardId) {
+
+  const hiddenDiv = document.getElementById(cardId + '-formats-hidden');
+  const btn = document.querySelector(`#${cardId}-formats .toggle-cat-btn`);
+  const isVisible = hiddenDiv.style.display === 'flex';
+  hiddenDiv.style.display = isVisible ? 'none' : 'flex';
+  if (btn) {
+    btn.classList.toggle('rotated');
+  }
+}
 // ==================== INICIALIZACIÓN ====================
 
 /**
