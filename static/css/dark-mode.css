@@ -23,6 +23,7 @@ body.dark-mode {
     --error-bg: #2d1a1a;
     --error-border: #e74c3c;
     --empty-bg: #0f3460;
+    --
 }
 
 body.dark-mode {
@@ -170,4 +171,8 @@ body.dark-mode .reset-btn-empty {
 body.dark-mode .retry-btn:hover,
 body.dark-mode .reset-btn-empty:hover {
     background: #a5d6a7;
+}
+
+body.dark-mode .logo-svg {
+  background-color: #4f98a3;
 }

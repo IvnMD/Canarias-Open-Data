@@ -446,3 +446,18 @@ footer {
         text-align: center;
     }
 }
+
+/* LOGO */
+.logo-svg {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background-color: #01696f;
+  -webkit-mask-image: url('../assets/logo.svg');
+  mask-image: url('../assets/logo.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
