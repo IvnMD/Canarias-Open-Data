@@ -3,397 +3,4420 @@
     "id": "gobierno_canarias",
     "name": "Gobierno de Canarias – Portal de Datos Abiertos",
     "type": "gobierno_autonomico",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://datos.canarias.es",
     "api_url": "https://datos.canarias.es/api/3/action/",
     "portal_technology": "CKAN",
-    "data_categories": ["Turismo","Demografía","Economía","Empleo","Medio ambiente","Salud","Educación","Sector público","Administración","Transporte","Urbanismo","Energía","Industria","Comercio","Hacienda","Cultura","Deportes","Legislación","Seguridad","Vivienda","Medio rural","Ciencia y Tecnología"],
-    "formats": ["CSV","JSON","XML","GeoJSON","KML","SHP","GPKG","PC-Axis","ODS","XLSX","RDF","RDF-XML","N3","Turtle","HTML","PDF","API","WMS","WFS","ATOM","RSS"],
+    "data_categories": [
+      "Turismo",
+      "Demografía",
+      "Economía",
+      "Empleo",
+      "Medio ambiente",
+      "Salud",
+      "Educación",
+      "Sector público",
+      "Administración",
+      "Transporte",
+      "Urbanismo",
+      "Energía",
+      "Industria",
+      "Comercio",
+      "Hacienda",
+      "Cultura",
+      "Deportes",
+      "Legislación",
+      "Seguridad",
+      "Vivienda",
+      "Medio rural",
+      "Ciencia y Tecnología"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "XML",
+      "GeoJSON",
+      "KML",
+      "SHP",
+      "GPKG",
+      "PC-Axis",
+      "ODS",
+      "XLSX",
+      "RDF",
+      "RDF-XML",
+      "N3",
+      "Turtle",
+      "HTML",
+      "PDF",
+      "API",
+      "WMS",
+      "WFS",
+      "ATOM",
+      "RSS"
+    ],
     "dataset_count": 22000,
-    "licenses": [{"type":"Aviso Legal ISTAC","count":21755},{"type":"Aviso Legal Gobierno Canarias","count":291},{"type":"CC BY 4.0","count":285},{"type":"Aviso Legal SITCAN","count":24}],
+    "licenses": [
+      {
+        "type": "Aviso Legal ISTAC",
+        "count": 21755
+      },
+      {
+        "type": "Aviso Legal Gobierno Canarias",
+        "count": 291
+      },
+      {
+        "type": "CC BY 4.0",
+        "count": 285
+      },
+      {
+        "type": "Aviso Legal SITCAN",
+        "count": 24
+      }
+    ],
     "license_predominant": "Aviso Legal ISTAC",
     "last_updated": "2026-05",
     "description": "Portal central que integra datos del Gobierno de Canarias, ISTAC y SITCAN. Más de 22.000 datasets federados con datos.gob.es y European Data Portal.",
-    "coordinates": {"lat": 28.29, "lon": -16.62}
+    "coordinates": {
+      "lat": 28.29,
+      "lon": -16.62
+    }
   },
   {
     "id": "istac",
     "name": "ISTAC – Instituto Canario de Estadística",
     "type": "organismo_especializado",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/",
     "api_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/",
     "portal_technology": "eDatos (Infraestructura de Datos y Metadatos Estadísticos)",
-    "data_categories": ["Demografía","Población","Padrón municipal","Migraciones","Mercado laboral","Empleo registrado","Paro registrado","Afiliaciones a SS","Turismo","Ocupación hotelera","Pernoctaciones","Llegadas de viajeros","Salud","Epidemiología","Hospitales","Vacunación","Educación","Formación Profesional","Universidades","Economía","PIB","Renta per cápita","Indicadores coyunturales","Precios","IPC","Vivienda","Régimen de vivienda","Construcción","Obras de edificación","Sector público","Administración","Gasto público","Industria","Producción industrial","Energía","Consumo energético","Medio ambiente","Clima","Temperatura","Precipitaciones","Agua","Recursos hídricos","Comercio","Exportaciones","Importaciones","Actividad económica","CNAE","Agricultura","Ganadería","Pesca","Minería","Servicios","Transporte","Comunicaciones","Cultura","Deporte","Ciencia y Tecnología","TIC","I+D"],
-    "formats": ["PC-Axis (.px)","JSON","CSV","XLSX","XML","Google Visualization API","TSV","RDF"],
+    "data_categories": [
+      "Demografía",
+      "Población",
+      "Padrón municipal",
+      "Migraciones",
+      "Mercado laboral",
+      "Empleo registrado",
+      "Paro registrado",
+      "Afiliaciones a SS",
+      "Turismo",
+      "Ocupación hotelera",
+      "Pernoctaciones",
+      "Llegadas de viajeros",
+      "Salud",
+      "Epidemiología",
+      "Hospitales",
+      "Vacunación",
+      "Educación",
+      "Formación Profesional",
+      "Universidades",
+      "Economía",
+      "PIB",
+      "Renta per cápita",
+      "Indicadores coyunturales",
+      "Precios",
+      "IPC",
+      "Vivienda",
+      "Régimen de vivienda",
+      "Construcción",
+      "Obras de edificación",
+      "Sector público",
+      "Administración",
+      "Gasto público",
+      "Industria",
+      "Producción industrial",
+      "Energía",
+      "Consumo energético",
+      "Medio ambiente",
+      "Clima",
+      "Temperatura",
+      "Precipitaciones",
+      "Agua",
+      "Recursos hídricos",
+      "Comercio",
+      "Exportaciones",
+      "Importaciones",
+      "Actividad económica",
+      "CNAE",
+      "Agricultura",
+      "Ganadería",
+      "Pesca",
+      "Minería",
+      "Servicios",
+      "Transporte",
+      "Comunicaciones",
+      "Cultura",
+      "Deporte",
+      "Ciencia y Tecnología",
+      "TIC",
+      "I+D"
+    ],
+    "formats": [
+      "PC-Axis (.px)",
+      "JSON",
+      "CSV",
+      "XLSX",
+      "XML",
+      "Google Visualization API",
+      "TSV",
+      "RDF"
+    ],
     "apis": [
-      {"name":"e-Base API","description":"Acceso a tablas estadísticas principales","formats":["PC-Axis","JSON","Google Visualization"],"documentation":"https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html"},
-      {"name":"e-Cubos API","description":"Cubos o tablas multidimensionales (sustituto moderno de e-Base)","formats":["JSON"],"documentation":"https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html"},
-      {"name":"e-Indicadores API","description":"Indicadores por isla, municipio y otras granularidades territoriales","formats":["JSON"],"documentation":"https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html"},
-      {"name":"e-Operaciones API","description":"Inventario de Operaciones Estadísticas (IOE)","formats":["JSON"],"documentation":"https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html"},
-      {"name":"e-Semántica API","description":"Recursos estructurales: clasificaciones, conceptos, variables, esquemas DSD","formats":["JSON"],"documentation":"https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html"},
-      {"name":"API Georreferenciación","description":"Convierte direcciones en coordenadas y viceversa, basado en Pelias","formats":["JSON"],"documentation":"https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones"}
+      {
+        "name": "e-Base API",
+        "description": "Acceso a tablas estadísticas principales",
+        "formats": [
+          "PC-Axis",
+          "JSON",
+          "Google Visualization"
+        ],
+        "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html"
+      },
+      {
+        "name": "e-Cubos API",
+        "description": "Cubos o tablas multidimensionales (sustituto moderno de e-Base)",
+        "formats": [
+          "JSON"
+        ],
+        "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html"
+      },
+      {
+        "name": "e-Indicadores API",
+        "description": "Indicadores por isla, municipio y otras granularidades territoriales",
+        "formats": [
+          "JSON"
+        ],
+        "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html"
+      },
+      {
+        "name": "e-Operaciones API",
+        "description": "Inventario de Operaciones Estadísticas (IOE)",
+        "formats": [
+          "JSON"
+        ],
+        "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html"
+      },
+      {
+        "name": "e-Semántica API",
+        "description": "Recursos estructurales: clasificaciones, conceptos, variables, esquemas DSD",
+        "formats": [
+          "JSON"
+        ],
+        "documentation": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html"
+      },
+      {
+        "name": "API Georreferenciación",
+        "description": "Convierte direcciones en coordenadas y viceversa, basado en Pelias",
+        "formats": [
+          "JSON"
+        ],
+        "documentation": "https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones"
+      }
     ],
     "tools": [
-      {"name":"Plugin istacqgis","type":"QGIS","description":"Acceso directo a datos abiertos ISTAC desde QGIS","version":"0.4","url":"https://www.gobiernodecanarias.org/istac/datos-abiertos/"},
-      {"name":"Librería Python","description":"Acceso programático mediante Python","url":"https://jecas.es/wp-content/uploads/2021/11/12.1.ISTAC_Librer%C3%ADas-R-Python.pdf"},
-      {"name":"Librería R","description":"Acceso programático mediante R","url":"https://jecas.es/wp-content/uploads/2021/11/12.1.ISTAC_Librer%C3%ADas-R-Python.pdf"},
-      {"name":"RSS Feeds","description":"Suscripción a actualizaciones de datos"}
+      {
+        "name": "Plugin istacqgis",
+        "type": "QGIS",
+        "description": "Acceso directo a datos abiertos ISTAC desde QGIS",
+        "version": "0.4",
+        "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/"
+      },
+      {
+        "name": "Librería Python",
+        "description": "Acceso programático mediante Python",
+        "url": "https://jecas.es/wp-content/uploads/2021/11/12.1.ISTAC_Librer%C3%ADas-R-Python.pdf"
+      },
+      {
+        "name": "Librería R",
+        "description": "Acceso programático mediante R",
+        "url": "https://jecas.es/wp-content/uploads/2021/11/12.1.ISTAC_Librer%C3%ADas-R-Python.pdf"
+      },
+      {
+        "name": "RSS Feeds",
+        "description": "Suscripción a actualizaciones de datos"
+      }
     ],
     "data_structure": {
-      "e_base": {"description":"Principal repositorio de datos estadísticos","format":"PC-Axis (PX)","status":"Gradualmente sustituido por e-Cubos"},
-      "e_cubos": {"description":"Banco de datos multidimensionales (OLAP)","format":"JSON","status":"Nuevo estándar"},
-      "e_indicadores": {"description":"Banco de indicadores por territorio","granularidad":["Canarias","Islas","Municipios","Otras divisiones territoriales"]},
-      "e_operaciones": {"description":"Inventario de Operaciones Estadísticas del Gobierno de Canarias","visibility":"Solo vía API"},
-      "e_semantica": {"description":"Banco de recursos estructurales para normalización","resources":["Clasificaciones","Conceptos","Variables","Esquemas DSD","Organizaciones","Temas"],"visibility":"Solo vía API"}
+      "e_base": {
+        "description": "Principal repositorio de datos estadísticos",
+        "format": "PC-Axis (PX)",
+        "status": "Gradualmente sustituido por e-Cubos"
+      },
+      "e_cubos": {
+        "description": "Banco de datos multidimensionales (OLAP)",
+        "format": "JSON",
+        "status": "Nuevo estándar"
+      },
+      "e_indicadores": {
+        "description": "Banco de indicadores por territorio",
+        "granularidad": [
+          "Canarias",
+          "Islas",
+          "Municipios",
+          "Otras divisiones territoriales"
+        ]
+      },
+      "e_operaciones": {
+        "description": "Inventario de Operaciones Estadísticas del Gobierno de Canarias",
+        "visibility": "Solo vía API"
+      },
+      "e_semantica": {
+        "description": "Banco de recursos estructurales para normalización",
+        "resources": [
+          "Clasificaciones",
+          "Conceptos",
+          "Variables",
+          "Esquemas DSD",
+          "Organizaciones",
+          "Temas"
+        ],
+        "visibility": "Solo vía API"
+      }
     },
     "dataset_count": 21755,
-    "licenses": [{"type":"Aviso Legal ISTAC","description":"Licencia abierta del ISTAC (uso comercial y no comercial permitido)","count":21755}],
+    "licenses": [
+      {
+        "type": "Aviso Legal ISTAC",
+        "description": "Licencia abierta del ISTAC (uso comercial y no comercial permitido)",
+        "count": 21755
+      }
+    ],
     "license_predominant": "Aviso Legal ISTAC",
     "last_updated": "2026-05",
     "update_frequency": "Diaria/Semanal (datos demográficos, empleo, turismo)",
     "description": "Principal fuente estadística de Canarias. 21.755+ datasets con APIs especializadas (eDatos: e-Base, e-Cubos, e-Indicadores, e-Operaciones, e-Semántica). Acceso mediante APIs REST, plugin QGIS, librerías R/Python.",
-    "key_features": ["APIs especializadas eDatos para consultas multidimensionales","Datos demográficos, laborales, turísticos y económicos con máxima granularidad territorial","PC-Axis (formato abierto estándar en estadística oficial)","Plugin QGIS istacqgis para integración directa","API de georreferenciación para ubicación de direcciones","Librerías R y Python para acceso programático","Actualizaciones frecuentes (diarias para datos críticos)"],
-    "coordinates": {"lat": 28.12, "lon": -15.43}
+    "key_features": [
+      "APIs especializadas eDatos para consultas multidimensionales",
+      "Datos demográficos, laborales, turísticos y económicos con máxima granularidad territorial",
+      "PC-Axis (formato abierto estándar en estadística oficial)",
+      "Plugin QGIS istacqgis para integración directa",
+      "API de georreferenciación para ubicación de direcciones",
+      "Librerías R y Python para acceso programático",
+      "Actualizaciones frecuentes (diarias para datos críticos)"
+    ],
+    "coordinates": {
+      "lat": 28.12,
+      "lon": -15.43
+    }
   },
   {
     "id": "grafcan_sitcan",
     "name": "GRAFCAN / SITCAN – Sistema de Información Territorial de Canarias",
     "type": "organismo_especializado_geoespacial",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://www.grafcan.es/servicios/portal-de-datos-abiertos-opendata/",
     "api_url": "https://www.grafcan.es/servicios/idecanarias/",
     "portal_technology": "CKAN + OGC (WMS/WFS) + Servicios geoespaciales",
     "parent_organization": "GRAFCAN (Cartográfica de Canarias, S.A.)",
     "legal_basis": "Ley 4/2017, de 13 de julio, del Suelo y de los Espacios Naturales Protegidos de Canarias",
-    "data_categories": ["Cartografía de referencia","Divisiones administrativas","Límites administrativos","Nomenclátor geográfico","Planeamiento territorial","Planeamiento urbanístico","Catastro","Parcelas","Usos del suelo","Cobertura del suelo","Ortofotos","Mapa topográfico","Base topográfica","Datos de elevación","MDE (Modelo Digital de Elevaciones)","Red hidrológica","Recursos hídricos","Medio ambiente","Espacios naturales","Áreas protegidas","Parques nacionales","Biodiversidad","Sanidad","Centros sanitarios","Economía","Hacienda","Medio rural","Agricultura","Ganadería","Estadística territorial","Cartografía estadística","Infraestructuras","Red viaria","Transportes","Callejeros","Direcciones","Toponimia","Sensores meteorológicos","Red GNSS","Posicionamiento","Fotogrametría"],
-    "formats": ["GeoJSON","KML","KMZ","Shapefile (SHP)","GPKG (GeoPackage)","GML","GeoTIFF","GeoPDF","CSV","JSON","XML","WMS (estándar OGC)","WFS (estándar OGC)","WCS (estándar OGC)","ATOM","RINEX (para GNSS)","NetCDF","DEM (Modelos de elevación)"],
+    "data_categories": [
+      "Cartografía de referencia",
+      "Divisiones administrativas",
+      "Límites administrativos",
+      "Nomenclátor geográfico",
+      "Planeamiento territorial",
+      "Planeamiento urbanístico",
+      "Catastro",
+      "Parcelas",
+      "Usos del suelo",
+      "Cobertura del suelo",
+      "Ortofotos",
+      "Mapa topográfico",
+      "Base topográfica",
+      "Datos de elevación",
+      "MDE (Modelo Digital de Elevaciones)",
+      "Red hidrológica",
+      "Recursos hídricos",
+      "Medio ambiente",
+      "Espacios naturales",
+      "Áreas protegidas",
+      "Parques nacionales",
+      "Biodiversidad",
+      "Sanidad",
+      "Centros sanitarios",
+      "Economía",
+      "Hacienda",
+      "Medio rural",
+      "Agricultura",
+      "Ganadería",
+      "Estadística territorial",
+      "Cartografía estadística",
+      "Infraestructuras",
+      "Red viaria",
+      "Transportes",
+      "Callejeros",
+      "Direcciones",
+      "Toponimia",
+      "Sensores meteorológicos",
+      "Red GNSS",
+      "Posicionamiento",
+      "Fotogrametría"
+    ],
+    "formats": [
+      "GeoJSON",
+      "KML",
+      "KMZ",
+      "Shapefile (SHP)",
+      "GPKG (GeoPackage)",
+      "GML",
+      "GeoTIFF",
+      "GeoPDF",
+      "CSV",
+      "JSON",
+      "XML",
+      "WMS (estándar OGC)",
+      "WFS (estándar OGC)",
+      "WCS (estándar OGC)",
+      "ATOM",
+      "RINEX (para GNSS)",
+      "NetCDF",
+      "DEM (Modelos de elevación)"
+    ],
     "apis": [
-      {"name":"Servicios WMS","description":"Servicio de mapas telemático conforme a estándares OGC","type":"OGC Web Service","documentation":"https://www.grafcan.es/servicios/idecanarias/"},
-      {"name":"Servicios WFS","description":"Descarga de datos vectoriales conforme a OGC","type":"OGC Web Service","documentation":"https://www.grafcan.es/servicios/idecanarias/"},
-      {"name":"Servicios WCS","description":"Acceso a coberturas raster (ortofotos, MDE, etc.)","type":"OGC Web Service","documentation":"https://www.grafcan.es/servicios/idecanarias/"},
-      {"name":"API Red de Sensores","description":"Datos meteorológicos de estaciones GRAFCAN en tiempo real","type":"REST","access":"Con api-key gratuita","documentation":"https://sensores.grafcan.es"},
-      {"name":"API GNSS","description":"Correcciones en tiempo real (RTCM/CMR+) y descargas RINEX","type":"NTRIP + descarga directa","access":"Gratuito para administraciones públicas, de pago para otros","documentation":"https://www.grafcan.es/servicios/red-estaciones-gnss/"},
-      {"name":"Catálogo de metadatos","description":"Búsqueda y descripción de recursos geoespaciales","type":"Catálogo INSPIRE","documentation":"https://www.grafcan.es/servicios/idecanarias/"}
+      {
+        "name": "Servicios WMS",
+        "description": "Servicio de mapas telemático conforme a estándares OGC",
+        "type": "OGC Web Service",
+        "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+      },
+      {
+        "name": "Servicios WFS",
+        "description": "Descarga de datos vectoriales conforme a OGC",
+        "type": "OGC Web Service",
+        "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+      },
+      {
+        "name": "Servicios WCS",
+        "description": "Acceso a coberturas raster (ortofotos, MDE, etc.)",
+        "type": "OGC Web Service",
+        "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+      },
+      {
+        "name": "API Red de Sensores",
+        "description": "Datos meteorológicos de estaciones GRAFCAN en tiempo real",
+        "type": "REST",
+        "access": "Con api-key gratuita",
+        "documentation": "https://sensores.grafcan.es"
+      },
+      {
+        "name": "API GNSS",
+        "description": "Correcciones en tiempo real (RTCM/CMR+) y descargas RINEX",
+        "type": "NTRIP + descarga directa",
+        "access": "Gratuito para administraciones públicas, de pago para otros",
+        "documentation": "https://www.grafcan.es/servicios/red-estaciones-gnss/"
+      },
+      {
+        "name": "Catálogo de metadatos",
+        "description": "Búsqueda y descripción de recursos geoespaciales",
+        "type": "Catálogo INSPIRE",
+        "documentation": "https://www.grafcan.es/servicios/idecanarias/"
+      }
     ],
     "infrastructure": {
-      "ide_canarias": {"name":"Infraestructura de Datos Espaciales de Canarias","url":"https://visor.grafcan.es","services_count":200,"daily_sessions":6000,"annual_requests":7000000},
-      "red_sensores": {"name":"Red de Sensores Meteorológicos","capabilities":["Datos meteorológicos en vivo","Series históricas","API REST"]},
-      "red_gnss": {"name":"Red de Estaciones Permanentes GNSS","description":"17 estaciones de posicionamiento de alta precisión","capabilities":["Descarga RINEX","Correcciones tiempo real RTCM","Posicionamiento preciso"]}
+      "ide_canarias": {
+        "name": "Infraestructura de Datos Espaciales de Canarias",
+        "url": "https://visor.grafcan.es",
+        "services_count": 200,
+        "daily_sessions": 6000,
+        "annual_requests": 7000000
+      },
+      "red_sensores": {
+        "name": "Red de Sensores Meteorológicos",
+        "capabilities": [
+          "Datos meteorológicos en vivo",
+          "Series históricas",
+          "API REST"
+        ]
+      },
+      "red_gnss": {
+        "name": "Red de Estaciones Permanentes GNSS",
+        "description": "17 estaciones de posicionamiento de alta precisión",
+        "capabilities": [
+          "Descarga RINEX",
+          "Correcciones tiempo real RTCM",
+          "Posicionamiento preciso"
+        ]
+      }
     },
-    "compliance": ["Directiva INSPIRE (2007/2/CE)","Estándares OGC (WMS, WFS, WCS)","Ley 4/2017","Ley 37/2007","Directiva UE 2019/1024"],
+    "compliance": [
+      "Directiva INSPIRE (2007/2/CE)",
+      "Estándares OGC (WMS, WFS, WCS)",
+      "Ley 4/2017",
+      "Ley 37/2007",
+      "Directiva UE 2019/1024"
+    ],
     "dataset_count": 120,
     "dataset_count_note": "Más de 200 servicios de mapas disponibles a través de IDECanarias",
-    "licenses": [{"type":"Aviso Legal del SITCAN","count":120}],
+    "licenses": [
+      {
+        "type": "Aviso Legal del SITCAN",
+        "count": 120
+      }
+    ],
     "license_predominant": "Aviso Legal del SITCAN",
     "last_updated": "2025-02",
     "update_frequency": "Variable (cartografía: anual; sensores: tiempo real; GNSS: continuo)",
     "description": "Sistema de Información Territorial de Canarias. 120 datasets geoespaciales + 200 servicios WMS/WFS/WCS. Cartografía base, planeamiento, sensores meteorológicos, red GNSS. Conforme a INSPIRE y estándares OGC.",
-    "coordinates": {"lat": 28.35, "lon": -16.25}
+    "coordinates": {
+      "lat": 28.35,
+      "lon": -16.25
+    }
   },
   {
     "id": "cabildo_tenerife",
     "name": "Cabildo de Tenerife",
     "type": "cabildo",
-    "islands": ["Tenerife"],
+    "islands": [
+      "Tenerife"
+    ],
     "portal_url": "https://datos.tenerife.es",
     "api_url": "https://datos.tenerife.es/api/3/action/package_search",
     "portal_technology": "CKAN",
-    "data_categories": ["Turismo","Movilidad","Transporte público","Medio ambiente","Territorio","Cartografía","Equipamientos","Sector público","Cultura","Deportes","Infraestructuras","Economía"],
-    "formats": ["CSV","JSON","GeoJSON","XLSX","XML","KML","PDF","API"],
-    "apis": [
-      {"name":"CKAN API","url":"https://datos.tenerife.es/api/3/action/package_search","type":"REST","access":"Público","documentation":"https://datos.tenerife.es/es/datos/api"},
-      {"name":"Servicios geográficos","type":"OGC","access":"Público"}
+    "data_categories": [
+      "Turismo",
+      "Movilidad",
+      "Transporte público",
+      "Medio ambiente",
+      "Territorio",
+      "Cartografía",
+      "Equipamientos",
+      "Sector público",
+      "Cultura",
+      "Deportes",
+      "Infraestructuras",
+      "Economía"
     ],
-    "infrastructure": {"main_services":["Portal Open Data","API CKAN","Servicios geográficos OGC"],"tools":["CKAN","OGC","GeoServer"],"compliance":["DCAT","OGC","INSPIRE"]},
-    "organization": {"publishers":["Cabildo de Tenerife","Áreas y servicios insulares","Entidades públicas dependientes"]},
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON",
+      "XLSX",
+      "XML",
+      "KML",
+      "PDF",
+      "API"
+    ],
+    "apis": [
+      {
+        "name": "CKAN API",
+        "url": "https://datos.tenerife.es/api/3/action/package_search",
+        "type": "REST",
+        "access": "Público",
+        "documentation": "https://datos.tenerife.es/es/datos/api"
+      },
+      {
+        "name": "Servicios geográficos",
+        "type": "OGC",
+        "access": "Público"
+      }
+    ],
+    "infrastructure": {
+      "main_services": [
+        "Portal Open Data",
+        "API CKAN",
+        "Servicios geográficos OGC"
+      ],
+      "tools": [
+        "CKAN",
+        "OGC",
+        "GeoServer"
+      ],
+      "compliance": [
+        "DCAT",
+        "OGC",
+        "INSPIRE"
+      ]
+    },
+    "organization": {
+      "publishers": [
+        "Cabildo de Tenerife",
+        "Áreas y servicios insulares",
+        "Entidades públicas dependientes"
+      ]
+    },
     "dataset_count": 285,
-    "licenses": [{"type":"CC BY 4.0","url":"https://creativecommons.org/licenses/by/4.0/"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2026-05",
     "update_frequency": "Variable",
     "description": "Portal de datos abiertos del Cabildo de Tenerife con información sobre movilidad, turismo, territorio, medio ambiente, cartografía, equipamientos, infraestructuras, cultura y datos institucionales.",
-    "coordinates": {"lat": 28.4636, "lon": -16.2518}
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    }
   },
   {
     "id": "ayuntamiento_las_palmas_gc",
     "name": "Ayuntamiento de Las Palmas de Gran Canaria",
     "type": "ayuntamiento",
-    "islands": ["Gran Canaria"],
+    "islands": [
+      "Gran Canaria"
+    ],
     "portal_url": "https://datosabiertos.laspalmasgc.es",
     "api_url": "https://datosabiertos.laspalmasgc.es/api/3/action/package_search",
     "portal_technology": "CKAN",
-    "data_categories": ["Movilidad","Transporte","Tráfico","Turismo","Medio ambiente","Urbanismo","Playas","Cultura","Deportes","Presupuestos","Equipamientos","Participación ciudadana"],
-    "formats": ["CSV","JSON","GeoJSON"],
-    "apis": [{"name":"CKAN API","url":"https://datosabiertos.laspalmasgc.es/api/3/action/package_search","type":"REST","access":"Público"}],
-    "infrastructure": {"main_services":["Portal Open Data","API CKAN"],"tools":["CKAN"],"compliance":["DCAT"]},
+    "data_categories": [
+      "Movilidad",
+      "Transporte",
+      "Tráfico",
+      "Turismo",
+      "Medio ambiente",
+      "Urbanismo",
+      "Playas",
+      "Cultura",
+      "Deportes",
+      "Presupuestos",
+      "Equipamientos",
+      "Participación ciudadana"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON"
+    ],
+    "apis": [
+      {
+        "name": "CKAN API",
+        "url": "https://datosabiertos.laspalmasgc.es/api/3/action/package_search",
+        "type": "REST",
+        "access": "Público"
+      }
+    ],
+    "infrastructure": {
+      "main_services": [
+        "Portal Open Data",
+        "API CKAN"
+      ],
+      "tools": [
+        "CKAN"
+      ],
+      "compliance": [
+        "DCAT"
+      ]
+    },
     "dataset_count": 170,
-    "licenses": [{"type":"CC BY 4.0","url":"https://creativecommons.org/licenses/by/4.0/"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2026-05",
     "description": "Portal de datos abiertos del Ayuntamiento de Las Palmas de Gran Canaria con información sobre movilidad, turismo, urbanismo, playas, cultura, medio ambiente y datos municipales.",
-    "coordinates": {"lat": 28.1248, "lon": -15.4300}
+    "coordinates": {
+      "lat": 28.1248,
+      "lon": -15.43
+    }
   },
   {
     "id": "ayuntamiento_santa_cruz_tenerife",
     "name": "Ayuntamiento de Santa Cruz de Tenerife",
     "type": "ayuntamiento",
-    "islands": ["Tenerife"],
+    "islands": [
+      "Tenerife"
+    ],
     "portal_url": "https://opendata.santacruzdetenerife.es",
     "api_url": "https://opendata.santacruzdetenerife.es/api/3/action/package_search",
     "portal_technology": "CKAN",
-    "data_categories": ["Movilidad","Transporte","Tráfico","Urbanismo","Medio ambiente","Turismo","Cultura","Playas","Seguridad","Equipamientos","Participación ciudadana","Datos institucionales"],
-    "formats": ["CSV","JSON","GeoJSON"],
-    "apis": [{"name":"CKAN API","url":"https://opendata.santacruzdetenerife.es/api/3/action/package_search","type":"REST","access":"Público"}],
-    "infrastructure": {"main_services":["Portal Open Data","API CKAN"],"tools":["CKAN"],"compliance":["DCAT"]},
+    "data_categories": [
+      "Movilidad",
+      "Transporte",
+      "Tráfico",
+      "Urbanismo",
+      "Medio ambiente",
+      "Turismo",
+      "Cultura",
+      "Playas",
+      "Seguridad",
+      "Equipamientos",
+      "Participación ciudadana",
+      "Datos institucionales"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON"
+    ],
+    "apis": [
+      {
+        "name": "CKAN API",
+        "url": "https://opendata.santacruzdetenerife.es/api/3/action/package_search",
+        "type": "REST",
+        "access": "Público"
+      }
+    ],
+    "infrastructure": {
+      "main_services": [
+        "Portal Open Data",
+        "API CKAN"
+      ],
+      "tools": [
+        "CKAN"
+      ],
+      "compliance": [
+        "DCAT"
+      ]
+    },
     "dataset_count": 140,
-    "licenses": [{"type":"CC BY 4.0","url":"https://creativecommons.org/licenses/by/4.0/"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2026-05",
     "description": "Portal de datos abiertos del Ayuntamiento de Santa Cruz de Tenerife con información sobre movilidad, urbanismo, tráfico, playas, turismo, medio ambiente, cultura y servicios municipales.",
-    "coordinates": {"lat": 28.4632, "lon": -16.2518}
+    "coordinates": {
+      "lat": 28.4632,
+      "lon": -16.2518
+    }
   },
   {
     "id": "ayuntamiento_arona",
     "name": "Ayuntamiento de Arona – Open Data Arona",
     "type": "ayuntamiento",
-    "islands": ["Tenerife"],
+    "islands": [
+      "Tenerife"
+    ],
     "portal_url": "https://opendataaronapre.grupotecopy.es/",
     "api_url": "https://opendataaronapre.grupotecopy.es/es/api",
     "portal_technology": "CKAN",
-    "data_categories": ["Ciencia y Tecnología","Comercio","Demografía","Deporte","Educación","Hacienda","Legislación y justicia","Salud","Sector público","Turismo"],
-    "formats": ["CSV","JSON","XML","PDF","API"],
-    "apis": [{"name":"API CKAN","url":"https://opendataaronapre.grupotecopy.es/es/api","type":"REST","access":"Público"}],
-    "infrastructure": {"main_services":["Portal CKAN","API REST"]},
+    "data_categories": [
+      "Ciencia y Tecnología",
+      "Comercio",
+      "Demografía",
+      "Deporte",
+      "Educación",
+      "Hacienda",
+      "Legislación y justicia",
+      "Salud",
+      "Sector público",
+      "Turismo"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "XML",
+      "PDF",
+      "API"
+    ],
+    "apis": [
+      {
+        "name": "API CKAN",
+        "url": "https://opendataaronapre.grupotecopy.es/es/api",
+        "type": "REST",
+        "access": "Público"
+      }
+    ],
+    "infrastructure": {
+      "main_services": [
+        "Portal CKAN",
+        "API REST"
+      ]
+    },
     "dataset_count": 14,
-    "licenses": [{"type":"CC BY 4.0","count":14,"url":"https://creativecommons.org/licenses/by/4.0/"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0",
+        "count": 14,
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2026-05",
     "description": "Portal de datos abiertos del Ayuntamiento de Arona.",
-    "coordinates": {"lat": 28.0997, "lon": -16.6817}
+    "coordinates": {
+      "lat": 28.0997,
+      "lon": -16.6817
+    }
   },
   {
     "id": "comisionado_transparencia_canarias",
     "name": "Comisionado de Transparencia de Canarias",
     "type": "organismo_especializado",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://transparenciacanarias.org/datos/",
     "api_url": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/",
     "portal_technology": "CKAN",
-    "data_categories": ["Medio ambiente","Transporte","Transparencia","Sector público","Administración"],
-    "formats": ["CSV","JSON","Visualizaciones Embebidas"],
-    "apis": [{"name":"API TCanaria","url":"https://transparenciacanarias.org/manuales/manual-api-tcanaria/","type":"REST","access":"Público","documentation":"https://transparenciacanarias.org/manuales/manual-api-tcanaria/"}],
-    "infrastructure": {"main_services":["Portal CKAN","API REST"]},
+    "data_categories": [
+      "Medio ambiente",
+      "Transporte",
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "Visualizaciones Embebidas"
+    ],
+    "apis": [
+      {
+        "name": "API TCanaria",
+        "url": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/",
+        "type": "REST",
+        "access": "Público",
+        "documentation": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/"
+      }
+    ],
+    "infrastructure": {
+      "main_services": [
+        "Portal CKAN",
+        "API REST"
+      ]
+    },
     "dataset_count": 22357,
-    "licenses": [{"type":"CC BY 4.0","count":22357,"url":"https://creativecommons.org/licenses/by/4.0/"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0",
+        "count": 22357,
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2026-04",
     "description": "Portal de datos abiertos del Comisionado de Transparencia de Canarias.",
-    "coordinates": {"lat": 28.4636, "lon": -16.2518}
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    }
   },
   {
     "id": "gobierno_abierto_canarias",
     "name": "Portal de Gobierno Abierto del Gobierno de Canarias",
     "type": "gobierno_autonomico",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://www.gobiernodecanarias.org/gobiernoabierto/",
     "api_url": "https://datos.canarias.es/portal/reutilizacion/api/",
     "portal_technology": "CKAN",
-    "data_categories": ["Economía","Medio ambiente","Sociedad y Bienestar","Turismo","Sector público"],
-    "formats": ["CSV","JSON","XML","RDF-XML","XLSX"],
-    "apis": [{"name":"API datos.canarias.es","url":"https://datos.canarias.es/portal/reutilizacion/api/","type":"REST","access":"Público"}],
-    "infrastructure": {"main_services":["Portal CKAN","API REST"]},
+    "data_categories": [
+      "Economía",
+      "Medio ambiente",
+      "Sociedad y Bienestar",
+      "Turismo",
+      "Sector público"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "XML",
+      "RDF-XML",
+      "XLSX"
+    ],
+    "apis": [
+      {
+        "name": "API datos.canarias.es",
+        "url": "https://datos.canarias.es/portal/reutilizacion/api/",
+        "type": "REST",
+        "access": "Público"
+      }
+    ],
+    "infrastructure": {
+      "main_services": [
+        "Portal CKAN",
+        "API REST"
+      ]
+    },
     "dataset_count": 8295,
-    "licenses": [{"type":"Reutilización abierta (Atribución requerida)","count":8295}],
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)",
+        "count": 8295
+      }
+    ],
     "license_predominant": "Reutilización abierta (Atribución requerida)",
     "last_updated": "2024-05",
     "description": "Portal centralizado de datos abiertos de la Administración Pública de la Comunidad Autónoma de Canarias.",
-    "coordinates": {"lat": 28.29, "lon": -16.62}
+    "coordinates": {
+      "lat": 28.29,
+      "lon": -16.62
+    }
   },
   {
     "id": "openstreetmap-canarias",
     "name": "OpenStreetMap – Islas Canarias",
     "type": "organismo_especializado_geoespacial",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://www.openstreetmap.org",
     "api_url": "https://overpass-api.de/api/interpreter",
     "portal_technology": "OpenStreetMap",
-    "data_categories": ["Cartografía colaborativa","Callejero","Infraestructuras","Puntos de interés","Transporte","Turismo","Medio ambiente"],
-    "formats": ["OSM XML","PBF","GeoJSON","Shapefile","CSV","API Overpass"],
+    "data_categories": [
+      "Cartografía colaborativa",
+      "Callejero",
+      "Infraestructuras",
+      "Puntos de interés",
+      "Transporte",
+      "Turismo",
+      "Medio ambiente"
+    ],
+    "formats": [
+      "OSM XML",
+      "PBF",
+      "GeoJSON",
+      "Shapefile",
+      "CSV",
+      "API Overpass"
+    ],
     "apis": [
-      {"name":"Overpass API","url":"https://overpass-api.de/api/interpreter","type":"REST","access":"Público","description":"Consultas sobre datos OSM mediante lenguaje Overpass QL"},
-      {"name":"OSM API","url":"https://api.openstreetmap.org/api/0.6/","type":"REST","access":"Público","description":"API oficial de lectura/escritura de datos OSM"}
+      {
+        "name": "Overpass API",
+        "url": "https://overpass-api.de/api/interpreter",
+        "type": "REST",
+        "access": "Público",
+        "description": "Consultas sobre datos OSM mediante lenguaje Overpass QL"
+      },
+      {
+        "name": "OSM API",
+        "url": "https://api.openstreetmap.org/api/0.6/",
+        "type": "REST",
+        "access": "Público",
+        "description": "API oficial de lectura/escritura de datos OSM"
+      }
     ],
     "dataset_count": null,
-    "licenses": [{"type":"ODbL (Open Database License)"}],
+    "licenses": [
+      {
+        "type": "ODbL (Open Database License)"
+      }
+    ],
     "license_predominant": "ODbL",
     "last_updated": "2026-05",
     "update_frequency": "Continua (colaborativa)",
     "description": "Datos cartográficos colaborativos y abiertos de las Islas Canarias. Extraíbles mediante Overpass API o descarga de extractos regionales.",
-    "coordinates": {"lat": 28.2916, "lon": -16.6291}
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
   },
   {
     "id": "european-data-portal",
     "name": "European Data Portal (data.europa.eu)",
     "type": "organismo_especializado",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://data.europa.eu/euodp/es/data",
     "api_url": "https://data.europa.eu/api/hub/search/",
     "portal_technology": "CKAN + Portal europeo",
-    "data_categories": ["Turismo","Demografía","Economía","Medio ambiente","Sector público","Transporte","Energía","Agricultura"],
-    "formats": ["CSV","JSON","XML","RDF","SPARQL"],
+    "data_categories": [
+      "Turismo",
+      "Demografía",
+      "Economía",
+      "Medio ambiente",
+      "Sector público",
+      "Transporte",
+      "Energía",
+      "Agricultura"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "XML",
+      "RDF",
+      "SPARQL"
+    ],
     "apis": [
-      {"name":"data.europa.eu API","url":"https://data.europa.eu/api/hub/search/","type":"REST","access":"Público","description":"Búsqueda y acceso a datasets federados de toda la UE, incluyendo datos canarios"}
+      {
+        "name": "data.europa.eu API",
+        "url": "https://data.europa.eu/api/hub/search/",
+        "type": "REST",
+        "access": "Público",
+        "description": "Búsqueda y acceso a datasets federados de toda la UE, incluyendo datos canarios"
+      }
     ],
     "dataset_count": null,
-    "licenses": [{"type":"Múltiples (CC BY, ODbL, open government)"}],
+    "licenses": [
+      {
+        "type": "Múltiples (CC BY, ODbL, open government)"
+      }
+    ],
     "license_predominant": "Múltiples",
     "last_updated": "2026-05",
     "description": "Portal europeo que agrega datasets de España y Canarias federados desde datos.gob.es y portales autonómicos.",
-    "coordinates": {"lat": 28.2916, "lon": -16.6291}
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
   },
   {
     "id": "cabildo_gran_canaria_ide",
     "name": "Cabildo de Gran Canaria – IDE Gran Canaria",
     "type": "cabildo",
-    "islands": ["Gran Canaria"],
+    "islands": [
+      "Gran Canaria"
+    ],
     "portal_url": "https://www.idegrancanaria.es",
     "api_url": "https://www.idegrancanaria.es/api",
     "portal_technology": "ArcGIS / Portal geoespacial propio",
-    "data_categories": ["Cartografía","Territorio","Medio ambiente","Urbanismo","Infraestructuras","Turismo","Demografía"],
-    "formats": ["GeoJSON","Shapefile","KML","WMS","WFS","CSV"],
+    "data_categories": [
+      "Cartografía",
+      "Territorio",
+      "Medio ambiente",
+      "Urbanismo",
+      "Infraestructuras",
+      "Turismo",
+      "Demografía"
+    ],
+    "formats": [
+      "GeoJSON",
+      "Shapefile",
+      "KML",
+      "WMS",
+      "WFS",
+      "CSV"
+    ],
     "apis": [
-      {"name":"IDE Gran Canaria API","url":"https://www.idegrancanaria.es/api","type":"REST + OGC","access":"Público","description":"Servicios geoespaciales WMS/WFS del Cabildo de Gran Canaria"}
+      {
+        "name": "IDE Gran Canaria API",
+        "url": "https://www.idegrancanaria.es/api",
+        "type": "REST + OGC",
+        "access": "Público",
+        "description": "Servicios geoespaciales WMS/WFS del Cabildo de Gran Canaria"
+      }
     ],
     "dataset_count": 55,
-    "licenses": [{"type":"Aviso legal propio / CC BY"}],
+    "licenses": [
+      {
+        "type": "Aviso legal propio / CC BY"
+      }
+    ],
     "license_predominant": "CC BY",
     "last_updated": "2025-12",
     "description": "Infraestructura de Datos Espaciales del Cabildo de Gran Canaria con cartografía insular, territorio, medio ambiente y urbanismo.",
-    "coordinates": {"lat": 27.9202, "lon": -15.5474}
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
   },
   {
     "id": "cabildo_la_palma",
     "name": "Cabildo de La Palma – Open Data La Palma",
     "type": "cabildo",
-    "islands": ["La Palma"],
+    "islands": [
+      "La Palma"
+    ],
     "portal_url": "https://opendata.cabildodelapalma.es",
     "api_url": "https://opendata.cabildodelapalma.es/api/3/action/package_search",
     "portal_technology": "CKAN",
-    "data_categories": ["Medio ambiente","Turismo","Demografía","Economía","Sector público","Territorio","Cultura"],
-    "formats": ["CSV","JSON","GeoJSON","XLSX","XML"],
-    "apis": [{"name":"CKAN API","url":"https://opendata.cabildodelapalma.es/api/3/action/package_search","type":"REST","access":"Público"}],
+    "data_categories": [
+      "Medio ambiente",
+      "Turismo",
+      "Demografía",
+      "Economía",
+      "Sector público",
+      "Territorio",
+      "Cultura"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON",
+      "XLSX",
+      "XML"
+    ],
+    "apis": [
+      {
+        "name": "CKAN API",
+        "url": "https://opendata.cabildodelapalma.es/api/3/action/package_search",
+        "type": "REST",
+        "access": "Público"
+      }
+    ],
     "dataset_count": 63,
-    "licenses": [{"type":"CC BY 4.0"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2025-11",
     "description": "Portal de datos abiertos del Cabildo de La Palma con información territorial, medioambiental, turística y datos institucionales.",
-    "coordinates": {"lat": 28.6835, "lon": -17.7642}
+    "coordinates": {
+      "lat": 28.6835,
+      "lon": -17.7642
+    }
   },
   {
     "id": "cabildo_lanzarote",
     "name": "Cabildo de Lanzarote – Centro de Datos",
     "type": "cabildo",
-    "islands": ["Lanzarote"],
+    "islands": [
+      "Lanzarote"
+    ],
     "portal_url": "https://datos.lanzarote.es",
     "api_url": null,
     "portal_technology": "Portal propio",
-    "data_categories": ["Turismo","Medio ambiente","Territorio","Demografía","Economía","Sector público"],
-    "formats": ["CSV","JSON","XLSX","PDF"],
+    "data_categories": [
+      "Turismo",
+      "Medio ambiente",
+      "Territorio",
+      "Demografía",
+      "Economía",
+      "Sector público"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "XLSX",
+      "PDF"
+    ],
     "dataset_count": 95,
-    "licenses": [{"type":"Aviso legal propio"}],
+    "licenses": [
+      {
+        "type": "Aviso legal propio"
+      }
+    ],
     "license_predominant": "Aviso legal propio",
     "last_updated": "2025-09",
     "description": "Centro de datos abiertos del Cabildo de Lanzarote con información turística, territorial y medioambiental.",
-    "coordinates": {"lat": 29.0469, "lon": -13.5899}
+    "coordinates": {
+      "lat": 29.0469,
+      "lon": -13.5899
+    }
   },
   {
     "id": "autoridad_portuaria_stc",
     "name": "Autoridad Portuaria de Santa Cruz de Tenerife",
     "type": "empresa_publica",
-    "islands": ["Tenerife"],
+    "islands": [
+      "Tenerife"
+    ],
     "portal_url": "https://www.puertosdetenerife.org/datos-abiertos/",
     "api_url": "https://www.puertosdetenerife.org/api/datos/",
     "portal_technology": "Portal propio",
-    "data_categories": ["Transporte marítimo","Tráfico portuario","Cruceros","Mercancías","Pasajeros","Logística","Economía portuaria"],
-    "formats": ["CSV","JSON","XLSX","PDF"],
-    "apis": [{"name":"API Puertos de Tenerife","url":"https://www.puertosdetenerife.org/api/datos/","type":"REST","access":"Público","description":"Estadísticas de tráfico portuario, cruceros y mercancías"}],
+    "data_categories": [
+      "Transporte marítimo",
+      "Tráfico portuario",
+      "Cruceros",
+      "Mercancías",
+      "Pasajeros",
+      "Logística",
+      "Economía portuaria"
+    ],
+    "formats": [
+      "CSV",
+      "JSON",
+      "XLSX",
+      "PDF"
+    ],
+    "apis": [
+      {
+        "name": "API Puertos de Tenerife",
+        "url": "https://www.puertosdetenerife.org/api/datos/",
+        "type": "REST",
+        "access": "Público",
+        "description": "Estadísticas de tráfico portuario, cruceros y mercancías"
+      }
+    ],
     "dataset_count": 69,
-    "licenses": [{"type":"CC BY 4.0"}],
+    "licenses": [
+      {
+        "type": "CC BY 4.0"
+      }
+    ],
     "license_predominant": "CC BY 4.0",
     "last_updated": "2026-03",
     "description": "Datos abiertos de la Autoridad Portuaria de Santa Cruz de Tenerife: tráfico de pasajeros, cruceros, mercancías y estadísticas portuarias.",
-    "coordinates": {"lat": 28.4722, "lon": -16.2500}
+    "coordinates": {
+      "lat": 28.4722,
+      "lon": -16.25
+    }
   },
   {
     "id": "portal_justicia_datos",
     "name": "Portal La Justicia en Datos – Ministerio de Justicia",
     "type": "organismo_especializado_nacional",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://www.mjusticia.gob.es/es/AreaTematica/EstadisticaInformacionParlamentaria/Documents/Estadistica_judicial_canarias.html",
     "api_url": null,
     "portal_technology": "Portal estático del MJUST",
-    "data_categories": ["Justicia","Estadística judicial","Juzgados","Procedimientos","Criminalidad","Registros civiles"],
-    "formats": ["CSV","XLSX","PDF"],
+    "data_categories": [
+      "Justicia",
+      "Estadística judicial",
+      "Juzgados",
+      "Procedimientos",
+      "Criminalidad",
+      "Registros civiles"
+    ],
+    "formats": [
+      "CSV",
+      "XLSX",
+      "PDF"
+    ],
     "dataset_count": 52,
-    "licenses": [{"type":"Reutilización abierta MJUST"}],
+    "licenses": [
+      {
+        "type": "Reutilización abierta MJUST"
+      }
+    ],
     "license_predominant": "Reutilización abierta",
     "last_updated": "2025-12",
     "description": "Estadísticas judiciales del Ministerio de Justicia con desagregación por comunidad autónoma, incluyendo Canarias.",
-    "coordinates": {"lat": 28.2916, "lon": -16.6291}
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
   },
   {
     "id": "sepe_empleo",
     "name": "SEPE – Datos de Empleo Canarias",
     "type": "organismo_especializado_nacional",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
     "api_url": null,
     "portal_technology": "Portal estático SEPE",
-    "data_categories": ["Empleo","Paro registrado","Demandantes","Contratos","ERTE","Mercado laboral","Prestaciones"],
-    "formats": ["CSV","XLSX","PDF"],
+    "data_categories": [
+      "Empleo",
+      "Paro registrado",
+      "Demandantes",
+      "Contratos",
+      "ERTE",
+      "Mercado laboral",
+      "Prestaciones"
+    ],
+    "formats": [
+      "CSV",
+      "XLSX",
+      "PDF"
+    ],
     "dataset_count": 14,
-    "licenses": [{"type":"Reutilización abierta SEPE"}],
+    "licenses": [
+      {
+        "type": "Reutilización abierta SEPE"
+      }
+    ],
     "license_predominant": "Reutilización abierta",
     "last_updated": "2026-04",
     "update_frequency": "Mensual",
     "description": "Datos mensuales del SEPE sobre paro registrado, contratos y demandantes de empleo desagregados por provincia canaria (Las Palmas y Santa Cruz de Tenerife).",
-    "coordinates": {"lat": 28.2916, "lon": -16.6291}
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
   },
   {
     "id": "aena_canarios",
     "name": "AENA – Estadísticas de Aeropuertos Canarios",
     "type": "empresa_publica_nacional",
-    "islands": ["Gran Canaria","Tenerife","Lanzarote","Fuerteventura"],
+    "islands": [
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura"
+    ],
     "portal_url": "https://www.aena.es/es/estadisticas.html",
     "api_url": null,
     "portal_technology": "Portal estadístico AENA",
-    "data_categories": ["Transporte aéreo","Pasajeros","Operaciones","Mercancías","Turismo","Aeropuertos"],
-    "formats": ["CSV","XLSX","PDF"],
+    "data_categories": [
+      "Transporte aéreo",
+      "Pasajeros",
+      "Operaciones",
+      "Mercancías",
+      "Turismo",
+      "Aeropuertos"
+    ],
+    "formats": [
+      "CSV",
+      "XLSX",
+      "PDF"
+    ],
     "dataset_count": null,
-    "licenses": [{"type":"Reutilización abierta AENA"}],
+    "licenses": [
+      {
+        "type": "Reutilización abierta AENA"
+      }
+    ],
     "license_predominant": "Reutilización abierta",
     "last_updated": "2026-04",
     "update_frequency": "Mensual",
     "description": "Estadísticas de tráfico de pasajeros, operaciones y mercancías de los aeropuertos canarios: Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote y Fuerteventura.",
-    "coordinates": {"lat": 27.9319, "lon": -15.3866}
+    "coordinates": {
+      "lat": 27.9319,
+      "lon": -15.3866
+    }
   },
   {
     "id": "policia_nacional_canarias",
     "name": "Policía Nacional – Datos de Seguridad Canarias",
     "type": "organismo_especializado_nacional",
-    "islands": ["Todas","Gran Canaria","Tenerife","Lanzarote","Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+    "islands": [
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
     "portal_url": "https://estadisticasdecriminalidad.ses.mir.es",
     "api_url": null,
     "portal_technology": "Portal estadístico MIR",
-    "data_categories": ["Seguridad","Criminalidad","Delitos","Infracciones","Orden público"],
-    "formats": ["CSV","XLSX","PDF"],
+    "data_categories": [
+      "Seguridad",
+      "Criminalidad",
+      "Delitos",
+      "Infracciones",
+      "Orden público"
+    ],
+    "formats": [
+      "CSV",
+      "XLSX",
+      "PDF"
+    ],
     "dataset_count": 2,
-    "licenses": [{"type":"Reutilización abierta MIR"}],
+    "licenses": [
+      {
+        "type": "Reutilización abierta MIR"
+      }
+    ],
     "license_predominant": "Reutilización abierta",
     "last_updated": "2025-06",
     "update_frequency": "Anual/Semestral",
     "description": "Estadísticas de criminalidad del Ministerio del Interior con datos desagregados por comunidad autónoma, incluyendo Canarias.",
-    "coordinates": {"lat": 28.2916, "lon": -16.6291}
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "ayuntamiento_candelaria",
+    "name": "Ayuntamiento de Candelaria",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://sedeelectronica.candelaria.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sedeelectronica.candelaria.es/transparencia",
+    "description": "Portal de transparencia del Ayuntamiento de Candelaria. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3562,
+      "lon": -16.3732
+    }
+  },
+  {
+    "id": "ayuntamiento_granadilla_de_abona",
+    "name": "Ayuntamiento de Granadilla de Abona",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://transparencia.granadilladeabona.org",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.granadilladeabona.es/staCarpetaPublic/index.php?APP_CODE=STA&PAGE_CODE=CATALOGO",
+    "description": "Portal de transparencia del Ayuntamiento de Granadilla de Abona. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1197,
+      "lon": -16.5756
+    }
+  },
+  {
+    "id": "ayuntamiento_guimar",
+    "name": "Ayuntamiento de Güímar",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://guimar.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://guimar.sedelectronica.es/dossier.28",
+    "description": "Portal de transparencia del Ayuntamiento de Güímar. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3094,
+      "lon": -16.4097
+    }
+  },
+  {
+    "id": "ayuntamiento_la_aldea_de_san_nicolas",
+    "name": "Ayuntamiento de La Aldea de San Nicolás",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://transparencia.laaldeasanicolas.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://laaldeadesannicolas.sedelectronica.es/dossier.13",
+    "description": "Portal de transparencia del Ayuntamiento de La Aldea de San Nicolás. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9936,
+      "lon": -15.7914
+    }
+  },
+  {
+    "id": "ayuntamiento_la_oliva",
+    "name": "Ayuntamiento de La Oliva",
+    "type": "ayuntamiento",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://transparencia.laoliva.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://laoliva.sedelectronica.es/catalog/tcb08f2a7-e5f7-42eb-bbfa-13a2b485e606",
+    "description": "Portal de transparencia del Ayuntamiento de La Oliva. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6103,
+      "lon": -13.9269
+    }
+  },
+  {
+    "id": "ayuntamiento_puerto_de_la_cruz",
+    "name": "Ayuntamiento de Puerto de la Cruz",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://puertodelacruz.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://puertodelacruz.sedelectronica.es/dossier",
+    "description": "Portal de transparencia del Ayuntamiento de Puerto de la Cruz. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4148,
+      "lon": -16.5496
+    }
+  },
+  {
+    "id": "ayuntamiento_san_andres_y_sauces",
+    "name": "Ayuntamiento de San Andrés y Sauces",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://sanandresysauces.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sanandresysauces.sedelectronica.es/dossier.5",
+    "description": "Portal de transparencia del Ayuntamiento de San Andrés y Sauces. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.8016,
+      "lon": -17.7894
+    }
+  },
+  {
+    "id": "ayuntamiento_san_cristobal_de_la_laguna",
+    "name": "Ayuntamiento de San Cristóbal de La Laguna",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://www.aytolalaguna.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://www.aytolalaguna.es/transparencia/derecho-de-acceso",
+    "description": "Portal de transparencia del Ayuntamiento de San Cristóbal de La Laguna. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4874,
+      "lon": -16.3159
+    }
+  },
+  {
+    "id": "ayuntamiento_tijarafe",
+    "name": "Ayuntamiento de Tijarafe",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.tijarafe.net",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://tijarafe.sedelectronica.es/dossier.4",
+    "description": "Portal de transparencia del Ayuntamiento de Tijarafe. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.7019,
+      "lon": -17.9658
+    }
+  },
+  {
+    "id": "ayuntamiento_tias",
+    "name": "Ayuntamiento de Tías",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://www.ayuntamientodetias.es/portal-transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://www.ayuntamientodetias.es/wp-content/uploads/2021/06/SOLICITUD-DE-ACCESO-A-INFORMACION-PUBLICA-colgar.pdf",
+    "description": "Portal de transparencia del Ayuntamiento de Tías. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.9591,
+      "lon": -13.6419
+    }
+  },
+  {
+    "id": "ayuntamiento_valle_gran_rey",
+    "name": "Ayuntamiento de Valle Gran Rey",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://sede.vallegranrey.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.vallegranrey.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de Valle Gran Rey. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0876,
+      "lon": -17.3302
+    }
+  },
+  {
+    "id": "ayuntamiento_adeje",
+    "name": "Ayuntamiento de Adeje",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://transparencia.adeje.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://www.ayuntamientodeadeje.es/Siac/ProcedimientoTabs.aspx?tab=1&idProc=120",
+    "description": "Portal de transparencia del Ayuntamiento de Adeje. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1231,
+      "lon": -16.7262
+    }
+  },
+  {
+    "id": "ayuntamiento_agaete",
+    "name": "Ayuntamiento de Agaete",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://agaete.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://agaete.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de Agaete. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0994,
+      "lon": -15.7012
+    }
+  },
+  {
+    "id": "ayuntamiento_agulo",
+    "name": "Ayuntamiento de Agulo",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://eadmin.agulo.org/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://agulo.sedelectronica.es/dossier.1",
+    "description": "Portal de transparencia del Ayuntamiento de Agulo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1886,
+      "lon": -17.1929
+    }
+  },
+  {
+    "id": "ayuntamiento_aguimes",
+    "name": "Ayuntamiento de Agüimes",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://aguimes.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://aguimes.es/wp-content/uploads/2021/04/solicitud-informacion-publica-abril-2021.pdf",
+    "description": "Portal de transparencia del Ayuntamiento de Agüimes. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9076,
+      "lon": -15.4467
+    }
+  },
+  {
+    "id": "ayuntamiento_alajero",
+    "name": "Ayuntamiento de Alajeró",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sedeelectronica.ayuntamientoalajero.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de Alajeró. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0564,
+      "lon": -17.2268
+    }
+  },
+  {
+    "id": "ayuntamiento_antigua",
+    "name": "Ayuntamiento de Antigua",
+    "type": "ayuntamiento",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://antigua.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://antigua.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de Antigua. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4261,
+      "lon": -14.0097
+    }
+  },
+  {
+    "id": "ayuntamiento_arafo",
+    "name": "Ayuntamiento de Arafo",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://arafo.sedelectronica.es/info.0",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://elpinardeelhierro.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de Arafo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3381,
+      "lon": -16.4419
+    }
+  },
+  {
+    "id": "ayuntamiento_arico",
+    "name": "Ayuntamiento de Arico",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://ayuntamientodearico.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://ayuntamientodearico.sedelectronica.es/dossier.18.1",
+    "description": "Portal de transparencia del Ayuntamiento de Arico. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1639,
+      "lon": -16.4822
+    }
+  },
+  {
+    "id": "ayuntamiento_arrecife",
+    "name": "Ayuntamiento de Arrecife",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://www.arrecife.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "http://www.arrecife.es/node/201",
+    "description": "Portal de transparencia del Ayuntamiento de Arrecife. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.9634,
+      "lon": -13.5476
+    }
+  },
+  {
+    "id": "ayuntamiento_artenara",
+    "name": "Ayuntamiento de Artenara",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://artenara.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://artenara.sedelectronica.es/dossier.11",
+    "description": "Portal de transparencia del Ayuntamiento de Artenara. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0105,
+      "lon": -15.6542
+    }
+  },
+  {
+    "id": "ayuntamiento_arucas",
+    "name": "Ayuntamiento de Arucas",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://arucas.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Arucas. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1228,
+      "lon": -15.5234
+    }
+  },
+  {
+    "id": "ayuntamiento_barlovento",
+    "name": "Ayuntamiento de Barlovento",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.barlovento.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.barlovento.es/derecho-acceso/unidades",
+    "description": "Portal de transparencia del Ayuntamiento de Barlovento. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.8333,
+      "lon": -17.8003
+    }
+  },
+  {
+    "id": "ayuntamiento_betancuria",
+    "name": "Ayuntamiento de Betancuria",
+    "type": "ayuntamiento",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://www.aytobetancuria.org/portal-de-transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://betancuria.sedelectronica.es/dossier.43",
+    "description": "Portal de transparencia del Ayuntamiento de Betancuria. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4227,
+      "lon": -14.0566
+    }
+  },
+  {
+    "id": "ayuntamiento_brena_alta",
+    "name": "Ayuntamiento de Breña Alta",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.brenaalta.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.brenaalta.es/derecho-acceso/unidades",
+    "description": "Portal de transparencia del Ayuntamiento de Breña Alta. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6572,
+      "lon": -17.7847
+    }
+  },
+  {
+    "id": "ayuntamiento_brena_baja",
+    "name": "Ayuntamiento de Breña Baja",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://bbaja.transparenciacanaria.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://bbaja.transparenciacanaria.es/derecho-acceso/unidades",
+    "description": "Portal de transparencia del Ayuntamiento de Breña Baja. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6381,
+      "lon": -17.7814
+    }
+  },
+  {
+    "id": "ayuntamiento_buenavista_del_norte",
+    "name": "Ayuntamiento de Buenavista del Norte",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://buenavistadelnorte.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://buenavistadelnorte.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de Buenavista del Norte. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3764,
+      "lon": -16.8822
+    }
+  },
+  {
+    "id": "ayuntamiento_el_paso",
+    "name": "Ayuntamiento de El Paso",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.elpaso.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.elpaso.es/organizativa/normativa-aplicable",
+    "description": "Portal de transparencia del Ayuntamiento de El Paso. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6572,
+      "lon": -17.8706
+    }
+  },
+  {
+    "id": "ayuntamiento_el_pinar_de_el_hierro",
+    "name": "Ayuntamiento de El Pinar de El Hierro",
+    "type": "ayuntamiento",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "https://elpinardeelhierro.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://elpinardeelhierro.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de El Pinar de El Hierro. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.7406,
+      "lon": -17.9503
+    }
+  },
+  {
+    "id": "ayuntamiento_el_rosario",
+    "name": "Ayuntamiento de El Rosario",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://elrosario.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://elrosario.sedelectronica.es/dossier.2.2",
+    "description": "Portal de transparencia del Ayuntamiento de El Rosario. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4572,
+      "lon": -16.3125
+    }
+  },
+  {
+    "id": "ayuntamiento_el_sauzal",
+    "name": "Ayuntamiento de El Sauzal",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://transparencia.elsauzal.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://www.elsauzal.es/el-municipio/portal-de-transparencia-y-buen-gobierno",
+    "description": "Portal de transparencia del Ayuntamiento de El Sauzal. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4711,
+      "lon": -16.4358
+    }
+  },
+  {
+    "id": "ayuntamiento_el_tanque",
+    "name": "Ayuntamiento de El Tanque",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://eltanque.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://eltanque.sedelectronica.es/dossier.21",
+    "description": "Portal de transparencia del Ayuntamiento de El Tanque. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3422,
+      "lon": -16.8019
+    }
+  },
+  {
+    "id": "ayuntamiento_fasnia",
+    "name": "Ayuntamiento de Fasnia",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://www.fasnia.com",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://ayuntamientodefasnia.sedelectronica.es/dossier.18",
+    "description": "Portal de transparencia del Ayuntamiento de Fasnia. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2258,
+      "lon": -16.4286
+    }
+  },
+  {
+    "id": "ayuntamiento_firgas",
+    "name": "Ayuntamiento de Firgas",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://firgas.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparenciacanarias.org/wp-content/uploads/2017/11/FORMULARIO-DE-RECLAMACIONES-ARTC38%C3%8DCULOS-51-A-57-DE-LA-LEY-12-2014.pdf",
+    "description": "Portal de transparencia del Ayuntamiento de Firgas. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0647,
+      "lon": -15.5603
+    }
+  },
+  {
+    "id": "ayuntamiento_fuencaliente",
+    "name": "Ayuntamiento de Fuencaliente",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://fuencalientedelapalma.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://fuencalientedelapalma.sedelectronica.es/dossier.17",
+    "description": "Portal de transparencia del Ayuntamiento de Fuencaliente. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4769,
+      "lon": -17.8408
+    }
+  },
+  {
+    "id": "ayuntamiento_garachico",
+    "name": "Ayuntamiento de Garachico",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://eadmin.garachico.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://eadmin.garachico.es/transparencia",
+    "description": "Portal de transparencia del Ayuntamiento de Garachico. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3719,
+      "lon": -16.7644
+    }
+  },
+  {
+    "id": "ayuntamiento_garafia",
+    "name": "Ayuntamiento de Garafía",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.garafia.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.garafia.es/derecho-acceso/unidades",
+    "description": "Portal de transparencia del Ayuntamiento de Garafía. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.8072,
+      "lon": -17.9397
+    }
+  },
+  {
+    "id": "ayuntamiento_guia_de_isora",
+    "name": "Ayuntamiento de Guía de Isora",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "http://servicios.guiadeisora.es/transparencia/indice/GCAN",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "http://servicios.guiadeisora.es/transparencia/indice/indicador/GCAN976",
+    "description": "Portal de transparencia del Ayuntamiento de Guía de Isora. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2111,
+      "lon": -16.7764
+    }
+  },
+  {
+    "id": "ayuntamiento_galdar",
+    "name": "Ayuntamiento de Gáldar",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://transparencia.galdar.es/t",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://galdar.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Gáldar. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1478,
+      "lon": -15.6503
+    }
+  },
+  {
+    "id": "ayuntamiento_haria",
+    "name": "Ayuntamiento de Haría",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://sede.ayuntamientodeharia.com/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.ayuntamientodeharia.com/publico/procedimientos",
+    "description": "Portal de transparencia del Ayuntamiento de Haría. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 29.1436,
+      "lon": -13.5003
+    }
+  },
+  {
+    "id": "ayuntamiento_hermigua",
+    "name": "Ayuntamiento de Hermigua",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://transparencia.villadehermigua.com",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.villadehermigua.com/derecho-de-acceso/solicitud-acceso-informacion-publica",
+    "description": "Portal de transparencia del Ayuntamiento de Hermigua. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1658,
+      "lon": -17.1836
+    }
+  },
+  {
+    "id": "ayuntamiento_icod_de_los_vinos",
+    "name": "Ayuntamiento de Icod de los Vinos",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://transparencia.icoddelosvinos.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.icoddelosvinos.es",
+    "description": "Portal de transparencia del Ayuntamiento de Icod de los Vinos. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3683,
+      "lon": -16.7219
+    }
+  },
+  {
+    "id": "ayuntamiento_ingenio",
+    "name": "Ayuntamiento de Ingenio",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://ingenio.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://ingenio.sedelectronica.es/transparency/f47f2523-b0a0-4593-b1d8-0f1f867b2e58",
+    "description": "Portal de transparencia del Ayuntamiento de Ingenio. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9222,
+      "lon": -15.4358
+    }
+  },
+  {
+    "id": "ayuntamiento_la_frontera",
+    "name": "Ayuntamiento de La Frontera",
+    "type": "ayuntamiento",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "https://ayuntamientodelafrontera.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://ayuntamientodelafrontera.sedelectronica.es/dossier.53",
+    "description": "Portal de transparencia del Ayuntamiento de La Frontera. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.7811,
+      "lon": -18.0308
+    }
+  },
+  {
+    "id": "ayuntamiento_la_guancha",
+    "name": "Ayuntamiento de La Guancha",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://laguancha.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://laguancha.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de La Guancha. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3478,
+      "lon": -16.7383
+    }
+  },
+  {
+    "id": "ayuntamiento_la_matanza_de_acentejo",
+    "name": "Ayuntamiento de La Matanza de Acentejo",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://sede.matanceros.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.matanceros.es/transparencia",
+    "description": "Portal de transparencia del Ayuntamiento de La Matanza de Acentejo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4828,
+      "lon": -16.4486
+    }
+  },
+  {
+    "id": "ayuntamiento_la_orotava",
+    "name": "Ayuntamiento de La Orotava",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://www.laorotava.es/ayuntamiento",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://laorotava.sedelectronica.es/dossier.1",
+    "description": "Portal de transparencia del Ayuntamiento de La Orotava. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3894,
+      "lon": -16.5239
+    }
+  },
+  {
+    "id": "ayuntamiento_la_victoria_de_acentejo",
+    "name": "Ayuntamiento de La Victoria de Acentejo",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://transparencia.lavictoriadeacentejo.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.lavictoriadeacentejo.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de La Victoria de Acentejo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4894,
+      "lon": -16.4528
+    }
+  },
+  {
+    "id": "ayuntamiento_la_villa_de_mazo",
+    "name": "Ayuntamiento de La Villa de Mazo",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://villademazo.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://villademazo.sedelectronica.es/dossier.66",
+    "description": "Portal de transparencia del Ayuntamiento de La Villa de Mazo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6061,
+      "lon": -17.7658
+    }
+  },
+  {
+    "id": "ayuntamiento_las_palmas_de_gran_canaria",
+    "name": "Ayuntamiento de Las Palmas de Gran Canaria",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.laspalmasgc.es/es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://www.laspalmasgc.es/es/transparencia/informacion-publica/canales-informacion-publica/derecho-acceso/",
+    "description": "Portal de transparencia del Ayuntamiento de Las Palmas de Gran Canaria. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1248,
+      "lon": -15.43
+    }
+  },
+  {
+    "id": "ayuntamiento_los_llanos_de_aridane",
+    "name": "Ayuntamiento de Los Llanos de Aridane",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.aridane.org",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.aridane.org/derecho-acceso/unidades",
+    "description": "Portal de transparencia del Ayuntamiento de Los Llanos de Aridane. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6578,
+      "lon": -17.9158
+    }
+  },
+  {
+    "id": "ayuntamiento_los_realejos",
+    "name": "Ayuntamiento de Los Realejos",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://losrealejos.es/portal-de-transparencia/ayuntamiento",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://losrealejos.es/derecho-a-la-informacion-publica",
+    "description": "Portal de transparencia del Ayuntamiento de Los Realejos. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3842,
+      "lon": -16.5942
+    }
+  },
+  {
+    "id": "ayuntamiento_los_silos",
+    "name": "Ayuntamiento de Los Silos",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://lossilos.sedelectronica.es/info.0",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://lossilos.sedelectronica.es/dossier.20",
+    "description": "Portal de transparencia del Ayuntamiento de Los Silos. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3803,
+      "lon": -16.8406
+    }
+  },
+  {
+    "id": "ayuntamiento_mogan",
+    "name": "Ayuntamiento de Mogán",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://transparencia.mogan.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.mogan.es/acceso-a-la-informacion/ejercicio-del-derecho-de-acceso-a-la-informacion",
+    "description": "Portal de transparencia del Ayuntamiento de Mogán. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.8928,
+      "lon": -15.7242
+    }
+  },
+  {
+    "id": "ayuntamiento_moya",
+    "name": "Ayuntamiento de Moya",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://moya.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://moya.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Moya. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1047,
+      "lon": -15.5894
+    }
+  },
+  {
+    "id": "ayuntamiento_puerto_del_rosario",
+    "name": "Ayuntamiento de Puerto del Rosario",
+    "type": "ayuntamiento",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.puertodelrosario.org/es/node/124",
+    "description": "Portal de transparencia del Ayuntamiento de Puerto del Rosario. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4997,
+      "lon": -13.8628
+    }
+  },
+  {
+    "id": "ayuntamiento_puntagorda",
+    "name": "Ayuntamiento de Puntagorda",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://puntagorda.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://puntagorda.sedelectronica.es/transparency/93ee93dd-c919-45bc-a45c-28779f3ccd97",
+    "description": "Portal de transparencia del Ayuntamiento de Puntagorda. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.7728,
+      "lon": -17.9803
+    }
+  },
+  {
+    "id": "ayuntamiento_puntallana",
+    "name": "Ayuntamiento de Puntallana",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://puntallana.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://puntallana.sedelectronica.es/transparency/d3091a1c-ec0c-4a3e-83d0-08040fe09612",
+    "description": "Portal de transparencia del Ayuntamiento de Puntallana. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.7478,
+      "lon": -17.7833
+    }
+  },
+  {
+    "id": "ayuntamiento_pajara",
+    "name": "Ayuntamiento de Pájara",
+    "type": "ayuntamiento",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://transparencia.pajara.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.pajara.es/eAdmin/Registrar.do?action=inicioPortalTramites",
+    "description": "Portal de transparencia del Ayuntamiento de Pájara. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3461,
+      "lon": -14.1317
+    }
+  },
+  {
+    "id": "ayuntamiento_san_bartolome",
+    "name": "Ayuntamiento de San Bartolomé",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://eadmin.sanbartolome.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://eadmin.sanbartolome.es/publico/procedimientos",
+    "description": "Portal de transparencia del Ayuntamiento de San Bartolomé. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.9983,
+      "lon": -13.6058
+    }
+  },
+  {
+    "id": "ayuntamiento_san_bartolome_de_tirajana",
+    "name": "Ayuntamiento de San Bartolomé de Tirajana",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://eadmin.maspalomas.com/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://eadmin.maspalomas.com/publico/categoria/7",
+    "description": "Portal de transparencia del Ayuntamiento de San Bartolomé de Tirajana. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9192,
+      "lon": -15.5658
+    }
+  },
+  {
+    "id": "ayuntamiento_san_juan_de_la_rambla",
+    "name": "Ayuntamiento de San Juan de la Rambla",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://transparencia.sanjuandelarambla.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.sanjuandelarambla.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de San Juan de la Rambla. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4133,
+      "lon": -16.6622
+    }
+  },
+  {
+    "id": "ayuntamiento_san_miguel_de_abona",
+    "name": "Ayuntamiento de San Miguel de Abona",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://aytosanmigueldeabona.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://aytosanmigueldeabona.sedelectronica.es/info.2",
+    "description": "Portal de transparencia del Ayuntamiento de San Miguel de Abona. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0428,
+      "lon": -16.6136
+    }
+  },
+  {
+    "id": "ayuntamiento_san_sebastian_de_la_gomera",
+    "name": "Ayuntamiento de San Sebastián de La Gomera",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://transparencia.sansebastiangomera.org",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://eadmin.sansebastiangomera.org/publico/categoria/14",
+    "description": "Portal de transparencia del Ayuntamiento de San Sebastián de La Gomera. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0919,
+      "lon": -17.1103
+    }
+  },
+  {
+    "id": "ayuntamiento_santa_brigida",
+    "name": "Ayuntamiento de Santa Brígida",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "http://www.santabrigida.es/transparencia-indice-de-contenidos",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://santabrigida.es/derecho-al-acceso-la-informacion",
+    "description": "Portal de transparencia del Ayuntamiento de Santa Brígida. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0519,
+      "lon": -15.5064
+    }
+  },
+  {
+    "id": "ayuntamiento_santa_cruz_de_la_palma",
+    "name": "Ayuntamiento de Santa Cruz de La Palma",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://sede.santacruzdelapalma.es/transparencia/indice/IT22",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.santacruzdelapalma.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de Santa Cruz de La Palma. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6836,
+      "lon": -17.7642
+    }
+  },
+  {
+    "id": "ayuntamiento_santa_cruz_de_tenerife",
+    "name": "Ayuntamiento de Santa Cruz de Tenerife",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://www.santacruzdetenerife.es/gobiernoabierto/transparencia/inicio",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.santacruzdetenerife.es/sede/procedimientos-y-servicios/t352",
+    "description": "Portal de transparencia del Ayuntamiento de Santa Cruz de Tenerife. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    }
+  },
+  {
+    "id": "ayuntamiento_santa_lucia_de_tirajana",
+    "name": "Ayuntamiento de Santa Lucía de Tirajana",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://transparencia.santaluciagc.com",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://transparencia.santaluciagc.com/acceso-a-la-informacion",
+    "description": "Portal de transparencia del Ayuntamiento de Santa Lucía de Tirajana. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9072,
+      "lon": -15.5422
+    }
+  },
+  {
+    "id": "ayuntamiento_santa_maria_de_guia",
+    "name": "Ayuntamiento de Santa María de Guía",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://santamariadeguia.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://santamariadeguia.sedelectronica.es/dossier.2",
+    "description": "Portal de transparencia del Ayuntamiento de Santa María de Guía. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1303,
+      "lon": -15.6358
+    }
+  },
+  {
+    "id": "ayuntamiento_santa_ursula",
+    "name": "Ayuntamiento de Santa Úrsula",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://sede.santaursula.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.santaursula.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de Santa Úrsula. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4353,
+      "lon": -16.4744
+    }
+  },
+  {
+    "id": "ayuntamiento_santiago_del_teide",
+    "name": "Ayuntamiento de Santiago del Teide",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://sede.santiagodelteide.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.santiagodelteide.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de Santiago del Teide. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2972,
+      "lon": -16.8022
+    }
+  },
+  {
+    "id": "ayuntamiento_tacoronte",
+    "name": "Ayuntamiento de Tacoronte",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://sede.tacoronte.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.tacoronte.es/publico/procedimiento/WP225",
+    "description": "Portal de transparencia del Ayuntamiento de Tacoronte. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4758,
+      "lon": -16.4133
+    }
+  },
+  {
+    "id": "ayuntamiento_tazacorte",
+    "name": "Ayuntamiento de Tazacorte",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.tazacorte.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://tazacorte.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Tazacorte. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6428,
+      "lon": -17.9369
+    }
+  },
+  {
+    "id": "ayuntamiento_tegueste",
+    "name": "Ayuntamiento de Tegueste",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://sede.tegueste.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.tegueste.es/transparencia",
+    "description": "Portal de transparencia del Ayuntamiento de Tegueste. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.5106,
+      "lon": -16.3308
+    }
+  },
+  {
+    "id": "ayuntamiento_teguise",
+    "name": "Ayuntamiento de Teguise",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://sede.teguise.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.teguise.es/publico/procedimiento/SAIP",
+    "description": "Portal de transparencia del Ayuntamiento de Teguise. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 29.0608,
+      "lon": -13.5619
+    }
+  },
+  {
+    "id": "ayuntamiento_tejeda",
+    "name": "Ayuntamiento de Tejeda",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://tejeda.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Tejeda. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9933,
+      "lon": -15.6133
+    }
+  },
+  {
+    "id": "ayuntamiento_telde",
+    "name": "Ayuntamiento de Telde",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://telde.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://www.telde.es/transparencia/acceso-a-la-informacion",
+    "description": "Portal de transparencia del Ayuntamiento de Telde. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0019,
+      "lon": -15.4167
+    }
+  },
+  {
+    "id": "ayuntamiento_teror",
+    "name": "Ayuntamiento de Teror",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://teror.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://teror.sedelectronica.es/catalog/tcb08f2a7-e5f7-42eb-bbfa-13a2b485e606",
+    "description": "Portal de transparencia del Ayuntamiento de Teror. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0594,
+      "lon": -15.5494
+    }
+  },
+  {
+    "id": "ayuntamiento_tinajo",
+    "name": "Ayuntamiento de Tinajo",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://tinajo.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://tinajo.sedelectronica.es/dossier.286",
+    "description": "Portal de transparencia del Ayuntamiento de Tinajo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 29.0661,
+      "lon": -13.6944
+    }
+  },
+  {
+    "id": "ayuntamiento_tuineje",
+    "name": "Ayuntamiento de Tuineje",
+    "type": "ayuntamiento",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://transparencia.tuineje.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://sede.tuineje.es/eAdmin/Registrar.do?action=comenzar&tipoReg=21",
+    "description": "Portal de transparencia del Ayuntamiento de Tuineje. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3303,
+      "lon": -14.0531
+    }
+  },
+  {
+    "id": "ayuntamiento_vallehermoso",
+    "name": "Ayuntamiento de Vallehermoso",
+    "type": "ayuntamiento",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://eadmin.vallehermosoweb.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://eadmin.vallehermosoweb.es/publico/procedimiento/TR01",
+    "description": "Portal de transparencia del Ayuntamiento de Vallehermoso. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1806,
+      "lon": -17.2628
+    }
+  },
+  {
+    "id": "ayuntamiento_valleseco",
+    "name": "Ayuntamiento de Valleseco",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://valleseco.sedelectronica.es/transparency/f972a818-0152-46ba-9a03-b5946e7683e7",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://valleseco.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de Valleseco. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0411,
+      "lon": -15.5597
+    }
+  },
+  {
+    "id": "ayuntamiento_valsequillo",
+    "name": "Ayuntamiento de Valsequillo",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://valsequillodegrancanaria.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://valsequillodegrancanaria.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Valsequillo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9917,
+      "lon": -15.4944
+    }
+  },
+  {
+    "id": "ayuntamiento_valverde",
+    "name": "Ayuntamiento de Valverde",
+    "type": "ayuntamiento",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "https://aytovalverde.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://aytovalverde.sedelectronica.es/dossier.19",
+    "description": "Portal de transparencia del Ayuntamiento de Valverde. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.8117,
+      "lon": -17.9103
+    }
+  },
+  {
+    "id": "ayuntamiento_vega_de_san_mateo",
+    "name": "Ayuntamiento de Vega de San Mateo",
+    "type": "ayuntamiento",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://vegadesanmateo.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://vegadesanmateo.sedelectronica.es/transparency",
+    "description": "Portal de transparencia del Ayuntamiento de Vega de San Mateo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0008,
+      "lon": -15.5694
+    }
+  },
+  {
+    "id": "ayuntamiento_vilaflor",
+    "name": "Ayuntamiento de Vilaflor",
+    "type": "ayuntamiento",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://vilaflordechasna.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://vilaflordechasna.sedelectronica.es/dossier.64",
+    "description": "Portal de transparencia del Ayuntamiento de Vilaflor. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.1569,
+      "lon": -16.6383
+    }
+  },
+  {
+    "id": "ayuntamiento_yaiza",
+    "name": "Ayuntamiento de Yaiza",
+    "type": "ayuntamiento",
+    "islands": [
+      "Lanzarote"
+    ],
+    "portal_url": "https://yaiza.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "apis": [],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "sede_electronica_url": "https://yaiza.sedelectronica.es",
+    "description": "Portal de transparencia del Ayuntamiento de Yaiza. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.9536,
+      "lon": -13.7636
+    }
   }
 ]
