@@ -448,57 +448,17 @@ footer {
     }
 }
 
-.categories-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.categories-header strong {
-    margin: 0;
-}
-
-.toggle-cat-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.8rem;
-    color: var(--badge-text);
-    padding: 0;
-    transition: transform 0.2s ease;
-}
-
-.toggle-cat-btn.rotated {
-    transform: rotate(90deg);
-}
-
-/* Asegura que las categorías ocultas salgan debajo */
-[id$="-hidden"] {
-    display: none;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    width: 100%;
-    margin-top: 0.25rem;
-}
-
-/* Cuando están visibles */
-[id$="-hidden"].show {
-    display: flex;
-}
-
-
-/* Contenedor de formatos ocultos que debe ir en nueva línea */
-#formats-hidden,
-[id$="-formats-hidden"] {
-    display: none;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    width: 100%;
-    margin-top: 0.25rem;
-}
-
-/* Cuando están visibles, ocupan toda la línea */
-[id$="-formats-hidden"].visible {
-    display: flex;
+/* LOGO */
+.logo-svg {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  background-color: #01696f;
+  -webkit-mask-image: url('../assets/logo.svg');
+  mask-image: url('../assets/logo.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
