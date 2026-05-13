@@ -125,7 +125,7 @@ function loadData() {
   showLoading();
   
   // Usando la ruta original que funcionaba
-  fetch('../entidades.json')
+  fetch('/api/entidades')
     .then(r => {
       if (!r.ok) throw new Error('No se pudo cargar el archivo');
       return r.json();
