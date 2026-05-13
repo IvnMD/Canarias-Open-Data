@@ -292,15 +292,15 @@ Para que el servidor funciones habra que seguir los siguientes pasos.
 
 1.instalar Pip si no lo tienes.
 ```bash
-sudo apt install python python-pip
+Sudo apt install python python-pip
 ```  
 2.Instalar flask.
 ```bash
-sudo apt install python python-flask
+Sudo apt install python python-flask
 ```
 3.instalar flask en el proyecto.
 ```bash
-pip install flask
+Pip install flask
 ```
 despues seria iniciar la web con.
 

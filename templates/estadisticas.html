@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Estadísticas</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+
+    <main class="stats-page">
+
+        <h1 class="page-title">
+            Estadísticas
+        </h1>
+
+        <div class="back-button-container">
+
+            <a href="{{ url_for('home') }}" class="back-button">
+                ⬅ Volver al inicio
+            </a>
+
+        </div>
+
+
+        <!-- GRAFICA 1 -->
+        <section class="chart-card">
+
+            <h2>Entidades por tipo</h2>
+
+            <div class="chart-wrapper">
+                <canvas id="typeChart"></canvas>
+            </div>
+
+        </section>
+
+
+        <!-- GRAFICA 2 -->
+        <section class="chart-card">
+
+            <h2>🧩 Formatos más usados</h2>
+
+            <div class="chart-wrapper">
+                <canvas id="formatChart"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+ <script>
+
+const ctx = document.getElementById('typeChart');
+
+new Chart(ctx, {
+
+    type: 'bar',
+
+    data: {
+
+        labels: [
+            'Cabildos',
+            'Ayuntamientos',
+            'Gobierno'
+        ],
+
+        datasets: [{
+
+            label: 'Instituciones',
+
+            data: [12, 25, 5],
+
+            borderRadius: 8,
+
+            borderSkipped: false
+        }]
+    },
+
+    options: {
+
+        indexAxis: 'y', // ← barras horizontales
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        plugins: {
+
+            legend: {
+                display: false
+            }
+        },
+
+        scales: {
+
+            x: {
+
+                grid: {
+                    display: false
+                }
+            },
+
+            y: {
+
+                grid: {
+                    display: false
+                }
+            }
+        }
+    }
+});
+const formatCtx = document.getElementById('formatChart');
+
+new Chart(formatCtx, {
+
+    type: 'bar',
+
+    data: {
+
+        labels: [
+            'CSV',
+            'JSON',
+            'XML',
+            'GeoJSON'
+        ],
+
+        datasets: [{
+
+            label: 'Formatos',
+
+            data: [42, 35, 18, 12],
+
+            borderRadius: 8,
+
+            borderSkipped: false
+        }]
+    },
+
+    options: {
+
+        indexAxis: 'y',
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+        plugins: {
+
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>
