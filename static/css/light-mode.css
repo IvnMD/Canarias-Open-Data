@@ -136,3 +136,8 @@ code {
   background: var(--badge-bg);
   color: var(--badge-text);
 }
+
+/* Logo blanco sobre el header azul del modo claro */
+header .logo-svg {
+  background-color: #ffffff;
+}

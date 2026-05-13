@@ -5,21 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Buscador unificado de instituciones y datasets de datos abiertos de Canarias">
   <meta name="author" content="Datos Abiertos Canarias">
-  <title>Datos Abiertos Canarias | Buscador de Datos Públicos</title>
-  
+  <title>Open Data Canarias</title>
+
+  <!-- Favicon SVG con modo oscuro integrado -->
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
+
   <!-- CSS -->
   <link rel="stylesheet" href="/static/css/base.css">
   <link rel="stylesheet" href="/static/css/light-mode.css">
   <link rel="stylesheet" href="/static/css/dark-mode.css">
-  
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
 </head>
 
 <body>
 
 <header>
-  <h1>📊 Portal de Datos Abiertos de Canarias</h1>
-  <p>Buscador unificado de instituciones, organismos y datasets públicos</p>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+    <span class="logo-svg" role="img" aria-label="Logo Open Data Canarias"></span>
+    <h1>Open Data Canarias</h1>
+  </div>
+  <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
 </header>
 
 <div class="search-container">
