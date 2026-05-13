@@ -367,32 +367,36 @@ function renderChart(list) {
 }
   // Renderizar cada entidad como una tarjeta
   list.forEach(e => {
-    const categories = e.data_categories.slice(0, 6);  // Máximo 6 categorías
-    const formats = e.formats.slice(0, 4);             // Máximo 4 formatos
+    const allCategories = e.data_categories || [];
+    const visibleCount = 4;  // Número de categorías visibles inicialmente
+    const visibleCategories = allCategories.slice(0, visibleCount);
+    const hiddenCategories = allCategories.slice(visibleCount);
+    const hasMore = hiddenCategories.length > 0;
+
+    const allFormats = e.formats || [];
     const coords = e.coordinates;
     const hasCoords = coords && (coords.lat || coords.lon);
     const typeIcon = getTypeIcon(e.type);
+
+    // ID único para cada tarjeta
+    const cardId = 'card-' + Math.random().toString(36).substr(2, 8);
 
     const card = document.createElement("div");
     card.className = "card";
 
     card.innerHTML = `
-      <!-- Cabecera de la tarjeta: nombre y etiqueta de isla -->
       <div class="card-header">
         <h3>${escapeHtml(e.name)}</h3>
         ${getIslandTag(e) ? `<span class="island-tag">${getIslandTag(e)}</span>` : ''}
       </div>
       
-      <!-- Tipo de institución con icono -->
       <div class="card-type">
         <span class="type-icon">${typeIcon}</span>
         <span class="type-text">${formatType(e.type)}</span>
       </div>
       
-      <!-- Descripción (truncada a 120 caracteres) -->
       ${e.description ? `<p class="card-description">${truncate(escapeHtml(e.description), 120)}</p>` : ''}
       
-      <!-- Estadísticas: número de datasets -->
       <div class="card-stats">
         <div class="stat">
           <span class="stat-value">${e.dataset_count}</span>
@@ -400,27 +404,40 @@ function renderChart(list) {
         </div>
       </div>
       
-      <!-- Categorías de datos -->
-      ${categories.length > 0 ? `
-        <div class="card-section">
-          <strong>📂 Categorías:</strong>
-          <div class="badge-container">
-            ${categories.map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
+      ${allCategories.length > 0 ? `
+        <div class="card-section" id="${cardId}">
+          <div class="categories-header">
+            <strong>📂 Categorías</strong>
+            ${allCategories.length > 4 ? `
+              <button class="toggle-cat-btn" onclick="toggleCat('${cardId}')">▶</button>
+            ` : ''}
+          </div>
+          <div class="badge-container" id="${cardId}-visible">
+            ${allCategories.slice(0, 4).map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
+          </div>
+          <div class="badge-container" id="${cardId}-hidden" style="display:none;">
+            ${allCategories.slice(4).map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
           </div>
         </div>
       ` : ""}
       
-      <!-- Formatos de datos -->
-      ${formats.length > 0 ? `
-        <div class="card-section">
-          <strong>📄 Formatos:</strong>
-          <div class="badge-container">
-            ${formats.map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
+      ${allFormats.length > 0 ? `
+        <div class="card-section" id="${cardId}-formats">
+          <div class="categories-header">
+            <strong>📄 Formatos</strong>
+            ${allFormats.length > 4 ? `
+              <button class="toggle-cat-btn" onclick="toggleFormats('${cardId}')">▶</button>
+            ` : ''}
+          </div>
+          <div class="badge-container" id="${cardId}-formats-visible">
+            ${allFormats.slice(0, 4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
+          </div>
+          <div class="badge-container" id="${cardId}-formats-hidden" style="display:none;">
+            ${allFormats.slice(4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
           </div>
         </div>
       ` : ""}
       
-      <!-- Pie de tarjeta: enlace al portal y coordenadas -->
       <div class="card-footer">
         <a href="${e.portal_url}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
@@ -430,6 +447,30 @@ function renderChart(list) {
     `;
 
     container.appendChild(card);
+  });
+
+  // Inicializar los botones de toggle después de renderizar
+  document.querySelectorAll('.toggle-categories-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const cardId = this.getAttribute('data-card');
+      const container = document.getElementById(cardId);
+      const hiddenBadges = container.querySelectorAll('.category-hidden');
+      const isExpanded = this.classList.contains('expanded');
+
+      if (isExpanded) {
+        // Contraer
+        hiddenBadges.forEach(badge => badge.style.display = 'none');
+        this.classList.remove('expanded');
+        const hiddenCount = hiddenBadges.length;
+        this.innerHTML = `<span>(${hiddenCount})</span><span class="arrow-icon">▼</span>`;
+      } else {
+        // Expandir
+        hiddenBadges.forEach(badge => badge.style.display = 'inline-block');
+        this.classList.add('expanded');
+        this.innerHTML = `<span></span><span class="arrow-icon">▲</span>`;
+      }
+    });
   });
 }
 
@@ -587,6 +628,7 @@ function toggleFormats(cardId) {
     btn.classList.toggle('rotated');
   }
 }
+
 // ==================== INICIALIZACIÓN ====================
 
 /**
