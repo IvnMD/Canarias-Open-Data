@@ -1,0 +1,138 @@
+/* ============================================
+   MODO CLARO - ESTILOS EXCLUSIVOS
+   ============================================ */
+
+/* Variables del modo claro */
+:root {
+  --bg-primary: #f4f6f8;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-header: #ffffff;
+  --border-color: #dee2e6;
+  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+  --badge-bg: #e6ecf5;
+  --badge-text: #003a8f;
+  --footer-bg: #eeeeee;
+  --footer-text: #666666;
+  --input-bg: #ffffff;
+  --input-border: #dee2e6;
+  --spinner-border: #e6ecf5;
+  --spinner-top: #003a8f;
+  --error-bg: #fff3f3;
+  --error-border: #dc3545;
+  --empty-bg: #ffffff;
+}
+
+header h1, header p {
+    color: #FFFFFF;
+}
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Header modo claro */
+header {
+  background: linear-gradient(135deg, #003a8f 0%, #002a6b 100%);
+}
+
+/* Search y stats */
+.search, .stats-bar {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.search input, .search select {
+  background: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-primary);
+}
+
+.search input:focus, .search select:focus {
+  border-color: var(--badge-text);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+  border-color: var(--border-color);
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(26,111,212,0.15);
+  border-color: #1a6fd4;
+}
+
+.card h3 {
+  color: var(--badge-text);
+}
+
+.island-tag {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.type-text, .card-description, .coordinates {
+  color: var(--text-secondary);
+}
+
+.badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.format-badge {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.card-stats {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+.stat-value {
+  color: var(--badge-text);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+}
+
+.card-section {
+  border-color: var(--border-color);
+}
+
+.portal-link {
+  color: var(--badge-text);
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+/* Loading */
+.spinner {
+  border-color: var(--spinner-border);
+  border-top-color: var(--spinner-top);
+}
+
+/* Error y empty */
+.error-message {
+  background: var(--error-bg);
+  border-left: 4px solid var(--error-border);
+}
+
+.empty-state {
+  background: var(--empty-bg);
+}
+
+code {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+}
