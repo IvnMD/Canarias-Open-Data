@@ -289,8 +289,9 @@ cd open-data-canarias
 Generar la web:
 
 ```bash
-python generar_web.py --output index.html
+python app.py 
 ```
+Este codigo genera la pagina web por la que se puede acceder a los portales de datos.
 
 Abrir localmente:
 
