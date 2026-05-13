@@ -16,7 +16,7 @@
  * @type {Array} - Lista de entidades normalizadas
  */
 let data = [];
-
+let typeChart = null;
 // ==================== FUNCIONES DE NORMALIZACIÓN ====================
 
 /**
@@ -242,7 +242,46 @@ function render(list) {
     `;
     return;
   }
+function renderChart(list) {
 
+  const counts = {};
+
+  list.forEach(e => {
+    counts[e.type] = (counts[e.type] || 0) + 1;
+  });
+
+  const labels = Object.keys(counts);
+  const values = Object.values(counts);
+
+  const ctx = document.getElementById('typeChart');
+
+  // destruir gráfica anterior
+  if (typeChart) {
+    typeChart.destroy();
+  }
+
+  typeChart = new Chart(ctx, {
+    type: 'bar',
+
+    data: {
+      labels: labels,
+
+      datasets: [{
+        label: 'Instituciones',
+        data: values
+      }]
+    },
+
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+}
   // Renderizar cada entidad como una tarjeta
   list.forEach(e => {
     const categories = e.data_categories.slice(0, 6);  // Máximo 6 categorías
