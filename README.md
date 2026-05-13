@@ -288,10 +288,27 @@ cd open-data-canarias
 
 Generar la web:
 
+Generar la web:
+
+Para que el servidor funciones habra que seguir los siguientes pasos.
+
+1.instalar Pip si no lo tienes.
+```bash
+Sudo apt install python python-pip
+```  
+2.Instalar flask.
+```bash
+Sudo apt install python python-flask
+```
+3.instalar flask en el proyecto.
+```bash
+Pip install flask
+```
+despues seria iniciar la web con.
+
 ```bash
 python app.py 
 ```
-Este codigo genera la pagina web por la que se puede acceder a los portales de datos.
 
 Abrir localmente:
 
