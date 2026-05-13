@@ -288,8 +288,6 @@ cd open-data-canarias
 
 Generar la web:
 
-Generar la web:
-
 Para que el servidor funciones habra que seguir los siguientes pasos.
 
 1.instalar Pip si no lo tienes.
