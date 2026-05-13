@@ -325,130 +325,6 @@ function render(list) {
     container.appendChild(card);
   });
 
-function renderChart(list) {
-
-  const counts = {};
-
-  list.forEach(e => {
-    counts[e.type] = (counts[e.type] || 0) + 1;
-  });
-
-  const labels = Object.keys(counts);
-  const values = Object.values(counts);
-
-  const ctx = document.getElementById('typeChart');
-
-  // destruir gráfica anterior
-  if (typeChart) {
-    typeChart.destroy();
-  }
-
-  typeChart = new Chart(ctx, {
-    type: 'bar',
-
-    data: {
-      labels: labels,
-
-      datasets: [{
-        label: 'Instituciones',
-        data: values
-      }]
-    },
-
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false
-        }
-      }
-    }
-  });
-}
-  // Renderizar cada entidad como una tarjeta
-  list.forEach(e => {
-    const allCategories = e.data_categories || [];
-    const visibleCount = 4;  // Número de categorías visibles inicialmente
-    const visibleCategories = allCategories.slice(0, visibleCount);
-    const hiddenCategories = allCategories.slice(visibleCount);
-    const hasMore = hiddenCategories.length > 0;
-
-    const allFormats = e.formats || [];
-    const coords = e.coordinates;
-    const hasCoords = coords && (coords.lat || coords.lon);
-    const typeIcon = getTypeIcon(e.type);
-
-    // ID único para cada tarjeta
-    const cardId = 'card-' + Math.random().toString(36).substr(2, 8);
-
-    const card = document.createElement("div");
-    card.className = "card";
-
-    card.innerHTML = `
-      <div class="card-header">
-        <h3>${escapeHtml(e.name)}</h3>
-        ${getIslandTag(e) ? `<span class="island-tag">${getIslandTag(e)}</span>` : ''}
-      </div>
-      
-      <div class="card-type">
-        <span class="type-icon">${typeIcon}</span>
-        <span class="type-text">${formatType(e.type)}</span>
-      </div>
-      
-      ${e.description ? `<p class="card-description">${truncate(escapeHtml(e.description), 120)}</p>` : ''}
-      
-      <div class="card-stats">
-        <div class="stat">
-          <span class="stat-value">${e.dataset_count}</span>
-          <span class="stat-label">datasets</span>
-        </div>
-      </div>
-      
-      ${allCategories.length > 0 ? `
-        <div class="card-section" id="${cardId}">
-          <div class="categories-header">
-            <strong>📂 Categorías</strong>
-            ${allCategories.length > 4 ? `
-              <button class="toggle-cat-btn" onclick="toggleCat('${cardId}')">▶</button>
-            ` : ''}
-          </div>
-          <div class="badge-container" id="${cardId}-visible">
-            ${allCategories.slice(0, 4).map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
-          </div>
-          <div class="badge-container" id="${cardId}-hidden" style="display:none;">
-            ${allCategories.slice(4).map(c => `<span class="badge">${escapeHtml(c)}</span>`).join("")}
-          </div>
-        </div>
-      ` : ""}
-      
-      ${allFormats.length > 0 ? `
-        <div class="card-section" id="${cardId}-formats">
-          <div class="categories-header">
-            <strong>📄 Formatos</strong>
-            ${allFormats.length > 4 ? `
-              <button class="toggle-cat-btn" onclick="toggleFormats('${cardId}')">▶</button>
-            ` : ''}
-          </div>
-          <div class="badge-container" id="${cardId}-formats-visible">
-            ${allFormats.slice(0, 4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
-          </div>
-          <div class="badge-container" id="${cardId}-formats-hidden" style="display:none;">
-            ${allFormats.slice(4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
-          </div>
-        </div>
-      ` : ""}
-      
-      <div class="card-footer">
-        <a href="${e.portal_url}" target="_blank" rel="noopener noreferrer" class="portal-link">
-          🔗 Acceder al portal <span class="arrow">→</span>
-        </a>
-        ${hasCoords ? `<span class="coordinates">📍 ${coords.lat}, ${coords.lon}</span>` : ""}
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-
   // Inicializar los botones de toggle después de renderizar
   document.querySelectorAll('.toggle-categories-btn').forEach(btn => {
     btn.addEventListener('click', function (e) {
@@ -588,6 +464,7 @@ function initDarkMode() {
     }
   });
 }
+
 /**
  * Alterna la visibilidad de las categorías extra en una tarjeta
  * @param {string} cardId - ID único de la tarjeta (ej: "card-xyz123")

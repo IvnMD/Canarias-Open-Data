@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
 
     <title>Estadísticas</title>
 
+    <!-- Favicon SVG con modo oscuro integrado -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/light-mode.css">
+    <link rel="stylesheet" href="/static/css/dark-mode.css">
+    <link rel="stylesheet" href="/static/css/estadisticas.css">
 </head>
+
 <body>
 
     <main class="stats-page">
@@ -50,112 +58,121 @@
         </section>
 
     </main>
- <script>
+    <script>
 
-const ctx = document.getElementById('typeChart');
+        const ctx = document.getElementById('typeChart');
 
-new Chart(ctx, {
+        new Chart(ctx, {
 
-    type: 'bar',
+            type: 'bar',
 
-    data: {
+            data: {
 
-        labels: [
-            'Cabildos',
-            'Ayuntamientos',
-            'Gobierno'
-        ],
+                labels: [
+                    'Cabildos',
+                    'Ayuntamientos',
+                    'Gobierno'
+                ],
 
-        datasets: [{
+                datasets: [{
 
-            label: 'Instituciones',
+                    label: 'Instituciones',
 
-            data: [12, 25, 5],
+                    data: [12, 25, 5],
 
-            borderRadius: 8,
+                    borderRadius: 8,
 
-            borderSkipped: false
-        }]
-    },
-
-    options: {
-
-        indexAxis: 'y', // ← barras horizontales
-
-        responsive: true,
-
-        maintainAspectRatio: false,
-
-        plugins: {
-
-            legend: {
-                display: false
-            }
-        },
-
-        scales: {
-
-            x: {
-
-                grid: {
-                    display: false
-                }
+                    borderSkipped: false
+                }]
             },
 
-            y: {
+            options: {
 
-                grid: {
-                    display: false
+                indexAxis: 'y', // ← barras horizontales
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                plugins: {
+
+                    legend: {
+                        display: false
+                    }
+                },
+
+                scales: {
+
+                    x: {
+
+                        grid: {
+                            display: false
+                        }
+                    },
+
+                    y: {
+
+                        grid: {
+                            display: false
+                        }
+                    }
                 }
             }
-        }
-    }
-});
-const formatCtx = document.getElementById('formatChart');
+        });
+        const formatCtx = document.getElementById('formatChart');
 
-new Chart(formatCtx, {
+        new Chart(formatCtx, {
 
-    type: 'bar',
+            type: 'bar',
 
-    data: {
+            data: {
 
-        labels: [
-            'CSV',
-            'JSON',
-            'XML',
-            'GeoJSON'
-        ],
+                labels: [
+                    'CSV',
+                    'JSON',
+                    'XML',
+                    'GeoJSON'
+                ],
 
-        datasets: [{
+                datasets: [{
 
-            label: 'Formatos',
+                    label: 'Formatos',
 
-            data: [42, 35, 18, 12],
+                    data: [42, 35, 18, 12],
 
-            borderRadius: 8,
+                    borderRadius: 8,
 
-            borderSkipped: false
-        }]
-    },
+                    borderSkipped: false
+                }]
+            },
 
-    options: {
+            options: {
 
-        indexAxis: 'y',
+                indexAxis: 'y',
 
-        responsive: true,
+                responsive: true,
 
-        maintainAspectRatio: false,
+                maintainAspectRatio: false,
 
-        plugins: {
+                plugins: {
 
-            legend: {
-                display: false
+                    legend: {
+                        display: false
+                    }
+                }
             }
-        }
-    }
-});
+        });
 
-</script>
+        // Modo oscuro para estadísticas
+        (function () {
+            const savedMode = localStorage.getItem('darkMode');
+            if (savedMode === 'enabled') {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+
+    </script>
 
 </body>
+
 </html>
