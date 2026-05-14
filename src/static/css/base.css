@@ -644,3 +644,60 @@ footer {
 .toggle-desc-btn.expanded .arrow-icon {
   transform: rotate(180deg);
 }
+
+/* ─── SECCIÓN DE PRESENTACIÓN ─────────────────────────── */
+
+.about-section {
+  max-width: 860px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.about-inner {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.about-text {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 100%;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Modo oscuro */
+body.dark-mode .about-inner {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .about-text {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .about-text strong {
+  color: var(--text-header);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-inner {
+    padding: 1rem 1.25rem;
+  }
+
+  .about-text {
+    font-size: 0.875rem;
+  }
+}
