@@ -166,69 +166,77 @@ El fichero contiene un array de entidades con estructura normalizada:
 ```json
 
 {
-  "id": "string (único, slug)",
-  "name": "string (nombre oficial completo)",
-  "type": "enum: gobierno_autonomico | organismo_especializado | organismo_especializado_geoespacial | cabildo | ayuntamiento | empresa_publica",
-  "islands": ["string"] (ej: ["Todas"] o ["Tenerife", "Gran Canaria"]),
-  
-  "portal": {
-    "url": "string (URL principal del portal)",
-    "technology": "string (CKAN | CKAN+OGC | eDatos | Custom | etc.)"
-  },
-  
-  "apis": [
+  "id": "string",
+  "name": "string",
+  "alternate_names": ["string"],
+  "entity_kind": "gobierno_autonomico | cabildo | ayuntamiento | organismo | empresa_publica",
+  "scope": "autonomico | insular | municipal | estatal | europeo",
+  "parent_entity_id": "string|null",
+  "islands": ["Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"],
+  "description": "string",
+  "locations": [
     {
+      "kind": "headquarters | office | delegated_office",
+      "address": "string",
+      "postal_code": "string|null",
+      "municipality": "string|null",
+      "island": "string|null",
+      "coordinates": {
+        "lat": 0.0,
+        "lon": 0.0
+      },
+      "source_url": "string"
+    }
+  ],
+  "portals": [
+    {
+      "id": "string",
+      "kind": "open_data | transparencia | estadistica | geoespacial | agregador",
       "name": "string",
       "url": "string",
-      "type": "enum: REST | OGC | SOAP | SPARQL | NTRIP | Catálogo",
-      "description": "string",
-      "access": "enum: Público | Con api-key | Restringido | Híbrido",
-      "documentation": "string (URL)"
+      "portal_status": "active | archived | provisional | unknown",
+      "technology": ["CKAN", "ArcGIS", "Custom"],
+      "standards": ["DCAT", "INSPIRE", "OGC"],
+      "formats": ["CSV", "JSON", "GeoJSON"],
+      "topics": ["turismo", "demografia", "medio_ambiente"],
+      "machine_readable": true,
+      "has_api": true,
+      "apis": [
+        {
+          "name": "string",
+          "url": "string",
+          "type": "REST | CKAN API | OGC WMS | OGC WFS | SPARQL | other",
+          "documentation_url": "string|null"
+        }
+      ],
+      "dataset_count": 0,
+      "dataset_count_note": "string|null",
+      "last_updated": "YYYY-MM|null",
+      "license_summary": "string|null",
+      "licenses": [
+        {
+          "id": "cc-by-4.0",
+          "name": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "count": 0
+        }
+      ]
     }
   ],
-  
-  "data": {
-    "categories": ["string"],
-    "formats": ["string"],
-    "count": "number | null",
-    "count_note": "string | null (si hay aclaraciones)"
+  "verification": {
+    "status": "verified | estimated | inferred | pending",
+    "last_checked": "YYYY-MM",
+    "source_urls": ["string"]
   },
-  
-  "licenses": [
-    {
-      "type": "string (nombre de licencia)",
-      "count": "number | null",
-      "url": "string | null"
-    }
-  ],
-  "license_predominant": "string",
-  
-  "metadata": {
-    "last_updated": "string (YYYY-MM)",
-    "update_frequency": "string (diaria | semanal | mensual | anual | variable | tiempo_real)",
-    "legal_basis": "string | null (leyes/normativa aplicable)"
-  },
-  
-  "organization": {
-    "parent_organization": "string | null",
-    "publishers": ["string"] (quién publica qué)
-  },
-  
-  "infrastructure": {
-    "main_services": ["string"],
-    "tools": ["string"],
-    "compliance": ["string (INSPIRE | DCAT | OGC | SISC | etc.)"]
-  },
-  
-  "geographic": {
-    "coordinates": {
-      "lat": "number | null",
-      "lon": "number | null"
-    },
-    "coverage": "string | null (ej: 'Todas las islas')"
-  },
-  
-  "description": "string (resumen ejecutivo)"
+  "notes": "string|null"
 }
 ```
 
