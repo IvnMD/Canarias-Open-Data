@@ -68,13 +68,14 @@
         <label for="filterIsland">🗺️ Isla</label>
         <select id="filterIsland">
           <option value="">Todas las islas</option>
-          <option value="Tenerife">🏝️ Tenerife</option>
-          <option value="Gran Canaria">🏝️ Gran Canaria</option>
-          <option value="Lanzarote">🏝️ Lanzarote</option>
-          <option value="Fuerteventura">🏝️ Fuerteventura</option>
-          <option value="La Palma">🏝️ La Palma</option>
-          <option value="La Gomera">🏝️ La Gomera</option>
-          <option value="El Hierro">🏝️ El Hierro</option>
+          <option value="Tenerife"> Tenerife</option>
+          <option value="Gran Canaria"> Gran Canaria</option>
+          <option value="Lanzarote"> Lanzarote</option>
+          <option value="Fuerteventura"> Fuerteventura</option>
+          <option value="La Palma"> La Palma</option>
+          <option value="La Gomera"> La Gomera</option>
+          <option value="El Hierro"> El Hierro</option>
+          <option value="La Graciosa"> La Graciosa</option>
         </select>
       </div>
     </div>
@@ -93,10 +94,11 @@
     <div id="results"></div>
   </main>
 
+ 
   <footer>
-    <p>© 2026 · Datos Abiertos Canarias · Demo educativa</p>
-    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Datos provenientes de portales oficiales de transparencia y datos
-      abiertos</p>
+<p><strong>Open Data Canarias</strong> — Inventario del ecosistema de datos abiertos de las Islas Canarias</p>
+  <p>© 2026  · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal</p>
+  <p>Proyecto académico DAM </p>
   </footer>
 
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
