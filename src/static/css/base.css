@@ -588,3 +588,59 @@ footer {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
     transition: all 0.3s ease;
 }
+
+/* ============================================
+   DESCRIPCIÓN PLEGABLE CON FLECHA
+   ============================================ */
+
+.description-container {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.description-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.description-text.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.toggle-desc-btn {
+  background: none;
+  border: none;
+  color: var(--badge-text);
+  cursor: pointer;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.toggle-desc-btn:hover {
+  color: var(--badge-text);
+  opacity: 0.8;
+  gap: 0.4rem;
+}
+
+.toggle-desc-btn .arrow-icon {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.toggle-desc-btn.expanded .arrow-icon {
+  transform: rotate(180deg);
+}

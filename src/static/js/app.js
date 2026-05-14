@@ -271,7 +271,17 @@ function render(list) {
         <span class="type-text">${formatType(e.type)}</span>
       </div>
       
-      ${e.description ? `<p class="card-description">${truncate(escapeHtml(e.description), 120)}</p>` : ''}
+      ${e.description ? `
+        <div class="description-container">
+          <div class="description-text collapsed" id="desc-${cardId}">
+            ${escapeHtml(e.description)}
+          </div>
+          <button class="toggle-desc-btn" onclick="toggleDescription('desc-${cardId}')">
+            <span>Ver más</span>
+            <span class="arrow-icon">▼</span>
+          </button>
+        </div>
+      ` : ''}
       
       <div class="card-stats">
         <div class="stat">
@@ -481,7 +491,7 @@ function initDarkMode() {
  * 5. Girar la flecha 90 grados (▶ se convierte en ▼ y viceversa)
  */
 function toggleCat(cardId) {
-  
+
   const hiddenDiv = document.getElementById(cardId + '-hidden');
   const btn = document.querySelector(`#${cardId} .toggle-cat-btn`);
   const isVisible = hiddenDiv.style.display === 'flex';
@@ -503,6 +513,24 @@ function toggleFormats(cardId) {
   hiddenDiv.style.display = isVisible ? 'none' : 'flex';
   if (btn) {
     btn.classList.toggle('rotated');
+  }
+}
+
+/**
+ * Alterna la descripción entre colapsada y expandida
+ * @param {string} descId - ID del elemento de descripción
+ */
+function toggleDescription(descId) {
+  const descElement = document.getElementById(descId);
+  const btn = descElement.nextElementSibling;
+  const isCollapsed = descElement.classList.contains('collapsed');
+  
+  if (isCollapsed) {
+    descElement.classList.remove('collapsed');
+    btn.innerHTML = '<span>Ver menos</span><span class="arrow-icon">▲</span>';
+  } else {
+    descElement.classList.add('collapsed');
+    btn.innerHTML = '<span>Ver más</span><span class="arrow-icon">▼</span>';
   }
 }
 
