@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,75 +19,88 @@
 
 <body>
 
-<header>
-  <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
-    <span class="logo-svg" role="img" aria-label="Logo Open Data Canarias"></span>
-    <h1>Open Data Canarias</h1>
+  <header>
+    <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+      <span class="logo-svg" role="img" aria-label="Logo Open Data Canarias"></span>
+      <h1>Open Data Canarias</h1>
+    </div>
+    <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
+  </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-link">
+                <span class="nav-icon">🔍</span>
+                <span>Buscador</span>
+            </a>
+            <a href="{{ url_for('estadisticas') }}" class="stats-button">
+                <span class="nav-icon">📊</span>
+                <span>Estadísticas</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-icon">🗺️</span>
+                <span>Mapa</span>
+            </a>
+        </div>
+    </nav>
+
+  <div class="search-container">
+    <div class="search">
+      <div class="search-field">
+        <label for="searchText">🔍 Buscar</label>
+        <input id="searchText" placeholder="Ej: turismo, ISTAC, OSM, población, educación..." autocomplete="off">
+      </div>
+
+      <div class="search-field">
+        <label for="filterType">🏛️ Tipo de institución</label>
+        <select id="filterType">
+          <option value="">Todos los tipos</option>
+          <option value="gobierno_autonomico">🏢 Gobierno Autonómico</option>
+          <option value="organismo_especializado">📋 Organismo Especializado</option>
+          <option value="organismo_especializado_nacional">📃 Organismo Especializado Nacional</option>
+          <option value="organismo_especializado_geoespacial">🗺️ Organismo Geoespacial</option>
+          <option value="cabildo">🏝️ Cabildo Insular</option>
+          <option value="ayuntamiento">🏘️ Ayuntamiento</option>
+        </select>
+      </div>
+
+      <div class="search-field">
+        <label for="filterIsland">🗺️ Isla</label>
+        <select id="filterIsland">
+          <option value="">Todas las islas</option>
+          <option value="Tenerife">🏝️ Tenerife</option>
+          <option value="Gran Canaria">🏝️ Gran Canaria</option>
+          <option value="Lanzarote">🏝️ Lanzarote</option>
+          <option value="Fuerteventura">🏝️ Fuerteventura</option>
+          <option value="La Palma">🏝️ La Palma</option>
+          <option value="La Gomera">🏝️ La Gomera</option>
+          <option value="El Hierro">🏝️ El Hierro</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="stats-bar" id="statsBar">
+      <span id="resultsCount">Cargando...</span>
+      <div style="display: flex; gap: 0.5rem;">
+        <button id="darkModeToggle" class="reset-btn" style="display: flex;">🌙 Modo oscuro</button>
+        <button id="resetFilters" class="reset-btn" style="display: none;">🗑️ Limpiar filtros</button>
+      </div>
+    </div>
   </div>
-  <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
-</header>
-
-<div class="search-container">
-  <div class="search">
-    <div class="search-field">
-      <label for="searchText">🔍 Buscar</label>
-      <input id="searchText" placeholder="Ej: turismo, ISTAC, OSM, población, educación..." autocomplete="off">
-    </div>
-
-    <div class="search-field">
-      <label for="filterType">🏛️ Tipo de institución</label>
-      <select id="filterType">
-        <option value="">Todos los tipos</option>
-        <option value="gobierno_autonomico">🏢 Gobierno Autonómico</option>
-        <option value="organismo_especializado">📋 Organismo Especializado</option>
-        <option value="organismo_especializado_nacional">📃 Organismo Especializado Nacional</option>
-        <option value="organismo_especializado_geoespacial">🗺️ Organismo Geoespacial</option>
-        <option value="cabildo">🏝️ Cabildo Insular</option>
-        <option value="ayuntamiento">🏘️ Ayuntamiento</option>
-      </select>
-    </div>
-
-    <div class="search-field">
-      <label for="filterIsland">🗺️ Isla</label>
-      <select id="filterIsland">
-        <option value="">Todas las islas</option>
-        <option value="Tenerife">🏝️ Tenerife</option>
-        <option value="Gran Canaria">🏝️ Gran Canaria</option>
-        <option value="Lanzarote">🏝️ Lanzarote</option>
-        <option value="Fuerteventura">🏝️ Fuerteventura</option>
-        <option value="La Palma">🏝️ La Palma</option>
-        <option value="La Gomera">🏝️ La Gomera</option>
-        <option value="El Hierro">🏝️ El Hierro</option>
-      </select>
-    </div>
-  </div>
-  
-  <div class="stats-bar" id="statsBar">
-    <span id="resultsCount">Cargando...</span>
-    <div style="display: flex; gap: 0.5rem;">
-      <button id="darkModeToggle" class="reset-btn" style="display: flex;">🌙 Modo oscuro</button>
-      <button id="resetFilters" class="reset-btn" style="display: none;">🗑️ Limpiar filtros</button>
-    </div>
-  </div>
-</div>
 
 
-<main>
-  <div id="results"></div>
-</main>
-<div class="stats-button-container">
+  <main>
+    <div id="results"></div>
+  </main>
 
-    <a href="{{ url_for('estadisticas') }}" class="stats-button">
-        Ver estadísticas
-    </a>
+  <footer>
+    <p>© 2026 · Datos Abiertos Canarias · Demo educativa</p>
+    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Datos provenientes de portales oficiales de transparencia y datos
+      abiertos</p>
+  </footer>
 
-</div>
-<footer>
-  <p>© 2026 · Datos Abiertos Canarias · Demo educativa</p>
-  <p style="font-size: 0.8rem; margin-top: 0.5rem;">Datos provenientes de portales oficiales de transparencia y datos abiertos</p>
-</footer>
-
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 </body>
+
 </html>
