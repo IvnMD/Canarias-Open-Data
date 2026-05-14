@@ -1288,47 +1288,50 @@
       "lon": -16.6291
     }
   },
-  {
-    "id": "aena_canarios",
-    "name": "AENA – Estadísticas de Aeropuertos Canarios",
-    "type": "empresa_publica_nacional",
-    "islands": [
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura"
-    ],
-    "portal_url": "https://www.aena.es/es/estadisticas.html",
-    "api_url": null,
-    "portal_technology": "Portal estadístico AENA",
-    "data_categories": [
-      "Transporte aéreo",
-      "Pasajeros",
-      "Operaciones",
-      "Mercancías",
-      "Turismo",
-      "Aeropuertos"
-    ],
-    "formats": [
-      "CSV",
-      "XLSX",
-      "PDF"
-    ],
-    "dataset_count": null,
-    "licenses": [
-      {
-        "type": "Reutilización abierta AENA"
-      }
-    ],
-    "license_predominant": "Reutilización abierta",
-    "last_updated": "2026-04",
-    "update_frequency": "Mensual",
-    "description": "Estadísticas de tráfico de pasajeros, operaciones y mercancías de los aeropuertos canarios: Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote y Fuerteventura.",
-    "coordinates": {
-      "lat": 27.9319,
-      "lon": -15.3866
+{
+  "id": "aena_canarios",
+  "name": "AENA – Estadísticas de Aeropuertos Canarios",
+  "type": "empresa_publica_nacional",
+  "islands": [
+    "Gran Canaria",
+    "Tenerife",
+    "Lanzarote",
+    "Fuerteventura",
+    "La Palma",
+    "El Hierro",
+    "La Gomera"
+  ],
+  "portal_url": "https://www.aena.es/es/estadisticas.html",
+  "api_url": null,
+  "portal_technology": "Portal estadístico AENA",
+  "data_categories": [
+    "Transporte aéreo",
+    "Pasajeros",
+    "Operaciones",
+    "Mercancías",
+    "Turismo",
+    "Aeropuertos"
+  ],
+  "formats": [
+    "CSV",
+    "XLSX",
+    "PDF"
+  ],
+  "dataset_count": null,
+  "licenses": [
+    {
+      "type": "Reutilización abierta AENA"
     }
-  },
+  ],
+  "license_predominant": "Reutilización abierta",
+  "last_updated": "2026-04",
+  "update_frequency": "Mensual",
+  "description": "Estadísticas de tráfico de pasajeros, operaciones y mercancías de los aeropuertos canarios: Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote, Fuerteventura, La Palma, El Hierro y La Gomera.",
+  "coordinates": {
+    "lat": 27.9319,
+    "lon": -15.3866
+  }
+},
   {
     "id": "policia_nacional_canarias",
     "name": "Policía Nacional – Datos de Seguridad Canarias",
