@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schema/canarias-entidades.schema.json",
+  "title": "Entidades de datos abiertos de Canarias",
+  "description": "Esquema para una colección de instituciones, portales y recursos de publicación de datos abiertos en Canarias.",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "entity_kind",
+      "scope",
+      "islands",
+      "description",
+      "verification"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 2
+      },
+      "alternate_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "entity_kind": {
+        "type": "string",
+        "enum": [
+          "gobierno_autonomico",
+          "cabildo",
+          "ayuntamiento",
+          "organismo",
+          "empresa_publica"
+        ]
+      },
+      "scope": {
+        "type": "string",
+        "enum": [
+          "autonomico",
+          "insular",
+          "municipal",
+          "estatal",
+          "europeo"
+        ]
+      },
+      "parent_entity_id": {
+        "type": ["string", "null"]
+      },
+      "islands": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "Tenerife",
+            "Gran Canaria",
+            "Lanzarote",
+            "Fuerteventura",
+            "La Palma",
+            "La Gomera",
+            "El Hierro",
+            "La Graciosa",
+            "Todas"
+          ]
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "description": {
+        "type": "string",
+        "minLength": 10
+      },
+      "locations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "kind",
+            "address",
+            "island",
+            "coordinates",
+            "source_url"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "headquarters",
+                "office",
+                "delegated_office"
+              ]
+            },
+            "address": {
+              "type": "string",
+              "minLength": 3
+            },
+            "postal_code": {
+              "type": ["string", "null"]
+            },
+            "municipality": {
+              "type": ["string", "null"]
+            },
+            "island": {
+              "type": "string"
+            },
+            "coordinates": {
+              "type": "object",
+              "required": ["lat", "lon"],
+              "properties": {
+                "lat": {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                },
+                "lon": {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                }
+              },
+              "additionalProperties": false
+            },
+            "source_url": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "portals": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "kind",
+            "name",
+            "url",
+            "technology",
+            "topics",
+            "machine_readable"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "open_data",
+                "transparencia",
+                "estadistica",
+                "geoespacial",
+                "agregador",
+                "other"
+              ]
+            },
+            "name": {
+              "type": "string",
+              "minLength": 2
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "portal_status": {
+              "type": ["string", "null"],
+              "enum": [
+                "active",
+                "archived",
+                "provisional",
+                "unknown",
+                null
+              ]
+            },
+            "technology": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "standards": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "formats": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "machine_readable": {
+              "type": "boolean"
+            },
+            "has_api": {
+              "type": ["boolean", "null"]
+            },
+            "apis": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "url",
+                  "type"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "documentation_url": {
+                    "type": ["string", "null"],
+                    "format": "uri"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "dataset_count": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "dataset_count_note": {
+              "type": ["string", "null"]
+            },
+            "last_updated": {
+              "type": ["string", "null"],
+              "pattern": "^[0-9]{4}-[0-9]{2}$"
+            },
+            "license_summary": {
+              "type": ["string", "null"]
+            },
+            "licenses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["name"],
+                "properties": {
+                  "id": {
+                    "type": ["string", "null"]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": ["string", "null"],
+                    "format": "uri"
+                  },
+                  "count": {
+                    "type": ["integer", "null"],
+                    "minimum": 0
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "last_checked": {
+              "type": ["string", "null"],
+              "pattern": "^[0-9]{4}-[0-9]{2}$"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "verification": {
+        "type": "object",
+        "required": [
+          "status",
+          "last_checked",
+          "source_urls"
+        ],
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "estimated",
+              "inferred",
+              "pending"
+            ]
+          },
+          "last_checked": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}$"
+          },
+          "source_urls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "notes": {
+        "type": ["string", "null"]
+      }
+    },
+    "additionalProperties": false
+  }
+}

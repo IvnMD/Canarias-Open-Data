@@ -1,703 +1,931 @@
-/* ============================================
+OpenData Canarias / Claude ha terminado la respuesta 12 may Claude ha respondido: Aquí tienes los tres archivos listos para descargar: Los tres archivos listos. Aquí tienes los tres archivos listos para descargar: Se crearon 3 archivos,
+leyó un archivo Los tres archivos listos. Recuerda dónde colocar cada uno en el repositorio: pull_request_template.md → dentro de la carpeta .github/ (GitHub lo detecta automáticamente) CONTRIBUTING.md → en la raíz del repositorio o dentro de docs/ GESTION_PROYECTO.md → dentro de docs/ Pull request template Documento · MD Contributing Documento · MD Gestion proyecto Documento · MD Has dicho: . .github y .git es lo mismo? otra cosa,
+ayudame un crear un gitignore que no suba (y a ser posible que elimine) los zone identifier : ivnmd@IvnMD: ~/DAM/Practicas-DAM-Datos-Abiertos$ ls -la total 124 drwxr-xr-x 4 ivnmd ivnmd 4096 May 12 21:24 . drwxr-xr-x 3 ivnmd ivnmd 4096 May 12 11:46 .. drwxr-xr-x 8 ivnmd ivnmd 4096 May 12 15:46 .git -rw-r--r-- 1 ivnmd ivnmd 2369 May 12 21:23 CONTRIBUTING.md -rw-r--r-- 1 ivnmd ivnmd 25 May 12 21:24 CONTRIBUTING.md:Zone.Identifier -rw-r--r-- 1 ivnmd ivnmd 2598 May 12 21:23 GESTION_PROYECTO.md -rw-r--r-- 1 ivnmd ivnmd 25 May 12 21:24 GESTION_PROYECTO.md:Zone.Identifier -rw-r--r-- 1 ivnmd ivnmd 35149 May 12 11:34 LICENSE -rw-r--r-- 1 ivnmd ivnmd 10128 May 12 15:04 Practicas-DAM-Datos-Abiertos.zip -rw-r--r-- 1 ivnmd ivnmd 7137 May 12 11:34 README.md drwxr-xr-x 4 ivnmd ivnmd 4096 May 12 14:33 Web -rw-r--r-- 1 ivnmd ivnmd 28649 May 12 15:46 entidades.json -rw-r--r-- 1 ivnmd ivnmd 0 May 12 13:09 generar_web.py -rw-r--r-- 1 ivnmd ivnmd 831 May 12 21:23 pull_request_template.md -rw-r--r-- 1 ivnmd ivnmd 25 May 12 21:24 pull_request_template.md:Zone.Identifier ivnmd@IvnMD: ~/DAM/Practicas-DAM-Datos-Abiertos$ ^C ivnmd@IvnMD: ~/DAM/Practicas-DAM-Datos-Abiertos$ 12 may Claude ha respondido: . .git vs .github — no son lo mismo .git/ → carpeta interna de Git. La crea automáticamente al hacer git init. Contiene todo el historial, commits, ramas, configuración local... nunca toques esto manualmente. .github/ → carpeta de configuración para GitHub (la plataforma web). La creas tú manualmente. Aquí van la plantilla de PR, workflows de GitHub Actions, etc. Git la ignora, GitHub la lee. Los Zone.Identifier Son metadatos que Windows añade a archivos descargados de internet (marca de seguridad). Como usas WSL, los archivos que descargas desde Windows aparecen con ese "gemelo" fantasma en Linux. Dos pasos: eliminar los que ya existen + ignorar los futuros. Paso 1 — Eliminar los que ya tienes: bash find . -name "*:Zone.Identifier" -delete Paso 2 — Crear el .gitignore: bash nano .gitignore Contenido del archivo: gitignore # Zone Identifier (metadatos de Windows/WSL) *:Zone.Identifier # Archivos comprimidos *.zip *.tar.gz # Archivos temporales y del sistema .DS_Store Thumbs.db *.tmp *.log # Entornos virtuales Python venv/ __pycache__/ *.pyc También incluí el .zip que se ve en tu ls, y los habituales de Python ya que tienes un generar_web.py. Paso 3 — Guardar y commitear: bash git add .gitignore git commit -m "docs: añadir .gitignore con exclusión de Zone.Identifier"
+
+            Y recuerda mover pull_request_template.md a su sitio correcto: bash mkdir -p .github mv pull_request_template.md .github/ Has dicho: deberia crear un docs? deberia crear un docs? en el repositorio digo 12 may Claude ha respondido: Depende de cómo de grande sea el proyecto, pero para un trabajo de DAM con 4 personas probablemente no merece la pena. Depende de cómo de grande sea el proyecto, pero para un trabajo de DAM con 4 personas probablemente no merece la pena. Aquí el razonamiento: Sin carpeta docs/ — lo más habitual en proyectos pequeños Los archivos de documentación van directamente en la raíz: / ├── .github/ │ └── pull_request_template.md ├── Web/ ├── .gitignore ├── CONTRIBUTING.md ├── GESTION_PROYECTO.md ├── README.md ├── entidades.json └── generar_web.py GitHub renderiza automáticamente en la portada del repo cualquier README.md que esté en la raíz, y los demás .md son fácilmente navegables. Es limpio y directo. Con carpeta docs/ — tiene sentido si... El proyecto crece y hay muchos archivos de documentación Usáis GitHub Pages para generar una web con la documentación Hay manuales técnicos, diagramas, referencias de API... Mi recomendación para vuestro caso Quédate con la estructura sin docs/. Pon CONTRIBUTING.md y GESTION_PROYECTO.md en la raíz junto al README.md. Es más sencillo y tus compañeros los encontrarán al instante sin tener que navegar carpetas. Además, puedes enlazarlos desde el README.md para que sean aún más accesibles: markdown ## 📚 Documentación del equipo - [Guía de contribución](./CONTRIBUTING.md) - [Gestión de tareas](./GESTION_PROYECTO.md) Has dicho: git add . git add .gitignore git commit -m "docs: añadir .gitignore con exclusión de Zone.Identifier" mejora esto para que el comit tambien incluya la adhesion de los 3 documentos 12 may Claude ha respondido: El mensaje sigue la convención estándar: una línea de título corta, una línea en blanco, y luego el detalle de cada archivo. bash git add .gitignore CONTRIBUTING.md GESTION_PROYECTO.md .github/pull_request_template.md git commit -m "docs: añadir .gitignore, guías de contribución y plantilla de PR
+
+            - .gitignore: excluye Zone.Identifier, .zip y temporales de Python - CONTRIBUTING.md: flujo de trabajo con ramas y Pull Requests - GESTION_PROYECTO.md: guía de Issues y Project Board (Kanban) - .github/pull_request_template.md: plantilla estándar para revisiones de código"
+
+
+            El mensaje sigue la convención estándar: una línea de título corta, una línea en blanco, y luego el detalle de cada archivo. Así en el historial de Git se ve limpio en una línea, pero expandiéndolo aparece el desglose completo. Has dicho: teniendo en cuenta esto que pego, donde colocarias la seccion documentacion del equipo (dime donde, no hace falta que reescribas el readme): teniendo en cuenta esto que pego, donde colocarias la seccion documentacion del equipo (dime donde, no hace falta que reescribas el readme): 12 may Claude ha respondido: Justo después de la sección # Instalación, antes de # Uso. Justo después de la sección # Instalación, antes de # Uso. El flujo narrativo del README va de "qué es" → "cómo se instala" → "cómo colaboramos" → "cómo se usa" . Tiene sentido que un nuevo miembro del equipo vea las normas de colaboración antes de ponerse a tocar código. markdown # Instalación ... # 📚 Documentación del equipo - [Guía de contribución](./CONTRIBUTING.md) - [Gestión de tareas](./GESTION_PROYECTO.md) # Uso ... Has dicho: escribeme un mensaje de como comunicarias lo que acabamos de hacer escribeme un mensaje de como comunicarias lo que acabamos de hacer 12 may Claude ha respondido: Listo para pegar en el grupo de WhatsApp o Discord del equipo. Hey equipo, acabo de subir varios cambios al repo que nos van a facilitar trabajar juntos: - **CONTRIBUTING.md** → cómo trabajar con ramas, commits y Pull Requests - **GESTION_PROYECTO.md** → cómo usar las Issues y el Project Board (Kanban) - **.github/pull_request_template.md** → se carga automáticamente cada vez que abráis un PR - **.gitignore** → ya no se subirán los Zone.Identifier ni los .zip El README también tiene una sección nueva con los enlaces a estos docs. Echad un ojo antes de empezar a trabajar, especialmente al CONTRIBUTING. A partir de ahora nada va directo a main 🙂 Listo para pegar en el grupo de WhatsApp o Discord del equipo. Has dicho: teniendo en cuenta el json entidades. teniendo en cuenta el json entidades.json como ejemplo transforma instituciones.json 10:27 Claude ha respondido: Tengo todo lo que necesito. Ejecutó 5 comandos, visualizó un archivo Tengo todo lo que necesito. Ahora voy a transformar las 91 instituciones al schema de entidades.json, mapeando los campos disponibles y rellenando con null lo que no se puede inferir. Ejecutó un comando, leyó un archivo Las 91 instituciones transformadas al schema de entidades.json. Así quedó el mapeo: Campos rellenados automáticamente: id → slug generado desde el nombre name → institucion type → mapeado desde tipo al enum de entidades islands → inferido desde entidad_principal (si menciona una isla concreta, si no ["Todas"]) portal_url → portal_transparencia api_url → sede_ventanilla description → generada con tipo + entidad principal Campos en null / vacíos porque instituciones.json no tenía esa información: portal_technology, data_categories, formats, dataset_count, licenses, coordinates, last_updated Estos los tendréis que rellenar manualmente o con una segunda pasada de enriquecimiento cuando investiguéis cada entidad. Instituciones transformadas Código · JSON Has dicho: Transforma entidades. Transforma entidades.json para que encaje con entidades.schema.jason 14:10 Claude ha respondido: Primero leo el entidades. Primero leo el entidades.json actual para ver todos sus datos antes de transformar. Read full entidades.json to understand all fields Ahora tengo una imagen completa de la heterogeneidad del JSON. Hay entidades con campos extra como apis, tools, data_structure, key_features, compliance, infrastructure, etc. Procedo con la transformación completa. Transform entidades.json to new schema Ahora valido contra el schema para ver si hay errores: Validate output against schema Solo 3 errores menores de formato en IDs. Los arreglo: Ejecutó un comando, leyó un archivo 191 entidades transformadas y validadas sin errores. Resumen de los cambios aplicados: Campos renombrados/reestructurados: type → entity_kind (con mapeo al enum nuevo; organismo_especializado_geoespacial → organismo) type → también genera scope (gobierno_autonomico→autonomico, cabildo→insular, ayuntamiento→municipal) portal_url + api_url + portal_technology + formats + data_categories + licenses → todo consolidado dentro del array portals[] coordinates → movido a locations[] con estructura {
+            kind,
+            address,
+            island,
+            coordinates,
+            source_url
+        }
+
+        Campos descartados (no tienen cabida en el nuevo schema, la info rica como tools, data_structure, key_features, compliance, infrastructure queda fuera): Si queréis conservarla,
+        lo más limpio sería meterla en el campo notes como texto o ampliar el schema con additionalProperties: true. 3 IDs corregidos: los que usaban guiones (openstreetmap-canarias) se convirtieron a guiones bajos para cumplir el patrón ^[a-z0-9]+(?:_[a-z0-9]+)*$. Entidades v2 Código · JSON Has dicho: cumple con estas necesidades? cumple con estas necesidades? Separar tipo_base y ambito - (Facilita filtros coherentes) Añadir machine_readable y has_real_api - (Distingue open data de transparencia) Añadir postal_address - (Muy útil para mapa y validación) entity_kind: separa el tipo base,
+        por ejemplo gobierno_autonomico,
+        cabildo,
+        ayuntamiento,
+        organismo,
+        empresa_publica scope: autonomico,
+        insular,
+        municipal,
+        estatal,
+        europeo portals[]: porque una entidad puede tener varios canales de publicación parent_entity_id: para relacionar organismos dependientes o portales secundarios locations[]: porque una entidad puede tener una o varias sedes públicas machine_readable: distingue datos reutilizables de simples PDFs/HTML de transparencia has_api: mejor como booleano,
+        y si existe,
+        detallar APIs dentro de apis[] verification.status: verified,
+        estimated,
+        inferred,
+        pending source_urls[]: para saber de dónde salió cada dato last_checked: fecha en la que verificamos la entrada,
+        distinta de last_updated del portal También normalizaría vocabularios cerrados para evitar variantes incompatibles: type ahora mezcla categoría institucional y especialización,
+        así que conviene dividirl portal_technology debería ser enum o lista controlada (CKAN, Socrata, ArcGIS, Custom, OGC Services, eDatos) topics: usar slugs (demografia, turismo, medio_ambiente, movilidad) formats: usar valores canónicos (CSV, JSON, GeoJSON, XML, RDF, WMS, WFS) licenses: idealmente con id,
+        name,
+        url,
+        scope,
+        count 15:04 Claude ha respondido: Sí,
+        el schema que ya tenéis cubre prácticamente todo. Sí,
+        el schema que ya tenéis cubre prácticamente todo. Te hago un análisis campo por campo: ✅ Cubierto completamente: entity_kind con enum correcto scope con enum correcto portals[] array para múltiples canales parent_entity_id locations[] con sedes machine_readable booleano dentro de cada portal has_api booleano+apis[] con detalle verification.status con los 4 valores verification.source_urls[] last_checked (dentro de cada portal y en verification) ⚠️ Cubierto parcialmente: Necesidad Estado Qué falta portal_technology como lista controlada Partial El schema lo acepta como array de strings libres,
+        sin enum topics con slugs Partial No fuerza slugs,
+        acepta cualquier string formats canónicos Partial Igual,
+        array libre sin enum licenses con id,
+        name,
+        url,
+        scope,
+        count Partial Tiene todo menos scope postal_address ❌ locations tiene address string pero no hay postal_code separado... espera,
+        sí está como postal_code field. Lo que falta es que no es required ❌ No cubierto: postal_address como campo estructurado (street, postal_code, municipality) — hay address libre+postal_code opcional pero no forzado topics como slugs controlados — el schema no valida el formato de los valores Conclusión: el schema está al~85%. Si queréis el 100%,
+        habría que añadir tres cosas concretas: json "portal_technology": {
+
+            "type": "array",
+            "items": {
+                "enum": ["CKAN", "Socrata", "ArcGIS", "eDatos", "OGC", "Custom", "otro"]
+            }
+        }
+
+        ,
+        "topics": {
+            "items": {
+                "pattern": "^[a-z][a-z0-9_]*$"
+            }
+
+            // fuerza slugs
+        }
+
+        ,
+        "licenses": {
+            "properties": {
+                "scope": {
+                    "enum": ["dataset", "portal", "entidad"]
+                }
+            }
+        }
+
+        ¿Quieres que actualice el schema con esas correcciones y re-valide el JSON? Has dicho: ayudame a ajustar el index para que coja los datos del nuevo json: ayudame a ajustar el index para que coja los datos del nuevo json: 15:32 Claude ha respondido: Necesito ver el app. Necesito ver el app.js actual para entender cómo consume el JSON antes de sugerir cambios. List all uploaded files No tengo el app.js subido. Sin él puedo ajustar el HTML del index para que los filtros y selectores reflejen el nuevo schema,
+        pero no sabré cómo está leyendo el JSON. Lo que sí puedo decirte con certeza son los cambios que necesita el HTML basándome en las diferencias entre schemas: En el <select id="filterType">,
+        los valores del value deben coincidir con el nuevo enum de entity_kind: Valor actual (viejo) Valor nuevo organismo_especializado organismo organismo_especializado_nacional organismo organismo_especializado_geoespacial organismo Los tres colapsan en organismo. Si quieres mantener distinción geoespacial/nacional tendrías que añadir scope como filtro separado. Lo que necesito para hacer el ajuste completo: Sube el app.js — es el que hace el fetch del JSON y renderiza las tarjetas. Sin él cualquier cambio en el HTML quedaría a medias porque el filtro funciona comparando value del select contra el campo del JSON,
+        y eso está en el JS. ¿Lo tienes a mano? 15:33 Claude ha respondido: Ahora tengo todo claro. Ahora tengo todo claro. El JS usa campos del schema viejo (e.type, e.portal_url, e.data_categories, e.coordinates, etc.). Hay que actualizar normalize(),
+        filter(),
+        y las funciones auxiliares para leer el nuevo schema. Ejecutó un comando,
+        archivo creado Ahora el index.html — solo hay que actualizar el <select id="filterType">para que los value coincidan con el nuevo enum: Archivo creado,
+        leyó un archivo Resumen de todos los cambios: app.js — cambios en normalize(): e.type → e.entity_kind (guardado como type internamente para no romper el resto) e.portal_url → e.portals[0].url (primer portal, preferiblemente open_data) e.data_categories → portal.topics e.formats → portal.formats e.dataset_count → portal.dataset_count e.coordinates → e.locations[0].coordinates (primera sede con coords) Nuevos campos extraídos: scope,
+        machine_readable,
+        has_api,
+        verification_status app.js — cambios en filter(): El filtro de isla ahora comprueba e.islands.includes("Todas") en lugar de e.island==="canarias"
+
+        app.js — nuevos elementos en las tarjetas: Badge de scope junto al tipo Badges machine_readable,
+        has_api,
+        verification_status Nuevas funciones formatScope() y getTypeIcon()/formatType() actualizadas con el enum nuevo index.html — único cambio: El <select id="filterType">ahora tiene los 5 valores del enum entity_kind: gobierno_autonomico,
+        organismo,
+        cabildo,
+        ayuntamiento,
+        empresa_publica. Los tres organismo_especializado_* anteriores colapsan en organismo. También necesitarás añadir al CSS las clases nuevas .scope-badge,
+        .meta-badge,
+        .meta-ok,
+        .meta-warn,
+        .meta-neutral para que los nuevos badges se vean correctamente. App JS Index Código · HTML Has dicho: que significa~Estimado que significa~Estimado 15:39 Claude ha respondido: Es el badge que aparece cuando verification_status==='estimated' en el JSON. Es el badge que aparece cuando verification_status==='estimated' en el JSON. Significa que los datos de esa entidad (número de datasets, tecnología, formatos, etc.) no se han verificado directamente en el portal oficial,
+        sino que se han estimado o inferido — por ejemplo consultando fuentes secundarias,
+        documentación desactualizada,
+        o extrapolando desde otras entidades similares. Los cuatro estados posibles son: Badge Estado Significa ✔ Verificado verified Comprobado directamente en el portal oficial~Estimado estimated Dato aproximado,
+        no comprobado en origen inferred inferred Deducido lógicamente (ej: si el cabildo usa CKAN, probablemente tiene API) ⏳ Pendiente pending Aún no se ha revisado esta entidad En vuestro caso concreto,
+        casi todas las entidades del JSON transformado tienen estimated porque el script de transformación las generó automáticamente sin verificar cada URL manualmente. Conforme el equipo vaya comprobando cada entidad una a una,
+        podréis cambiar ese campo a verified e ir añadiendo la source_url de donde lo comprobasteis. Has dicho: el formato se ve mal dentro de las tarjetas,
+        y se repite la etiqueta bajo el nombre el formato se ve mal dentro de las tarjetas,
+        y se repite la etiqueta bajo el nombre 15:43 Claude ha respondido: Veo dos problemas en la imagen: Veo dos problemas en la imagen: "~ Estimado" se rompe en dos líneas — el badge no tiene white-space: nowrap "Autonómico" aparece dos veces — una como scope-badge junto al tipo,
+        y el texto GOBIERNO AUTONÓMICO ya incluye implícitamente el ámbito El segundo es un problema de diseño: el scope es redundante cuando el tipo ya lo dice (gobierno_autonomico → siempre autonómico, cabildo → siempre insular). Tiene sentido mostrarlo solo cuando aporta algo,
+        como en organismos y empresas públicas donde el scope puede variar. Dos cambios,
+        uno en cada archivo: app.js — mostrar scope solo cuando no es obvio: javascript // Antes:
+
+        $ {
+            e.scope ? `<span class="scope-badge">$ {
+                formatScope(e.scope)
+            }
+
+            </span>` : ''
+        }
+
+        // Después:
+        $ {
+            shouldShowScope(e.type, e.scope) ? `<span class="scope-badge">$ {
+                formatScope(e.scope)
+            }
+
+            </span>` : ''
+        }
+
+        Y añadir la función: javascript function shouldShowScope(type, scope) {
+            // En gobierno y cabildos el scope es siempre obvio, no hace falta repetirlo
+            if (type==='gobierno_autonomico') return false;
+            if (type==='cabildo') return false;
+            if (type==='ayuntamiento') return false;
+            return ! !scope;
+        }
+
+        CSS — arreglar el salto de línea en los badges: css .meta-badge,
+        .scope-badge {
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-meta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin: 0.4rem 0;
+        }
+
+        ¿Me pasas el CSS para aplicarlo directamente,
+        o prefieres que te lo entregue como parche independiente? 15:46 Claude ha respondido: Tengo el CSS completo. Tengo el CSS completo. Los dos fixes más los estilos nuevos para los badges: Ejecutó un comando,
+        archivo creado Listo Se ha quedado sin mensajes gratuitos hasta las 20:00 Claude es IA y puede cometer errores. Por favor,
+        verifica las respuestas. Base · CSS
+        /* ============================================
    BASE - ESTILOS COMUNES (CLARO Y OSCURO)
    ============================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    transition: background 0.3s ease, color 0.3s ease;
-}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
 
-/* HEADER */
-header {
-    padding: 2rem 1.5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        /* HEADER */
+        header {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
-    pointer-events: none;
-}
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-header::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -5%;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 0, 0, 0.03);
-    border-radius: 50%;
-    pointer-events: none;
-}
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 0, 0, 0.03);
+            border-radius: 50%;
+            pointer-events: none;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    position: relative;
-    z-index: 1;
-}
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
 
-header p {
-    margin-top: 0.5rem;
-    opacity: 0.9;
-    position: relative;
-    z-index: 1;
-}
+        header p {
+            margin-top: 0.5rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
 
-/* SEARCH CONTAINER */
-.search-container {
-    max-width: 1400px;
-    margin: 1rem auto 0;
-    padding: 0 1rem;
-    position: relative;
-    z-index: 2;
-}
+        /* SEARCH CONTAINER */
+        .search-container {
+            max-width: 1400px;
+            margin: 1rem auto 0;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
 
-.search {
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
+        .search {
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
 
-.search-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
+        .search-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
 
-.search-field label {
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+        .search-field label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-.search input,
-.search select {
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    border: 2px solid;
-    border-radius: 8px;
-    transition: all 0.2s ease;
-}
+        .search input,
+        .search select {
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
+            border: 2px solid;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
 
-.search input:focus,
-.search select:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(26, 111, 212, 0.1);
-}
+        .search input:focus,
+        .search select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 111, 212, 0.1);
+        }
 
-/* STATS BAR */
-.stats-bar {
-    border-radius: 8px;
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border: 1px solid;
-}
+        /* STATS BAR */
+        .stats-bar {
+            border-radius: 8px;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid;
+        }
 
-#resultsCount {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+        #resultsCount {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
 
-.reset-btn {
-    background: none;
-    border: 1px solid;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
+        .reset-btn {
+            background: none;
+            border: 1px solid;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-.reset-btn:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
+        .reset-btn:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
 
-/* ============================================
+        /* ============================================
    MENÚ DE NAVEGACIÓN PRINCIPAL
    ============================================ */
 
-.main-nav {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 10px;
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.nav-link .nav-icon {
-    font-size: 1.1rem;
-}
-
-.nav-link:hover {
-    background: var(--badge-bg);
-    color: var(--badge-text);
-}
-
-.nav-link.active {
-    background: var(--badge-bg);
-    color: var(--badge-text);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nav-container {
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .nav-link span:last-child {
-        display: none;
-    }
-
-    .nav-link {
-        padding: 0.5rem;
-    }
-
-    .nav-link .nav-icon {
-        font-size: 1.3rem;
-    }
-}
-
-/* MAIN */
-main {
-    max-width: 1400px;
-    margin: 1.5rem auto;
-    padding: 0 1rem;
-}
-
-/* RESULTS GRID */
-#results {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.5rem;
-    align-items: stretch;
-}
-
-/* CARDS */
-.card {
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border: 1px solid;
-    position: relative;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-}
-
-.card-header {
-    padding: 1rem 1rem 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.card h3 {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.4;
-    flex: 1;
-}
-
-.island-tag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 20px;
-    white-space: nowrap;
-}
-
-.card-type {
-    padding: 0 1rem;
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.type-icon {
-    font-size: 1rem;
-}
-
-.type-text {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.card-description {
-    padding: 0 1rem;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.card-stats {
-    display: flex;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
-
-.stat-value {
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.stat-label {
-    font-size: 0.7rem;
-}
-
-.card-section {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid;
-}
-
-.card-section strong {
-    font-size: 0.75rem;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.badge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    width: 100%;
-}
-
-.badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.7rem;
-    border-radius: 20px;
-    font-weight: 500;
-}
-
-.card-footer {
-    padding: 0.75rem 1rem;
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-/* Footer profesional */
-footer {
-    background: #1a1a2e;
-    color: #e8e8e8;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer p:first-child {
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-footer p:last-child {
-    font-size: 0.8rem;
-    opacity: 0.8;
-}
-
-.portal-link {
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 0.85rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    transition: gap 0.2s ease;
-}
-
-.portal-link:hover {
-    text-decoration: underline;
-    gap: 0.5rem;
-}
-
-.coordinates {
-    font-size: 0.7rem;
-    font-family: monospace;
-}
-
-/* LOADING */
-.loading-spinner {
-    grid-column: 1/-1;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto 1rem;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ERROR & EMPTY STATES */
-.error-message,
-.empty-state {
-    grid-column: 1/-1;
-    text-align: center;
-    padding: 3rem 2rem;
-    border-radius: 12px;
-}
-
-.error-icon,
-.empty-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.error-message h3,
-.empty-state h3 {
-    margin-bottom: 0.5rem;
-}
-
-.error-message p,
-.empty-state p {
-    margin-bottom: 1.5rem;
-}
-
-.retry-btn,
-.reset-btn-empty {
-    border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background 0.2s ease;
-}
-
-code {
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    font-family: monospace;
-    font-size: 0.85rem;
-}
-
-/* FOOTER PEGADO */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
-footer {
-    margin-top: auto;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-    #results {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 900px) {
-    #results {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 768px) {
-    .search {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-    }
-
-    #results {
-        grid-template-columns: 1fr;
-    }
-
-    header h1 {
-        font-size: 1.4rem;
-    }
-
-    .card-stats {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .stats-bar {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .card-footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.categories-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.categories-header strong {
-    margin: 0;
-}
-
-.toggle-cat-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.8rem;
-    color: var(--badge-text);
-    padding: 0;
-    transition: transform 0.2s ease;
-}
-
-.toggle-cat-btn.rotated {
-    transform: rotate(90deg);
-}
-
-/* Asegura que las categorías ocultas salgan debajo */
-[id$="-hidden"] {
-    display: none;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    width: 100%;
-    margin-top: 0.25rem;
-}
-
-/* Cuando están visibles */
-[id$="-hidden"].show {
-    display: flex;
-}
-
-
-/* Contenedor de formatos ocultos que debe ir en nueva línea */
-#formats-hidden,
-[id$="-formats-hidden"] {
-    display: none;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    width: 100%;
-    margin-top: 0.25rem;
-}
-
-/* Cuando están visibles, ocupan toda la línea */
-[id$="-formats-hidden"].visible {
-    display: flex;
-}
-
-/* Boton estadisticas */
-.stats-button-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.stats-button {
-    display: inline-block;
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-    transition: all 0.3s ease;
-}
-
-/* ============================================
+        .main-nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link .nav-icon {
+            font-size: 1.1rem;
+        }
+
+        .nav-link:hover {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+        }
+
+        .nav-link.active {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav-link span:last-child {
+                display: none;
+            }
+
+            .nav-link {
+                padding: 0.5rem;
+            }
+
+            .nav-link .nav-icon {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1400px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        /* RESULTS GRID */
+        #results {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        /* CARDS */
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-header {
+            padding: 1rem 1rem 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .island-tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        /* ─── TIPO + SCOPE ───────────────────────────────────── */
+
+        .card-type {
+            padding: 0 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .type-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .type-text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Badge de ámbito (scope): solo aparece cuando aporta info */
+        .scope-badge {
+            font-size: 0.7rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            /* ← evita saltos de línea */
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-weight: 500;
+        }
+
+        /* ─── META BADGES (machine_readable, has_api, verification) ── */
+
+        .card-meta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            /* salta a nueva línea si no cabe */
+            gap: 0.35rem;
+            padding: 0 1rem 0.6rem;
+            align-items: center;
+        }
+
+        .meta-badge {
+            font-size: 0.68rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 20px;
+            white-space: nowrap;
+            /* ← evita saltos de línea internos */
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            line-height: 1.4;
+        }
+
+        /* Verde: datos verificados / machine-readable / API */
+        .meta-badge.meta-ok {
+            background: rgba(34, 197, 94, 0.12);
+            color: #16a34a;
+            border: 1px solid rgba(34, 197, 94, 0.25);
+        }
+
+        /* Naranja: advertencia (solo PDFs, pendiente) */
+        .meta-badge.meta-warn {
+            background: rgba(251, 146, 60, 0.12);
+            color: #c2410c;
+            border: 1px solid rgba(251, 146, 60, 0.25);
+        }
+
+        /* Gris neutro: estimado */
+        .meta-badge.meta-neutral {
+            background: rgba(148, 163, 184, 0.12);
+            color: #64748b;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+        }
+
+        /* Modo oscuro — ajusta colores de texto para legibilidad */
+        body.dark-mode .meta-badge.meta-ok {
+            color: #4ade80;
+        }
+
+        body.dark-mode .meta-badge.meta-warn {
+            color: #fb923c;
+        }
+
+        body.dark-mode .meta-badge.meta-neutral {
+            color: #94a3b8;
+        }
+
+        body.dark-mode .scope-badge {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        /* ─── RESTO DE LA TARJETA ────────────────────────────── */
+
+        .card-description {
+            padding: 0 1rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+        }
+
+        .card-section {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid;
+        }
+
+        .card-section strong {
+            font-size: 0.75rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            width: 100%;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.7rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .card-footer {
+            padding: 0.75rem 1rem;
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Footer profesional */
+        footer {
+            background: #1a1a2e;
+            color: #e8e8e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer p:first-child {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        footer p:last-child {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .portal-link {
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: gap 0.2s ease;
+        }
+
+        .portal-link:hover {
+            text-decoration: underline;
+            gap: 0.5rem;
+        }
+
+        .coordinates {
+            font-size: 0.7rem;
+            font-family: monospace;
+        }
+
+        /* LOADING */
+        .loading-spinner {
+            grid-column: 1/-1;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ERROR & EMPTY STATES */
+        .error-message,
+        .empty-state {
+            grid-column: 1/-1;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+        }
+
+        .error-icon,
+        .empty-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .error-message h3,
+        .empty-state h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .error-message p,
+        .empty-state p {
+            margin-bottom: 1.5rem;
+        }
+
+        .retry-btn,
+        .reset-btn-empty {
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s ease;
+        }
+
+        code {
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+
+        /* FOOTER PEGADO */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            #results {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 900px) {
+            #results {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .search {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            #results {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .card-stats {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .categories-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .categories-header strong {
+            margin: 0;
+        }
+
+        .toggle-cat-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--badge-text);
+            padding: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .toggle-cat-btn.rotated {
+            transform: rotate(90deg);
+        }
+
+        /* Asegura que las categorías ocultas salgan debajo */
+        [id$="-hidden"] {
+            display: none;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            width: 100%;
+            margin-top: 0.25rem;
+        }
+
+        [id$="-hidden"].show {
+            display: flex;
+        }
+
+        #formats-hidden,
+        [id$="-formats-hidden"] {
+            display: none;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            width: 100%;
+            margin-top: 0.25rem;
+        }
+
+        [id$="-formats-hidden"].visible {
+            display: flex;
+        }
+
+        /* Boton estadisticas */
+        .stats-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .stats-button {
+            display: inline-block;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================
    DESCRIPCIÓN PLEGABLE CON FLECHA
    ============================================ */
 
-.description-container {
-  position: relative;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
-}
+        .description-container {
+            position: relative;
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+        }
 
-.description-text {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
+        .description-text {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
 
-.description-text.collapsed {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3; 
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+        .description-text.collapsed {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
 
-.toggle-desc-btn {
-  background: none;
-  border: none;
-  color: var(--badge-text);
-  cursor: pointer;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
+        .toggle-desc-btn {
+            background: none;
+            border: none;
+            color: var(--badge-text);
+            cursor: pointer;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
 
-.toggle-desc-btn:hover {
-  color: var(--badge-text);
-  opacity: 0.8;
-  gap: 0.4rem;
-}
+        .toggle-desc-btn:hover {
+            color: var(--badge-text);
+            opacity: 0.8;
+            gap: 0.4rem;
+        }
 
-.toggle-desc-btn .arrow-icon {
-  font-size: 0.8rem;
-  transition: transform 0.2s ease;
-}
+        .toggle-desc-btn .arrow-icon {
+            font-size: 0.8rem;
+            transition: transform 0.2s ease;
+        }
 
-.toggle-desc-btn.expanded .arrow-icon {
-  transform: rotate(180deg);
-}
+        .toggle-desc-btn.expanded .arrow-icon {
+            transform: rotate(180deg);
+        }
 
-/* ─── SECCIÓN DE PRESENTACIÓN ─────────────────────────── */
+        /* ─── SECCIÓN DE PRESENTACIÓN ─────────────────────────── */
 
-.about-section {
-  max-width: 860px;
-  margin: 1.5rem auto 0;
-  padding: 0 1.5rem;
-}
+        .about-section {
+            max-width: 860px;
+            margin: 1.5rem auto 0;
+            padding: 0 1.5rem;
+        }
 
-.about-inner {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.25rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
+        .about-inner {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
 
-.about-text {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: var(--text-secondary);
-  max-width: 100%;
-}
+        .about-text {
+            margin: 0;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--text-secondary);
+            max-width: 100%;
+        }
 
-.about-text strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
+        .about-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
 
-/* Modo oscuro */
-body.dark-mode .about-inner {
-  background: var(--bg-card);
-  border-color: var(--border-color);
-}
+        body.dark-mode .about-inner {
+            background: var(--bg-card);
+            border-color: var(--border-color);
+        }
 
-body.dark-mode .about-text {
-  color: var(--text-secondary);
-}
+        body.dark-mode .about-text {
+            color: var(--text-secondary);
+        }
 
-body.dark-mode .about-text strong {
-  color: var(--text-header);
-}
+        body.dark-mode .about-text strong {
+            color: var(--text-header);
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-inner {
-    padding: 1rem 1.25rem;
-  }
+        @media (max-width: 768px) {
+            .about-inner {
+                padding: 1rem 1.25rem;
+            }
 
-  .about-text {
-    font-size: 0.875rem;
-  }
-}
+            .about-text {
+                font-size: 0.875rem;
+            }
+        }
