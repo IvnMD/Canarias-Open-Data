@@ -8,10 +8,7 @@
   <meta name="author" content="Datos Abiertos Canarias">
   <title>Open Data Canarias</title>
 
-  <!-- Favicon SVG con modo oscuro integrado -->
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="/static/css/base.css">
   <link rel="stylesheet" href="/static/css/light-mode.css">
   <link rel="stylesheet" href="/static/css/dark-mode.css">
@@ -27,22 +24,39 @@
     <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
   </header>
 
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-link">
-                <span class="nav-icon">🔍</span>
-                <span>Buscador</span>
-            </a>
-            <a href="{{ url_for('estadisticas') }}" class="stats-button">
-                <span class="nav-icon">📊</span>
-                <span>Estadísticas</span>
-            </a>
-            <a href="{{ url_for('mapa') }}" class="nav-link">
-                <span class="nav-icon">🗺️</span>
-                <span>Mapa</span>
-            </a>
-        </div>
-    </nav>
+  <!-- ✦ SECCIÓN DE PRESENTACIÓN ✦ -->
+  <section class="about-section" aria-label="Presentación del proyecto">
+    <div class="about-inner">
+      <p class="about-text">
+        <strong>Open Data Canarias</strong> es un directorio interactivo que centraliza, visualiza y hace accesible
+        el ecosistema de datos abiertos de las Islas Canarias. Permite a ciudadanos, desarrolladores e investigadores
+        descubrir qué entidades publican datos, qué tipo de información ofrecen y a través de qué portales y
+        tecnologías pueden accederse — todo en un único lugar.
+      </p>
+      <p class="about-text">
+        Nuestro objetivo es convertirnos en el punto de referencia del open data insular, promoviendo una cultura de
+        transparencia y reutilización de la información pública, y contribuyendo a que las Islas Canarias avancen
+        hacia una administración más abierta, conectada y orientada al dato.
+      </p>
+    </div>
+  </section>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-link">
+        <span class="nav-icon">🔍</span>
+        <span>Buscador</span>
+      </a>
+      <a href="{{ url_for('estadisticas') }}" class="stats-button">
+        <span class="nav-icon">📊</span>
+        <span>Estadísticas</span>
+      </a>
+      <a href="#" class="nav-link">
+        <span class="nav-icon">🗺️</span>
+        <span>Mapa</span>
+      </a>
+    </div>
+  </nav>
 
   <div class="search-container">
     <div class="search">

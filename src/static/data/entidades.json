@@ -3090,41 +3090,6 @@
     }
   },
   {
-    "id": "ayuntamiento_las_palmas_de_gran_canaria",
-    "name": "Ayuntamiento de Las Palmas de Gran Canaria",
-    "type": "ayuntamiento",
-    "islands": [
-      "Gran Canaria"
-    ],
-    "portal_url": "https://www.laspalmasgc.es/es/transparencia",
-    "api_url": null,
-    "portal_technology": "Portal Transparencia",
-    "data_categories": [
-      "Transparencia",
-      "Sector público",
-      "Administración"
-    ],
-    "formats": [
-      "HTML",
-      "PDF"
-    ],
-    "apis": [],
-    "dataset_count": null,
-    "licenses": [
-      {
-        "type": "Reutilización abierta (Atribución requerida)"
-      }
-    ],
-    "license_predominant": "Reutilización abierta",
-    "last_updated": null,
-    "sede_electronica_url": "https://www.laspalmasgc.es/es/transparencia/informacion-publica/canales-informacion-publica/derecho-acceso/",
-    "description": "Portal de transparencia del Ayuntamiento de Las Palmas de Gran Canaria. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "coordinates": {
-      "lat": 28.1248,
-      "lon": -15.43
-    }
-  },
-  {
     "id": "ayuntamiento_los_llanos_de_aridane",
     "name": "Ayuntamiento de Los Llanos de Aridane",
     "type": "ayuntamiento",
@@ -3682,41 +3647,6 @@
     "coordinates": {
       "lat": 28.6836,
       "lon": -17.7642
-    }
-  },
-  {
-    "id": "ayuntamiento_santa_cruz_de_tenerife",
-    "name": "Ayuntamiento de Santa Cruz de Tenerife",
-    "type": "ayuntamiento",
-    "islands": [
-      "Tenerife"
-    ],
-    "portal_url": "https://www.santacruzdetenerife.es/gobiernoabierto/transparencia/inicio",
-    "api_url": null,
-    "portal_technology": "Portal Transparencia",
-    "data_categories": [
-      "Transparencia",
-      "Sector público",
-      "Administración"
-    ],
-    "formats": [
-      "HTML",
-      "PDF"
-    ],
-    "apis": [],
-    "dataset_count": null,
-    "licenses": [
-      {
-        "type": "Reutilización abierta (Atribución requerida)"
-      }
-    ],
-    "license_predominant": "Reutilización abierta",
-    "last_updated": null,
-    "sede_electronica_url": "https://sede.santacruzdetenerife.es/sede/procedimientos-y-servicios/t352",
-    "description": "Portal de transparencia del Ayuntamiento de Santa Cruz de Tenerife. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "coordinates": {
-      "lat": 28.4636,
-      "lon": -16.2518
     }
   },
   {
@@ -4417,6 +4347,2877 @@
     "coordinates": {
       "lat": 28.9536,
       "lon": -13.7636
+    }
+  },
+  {
+    "id": "agencia_canaria_de_calidad_universitaria_y_evaluacion_educat",
+    "name": "Agencia Canaria de Calidad Universitaria y Evaluación Educativa ACCUEE",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www3.gobiernodecanarias.org/educacion/accuee/transparencia",
+    "api_url": "https://www3.gobiernodecanarias.org/educacion/accuee/transparencia/protocolo?idioma=es",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "agencia_canaria_de_proteccion_del_medio_natural_acpmn",
+    "name": "Agencia Canaria de Protección del Medio Natural ACPMN",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "http://www.acapmn.org",
+    "api_url": "https://apmunweb.grafcan.es/cmsAdmin/uploads/o1fa07ocnh1e8p1ojggjeouo9ea.pdf",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "agencia_tributaria_canaria_atc",
+    "name": "Agencia Tributaria Canaria ATC",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp",
+    "api_url": "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/acceso.jsp",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "asistencia_integral_tributaria_sa_asista",
+    "name": "Asistencia Integral Tributaria, S.A. ASISTA",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://asistacanarias.org/portaltransparencia",
+    "api_url": "https://asistacanarias.org/portaltransparencia/derecho-acceso-accesibilidad",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "cartografica_de_canarias_sa_grafcan",
+    "name": "Cartográfica de Canarias, S.A. GRAFCAN",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.grafcan.es/transparencia",
+    "api_url": "https://www.grafcan.es/transparencia/transparencia-en-derecho-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "consejo_economico_y_social_de_canarias_ces",
+    "name": "Consejo Económico y Social de Canarias CES",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.cescanarias.org/wp-content/uploads/2023/12/",
+    "api_url": "https://www.cescanarias.org/wp-content/uploads/2023/12/",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "consorcio_el_rincon_la_orotava",
+    "name": "Consorcio El Rincón La Orotava",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://consorcioelrincon.es",
+    "api_url": "https://consorcioelrincon.es/acceso-a-la-informacion-publica",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "ente_publico_radio_television_canaria_rtvc",
+    "name": "Ente Público Radio Televisión Canaria RTVC",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://sede.rtvc.es/transparencia/indice/ET22",
+    "api_url": "https://sede.rtvc.es/publico/categoria/26",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "escuela_de_servicios_sanitarios_y_sociales_de_canarias_esssc",
+    "name": "Escuela de Servicios Sanitarios y Sociales de Canarias ESSSCAN",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://essscan.es/transparencia",
+    "api_url": "https://essscan.es/oficina-virtual",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "fundacion_canaria_academia_canaria_de_la_lengua",
+    "name": "FUNDACIÓN CANARIA ACADEMIA CANARIA DE LA LENGUA",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://portal.academiacanarialengua.org/transparencia",
+    "api_url": "https://portal.academiacanarialengua.org/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "fundacion_tutelar_canaria_para_la_accion_social_fucas",
+    "name": "FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.fucas.org/portal-de-transparencia",
+    "api_url": "https://www.fucas.org/solicitud-de-acceso-a-la-informacion-publica-2",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "fundacion_canaria_instituto_de_investigacion_sanitaria_de_ca",
+    "name": "Fundación Canaria Instituto de Investigación Sanitaria de Canarias FIISC",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.fciisc.org/index.php/transparencia",
+    "api_url": "https://fciisc.org/index.php/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "fundacion_canaria_de_juventud_ideo",
+    "name": "Fundación Canaria de Juventud IDEO",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://fundacionideo.org/transparencia",
+    "api_url": "https://fundacionideo.org/formulario-solicitud",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "fundacion_canaria_para_el_fomento_del_trabajo_funcatra",
+    "name": "Fundación Canaria para el Fomento del Trabajo FUNCATRA",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "http://www.funcatra.es/transparencia",
+    "api_url": "http://www.funcatra.es/transparencia/quejas-y-sugerencias",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "gestion_del_medio_rural_de_canarias_sau_gmr_canarias",
+    "name": "GESTIÓN DEL MEDIO RURAL DE CANARIAS, S.A.U. GMR CANARIAS",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://gmrcanarias.com/transparencia",
+    "api_url": "https://gmrcanarias.com/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "gestion_de_servicios_para_la_salud_y_seguridad_en_canarias_s",
+    "name": "Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gsccanarias.com/gsc/transparencia",
+    "api_url": "https://www.gsccanarias.com/gsc/transparencia/derechos-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "gestion_y_planeamiento_territorial_y_medioambiental_sa_gespl",
+    "name": "Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gesplan.es/transparencia",
+    "api_url": "https://www.gesplan.es/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "gestur_canarias_sa",
+    "name": "Gestur Canarias, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gesturcanarias.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "hoteles_escuela_de_canarias_sa_hecansa",
+    "name": "Hoteles Escuela de Canarias, S.A. HECANSA",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.hecansa.com/nosotros/compromiso/portal-de-transparencia",
+    "api_url": "https://www.hecansa.com/servicios-y-procedimientos",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_desarrollo_cultural_sa",
+    "name": "INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.icdcultural.org/transparencia",
+    "api_url": "https://www.icdcultural.org/transparencia/Derecho-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_estadistica_istac",
+    "name": "INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "http://www.gobiernodecanarias.org/istac/istac/transparencia",
+    "api_url": "https://sede.gobiernodecanarias.org/sede/tramites/4177",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_igualdad_ici",
+    "name": "INSTITUTO CANARIO DE IGUALDAD ICI",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gobiernodecanarias.org/icigualdad",
+    "api_url": "https://sede.gobiernodecanarias.org/sede/tramites/4177",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_administracion_publica_icap",
+    "name": "Instituto Canario de Administración Pública ICAP",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "http://www.gobiernodecanarias.org/icap/formacion",
+    "api_url": "http://www.gobiernodecanarias.org/icap/formulario-de-contacto/index.html",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_calidad_agroalimentaria_icca",
+    "name": "Instituto Canario de Calidad Agroalimentaria ICCA",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gobiernodecanarias.org/agp/icca",
+    "api_url": "https://sede.gobiernodecanarias.org/sede/tramites/4177",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_hemodonacion_y_hemoterapia_ichh",
+    "name": "Instituto Canario de Hemodonación y Hemoterapia ICHH",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "http://www3.gobiernodecanarias.org/sanidad/ichh/transparencia",
+    "api_url": "http://www3.gobiernodecanarias.org/sanidad/ichh/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_investigaciones_agrarias_icia",
+    "name": "Instituto Canario de Investigaciones Agrarias ICIA",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.icia.es/icia/index.php?option=com_content&view=article&id=4194&Itemid=100130",
+    "api_url": "https://www.icia.es/icia/index.php?option=com_content&view=article&id=4194&Itemid=100130",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_canario_de_la_vivienda_icv",
+    "name": "Instituto Canario de la Vivienda ICV",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIA_PRINC_V2.html",
+    "api_url": "https://sede.gobiernodecanarias.org/sede/tramites/4177",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "instituto_tecnologico_de_canarias_sa_itc",
+    "name": "Instituto Tecnológico de Canarias, S.A. ITC",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.itccanarias.org/web/es/portal-de-transparencia",
+    "api_url": "https://www.itccanarias.org/web/es/portal-de-transparencia?view=article&id=83&catid=15",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "promotur_turismo_de_canarias_sa",
+    "name": "PROMOTUR TURISMO DE CANARIAS, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://transparencia.turismodeislascanarias.com",
+    "api_url": "https://transparencia.turismodeislascanarias.com/sites/default/files/documents/Formulario_solicitud_acceso_informacion_publica.pdf",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "puertos_canarios",
+    "name": "Puertos Canarios",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://puertoscanarios.sedelectronica.es/transparency",
+    "api_url": "https://puertoscanarios.sedelectronica.es/dossier.52",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "radio_publica_de_canarias_sa",
+    "name": "Radio Pública de Canarias, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://sede.rtvc.es/transparencia/indice/RP22",
+    "api_url": "https://sede.rtvc.es/publico/categoria/26",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "servicio_canario_de_empleo_sce",
+    "name": "Servicio Canario de Empleo SCE",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gobiernodecanarias.org/empleo/sce/transparencia/index.html",
+    "api_url": "https://www.gobiernodecanarias.org/empleo/sce/transparencia/index.html",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "servicio_canario_de_la_salud_scs",
+    "name": "Servicio Canario de la Salud SCS",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia",
+    "api_url": "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocumento=5bb03e9f-def6-11eb-b984-6f2bcbfa916b&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "sociedad_canaria_de_fomento_economico_sa_proexca",
+    "name": "Sociedad Canaria de Fomento Económico, S.A. PROEXCA",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "http://transparencia.proexca.es",
+    "api_url": "http://transparencia.proexca.es",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "sociedad_para_el_desarrollo_economico_de_canarias_sa_sodecan",
+    "name": "Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.sodecan.es/portal-de-transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "television_publica_de_canarias_sa",
+    "name": "Televisión Pública de Canarias, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://sede.rtvc.es/transparencia/indice/TP22",
+    "api_url": "https://sede.rtvc.es/publico/categoria/26",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "viviendas_sociales_e_infraestructuras_de_canarias_sa_vis",
+    "name": "VIVIENDAS SOCIALES E INFRAESTRUCTURAS DE CANARIAS, S.A. VIS",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.visocan.es/transparencia",
+    "api_url": "https://www.visocan.es/transparencia/derecho-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "consejo_insular_de_aguas_de_el_hierro",
+    "name": "Consejo Insular de Aguas de El Hierro",
+    "type": "organismo_especializado",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "https://aguaselhierro.sedelectronica.es/transparency",
+    "api_url": "https://aguaselhierro.sedelectronica.es/dossier.0",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.7459,
+      "lon": -18.0338
+    }
+  },
+  {
+    "id": "empresa_insular_de_servicios_el_meridiano_sa",
+    "name": "Empresa Insular de Servicios El Meridiano, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "https://www.meridianosau.es/portal-de-transparencia-n",
+    "api_url": "https://www.meridianosau.es/portal-de-transparencia-n/acceso-derecho-a-la-informacion-n",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.7459,
+      "lon": -18.0338
+    }
+  },
+  {
+    "id": "gorona_del_viento_el_hierro_sa",
+    "name": "GORONA DEL VIENTO EL HIERRO, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "http://www.goronadelviento.es/portal-de-transparencia",
+    "api_url": "https://www.goronadelviento.es/transparencia/organo-competente",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.7459,
+      "lon": -18.0338
+    }
+  },
+  {
+    "id": "mercahierro_sau",
+    "name": "MERCAHIERRO, S.A.U.",
+    "type": "empresa_publica",
+    "islands": [
+      "El Hierro"
+    ],
+    "portal_url": "https://mercahierro.com/transparencia",
+    "api_url": "https://mercahierro.com/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.7459,
+      "lon": -18.0338
+    }
+  },
+  {
+    "id": "consejo_insular_de_aguas_de_fuerteventura",
+    "name": "Consejo Insular de Aguas de Fuerteventura",
+    "type": "organismo_especializado",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "http://transparencia.aguasfuerteventura.com/index.php",
+    "api_url": "http://transparencia.aguasfuerteventura.com/solicitudpublica.php",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3587,
+      "lon": -14.0533
+    }
+  },
+  {
+    "id": "consorcio_de_abastecimiento_de_aguas_a_fuerteventura_caaf",
+    "name": "Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
+    "type": "organismo_especializado",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://sede.caaf.es/transparencia",
+    "api_url": "https://sede.caaf.es/publico/procedimiento/CAAF014",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3587,
+      "lon": -14.0533
+    }
+  },
+  {
+    "id": "eolicas_de_fuerteventura",
+    "name": "Eólicas de Fuerteventura",
+    "type": "empresa_publica",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://eolicasdefuerteventura.sedelectronica.es/transparency",
+    "api_url": "https://eolicasdefuerteventura.sedelectronica.es/dossier.11",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3587,
+      "lon": -14.0533
+    }
+  },
+  {
+    "id": "parque_tecnologico_de_fuerteventura_sa",
+    "name": "Parque Tecnológico de Fuerteventura, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://ptfue.sedelectronica.es/transparency",
+    "api_url": "https://ptfue.sedelectronica.es/transparency/614d20bc-cb7f-4b8d-b148-40d9efc3cb74",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3587,
+      "lon": -14.0533
+    }
+  },
+  {
+    "id": "patronato_de_turismo_del_cabildo_de_fuerteventura",
+    "name": "Patronato de Turismo del Cabildo de Fuerteventura",
+    "type": "organismo_especializado",
+    "islands": [
+      "Fuerteventura"
+    ],
+    "portal_url": "https://www.fuerteventuraturismo.es/transparencia-2",
+    "api_url": "https://www.fuerteventuraturismo.es/transparencia-2",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.3587,
+      "lon": -14.0533
+    }
+  },
+  {
+    "id": "centro_atlantico_de_arte_moderno_sa_caam",
+    "name": "CENTRO ATLÁNTICO DE ARTE MODERNO, S.A. CAAM",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://caam.sedelectronica.es/transparency/08c5e924-80de-44be-b1fa-0a690fc15902",
+    "api_url": "https://caam.sedelectronica.es/dossier.6",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "consorcio_de_autoridad_unica_del_transporte_de_gran_canaria",
+    "name": "CONSORCIO DE AUTORIDAD ÚNICA DEL TRANSPORTE DE GRAN CANARIA",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://autgc.sedelectronica.es/transparency",
+    "api_url": "https://autgc.sedelectronica.es/info.3",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "consejo_insular_de_aguas_de_gran_canaria",
+    "name": "Consejo Insular de Aguas de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "http://www.aguasgrancanaria.com/transparencia.php",
+    "api_url": "http://www.aguasgrancanaria.com/pdfs/Transparencia/acceso.pdf",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "consejo_insular_de_la_energia_de_gran_canaria",
+    "name": "Consejo Insular de la Energía de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://energiagrancanaria.sedelectronica.es/transparency",
+    "api_url": "https://energiagrancanaria.sedelectronica.es/transparency",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "consorcio_de_emergencias_de_gran_canaria",
+    "name": "Consorcio de Emergencias de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://emergenciasgc.sedelectronica.es/transparency",
+    "api_url": "https://emergenciasgc.sedelectronica.es",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "consorcio_de_viviendas_de_gran_canaria",
+    "name": "Consorcio de Viviendas de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://viviendagc.org/portal-de-transparencia",
+    "api_url": "https://drive.google.com/file/d/1enkg0j1X855Yf-Mfnly7rn3oc6Cqa1U/view?usp=drivelink",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "ferrocarriles_de_gran_canaria_sa",
+    "name": "Ferrocarriles de Gran Canaria, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://ferrocarrilesgrancanaria.sedelectronica.es/transparency",
+    "api_url": "https://ferrocarrilesgrancanaria.sedelectronica.es/dossier.12",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "fondo_para_la_etnografia_y_el_desarrollo_de_la_artesania_can",
+    "name": "Fondo para la Etnografía y el Desarrollo de la Artesanía Canaria FEDAC",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://fedac.org/transparencia",
+    "api_url": "https://fedacgc-my.sharepoint.com/",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "fundacion_canaria_gran_canaria_convention_bureau",
+    "name": "Fundación Canaria Gran Canaria Convention Bureau",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.grancanariacb.com/transparencia",
+    "api_url": "https://www.grancanariacb.com/transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "fundacion_canaria_orquesta_filarmonica_de_gran_canaria",
+    "name": "Fundación Canaria Orquesta Filarmónica de Gran Canaria",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://ofgrancanaria.com/transparencia",
+    "api_url": "https://ofgrancanaria.com/transparencia/120",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "fundacion_canaria_de_las_artes_escenicas_y_de_la_musica_de_g",
+    "name": "Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://teatrocuyas.sedelectronica.es/transparency",
+    "api_url": "https://teatrocuyas.sedelectronica.es/dossier.5",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "institucion_ferial_de_canarias_infecar",
+    "name": "INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998",
+    "api_url": "https://infecar.es/transparencia/derecho-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "instituto_insular_de_deportes_del_cabildo_de_gran_canaria",
+    "name": "Instituto Insular de Deportes del Cabildo de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://grancanariadeportes.sedelectronica.es/transparency",
+    "api_url": "https://grancanariadeportes.sedelectronica.es/dossier.20",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "instituto_de_atencion_social_y_sociosanitaria_del_cabildo_de",
+    "name": "Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://ias.sedelectronica.es/transparency",
+    "api_url": "https://ias.sedelectronica.es/info.10",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "mataderos_insulares_de_gran_canaria_sl",
+    "name": "Mataderos Insulares de Gran Canaria, S.L.",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.mataderograncanaria.com/portal-de-transparencia",
+    "api_url": "https://www.mataderograncanaria.com/portal-de-transparencia/1557497342167-aa37989b-154b",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "patronato_insular_de_turismo_del_cabildo_de_gran_canaria",
+    "name": "Patronato Insular de Turismo del Cabildo de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.grancanaria.com/turismo/es/area-profesional/transparencia/portal-de-transparencia",
+    "api_url": "https://www.grancanaria.com/turismo/es/area-profesional/transparencia/derecho-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "sociedad_de_promocion_economica_de_gran_canaria_sau_spegc",
+    "name": "Sociedad de Promoción Económica de Gran Canaria, S.A.U. SPEGC",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.spegc.org/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "sociedad_para_el_desarrollo_de_las_telecomunicaciones_de_gra",
+    "name": "Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.sodetegc.org/portal-de-transparencia",
+    "api_url": "https://www.sodetegc.org/unidades-de-informacion",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "valora_gestion_tributaria",
+    "name": "Valora Gestión Tributaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.valoragt.com/transparencia",
+    "api_url": "https://www.valoragt.com/oficina-virtual",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "consejo_insular_de_aguas_de_la_gomera",
+    "name": "Consejo Insular de Aguas de La Gomera",
+    "type": "organismo_especializado",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "https://transparencia.aguasgomera.es",
+    "api_url": "https://transparencia.aguasgomera.es/derecho-de-acceso/solicitud-acceso-informacion-publica",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0916,
+      "lon": -17.1133
+    }
+  },
+  {
+    "id": "guaguagomera_sau",
+    "name": "GuaguaGomera, S.A.U.",
+    "type": "empresa_publica",
+    "islands": [
+      "La Gomera"
+    ],
+    "portal_url": "http://www.guaguagomera.com/transparencia",
+    "api_url": "http://www.guaguagomera.com/publico/procedimiento/TR01",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.0916,
+      "lon": -17.1133
+    }
+  },
+  {
+    "id": "consejo_insular_de_aguas_de_la_palma",
+    "name": "Consejo Insular de Aguas de La Palma",
+    "type": "organismo_especializado",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://transparencia.lapalmaaguas.com",
+    "api_url": "https://transparencia.lapalmaaguas.com/derecho-acceso/unidades",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6835,
+      "lon": -17.7642
+    }
+  },
+  {
+    "id": "consorcio_insular_de_servicios_de_la_palma",
+    "name": "Consorcio Insular de Servicios de La Palma",
+    "type": "organismo_especializado",
+    "islands": [
+      "La Palma"
+    ],
+    "portal_url": "https://www.cslapalma.org/portal-de-transparencia",
+    "api_url": "https://cslapalma.sedelectronica.es",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.6835,
+      "lon": -17.7642
+    }
+  },
+  {
+    "id": "auditorio_de_tenerife_sa",
+    "name": "AUDITORIO DE TENERIFE, S.A.",
+    "type": "empresa_publica",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://auditoriodetenerife.com/es/portal-transparencia",
+    "api_url": "https://auditoriodetenerife.com/es/portal-transparencia",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    }
+  },
+  {
+    "id": "balsas_de_tenerife_balten",
+    "name": "Balsas de Tenerife BALTEN",
+    "type": "organismo_especializado",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://www.balten.es/CategoriaDisplay/4?titulo=transparencia",
+    "api_url": "https://www.balten.es/CategoriaDisplay/120?titulo=derecho-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    }
+  },
+  {
+    "id": "titsa",
+    "name": "TITSA",
+    "type": "empresa_publica",
+    "islands": [
+      "Tenerife"
+    ],
+    "portal_url": "https://portaldetransparencia.titsa.com/index.php",
+    "api_url": "https://portaldetransparencia.titsa.com/index.php/solicitud-informacion-publica",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.4636,
+      "lon": -16.2518
+    }
+  },
+  {
+    "id": "fundacion_canaria_general_de_la_universidad_de_la_laguna",
+    "name": "Fundación Canaria General de la Universidad de La Laguna",
+    "type": "empresa_publica",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://fg.ull.es/transparencia",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "fundacion_canaria_lucio_de_las_casas",
+    "name": "Fundación Canaria Lucio de las Casas",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.ulpgc.es/transparencia/fundacion-lucio-casas",
+    "api_url": "https://www.ulpgc.es/transparencia/fundacion-lucio-casas",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "fundacion_canaria_parque_cientifico_tecnologico_de_la_ulpgc_",
+    "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://fpct.ulpgc.es/es/transparencia.html",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "ric_ulpgc_sau",
+    "name": "RIC ULPGC, S.A.U.",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://ric.ulpgc.es/transparencia",
+    "api_url": "https://ric.ulpgc.es/transparencia/13-derecho-de-acceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "tic_ulpgc_slu",
+    "name": "TIC ULPGC, S.L.U.",
+    "type": "empresa_publica",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "portal_url": "https://www.tic-ulpgc.es/transparencia",
+    "api_url": "https://www.tic-ulpgc.es/transparencia/derechoacceso",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 27.9202,
+      "lon": -15.5474
+    }
+  },
+  {
+    "id": "universidad_de_la_laguna",
+    "name": "Universidad de La Laguna",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.ull.es/portaltransparente",
+    "api_url": "https://www.ull.es/portaltransparente/derecho-de-acceso-2",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Universidad dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "universidad_de_las_palmas_de_gran_canaria",
+    "name": "Universidad de Las Palmas de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://www.ulpgc.es/transparencia",
+    "api_url": "https://www.ulpgc.es/transparencia/solicitud-acceso-informacion",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Universidad dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "cabildo_insular_de_el_hierro",
+    "name": "Cabildo Insular de El Hierro",
+    "type": "cabildo",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://transparencia.elhierro.es",
+    "api_url": "https://elhierro.sedelectronica.es/catalog/t55f7cd7e-b11d-4f11-9ea1-58445c9807c2",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Cabildo insular de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "cabildo_insular_de_fuerteventura",
+    "name": "Cabildo Insular de Fuerteventura",
+    "type": "cabildo",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://transparencia.cabildofuer.es/es",
+    "api_url": "https://transparencia.cabildofuer.es/es/node/116",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Cabildo insular de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "cabildo_insular_de_la_gomera",
+    "name": "Cabildo Insular de La Gomera",
+    "type": "cabildo",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://transparencia.lagomera.es",
+    "api_url": "https://lagomera.sedelectronica.es/catalog/t3428c5e6-cd30-4a54-9a86-6ba7b6cdd1e9",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Cabildo insular de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "federacion_canaria_de_islas_fecai",
+    "name": "Federación Canaria de Islas FECAI",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://transparencia.fecai.es",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Asociaciones públicas dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "federacion_canaria_de_municipios_fecam",
+    "name": "Federación Canaria de Municipios FECAM",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://fecam.sedelectronica.es/transparency",
+    "api_url": "https://fecam.sedelectronica.es/transparency",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Asociaciones públicas dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "mancomunidad_norte_de_gran_canaria",
+    "name": "Mancomunidad Norte de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://mancomunidaddelnorte.sedelectronica.es/transparency",
+    "api_url": "https://mancomunidaddelnorte.sedelectronica.es/dossier.12",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Mancomunidades dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "mancomunidad_sureste_de_gran_canaria",
+    "name": "Mancomunidad Sureste de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://surestegc.sedelectronica.es/transparency",
+    "api_url": null,
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Mancomunidades dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
+    }
+  },
+  {
+    "id": "mancomunidad_de_medianas_de_gran_canaria",
+    "name": "Mancomunidad de Medianas de Gran Canaria",
+    "type": "organismo_especializado",
+    "islands": [
+      "Todas"
+    ],
+    "portal_url": "https://medianias.sedelectronica.es/transparency",
+    "api_url": "https://medianias.sedelectronica.es/transparency/ceb11d23-418d-4ebc-b905-97c41b1a030b",
+    "portal_technology": "Portal Transparencia",
+    "data_categories": [
+      "Transparencia",
+      "Sector público",
+      "Administración"
+    ],
+    "formats": [
+      "HTML",
+      "PDF"
+    ],
+    "dataset_count": null,
+    "licenses": [
+      {
+        "type": "Reutilización abierta (Atribución requerida)"
+      }
+    ],
+    "license_predominant": "Reutilización abierta",
+    "last_updated": null,
+    "description": "Mancomunidades dependiente de .",
+    "coordinates": {
+      "lat": 28.2916,
+      "lon": -16.6291
     }
   }
 ]
