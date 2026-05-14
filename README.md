@@ -128,12 +128,31 @@ El repositorio también analiza las tecnologías utilizadas por los portales de 
 # Arquitectura del proyecto
 
 ```text
-/
-├── entidades.json
-├── generar_web.py
-├── index.html
+proyecto/
+│
+├── src/
+│   │
+│   ├── app.py
+│   │
+│   ├── templates/
+│   │   └── index.html
+│   │
+│   ├── static/
+│      ├── css/
+│      │   └── style.css
+│      │
+│      ├── js/
+│      │   └── app.js
+│      │
+│      ├── img/
+│      │
+│      └── data/
+│         └── entidades.json
+│    
 ├── README.md
-└── assets/
+├── .gitignore
+├── venv/
+└── run.py
 ```
 
 ---
@@ -292,11 +311,11 @@ Para que el servidor funciones habra que seguir los siguientes pasos.
 
 1.instalar Pip si no lo tienes.
 ```bash
-Sudo apt install python python-pip
+sudo apt install python3 python-pip
 ```  
 2.Instalar flask.
 ```bash
-Sudo apt install python python-flask
+sudo apt install python3 python-flask
 ```
 3.instalar flask en el proyecto.
 ```bash
@@ -305,7 +324,7 @@ Pip install flask
 despues seria iniciar la web con.
 
 ```bash
-python app.py 
+python run.py 
 ```
 
 Abrir localmente:
