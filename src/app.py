@@ -21,6 +21,9 @@ def home():
 def index():
     return render_template("index.html")
 
+@app.route("/mapa")
+def mapa():
+    return render_template("mapa.html")
 
 @app.route("/api/entidades")
 def obtener_entidades():

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa de Entidades</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #map {
+      height: calc(100vh - 70px);
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Mapa de Entidades Canarias
+  </header>
+
+  <div id="map"></div>
+
+  <!-- Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+
+    // Crear mapa centrado en Canarias
+    const map = L.map('map').setView([28.4, -15.8], 7);
+
+    // Capa base OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Cargar JSON
+    fetch('./data/entidades.json')
+      .then(response => response.json())
+      .then(data => {
+
+        // Convertir a GeoJSON
+        const geojson = {
+          type: 'FeatureCollection',
+
+          features: data
+            .filter(entidad => entidad.coordinates)
+            .map(entidad => ({
+
+              type: 'Feature',
+
+              geometry: {
+                type: 'Point',
+
+                // GeoJSON usa [LONGITUD, LATITUD]
+                coordinates: [
+                  entidad.coordinates.lon,
+                  entidad.coordinates.lat
+                ]
+              },
+
+              properties: {
+                name: entidad.name,
+                type: entidad.type,
+                datasets: entidad.dataset_count || 0
+              }
+            }))
+        };
+
+        // Pintar GeoJSON
+        L.geoJSON(geojson, {
+
+          onEachFeature: function(feature, layer) {
+
+            layer.bindPopup(`
+              <div style="min-width:200px">
+                <h3>${feature.properties.name}</h3>
+                <p><strong>Tipo:</strong> ${feature.properties.type}</p>
+                <p><strong>Datasets:</strong> ${feature.properties.datasets}</p>
+              </div>
+            `);
+          }
+
+        }).addTo(map);
+
+      })
+      .catch(error => {
+        console.error('Error cargando entidades.json:', error);
+      });
+
+  </script>
+
+</body>
+</html>
