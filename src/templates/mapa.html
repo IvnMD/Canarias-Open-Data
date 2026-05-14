@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mapa de Entidades</title>
+  <title>Mapa de Datos Abiertos Canarias</title>
 
   <!-- Leaflet -->
   <link
@@ -12,6 +12,7 @@
   />
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -20,28 +21,64 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f4f7fb;
     }
 
     header {
-      background: #1e293b;
+      background: #0f172a;
       color: white;
       padding: 1rem;
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+    }
+
+    header p {
+      opacity: 0.8;
     }
 
     #map {
-      height: calc(100vh - 70px);
+      height: calc(100vh - 80px);
       width: 100%;
     }
+
+    .legend {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      line-height: 1.8;
+    }
+
+    .legend h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .color-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    Mapa de Entidades Canarias
+    <h1>🗺️ Mapa de Datos Abiertos Canarias</h1>
+    <p>Instituciones y organismos con portales de datos abiertos</p>
   </header>
 
   <div id="map"></div>
@@ -51,67 +88,133 @@
 
   <script>
 
-    // Crear mapa centrado en Canarias
+    // Crear mapa
     const map = L.map('map').setView([28.4, -15.8], 7);
 
-    // Capa base OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+    // Capa base minimalista
+    L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      {
+        attribution: '&copy; OpenStreetMap & CartoDB'
+      }
+    ).addTo(map);
 
-    // Cargar JSON
-    fetch('./data/entidades.json')
+
+    // Colores por tipo
+    function getColor(type) {
+
+      switch(type) {
+
+        case 'gobierno_autonomico':
+          return '#ef4444';
+
+        case 'cabildo':
+          return '#22c55e';
+
+        case 'ayuntamiento':
+          return '#3b82f6';
+
+        case 'organismo_especializado':
+          return '#f59e0b';
+
+        default:
+          return '#64748b';
+      }
+    }
+
+
+    // Cargar JSON desde Flask
+    fetch('/static/data/entidades.json')
       .then(response => response.json())
       .then(data => {
 
-        // Convertir a GeoJSON
-        const geojson = {
-          type: 'FeatureCollection',
+        data.forEach(entidad => {
 
-          features: data
-            .filter(entidad => entidad.coordinates)
-            .map(entidad => ({
+          if (entidad.coordinates) {
 
-              type: 'Feature',
+            const lat = entidad.coordinates.lat;
+            const lon = entidad.coordinates.lon;
 
-              geometry: {
-                type: 'Point',
+            // Crear marcador circular
+            L.circleMarker([lat, lon], {
 
-                // GeoJSON usa [LONGITUD, LATITUD]
-                coordinates: [
-                  entidad.coordinates.lon,
-                  entidad.coordinates.lat
-                ]
-              },
+              radius: 8,
+              fillColor: getColor(entidad.type),
+              color: '#ffffff',
+              weight: 2,
+              opacity: 1,
+              fillOpacity: 0.9
 
-              properties: {
-                name: entidad.name,
-                type: entidad.type,
-                datasets: entidad.dataset_count || 0
-              }
-            }))
-        };
+            })
+            .addTo(map)
+            .bindPopup(`
 
-        // Pintar GeoJSON
-        L.geoJSON(geojson, {
+              <div style="min-width:220px">
 
-          onEachFeature: function(feature, layer) {
+                <h2 style="margin-bottom:0.5rem; font-size:1rem;">
+                  ${entidad.name}
+                </h2>
 
-            layer.bindPopup(`
-              <div style="min-width:200px">
-                <h3>${feature.properties.name}</h3>
-                <p><strong>Tipo:</strong> ${feature.properties.type}</p>
-                <p><strong>Datasets:</strong> ${feature.properties.datasets}</p>
+                <p>
+                  <strong>Tipo:</strong>
+                  ${entidad.type}
+                </p>
+
+                <p>
+                  <strong>Datasets:</strong>
+                  ${entidad.dataset_count || 0}
+                </p>
+
               </div>
+
             `);
           }
 
-        }).addTo(map);
+        });
 
       })
       .catch(error => {
         console.error('Error cargando entidades.json:', error);
       });
+
+
+    // Leyenda
+    const legend = L.control({ position: 'bottomright' });
+
+    legend.onAdd = function () {
+
+      const div = L.DomUtil.create('div', 'legend');
+
+      div.innerHTML = `
+
+        <h3>Leyenda</h3>
+
+        <div class="legend-item">
+          <span class="color-dot" style="background:#ef4444"></span>
+          Gobierno autonómico
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot" style="background:#22c55e"></span>
+          Cabildos
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot" style="background:#3b82f6"></span>
+          Ayuntamientos
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot" style="background:#f59e0b"></span>
+          Organismos especializados
+        </div>
+
+      `;
+
+      return div;
+    };
+
+    legend.addTo(map);
 
   </script>
 
