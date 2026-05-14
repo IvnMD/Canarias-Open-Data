@@ -1,3 +1,96 @@
+/* ============================================
+   MENÚ DE NAVEGACIÓN
+   ============================================ */
+
+.main-nav {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-link .nav-icon {
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+.nav-link.active {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+/* ============================================
+   GRÁFICAS UNA AL LADO DE LA OTRA
+   ============================================ */
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.charts-grid .chart-card {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link span:last-child {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+    }
+
+    .nav-link .nav-icon {
+        font-size: 1.3rem;
+    }
+}
+
 .stats-button-container {
     display: flex;
     justify-content: center;

@@ -2,9 +2,7 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <title>Estadísticas</title>
 
     <!-- Favicon SVG con modo oscuro integrado -->
@@ -19,151 +17,208 @@
 
 <body>
 
-    <main class="stats-page">
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-link">
+                <span class="nav-icon">🔍</span>
+                <span>Buscador</span>
+            </a>
+            <a href="/src/templates/estadisticas.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span>Estadísticas</span>
+            </a>
+            <a href="#" class="nav-link">
+                <span class="nav-icon">🗺️</span>
+                <span>Mapa</span>
+            </a>
+        </div>
+    </nav>
 
+    <main class="stats-page">
         <h1 class="page-title">
             Estadísticas
         </h1>
 
-        <div class="back-button-container">
+        <!-- GRÁFICAS UNA AL LADO DE LA OTRA -->
+        <div class="charts-grid">
+            <!-- GRAFICA 1 -->
+            <section class="chart-card">
+                <h2>Entidades por tipo</h2>
+                <div class="chart-wrapper">
+                    <canvas id="typeChart"></canvas>
+                </div>
+            </section>
 
-            <a href="{{ url_for('home') }}" class="back-button">
-                ⬅ Volver al inicio
-            </a>
-
+            <!-- GRAFICA 2 -->
+            <section class="chart-card">
+                <h2>🧩 Formatos más usados</h2>
+                <div class="chart-wrapper">
+                    <canvas id="formatChart"></canvas>
+                </div>
+            </section>
         </div>
-
-
-        <!-- GRAFICA 1 -->
-        <section class="chart-card">
-
-            <h2>Entidades por tipo</h2>
-
-            <div class="chart-wrapper">
-                <canvas id="typeChart"></canvas>
-            </div>
-
-        </section>
-
-
-        <!-- GRAFICA 2 -->
-        <section class="chart-card">
-
-            <h2>🧩 Formatos más usados</h2>
-
-            <div class="chart-wrapper">
-                <canvas id="formatChart"></canvas>
-            </div>
-
-        </section>
-
     </main>
+
+    <footer>
+        <p>© 2026 · Datos Abiertos Canarias · Demo educativa</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">Datos provenientes de portales oficiales de transparencia y
+            datos abiertos</p>
+    </footer>
+
     <script>
+        // Variables
+        let rawData = [];
+        let typeChart = null;
+        let formatChart = null;
 
-        const ctx = document.getElementById('typeChart');
+        // Normalizar datos
+        function normalizeStats(e) {
+            return {
+                type: e.type || "N/D",
+                formats: e.formats || []
+            };
+        }
 
-        new Chart(ctx, {
+        // Contar frecuencias
+        function countFrequency(items) {
+            const counts = {};
+            items.forEach(item => {
+                if (item && item !== "" && item !== "N/D") {
+                    counts[item] = (counts[item] || 0) + 1;
+                }
+            });
+            return counts;
+        }
 
-            type: 'bar',
+        // Mapear nombres de tipos a español
+        function getTypeName(type) {
+            const names = {
+                'gobierno_autonomico': 'Gobierno Autonómico',
+                'organismo_especializado': 'Organismo Especializado',
+                'organismo_especializado_nacional': 'Organismo Nacional',
+                'organismo_especializado_geoespacial': 'Organismo Geoespacial',
+                'cabildo': 'Cabildo',
+                'ayuntamiento': 'Ayuntamiento'
+            };
+            return names[type] || type;
+        }
 
-            data: {
+        // Cargar datos
+        async function loadData() {
+            try {
+                const response = await fetch('/static/data/entidades.json');
+                if (!response.ok) throw new Error('No se pudo cargar el JSON');
 
-                labels: [
-                    'Cabildos',
-                    'Ayuntamientos',
-                    'Gobierno'
-                ],
+                const json = await response.json();
+                rawData = json.flat(Infinity).map(normalizeStats);
 
-                datasets: [{
+                // Generar gráficas
+                generateTypeChart();
+                generateFormatChart();
 
-                    label: 'Instituciones',
+            } catch (error) {
+                console.error('Error:', error);
+                document.querySelectorAll('.chart-wrapper').forEach(wrapper => {
+                    wrapper.innerHTML = '<p style="color: red; text-align: center; padding: 2rem;">❌ Error al cargar los datos</p>';
+                });
+            }
+        }
 
-                    data: [12, 25, 5],
+        // Gráfica 1: Entidades por tipo
+        function generateTypeChart() {
+            const types = rawData.map(e => e.type);
+            const counts = countFrequency(types);
 
-                    borderRadius: 8,
+            // Ordenar de mayor a menor
+            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
 
-                    borderSkipped: false
-                }]
-            },
+            const labels = sorted.map(item => getTypeName(item[0]));
+            const data = sorted.map(item => item[1]);
 
-            options: {
+            const ctx = document.getElementById('typeChart').getContext('2d');
 
-                indexAxis: 'y', // ← barras horizontales
+            if (typeChart) typeChart.destroy();
 
-                responsive: true,
-
-                maintainAspectRatio: false,
-
-                plugins: {
-
-                    legend: {
-                        display: false
-                    }
+            typeChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Entidades',
+                        data: data,
+                        backgroundColor: '#2563eb',
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
                 },
-
-                scales: {
-
-                    x: {
-
-                        grid: {
-                            display: false
-                        }
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
                     },
-
-                    y: {
-
-                        grid: {
-                            display: false
-                        }
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { grid: { display: false } }
                     }
                 }
-            }
-        });
-        const formatCtx = document.getElementById('formatChart');
+            });
+        }
 
-        new Chart(formatCtx, {
+        // Gráfica 2: Formatos más usados
+        function generateFormatChart() {
+            // Recopilar todos los formatos
+            const allFormats = [];
+            rawData.forEach(e => {
+                if (Array.isArray(e.formats)) {
+                    allFormats.push(...e.formats);
+                } else if (e.formats) {
+                    allFormats.push(e.formats);
+                }
+            });
 
-            type: 'bar',
+            const counts = countFrequency(allFormats);
 
-            data: {
+            // Ordenar de mayor a menor y tomar top 8
+            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
 
-                labels: [
-                    'CSV',
-                    'JSON',
-                    'XML',
-                    'GeoJSON'
-                ],
+            const labels = sorted.map(item => item[0]);
+            const data = sorted.map(item => item[1]);
 
-                datasets: [{
+            const ctx = document.getElementById('formatChart').getContext('2d');
 
-                    label: 'Formatos',
+            if (formatChart) formatChart.destroy();
 
-                    data: [42, 35, 18, 12],
-
-                    borderRadius: 8,
-
-                    borderSkipped: false
-                }]
-            },
-
-            options: {
-
-                indexAxis: 'y',
-
-                responsive: true,
-
-                maintainAspectRatio: false,
-
-                plugins: {
-
-                    legend: {
-                        display: false
+            formatChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Uso',
+                        data: data,
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { grid: { display: false } },
+                        y: { grid: { display: false } }
                     }
                 }
-            }
-        });
+            });
+        }
 
-        // Modo oscuro para estadísticas
+        // Modo oscuro
         (function () {
             const savedMode = localStorage.getItem('darkMode');
             if (savedMode === 'enabled') {
@@ -171,6 +226,8 @@
             }
         })();
 
+        // Iniciar
+        loadData();
     </script>
 
 </body>

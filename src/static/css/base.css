@@ -62,7 +62,7 @@ header p {
 /* SEARCH CONTAINER */
 .search-container {
     max-width: 1400px;
-    margin: -1rem auto 0;
+    margin: 1rem auto 0;
     padding: 0 1rem;
     position: relative;
     z-index: 2;
@@ -139,6 +139,73 @@ header p {
 
 .reset-btn:hover {
     background: rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   MENÚ DE NAVEGACIÓN PRINCIPAL
+   ============================================ */
+
+.main-nav {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.nav-link .nav-icon {
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+.nav-link.active {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-link span:last-child {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+    }
+
+    .nav-link .nav-icon {
+        font-size: 1.3rem;
+    }
 }
 
 /* MAIN */
