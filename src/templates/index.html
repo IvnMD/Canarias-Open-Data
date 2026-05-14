@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
+ 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Buscador unificado de instituciones y datasets de datos abiertos de Canarias">
   <meta name="author" content="Datos Abiertos Canarias">
   <title>Open Data Canarias</title>
-
+ 
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
   <link rel="stylesheet" href="/static/css/base.css">
   <link rel="stylesheet" href="/static/css/light-mode.css">
   <link rel="stylesheet" href="/static/css/dark-mode.css">
 </head>
-
+ 
 <body>
-
+ 
   <header>
     <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
       <span class="logo-svg" role="img" aria-label="Logo Open Data Canarias"></span>
@@ -23,7 +23,7 @@
     </div>
     <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
   </header>
-
+ 
   <!-- ✦ SECCIÓN DE PRESENTACIÓN ✦ -->
   <section class="about-section" aria-label="Presentación del proyecto">
     <div class="about-inner">
@@ -40,7 +40,7 @@
       </p>
     </div>
   </section>
-
+ 
   <nav class="main-nav">
     <div class="nav-container">
       <a href="/" class="nav-link">
@@ -57,43 +57,43 @@
       </a>
     </div>
   </nav>
-
+ 
   <div class="search-container">
     <div class="search">
       <div class="search-field">
         <label for="searchText">🔍 Buscar</label>
         <input id="searchText" placeholder="Ej: turismo, ISTAC, OSM, población, educación..." autocomplete="off">
       </div>
-
+ 
       <div class="search-field">
         <label for="filterType">🏛️ Tipo de institución</label>
         <select id="filterType">
           <option value="">Todos los tipos</option>
+          <!-- Valores alineados con entity_kind del schema v2 -->
           <option value="gobierno_autonomico">🏢 Gobierno Autonómico</option>
-          <option value="organismo_especializado">📋 Organismo Especializado</option>
-          <option value="organismo_especializado_nacional">📃 Organismo Especializado Nacional</option>
-          <option value="organismo_especializado_geoespacial">🗺️ Organismo Geoespacial</option>
+          <option value="organismo">📋 Organismo</option>
           <option value="cabildo">🏝️ Cabildo Insular</option>
           <option value="ayuntamiento">🏘️ Ayuntamiento</option>
+          <option value="empresa_publica">🏭 Empresa Pública</option>
         </select>
       </div>
-
+ 
       <div class="search-field">
         <label for="filterIsland">🗺️ Isla</label>
         <select id="filterIsland">
           <option value="">Todas las islas</option>
-          <option value="Tenerife"> Tenerife</option>
-          <option value="Gran Canaria"> Gran Canaria</option>
-          <option value="Lanzarote"> Lanzarote</option>
-          <option value="Fuerteventura"> Fuerteventura</option>
-          <option value="La Palma"> La Palma</option>
-          <option value="La Gomera"> La Gomera</option>
-          <option value="El Hierro"> El Hierro</option>
-          <option value="La Graciosa"> La Graciosa</option>
+          <option value="Tenerife">🏝️ Tenerife</option>
+          <option value="Gran Canaria">🏝️ Gran Canaria</option>
+          <option value="Lanzarote">🏝️ Lanzarote</option>
+          <option value="Fuerteventura">🏝️ Fuerteventura</option>
+          <option value="La Palma">🏝️ La Palma</option>
+          <option value="La Gomera">🏝️ La Gomera</option>
+          <option value="El Hierro">🏝️ El Hierro</option>
+          <option value="La Graciosa">🏝️ La Graciosa</option>
         </select>
       </div>
     </div>
-
+ 
     <div class="stats-bar" id="statsBar">
       <span id="resultsCount">Cargando...</span>
       <div style="display: flex; gap: 0.5rem;">
@@ -102,21 +102,19 @@
       </div>
     </div>
   </div>
-
-
+ 
   <main>
     <div id="results"></div>
   </main>
-
  
   <footer>
-<p><strong>Open Data Canarias</strong> — Inventario del ecosistema de datos abiertos de las Islas Canarias</p>
-  <p>© 2026  · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal</p>
-  <p>Proyecto académico DAM </p>
+    <p><strong>Open Data Canarias</strong> — Inventario del ecosistema de datos abiertos de las Islas Canarias</p>
+    <p>© 2026 · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal</p>
+    <p>Proyecto académico DAM</p>
   </footer>
-
+ 
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-
+ 
 </body>
-
+ 
 </html>
