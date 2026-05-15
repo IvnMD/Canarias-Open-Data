@@ -646,7 +646,7 @@ code {
 /* In detailed layout, always show extra categories and formats */
 body.layout-detailed [id$="-hidden"],
 body.layout-detailed [id$="-formats-hidden"] {
-  display: flex;
+    display: flex;
 }
 
 [id$="-formats-hidden"].visible {
@@ -683,6 +683,12 @@ body.layout-detailed [id$="-formats-hidden"] {
 body.layout-detailed .description-text.collapsed {
     -webkit-line-clamp: 6;
     line-clamp: 6;
+}
+
+/* In detailed layout, hide "see more" buttons for categories, formats and description */
+body.layout-detailed .toggle-cat-btn,
+body.layout-detailed .toggle-desc-btn {
+    display: none;
 }
 
 .toggle-desc-btn {
