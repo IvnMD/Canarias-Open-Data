@@ -685,10 +685,109 @@ body.layout-detailed .description-text.collapsed {
     line-clamp: 6;
 }
 
+.toggle-desc-btn {
+    background: none;
+    border: none;
+    color: var(--badge-text);
+    cursor: pointer;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.toggle-desc-btn:hover {
+    color: var(--badge-text);
+    opacity: 0.8;
+    gap: 0.4rem;
+}
+
+.toggle-desc-btn .arrow-icon {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.toggle-desc-btn.expanded .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* ============================================
+   CATEGORÍAS Y FORMATOS TOGGLEABLES
+   ============================================ */
+
+.categories-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.categories-header strong {
+    margin: 0;
+}
+
+.toggle-cat-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--badge-text);
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.toggle-cat-btn.rotated {
+    transform: rotate(90deg);
+}
+
+/* Hidden blocks for extra categories and formats (compact view by default) */
+[id$="-hidden"] {
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+[id$="-hidden"].show {
+    display: flex;
+}
+
+[id$="-formats-hidden"] {
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+[id$="-formats-hidden"].visible {
+    display: flex;
+}
+
+/* ============================================
+   AJUSTES PARA VISTA DETALLADA
+   ============================================ */
+
 /* In detailed layout, hide "see more" buttons for categories, formats and description */
 body.layout-detailed .toggle-cat-btn,
 body.layout-detailed .toggle-desc-btn {
     display: none;
+}
+
+/* In detailed layout, always show extra categories and formats */
+body.layout-detailed [id$="-hidden"],
+body.layout-detailed [id$="-formats-hidden"] {
+    display: flex;
+}
+
+/* In detailed layout, make badge groups visually denser */
+body.layout-detailed .badge-container {
+    row-gap: 0.15rem;
 }
 
 .toggle-desc-btn {
