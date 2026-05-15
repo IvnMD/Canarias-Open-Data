@@ -14,10 +14,6 @@ JSON_PATH = os.path.join(
 )
 
 @app.route("/")
-def home():
-    return render_template("index.html")
-    
-@app.route("/")
 def index():
     return render_template("index.html")
 
@@ -27,16 +23,13 @@ def mapa():
 
 @app.route("/api/entidades")
 def obtener_entidades():
-
     with open(JSON_PATH, "r", encoding="utf-8") as file:
         datos = json.load(file)
-
     return jsonify(datos)
 
 @app.route("/estadisticas")
 def estadisticas():
     return render_template("estadisticas.html")
-
 
 
 if __name__ == "__main__":
