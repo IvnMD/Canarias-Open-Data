@@ -15,3 +15,9 @@ Thumbs.db
 venv/
 __pycache__/
 *.pyc
+
+
+# Resumenes de repomix
+repomix-output.txt
+repomix-output.md
+repomix-output.xlm
