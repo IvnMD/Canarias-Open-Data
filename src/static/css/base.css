@@ -262,43 +262,42 @@ footer p:last-child {
 
 /* RESULTS GRID */
 #results {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
 }
 
 @media (max-width: 1200px) {
-  #results {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+    #results {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 900px) {
-  #results {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    #results {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
-  #results {
-    grid-template-columns: 1fr;
-  }
+    #results {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Detailed layout: fewer cards per row */
 body.layout-detailed #results {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (max-width: 900px) {
-  body.layout-detailed #results {
-    grid-template-columns: 1fr;
-  }
-}F
+    body.layout-detailed #results {
+        grid-template-columns: 1fr;
+    }
+}
 
-
-
+F
 /* ============================================
    CARDS
    ============================================ */
@@ -644,6 +643,12 @@ code {
     margin-top: 0.25rem;
 }
 
+/* In detailed layout, always show extra categories and formats */
+body.layout-detailed [id$="-hidden"],
+body.layout-detailed [id$="-formats-hidden"] {
+  display: flex;
+}
+
 [id$="-formats-hidden"].visible {
     display: flex;
 }
@@ -672,6 +677,12 @@ code {
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+/* In detailed layout, show more lines of description */
+body.layout-detailed .description-text.collapsed {
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
 }
 
 .toggle-desc-btn {
