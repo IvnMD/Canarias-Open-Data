@@ -24,11 +24,11 @@
                 <span class="nav-icon">🔍</span>
                 <span>Buscador</span>
             </a>
-            <a href="/src/templates/estadisticas.html" class="nav-link">
+            <a href="{{ url_for('estadisticas') }}" class="nav-link active">
                 <span class="nav-icon">📊</span>
                 <span>Estadísticas</span>
             </a>
-            <a href="/src/templates/mapa.html" class="nav-link">
+            <a href="{{ url_for('mapa') }}" class="nav-link">
                 <span class="nav-icon">🗺️</span>
                 <span>Mapa</span>
             </a>
@@ -72,11 +72,13 @@
         let typeChart = null;
         let formatChart = null;
 
-        // Normalizar datos
+        // Normalizar datos — schema v2: entity_kind, portals[].formats
         function normalizeStats(e) {
+            // Recopilar todos los formatos de todos los portales de la entidad
+            const formats = (e.portals || []).flatMap(p => p.formats || []);
             return {
-                type: e.type || "N/D",
-                formats: e.formats || []
+                type: e.entity_kind || "N/D",
+                formats: formats
             };
         }
 
@@ -91,15 +93,14 @@
             return counts;
         }
 
-        // Mapear nombres de tipos a español
+        // Mapear nombres de tipos a español — enum schema v2
         function getTypeName(type) {
             const names = {
                 'gobierno_autonomico': 'Gobierno Autonómico',
-                'organismo_especializado': 'Organismo Especializado',
-                'organismo_especializado_nacional': 'Organismo Nacional',
-                'organismo_especializado_geoespacial': 'Organismo Geoespacial',
-                'cabildo': 'Cabildo',
-                'ayuntamiento': 'Ayuntamiento'
+                'organismo':           'Organismo',
+                'cabildo':             'Cabildo',
+                'ayuntamiento':        'Ayuntamiento',
+                'empresa_publica':     'Empresa Pública'
             };
             return names[type] || type;
         }
@@ -107,21 +108,23 @@
         // Cargar datos
         async function loadData() {
             try {
-                const response = await fetch('/static/data/entidades.json');
-                if (!response.ok) throw new Error('No se pudo cargar el JSON');
+                const response = await fetch('/api/entidades');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
 
                 const json = await response.json();
+                console.log('✅ JSON cargado:', json.length, 'entidades');
+
                 rawData = json.flat(Infinity).map(normalizeStats);
 
-                // Generar gráficas
                 generateTypeChart();
                 generateFormatChart();
 
             } catch (error) {
                 console.error('Error:', error);
-                document.querySelectorAll('.chart-wrapper').forEach(wrapper => {
-                    wrapper.innerHTML = '<p style="color: red; text-align: center; padding: 2rem;">❌ Error al cargar los datos</p>';
-                });
+                showError('Error al cargar los datos.');
             }
         }
 
