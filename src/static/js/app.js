@@ -184,7 +184,7 @@ function setupEventListeners() {
 
   const resetBtn = document.getElementById("resetFilters");
   if (resetBtn) resetBtn.addEventListener("click", resetFilters);
-  
+
   // Layout toggle: compact vs detailed view
   const layoutToggleBtn = document.getElementById("layoutToggle");
   if (layoutToggleBtn) {
@@ -512,6 +512,30 @@ function initDarkMode() {
   });
 }
 
+/**
+ * Layout toggle: compact vs detailed cards
+ * Toggles a CSS class on <body> and updates the button label.
+ */
+function layoutToggle() {
+  const toggleBtn = document.getElementById('layoutDetailed');
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener('click', () => {
+    // Toggle layout mode class on body
+    document.body.classList.toggle('layout-detailed');
+
+    const isDetailed = document.body.classList.contains('layout-detailed');
+
+    // Update button text depending on current state
+    if (isDetailed) {
+      toggleBtn.textContent = 'Vista compacta';
+    } else {
+      toggleBtn.textContent = 'Vista detallada';
+    }
+  });
+}
+
+
 // ==================== TOGGLES ====================
 
 /**
@@ -564,6 +588,7 @@ function init() {
   setupEventListeners();
   loadData();
   initDarkMode();
+  layoutToggle();
 }
 
 /**
