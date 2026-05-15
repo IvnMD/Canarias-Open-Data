@@ -831,3 +831,14 @@ footer p:last-child {
             text-align: center;
         }
     }
+
+    /* Detailed layout: fewer cards per row to show more information per card */
+    body.layout-detailed .results {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 900px) {
+        body.layout-detailed .results {
+            grid-template-columns: 1fr;
+        }
+    }
