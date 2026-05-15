@@ -184,6 +184,15 @@ function setupEventListeners() {
 
   const resetBtn = document.getElementById("resetFilters");
   if (resetBtn) resetBtn.addEventListener("click", resetFilters);
+  
+  // Layout toggle: compact vs detailed view
+  const layoutToggleBtn = document.getElementById("layoutToggle");
+  if (layoutToggleBtn) {
+    layoutToggleBtn.addEventListener("click", () => {
+      const isDetailed = document.body.classList.toggle("layout-detailed");
+      layoutToggleBtn.textContent = isDetailed ? "Vista compacta" : "Vista detallada";
+    });
+  }
 }
 
 /**
