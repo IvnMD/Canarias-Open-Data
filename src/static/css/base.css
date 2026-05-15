@@ -61,6 +61,15 @@ header p {
     position: relative;
     z-index: 1;
 }
+ /* LOGO */
+.logo-svg {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  mask: url('/static/assets/logo.svg') center/contain no-repeat;
+  -webkit-mask: url('/static/assets/logo.svg') center/contain no-repeat;
+  background-color: currentColor;
+}
 
 /* SEARCH CONTAINER */
 .search-container {

@@ -236,6 +236,8 @@ function filter() {
     return matchText && matchType && matchIsland;
   });
 
+  filtered.sort((a, b) => (b.datasetcount || 0) - (a.datasetcount || 0));
+
   render(filtered);
 
   const hasActiveFilters = text !== '' || type !== '' || island !== '';
