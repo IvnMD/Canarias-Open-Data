@@ -7,54 +7,69 @@
   --bg-primary: #f4f6f8;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
+
   --text-primary: #333333;
   --text-secondary: #666666;
   --text-header: #ffffff;
+
   --border-color: #dee2e6;
-  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
   --badge-bg: #e6ecf5;
-  --badge-text: #003a8f;
+  --badge-text: #01696f;
+
   --footer-bg: #eeeeee;
   --footer-text: #666666;
+
   --input-bg: #ffffff;
   --input-border: #dee2e6;
+
   --spinner-border: #e6ecf5;
-  --spinner-top: #003a8f;
+  --spinner-top: #01696f;
+
   --error-bg: #fff3f3;
   --error-border: #dc3545;
+
   --empty-bg: #ffffff;
 }
 
-header h1, header p {
-    color: #FFFFFF;
-}
+/* Fondo y texto generales */
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
 }
 
-/* Header modo claro */
+/* HEADER modo claro */
 header {
-  background: linear-gradient(135deg, #003a8f 0%, #002a6b 100%);
+  background: linear-gradient(135deg, #01696f 0%, #003a8f 100%);
 }
 
-/* Search y stats */
-.search, .stats-bar {
+header h1,
+header p {
+  color: #ffffff;
+}
+
+/* SEARCH y STATS en modo claro */
+.search,
+.stats-bar {
   background: var(--bg-secondary);
   border-color: var(--border-color);
 }
 
-.search input, .search select {
+/* Inputs en modo claro */
+.search input,
+.search select {
   background: var(--input-bg);
   border-color: var(--input-border);
   color: var(--text-primary);
 }
 
-.search input:focus, .search select:focus {
+.search input:focus,
+.search select:focus {
   border-color: var(--badge-text);
 }
 
-/* Cards */
+/* CARDS en modo claro */
 .card {
   background: var(--bg-card);
   box-shadow: var(--shadow);
@@ -62,8 +77,8 @@ header {
 }
 
 .card:hover {
-  box-shadow: 0 8px 24px rgba(26,111,212,0.15);
-  border-color: #1a6fd4;
+  box-shadow: 0 8px 24px rgba(1, 105, 111, 0.18);
+  border-color: #2563eb;
 }
 
 .card h3 {
@@ -75,20 +90,25 @@ header {
   color: var(--badge-text);
 }
 
-.type-text, .card-description, .coordinates {
+.type-text,
+.card-description,
+.coordinates {
   color: var(--text-secondary);
 }
 
+/* Badges genéricos */
 .badge {
   background: var(--badge-bg);
   color: var(--badge-text);
 }
 
+/* Formatos con estilo verde suave */
 .format-badge {
   background: #e8f5e9;
   color: #2e7d32;
 }
 
+/* Bloque de stats de la tarjeta */
 .card-stats {
   background: var(--bg-primary);
   border-color: var(--border-color);
@@ -102,27 +122,29 @@ header {
   color: var(--text-secondary);
 }
 
+/* Secciones internas de la tarjeta */
 .card-section {
   border-color: var(--border-color);
 }
 
+/* Enlace al portal */
 .portal-link {
   color: var(--badge-text);
 }
 
-/* Footer */
+/* FOOTER en modo claro */
 footer {
   background: var(--footer-bg);
   color: var(--footer-text);
 }
 
-/* Loading */
+/* LOADING */
 .spinner {
   border-color: var(--spinner-border);
   border-top-color: var(--spinner-top);
 }
 
-/* Error y empty */
+/* ERROR y EMPTY */
 .error-message {
   background: var(--error-bg);
   border-left: 4px solid var(--error-border);
@@ -137,7 +159,7 @@ code {
   color: var(--badge-text);
 }
 
-/* Logo blanco sobre el header azul del modo claro */
+/* Logo blanco sobre el header en modo claro */
 header .logo-svg {
   background-color: #ffffff;
 }
