@@ -2,180 +2,220 @@
    MODO OSCURO - ESTILOS EXCLUSIVOS
    ============================================ */
 
-/* Variables del modo oscuro */
+/* Paleta: gris oscuro + teal, acentos en naranja */
 body.dark-mode {
-    --bg-primary: #1a1a2e;
-    --bg-secondary: #16213e;
-    --bg-card: #0f3460;
-    --text-primary: #e8e8e8;
-    --text-secondary: #b0b0b0;
-    --text-header: #e8e8e8;
-    --border-color: #2c3e66;
-    --shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    --badge-bg: #2c3e66;
-    --badge-text: #74b9ff;
-    --footer-bg: #0f3460;
-    --footer-text: #b0b0b0;
-    --input-bg: #1a1a2e;
-    --input-border: #2c3e66;
-    --spinner-border: #2c3e66;
-    --spinner-top: #74b9ff;
-    --error-bg: #2d1a1a;
-    --error-border: #e74c3c;
-    --empty-bg: #0f3460;
+  --bg-primary: #111827;      /* fondo principal gris muy oscuro */
+  --bg-secondary: #111827;    /* paneles grandes (search, stats) */
+  --bg-card: #020617;         /* tarjetas ligeramente más oscuras */
+
+  --text-primary: #e5e7eb;    /* texto principal gris muy claro */
+  --text-secondary: #9ca3af;  /* texto secundario */
+  --text-header: #f9fafb;     /* títulos */
+
+  --border-color: #1f2937;    /* bordes suaves */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+
+  --badge-bg: #0f172a;        /* chips y badges */
+  --badge-text: #14b8a6;      /* teal brillante para acentos */
+
+  --footer-bg: #020617;
+  --footer-text: #9ca3af;
+
+  --input-bg: #020617;
+  --input-border: #374151;
+
+  --spinner-border: #1f2937;
+  --spinner-top: #14b8a6;
+
+  --error-bg: #1e1b4b;
+  --error-border: #f97316;    /* naranja para errores */
+  --empty-bg: #020617;
 }
 
+/* Fondo y texto generales en oscuro */
 body.dark-mode {
-    background: var(--bg-primary);
-    color: var(--text-primary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
-/* Header modo oscuro */
+/* HEADER modo oscuro: gris + teal sutil */
 body.dark-mode header {
-    background: linear-gradient(135deg, #0f3460 0%, #0a1a3a 100%);
+  background: radial-gradient(circle at top left, #14b8a6 0%, #0b1120 40%, #020617 100%);
 }
 
-/* Search y stats */
+/* SEARCH y STATS en modo oscuro */
 body.dark-mode .search,
 body.dark-mode .stats-bar {
-    background: var(--bg-secondary);
-    border-color: var(--border-color);
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
+/* Inputs en modo oscuro */
 body.dark-mode .search input,
 body.dark-mode .search select {
-    background: var(--input-bg);
-    border-color: var(--input-border);
-    color: var(--text-primary);
+  background: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-primary);
 }
 
 body.dark-mode .search input::placeholder {
-    color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 body.dark-mode .search input:focus,
 body.dark-mode .search select:focus {
-    border-color: var(--badge-text);
-    box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+  border-color: var(--badge-text);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
 }
 
-/* Cards */
+/* CARDS en modo oscuro */
 body.dark-mode .card {
   background: var(--bg-card);
   box-shadow: var(--shadow);
-  border-color: #3b4b70;
+  border-color: var(--border-color);
 }
 
 body.dark-mode .card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    border-color: var(--badge-text);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+  border-color: #14b8a6;
 }
 
 body.dark-mode .card h3 {
-    color: var(--badge-text);
+  color: var(--badge-text);
 }
 
 body.dark-mode .island-tag {
-    background: var(--badge-bg);
-    color: var(--badge-text);
+  background: var(--badge-bg);
+  color: var(--badge-text);
 }
 
 body.dark-mode .type-text,
-body.dark-mode .coordinates {
-    color: var(--text-secondary);
-}
-
 body.dark-mode .card-description,
-body.dark-mode .description-text {
-  color: #cbd5f5; /* un gris claro azulado más legible */
+body.dark-mode .coordinates {
+  color: var(--text-secondary);
 }
 
+/* Categorías en modo oscuro: más discretas que formatos */
 body.dark-mode .badge {
-  background: #2c3e66;
-  color: #e8e8e8;
+  background: #020617;   /* muy oscuro */
+  color: var(--text-secondary);
 }
 
+/* Formatos en modo oscuro: fondo gris-azulado, texto teal suave */
 body.dark-mode .format-badge {
-  background: #1b5e20;
-  color: #a5d6a7;
+  background: #0b1220;   /* gris-azulado oscuro, distinto del verde */
+  color: #38d5c4;        /* teal más claro que los meta-badges */
 }
 
+/* Meta-badges en modo oscuro:
+   OK (machine-readable, API) en naranja para destacar,
+   warn y neutral se mantienen */
+body.dark-mode .meta-badge.meta-ok {
+  color: #f97316;      /* naranja principal */
+}
+
+body.dark-mode .meta-badge.meta-warn {
+  color: #fb923c;      /* naranja algo más claro */
+}
+
+body.dark-mode .meta-badge.meta-neutral {
+  color: #94a3b8;      /* gris neutro */
+}
+
+/* Stats dentro de la tarjeta */
 body.dark-mode .card-stats {
-    background: var(--bg-primary);
-    border-color: var(--border-color);
+  background: var(--bg-primary);
+  border-color: var(--border-color);
 }
 
 body.dark-mode .stat-value {
-    color: var(--badge-text);
+  color: var(--badge-text);
 }
 
 body.dark-mode .stat-label {
-    color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
+/* Secciones internas de la tarjeta */
 body.dark-mode .card-section {
-    border-color: var(--border-color);
+  border-color: var(--border-color);
 }
 
+/* Enlace al portal */
 body.dark-mode .portal-link {
-    color: var(--badge-text);
+  color: var(--badge-text);
 }
 
 body.dark-mode .portal-link:hover {
-    color: #a5d6a7;
+  color: #f97316; /* acento naranja en hover */
 }
 
-/* Footer */
+/* ABOUT en modo oscuro */
+body.dark-mode .about-inner {
+  background: var(--bg-card);
+  border-color: #14b8a6;
+}
+
+body.dark-mode .about-text {
+  color: var(--text-secondary);
+}
+
+body.dark-mode .about-text strong {
+  color: var(--text-header);
+}
+
+/* FOOTER en modo oscuro */
 body.dark-mode footer {
-    background: var(--footer-bg);
-    color: var(--footer-text);
+  background: var(--footer-bg);
+  color: var(--footer-text);
 }
 
-/* Loading */
+/* LOADING en oscuro */
 body.dark-mode .spinner {
-    border-color: var(--spinner-border);
-    border-top-color: var(--spinner-top);
+  border-color: var(--spinner-border);
+  border-top-color: var(--spinner-top);
 }
 
-/* Error y empty */
+/* ERROR y EMPTY en oscuro */
 body.dark-mode .error-message {
-    background: var(--error-bg);
-    border-left: 4px solid var(--error-border);
-    color: var(--text-primary);
+  background: var(--error-bg);
+  border-left: 4px solid var(--error-border);
+  color: var(--text-primary);
 }
 
 body.dark-mode .empty-state {
-    background: var(--empty-bg);
+  background: var(--empty-bg);
 }
 
 body.dark-mode code {
-    background: var(--badge-bg);
-    color: var(--badge-text);
+  background: var(--badge-bg);
+  color: var(--badge-text);
 }
 
-/* Botón reset en modo oscuro */
+/* Botones secundarios (reset) en modo oscuro */
 body.dark-mode .reset-btn {
-    border-color: var(--border-color);
-    color: var(--text-secondary);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
 }
 
 body.dark-mode .reset-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
 }
 
-/* Botón retry en modo oscuro */
+/* Botones primarios (retry / vacíos) en modo oscuro */
 body.dark-mode .retry-btn,
 body.dark-mode .reset-btn-empty {
-    background: var(--badge-text);
-    color: #1a1a2e;
+  background: #f97316; /* naranja */
+  color: #111827;
 }
 
 body.dark-mode .retry-btn:hover,
 body.dark-mode .reset-btn-empty:hover {
-    background: #a5d6a7;
+  background: #fb923c;
 }
 
+/* Logo en modo oscuro: teal */
 body.dark-mode .logo-svg {
-  background-color: #4f98a3;
+  background-color: #14b8a6;
 }
