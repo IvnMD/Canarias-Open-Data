@@ -95,29 +95,31 @@ body.dark-mode .coordinates {
   color: var(--text-secondary);
 }
 
-/* Badges genéricos en oscuro */
+/* Categorías en modo oscuro: más discretas que formatos */
 body.dark-mode .badge {
-  background: var(--badge-bg);
-  color: var(--badge-text);
+  background: #020617;   /* muy oscuro */
+  color: var(--text-secondary);
 }
 
-/* Formatos: verde suave pero legible en oscuro */
+/* Formatos en modo oscuro: fondo gris-azulado, texto teal suave */
 body.dark-mode .format-badge {
-  background: #052e16;
-  color: #bbf7d0;
+  background: #0b1220;   /* gris-azulado oscuro, distinto del verde */
+  color: #38d5c4;        /* teal más claro que los meta-badges */
 }
 
-/* META badges (ya estaban, mantenemos colores) */
+/* Meta-badges en modo oscuro:
+   OK (machine-readable, API) en naranja para destacar,
+   warn y neutral se mantienen */
 body.dark-mode .meta-badge.meta-ok {
-  color: #4ade80;
+  color: #f97316;      /* naranja principal */
 }
 
 body.dark-mode .meta-badge.meta-warn {
-  color: #fb923c; /* aquí ya tienes el acento naranja */
+  color: #fb923c;      /* naranja algo más claro */
 }
 
 body.dark-mode .meta-badge.meta-neutral {
-  color: #94a3b8;
+  color: #94a3b8;      /* gris neutro */
 }
 
 /* Stats dentro de la tarjeta */
