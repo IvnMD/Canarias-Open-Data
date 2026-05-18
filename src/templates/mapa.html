@@ -12,28 +12,22 @@
   <title>Mapa de Datos Abiertos Canarias</title>
 
   <!-- Website favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="{{ url_for('static', filename='assets/logo.svg') }}">
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
 
   <!-- Leaflet CSS (map library styles) -->
-  <link rel="stylesheet"
-    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
   <!-- Global/base styles -->
-  <link rel="stylesheet"
-    href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 
   <!-- Light theme styles -->
-  <link rel="stylesheet"
-    href="{{ url_for('static', filename='css/light-mode.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/light-mode.css') }}">
 
   <!-- Dark theme styles -->
-  <link rel="stylesheet"
-    href="{{ url_for('static', filename='css/dark-mode.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}">
 
   <!-- Map-specific styles -->
-  <link rel="stylesheet"
-    href="{{ url_for('static', filename='css/mapa.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
 </head>
 
 <body>
@@ -53,9 +47,7 @@
       </div>
 
       <!-- Mobile navigation toggle button -->
-      <button id="menuToggleBtn" class="menu-toggle-btn">
-        ☰
-      </button>
+      <button id="menuToggleBtn" class="menu-toggle-btn">☰</button>
     </div>
   </header>
 
@@ -117,7 +109,7 @@
     let menuOpen = false;
 
     // Toggle menu visibility when button is clicked
-    menuToggleBtn.addEventListener('click', function() {
+    menuToggleBtn.addEventListener('click', function () {
 
       // Invert menu state
       menuOpen = !menuOpen;
@@ -141,10 +133,7 @@
         // Restore hamburger icon
         menuToggleBtn.textContent = '☰';
       }
-      setTimeout(function() { adjustLayout(); }, 350);
     });
-
-    window.addEventListener('resize', adjustLayout);
 
 
     /* =========================================================
@@ -165,8 +154,8 @@
 
     })
 
-    // Set initial map center and zoom
-    .setView([28.4, -15.8], 7);
+      // Set initial map center and zoom
+      .setView([28.4, -15.8], 7);
 
 
     /* =========================================================
@@ -241,10 +230,10 @@
       const names = {
 
         'gobierno_autonomico': 'Gobierno Autonómico',
-        'cabildo':             'Cabildo',
-        'ayuntamiento':        'Ayuntamiento',
-        'organismo':           'Organismo',
-        'empresa_publica':     'Empresa Pública'
+        'cabildo': 'Cabildo',
+        'ayuntamiento': 'Ayuntamiento',
+        'organismo': 'Organismo',
+        'empresa_publica': 'Empresa Pública'
       };
 
       // Return translated name or fallback
@@ -272,7 +261,7 @@
              LOCATION EXTRACTION
           -------------------------------------------------- */
 
-          // Find first location with coordinates
+          // Find first location with coordinates (schema v2)
           const loc = (entidad.locations || [])
             .find(l => l.coordinates);
 
@@ -320,11 +309,11 @@
             fillOpacity: 0.9
           })
 
-          // Add marker to map
-          .addTo(map)
+            // Add marker to map
+            .addTo(map)
 
-          // Attach popup information
-          .bindPopup(`
+            // Attach popup information
+            .bindPopup(`
 
             <div style="min-width:220px">
 
