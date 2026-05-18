@@ -1,707 +1,413 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-    <!-- =========================================================
-         BASIC META CONFIGURATION
-    ========================================================== -->
-
     <!-- Character encoding -->
     <meta charset="UTF-8">
-
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Page description -->
+    <meta name="description" content="Estadísticas del ecosistema de datos abiertos de Canarias">
+    <!-- Author -->
+    <meta name="author" content="Datos Abiertos Canarias">
     <!-- Browser tab title -->
-    <title>Estadísticas</title>
-
-
-    <!-- =========================================================
-         FAVICON
-    ========================================================== -->
-
+    <title>Estadísticas — Open Data Canarias</title>
     <!-- SVG favicon with dark mode support -->
-    <link rel="icon"
-        type="image/svg+xml"
-        href="{{ url_for('static', filename='assets/logo.svg') }}">
-
-
-    <!-- =========================================================
-         EXTERNAL LIBRARIES
-    ========================================================== -->
-
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
     <!-- Chart.js library for data visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-    <!-- =========================================================
-         STYLESHEETS
-    ========================================================== -->
-
     <!-- Global/base styles -->
-    <link rel="stylesheet"
-        href="/static/css/base.css">
-
+    <link rel="stylesheet" href="/static/css/base.css">
     <!-- Light mode styles -->
-    <link rel="stylesheet"
-        href="/static/css/light-mode.css">
-
+    <link rel="stylesheet" href="/static/css/light-mode.css">
     <!-- Dark mode styles -->
-    <link rel="stylesheet"
-        href="/static/css/dark-mode.css">
-
+    <link rel="stylesheet" href="/static/css/dark-mode.css">
     <!-- Statistics page specific styles -->
-    <link rel="stylesheet"
-        href="/static/css/estadisticas.css">
-
+    <link rel="stylesheet" href="/static/css/estadisticas.css">
 </head>
-
 <body>
 
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+    <header>
+        <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+            <span class="logo-svg" role="img" aria-label="Logo Open Data Canarias"></span>
+            <h1>Open Data Canarias</h1>
+        </div>
+        <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
+    </header>
 
     <!-- =========================================================
          NAVIGATION MENU
     ========================================================== -->
-
     <nav class="main-nav">
-
         <div class="nav-container">
-
             <!-- Search page -->
             <a href="/" class="nav-link">
-
                 <span class="nav-icon">🔍</span>
                 <span>Buscador</span>
-
             </a>
-
             <!-- Statistics page (active) -->
-            <a href="{{ url_for('estadisticas') }}"
-                class="nav-link active">
-
+            <a href="{{ url_for('estadisticas') }}" class="nav-link active">
                 <span class="nav-icon">📊</span>
                 <span>Estadísticas</span>
-
             </a>
-
             <!-- Map page -->
-            <a href="{{ url_for('mapa') }}"
-                class="nav-link">
-
+            <a href="{{ url_for('mapa') }}" class="nav-link">
                 <span class="nav-icon">🗺️</span>
                 <span>Mapa</span>
-
             </a>
-
         </div>
-
     </nav>
-
 
     <!-- =========================================================
          MAIN PAGE CONTENT
     ========================================================== -->
-
     <main class="stats-page">
-
-        <!-- Page title -->
-        <h1 class="page-title">
-            Estadísticas
-        </h1>
-
-
-        <!-- =====================================================
-             CHART GRID CONTAINER
-        ====================================================== -->
-
+        <!-- Top bar: page title + dark mode toggle -->
+        <div class="stats-topbar">
+            <!-- Page title -->
+            <h1 class="page-title">📊 Estadísticas</h1>
+            <!-- Dark mode toggle button -->
+            <button id="darkModeToggle" class="reset-btn">🌙 Modo oscuro</button>
+        </div>
         <!-- Two charts displayed side-by-side -->
         <div class="charts-grid">
-
-
             <!-- =================================================
                  CHART 1: ENTITY TYPES
             ================================================== -->
-
             <section class="chart-card">
-
                 <!-- Chart title -->
-                <h2>Entidades por tipo</h2>
-
+                <h2>🏛️ Entidades por tipo</h2>
                 <!-- Canvas wrapper -->
                 <div class="chart-wrapper">
-
                     <!-- Chart.js renders chart here -->
                     <canvas id="typeChart"></canvas>
-
                 </div>
-
             </section>
-
-
             <!-- =================================================
                  CHART 2: DATA FORMATS
             ================================================== -->
-
             <section class="chart-card">
-
                 <!-- Chart title -->
                 <h2>🧩 Formatos más usados</h2>
-
                 <!-- Canvas wrapper -->
                 <div class="chart-wrapper">
-
                     <!-- Chart.js renders chart here -->
                     <canvas id="formatChart"></canvas>
-
                 </div>
-
             </section>
-
         </div>
-
     </main>
-
 
     <!-- =========================================================
          FOOTER
     ========================================================== -->
-
     <footer>
-
-        <!-- Copyright -->
-        <p>
-            © 2026 · Datos Abiertos Canarias · Demo educativa
-        </p>
-
-        <!-- Data source disclaimer -->
-        <p style="
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
-        ">
-            Datos provenientes de portales oficiales
-            de transparencia y datos abiertos
-        </p>
-
+        <!-- Project name -->
+        <p><strong>Open Data Canarias</strong> — Inventario del ecosistema de datos abiertos de las Islas Canarias</p>
+        <!-- Legal notice -->
+        <p>© 2026 · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal</p>
+        <!-- Academic context -->
+        <p>Proyecto académico DAM</p>
     </footer>
-
 
     <!-- =========================================================
          JAVASCRIPT LOGIC
     ========================================================== -->
-
     <script>
 
         /* =====================================================
            GLOBAL VARIABLES
         ====================================================== */
-
         // Stores normalized entity data
         let rawData = [];
-
         // Stores first chart instance
         let typeChart = null;
-
         // Stores second chart instance
         let formatChart = null;
-
 
         /* =====================================================
            NORMALIZE ENTITY DATA
         ====================================================== */
-
         /**
          * Normalizes entity data from schema v2
-         * 
-         * Extracts:
-         * - entity type
-         * - all portal formats
-         * 
+         * Extracts entity type and all portal formats
          * @param {Object} e
          * @returns {Object}
          */
         function normalizeStats(e) {
-
             // Collect formats from every portal
-            const formats = (e.portals || [])
-                .flatMap(p => p.formats || []);
-
+            const formats = (e.portals || []).flatMap(p => p.formats || []);
             return {
-
-                // Entity category/type
-                type: e.entity_kind || "N/D",
-
-                // Array of formats
-                formats: formats
+                type: e.entity_kind || "N/D", // Entity category/type
+                formats: formats               // Array of formats
             };
         }
-
 
         /* =====================================================
            COUNT ITEM FREQUENCY
         ====================================================== */
-
         /**
          * Counts how many times each value appears
-         * 
-         * Example:
-         * ["csv","json","csv"]
-         * =>
-         * { csv: 2, json: 1 }
-         * 
+         * Example: ["csv","json","csv"] => { csv: 2, json: 1 }
          * @param {Array} items
          * @returns {Object}
          */
         function countFrequency(items) {
-
-            // Frequency accumulator object
-            const counts = {};
-
-            // Iterate through items
+            const counts = {}; // Frequency accumulator object
             items.forEach(item => {
-
                 // Ignore invalid values
-                if (
-                    item &&
-                    item !== "" &&
-                    item !== "N/D"
-                ) {
-
-                    // Increment frequency counter
-                    counts[item] =
-                        (counts[item] || 0) + 1;
+                if (item && item !== "" && item !== "N/D") {
+                    counts[item] = (counts[item] || 0) + 1;
                 }
             });
-
             return counts;
         }
-
 
         /* =====================================================
            TRANSLATE ENTITY TYPES
         ====================================================== */
-
         /**
-         * Converts internal entity keys
-         * into readable Spanish labels
-         * 
+         * Converts internal entity keys into readable Spanish labels
          * @param {string} type
          * @returns {string}
          */
         function getTypeName(type) {
-
             const names = {
-
-                'gobierno_autonomico':
-                    'Gobierno Autonómico',
-
-                'organismo':
-                    'Organismo',
-
-                'cabildo':
-                    'Cabildo',
-
-                'ayuntamiento':
-                    'Ayuntamiento',
-
-                'empresa_publica':
-                    'Empresa Pública'
+                'gobierno_autonomico':              'Gobierno Autonómico',
+                'organismo':                        'Organismo',
+                'organismo_especializado':          'Organismo Especializado',
+                'organismo_especializado_nacional': 'Org. Especializado Nacional',
+                'organismo_especializado_geoespacial': 'Org. Geoespacial',
+                'cabildo':                          'Cabildo',
+                'ayuntamiento':                     'Ayuntamiento',
+                'empresa_publica':                  'Empresa Pública'
             };
-
-            // Return translated name or fallback
-            return names[type] || type;
+            return names[type] || type; // Return translated name or fallback
         }
 
+        /* =====================================================
+           CHART COLORS PER MODE
+        ====================================================== */
+        /**
+         * Returns bar color palette based on current mode
+         * Light mode: blues / Dark mode: oranges
+         * @param {number} count
+         * @returns {string[]}
+         */
+        function getChartColors(count) {
+            const isDark = document.body.classList.contains('dark-mode');
+            // Orange palette for dark mode
+            const darkPalette  = ['#f97316','#fb923c','#fdba74','#fed7aa','#ea580c','#c2410c','#9a3412','#7c2d12'];
+            // Blue palette for light mode
+            const lightPalette = ['#2563eb','#3b82f6','#60a5fa','#93c5fd','#1d4ed8','#1e40af','#1e3a8a','#172554'];
+            const palette = isDark ? darkPalette : lightPalette;
+            return Array.from({ length: count }, (_, i) => palette[i % palette.length]);
+        }
+
+        /* =====================================================
+           TOOLTIP CONFIGURATION PER MODE
+        ====================================================== */
+        /**
+         * Returns Chart.js tooltip style adapted to current mode
+         * @returns {Object}
+         */
+        function getTooltipConfig() {
+            const isDark = document.body.classList.contains('dark-mode');
+            return {
+                backgroundColor: isDark ? '#1f2937' : '#ffffff', // Dark: dark bg / Light: white bg
+                titleColor:      isDark ? '#f9fafb'  : '#1e293b', // Title text color
+                bodyColor:       isDark ? '#e5e7eb'  : '#334155', // Body text color
+                borderColor:     isDark ? '#f97316'  : '#2563eb', // Border matches accent color
+                borderWidth:  1,
+                padding:      10,
+                cornerRadius: 8,
+                displayColors: true,
+                boxWidth:  10,
+                boxHeight: 10
+            };
+        }
+
+        /* =====================================================
+           CHART TEXT COLOR PER MODE
+        ====================================================== */
+        /**
+         * Returns axis tick color based on current mode
+         * @returns {string}
+         */
+        function getChartTextColor() {
+            return document.body.classList.contains('dark-mode')
+                ? '#e2e8f0'  // light grey for dark mode
+                : '#1e293b'; // dark slate for light mode
+        }
 
         /* =====================================================
            LOAD DATA FROM API
         ====================================================== */
-
         /**
-         * Loads entity data from Flask API
-         * and generates charts
+         * Loads entity data from Flask API and generates charts
          */
         async function loadData() {
-
             try {
-
                 // Request entity data
-                const response =
-                    await fetch('/api/entidades');
-
-
-                /* ---------------------------------------------
-                   ERROR HANDLING
-                ---------------------------------------------- */
-
+                const response = await fetch('/api/entidades');
                 // Throw error if request failed
-                if (!response.ok) {
-
-                    throw new Error(
-                        `HTTP ${response.status}`
-                    );
-                }
-
-
-                /* ---------------------------------------------
-                   JSON CONVERSION
-                ---------------------------------------------- */
-
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 // Convert response to JSON
                 const json = await response.json();
-
-                // Debug log
-                console.log(
-                    '✅ JSON cargado:',
-                    json.length,
-                    'entidades'
-                );
-
-
-                /* ---------------------------------------------
-                   NORMALIZATION
-                ---------------------------------------------- */
-
-                rawData = json
-                    .flat(Infinity)
-                    .map(normalizeStats);
-
-
-                /* ---------------------------------------------
-                   GENERATE CHARTS
-                ---------------------------------------------- */
-
+                console.log('✅ JSON cargado:', json.length, 'entidades');
+                // Normalize and generate charts
+                rawData = json.flat(Infinity).map(normalizeStats);
                 generateTypeChart();
                 generateFormatChart();
-
-            }
-
-            catch (error) {
-
-                // Log error to console
+            } catch (error) {
                 console.error('Error:', error);
-
                 // Display UI error
-                showError(
-                    'Error al cargar los datos.'
-                );
+                document.querySelector('.charts-grid').innerHTML =
+                    '<p style="text-align:center; padding:2rem; grid-column:1/-1;">⚠️ Error al cargar los datos.</p>';
             }
         }
-
 
         /* =====================================================
            CHART 1: ENTITIES BY TYPE
         ====================================================== */
-
         /**
-         * Generates horizontal bar chart
-         * showing entity counts by type
+         * Generates horizontal bar chart showing entity counts by type
          */
         function generateTypeChart() {
-
-            /* ---------------------------------------------
-               EXTRACT ENTITY TYPES
-            ---------------------------------------------- */
-
-            const types =
-                rawData.map(e => e.type);
-
-
-            /* ---------------------------------------------
-               COUNT FREQUENCIES
-            ---------------------------------------------- */
-
-            const counts =
-                countFrequency(types);
-
-
-            /* ---------------------------------------------
-               SORT DESCENDING
-            ---------------------------------------------- */
-
-            const sorted =
-                Object.entries(counts)
-                    .sort((a, b) => b[1] - a[1]);
-
-
-            /* ---------------------------------------------
-               BUILD LABELS & VALUES
-            ---------------------------------------------- */
-
-            const labels =
-                sorted.map(item =>
-                    getTypeName(item[0])
-                );
-
-            const data =
-                sorted.map(item => item[1]);
-
-
-            /* ---------------------------------------------
-               GET CANVAS CONTEXT
-            ---------------------------------------------- */
-
-            const ctx =
-                document
-                    .getElementById('typeChart')
-                    .getContext('2d');
-
-
-            /* ---------------------------------------------
-               DESTROY PREVIOUS CHART
-            ---------------------------------------------- */
-
-            if (typeChart)
-                typeChart.destroy();
-
-
-            /* ---------------------------------------------
-               CREATE CHART
-            ---------------------------------------------- */
-
+            const types  = rawData.map(e => e.type);
+            const counts = countFrequency(types);
+            // Sort descending
+            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            const labels = sorted.map(item => getTypeName(item[0]));
+            const data   = sorted.map(item => item[1]);
+            // Resolve colors and accent
+            const textColor   = getChartTextColor();
+            const isDark      = document.body.classList.contains('dark-mode');
+            const hoverBorder = isDark ? '#f97316' : '#2563eb';
+            const ctx = document.getElementById('typeChart').getContext('2d');
+            if (typeChart) typeChart.destroy();
             typeChart = new Chart(ctx, {
-
-                // Horizontal bar chart
-                type: 'bar',
-
+                type: 'bar', // Horizontal bar chart
                 data: {
-
-                    // Axis labels
                     labels: labels,
-
                     datasets: [{
-
-                        // Dataset name
                         label: 'Entidades',
-
-                        // Numeric values
                         data: data,
-
-                        // Bar color
-                        backgroundColor: '#2563eb',
-
-                        // Rounded borders
+                        backgroundColor: getChartColors(data.length), // Dynamic palette per mode
+                        hoverBackgroundColor: hoverBorder, // Hover: solid accent color
+                        hoverBorderWidth: 2,
+                        hoverBorderColor: hoverBorder,
+                        borderWidth: 0,
                         borderRadius: 8,
-
-                        // Disable skipped corners
                         borderSkipped: false
                     }]
                 },
-
                 options: {
-
-                    // Horizontal orientation
-                    indexAxis: 'y',
-
-                    // Responsive layout
+                    indexAxis: 'y',           // Horizontal orientation
                     responsive: true,
-
-                    // Allow free resizing
                     maintainAspectRatio: false,
-
                     plugins: {
-
-                        // Hide legend
-                        legend: {
-                            display: false
-                        }
+                        legend: { display: false },
+                        tooltip: getTooltipConfig() // Styled tooltip per mode
                     },
-
                     scales: {
-
-                        // Hide x-axis grid
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        },
-
-                        // Hide y-axis grid
-                        y: {
-                            grid: {
-                                display: false
-                            }
-                        }
+                        x: { grid: { display: false }, ticks: { color: textColor } },
+                        y: { grid: { display: false }, ticks: { color: textColor } }
                     }
                 }
             });
         }
-
 
         /* =====================================================
            CHART 2: MOST USED FORMATS
         ====================================================== */
-
         /**
-         * Generates chart showing
-         * most frequently used data formats
+         * Generates chart showing most frequently used data formats
          */
         function generateFormatChart() {
-
-            /* ---------------------------------------------
-               COLLECT ALL FORMATS
-            ---------------------------------------------- */
-
             const allFormats = [];
-
             rawData.forEach(e => {
-
-                // If formats is an array
-                if (Array.isArray(e.formats)) {
-
-                    // Push every format individually
-                    allFormats.push(...e.formats);
-
-                }
-
-                // If formats is a single value
-                else if (e.formats) {
-
-                    allFormats.push(e.formats);
-                }
+                if (Array.isArray(e.formats)) allFormats.push(...e.formats); // Push every format individually
+                else if (e.formats) allFormats.push(e.formats);
             });
-
-
-            /* ---------------------------------------------
-               COUNT FORMAT FREQUENCIES
-            ---------------------------------------------- */
-
-            const counts =
-                countFrequency(allFormats);
-
-
-            /* ---------------------------------------------
-               SORT & LIMIT RESULTS
-            ---------------------------------------------- */
-
-            const sorted =
-                Object.entries(counts)
-
-                    // Descending order
-                    .sort((a, b) => b[1] - a[1])
-
-                    // Top 8 formats
-                    .slice(0, 8);
-
-
-            /* ---------------------------------------------
-               PREPARE LABELS & DATA
-            ---------------------------------------------- */
-
-            const labels =
-                sorted.map(item => item[0]);
-
-            const data =
-                sorted.map(item => item[1]);
-
-
-            /* ---------------------------------------------
-               GET CANVAS CONTEXT
-            ---------------------------------------------- */
-
-            const ctx =
-                document
-                    .getElementById('formatChart')
-                    .getContext('2d');
-
-
-            /* ---------------------------------------------
-               DESTROY PREVIOUS CHART
-            ---------------------------------------------- */
-
-            if (formatChart)
-                formatChart.destroy();
-
-
-            /* ---------------------------------------------
-               CREATE FORMAT CHART
-            ---------------------------------------------- */
-
+            const counts = countFrequency(allFormats);
+            // Sort descending, top 8 formats
+            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+            const labels = sorted.map(item => item[0]);
+            const data   = sorted.map(item => item[1]);
+            // Resolve colors and accent
+            const textColor   = getChartTextColor();
+            const isDark      = document.body.classList.contains('dark-mode');
+            const hoverBorder = isDark ? '#f97316' : '#2563eb';
+            const ctx = document.getElementById('formatChart').getContext('2d');
+            if (formatChart) formatChart.destroy();
             formatChart = new Chart(ctx, {
-
                 type: 'bar',
-
                 data: {
-
                     labels: labels,
-
                     datasets: [{
-
                         label: 'Uso',
-
                         data: data,
-
-                        backgroundColor: '#3b82f6',
-
+                        backgroundColor: getChartColors(data.length), // Dynamic palette per mode
+                        hoverBackgroundColor: hoverBorder, // Hover: solid accent color
+                        hoverBorderWidth: 2,
+                        hoverBorderColor: hoverBorder,
+                        borderWidth: 0,
                         borderRadius: 8,
-
                         borderSkipped: false
                     }]
                 },
-
                 options: {
-
-                    // Horizontal bars
-                    indexAxis: 'y',
-
+                    indexAxis: 'y', // Horizontal bars
                     responsive: true,
-
                     maintainAspectRatio: false,
-
                     plugins: {
-
-                        legend: {
-                            display: false
-                        }
+                        legend: { display: false },
+                        tooltip: getTooltipConfig() // Styled tooltip per mode
                     },
-
                     scales: {
-
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        },
-
-                        y: {
-                            grid: {
-                                display: false
-                            }
-                        }
+                        x: { grid: { display: false }, ticks: { color: textColor } },
+                        y: { grid: { display: false }, ticks: { color: textColor } }
                     }
                 }
             });
         }
 
-
         /* =====================================================
            DARK MODE PERSISTENCE
         ====================================================== */
-
-        // Self-executing function
+        // Self-executing function — runs before page renders
         (function () {
-
-            // Read saved mode
-            const savedMode =
-                localStorage.getItem('darkMode');
-
-            // Enable dark mode if saved
-            if (savedMode === 'enabled') {
-
-                document.body
-                    .classList
-                    .add('dark-mode');
-            }
-
+            const savedMode = localStorage.getItem('darkMode');
+            if (savedMode === 'enabled') document.body.classList.add('dark-mode');
         })();
 
+        /* =====================================================
+           DARK MODE TOGGLE
+        ====================================================== */
+        const darkBtn = document.getElementById('darkModeToggle');
+        // Toggle dark mode on button click
+        darkBtn.addEventListener('click', () => {
+            const isDark = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled'); // Persist preference
+            darkBtn.textContent = isDark ? '☀️ Modo claro' : '🌙 Modo oscuro'; // Update button label
+            // Rebuild charts with new color scheme
+            if (rawData.length > 0) {
+                generateTypeChart();
+                generateFormatChart();
+            }
+        });
+        // Sync button label on page load
+        if (document.body.classList.contains('dark-mode')) darkBtn.textContent = '☀️ Modo claro';
 
         /* =====================================================
            APPLICATION STARTUP
         ====================================================== */
-
         // Initialize application
         loadData();
 
     </script>
-
 </body>
-
 </html>

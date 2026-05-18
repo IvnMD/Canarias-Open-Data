@@ -1,64 +1,87 @@
 /* ============================================
-   MENÚ DE NAVEGACIÓN
+   ESTADÍSTICAS — ESTILOS ESPECÍFICOS
+   (Los estilos del nav, header y footer vienen
+    de base.css / light-mode.css / dark-mode.css)
    ============================================ */
 
-.main-nav {
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* PÁGINA */
+.stats-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  flex: 1;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+/* BARRA SUPERIOR: TÍTULO + BOTÓN MODO OSCURO */
+.stats-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.nav-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 10px;
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: all 0.2s ease;
+/* TÍTULO */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
 }
 
-.nav-link .nav-icon {
-    font-size: 1.1rem;
-}
-
-.nav-link:hover {
-    background: var(--badge-bg);
-    color: var(--badge-text);
-}
-
-.nav-link.active {
-    background: var(--badge-bg);
-    color: var(--badge-text);
-}
-
-/* ============================================
-   GRÁFICAS UNA AL LADO DE LA OTRA
-   ============================================ */
-
+/* GRID DE GRÁFICAS */
 .charts-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-.charts-grid .chart-card {
-    margin-bottom: 0;
-    height: 100%;
+/* TARJETAS DE GRÁFICAS */
+.chart-card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover modo claro: borde azul */
+.chart-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+
+.chart-card h2 {
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* CONTENEDOR DE CANVAS */
+.chart-wrapper {
+  height: 320px;
+  position: relative;
+}
+
+/* DARK MODE — tarjetas */
+body.dark-mode .chart-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+/* Hover modo oscuro: borde naranja */
+body.dark-mode .chart-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.2);
+}
+
+body.dark-mode .chart-card h2 {
+  color: var(--text-header);
 }
 
 /* ============================================
@@ -66,156 +89,23 @@
    ============================================ */
 
 @media (max-width: 900px) {
-    .charts-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .nav-container {
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-    }
+  .stats-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .nav-link span:last-child {
-        display: none;
-    }
+  .page-title {
+    font-size: 1.4rem;
+  }
 
-    .nav-link {
-        padding: 0.5rem;
-    }
-
-    .nav-link .nav-icon {
-        font-size: 1.3rem;
-    }
-}
-
-.stats-button-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.stats-button {
-    display: inline-block;
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-    transition: all 0.3s ease;
-}
-
-.stats-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
-}
-
-.chart-card {
-    background: white;
-    border-radius: 18px;
-    padding: 24px;
-    margin: 30px auto;
-    max-width: 700px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-}
-
-.chart-card h2 {
-    margin-bottom: 20px;
-    color: #1e293b;
-    text-align: center;
-}
-
-.chart-wrapper {
-    height: 320px;
-}
-
-/* PAGINA */
-
-.stats-page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-/* TITULO */
-
-.page-title {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #1e293b;
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-/* BOTON */
-
-.back-button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.back-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 22px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.20);
-    transition: all 0.25s ease;
-}
-
-.back-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.30);
-    background: #1d4ed8;
-}
-
-/* TARJETAS */
-
-.chart-card {
-    background: white;
-    border-radius: 20px;
-    padding: 24px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-/* TITULOS DE GRAFICAS */
-
-.chart-card h2 {
-    margin-bottom: 20px;
-    color: #334155;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-/* CONTENEDOR GRAFICAS */
-
-.chart-wrapper {
-    height: 320px;
-}
-
-.categories-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.categories-header strong {
-    margin: 0;
-}
-
-
-.toggle-cat-btn.rotated {
-    transform: rotate(90deg);
+  .chart-wrapper {
+    height: 260px;
+  }
 }
