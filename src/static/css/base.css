@@ -61,14 +61,15 @@ header p {
     position: relative;
     z-index: 1;
 }
- /* LOGO */
+
+/* LOGO */
 .logo-svg {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  mask: url('/static/assets/logo.svg') center/contain no-repeat;
-  -webkit-mask: url('/static/assets/logo.svg') center/contain no-repeat;
-  background-color: currentColor;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    mask: url('/static/assets/logo.svg') center/contain no-repeat;
+    -webkit-mask: url('/static/assets/logo.svg') center/contain no-repeat;
+    background-color: currentColor;
 }
 
 /* SEARCH CONTAINER */
@@ -430,6 +431,17 @@ body.layout-detailed #results {
     border: 1px solid rgba(148, 163, 184, 0.25);
 }
 
+/* APIs in detailed view */
+.api-badge {
+  text-decoration: none;
+}
+
+/* Hover state for API links */
+.api-badge:hover {
+  color: #2563eb;            /* teal accent */
+  text-decoration: underline;
+}
+
 /* Modo oscuro — ajusta colores de texto para legibilidad */
 body.dark-mode .meta-badge.meta-ok {
     color: #4ade80;
@@ -446,6 +458,10 @@ body.dark-mode .meta-badge.meta-neutral {
 body.dark-mode .scope-badge {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .api-badge:hover {
+  color: #14b8a6;            /* mantiene el mismo teal en dark mode */
 }
 
 /* ─── RESTO DE LA TARJETA ────────────────────────────── */
