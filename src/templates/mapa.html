@@ -141,7 +141,10 @@
         // Restore hamburger icon
         menuToggleBtn.textContent = '☰';
       }
+      setTimeout(function() { adjustLayout(); }, 350);
     });
+
+    window.addEventListener('resize', adjustLayout);
 
 
     /* =========================================================
