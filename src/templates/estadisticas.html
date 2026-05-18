@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <!-- Character encoding -->
     <meta charset="UTF-8">
@@ -24,6 +25,7 @@
     <!-- Statistics page specific styles -->
     <link rel="stylesheet" href="/static/css/estadisticas.css">
 </head>
+
 <body>
 
     <!-- =========================================================
@@ -98,6 +100,12 @@
                 </div>
             </section>
         </div>
+        <section class="chart-card">
+            <h2>🥧 Distribución de formatos</h2>
+            <div class="chart-wrapper">
+                <canvas id="formatPieChart"></canvas>
+            </div>
+        </section>
     </main>
 
     <!-- =========================================================
@@ -107,7 +115,8 @@
         <!-- Project name -->
         <p><strong>Open Data Canarias</strong> — Inventario del ecosistema de datos abiertos de las Islas Canarias</p>
         <!-- Legal notice -->
-        <p>© 2026 · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal</p>
+        <p>© 2026 · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal
+        </p>
         <!-- Academic context -->
         <p>Proyecto académico DAM</p>
     </footer>
@@ -126,6 +135,8 @@
         let typeChart = null;
         // Stores second chart instance
         let formatChart = null;
+        //º Stores pie chart instance (optional)
+        let formatPieChart = null;
 
         /* =====================================================
            NORMALIZE ENTITY DATA
@@ -175,14 +186,14 @@
          */
         function getTypeName(type) {
             const names = {
-                'gobierno_autonomico':              'Gobierno Autonómico',
-                'organismo':                        'Organismo',
-                'organismo_especializado':          'Organismo Especializado',
+                'gobierno_autonomico': 'Gobierno Autonómico',
+                'organismo': 'Organismo',
+                'organismo_especializado': 'Organismo Especializado',
                 'organismo_especializado_nacional': 'Org. Especializado Nacional',
                 'organismo_especializado_geoespacial': 'Org. Geoespacial',
-                'cabildo':                          'Cabildo',
-                'ayuntamiento':                     'Ayuntamiento',
-                'empresa_publica':                  'Empresa Pública'
+                'cabildo': 'Cabildo',
+                'ayuntamiento': 'Ayuntamiento',
+                'empresa_publica': 'Empresa Pública'
             };
             return names[type] || type; // Return translated name or fallback
         }
@@ -199,9 +210,9 @@
         function getChartColors(count) {
             const isDark = document.body.classList.contains('dark-mode');
             // Orange palette for dark mode
-            const darkPalette  = ['#f97316','#fb923c','#fdba74','#fed7aa','#ea580c','#c2410c','#9a3412','#7c2d12'];
+            const darkPalette = ['#f97316', '#fb923c', '#fdba74', '#fed7aa', '#ea580c', '#c2410c', '#9a3412', '#7c2d12'];
             // Blue palette for light mode
-            const lightPalette = ['#2563eb','#3b82f6','#60a5fa','#93c5fd','#1d4ed8','#1e40af','#1e3a8a','#172554'];
+            const lightPalette = ['#2563eb', '#3b82f6', '#60a5fa', '#93c5fd', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554'];
             const palette = isDark ? darkPalette : lightPalette;
             return Array.from({ length: count }, (_, i) => palette[i % palette.length]);
         }
@@ -217,14 +228,14 @@
             const isDark = document.body.classList.contains('dark-mode');
             return {
                 backgroundColor: isDark ? '#1f2937' : '#ffffff', // Dark: dark bg / Light: white bg
-                titleColor:      isDark ? '#f9fafb'  : '#1e293b', // Title text color
-                bodyColor:       isDark ? '#e5e7eb'  : '#334155', // Body text color
-                borderColor:     isDark ? '#f97316'  : '#2563eb', // Border matches accent color
-                borderWidth:  1,
-                padding:      10,
+                titleColor: isDark ? '#f9fafb' : '#1e293b', // Title text color
+                bodyColor: isDark ? '#e5e7eb' : '#334155', // Body text color
+                borderColor: isDark ? '#f97316' : '#2563eb', // Border matches accent color
+                borderWidth: 1,
+                padding: 10,
                 cornerRadius: 8,
                 displayColors: true,
-                boxWidth:  10,
+                boxWidth: 10,
                 boxHeight: 10
             };
         }
@@ -261,6 +272,7 @@
                 rawData = json.flat(Infinity).map(normalizeStats);
                 generateTypeChart();
                 generateFormatChart();
+                generateFormatPieChart();
             } catch (error) {
                 console.error('Error:', error);
                 // Display UI error
@@ -276,15 +288,15 @@
          * Generates horizontal bar chart showing entity counts by type
          */
         function generateTypeChart() {
-            const types  = rawData.map(e => e.type);
+            const types = rawData.map(e => e.type);
             const counts = countFrequency(types);
             // Sort descending
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
             const labels = sorted.map(item => getTypeName(item[0]));
-            const data   = sorted.map(item => item[1]);
+            const data = sorted.map(item => item[1]);
             // Resolve colors and accent
-            const textColor   = getChartTextColor();
-            const isDark      = document.body.classList.contains('dark-mode');
+            const textColor = getChartTextColor();
+            const isDark = document.body.classList.contains('dark-mode');
             const hoverBorder = isDark ? '#f97316' : '#2563eb';
             const ctx = document.getElementById('typeChart').getContext('2d');
             if (typeChart) typeChart.destroy();
@@ -336,10 +348,10 @@
             // Sort descending, top 8 formats
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
             const labels = sorted.map(item => item[0]);
-            const data   = sorted.map(item => item[1]);
+            const data = sorted.map(item => item[1]);
             // Resolve colors and accent
-            const textColor   = getChartTextColor();
-            const isDark      = document.body.classList.contains('dark-mode');
+            const textColor = getChartTextColor();
+            const isDark = document.body.classList.contains('dark-mode');
             const hoverBorder = isDark ? '#f97316' : '#2563eb';
             const ctx = document.getElementById('formatChart').getContext('2d');
             if (formatChart) formatChart.destroy();
@@ -374,7 +386,67 @@
                 }
             });
         }
+        /// =====================================================
+        // CHART 3: FORMAT DISTRIBUTION (PIE CHART)
+        
+       function generateFormatPieChart() {
 
+    // 1. Obtener TODOS los formatos ya normalizados
+    const allFormats = rawData.flatMap(e => e.formats);
+
+    // 2. Contar frecuencia
+    const counts = countFrequency(allFormats);
+
+    // 3. Ordenar y quedarnos con los más usados
+    const sorted = Object.entries(counts)
+        .sort((a, b) => b[1] - a[1]);
+
+    const TOP = 6;
+    const topFormats = sorted.slice(0, TOP);
+    const others = sorted.slice(TOP);
+
+    const labels = topFormats.map(i => i[0]);
+    const data   = topFormats.map(i => i[1]);
+
+    // 4. Agrupar formatos minoritarios en "Otros"
+    if (others.length > 0) {
+        labels.push('Otros');
+        data.push(others.reduce((sum, i) => sum + i[1], 0));
+    }
+
+    const ctx = document.getElementById('formatPieChart').getContext('2d');
+
+    if (formatPieChart) formatPieChart.destroy();
+
+    formatPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels,
+            datasets: [{
+                data,
+                backgroundColor: getChartColors(data.length),
+                borderColor: document.body.classList.contains('dark-mode')
+                    ? '#020617'
+                    : '#ffffff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: getChartTextColor()
+                    }
+                },
+                tooltip: getTooltipConfig()
+            }
+        }
+    });
+}
+        
         /* =====================================================
            DARK MODE PERSISTENCE
         ====================================================== */
@@ -397,6 +469,7 @@
             if (rawData.length > 0) {
                 generateTypeChart();
                 generateFormatChart();
+                generateFormatPieChart();
             }
         });
         // Sync button label on page load
@@ -410,4 +483,5 @@
 
     </script>
 </body>
+
 </html>
