@@ -9,7 +9,6 @@
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/light-mode.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
@@ -49,6 +48,20 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <script>
+    // Ajusta el top del nav y del mapa según la altura real del header
+    function adjustLayout() {
+      const headerH = document.querySelector('header').offsetHeight;
+      const nav = document.getElementById('mainNav');
+      const mapEl = document.getElementById('map');
+
+      nav.style.top = headerH + 'px';
+
+      const navH = menuOpen ? nav.offsetHeight : 0;
+      mapEl.style.top = (headerH + navH) + 'px';
+
+      if (window._map) window._map.invalidateSize();
+    }
+
     // Menú colapsable
     const menuToggleBtn = document.getElementById('menuToggleBtn');
     const mainNav = document.getElementById('mainNav');
@@ -65,10 +78,13 @@
         mainNav.classList.add('collapsed');
         menuToggleBtn.textContent = '☰';
       }
+      setTimeout(function() { adjustLayout(); }, 350);
     });
 
+    window.addEventListener('resize', adjustLayout);
+
     // Mapa
-    const map = L.map('map', {
+    const map = window._map = L.map('map', {
       minZoom: 3,
       maxBounds: [[-90, -180], [90, 180]],
       maxBoundsViscosity: 1.0
@@ -155,6 +171,11 @@
       return div;
     };
     legend.addTo(map);
+
+    // Ajustar layout inicial una vez el DOM está pintado
+    requestAnimationFrame(function() {
+      adjustLayout();
+    });
 
     // Modo oscuro (persistencia)
     (function () {
