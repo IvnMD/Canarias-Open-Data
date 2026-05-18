@@ -18,57 +18,64 @@
 let data = [];
 let typeChart = null;
 
-// ==================== FUNCIONES DE NORMALIZACIÓN ====================
+
+// ==================== NORMALIZATION FUNCTIONS ====================
 
 /**
- * Normaliza los datos de una entidad al formato interno de la app.
- * Soporta el nuevo schema v2: entity_kind, scope, portals[], locations[].
- * @param {Object} e - Objeto original del JSON
- * @returns {Object} - Objeto normalizado con estructura consistente
+ * Normalize a raw entity object to the internal app format.
+ * Supports schema v2: entity_kind, scope, portals[], locations[].
+ * @param {Object} e - Original JSON object
+ * @returns {Object} - Normalized object with a consistent structure
  */
 function normalize(e) {
-  // Portal principal: preferiblemente open_data, si no el primero disponible
+  // Main portal: prefer open_data, otherwise first available
   const portal = e.portals?.find(p => p.kind === 'open_data') || e.portals?.[0] || null;
 
-  // Coordenadas: primera sede (headquarters) con coordenadas válidas
+  // Coordinates: first location with valid coordinates
   const hq = e.locations?.find(l => l.coordinates?.lat && l.coordinates?.lon) || null;
+
+  // Extract APIs from main portal (if any)
+  const apis = portal?.apis && Array.isArray(portal.apis) ? portal.apis : [];
 
   return {
     id: e.id || '',
     name: e.name || 'Sin nombre',
 
-    // Tipo y ámbito — nuevo schema v2
-    type: e.entity_kind || e.type || 'organismo',   // entity_kind → tipo base (con fallback al campo legacy)
-    scope: e.scope || null,                           // autonomico, insular, municipal…
+    // Type and scope — schema v2
+    type: e.entity_kind || e.type || 'organismo',
+    scope: e.scope || null, // autonomic, island, municipal…
 
-    // Islas
+    // Islands
     islands: e.islands || [],
 
-    // Descripción
+    // Description
     description: e.description || '',
 
-    // Portal principal (extraído de portals[])
+    // Main portal (derived from portals[])
     portal_url: portal?.url || e.portal_url || e.portal?.url || '#',
-    portal_kind: portal?.kind || null,                      // open_data | transparencia | estadistica…
+    portal_kind: portal?.kind || null,                 // open_data | transparencia | estadistica…
     portal_tech: portal?.technology || [],
     machine_readable: portal?.machine_readable ?? null,
     has_api: portal?.has_api ?? null,
 
-    // Datos del portal
+    // Portal data
     dataset_count: portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? 'Sin publicar',
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
     formats: portal?.formats || e.formats || e.data?.formats || [],
     license_summary: portal?.license_summary || null,
 
-    // Coordenadas (nuevo schema primero, legacy como fallback)
+    // APIs (for detailed view)
+    apis: apis,
+
+    // Coordinates (schema v2 first, then legacy as fallback)
     coordinates: hq
       ? { lat: hq.coordinates.lat, lon: hq.coordinates.lon }
       : (e.coordinates || e.geographic?.coordinates || null),
 
-    // Verificación
+    // Verification
     verification_status: e.verification?.status || 'pending',
 
-    // Relación jerárquica
+    // Hierarchical relation
     parent_entity_id: e.parent_entity_id || null,
   };
 }
@@ -274,6 +281,7 @@ function render(list) {
     const hasCoords = coords && coords.lat && coords.lon;
     const typeIcon = getTypeIcon(e.type);
     const cardId = 'card-' + Math.random().toString(36).substr(2, 8);
+    const apis = e.apis || [];
 
     const card = document.createElement("div");
     card.className = "card";
@@ -350,6 +358,27 @@ function render(list) {
             ${allFormats.slice(4).map(f => `<span class="badge format-badge">${escapeHtml(f)}</span>`).join("")}
           </div>
         </div>
+      ` : ""}
+
+          ${apis.length > 0 ? `
+      <div class="card-section">
+        <div class="categories-header">
+          <strong>🔌 APIs disponibles</strong>
+        </div>
+        <div class="badge-container">
+          ${apis.map(api => `
+            <a
+              href="${escapeHtml(api.documentationurl || api.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="badge api-badge"
+              title="${escapeHtml(api.type || '')}"
+            >
+              ${escapeHtml(api.name)}${api.type ? ` (${escapeHtml(api.type)})` : ''}
+            </a>
+          `).join("")}
+        </div>
+      </div>
       ` : ""}
 
       <div class="card-footer">
