@@ -2,235 +2,704 @@
 <html lang="es">
 
 <head>
+
+    <!-- =========================================================
+         BASIC META CONFIGURATION
+    ========================================================== -->
+
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Browser tab title -->
     <title>Estadísticas</title>
 
-    <!-- Favicon SVG con modo oscuro integrado -->
-    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
 
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <!-- SVG favicon with dark mode support -->
+    <link rel="icon"
+        type="image/svg+xml"
+        href="{{ url_for('static', filename='assets/logo.svg') }}">
+
+
+    <!-- =========================================================
+         EXTERNAL LIBRARIES
+    ========================================================== -->
+
+    <!-- Chart.js library for data visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/light-mode.css">
-    <link rel="stylesheet" href="/static/css/dark-mode.css">
-    <link rel="stylesheet" href="/static/css/estadisticas.css">
+
+
+    <!-- =========================================================
+         STYLESHEETS
+    ========================================================== -->
+
+    <!-- Global/base styles -->
+    <link rel="stylesheet"
+        href="/static/css/base.css">
+
+    <!-- Light mode styles -->
+    <link rel="stylesheet"
+        href="/static/css/light-mode.css">
+
+    <!-- Dark mode styles -->
+    <link rel="stylesheet"
+        href="/static/css/dark-mode.css">
+
+    <!-- Statistics page specific styles -->
+    <link rel="stylesheet"
+        href="/static/css/estadisticas.css">
+
 </head>
 
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
+
+    <!-- =========================================================
+         NAVIGATION MENU
+    ========================================================== -->
+
     <nav class="main-nav">
+
         <div class="nav-container">
+
+            <!-- Search page -->
             <a href="/" class="nav-link">
+
                 <span class="nav-icon">🔍</span>
                 <span>Buscador</span>
+
             </a>
-            <a href="{{ url_for('estadisticas') }}" class="nav-link active">
+
+            <!-- Statistics page (active) -->
+            <a href="{{ url_for('estadisticas') }}"
+                class="nav-link active">
+
                 <span class="nav-icon">📊</span>
                 <span>Estadísticas</span>
+
             </a>
-            <a href="{{ url_for('mapa') }}" class="nav-link">
+
+            <!-- Map page -->
+            <a href="{{ url_for('mapa') }}"
+                class="nav-link">
+
                 <span class="nav-icon">🗺️</span>
                 <span>Mapa</span>
+
             </a>
+
         </div>
+
     </nav>
 
+
+    <!-- =========================================================
+         MAIN PAGE CONTENT
+    ========================================================== -->
+
     <main class="stats-page">
+
+        <!-- Page title -->
         <h1 class="page-title">
             Estadísticas
         </h1>
 
-        <!-- GRÁFICAS UNA AL LADO DE LA OTRA -->
+
+        <!-- =====================================================
+             CHART GRID CONTAINER
+        ====================================================== -->
+
+        <!-- Two charts displayed side-by-side -->
         <div class="charts-grid">
-            <!-- GRAFICA 1 -->
+
+
+            <!-- =================================================
+                 CHART 1: ENTITY TYPES
+            ================================================== -->
+
             <section class="chart-card">
+
+                <!-- Chart title -->
                 <h2>Entidades por tipo</h2>
+
+                <!-- Canvas wrapper -->
                 <div class="chart-wrapper">
+
+                    <!-- Chart.js renders chart here -->
                     <canvas id="typeChart"></canvas>
+
                 </div>
+
             </section>
 
-            <!-- GRAFICA 2 -->
+
+            <!-- =================================================
+                 CHART 2: DATA FORMATS
+            ================================================== -->
+
             <section class="chart-card">
+
+                <!-- Chart title -->
                 <h2>🧩 Formatos más usados</h2>
+
+                <!-- Canvas wrapper -->
                 <div class="chart-wrapper">
+
+                    <!-- Chart.js renders chart here -->
                     <canvas id="formatChart"></canvas>
+
                 </div>
+
             </section>
+
         </div>
+
     </main>
 
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
     <footer>
-        <p>© 2026 · Datos Abiertos Canarias · Demo educativa</p>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem;">Datos provenientes de portales oficiales de transparencia y
-            datos abiertos</p>
+
+        <!-- Copyright -->
+        <p>
+            © 2026 · Datos Abiertos Canarias · Demo educativa
+        </p>
+
+        <!-- Data source disclaimer -->
+        <p style="
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        ">
+            Datos provenientes de portales oficiales
+            de transparencia y datos abiertos
+        </p>
+
     </footer>
 
+
+    <!-- =========================================================
+         JAVASCRIPT LOGIC
+    ========================================================== -->
+
     <script>
-        // Variables
+
+        /* =====================================================
+           GLOBAL VARIABLES
+        ====================================================== */
+
+        // Stores normalized entity data
         let rawData = [];
+
+        // Stores first chart instance
         let typeChart = null;
+
+        // Stores second chart instance
         let formatChart = null;
 
-        // Normalizar datos — schema v2: entity_kind, portals[].formats
+
+        /* =====================================================
+           NORMALIZE ENTITY DATA
+        ====================================================== */
+
+        /**
+         * Normalizes entity data from schema v2
+         * 
+         * Extracts:
+         * - entity type
+         * - all portal formats
+         * 
+         * @param {Object} e
+         * @returns {Object}
+         */
         function normalizeStats(e) {
-            // Recopilar todos los formatos de todos los portales de la entidad
-            const formats = (e.portals || []).flatMap(p => p.formats || []);
+
+            // Collect formats from every portal
+            const formats = (e.portals || [])
+                .flatMap(p => p.formats || []);
+
             return {
+
+                // Entity category/type
                 type: e.entity_kind || "N/D",
+
+                // Array of formats
                 formats: formats
             };
         }
 
-        // Contar frecuencias
+
+        /* =====================================================
+           COUNT ITEM FREQUENCY
+        ====================================================== */
+
+        /**
+         * Counts how many times each value appears
+         * 
+         * Example:
+         * ["csv","json","csv"]
+         * =>
+         * { csv: 2, json: 1 }
+         * 
+         * @param {Array} items
+         * @returns {Object}
+         */
         function countFrequency(items) {
+
+            // Frequency accumulator object
             const counts = {};
+
+            // Iterate through items
             items.forEach(item => {
-                if (item && item !== "" && item !== "N/D") {
-                    counts[item] = (counts[item] || 0) + 1;
+
+                // Ignore invalid values
+                if (
+                    item &&
+                    item !== "" &&
+                    item !== "N/D"
+                ) {
+
+                    // Increment frequency counter
+                    counts[item] =
+                        (counts[item] || 0) + 1;
                 }
             });
+
             return counts;
         }
 
-        // Mapear nombres de tipos a español — enum schema v2
+
+        /* =====================================================
+           TRANSLATE ENTITY TYPES
+        ====================================================== */
+
+        /**
+         * Converts internal entity keys
+         * into readable Spanish labels
+         * 
+         * @param {string} type
+         * @returns {string}
+         */
         function getTypeName(type) {
+
             const names = {
-                'gobierno_autonomico': 'Gobierno Autonómico',
-                'organismo':           'Organismo',
-                'cabildo':             'Cabildo',
-                'ayuntamiento':        'Ayuntamiento',
-                'empresa_publica':     'Empresa Pública'
+
+                'gobierno_autonomico':
+                    'Gobierno Autonómico',
+
+                'organismo':
+                    'Organismo',
+
+                'cabildo':
+                    'Cabildo',
+
+                'ayuntamiento':
+                    'Ayuntamiento',
+
+                'empresa_publica':
+                    'Empresa Pública'
             };
+
+            // Return translated name or fallback
             return names[type] || type;
         }
 
-        // Cargar datos
-        async function loadData() {
-            try {
-                const response = await fetch('/api/entidades');
 
+        /* =====================================================
+           LOAD DATA FROM API
+        ====================================================== */
+
+        /**
+         * Loads entity data from Flask API
+         * and generates charts
+         */
+        async function loadData() {
+
+            try {
+
+                // Request entity data
+                const response =
+                    await fetch('/api/entidades');
+
+
+                /* ---------------------------------------------
+                   ERROR HANDLING
+                ---------------------------------------------- */
+
+                // Throw error if request failed
                 if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}`);
+
+                    throw new Error(
+                        `HTTP ${response.status}`
+                    );
                 }
 
-                const json = await response.json();
-                console.log('✅ JSON cargado:', json.length, 'entidades');
 
-                rawData = json.flat(Infinity).map(normalizeStats);
+                /* ---------------------------------------------
+                   JSON CONVERSION
+                ---------------------------------------------- */
+
+                // Convert response to JSON
+                const json = await response.json();
+
+                // Debug log
+                console.log(
+                    '✅ JSON cargado:',
+                    json.length,
+                    'entidades'
+                );
+
+
+                /* ---------------------------------------------
+                   NORMALIZATION
+                ---------------------------------------------- */
+
+                rawData = json
+                    .flat(Infinity)
+                    .map(normalizeStats);
+
+
+                /* ---------------------------------------------
+                   GENERATE CHARTS
+                ---------------------------------------------- */
 
                 generateTypeChart();
                 generateFormatChart();
 
-            } catch (error) {
+            }
+
+            catch (error) {
+
+                // Log error to console
                 console.error('Error:', error);
-                showError('Error al cargar los datos.');
+
+                // Display UI error
+                showError(
+                    'Error al cargar los datos.'
+                );
             }
         }
 
-        // Gráfica 1: Entidades por tipo
+
+        /* =====================================================
+           CHART 1: ENTITIES BY TYPE
+        ====================================================== */
+
+        /**
+         * Generates horizontal bar chart
+         * showing entity counts by type
+         */
         function generateTypeChart() {
-            const types = rawData.map(e => e.type);
-            const counts = countFrequency(types);
 
-            // Ordenar de mayor a menor
-            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+            /* ---------------------------------------------
+               EXTRACT ENTITY TYPES
+            ---------------------------------------------- */
 
-            const labels = sorted.map(item => getTypeName(item[0]));
-            const data = sorted.map(item => item[1]);
+            const types =
+                rawData.map(e => e.type);
 
-            const ctx = document.getElementById('typeChart').getContext('2d');
 
-            if (typeChart) typeChart.destroy();
+            /* ---------------------------------------------
+               COUNT FREQUENCIES
+            ---------------------------------------------- */
+
+            const counts =
+                countFrequency(types);
+
+
+            /* ---------------------------------------------
+               SORT DESCENDING
+            ---------------------------------------------- */
+
+            const sorted =
+                Object.entries(counts)
+                    .sort((a, b) => b[1] - a[1]);
+
+
+            /* ---------------------------------------------
+               BUILD LABELS & VALUES
+            ---------------------------------------------- */
+
+            const labels =
+                sorted.map(item =>
+                    getTypeName(item[0])
+                );
+
+            const data =
+                sorted.map(item => item[1]);
+
+
+            /* ---------------------------------------------
+               GET CANVAS CONTEXT
+            ---------------------------------------------- */
+
+            const ctx =
+                document
+                    .getElementById('typeChart')
+                    .getContext('2d');
+
+
+            /* ---------------------------------------------
+               DESTROY PREVIOUS CHART
+            ---------------------------------------------- */
+
+            if (typeChart)
+                typeChart.destroy();
+
+
+            /* ---------------------------------------------
+               CREATE CHART
+            ---------------------------------------------- */
 
             typeChart = new Chart(ctx, {
+
+                // Horizontal bar chart
                 type: 'bar',
+
                 data: {
+
+                    // Axis labels
                     labels: labels,
+
                     datasets: [{
+
+                        // Dataset name
                         label: 'Entidades',
+
+                        // Numeric values
                         data: data,
+
+                        // Bar color
                         backgroundColor: '#2563eb',
+
+                        // Rounded borders
                         borderRadius: 8,
+
+                        // Disable skipped corners
                         borderSkipped: false
                     }]
                 },
+
                 options: {
+
+                    // Horizontal orientation
                     indexAxis: 'y',
+
+                    // Responsive layout
                     responsive: true,
+
+                    // Allow free resizing
                     maintainAspectRatio: false,
+
                     plugins: {
-                        legend: { display: false }
+
+                        // Hide legend
+                        legend: {
+                            display: false
+                        }
                     },
+
                     scales: {
-                        x: { grid: { display: false } },
-                        y: { grid: { display: false } }
+
+                        // Hide x-axis grid
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        },
+
+                        // Hide y-axis grid
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        }
                     }
                 }
             });
         }
 
-        // Gráfica 2: Formatos más usados
+
+        /* =====================================================
+           CHART 2: MOST USED FORMATS
+        ====================================================== */
+
+        /**
+         * Generates chart showing
+         * most frequently used data formats
+         */
         function generateFormatChart() {
-            // Recopilar todos los formatos
+
+            /* ---------------------------------------------
+               COLLECT ALL FORMATS
+            ---------------------------------------------- */
+
             const allFormats = [];
+
             rawData.forEach(e => {
+
+                // If formats is an array
                 if (Array.isArray(e.formats)) {
+
+                    // Push every format individually
                     allFormats.push(...e.formats);
-                } else if (e.formats) {
+
+                }
+
+                // If formats is a single value
+                else if (e.formats) {
+
                     allFormats.push(e.formats);
                 }
             });
 
-            const counts = countFrequency(allFormats);
 
-            // Ordenar de mayor a menor y tomar top 8
-            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+            /* ---------------------------------------------
+               COUNT FORMAT FREQUENCIES
+            ---------------------------------------------- */
 
-            const labels = sorted.map(item => item[0]);
-            const data = sorted.map(item => item[1]);
+            const counts =
+                countFrequency(allFormats);
 
-            const ctx = document.getElementById('formatChart').getContext('2d');
 
-            if (formatChart) formatChart.destroy();
+            /* ---------------------------------------------
+               SORT & LIMIT RESULTS
+            ---------------------------------------------- */
+
+            const sorted =
+                Object.entries(counts)
+
+                    // Descending order
+                    .sort((a, b) => b[1] - a[1])
+
+                    // Top 8 formats
+                    .slice(0, 8);
+
+
+            /* ---------------------------------------------
+               PREPARE LABELS & DATA
+            ---------------------------------------------- */
+
+            const labels =
+                sorted.map(item => item[0]);
+
+            const data =
+                sorted.map(item => item[1]);
+
+
+            /* ---------------------------------------------
+               GET CANVAS CONTEXT
+            ---------------------------------------------- */
+
+            const ctx =
+                document
+                    .getElementById('formatChart')
+                    .getContext('2d');
+
+
+            /* ---------------------------------------------
+               DESTROY PREVIOUS CHART
+            ---------------------------------------------- */
+
+            if (formatChart)
+                formatChart.destroy();
+
+
+            /* ---------------------------------------------
+               CREATE FORMAT CHART
+            ---------------------------------------------- */
 
             formatChart = new Chart(ctx, {
+
                 type: 'bar',
+
                 data: {
+
                     labels: labels,
+
                     datasets: [{
+
                         label: 'Uso',
+
                         data: data,
+
                         backgroundColor: '#3b82f6',
+
                         borderRadius: 8,
+
                         borderSkipped: false
                     }]
                 },
+
                 options: {
+
+                    // Horizontal bars
                     indexAxis: 'y',
+
                     responsive: true,
+
                     maintainAspectRatio: false,
+
                     plugins: {
-                        legend: { display: false }
+
+                        legend: {
+                            display: false
+                        }
                     },
+
                     scales: {
-                        x: { grid: { display: false } },
-                        y: { grid: { display: false } }
+
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        },
+
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        }
                     }
                 }
             });
         }
 
-        // Modo oscuro
+
+        /* =====================================================
+           DARK MODE PERSISTENCE
+        ====================================================== */
+
+        // Self-executing function
         (function () {
-            const savedMode = localStorage.getItem('darkMode');
+
+            // Read saved mode
+            const savedMode =
+                localStorage.getItem('darkMode');
+
+            // Enable dark mode if saved
             if (savedMode === 'enabled') {
-                document.body.classList.add('dark-mode');
+
+                document.body
+                    .classList
+                    .add('dark-mode');
             }
+
         })();
 
-        // Iniciar
+
+        /* =====================================================
+           APPLICATION STARTUP
+        ====================================================== */
+
+        // Initialize application
         loadData();
+
     </script>
 
 </body>

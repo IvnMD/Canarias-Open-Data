@@ -2,166 +2,429 @@
 <html lang="es">
 
 <head>
+  <!-- Character encoding -->
   <meta charset="UTF-8" />
+
+  <!-- Responsive design for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
   <title>Mapa de Datos Abiertos Canarias</title>
 
-  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Website favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="{{ url_for('static', filename='assets/logo.svg') }}">
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/light-mode.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+  <!-- Leaflet CSS (map library styles) -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Global/base styles -->
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/base.css') }}">
+
+  <!-- Light theme styles -->
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/light-mode.css') }}">
+
+  <!-- Dark theme styles -->
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/dark-mode.css') }}">
+
+  <!-- Map-specific styles -->
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/mapa.css') }}">
 </head>
 
 <body>
 
+  <!-- =========================
+       HEADER SECTION
+  ========================== -->
   <header>
+
+    <!-- Flex container for title and menu button -->
     <div style="display: flex; align-items: center; justify-content: space-between;">
+
+      <!-- Page title -->
       <div>
         <h1>🗺️ Mapa de Datos Abiertos Canarias</h1>
         <p>Instituciones y organismos con portales de datos abiertos</p>
       </div>
-      <button id="menuToggleBtn" class="menu-toggle-btn">☰</button>
+
+      <!-- Mobile navigation toggle button -->
+      <button id="menuToggleBtn" class="menu-toggle-btn">
+        ☰
+      </button>
     </div>
   </header>
 
+  <!-- =========================
+       NAVIGATION MENU
+  ========================== -->
   <nav class="main-nav collapsed" id="mainNav">
+
     <div class="nav-container">
+
+      <!-- Search page -->
       <a href="/" class="nav-link">
         <span class="nav-icon">🔍</span>
         <span>Buscador</span>
       </a>
+
+      <!-- Statistics page -->
       <a href="{{ url_for('estadisticas') }}" class="nav-link">
         <span class="nav-icon">📊</span>
         <span>Estadísticas</span>
       </a>
+
+      <!-- Current map page -->
       <a href="{{ url_for('mapa') }}" class="nav-link active">
         <span class="nav-icon">🗺️</span>
         <span>Mapa</span>
       </a>
+
     </div>
   </nav>
-  
+
+  <!-- =========================
+       MAP CONTAINER
+  ========================== -->
+
+  <!-- Leaflet will render the map inside this div -->
   <div id="map"></div>
 
+  <!-- =========================
+       LEAFLET LIBRARY
+  ========================== -->
+
+  <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <script>
-    // Menú colapsable
+
+    /* =========================================================
+       COLLAPSIBLE MENU LOGIC
+    ========================================================== */
+
+    // Get menu button element
     const menuToggleBtn = document.getElementById('menuToggleBtn');
+
+    // Get navigation menu element
     const mainNav = document.getElementById('mainNav');
+
+    // Track menu state
     let menuOpen = false;
 
+    // Toggle menu visibility when button is clicked
     menuToggleBtn.addEventListener('click', function() {
+
+      // Invert menu state
       menuOpen = !menuOpen;
+
+      // If menu is open
       if (menuOpen) {
+
+        // Replace CSS classes
         mainNav.classList.remove('collapsed');
         mainNav.classList.add('expanded');
+
+        // Change button icon
         menuToggleBtn.textContent = '✕';
+
       } else {
+
+        // Collapse menu
         mainNav.classList.remove('expanded');
         mainNav.classList.add('collapsed');
+
+        // Restore hamburger icon
         menuToggleBtn.textContent = '☰';
       }
     });
 
-    // Mapa
-    const map = L.map('map', {
-      minZoom: 3,
-      maxBounds: [[-90, -180], [90, 180]],
-      maxBoundsViscosity: 1.0
-    }).setView([28.4, -15.8], 7);
 
+    /* =========================================================
+       MAP INITIALIZATION
+    ========================================================== */
+
+    // Create Leaflet map instance
+    const map = L.map('map', {
+
+      // Minimum zoom level allowed
+      minZoom: 3,
+
+      // Prevent infinite horizontal scrolling
+      maxBounds: [[-90, -180], [90, 180]],
+
+      // Makes bounds "sticky"
+      maxBoundsViscosity: 1.0
+
+    })
+
+    // Set initial map center and zoom
+    .setView([28.4, -15.8], 7);
+
+
+    /* =========================================================
+       MAP TILE LAYER
+    ========================================================== */
+
+    // Add CartoDB light theme map tiles
     L.tileLayer(
       'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+
       {
+        // Attribution required by providers
         attribution: '&copy; OpenStreetMap &amp; CartoDB',
+
+        // Prevent repeated world maps
         noWrap: true,
+
+        // Restrict visible map bounds
         bounds: [[-90, -180], [90, 180]]
       }
+
     ).addTo(map);
 
+
+    /* =========================================================
+       ENTITY COLOR HELPER
+    ========================================================== */
+
+    /**
+     * Returns a marker color depending on entity type
+     * 
+     * @param {string} entity_kind
+     * @returns {string} Hex color
+     */
     function getColor(entity_kind) {
+
       switch (entity_kind) {
-        case 'gobierno_autonomico': return '#ef4444';
-        case 'cabildo':            return '#22c55e';
-        case 'ayuntamiento':       return '#3b82f6';
-        case 'organismo':          return '#f59e0b';
-        case 'empresa_publica':    return '#a855f7';
-        default:                   return '#64748b';
+
+        case 'gobierno_autonomico':
+          return '#ef4444';
+
+        case 'cabildo':
+          return '#22c55e';
+
+        case 'ayuntamiento':
+          return '#3b82f6';
+
+        case 'organismo':
+          return '#f59e0b';
+
+        case 'empresa_publica':
+          return '#a855f7';
+
+        default:
+          return '#64748b';
       }
     }
 
+
+    /* =========================================================
+       ENTITY TYPE LABEL HELPER
+    ========================================================== */
+
+    /**
+     * Converts internal entity keys into human-readable names
+     * 
+     * @param {string} entity_kind
+     * @returns {string}
+     */
     function getTypeName(entity_kind) {
+
       const names = {
+
         'gobierno_autonomico': 'Gobierno Autonómico',
         'cabildo':             'Cabildo',
         'ayuntamiento':        'Ayuntamiento',
         'organismo':           'Organismo',
         'empresa_publica':     'Empresa Pública'
       };
+
+      // Return translated name or fallback
       return names[entity_kind] || entity_kind;
     }
 
+
+    /* =========================================================
+       FETCH ENTITIES FROM API
+    ========================================================== */
+
+    // Request entity data from Flask API
     fetch('/api/entidades')
+
+      // Convert response into JSON
       .then(response => response.json())
+
+      // Process JSON data
       .then(data => {
+
+        // Iterate through every entity
         data.forEach(entidad => {
-          // Las coordenadas están en locations[0].coordinates (schema v2)
-          const loc = (entidad.locations || []).find(l => l.coordinates);
+
+          /* -------------------------------------------------
+             LOCATION EXTRACTION
+          -------------------------------------------------- */
+
+          // Find first location with coordinates
+          const loc = (entidad.locations || [])
+            .find(l => l.coordinates);
+
+          // Skip entity if no coordinates exist
           if (!loc) return;
 
+          // Extract latitude and longitude
           const { lat, lon } = loc.coordinates;
 
-          // Dataset count viene del primer portal
+
+          /* -------------------------------------------------
+             DATASET COUNT EXTRACTION
+          -------------------------------------------------- */
+
+          // Use first portal available
           const portal = (entidad.portals || [])[0];
-          const datasetCount = portal ? (portal.dataset_count || 0) : 0;
+
+          // Get dataset count or fallback to 0
+          const datasetCount =
+            portal ? (portal.dataset_count || 0) : 0;
+
+
+          /* -------------------------------------------------
+             CREATE LEAFLET MARKER
+          -------------------------------------------------- */
 
           L.circleMarker([lat, lon], {
+
+            // Marker size
             radius: 8,
+
+            // Dynamic marker color
             fillColor: getColor(entidad.entity_kind),
+
+            // White border
             color: '#ffffff',
+
+            // Border thickness
             weight: 2,
+
+            // Border opacity
             opacity: 1,
+
+            // Fill transparency
             fillOpacity: 0.9
           })
-            .addTo(map)
-            .bindPopup(`
-              <div style="min-width:220px">
-                <h2 style="margin-bottom:0.5rem; font-size:1rem;">
-                  ${entidad.name}
-                </h2>
-                <p><strong>Tipo:</strong> ${getTypeName(entidad.entity_kind)}</p>
-                <p><strong>Datasets:</strong> ${datasetCount}</p>
-              </div>
-            `);
+
+          // Add marker to map
+          .addTo(map)
+
+          // Attach popup information
+          .bindPopup(`
+
+            <div style="min-width:220px">
+
+              <h2 style="margin-bottom:0.5rem; font-size:1rem;">
+                ${entidad.name}
+              </h2>
+
+              <p>
+                <strong>Tipo:</strong>
+                ${getTypeName(entidad.entity_kind)}
+              </p>
+
+              <p>
+                <strong>Datasets:</strong>
+                ${datasetCount}
+              </p>
+
+            </div>
+          `);
         });
       })
-      .catch(error => console.error('Error cargando entidades:', error));
 
-    const legend = L.control({ position: 'bottomright' });
+      // Handle fetch errors
+      .catch(error =>
+        console.error('Error cargando entidades:', error)
+      );
+
+
+    /* =========================================================
+       MAP LEGEND
+    ========================================================== */
+
+    // Create legend control
+    const legend = L.control({
+      position: 'bottomright'
+    });
+
+    // Define legend HTML
     legend.onAdd = function () {
+
+      // Create legend container
       const div = L.DomUtil.create('div', 'legend');
+
+      // Insert legend content
       div.innerHTML = `
+
         <h3>Leyenda</h3>
-        <div class="legend-item"><span class="color-dot" style="background:#ef4444"></span>Gobierno autonómico</div>
-        <div class="legend-item"><span class="color-dot" style="background:#22c55e"></span>Cabildos</div>
-        <div class="legend-item"><span class="color-dot" style="background:#3b82f6"></span>Ayuntamientos</div>
-        <div class="legend-item"><span class="color-dot" style="background:#f59e0b"></span>Organismos</div>
-        <div class="legend-item"><span class="color-dot" style="background:#a855f7"></span>Empresas públicas</div>
+
+        <div class="legend-item">
+          <span class="color-dot"
+            style="background:#ef4444"></span>
+          Gobierno autonómico
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot"
+            style="background:#22c55e"></span>
+          Cabildos
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot"
+            style="background:#3b82f6"></span>
+          Ayuntamientos
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot"
+            style="background:#f59e0b"></span>
+          Organismos
+        </div>
+
+        <div class="legend-item">
+          <span class="color-dot"
+            style="background:#a855f7"></span>
+          Empresas públicas
+        </div>
       `;
+
+      // Return legend element to Leaflet
       return div;
     };
+
+    // Add legend to map
     legend.addTo(map);
 
-    // Modo oscuro (persistencia)
+
+    /* =========================================================
+       DARK MODE PERSISTENCE
+    ========================================================== */
+
+    // Self-executing function
     (function () {
+
+      // Check stored dark mode preference
       if (localStorage.getItem('darkMode') === 'enabled') {
+
+        // Apply dark mode CSS class
         document.body.classList.add('dark-mode');
       }
+
     })();
+
   </script>
 
 </body>
