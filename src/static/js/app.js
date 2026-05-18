@@ -360,26 +360,26 @@ function render(list) {
         </div>
       ` : ""}
 
-          ${apis.length > 0 ? `
-      <div class="card-section">
-        <div class="categories-header">
-          <strong>🔌 APIs disponibles</strong>
-        </div>
-        <div class="badge-container">
-          ${apis.map(api => `
-            <a
-              href="${escapeHtml(api.documentationurl || api.url)}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="badge api-badge"
-              title="${escapeHtml(api.type || '')}"
-            >
-              ${escapeHtml(api.name)}${api.type ? ` (${escapeHtml(api.type)})` : ''}
-            </a>
-          `).join("")}
-        </div>
+  ${apis.length > 0 ? `
+    <div class="card-section apis-section">
+      <div class="categories-header">
+        <strong>🔌 APIs disponibles</strong>
       </div>
-      ` : ""}
+      <div class="badge-container">
+        ${apis.map(api => `
+          <a
+            href="${escapeHtml(api.documentationurl || api.url)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="badge api-badge"
+            title="${escapeHtml(api.type || '')}"
+          >
+            ${escapeHtml(api.name)}${api.type ? ` (${escapeHtml(api.type)})` : ''}
+          </a>
+        `).join("")}
+      </div>
+    </div>
+  ` : ""}
 
       <div class="card-footer">
         <a href="${e.portal_url}" target="_blank" rel="noopener noreferrer" class="portal-link">

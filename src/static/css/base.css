@@ -433,13 +433,24 @@ body.layout-detailed #results {
 
 /* APIs in detailed view */
 .api-badge {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /* Hover state for API links */
 .api-badge:hover {
-  color: #2563eb;            /* teal accent */
-  text-decoration: underline;
+    color: #2563eb;
+    /* teal accent */
+    text-decoration: underline;
+}
+
+/* APIs block is hidden by default (compact view) */
+.apis-section {
+    display: none;
+}
+
+/* Only show APIs block in detailed layout */
+body.layout-detailed .apis-section {
+    display: block;
 }
 
 /* Modo oscuro — ajusta colores de texto para legibilidad */
@@ -461,7 +472,8 @@ body.dark-mode .scope-badge {
 }
 
 body.dark-mode .api-badge:hover {
-  color: #14b8a6;            /* mantiene el mismo teal en dark mode */
+    color: #14b8a6;
+    /* mantiene el mismo teal en dark mode */
 }
 
 /* ─── RESTO DE LA TARJETA ────────────────────────────── */
