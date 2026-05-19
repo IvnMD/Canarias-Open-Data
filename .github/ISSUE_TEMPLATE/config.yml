@@ -1,5 +1,7 @@
+cat > .github/ISSUE_TEMPLATE/config.yml << 'EOF'
 blank_issues_enabled: false
 contact_links:
-  - name: Pregunta general
-    url: https://github.com/
-    about: Usa esta opción si no sabes qué tipo de issue crear.
+  - name: 💬 Pregunta general
+    url: https://github.com/orgs/community/discussions
+    about: Si no sabes qué tipo de issue crear, consulta aquí primero.
+EOF

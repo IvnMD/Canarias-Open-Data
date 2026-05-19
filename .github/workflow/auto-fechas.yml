@@ -13,7 +13,14 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const fecha = new Date().toLocaleString('es-ES', { timeZone: 'Atlantic/Canary' });
+            const fecha = new Date().toLocaleString('es-ES', {
+              timeZone: 'Atlantic/Canary',
+              day: '2-digit',
+              month: '2-digit',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            });
 
             const issue = await github.rest.issues.get({
               owner: context.repo.owner,
@@ -21,14 +28,18 @@ jobs:
               issue_number: context.issue.number
             });
 
-            let prefijo = "";
-            if (context.payload.action === "opened") {
+            const cuerpoActual = issue.data.body || '';
+
+            let prefijo = '';
+            if (context.payload.action === 'opened') {
               prefijo = `🕒 **Fecha de creación:** ${fecha}\n\n`;
-            } else if (context.payload.action === "closed") {
+            } else if (context.payload.action === 'closed') {
               prefijo = `🔒 **Fecha de cierre:** ${fecha}\n\n`;
             }
 
-            const nuevoCuerpo = prefijo + issue.data.body;
+            if (!prefijo) return;
+
+            const nuevoCuerpo = prefijo + cuerpoActual;
 
             await github.rest.issues.update({
               owner: context.repo.owner,
