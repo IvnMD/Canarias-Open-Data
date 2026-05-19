@@ -433,7 +433,7 @@ body.layout-detailed #results {
 
 /* APIs in detailed view */
 .api-badge {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /* Hover state for API links */
@@ -471,7 +471,8 @@ body.dark-mode .scope-badge {
 }
 
 body.dark-mode .api-badge:hover {
-  color: #14b8a6;            /* mantiene el mismo teal en dark mode */
+    color: #14b8a6;
+    /* mantiene el mismo teal en dark mode */
 }
 
 /* ─── RESTO DE LA TARJETA ────────────────────────────── */
