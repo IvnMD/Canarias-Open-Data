@@ -438,8 +438,18 @@ body.layout-detailed #results {
 
 /* Hover state for API links */
 .api-badge:hover {
-  color: #2563eb;            /* teal accent */
+  color: #2563eb;            
   text-decoration: underline;
+}
+
+/* Por defecto (vista compacta): ocultar APIs */
+.card-apis {
+  display: none;
+}
+
+/* En vista detallada: mostrar bloque de APIs */
+body.layout-detailed .card-apis {
+  display: block;
 }
 
 /* Modo oscuro — ajusta colores de texto para legibilidad */

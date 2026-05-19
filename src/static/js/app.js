@@ -37,6 +37,13 @@ function normalize(e) {
   // Extract APIs from main portal (if any)
   const apis = portal?.apis && Array.isArray(portal.apis) ? portal.apis : [];
 
+  // Derive machine-readable flag from formats
+  const formats = portal?.formats || e.formats || e.data?.formats || [];
+  const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
+  const hasMachineReadableFormat = formats.some(f =>
+    machineReadableFormats.includes(String(f).toUpperCase())
+  );
+
   return {
     id: e.id || '',
     name: e.name || 'Sin nombre',
@@ -63,6 +70,10 @@ function normalize(e) {
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
     formats: portal?.formats || e.formats || e.data?.formats || [],
     license_summary: portal?.license_summary || null,
+
+    // Machine-readable and API flags (derived)
+    machine_readable: hasMachineReadableFormat,
+    has_api: apis.length > 0 || (portal?.has_api ?? false),
 
     // APIs (for detailed view)
     apis: apis,
@@ -299,7 +310,7 @@ function render(list) {
       </div>
 
       <div class="card-meta-badges">
-        ${e.machine_readable === true ? `<span class="meta-badge meta-ok" title="Datos reutilizables en formato legible por máquina">✅ Machine-readable</span>` : ''}
+        ${e.machine_readable === true ? ` <span class="meta-badge meta-ok" title="Datos reutilizables en formato legible por máquina"> ✅ Machine-readable </span>` : ''}
         ${e.machine_readable === false ? `<span class="meta-badge meta-warn" title="Solo documentos PDF o HTML">📄 Solo docs</span>` : ''}
         ${e.has_api === true ? `<span class="meta-badge meta-ok" title="Dispone de API pública">🔌 API disponible</span>` : ''}
         ${e.verification_status === 'verified' ? `<span class="meta-badge meta-ok" title="Datos verificados">✔ Verificado</span>` : ''}
@@ -361,7 +372,7 @@ function render(list) {
       ` : ""}
 
           ${apis.length > 0 ? `
-      <div class="card-section">
+        <div class="card-section card-apis">
         <div class="categories-header">
           <strong>🔌 APIs disponibles</strong>
         </div>
