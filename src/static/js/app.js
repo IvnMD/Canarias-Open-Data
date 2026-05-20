@@ -18,12 +18,54 @@
 let data = [];
 let typeChart = null;
 
+/**
+ * Computes the open data maturity level for a normalized entity.
+ *
+ * @param {Object} e - Normalized entity object with fields like
+ *                     machine_readable, has_api, apis, dataset_count and portal_tech.
+ * @returns {string} Maturity level: 'low', 'medium' or 'high'.
+ */
+function computeMaturity(e) {
+  const hasMachineReadable = e.machine_readable === true;
+  const hasApi = e.has_api === true || (Array.isArray(e.apis) && e.apis.length > 0);
+  const count = typeof e.dataset_count === 'number' ? e.dataset_count : null;
+  const tech = Array.isArray(e.portal_tech)
+    ? e.portal_tech.join(' ').toUpperCase()
+    : String(e.portal_tech || '').toUpperCase();
 
-// ==================== NORMALIZATION FUNCTIONS ====================
+  const isStrongTech =
+    tech.includes('CKAN') ||
+    tech.includes('ARCGIS') ||
+    tech.includes('EDATOS') ||
+    tech.includes('IDE') ||
+    tech.includes('PORTAL GEO');
+
+  const isTransparencyOnly =
+    tech.includes('TRANSPARENCIA') ||
+    tech.includes('PORTAL ESTÁTICO') ||
+    tech.includes('SEDE ELECTRÓNICA');
+
+  // High maturity
+  if (hasMachineReadable && hasApi && isStrongTech && count !== null && count >= 50) {
+    return 'high';
+  }
+
+  // Low maturity
+  if (!hasMachineReadable) {
+    return 'low';
+  }
+
+  if (isTransparencyOnly && !hasApi && (count === null || count < 20)) {
+    return 'low';
+  }
+
+  // Medium maturity
+  return 'medium';
+}
 
 /**
  * Normalize a raw entity object to the internal app format.
- * Supports schema v2: entity_kind, scope, portals[], locations[].
+ * Supports schema: entity_kind, scope, portals[], locations[].
  * @param {Object} e - Original JSON object
  * @returns {Object} - Normalized object with a consistent structure
  */
@@ -44,11 +86,11 @@ function normalize(e) {
     machineReadableFormats.includes(String(f).toUpperCase())
   );
 
-  return {
+  const normalized = {
     id: e.id || '',
     name: e.name || 'Sin nombre',
 
-    // Type and scope — schema v2
+    // Type and scope — schema
     type: e.entity_kind || e.type || 'organismo',
     scope: e.scope || null, // autonomic, island, municipal…
 
@@ -60,7 +102,7 @@ function normalize(e) {
 
     // Main portal (derived from portals[])
     portal_url: portal?.url || e.portal_url || e.portal?.url || '#',
-    portal_kind: portal?.kind || null,                 // open_data | transparencia | estadistica…
+    portal_kind: portal?.kind || null,                // open_data | transparencia | estadistica…
     portal_tech: portal?.technology || [],
     machine_readable: portal?.machine_readable ?? null,
     has_api: portal?.has_api ?? null,
@@ -68,7 +110,7 @@ function normalize(e) {
     // Portal data
     dataset_count: portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? 'Sin publicar',
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
-    formats: portal?.formats || e.formats || e.data?.formats || [],
+    formats: formats,
     license_summary: portal?.license_summary || null,
 
     // Machine-readable and API flags (derived)
@@ -78,7 +120,7 @@ function normalize(e) {
     // APIs (for detailed view)
     apis: apis,
 
-    // Coordinates (schema v2 first, then legacy as fallback)
+    // Coordinates (schema first, then legacy as fallback)
     coordinates: hq
       ? { lat: hq.coordinates.lat, lon: hq.coordinates.lon }
       : (e.coordinates || e.geographic?.coordinates || null),
@@ -89,7 +131,13 @@ function normalize(e) {
     // Hierarchical relation
     parent_entity_id: e.parent_entity_id || null,
   };
+
+  // Compute maturity level based on normalized data
+  normalized.maturity = computeMaturity(normalized);
+
+  return normalized;
 }
+
 
 // ==================== FUNCIONES DE UI Y ESTADOS ====================
 
@@ -254,7 +302,7 @@ function filter() {
     return matchText && matchType && matchIsland;
   });
 
-  filtered.sort((a, b) => (b.datasetcount || 0) - (a.datasetcount || 0));
+  filtered.sort((a, b) => (b.dataset_count || 0) - (a.dataset_count || 0));
 
   render(filtered);
 
@@ -316,7 +364,10 @@ function render(list) {
         ${e.verification_status === 'verified' ? `<span class="meta-badge meta-ok" title="Datos verificados">✔ Verificado</span>` : ''}
         ${e.verification_status === 'estimated' ? `<span class="meta-badge meta-neutral" title="Datos estimados">~ Estimado</span>` : ''}
         ${e.verification_status === 'pending' ? `<span class="meta-badge meta-warn" title="Pendiente de verificación">⏳ Pendiente</span>` : ''}
-      </div>
+        ${e.maturity === 'high' ? `<span class="meta-badge maturity-high" title="Ecosistema de datos avanzado (formatos abiertos, APIs y buen volumen de datasets)">🟢 Madurez alta</span>` : ''}
+        ${e.maturity === 'medium' ? `<span class="meta-badge maturity-medium" title="Ecosistema de datos intermedio (algunos formatos abiertos o APIs, pero con limitaciones)">🟠 Madurez media</span>` : ''}
+        ${e.maturity === 'low' ? `<span class="meta-badge maturity-low" title="Ecosistema de datos básico (principalmente PDFs/HTML o sin APIs)">🔴 Madurez baja</span>` : ''}
+        </div>
 
       ${e.description ? `
         <div class="description-container">
@@ -502,14 +553,14 @@ function getIslandTag(item) {
   }
 
   const islandNames = {
-    'Tenerife': '🏝️ Tenerife',
-    'Gran Canaria': '🏝️ Gran Canaria',
-    'Lanzarote': '🏝️ Lanzarote',
-    'Fuerteventura': '🏝️ Fuerteventura',
-    'La Palma': '🏝️ La Palma',
-    'La Gomera': '🏝️ La Gomera',
-    'El Hierro': '🏝️ El Hierro',
-    'La Graciosa': '🏝️ La Graciosa',
+    'Tenerife': 'Tenerife',
+    'Gran Canaria': 'Gran Canaria',
+    'Lanzarote': 'Lanzarote',
+    'Fuerteventura': 'Fuerteventura',
+    'La Palma': 'La Palma',
+    'La Gomera': 'La Gomera',
+    'El Hierro': 'El Hierro',
+    'La Graciosa': 'La Graciosa',
   };
 
   return islandNames[islands[0]] || null;
