@@ -94,7 +94,7 @@
         "apis": [],
         "dataset_count": 22000,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "Aviso Legal ISTAC",
         "licenses": [
           {
@@ -290,7 +290,7 @@
         ],
         "dataset_count": 21755,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "Aviso Legal ISTAC",
         "licenses": [
           {
@@ -462,7 +462,7 @@
         ],
         "dataset_count": 120,
         "dataset_count_note": "Más de 200 servicios de mapas disponibles a través de IDECanarias",
-        "last_updated": "2025-02",
+        "last_updated": null,
         "license_summary": "Aviso Legal del SITCAN",
         "licenses": [
           {
@@ -561,7 +561,7 @@
         ],
         "dataset_count": 285,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -648,7 +648,7 @@
         ],
         "dataset_count": 170,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -735,7 +735,7 @@
         ],
         "dataset_count": 140,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -822,7 +822,7 @@
         ],
         "dataset_count": 14,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -911,7 +911,7 @@
         ],
         "dataset_count": 22357,
         "dataset_count_note": null,
-        "last_updated": "2026-04",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -1002,7 +1002,7 @@
         ],
         "dataset_count": 8295,
         "dataset_count_note": null,
-        "last_updated": "2024-05",
+        "last_updated": null,
         "license_summary": "Reutilización abierta (Atribución requerida)",
         "licenses": [
           {
@@ -1102,7 +1102,7 @@
         ],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "ODbL",
         "licenses": [
           {
@@ -1196,7 +1196,7 @@
         ],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": "2026-05",
+        "last_updated": null,
         "license_summary": "Múltiples",
         "licenses": [
           {
@@ -1281,7 +1281,7 @@
         ],
         "dataset_count": 55,
         "dataset_count_note": null,
-        "last_updated": "2025-12",
+        "last_updated": null,
         "license_summary": "CC BY",
         "licenses": [
           {
@@ -1365,7 +1365,7 @@
         ],
         "dataset_count": 63,
         "dataset_count_note": null,
-        "last_updated": "2025-11",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -1440,7 +1440,7 @@
         "apis": [],
         "dataset_count": 95,
         "dataset_count_note": null,
-        "last_updated": "2025-09",
+        "last_updated": null,
         "license_summary": "Aviso legal propio",
         "licenses": [
           {
@@ -1523,7 +1523,7 @@
         ],
         "dataset_count": 69,
         "dataset_count_note": null,
-        "last_updated": "2026-03",
+        "last_updated": null,
         "license_summary": "CC BY 4.0",
         "licenses": [
           {
@@ -1605,7 +1605,7 @@
         "apis": [],
         "dataset_count": 52,
         "dataset_count_note": null,
-        "last_updated": "2025-12",
+        "last_updated": null,
         "license_summary": "Reutilización abierta",
         "licenses": [
           {
@@ -1688,7 +1688,7 @@
         "apis": [],
         "dataset_count": 14,
         "dataset_count_note": null,
-        "last_updated": "2026-04",
+        "last_updated": null,
         "license_summary": "Reutilización abierta",
         "licenses": [
           {
@@ -1768,7 +1768,7 @@
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": "2026-04",
+        "last_updated": null,
         "license_summary": "Reutilización abierta",
         "licenses": [
           {
@@ -1849,7 +1849,7 @@
         "apis": [],
         "dataset_count": 2,
         "dataset_count_note": null,
-        "last_updated": "2025-06",
+        "last_updated": null,
         "license_summary": "Reutilización abierta",
         "licenses": [
           {
