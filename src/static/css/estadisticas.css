@@ -1,18 +1,18 @@
 /* ============================================
    ESTADÍSTICAS — ESTILOS ESPECÍFICOS
-   (Los estilos del nav, header y footer vienen
-    de base.css / light-mode.css / dark-mode.css)
    ============================================ */
 
 /* PÁGINA */
 .stats-page {
-  max-width: 1100px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem 1.25rem;
   flex: 1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* BARRA SUPERIOR: TÍTULO + BOTÓN MODO OSCURO */
+/* BARRA SUPERIOR */
 .stats-topbar {
   display: flex;
   align-items: center;
@@ -30,12 +30,14 @@
   color: var(--text-primary);
 }
 
-/* GRID DE GRÁFICAS */
+/* GRID DE GRÁFICAS - 4 COLUMNAS */
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* TARJETAS DE GRÁFICAS */
@@ -43,38 +45,52 @@
   background: var(--bg-secondary);
   border: 2px solid var(--border-color);
   border-radius: 18px;
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
   transition: background 0.3s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Hover modo claro: borde azul */
+/* Hover modo claro */
 .chart-card:hover {
   border-color: #2563eb;
   box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
 }
 
 .chart-card h2 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--text-primary);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
 }
 
-/* CONTENEDOR DE CANVAS */
+/* CONTENEDOR DE CANVAS - IMPORTANTE: debe tener altura fija */
 .chart-wrapper {
-  height: 320px;
+  height: 300px;
+  width: 100%;
   position: relative;
 }
 
-/* DARK MODE — tarjetas */
+/* Asegurar que el canvas tenga tamaño */
+.chart-wrapper canvas {
+  max-width: 100%;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* GRÁFICAS QUE OCUPAN 2 COLUMNAS (PIE CHARTS) */
+.chart-card.pie-chart {
+  grid-column: span 2;
+}
+
+/* DARK MODE */
 body.dark-mode .chart-card {
   background: var(--bg-card);
   border-color: var(--border-color);
 }
 
-/* Hover modo oscuro: borde naranja */
 body.dark-mode .chart-card:hover {
   border-color: #f97316;
   box-shadow: 0 8px 28px rgba(249, 115, 22, 0.2);
@@ -85,13 +101,79 @@ body.dark-mode .chart-card h2 {
 }
 
 /* ============================================
+   DRAG & DROP
+   ============================================ */
+.chart-card.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.chart-card.drag-over {
+  border-color: #2563eb;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+body.dark-mode .chart-card.drag-over {
+  border-color: #f97316;
+}
+
+.chart-card {
+  cursor: grab;
+  user-select: none;
+}
+
+.chart-card:active {
+  cursor: grabbing;
+}
+
+.reset-order-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reset-order-btn:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+body.dark-mode .reset-order-btn:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.drag-info {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
-
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .charts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+  
+  .chart-card.pie-chart {
+    grid-column: span 2;
   }
 }
 
@@ -108,4 +190,148 @@ body.dark-mode .chart-card h2 {
   .chart-wrapper {
     height: 260px;
   }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .chart-card.pie-chart {
+    grid-column: span 1;
+  }
+}
+
+/* ============================================
+   HEADER DE TARJETA - SOLO ESTO ES NUEVO
+   ============================================ */
+
+/* Contenedor del título y botón */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Título dentro del header - quita el text-align center */
+.card-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+/* Botón de cambio de gráfica */
+.chart-toggle-btn,
+button.chart-toggle-btn {
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Modo claro - botones */
+body:not(.dark-mode) .chart-toggle-btn,
+body:not(.dark-mode) button.chart-toggle-btn {
+  border-color: #2563eb;
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+body:not(.dark-mode) .chart-toggle-btn:hover,
+body:not(.dark-mode) button.chart-toggle-btn:hover {
+  background-color: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+body:not(.dark-mode) .chart-toggle-btn:active,
+body:not(.dark-mode) button.chart-toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Modo oscuro - botones */
+body.dark-mode .chart-toggle-btn,
+body.dark-mode button.chart-toggle-btn {
+  border-color: #f97316;
+  color: #f97316;
+  background-color: rgba(249, 115, 22, 0.05);
+}
+
+body.dark-mode .chart-toggle-btn:hover,
+body.dark-mode button.chart-toggle-btn:hover {
+  background-color: #f97316;
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+}
+
+body.dark-mode .chart-toggle-btn:active,
+body.dark-mode button.chart-toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive para móviles - solo cuando es necesario */
+@media (max-width: 768px) {
+  .card-header {
+    flex-wrap: wrap;
+  }
+}
+/* CABECERA DE TARJETA - Esto es lo que hace que el botón vaya a la derecha */
+.card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    gap: 1rem !important;
+}
+
+.card-header h2 {
+    margin: 0 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    flex: 1 !important;
+}
+
+/* Botón de cambiar gráfica */
+.chart-toggle-btn {
+    background-color: transparent !important;
+    border: 2px solid #2563eb !important;
+    border-radius: 8px !important;
+    padding: 0.4rem 0.9rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out !important;
+    color: #2563eb !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+body.dark-mode .chart-toggle-btn {
+    border-color: #f97316 !important;
+    color: #f97316 !important;
+}
+
+.chart-toggle-btn:hover {
+    background-color: #2563eb !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+body.dark-mode .chart-toggle-btn:hover {
+    background-color: #f97316 !important;
+    color: #0f172a !important;
 }
