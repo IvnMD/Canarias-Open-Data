@@ -50,7 +50,11 @@ def obtener_entidades():
 @app.route("/estadisticas")
 def estadisticas():
     return render_template("estadisticas.html")
-
+from flask import render_template
+#Dinosaur Game Page
+@app.route('/dino')
+def dino():
+    return render_template('dino.html')
 
 
 if __name__ == "__main__":

@@ -79,11 +79,13 @@
                  CHART 1: ENTITY TYPES
             ================================================== -->
             <section class="chart-card">
-                <!-- Chart title -->
-                <h2>🏛️ Entidades por tipo</h2>
-                <!-- Canvas wrapper -->
+                <h2>🧩 Entidades por tipo</h2>
+
+                <button id="toggleTypeChart" class="reset-btn">
+                    Cambiar gráfica
+                </button>
+
                 <div class="chart-wrapper">
-                    <!-- Chart.js renders chart here -->
                     <canvas id="typeChart"></canvas>
                 </div>
             </section>
@@ -91,21 +93,17 @@
                  CHART 2: DATA FORMATS
             ================================================== -->
             <section class="chart-card">
-                <!-- Chart title -->
-                <h2>🧩 Formatos más usados</h2>
-                <!-- Canvas wrapper -->
+                <h2>🧩 Tipos de Formatos</h2>
+
+                <button id="toggleFormatChart" class="reset-btn">
+                    Cambiar gráfica
+                </button>
+
                 <div class="chart-wrapper">
-                    <!-- Chart.js renders chart here -->
                     <canvas id="formatChart"></canvas>
                 </div>
             </section>
         </div>
-        <section class="chart-card">
-            <h2>🥧 Distribución de formatos</h2>
-            <div class="chart-wrapper">
-                <canvas id="formatPieChart"></canvas>
-            </div>
-        </section>
     </main>
 
     <!-- =========================================================
@@ -132,11 +130,9 @@
         // Stores normalized entity data
         let rawData = [];
         // Stores first chart instance
-        let typeChart = null;
+        let typeChartType = 'bar';
         // Stores second chart instance
-        let formatChart = null;
-        //º Stores pie chart instance (optional)
-        let formatPieChart = null;
+        let formatChartType = 'bar';
 
         /* =====================================================
            NORMALIZE ENTITY DATA
@@ -272,7 +268,6 @@
                 rawData = json.flat(Infinity).map(normalizeStats);
                 generateTypeChart();
                 generateFormatChart();
-                generateFormatPieChart();
             } catch (error) {
                 console.error('Error:', error);
                 // Display UI error
@@ -290,44 +285,50 @@
         function generateTypeChart() {
             const types = rawData.map(e => e.type);
             const counts = countFrequency(types);
-            // Sort descending
-            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-            const labels = sorted.map(item => getTypeName(item[0]));
-            const data = sorted.map(item => item[1]);
-            // Resolve colors and accent
-            const textColor = getChartTextColor();
-            const isDark = document.body.classList.contains('dark-mode');
-            const hoverBorder = isDark ? '#f97316' : '#2563eb';
+
+            const sorted = Object.entries(counts)
+                .sort((a, b) => b[1] - a[1]);
+
+            const labels = sorted.map(i => getTypeName(i[0]));
+            const data = sorted.map(i => i[1]);
+
             const ctx = document.getElementById('typeChart').getContext('2d');
-            if (typeChart) typeChart.destroy();
+
+            if (typeChart instanceof Chart) {
+                typeChart.destroy();
+            }
+
             typeChart = new Chart(ctx, {
-                type: 'bar', // Horizontal bar chart
+                type: typeChartType,
                 data: {
-                    labels: labels,
+                    labels,
                     datasets: [{
-                        label: 'Entidades',
-                        data: data,
-                        backgroundColor: getChartColors(data.length), // Dynamic palette per mode
-                        hoverBackgroundColor: hoverBorder, // Hover: solid accent color
-                        hoverBorderWidth: 2,
-                        hoverBorderColor: hoverBorder,
-                        borderWidth: 0,
-                        borderRadius: 8,
-                        borderSkipped: false
+                        data,
+                        backgroundColor: getChartColors(data.length),
+                        borderWidth: typeChartType === 'pie' ? 2 : 0,
+                        borderRadius: typeChartType === 'bar' ? 8 : 0,
+                        borderColor: document.body.classList.contains('dark-mode')
+                            ? '#020617'
+                            : '#ffffff'
                     }]
                 },
                 options: {
-                    indexAxis: 'y',           // Horizontal orientation
+                    indexAxis: typeChartType === 'bar' ? 'y' : undefined,
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { display: false },
-                        tooltip: getTooltipConfig() // Styled tooltip per mode
+                        legend: {
+                            display: typeChartType === 'pie',
+                            labels: { color: getChartTextColor() }
+                        },
+                        tooltip: getTooltipConfig()
                     },
-                    scales: {
-                        x: { grid: { display: false }, ticks: { color: textColor } },
-                        y: { grid: { display: false }, ticks: { color: textColor } }
-                    }
+                    scales: typeChartType === 'bar'
+                        ? {
+                            x: { grid: { display: false }, ticks: { color: getChartTextColor() } },
+                            y: { grid: { display: false }, ticks: { color: getChartTextColor() } }
+                        }
+                        : {}
                 }
             });
         }
@@ -341,112 +342,54 @@
         function generateFormatChart() {
             const allFormats = [];
             rawData.forEach(e => {
-                if (Array.isArray(e.formats)) allFormats.push(...e.formats); // Push every format individually
-                else if (e.formats) allFormats.push(e.formats);
+                if (Array.isArray(e.formats)) allFormats.push(...e.formats);
             });
+
             const counts = countFrequency(allFormats);
-            // Sort descending, top 8 formats
-            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
-            const labels = sorted.map(item => item[0]);
-            const data = sorted.map(item => item[1]);
-            // Resolve colors and accent
-            const textColor = getChartTextColor();
-            const isDark = document.body.classList.contains('dark-mode');
-            const hoverBorder = isDark ? '#f97316' : '#2563eb';
+            const sorted = Object.entries(counts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 8);
+
+            const labels = sorted.map(i => i[0]);
+            const data = sorted.map(i => i[1]);
+
             const ctx = document.getElementById('formatChart').getContext('2d');
-            if (formatChart) formatChart.destroy();
+
+            if (formatChart instanceof Chart) {
+                formatChart.destroy();
+            }
+
             formatChart = new Chart(ctx, {
-                type: 'bar',
+                type: formatChartType,
                 data: {
-                    labels: labels,
+                    labels,
                     datasets: [{
-                        label: 'Uso',
-                        data: data,
-                        backgroundColor: getChartColors(data.length), // Dynamic palette per mode
-                        hoverBackgroundColor: hoverBorder, // Hover: solid accent color
-                        hoverBorderWidth: 2,
-                        hoverBorderColor: hoverBorder,
-                        borderWidth: 0,
-                        borderRadius: 8,
-                        borderSkipped: false
+                        data,
+                        backgroundColor: getChartColors(data.length),
+                        borderWidth: formatChartType === 'pie' ? 2 : 0,
+                        borderRadius: formatChartType === 'bar' ? 8 : 0
                     }]
                 },
                 options: {
-                    indexAxis: 'y', // Horizontal bars
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    indexAxis: formatChartType === 'bar' ? 'y' : undefined,
                     plugins: {
-                        legend: { display: false },
-                        tooltip: getTooltipConfig() // Styled tooltip per mode
+                        legend: { display: formatChartType === 'pie' },
+                        tooltip: getTooltipConfig()
                     },
-                    scales: {
-                        x: { grid: { display: false }, ticks: { color: textColor } },
-                        y: { grid: { display: false }, ticks: { color: textColor } }
-                    }
+                    scales: formatChartType === 'bar'
+                        ? {
+                            x: { ticks: { color: getChartTextColor() } },
+                            y: { ticks: { color: getChartTextColor() } }
+                        }
+                        : {}
                 }
             });
         }
         /// =====================================================
         // CHART 3: FORMAT DISTRIBUTION (PIE CHART)
-        
-       function generateFormatPieChart() {
 
-    // 1. Obtener TODOS los formatos ya normalizados
-    const allFormats = rawData.flatMap(e => e.formats);
 
-    // 2. Contar frecuencia
-    const counts = countFrequency(allFormats);
 
-    // 3. Ordenar y quedarnos con los más usados
-    const sorted = Object.entries(counts)
-        .sort((a, b) => b[1] - a[1]);
-
-    const TOP = 6;
-    const topFormats = sorted.slice(0, TOP);
-    const others = sorted.slice(TOP);
-
-    const labels = topFormats.map(i => i[0]);
-    const data   = topFormats.map(i => i[1]);
-
-    // 4. Agrupar formatos minoritarios en "Otros"
-    if (others.length > 0) {
-        labels.push('Otros');
-        data.push(others.reduce((sum, i) => sum + i[1], 0));
-    }
-
-    const ctx = document.getElementById('formatPieChart').getContext('2d');
-
-    if (formatPieChart) formatPieChart.destroy();
-
-    formatPieChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels,
-            datasets: [{
-                data,
-                backgroundColor: getChartColors(data.length),
-                borderColor: document.body.classList.contains('dark-mode')
-                    ? '#020617'
-                    : '#ffffff',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        color: getChartTextColor()
-                    }
-                },
-                tooltip: getTooltipConfig()
-            }
-        }
-    });
-}
-        
         /* =====================================================
            DARK MODE PERSISTENCE
         ====================================================== */
@@ -478,6 +421,25 @@
         /* =====================================================
            APPLICATION STARTUP
         ====================================================== */
+        document
+            .getElementById('toggleFormatChart')
+            .addEventListener('click', () => {
+                formatChartType =
+                    formatChartType === 'bar' ? 'pie' : 'bar';
+                generateFormatChart();
+            });
+        document
+            .getElementById('toggleTypeChart')
+            .addEventListener('click', () => {
+
+                if (!rawData.length) return;
+
+                typeChartType =
+                    typeChartType === 'bar' ? 'pie' : 'bar';
+
+                generateTypeChart();
+            });
+
         // Initialize application
         loadData();
 
