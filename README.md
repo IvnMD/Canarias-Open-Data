@@ -345,6 +345,66 @@ o simplemente abrir el fichero en el navegador.
 
 ---
 
+## 🐳 Ejecución con Docker
+
+Además de la ejecución local con Python y Flask, el proyecto puede levantarse con Docker usando la configuración incluida en la carpeta `docker/`.
+
+### Requisitos previos
+
+- Docker instalado
+- Docker Compose (v2 o superior)
+
+### Construir la imagen
+
+Desde la carpeta `docker/`:
+
+```bash
+cd docker
+docker compose build
+```
+
+Esto creará la imagen `docker-web` a partir del código de `src/` y `run.py`.
+
+### Ejecutar la aplicación
+
+```bash
+cd docker
+docker compose up
+```
+
+Una vez levantado el contenedor, la aplicación estará disponible en:
+
+- Web: `http://localhost:8000/`
+- API de entidades: `http://localhost:8000/api/entidades`
+
+El servidor Flask se ejecuta dentro del contenedor en el puerto 5000 y se expone hacia el host en el puerto 8000.
+
+### Actualizar los datos
+
+El fichero `src/static/data/entidades.json` se monta dentro del contenedor como volumen de solo lectura.  
+Esto significa que puedes editar `entidades.json` en tu máquina y ver los cambios al recargar el navegador, sin necesidad de reconstruir la imagen:
+
+- Ruta en el host: `src/static/data/entidades.json`
+- Ruta dentro del contenedor: `/app/src/static/data/entidades.json`
+
+Si cambias la estructura de datos o el código Python, entonces sí debes volver a construir la imagen:
+
+```bash
+cd docker
+docker compose down
+docker compose build
+docker compose up
+```
+
+### Parar los contenedores
+
+```bash
+cd docker
+docker compose down
+```
+
+---
+
 # Actualizar datos
 
 1. Editar `entidades.json`
