@@ -338,8 +338,8 @@
         "municipality": null,
         "island": "Todas",
         "coordinates": {
-          "lat": 28.35,
-          "lon": -16.25
+          "lat": 28.1193,
+          "lon": -15.425025
         },
         "source_url": "https://www.grafcan.es/servicios/portal-de-datos-abiertos-opendata/"
       }
@@ -3690,76 +3690,9 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_buenavista_del_norte",
-    "name": "Ayuntamiento de Buenavista del Norte",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Buenavista del Norte. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Buenavista del Norte",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.3764,
-          "lon": -16.8822
-        },
-        "source_url": "https://buenavistadelnorte.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Buenavista del Norte",
-        "url": "https://buenavistadelnorte.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "machine_readable": true,
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://buenavistadelnorte.sedelectronica.es/transparency"
-      ]
-    },
-    "notes": null
-  },
+  
+  
+
   {
     "id": "ayuntamiento_el_paso",
     "name": "Ayuntamiento de El Paso",
@@ -4898,8 +4831,8 @@
         "municipality": null,
         "island": "El Hierro",
         "coordinates": {
-          "lat": 27.7811,
-          "lon": -18.0308
+          "lat": 27.75365,
+          "lon": -18.011031
         },
         "source_url": "https://ayuntamientodelafrontera.sedelectronica.es/transparency"
       }
@@ -5038,8 +4971,8 @@
         "municipality": null,
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.4828,
-          "lon": -16.4486
+          "lat": 28.448117,
+          "lon": -16.457422
         },
         "source_url": "https://sede.matanceros.es/transparencia"
       }
@@ -5178,8 +5111,8 @@
         "municipality": null,
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.4894,
-          "lon": -16.4528
+          "lat": 28.434472,
+          "lon": -16.469747
         },
         "source_url": "https://transparencia.lavictoriadeacentejo.es"
       }
@@ -6088,8 +6021,8 @@
         "municipality": null,
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.4133,
-          "lon": -16.6622
+          "lat": 28.379467,
+          "lon": -16.6454
         },
         "source_url": "https://transparencia.sanjuandelarambla.es"
       }
@@ -8103,7 +8036,7 @@
   {
     "id": "cartografica_de_canarias_sa_grafcan",
     "name": "Cartográfica de Canarias, S.A. GRAFCAN",
-    "entity_kind": "empresa_publica",
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
@@ -8118,8 +8051,8 @@
         "municipality": null,
         "island": "Todas",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1193,
+          "lon": -15.425025
         },
         "source_url": "https://www.grafcan.es/transparencia"
       }
@@ -13718,8 +13651,8 @@
         "municipality": null,
         "island": "Todas",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.007069,
+          "lon": -15.533381
         },
         "source_url": "https://mancomunidaddelnorte.sedelectronica.es/transparency"
       }
@@ -13788,8 +13721,8 @@
         "municipality": null,
         "island": "Todas",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.007069,
+          "lon": -15.533381
         },
         "source_url": "https://surestegc.sedelectronica.es/transparency"
       }
@@ -13858,8 +13791,8 @@
         "municipality": null,
         "island": "Todas",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.007069,
+          "lon": -15.533381
         },
         "source_url": "https://medianias.sedelectronica.es/transparency"
       }
@@ -13907,6 +13840,38 @@
       "source_urls": [
         "https://medianias.sedelectronica.es/transparency"
       ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ayuntamiento_buena_vista_del_norte",
+    "name": "Ayuntamiento de Buenavista del Norte",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "parent_entity_id": null,
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Portal de transparencia del Ayuntamiento de Buenavista del Norte.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Ayuntamiento de Buenavista del Norte",
+        "postal_code": null,
+        "municipality": "Buenavista del Norte",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.371783,
+          "lon": -16.850967
+        },
+        "source_url": null
+      }
+    ],
+    "portals": [],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": []
     },
     "notes": null
   }
