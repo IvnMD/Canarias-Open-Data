@@ -49,35 +49,6 @@
 
 </head>
 
-
-<style>
-#secretGameBtn {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background: transparent;
-  color: transparent;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
-}
-
-/* Mostrar al pasar el ratón por la esquina */
-body:hover #secretGameBtn {
-  opacity: 0.08;
-}
-
-#secretGameBtn:hover {
-  opacity: 0.4;
-  color: black;
-  background: #eee;
-}
-</style>
 <body>
 
   <!-- =========================================================
@@ -112,9 +83,7 @@ body:hover #secretGameBtn {
     </p>
 
   </header>
-<button id="secretGameBtn" onclick="window.location.href='/dino.html'">
-  🦖
-</button>
+
 
   <!-- =========================================================
        MAIN NAVIGATION MENU
@@ -224,10 +193,7 @@ body:hover #secretGameBtn {
         <input
           id="searchText"
 
-          placeholder="
-            Ej: turismo, ISTAC, OSM,
-            población, educación...
-          "
+          placeholder="Ej: turismo, ISTAC, OSM, población, educación..."
 
           autocomplete="off">
 
