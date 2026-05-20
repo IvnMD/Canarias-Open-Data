@@ -1,37 +1,46 @@
 /* ============================================
-   MODO CLARO - ESTILOS EXCLUSIVOS
+   MODO CLARO - ESTILOS EXCLUSIVOS (OPTIMIZADO)
    ============================================ */
 
-/* Variables del modo claro */
+/* Variables del modo claro (Con blanco roto / Off-white cálido) */
 :root {
-  --bg-primary: #f4f6f8;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
+  /* Fondos: sin rastro de blanco puro */
+  --bg-primary: #f3efea;       /* Base arena/grisácea muy suave */
+  --bg-secondary: #faf8f5;     /* Blanco roto cálido para bloques */
+  --bg-card: #faf8f5;          /* Blanco roto cálido para tarjetas */
 
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --text-header: #ffffff;
+  /* Tipografía */
+  --text-primary: #1a2b49;     /* Tu azul oscuro profundo */
+  --text-secondary: #5a6e85;   /* Gris azulado medio */
+  --text-header: #faf8f5;      /* Blanco roto para textos sobre fondo oscuro */
 
-  --border-color: #dee2e6;
-  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* Bordes y Sombras */
+  --border-color: #e6dfd5;     /* Borde ligeramente cálido para encajar con el fondo */
+  --shadow: 0 2px 6px rgba(26, 43, 73, 0.04);
 
-  --badge-bg: #e6ecf5;
-  --badge-text: #01696f;
+  /* Elementos de Teal */
+  --badge-bg: #e6f2f2;         
+  --badge-text: #008080;       
 
-  --footer-bg: #eeeeee;
-  --footer-text: #666666;
+  /* Footer */
+  --footer-bg: #e6dfd5;
+  --footer-text: #5a6e85;
 
-  --input-bg: #ffffff;
-  --input-border: #dee2e6;
+  /* Inputs */
+  --input-bg: #faf8f5;
+  --input-border: #cbd5e1;
 
-  --spinner-border: #e6ecf5;
-  --spinner-top: #01696f;
+  /* Estado de Carga */
+  --spinner-border: #e6f2f2;
+  --spinner-top: #008080;
 
-  --error-bg: #fff3f3;
-  --error-border: #dc3545;
+  /* Estado de Error */
+  --error-bg: #fff5f5;
+  --error-border: #ff6b6b;     
 
-  --empty-bg: #ffffff;
+  --empty-bg: #faf8f5;
 }
+
 
 /* Fondo y texto generales */
 body {
@@ -41,12 +50,13 @@ body {
 
 /* HEADER modo claro */
 header {
-  background: linear-gradient(135deg, #01696f 0%, #003a8f 100%);
+  /* Degradado elegante de teal a azul oscuro */
+  background: linear-gradient(135deg, #008080 0%, #1a2b49 100%);
 }
 
 header h1,
 header p {
-  color: #ffffff;
+  color: var(--text-header);
 }
 
 /* SEARCH y STATS en modo claro */
@@ -67,6 +77,7 @@ header p {
 .search input:focus,
 .search select:focus {
   border-color: var(--badge-text);
+  outline: none; /* Evita el borde por defecto del navegador */
 }
 
 /* CARDS en modo claro */
@@ -77,12 +88,13 @@ header p {
 }
 
 .card:hover {
-  box-shadow: 0 8px 24px rgba(1, 105, 111, 0.18);
-  border-color: #2563eb;
+  /* Sombra expansiva usando el tono teal */
+  box-shadow: 0 8px 24px rgba(0, 128, 128, 0.12);
+  border-color: var(--badge-text); /* Cambiado de #2563eb a tu teal */
 }
 
 .card h3 {
-  color: var(--badge-text);
+  color: var(--text-primary); /* Mejor legibilidad en títulos */
 }
 
 .island-tag {
@@ -102,10 +114,10 @@ header p {
   color: var(--badge-text);
 }
 
-/* Formatos con estilo verde suave */
+/* Formatos con estilo verde suave (Integrado con la paleta) */
 .format-badge {
-  background: #e8f5e9;
-  color: #2e7d32;
+  background: #e2f4f0;
+  color: #006652;
 }
 
 /* Bloque de stats de la tarjeta */
@@ -131,6 +143,9 @@ header p {
 .portal-link {
   color: var(--badge-text);
 }
+.portal-link:hover {
+  color: var(--text-primary); /* Efecto interactivo */
+}
 
 /* FOOTER en modo claro */
 footer {
@@ -148,6 +163,7 @@ footer {
 .error-message {
   background: var(--error-bg);
   border-left: 4px solid var(--error-border);
+  color: #b91c1c;
 }
 
 .empty-state {
