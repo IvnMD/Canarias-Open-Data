@@ -1,61 +1,83 @@
-#Imports
-#Flask: Main web framework
-#json: Used to load the local JSON dataset
-#os: Used to build platform-independent file paths
-
-from flask import Flask, jsonify, render_template
-import json
 import os
-#Application Initialization
-#Creates the Flask application instance.
-app = Flask(__name__)
+import json
+from flask import Flask, jsonify, render_template
 
-#Base Directory Resolution
-#Determines the absolute path of the directory containing the application file.
-#This ensures that file paths work correctly regardless of where the app is run from.
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-#JSON Path Construction
-#Builds the path to the JSON file containing the dataset of entities.
-JSON_PATH = os.path.join(
-    BASE_DIR,
-    "static",
-    "data",
-    "entidades.json"
+# Application factory and configuration
+
+app = Flask(
+    __name__,
+    template_folder="templates",
+    static_folder="static"
 )
-#Home Page
-#Defines the route for the home page ("/") and renders the "index.html" template when accessed.
+
+
+# Data paths and utilities
+
+# Base directory for this module (points to src/)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Directory where JSON data files are stored
+DATA_DIR = os.path.join(BASE_DIR, "static", "data")
+
+# Main catalog of entities
+ENTIDADES_JSON = os.path.join(DATA_DIR, "entidades.json")
+
+
+def load_entities():
+    """
+    Load the entities catalog from entidades.json.
+
+    Uses an absolute path derived from this module, so it works
+    both in local development and inside a Docker container.
+    """
+    with open(ENTIDADES_JSON, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+
+# HTML views
+
 @app.route("/")
 def home():
+    """
+    Main landing page for the catalog explorer.
+    """
+    # The frontend loads entity data via the /api/entidades endpoint.
     return render_template("index.html")
-    
-#Map Page
-#Defines the route for the map page ("/mapa") and renders the "mapa.html" template when accessed.
+
+
 @app.route("/mapa")
 def mapa():
+    """
+    Map view showing all entities with coordinates.
+    """
     return render_template("mapa.html")
 
-#API Endpoint for Entities
-#Opens the JSON file using UTF-8 encoding
-#Loads its contents into a Python object
-#Serializes and returns it as a Flask JSON response
-@app.route("/api/entidades")
-def obtener_entidades():
 
-    with open(JSON_PATH, "r", encoding="utf-8") as file:
-        datos = json.load(file)
-
-    return jsonify(datos)
-#Statistics Page
-#Defines the route for the statistics page ("/estadisticas") and renders the "estadisticas.html" template when accessed.
 @app.route("/estadisticas")
 def estadisticas():
+    """
+    Summary view with charts and aggregate statistics.
+    """
     return render_template("estadisticas.html")
-from flask import render_template
-#Dinosaur Game Page
-@app.route('/dino')
-def dino():
-    return render_template('dino.html')
 
+
+# REST API
+
+@app.route("/api/entidades")
+def api_entidades():
+    """
+    Return the full list of entities as JSON.
+
+    This endpoint is consumed by the frontend to power filters and visualizations.
+    """
+    entidades = load_entities()
+    return jsonify(entidades)
+
+
+
+# Local entry point
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Local development entry point (not used in production Docker images).
+    app.run(host="0.0.0.0", port=5000, debug=True)

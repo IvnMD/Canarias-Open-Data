@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: open-data-canarias
+    ports:
+      - "8000:5000"
+    volumes:
+      - ../src/static/data/entidades.json:/app/src/static/data/entidades.json:ro
+    restart: unless-stopped
