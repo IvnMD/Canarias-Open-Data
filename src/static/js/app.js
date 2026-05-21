@@ -1,102 +1,133 @@
 /**
- * ============================================================
- * DATOS ABIERTOS CANARIAS - APLICACIÓN PRINCIPAL
- * ============================================================
- * Descripción: Aplicación para buscar y visualizar entidades
- *              de datos abiertos de Canarias
- * Autor: Datos Abiertos Canarias
- * Versión: 3.1 — fusión v2 + v3, schema entidades_v2
- * ============================================================
+ * Datos Abiertos Canarias
+ * Main application — entity search and visualization
+ * Version: 3.2
  */
 
-// ==================== VARIABLES GLOBALES ====================
-
-/**
- * Almacena todas las entidades cargadas desde el JSON
- * @type {Array} - Lista de entidades normalizadas
- */
 let data = [];
 let typeChart = null;
 
+/**
+ * Computes the open data maturity level for a normalized entity.
+ *
+ * @param {Object} e
+ * @returns {'low'|'medium'|'high'}
+ */
+function computeMaturity(e) {
+  const hasMachineReadable = e.machine_readable === true;
+  const hasApi = e.has_api === true || (Array.isArray(e.apis) && e.apis.length > 0);
+  const count = typeof e.dataset_count === 'number' ? e.dataset_count : null;
+  const tech = Array.isArray(e.portal_tech)
+    ? e.portal_tech.join(' ').toUpperCase()
+    : String(e.portal_tech || '').toUpperCase();
 
-// ==================== NORMALIZATION FUNCTIONS ====================
+  const isStrongTech =
+    tech.includes('CKAN') ||
+    tech.includes('ARCGIS') ||
+    tech.includes('EDATOS') ||
+    tech.includes('IDE') ||
+    tech.includes('PORTAL GEO');
+
+  const isTransparencyOnly =
+    tech.includes('TRANSPARENCIA') ||
+    tech.includes('PORTAL ESTÁTICO') ||
+    tech.includes('SEDE ELECTRÓNICA');
+
+  if (hasMachineReadable && hasApi && isStrongTech && count !== null && count >= 50) {
+    return 'high';
+  }
+
+  if (!hasMachineReadable) {
+    return 'low';
+  }
+
+  if (isTransparencyOnly && !hasApi && (count === null || count < 20)) {
+    return 'low';
+  }
+
+  return 'medium';
+}
 
 /**
- * Normalize a raw entity object to the internal app format.
- * Supports schema v2: entity_kind, scope, portals[], locations[].
- * @param {Object} e - Original JSON object
- * @returns {Object} - Normalized object with a consistent structure
+ * Normalizes a raw entity object from the API into the internal format.
+ *
+ * Supports the current schema: entity_kind, scope, portals[], locations[].
+ * The open_data portal is preferred when multiple portals are present;
+ * otherwise the first entry is used as a fallback.
+ *
+ * dataset_count is always stored as number|null — never a string — so
+ * downstream comparisons and sort logic can rely on typeof checks safely.
+ *
+ * @param {Object} e - Raw entity object from the API response
+ * @returns {Object|null} Normalized entity, or null if the input is invalid
  */
 function normalize(e) {
-  // Main portal: prefer open_data, otherwise first available
+  if (!e || typeof e !== 'object') return null;
+
   const portal = e.portals?.find(p => p.kind === 'open_data') || e.portals?.[0] || null;
 
-  // Coordinates: first location with valid coordinates
-  const hq = e.locations?.find(l => l.coordinates?.lat && l.coordinates?.lon) || null;
+  // != null intentionally catches both null and undefined while allowing 0,
+  // which is a valid coordinate value.
+  const hq = e.locations?.find(
+    l => l.coordinates?.lat != null && l.coordinates?.lon != null
+  ) || null;
 
-  // Extract APIs from main portal (if any)
   const apis = portal?.apis && Array.isArray(portal.apis) ? portal.apis : [];
 
-  // Derive machine-readable flag from formats
   const formats = portal?.formats || e.formats || e.data?.formats || [];
   const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
   const hasMachineReadableFormat = formats.some(f =>
     machineReadableFormats.includes(String(f).toUpperCase())
   );
 
-  return {
+  // Number(null) === 0 and Number(undefined) === NaN, so we guard explicitly
+  // rather than relying on the || null shorthand.
+  const rawCount = portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? null;
+  const parsedCount = rawCount !== null ? Number(rawCount) : null;
+  const datasetCount = parsedCount !== null && !isNaN(parsedCount) ? parsedCount : null;
+
+  const normalized = {
     id: e.id || '',
     name: e.name || 'Sin nombre',
 
-    // Type and scope — schema v2
     type: e.entity_kind || e.type || 'organismo',
-    scope: e.scope || null, // autonomic, island, municipal…
+    scope: e.scope || null,
 
-    // Islands
     islands: e.islands || [],
-
-    // Description
     description: e.description || '',
 
-    // Main portal (derived from portals[])
     portal_url: portal?.url || e.portal_url || e.portal?.url || '#',
-    portal_kind: portal?.kind || null,                 // open_data | transparencia | estadistica…
+    portal_kind: portal?.kind || null,
     portal_tech: portal?.technology || [],
-    machine_readable: portal?.machine_readable ?? null,
-    has_api: portal?.has_api ?? null,
 
-    // Portal data
-    dataset_count: portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? 'Sin publicar',
-    data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
-    formats: portal?.formats || e.formats || e.data?.formats || [],
-    license_summary: portal?.license_summary || null,
+    // Portal value takes precedence; format-based detection is the fallback.
+    machine_readable: portal?.machine_readable ?? hasMachineReadableFormat,
 
-    // Machine-readable and API flags (derived)
-    machine_readable: hasMachineReadableFormat,
     has_api: apis.length > 0 || (portal?.has_api ?? false),
 
-    // APIs (for detailed view)
-    apis: apis,
+    dataset_count: datasetCount,
 
-    // Coordinates (schema v2 first, then legacy as fallback)
+    data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
+    formats,
+    license_summary: portal?.license_summary || null,
+
+    apis,
+
     coordinates: hq
       ? { lat: hq.coordinates.lat, lon: hq.coordinates.lon }
       : (e.coordinates || e.geographic?.coordinates || null),
 
-    // Verification
     verification_status: e.verification?.status || 'pending',
-
-    // Hierarchical relation
     parent_entity_id: e.parent_entity_id || null,
   };
+
+  normalized.maturity = computeMaturity(normalized);
+
+  return normalized;
 }
 
-// ==================== FUNCIONES DE UI Y ESTADOS ====================
+// UI state
 
-/**
- * Muestra un indicador de carga mientras se obtienen los datos
- * También actualiza el contador de resultados
- */
 function showLoading() {
   const container = document.getElementById("results");
   container.innerHTML = `
@@ -109,9 +140,7 @@ function showLoading() {
 }
 
 /**
- * Muestra un mensaje de error cuando falla la carga de datos
- * Incluye soluciones posibles y botón para reintentar
- * @param {string} message - Mensaje de error a mostrar
+ * @param {string} message
  */
 function showError(message) {
   const container = document.getElementById("results");
@@ -124,9 +153,9 @@ function showError(message) {
       <details style="margin-top: 1rem;">
         <summary style="cursor: pointer; color: #666;">💡 Soluciones posibles</summary>
         <ul style="text-align: left; margin-top: 0.5rem;">
-          <li>Asegúrate de tener el archivo JSON en la carpeta raíz</li>
-          <li>Ejecuta la página con un servidor local: <code>python -m http.server 8000</code></li>
-          <li>Verifica que el archivo se llame <code>entidades.json</code></li>
+          <li>Verifica que el endpoint <code>/api/entidades</code> esté disponible</li>
+          <li>Revisa la consola del navegador para más detalles</li>
+          <li>Asegúrate de que el servidor esté en ejecución</li>
         </ul>
       </details>
     </div>
@@ -135,8 +164,7 @@ function showError(message) {
 }
 
 /**
- * Actualiza el texto del contador de resultados
- * @param {string} text - Texto a mostrar en el contador
+ * @param {string} text
  */
 function updateStatsText(text) {
   const statsSpan = document.getElementById("resultsCount");
@@ -144,11 +172,11 @@ function updateStatsText(text) {
 }
 
 /**
- * Actualiza la interfaz según los filtros activos.
- * Controla la visibilidad del botón reset y el contador.
- * @param {number} filteredCount - Cantidad de resultados filtrados
- * @param {number} totalCount - Cantidad total de entidades
- * @param {boolean} hasActiveFilters - Indica si hay filtros activos
+ * Updates the results counter and the visibility of the reset button.
+ *
+ * @param {number} filteredCount
+ * @param {number} totalCount
+ * @param {boolean} hasActiveFilters
  */
 function updateUI(filteredCount, totalCount, hasActiveFilters) {
   const resetBtn = document.getElementById("resetFilters");
@@ -162,39 +190,28 @@ function updateUI(filteredCount, totalCount, hasActiveFilters) {
   }
 }
 
-// ==================== CARGA DE DATOS ====================
+// Data loading
 
-/**
- * Carga el archivo JSON de entidades desde el servidor.
- * Una vez cargado, normaliza los datos y aplica los filtros iniciales.
- */
 function loadData() {
   showLoading();
 
   fetch('/api/entidades')
     .then(r => {
-      if (!r.ok) throw new Error('No se pudo cargar el archivo');
+      if (!r.ok) throw new Error(`HTTP ${r.status}: ${r.statusText}`);
       return r.json();
     })
     .then(json => {
-      // Aplana estructuras anidadas y normaliza cada entidad
-      data = json.flat(Infinity).map(normalize);
-      filter(); // Aplica filtros iniciales y renderiza
+      data = json.flat(Infinity).map(normalize).filter(Boolean);
+      filter();
     })
     .catch(error => {
       console.error('Error:', error);
-      showError('No se pudo cargar el archivo entidades.json. Verifica que existe en la carpeta raíz.');
+      showError('No se pudo cargar la API /api/entidades. Verifica que el servidor esté en ejecución.');
     });
 }
 
-// ==================== EVENTOS Y FILTROS ====================
+// Events and filtering
 
-/**
- * Configura los event listeners para los elementos de filtrado:
- * - Búsqueda por texto: evento 'input' para respuesta en tiempo real
- * - Filtros de tipo e isla: evento 'change'
- * - Botón reset: evento 'click'
- */
 function setupEventListeners() {
   document.getElementById("searchText").addEventListener("input", filter);
   document.getElementById("filterType").addEventListener("change", filter);
@@ -203,20 +220,9 @@ function setupEventListeners() {
   const resetBtn = document.getElementById("resetFilters");
   if (resetBtn) resetBtn.addEventListener("click", resetFilters);
 
-  // Layout toggle: compact vs detailed view
-  const layoutToggleBtn = document.getElementById("layoutToggle");
-  if (layoutToggleBtn) {
-    layoutToggleBtn.addEventListener("click", () => {
-      const isDetailed = document.body.classList.toggle("layout-detailed");
-      layoutToggleBtn.textContent = isDetailed ? "Vista compacta" : "Vista detallada";
-    });
-  }
+  initLayoutToggle();
 }
 
-/**
- * Reinicia todos los filtros a sus valores por defecto.
- * Limpia el campo de búsqueda y los selects, y enfoca el buscador.
- */
 function resetFilters() {
   document.getElementById("searchText").value = '';
   document.getElementById("filterType").value = '';
@@ -226,10 +232,12 @@ function resetFilters() {
 }
 
 /**
- * Función principal de filtrado. Aplica tres tipos de filtros:
- * 1. Texto: busca en nombre, descripción y categorías/topics
- * 2. Tipo: usa el campo entity_kind (normalizado como 'type')
- * 3. Isla: comprueba islands[] con soporte para "Todas" (ámbito autonómico)
+ * Filters and re-renders the entity list based on the current values of the
+ * search field and the type/island selects.
+ *
+ * Specialized organism subtypes (organismo_especializado, _nacional, _geoespacial)
+ * are stored in the JSON as plain 'organismo', so the filter maps them back
+ * before comparing.
  */
 function filter() {
   const text = document.getElementById("searchText").value.toLowerCase();
@@ -237,20 +245,20 @@ function filter() {
   const island = document.getElementById("filterIsland").value;
 
   const filtered = data.filter(e => {
-    // Filtro por texto (nombre, descripción o categorías)
     const matchText =
       e.name.toLowerCase().includes(text) ||
       e.description.toLowerCase().includes(text) ||
       e.data_categories.join(" ").toLowerCase().includes(text);
 
-    // Filtro por entity_kind (campo 'type' en el objeto normalizado)
-    // organismo_especializado, organismo_especializado_nacional y organismo_especializado_geoespacial
-    // son subtipos que el JSON almacena como 'organismo', así que los mapeamos
-    const especializedTypes = ['organismo_especializado', 'organismo_especializado_nacional', 'organismo_especializado_geoespacial'];
+    const especializedTypes = [
+      'organismo_especializado',
+      'organismo_especializado_nacional',
+      'organismo_especializado_geoespacial',
+    ];
     const effectiveType = especializedTypes.includes(type) ? 'organismo' : type;
     const matchType = !type || e.type === effectiveType;
 
-    // Filtro por isla: islands[] puede incluir "Todas" (ámbito autonómico)
+    // An entity with islands: ["Todas"] covers every island in the archipelago.
     const matchIsland = !island ||
       e.islands.includes(island) ||
       e.islands.includes("Todas");
@@ -270,12 +278,30 @@ function filter() {
   updateUI(filtered.length, data.length, hasActiveFilters);
 }
 
-// ==================== RENDERIZADO ====================
+// Rendering
 
 /**
- * Genera y muestra las tarjetas de las entidades en el DOM.
- * Muestra badges adicionales: machine_readable, has_api, verification_status.
- * @param {Array} list - Lista de entidades a renderizar
+ * Validates a URL and returns it only if the protocol is http or https.
+ * Anything else — including javascript: URIs — falls back to '#'.
+ *
+ * @param {string} url
+ * @returns {string}
+ */
+function safeUrl(url) {
+  if (!url) return '#';
+  try {
+    const u = new URL(url);
+    return ['http:', 'https:'].includes(u.protocol) ? url : '#';
+  } catch {
+    return '#';
+  }
+}
+
+/**
+ * Renders entity cards into the results container.
+ * Clears any previous content before rendering.
+ *
+ * @param {Array} list - Normalized and filtered entity list
  */
 function render(list) {
   const container = document.getElementById("results");
@@ -297,10 +323,16 @@ function render(list) {
     const allCategories = e.data_categories || [];
     const allFormats = e.formats || [];
     const coords = e.coordinates;
-    const hasCoords = coords && coords.lat && coords.lon;
+
+    // != null allows coordinates of 0, which are valid (e.g. Gulf of Guinea).
+    const hasCoords = coords && coords.lat != null && coords.lon != null;
     const typeIcon = getTypeIcon(e.type);
-    const cardId = 'card-' + Math.random().toString(36).substr(2, 8);
+    const cardId = 'card-' + (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2, 10));
     const apis = e.apis || [];
+
+    // Handles both camelCase and lowercase variants of the documentation URL field.
+    const apiDocUrl = api =>
+      safeUrl(api.documentationUrl || api.documentationurl || api.url || '#');
 
     const card = document.createElement("div");
     card.className = "card";
@@ -318,12 +350,15 @@ function render(list) {
       </div>
 
       <div class="card-meta-badges">
-        ${e.machine_readable === true ? ` <span class="meta-badge meta-ok" title="Datos reutilizables en formato legible por máquina"> ✅ Machine-readable </span>` : ''}
+        ${e.machine_readable === true ? `<span class="meta-badge meta-ok" title="Datos reutilizables en formato legible por máquina">✅ Machine-readable</span>` : ''}
         ${e.machine_readable === false ? `<span class="meta-badge meta-warn" title="Solo documentos PDF o HTML">📄 Solo docs</span>` : ''}
         ${e.has_api === true ? `<span class="meta-badge meta-ok" title="Dispone de API pública">🔌 API disponible</span>` : ''}
         ${e.verification_status === 'verified' ? `<span class="meta-badge meta-ok" title="Datos verificados">✔ Verificado</span>` : ''}
         ${e.verification_status === 'estimated' ? `<span class="meta-badge meta-neutral" title="Datos estimados">~ Estimado</span>` : ''}
         ${e.verification_status === 'pending' ? `<span class="meta-badge meta-warn" title="Pendiente de verificación">⏳ Pendiente</span>` : ''}
+        ${e.maturity === 'high' ? `<span class="meta-badge maturity-high" title="Ecosistema de datos avanzado (formatos abiertos, APIs y buen volumen de datasets)">🟢 Madurez alta</span>` : ''}
+        ${e.maturity === 'medium' ? `<span class="meta-badge maturity-medium" title="Ecosistema de datos intermedio (algunos formatos abiertos o APIs, pero con limitaciones)">🟠 Madurez media</span>` : ''}
+        ${e.maturity === 'low' ? `<span class="meta-badge maturity-low" title="Ecosistema de datos básico (principalmente PDFs/HTML o sin APIs)">🔴 Madurez baja</span>` : ''}
       </div>
 
       ${e.description ? `
@@ -340,7 +375,7 @@ function render(list) {
 
       <div class="card-stats">
         <div class="stat">
-          <span class="stat-value">${e.dataset_count}</span>
+          <span class="stat-value">${e.dataset_count ?? '—'}</span>
           <span class="stat-label">datasets</span>
         </div>
       </div>
@@ -379,29 +414,29 @@ function render(list) {
         </div>
       ` : ""}
 
-          ${apis.length > 0 ? `
+      ${apis.length > 0 ? `
         <div class="card-section card-apis detail-only">
-        <div class="categories-header">
-          <strong>🔌 APIs disponibles</strong>
+          <div class="categories-header">
+            <strong>🔌 APIs disponibles</strong>
+          </div>
+          <div class="badge-container">
+            ${apis.map(api => `
+              <a
+                href="${apiDocUrl(api)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="badge api-badge"
+                title="${escapeHtml(api.type || '')}"
+              >
+                ${escapeHtml(api.name)}${api.type ? ` (${escapeHtml(api.type)})` : ''}
+              </a>
+            `).join("")}
+          </div>
         </div>
-        <div class="badge-container">
-          ${apis.map(api => `
-            <a
-              href="${escapeHtml(api.documentationurl || api.url)}"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="badge api-badge"
-              title="${escapeHtml(api.type || '')}"
-            >
-              ${escapeHtml(api.name)}${api.type ? ` (${escapeHtml(api.type)})` : ''}
-            </a>
-          `).join("")}
-        </div>
-      </div>
-  ` : ""}
+      ` : ""}
 
       <div class="card-footer">
-        <a href="${e.portal_url}" target="_blank" rel="noopener noreferrer" class="portal-link">
+        <a href="${safeUrl(e.portal_url)}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
         </a>
         ${hasCoords ? `<span class="coordinates">📍 ${coords.lat}, ${coords.lon}</span>` : ""}
@@ -412,12 +447,13 @@ function render(list) {
   });
 }
 
-// ==================== FUNCIONES AUXILIARES ====================
+// Helper functions
 
 /**
- * Obtiene el icono correspondiente al tipo de institución (entity_kind)
- * @param {string} type - Tipo de institución
- * @returns {string} - Emoji/icono representativo
+ * Returns a display icon for a given entity type.
+ *
+ * @param {string} type
+ * @returns {string}
  */
 function getTypeIcon(type) {
   const icons = {
@@ -433,9 +469,10 @@ function getTypeIcon(type) {
 }
 
 /**
- * Formatea el tipo de institución para mostrarlo en español
- * @param {string} type - Tipo de institución
- * @returns {string} - Nombre formateado en español
+ * Returns the Spanish display label for a given entity type.
+ *
+ * @param {string} type
+ * @returns {string}
  */
 function formatType(type) {
   const types = {
@@ -452,9 +489,10 @@ function formatType(type) {
 }
 
 /**
- * Formatea el scope (ámbito) para mostrarlo en español
- * @param {string} scope - Ámbito de la entidad
- * @returns {string} - Nombre formateado en español
+ * Returns the Spanish display label for a given scope value.
+ *
+ * @param {string} scope
+ * @returns {string}
  */
 function formatScope(scope) {
   const scopes = {
@@ -468,10 +506,12 @@ function formatScope(scope) {
 }
 
 /**
- * Determina si se debe mostrar el badge de scope en la tarjeta.
- * Para gobierno, cabildos y ayuntamientos el scope es obvio y no se repite.
- * @param {string} type - Tipo de entidad
- * @param {string} scope - Ámbito de la entidad
+ * Returns whether the scope badge should be shown for a given entity type.
+ * Gobierno, cabildos and ayuntamientos have an implied scope, so the badge
+ * would be redundant for those types.
+ *
+ * @param {string} type
+ * @param {string} scope
  * @returns {boolean}
  */
 function shouldShowScope(type, scope) {
@@ -482,37 +522,42 @@ function shouldShowScope(type, scope) {
 }
 
 /**
- * Obtiene la etiqueta de isla para la cabecera de la tarjeta.
- * Si islands[] tiene más de dos entradas o incluye "Todas", muestra "Canarias".
- * @param {Object} item - Entidad normalizada
- * @returns {string|null} - Etiqueta formateada o null si no aplica
+ * Returns the island label for a card header.
+ * Entities with more than two islands, or with islands: ["Todas"], are
+ * labelled as "Canarias" since they cover the whole archipelago.
+ *
+ * @param {Object} item - Normalized entity
+ * @returns {string|null}
  */
 function getIslandTag(item) {
   const islands = item.islands || [];
   if (islands.length === 0) return null;
 
   if (islands.includes("Todas") || islands.length > 2) {
-    return '🏝️ Canarias';
+    return 'Canarias';
   }
 
   const islandNames = {
-    'Tenerife': '🏝️ Tenerife',
-    'Gran Canaria': '🏝️ Gran Canaria',
-    'Lanzarote': '🏝️ Lanzarote',
-    'Fuerteventura': '🏝️ Fuerteventura',
-    'La Palma': '🏝️ La Palma',
-    'La Gomera': '🏝️ La Gomera',
-    'El Hierro': '🏝️ El Hierro',
-    'La Graciosa': '🏝️ La Graciosa',
+    'Tenerife': 'Tenerife',
+    'Gran Canaria': 'Gran Canaria',
+    'Lanzarote': 'Lanzarote',
+    'Fuerteventura': 'Fuerteventura',
+    'La Palma': 'La Palma',
+    'La Gomera': 'La Gomera',
+    'El Hierro': 'El Hierro',
+    'La Graciosa': 'La Graciosa',
   };
 
   return islandNames[islands[0]] || null;
 }
 
 /**
- * Escapa caracteres HTML para prevenir XSS (Cross-Site Scripting)
- * @param {string} str - Texto a escapar
- * @returns {string} - Texto seguro para insertar en HTML
+ * Escapes a string for safe insertion into innerHTML.
+ * Relies on the browser's own text node serialization rather than a manual
+ * character map, which avoids edge cases with multi-byte characters.
+ *
+ * @param {string} str
+ * @returns {string}
  */
 function escapeHtml(str) {
   if (!str) return '';
@@ -522,21 +567,22 @@ function escapeHtml(str) {
 }
 
 /**
- * Trunca un texto a una longitud máxima
- * @param {string} str - Texto a truncar
- * @param {number} length - Longitud máxima permitida
- * @returns {string} - Texto truncado con '...' si excede la longitud
+ * Truncates a string to the given length, appending an ellipsis if needed.
+ *
+ * @param {string} str
+ * @param {number} length
+ * @returns {string}
  */
 function truncate(str, length) {
   if (!str) return '';
   return str.length > length ? str.substring(0, length) + '...' : str;
 }
 
-// ==================== MODO OSCURO ====================
+// Dark mode
 
 /**
- * Inicializa el modo oscuro.
- * Detecta preferencia guardada en localStorage y configura el botón de toggle.
+ * Reads the persisted dark mode preference from localStorage and wires up
+ * the toggle button. Falls back gracefully if the button is not in the DOM.
  */
 function initDarkMode() {
   const toggleBtn = document.getElementById('darkModeToggle');
@@ -562,63 +608,64 @@ function initDarkMode() {
   });
 }
 
+// Layout toggle
+
 /**
- * Layout toggle: compact vs detailed cards
- * Toggles a CSS class on <body> and updates the button label.
+ * Wires up the compact/detailed layout toggle button.
+ * The button text reflects the state the user will switch *to*, not the
+ * current state, which matches the convention used by similar controls in
+ * the UI.
  */
-function layoutToggle() {
-  const toggleBtn = document.getElementById('layoutDetailed');
+function initLayoutToggle() {
+  const toggleBtn = document.getElementById('layoutToggle');
   if (!toggleBtn) return;
 
   toggleBtn.addEventListener('click', () => {
-    // Toggle layout mode class on body
-    document.body.classList.toggle('layout-detailed');
-
-    const isDetailed = document.body.classList.contains('layout-detailed');
-
-    // Update button text depending on current state
-    if (isDetailed) {
-      toggleBtn.textContent = 'Vista compacta';
-    } else {
-      toggleBtn.textContent = 'Vista detallada';
-    }
+    const isDetailed = document.body.classList.toggle('layout-detailed');
+    toggleBtn.textContent = isDetailed ? 'Vista compacta' : 'Vista detallada';
   });
 }
 
-
-// ==================== TOGGLES ====================
+// Card toggles
 
 /**
- * Alterna la visibilidad de las categorías extra en una tarjeta.
- * @param {string} cardId - ID único de la tarjeta (ej: "card-xyz123")
+ * Expands or collapses the overflow category badges on a card.
+ *
+ * @param {string} cardId
  */
 function toggleCat(cardId) {
   const hiddenDiv = document.getElementById(cardId + '-hidden');
   const btn = document.querySelector(`#${cardId} .toggle-cat-btn`);
+  if (!hiddenDiv) return;
   const isVisible = hiddenDiv.style.display === 'flex';
   hiddenDiv.style.display = isVisible ? 'none' : 'flex';
   if (btn) btn.classList.toggle('rotated');
 }
 
 /**
- * Alterna la visibilidad de los formatos extra en una tarjeta.
- * @param {string} cardId - ID único de la tarjeta
+ * Expands or collapses the overflow format badges on a card.
+ *
+ * @param {string} cardId
  */
 function toggleFormats(cardId) {
   const hiddenDiv = document.getElementById(cardId + '-formats-hidden');
   const btn = document.querySelector(`#${cardId}-formats .toggle-cat-btn`);
+  if (!hiddenDiv) return;
   const isVisible = hiddenDiv.style.display === 'flex';
   hiddenDiv.style.display = isVisible ? 'none' : 'flex';
   if (btn) btn.classList.toggle('rotated');
 }
 
 /**
- * Alterna la descripción entre colapsada y expandida.
- * @param {string} descId - ID del elemento de descripción
+ * Expands or collapses the description text on a card.
+ *
+ * @param {string} descId
  */
 function toggleDescription(descId) {
   const descElement = document.getElementById(descId);
+  if (!descElement) return;
   const btn = descElement.nextElementSibling;
+  if (!btn) return;
   const isCollapsed = descElement.classList.contains('collapsed');
   if (isCollapsed) {
     descElement.classList.remove('collapsed');
@@ -629,19 +676,12 @@ function toggleDescription(descId) {
   }
 }
 
-// ==================== INICIALIZACIÓN ====================
+// Initialization
 
-/**
- * Inicializa la aplicación: configura eventos, carga datos y activa el modo oscuro.
- */
 function init() {
   setupEventListeners();
   loadData();
   initDarkMode();
-  layoutToggle();
 }
 
-/**
- * Espera a que el DOM esté completamente cargado antes de inicializar.
- */
 document.addEventListener('DOMContentLoaded', init);
