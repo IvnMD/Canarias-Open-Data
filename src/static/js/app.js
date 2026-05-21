@@ -534,7 +534,7 @@ function getIslandTag(item) {
   if (islands.length === 0) return null;
 
   if (islands.includes("Todas") || islands.length > 2) {
-    return '🏝️ Canarias';
+    return 'Canarias';
   }
 
   const islandNames = {
@@ -617,7 +617,7 @@ function initDarkMode() {
  * the UI.
  */
 function initLayoutToggle() {
-  const toggleBtn = document.getElementById('layoutDetailed');
+  const toggleBtn = document.getElementById('layoutToggle');
   if (!toggleBtn) return;
 
   toggleBtn.addEventListener('click', () => {
