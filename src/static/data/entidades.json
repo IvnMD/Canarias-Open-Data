@@ -13873,5 +13873,1437 @@
       "source_urls": []
     },
     "notes": null
+  },
+
+  {
+    "id": "datos_gob_es",
+    "name": "datos.gob.es",
+    "alternate_names": ["Portal de datos abiertos del Gobierno de España"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Portal estatal de datos abiertos y agregador nacional del ecosistema español, con federación de catálogos autonómicos y locales, incluido el canario.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Mártires Concepcionistas 2, 28006 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.435,
+          "lon": -3.684
+        },
+        "source_url": "https://datos.gob.es/es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "agregador",
+        "name": "datos.gob.es",
+        "url": "https://datos.gob.es/es/",
+        "portal_status": "active",
+        "technology": ["CKAN"],
+        "standards": ["DCAT", "DCAT-AP"],
+        "formats": ["CSV", "JSON", "XML", "RDF", "API"],
+        "topics": ["agregacion", "administracion_publica", "economia", "transporte", "medio_ambiente", "turismo", "demografia"],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "datos.gob.es API",
+            "url": "https://datos.gob.es/es/apidata",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Agregador nacional; el número varía por catálogo federado.",
+        "last_updated": "2026-05",
+        "license_summary": "Múltiples licencias según el conjunto de datos",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Licencias variables",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://datos.gob.es/es/",
+        "https://datos.gob.es/es/apidata"
+      ]
+    },
+    "notes": "Agregador clave para localizar conjuntos canarios federados y recursos estatales reutilizables."
+  },
+  {
+    "id": "ine",
+    "name": "Instituto Nacional de Estadística",
+    "alternate_names": ["INE"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Organismo estadístico oficial de España, imprescindible para demografía, economía, vivienda, empresas y comparativas territoriales de Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana 183, 28046 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.451,
+          "lon": -3.692
+        },
+        "source_url": "https://www.ine.es/datosabiertos/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "INE Datos abiertos",
+        "url": "https://www.ine.es/datosabiertos/",
+        "portal_status": "active",
+        "technology": ["Custom", "OpenAPI"],
+        "standards": ["JSON", "API REST"],
+        "formats": ["JSON", "CSV", "XLSX", "API"],
+        "topics": ["demografia", "poblacion", "economia", "vivienda", "empresas", "turismo"],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "INEbase OpenAPI",
+            "url": "https://www.ine.es/OpenAPI/en/index.html",
+            "type": "REST",
+            "documentation_url": "https://www.ine.es/OpenAPI/en/index.html"
+          },
+          {
+            "name": "API JSON del INE",
+            "url": "https://www.ine.es/dyngs/DAB/index.htm",
+            "type": "REST",
+            "documentation_url": "https://www.ine.es/dyngs/DAB/index.htm"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Publica numerosos datasets y series; el catálogo exacto cambia con frecuencia.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta INE",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.ine.es/datosabiertos/",
+        "https://www.ine.es/OpenAPI/en/index.html",
+        "https://www.ine.es/dyngs/DAB/index.htm"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "aemet",
+    "name": "Agencia Estatal de Meteorología",
+    "alternate_names": ["AEMET", "AEMET OpenData"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Fuente oficial de meteorología y climatología en España, esencial para series históricas, avisos y observación en Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Leonardo Prieto Castro 8, 28040 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.446,
+          "lon": -3.73
+        },
+        "source_url": "https://www.aemet.es/es/datos_abiertos/AEMET_OpenData"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "AEMET OpenData",
+        "url": "https://opendata.aemet.es/",
+        "portal_status": "active",
+        "technology": ["Custom", "API REST"],
+        "standards": ["REST", "JSON"],
+        "formats": ["JSON", "CSV", "XML", "API"],
+        "topics": ["meteorologia", "clima", "temperatura", "precipitacion", "avisos"],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "AEMET OpenData API",
+            "url": "https://opendata.aemet.es/",
+            "type": "REST",
+            "documentation_url": "https://www.aemet.es/es/datos_abiertos/AEMET_OpenData"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "El catálogo y las series son amplios, pero no se indica un conteo estable en la fuente revisada.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta AEMET",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.aemet.es/es/datos_abiertos/AEMET_OpenData",
+        "https://opendata.aemet.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "miteco",
+    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico",
+    "alternate_names": ["MITECO"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio clave para medio ambiente, energía, agua, costas, biodiversidad y residuos, con fuerte relevancia para Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de San Juan de la Cruz 10, 28071 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.431,
+          "lon": -3.69
+        },
+        "source_url": "https://www.datosabiertos.miteco.gob.es/en.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Portal de Datos Abiertos MITECO",
+        "url": "https://www.datosabiertos.miteco.gob.es/en.html",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["INSPIRE", "REST", "API"],
+        "formats": ["CSV", "JSON", "XML", "GeoJSON", "WMS", "WFS", "API"],
+        "topics": ["medio_ambiente", "energia", "agua", "costas", "biodiversidad", "residuos"],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "MITECO API",
+            "url": "https://www.datosabiertos.miteco.gob.es/en/acceso.html",
+            "type": "REST",
+            "documentation_url": "https://www.datosabiertos.miteco.gob.es/en/acceso.html"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Catálogo temático amplio; el conteo no se normaliza en la fuente revisada.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MITECO",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.datosabiertos.miteco.gob.es/en.html",
+        "https://www.datosabiertos.miteco.gob.es/en/acceso.html"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "puertos_del_estado",
+    "name": "Puertos del Estado",
+    "alternate_names": ["Puertos del Estado"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Organismo estatal de referencia para estadísticas portuarias, tráficos, mercancías y pasajeros, muy relevante para puertos canarios.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Avenida del Partenón 10, 28042 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.453,
+          "lon": -3.618
+        },
+        "source_url": "https://www.puertos.es"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "Puertos del Estado",
+        "url": "https://www.puertos.es",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["CSV", "XLSX", "PDF"],
+        "formats": ["CSV", "XLSX", "PDF"],
+        "topics": ["puertos", "trafico_maritimo", "mercancias", "pasajeros", "logistica"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Publica estadísticas anuales y mensuales; no se detectó API abierta en la fuente revisada.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Puertos del Estado",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.puertos.es",
+        "https://www.puertos.es/datos/estadisticas/anuales",
+        "https://www.puertos.es/datos/estadisticas/mensuales"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_sanidad",
+    "name": "Ministerio de Sanidad",
+    "alternate_names": ["Sanidad", "Sanidad en datos"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio responsable de la estadística sanitaria estatal y del portal de datos sanitarios del SNS.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo del Prado 18-20, 28014 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.413,
+          "lon": -3.694
+        },
+        "source_url": "https://www.sanidad.gob.es/estadEstudios/home.htm"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "Sanidad en datos",
+        "url": "https://www.sanidad.gob.es/estadEstudios/home.htm",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX", "PDF"],
+        "formats": ["HTML", "CSV", "XLSX", "PDF"],
+        "topics": ["salud", "epidemiologia", "hospitales", "vacunacion", "sistema_nacional_de_salud"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "La fuente publicada es un portal estadístico con múltiples tablas y documentos.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Sanidad",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "portal_banco_datos",
+        "kind": "estadistica",
+        "name": "Banco de datos del Ministerio de Sanidad",
+        "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX", "PDF"],
+        "formats": ["HTML", "CSV", "XLSX", "PDF"],
+        "topics": ["salud", "estadisticas_sanitarias"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Sanidad",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.sanidad.gob.es/estadEstudios/home.htm",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "datos_justicia",
+    "name": "Portal de Datos de Justicia",
+    "alternate_names": ["datos.justicia.es", "La Justicia en Datos"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Portal oficial de datos de justicia con estadísticas judiciales y recursos reutilizables de la Administración de Justicia.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Bolsa 8, 28012 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.415,
+          "lon": -3.706
+        },
+        "source_url": "https://datos.justicia.es"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "Portal de Datos de Justicia",
+        "url": "https://datos.justicia.es",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["CSV", "XLSX", "PDF"],
+        "formats": ["CSV", "XLSX", "PDF"],
+        "topics": ["justicia", "estadistica_judicial", "juzgados", "procedimientos", "registros_civiles"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "El portal publica estadísticas y aplicaciones reutilizables; el total de conjuntos no se consolida de forma estable.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Ministerio de Justicia",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://datos.justicia.es",
+        "https://www.administraciondejusticia.gob.es/la-justicia-en-datos"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "seguridad_social",
+    "name": "Seguridad Social",
+    "alternate_names": ["Portal Estadísticas de la Seguridad Social"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Portal estadístico de la Seguridad Social con datos de empleo, cotización, pensiones y protección social.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Jorge Juan 6, 28001 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.423,
+          "lon": -3.69
+        },
+        "source_url": "https://portaldatos.seg-social.gob.es"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "Portal Estadísticas de la Seguridad Social",
+        "url": "https://portaldatos.seg-social.gob.es",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX", "PDF"],
+        "formats": ["HTML", "CSV", "XLSX", "PDF"],
+        "topics": ["empleo", "cotizacion", "pensiones", "proteccion_social", "mercado_laboral"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Seguridad Social",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://portaldatos.seg-social.gob.es",
+        "https://www.inclusion.gob.es/en/estadisticas"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_cultura",
+    "name": "Ministerio de Cultura",
+    "alternate_names": ["Cultura"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio competente en cultura, patrimonio, museos, archivos y bibliotecas, con conjuntos de datos y recursos de reutilización.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza del Rey 1, 28004 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.422,
+          "lon": -3.696
+        },
+        "source_url": "https://www.cultura.gob.es/en/portada.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Cultura",
+        "url": "https://www.cultura.gob.es/en/portada.html",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "RDF", "CSV"],
+        "formats": ["HTML", "CSV", "RDF"],
+        "topics": ["cultura", "patrimonio", "museos", "archivos", "bibliotecas"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "El ministerio actúa como productor y coordinador cultural; varios recursos abiertos dependen de organismos adscritos.",
+        "last_updated": "2026-05",
+        "license_summary": "Múltiples / reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Múltiples",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.cultura.gob.es/en/portada.html",
+        "https://datos.gob.es/en/noticias/main-open-cultural-datasets-datosgobes"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "biblioteca_nacional_de_espana",
+    "name": "Biblioteca Nacional de España",
+    "alternate_names": ["BNE", "datos.bne.es", "BNElab"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": "ministerio_cultura",
+    "islands": ["Todas"],
+    "description": "Biblioteca nacional con un portal de open data bibliográfico y de autoridades, útil para patrimonio documental y linked data.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de Recoletos 20-22, 28071 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.422,
+          "lon": -3.691
+        },
+        "source_url": "https://bnelab.bne.es/en/data/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "datos.bne.es",
+        "url": "https://datos.bne.es",
+        "portal_status": "active",
+        "technology": ["Custom", "Linked Data"],
+        "standards": ["RDF", "JSON", "CSV", "SPARQL"],
+        "formats": ["RDF", "JSON", "CSV", "SPARQL"],
+        "topics": ["bibliotecas", "catalogos", "patrimonio_documental", "autoridades", "obras"],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "BNElab data",
+            "url": "https://bnelab.bne.es/en/data/",
+            "type": "REST",
+            "documentation_url": "https://bnelab.bne.es/en/data/"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "El portal es amplio, pero la cifra total no aparece consolidada en la fuente revisada.",
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta / licencias variables",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta BNE",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://datos.bne.es",
+        "https://bnelab.bne.es/en/data/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_educacion_fp_deportes",
+    "name": "Ministerio de Educación, Formación Profesional y Deportes",
+    "alternate_names": ["MEFPD", "Ministerio de Educación"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio responsable de educación, FP y deporte, con datasets y referencias útiles para el análisis territorial.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Alcalá 34, 28014 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.418,
+          "lon": -3.7
+        },
+        "source_url": "https://www.educacionfpydeportes.gob.es/en/portada.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Educación, Formación Profesional y Deportes",
+        "url": "https://www.educacionfpydeportes.gob.es/en/portada.html",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX"],
+        "formats": ["HTML", "CSV", "XLSX"],
+        "topics": ["educacion", "fp", "deportes"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MEFPD",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.educacionfpydeportes.gob.es/en/portada.html"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_hacienda",
+    "name": "Ministerio de Hacienda",
+    "alternate_names": ["Hacienda"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio clave para presupuestos, gasto público, tributación y administración financiera del Estado.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Alcalá 9, 28071 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.419,
+          "lon": -3.698
+        },
+        "source_url": "https://www.hacienda.gob.es/en-GB/GobiernoAbierto/Datos%20Abiertos/Paginas/Datosabiertos.aspx"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Hacienda - Datos Abiertos",
+        "url": "https://www.hacienda.gob.es/en-GB/GobiernoAbierto/Datos%20Abiertos/Paginas/Datosabiertos.aspx",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX"],
+        "formats": ["HTML", "CSV", "XLSX"],
+        "topics": ["presupuestos", "gasto_publico", "tributos", "administracion_financiera"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Hacienda",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.hacienda.gob.es/en-GB/GobiernoAbierto/Datos%20Abiertos/Paginas/Datosabiertos.aspx"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_economia_comercio_empresa",
+    "name": "Ministerio de Economía, Comercio y Empresa",
+    "alternate_names": ["Economía, Comercio y Empresa"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio con datasets económicos y comerciales útiles para actividad empresarial, comercio exterior e indicadores macroeconómicos.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana 162, 28046 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.468,
+          "lon": -3.688
+        },
+        "source_url": "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Economía, Comercio y Empresa - Datos Abiertos",
+        "url": "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX"],
+        "formats": ["HTML", "CSV", "XLSX"],
+        "topics": ["economia", "comercio", "empresa"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MINECO",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_industria_turismo",
+    "name": "Ministerio de Industria y Turismo",
+    "alternate_names": ["Industria y Turismo"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio relevante para competitividad, industria, turismo y datos económicos de ámbito estatal.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana 160, 28046 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.467,
+          "lon": -3.688
+        },
+        "source_url": "https://www.mintur.gob.es/en-us/gobierno-abierto"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Industria y Turismo - Gobierno Abierto",
+        "url": "https://www.mintur.gob.es/en-us/gobierno-abierto",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV"],
+        "formats": ["HTML", "CSV"],
+        "topics": ["industria", "turismo", "comercio", "competitividad"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MINTUR",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mintur.gob.es/en-us/gobierno-abierto",
+        "https://www.mintur.gob.es/en-us/gobierno-abierto/paginas/datos-abiertos.aspx"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "oepm",
+    "name": "Oficina Española de Patentes y Marcas",
+    "alternate_names": ["OEPM"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Organismo de referencia para propiedad industrial, patentes, marcas y actividad innovadora.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana 75, 28046 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.459,
+          "lon": -3.692
+        },
+        "source_url": "https://sede.oepm.gob.es/eSede/datos/en/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "OEPM OpenData",
+        "url": "https://sede.oepm.gob.es/eSede/datos/en/",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["CSV", "API"],
+        "formats": ["CSV", "API"],
+        "topics": ["patentes", "marcas", "propiedad_industrial", "innovacion"],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "OEPM OpenData",
+            "url": "https://sede.oepm.gob.es/eSede/datos/en/",
+            "type": "REST",
+            "documentation_url": "https://sede.oepm.gob.es/eSede/datos/en/"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta OEPM",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://sede.oepm.gob.es/eSede/datos/en/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "red_electrica",
+    "name": "Red Eléctrica",
+    "alternate_names": ["REE"],
+    "entity_kind": "empresa_publica",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Operador del sistema eléctrico español con datos de demanda, producción y contexto energético útiles para Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo del Conde de los Gaitanes 177, 28109 Alcobendas, Madrid",
+        "postal_code": null,
+        "municipality": "Alcobendas",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.538,
+          "lon": -3.655
+        },
+        "source_url": "https://www.ree.es/es"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Red Eléctrica",
+        "url": "https://www.ree.es/es",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX"],
+        "formats": ["HTML", "CSV", "XLSX"],
+        "topics": ["energia_electrica", "demanda", "produccion", "red_electrica"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta REE",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.ree.es/es"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "aena",
+    "name": "AENA",
+    "alternate_names": ["AENA Aeropuertos"],
+    "entity_kind": "empresa_publica",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Gestor aeroportuario con estadísticas de tráfico aéreo muy útiles para los aeropuertos canarios.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Peonías 12, 28042 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.465,
+          "lon": -3.607
+        },
+        "source_url": "https://www.aena.es/es/estadisticas.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "AENA Estadísticas",
+        "url": "https://www.aena.es/es/estadisticas.html",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["CSV", "XLSX", "PDF"],
+        "formats": ["CSV", "XLSX", "PDF"],
+        "topics": ["transporte_aereo", "aeropuertos", "pasajeros", "operaciones", "mercancias"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta AENA",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.aena.es/es/estadisticas.html"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "sepe",
+    "name": "Servicio Público de Empleo Estatal",
+    "alternate_names": ["SEPE"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Organismo estatal de empleo con estadísticas mensuales útiles para paro, contratos y demandantes en Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Condesa de Venadito 9, 28027 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.436,
+          "lon": -3.637
+        },
+        "source_url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "SEPE Datos de Empleo",
+        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["CSV", "XLSX", "PDF"],
+        "formats": ["CSV", "XLSX", "PDF"],
+        "topics": ["empleo", "paro", "contratos", "mercado_laboral"],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta SEPE",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_interior",
+    "name": "Ministerio del Interior",
+    "alternate_names": ["Interior"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio competente en seguridad, orden público y estadísticas de criminalidad, con impacto territorial en Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Amador de los Ríos 7, 28071 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.428,
+          "lon": -3.684
+        },
+        "source_url": "https://www.interior.gob.es/opencms/en/inicio"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio del Interior",
+        "url": "https://www.interior.gob.es/opencms/en/inicio",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "PDF"],
+        "formats": ["HTML", "CSV", "PDF"],
+        "topics": ["seguridad", "criminalidad", "orden_publico"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta Interior",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.interior.gob.es/opencms/en/inicio"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_exteriores",
+    "name": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación",
+    "alternate_names": ["MAEC", "Exteriores"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio con portal de datos abiertos propio y potencial interés para movilidad internacional, cooperación y relaciones exteriores.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de la Provincia 1, 28012 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.416,
+          "lon": -3.707
+        },
+        "source_url": "https://www.exteriores.gob.es/en/Paginas/Datos-abiertos.aspx"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Ministerio de Asuntos Exteriores - Datos abiertos",
+        "url": "https://www.exteriores.gob.es/en/Paginas/Datos-abiertos.aspx",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV"],
+        "formats": ["HTML", "CSV"],
+        "topics": ["relaciones_exteriores", "cooperacion", "movilidad_internacional"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MAEC",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.exteriores.gob.es/en/Paginas/Datos-abiertos.aspx"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_agricultura_pesca_alimentacion",
+    "name": "Ministerio de Agricultura, Pesca y Alimentación",
+    "alternate_names": ["MAPA"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Fuente estatal esencial para agricultura, ganadería, pesca, mercados agrarios y estadísticas rurales.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de Infanta Isabel 1, 28071 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.408,
+          "lon": -3.688
+        },
+        "source_url": "https://www.mapa.gob.es/en/mapa-web"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Agricultura, Pesca y Alimentación",
+        "url": "https://www.mapa.gob.es/en/mapa-web",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV"],
+        "formats": ["HTML", "CSV"],
+        "topics": ["agricultura", "pesca", "alimentacion", "ganaderia"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MAPA",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mapa.gob.es/en/mapa-web",
+        "https://datos.gob.es/en/noticia/ministry-agriculture-fisheries-and-food-important-source-data-agriculture-and-environment"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_educacion_fp_deportes",
+    "name": "Ministerio de Educación, Formación Profesional y Deportes",
+    "alternate_names": ["MEFPD", "Ministerio de Educación"],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": ["Todas"],
+    "description": "Ministerio responsable de educación, FP y deporte, con datasets y referencias útiles para el análisis territorial.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Alcalá 34, 28014 Madrid",
+        "postal_code": null,
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.418,
+          "lon": -3.7
+        },
+        "source_url": "https://www.educacionfpydeportes.gob.es/en/portada.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "other",
+        "name": "Ministerio de Educación, Formación Profesional y Deportes",
+        "url": "https://www.educacionfpydeportes.gob.es/en/portada.html",
+        "portal_status": "active",
+        "technology": ["Custom"],
+        "standards": ["HTML", "CSV", "XLSX"],
+        "formats": ["HTML", "CSV", "XLSX"],
+        "topics": ["educacion", "fp", "deportes"],
+        "machine_readable": true,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": "Reutilización abierta",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Reutilización abierta MEFPD",
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.educacionfpydeportes.gob.es/en/portada.html"
+      ]
+    },
+    "notes": null
   }
 ]
