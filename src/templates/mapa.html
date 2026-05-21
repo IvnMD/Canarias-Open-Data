@@ -91,7 +91,26 @@
   ========================== -->
 
   <!-- Leaflet JavaScript -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js">
+
+    /* =========================================================
+       ENFOQUE AUTOMÁTICO DESDE TARJETAS
+    ========================================================== */
+
+    // Si vienen coordenadas por URL, centrar el mapa
+    if (!isNaN(targetLat) && !isNaN(targetLon)) {
+
+      map.setView([targetLat, targetLon], 14);
+
+      const marker = L.marker([targetLat, targetLon]).addTo(map);
+
+      if (targetName) {
+        marker.bindPopup(`📍 ${decodeURIComponent(targetName)}`).openPopup();
+      }
+    }
+
+
+  </script>
 
   <script>
 
@@ -139,6 +158,14 @@
     /* =========================================================
        MAP INITIALIZATION
     ========================================================== */
+
+    
+    // Leer parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetLat = parseFloat(urlParams.get('lat'));
+    const targetLon = parseFloat(urlParams.get('lon'));
+    const targetName = urlParams.get('name');
+
 
     // Create Leaflet map instance
     const map = L.map('map', {
@@ -416,6 +443,25 @@
       }
 
     })();
+
+  
+
+    /* =========================================================
+       ENFOQUE AUTOMÁTICO DESDE TARJETAS
+    ========================================================== */
+
+    // Si vienen coordenadas por URL, centrar el mapa
+    if (!isNaN(targetLat) && !isNaN(targetLon)) {
+
+      map.setView([targetLat, targetLon], 14);
+
+      const marker = L.marker([targetLat, targetLon]).addTo(map);
+
+      if (targetName) {
+        marker.bindPopup(`📍 ${decodeURIComponent(targetName)}`).openPopup();
+      }
+    }
+
 
   </script>
 
