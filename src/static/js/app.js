@@ -49,6 +49,43 @@ function computeMaturity(e) {
 }
 
 /**
+ * For entities with entity_kind === 'organismo', derives a more specific subtype
+ * based on the entity name and portal technology:
+ *
+ * - organismo_especializado_geoespacial: uses geospatial tech (OGC, WMS, WFS,
+ *   OpenStreetMap, GRAFCAN, SITCAN, GIS, cartografía)
+ * - organismo_especializado_nacional: national or European bodies not specific
+ *   to Canarias (ministerio, SEPE, AENA, policía nacional, european data portal…)
+ * - organismo_especializado: all other regional Canarian organisms
+ *
+ * All other entity_kind values are returned unchanged.
+ *
+ * @param {Object} e - Raw entity object from the API response
+ * @returns {string}
+ */
+function deriveOrganismoSubtype(e) {
+  const kind = e.entity_kind || e.type || 'organismo';
+  if (kind !== 'organismo') return kind;
+
+  const name = (e.name || '').toLowerCase();
+  const techs = (e.portals || []).flatMap(p => (p.technology || []).map(t => t.toLowerCase()));
+  const techStr = techs.join(' ');
+
+  const geoKeywords = ['ogc', 'wms', 'wfs', 'geoespacial', 'openstreetmap', 'grafcan', 'sitcan', 'gis', 'cartografía', 'cartogr'];
+  if (geoKeywords.some(k => techStr.includes(k) || name.includes(k))) {
+    return 'organismo_especializado_geoespacial';
+  }
+
+  const nationalKeywords = ['ministerio', 'sepe', 'aena', 'policía nacional', 'policia nacional',
+    'european data portal', 'data.europa', 'agencia estatal', 'nacional', 'estatal'];
+  if (nationalKeywords.some(k => name.includes(k))) {
+    return 'organismo_especializado_nacional';
+  }
+
+  return 'organismo_especializado';
+}
+
+/**
  * Normalizes a raw entity object from the API into the internal format.
  *
  * Supports the current schema: entity_kind, scope, portals[], locations[].
@@ -66,8 +103,6 @@ function normalize(e) {
 
   const portal = e.portals?.find(p => p.kind === 'open_data') || e.portals?.[0] || null;
 
-  // != null intentionally catches both null and undefined while allowing 0,
-  // which is a valid coordinate value.
   const hq = e.locations?.find(
     l => l.coordinates?.lat != null && l.coordinates?.lon != null
   ) || null;
@@ -80,8 +115,6 @@ function normalize(e) {
     machineReadableFormats.includes(String(f).toUpperCase())
   );
 
-  // Number(null) === 0 and Number(undefined) === NaN, so we guard explicitly
-  // rather than relying on the || null shorthand.
   const rawCount = portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? null;
   const parsedCount = rawCount !== null ? Number(rawCount) : null;
   const datasetCount = parsedCount !== null && !isNaN(parsedCount) ? parsedCount : null;
@@ -90,7 +123,8 @@ function normalize(e) {
     id: e.id || '',
     name: e.name || 'Sin nombre',
 
-    type: e.entity_kind || e.type || 'organismo',
+    // Derive a specific subtype for 'organismo' entities based on name/tech
+    type: deriveOrganismoSubtype(e),
     scope: e.scope || null,
 
     islands: e.islands || [],
@@ -100,7 +134,6 @@ function normalize(e) {
     portal_kind: portal?.kind || null,
     portal_tech: portal?.technology || [],
 
-    // Portal value takes precedence; format-based detection is the fallback.
     machine_readable: portal?.machine_readable ?? hasMachineReadableFormat,
 
     has_api: apis.length > 0 || (portal?.has_api ?? false),
@@ -216,6 +249,7 @@ function setupEventListeners() {
   document.getElementById("searchText").addEventListener("input", filter);
   document.getElementById("filterType").addEventListener("change", filter);
   document.getElementById("filterIsland").addEventListener("change", filter);
+  document.getElementById("filterMaturity").addEventListener("change", filter);
 
   const resetBtn = document.getElementById("resetFilters");
   if (resetBtn) resetBtn.addEventListener("click", resetFilters);
@@ -227,6 +261,7 @@ function resetFilters() {
   document.getElementById("searchText").value = '';
   document.getElementById("filterType").value = '';
   document.getElementById("filterIsland").value = '';
+  document.getElementById("filterMaturity").value = '';
   filter();
   document.getElementById("searchText").focus();
 }
@@ -235,14 +270,15 @@ function resetFilters() {
  * Filters and re-renders the entity list based on the current values of the
  * search field and the type/island selects.
  *
- * Specialized organism subtypes (organismo_especializado, _nacional, _geoespacial)
- * are stored in the JSON as plain 'organismo', so the filter maps them back
- * before comparing.
+ * Each entity's type is already a derived subtype (organismo_especializado,
+ * organismo_especializado_nacional, organismo_especializado_geoespacial), so
+ * the filter compares directly without any mapping.
  */
 function filter() {
   const text = document.getElementById("searchText").value.toLowerCase();
   const type = document.getElementById("filterType").value;
   const island = document.getElementById("filterIsland").value;
+  const maturity = document.getElementById("filterMaturity").value;
 
   const filtered = data.filter(e => {
     const matchText =
@@ -250,20 +286,16 @@ function filter() {
       e.description.toLowerCase().includes(text) ||
       e.data_categories.join(" ").toLowerCase().includes(text);
 
-    const especializedTypes = [
-      'organismo_especializado',
-      'organismo_especializado_nacional',
-      'organismo_especializado_geoespacial',
-    ];
-    const effectiveType = especializedTypes.includes(type) ? 'organismo' : type;
-    const matchType = !type || e.type === effectiveType;
+    // Types are already derived subtypes — compare directly
+    const matchType = !type || e.type === type;
 
-    // An entity with islands: ["Todas"] covers every island in the archipelago.
     const matchIsland = !island ||
       e.islands.includes(island) ||
       e.islands.includes("Todas");
 
-    return matchText && matchType && matchIsland;
+    const matchMaturity = !maturity || e.maturity === maturity;
+
+    return matchText && matchType && matchIsland && matchMaturity;
   });
 
   filtered.sort((a, b) => {
@@ -274,7 +306,7 @@ function filter() {
 
   render(filtered);
 
-  const hasActiveFilters = text !== '' || type !== '' || island !== '';
+  const hasActiveFilters = text !== '' || type !== '' || island !== '' || maturity !== '';
   updateUI(filtered.length, data.length, hasActiveFilters);
 }
 
@@ -282,7 +314,6 @@ function filter() {
 
 /**
  * Validates a URL and returns it only if the protocol is http or https.
- * Anything else — including javascript: URIs — falls back to '#'.
  *
  * @param {string} url
  * @returns {string}
@@ -299,7 +330,6 @@ function safeUrl(url) {
 
 /**
  * Renders entity cards into the results container.
- * Clears any previous content before rendering.
  *
  * @param {Array} list - Normalized and filtered entity list
  */
@@ -324,13 +354,11 @@ function render(list) {
     const allFormats = e.formats || [];
     const coords = e.coordinates;
 
-    // != null allows coordinates of 0, which are valid (e.g. Gulf of Guinea).
     const hasCoords = coords && coords.lat != null && coords.lon != null;
     const typeIcon = getTypeIcon(e.type);
     const cardId = 'card-' + (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2, 10));
     const apis = e.apis || [];
 
-    // Handles both camelCase and lowercase variants of the documentation URL field.
     const apiDocUrl = api =>
       safeUrl(api.documentationUrl || api.documentationurl || api.url || '#');
 
@@ -458,8 +486,8 @@ function render(list) {
 function getTypeIcon(type) {
   const icons = {
     'gobierno_autonomico': '🏢',
-    'organismo': '📋',
     'organismo_especializado': '📋',
+    'organismo_especializado_nacional': '📃',
     'organismo_especializado_geoespacial': '🗺️',
     'cabildo': '🏝️',
     'ayuntamiento': '🏘️',
@@ -477,7 +505,6 @@ function getTypeIcon(type) {
 function formatType(type) {
   const types = {
     'gobierno_autonomico': 'Gobierno Autonómico',
-    'organismo': 'Organismo',
     'organismo_especializado': 'Organismo Especializado',
     'organismo_especializado_nacional': 'Organismo Especializado Nacional',
     'organismo_especializado_geoespacial': 'Organismo Geoespacial',
@@ -507,8 +534,6 @@ function formatScope(scope) {
 
 /**
  * Returns whether the scope badge should be shown for a given entity type.
- * Gobierno, cabildos and ayuntamientos have an implied scope, so the badge
- * would be redundant for those types.
  *
  * @param {string} type
  * @param {string} scope
@@ -523,8 +548,6 @@ function shouldShowScope(type, scope) {
 
 /**
  * Returns the island label for a card header.
- * Entities with more than two islands, or with islands: ["Todas"], are
- * labelled as "Canarias" since they cover the whole archipelago.
  *
  * @param {Object} item - Normalized entity
  * @returns {string|null}
@@ -553,8 +576,6 @@ function getIslandTag(item) {
 
 /**
  * Escapes a string for safe insertion into innerHTML.
- * Relies on the browser's own text node serialization rather than a manual
- * character map, which avoids edge cases with multi-byte characters.
  *
  * @param {string} str
  * @returns {string}
@@ -582,7 +603,7 @@ function truncate(str, length) {
 
 /**
  * Reads the persisted dark mode preference from localStorage and wires up
- * the toggle button. Falls back gracefully if the button is not in the DOM.
+ * the toggle button.
  */
 function initDarkMode() {
   const toggleBtn = document.getElementById('darkModeToggle');
@@ -612,9 +633,6 @@ function initDarkMode() {
 
 /**
  * Wires up the compact/detailed layout toggle button.
- * The button text reflects the state the user will switch *to*, not the
- * current state, which matches the convention used by similar controls in
- * the UI.
  */
 function initLayoutToggle() {
   const toggleBtn = document.getElementById('layoutToggle');
@@ -628,11 +646,6 @@ function initLayoutToggle() {
 
 // Card toggles
 
-/**
- * Expands or collapses the overflow category badges on a card.
- *
- * @param {string} cardId
- */
 function toggleCat(cardId) {
   const hiddenDiv = document.getElementById(cardId + '-hidden');
   const btn = document.querySelector(`#${cardId} .toggle-cat-btn`);
@@ -642,11 +655,6 @@ function toggleCat(cardId) {
   if (btn) btn.classList.toggle('rotated');
 }
 
-/**
- * Expands or collapses the overflow format badges on a card.
- *
- * @param {string} cardId
- */
 function toggleFormats(cardId) {
   const hiddenDiv = document.getElementById(cardId + '-formats-hidden');
   const btn = document.querySelector(`#${cardId}-formats .toggle-cat-btn`);
@@ -656,11 +664,6 @@ function toggleFormats(cardId) {
   if (btn) btn.classList.toggle('rotated');
 }
 
-/**
- * Expands or collapses the description text on a card.
- *
- * @param {string} descId
- */
 function toggleDescription(descId) {
   const descElement = document.getElementById(descId);
   if (!descElement) return;
