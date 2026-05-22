@@ -210,7 +210,7 @@
 
     /**
      * Converts internal entity keys into human-readable names
-     * 
+     *
      * @param {string} entity_kind
      * @returns {string}
      */
@@ -389,11 +389,11 @@
        DARK MODE PERSISTENCE
     ========================================================== */
 
-    // Self-executing function
+    // Self-executing function — uses safeStorage to prevent iframe crash
     (function () {
 
       // Check stored dark mode preference
-      if (localStorage.getItem('darkMode') === 'enabled') {
+      if (safeStorage('get', 'darkMode') === 'enabled') {
 
         // Apply dark mode CSS class
         document.body.classList.add('dark-mode');
