@@ -74,6 +74,81 @@ def api_entidades():
     return jsonify(entidades)
 
 
+@app.route("/api/stats")
+def api_stats():
+    """
+    Endpoint ligero con KPIs agregados del catálogo.
+
+    Calcula en servidor para que la página de estadísticas
+    cargue el resumen sin procesar el JSON completo en cliente.
+
+    Returns:
+        JSON con los siguientes campos:
+        - total_entidades (int)
+        - total_portales (int)
+        - total_datasets (int)
+        - con_api (int): entidades con al menos una API declarada
+        - machine_readable_pct (int): % portales con formatos legibles por máquina
+        - por_tipo (dict): distribución por entitykind
+        - por_isla (dict): distribución por isla
+    """
+    entidades = load_entities()
+
+    total_entidades = len(entidades)
+
+    # Total de portales (una entidad puede tener varios)
+    total_portales = sum(len(e.get("portals", [])) for e in entidades)
+
+    # Total datasets sumando datasetcount de cada portal
+    total_datasets = 0
+    for e in entidades:
+        for p in e.get("portals", []):
+            count = p.get("datasetcount")
+            if isinstance(count, (int, float)) and count:
+                total_datasets += int(count)
+
+    # Entidades con al menos una API declarada
+    con_api = sum(
+        1 for e in entidades
+        if any(
+            p.get("hasapi") is True or bool(p.get("apis"))
+            for p in e.get("portals", [])
+        )
+    )
+
+    # % portales con formatos machine-readable
+    MACHINE_READABLE = {"CSV", "JSON", "GEOJSON", "XML", "XLSX", "ODS", "RDF"}
+    portales_total = total_portales or 1
+    portales_mr = sum(
+        1 for e in entidades
+        for p in e.get("portals", [])
+        if any(f.upper() in MACHINE_READABLE for f in p.get("formats", []))
+    )
+    machine_readable_pct = round((portales_mr / portales_total) * 100)
+
+    # Distribución por tipo de entidad
+    por_tipo = {}
+    for e in entidades:
+        kind = e.get("entitykind", "desconocido")
+        por_tipo[kind] = por_tipo.get(kind, 0) + 1
+
+    # Distribución por isla (una entidad puede estar en varias islas)
+    por_isla = {}
+    for e in entidades:
+        for isla in e.get("islands", []):
+            por_isla[isla] = por_isla.get(isla, 0) + 1
+
+    return jsonify({
+        "total_entidades":      total_entidades,
+        "total_portales":       total_portales,
+        "total_datasets":       total_datasets,
+        "con_api":              con_api,
+        "machine_readable_pct": machine_readable_pct,
+        "por_tipo":             por_tipo,
+        "por_isla":             por_isla,
+    })
+
+
 # Local entry point
 
 if __name__ == "__main__":
