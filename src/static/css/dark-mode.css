@@ -219,3 +219,11 @@ body.dark-mode .reset-btn-empty:hover {
 body.dark-mode .logo-svg {
   background-color: #14b8a6;
 }
+
+body.dark-mode .map-button {
+  background: #14b8a6;
+}
+
+body.dark-mode .map-button:hover {
+  background: #1d4ed8;
+}

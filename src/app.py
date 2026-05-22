@@ -19,8 +19,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Directory where JSON data files are stored
 DATA_DIR = os.path.join(BASE_DIR, "static", "data")
 
-# Main catalog of entities
-ENTIDADES_JSON = os.path.join(DATA_DIR, "entidades.json")
 
 
 def load_entities():
@@ -73,7 +71,6 @@ def api_entidades():
     """
     entidades = load_entities()
     return jsonify(entidades)
-
 
 
 # Local entry point

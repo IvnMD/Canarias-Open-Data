@@ -1,4 +1,12 @@
-from src.app import app
+import subprocess
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+# Arrancar app.py
+app_process = subprocess.Popen(["python", "src/app.py"])
+
+# Arrancar fecha.py
+
+
+print("Aplicaciones iniciadas")
+
+# Mantener vivo el script
+app_process.wait()
