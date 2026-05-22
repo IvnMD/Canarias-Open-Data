@@ -15,7 +15,7 @@
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
 
   <!-- Leaflet CSS (map library styles) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
   <!-- Global/base styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
@@ -91,7 +91,7 @@
   ========================== -->
 
   <!-- Leaflet JavaScript -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script>
 
@@ -141,21 +141,24 @@
     ========================================================== */
 
     // Create Leaflet map instance
+
+    // Set initial map center and zoom
+    const params = new URLSearchParams(window.location.search);
+
+    const targetLat = parseFloat(params.get('lat'));
+    const targetLon = parseFloat(params.get('lon'));
+
+    const initialLat = !isNaN(targetLat) ? targetLat : 28.4;
+    const initialLon = !isNaN(targetLon) ? targetLon : -15.8;
+    const initialZoom = !isNaN(targetLat) ? 15 : 7;
+
     const map = L.map('map', {
 
-      // Minimum zoom level allowed
       minZoom: 3,
-
-      // Prevent infinite horizontal scrolling
       maxBounds: [[-90, -180], [90, 180]],
-
-      // Makes bounds "sticky"
       maxBoundsViscosity: 1.0
 
-    })
-
-      // Set initial map center and zoom
-      .setView([28.4, -15.8], 7);
+    }).setView([initialLat, initialLon], initialZoom);
 
 
     /* =========================================================
@@ -242,6 +245,7 @@
 
       // Process JSON data
       .then(data => {
+        const params = new URLSearchParams(window.location.search);
 
         // Iterate through every entity
         data.forEach(entidad => {
@@ -297,34 +301,48 @@
             .addTo(map)
 
             // Attach popup information
-            .bindPopup(`
+             .bindPopup(`
 
-            <div style="min-width:220px">
+  <div style="min-width:220px">
 
-              <h2 style="margin-bottom:0.5rem; font-size:1rem;">
-                ${entidad.name}
-              </h2>
+    <h2 style="margin-bottom:0.5rem; font-size:1rem;">
+      ${entidad.name}
+    </h2>
 
-              <p>
-                <strong>Tipo:</strong>
-                ${getTypeName(entidad.entity_kind)}
-              </p>
+    <p>
+      <strong>Tipo:</strong>
+      ${getTypeName(entidad.entity_kind)}
+    </p>
 
-              <p>
-                <strong>Datasets:</strong>
-                ${datasetCount}
-              </p>
+    <p>
+      <strong>Datasets:</strong>
+      ${datasetCount}
+    </p>
 
-            </div>
-          `);
-        });
-      })
+  </div>
+`);
 
-      // Handle fetch errors
-      .catch(error =>
-        console.error('Error cargando entidades:', error)
-      );
+/* =========================================================
+   ABRIR POPUP Y CENTRAR ENTIDAD
+========================================================= */
 
+if (
+  !isNaN(targetLat) &&
+  !isNaN(targetLon) &&
+  entidad.name === decodeURIComponent(params.get('name') || '')
+) {
+
+  map.setView([lat, lon], 15);
+
+  marker.openPopup();
+}
+
+});
+})
+
+.catch(error =>
+  console.error('Error cargando entidades:', error)
+);
 
     /* =========================================================
        MAP LEGEND
@@ -392,11 +410,18 @@
     // Self-executing function — uses safeStorage to prevent iframe crash
     (function () {
 
-      // Check stored dark mode preference
-      if (safeStorage('get', 'darkMode') === 'enabled') {
+      try {
 
-        // Apply dark mode CSS class
-        document.body.classList.add('dark-mode');
+        const darkMode = localStorage.getItem('darkMode');
+
+        if (darkMode === 'enabled') {
+          document.body.classList.add('dark-mode');
+        }
+
+      } catch (err) {
+
+        console.warn('No se pudo acceder a localStorage:', err);
+
       }
 
     })();
