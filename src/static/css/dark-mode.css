@@ -222,8 +222,6 @@
 /* Botón mapa en dark mode */
 [data-theme="dark"] .map-button {
   background: #14b8a6;
-  color: white;
-  border: none;
 }
 
 [data-theme="dark"] .map-button:hover {
