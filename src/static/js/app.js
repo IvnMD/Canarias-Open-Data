@@ -467,7 +467,7 @@ function render(list) {
         <a href="${safeUrl(e.portal_url)}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
         </a>
-        ${hasCoords ? `<a href="/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}" class="coordinates map-link">📍 ${coords.lat}, ${coords.lon}</a>` : ""}
+        ${hasCoords ? `<span class="coordinates">📍 ${coords.lat}, ${coords.lon}</span>` : ""}
       </div>
     `;
 
@@ -603,7 +603,9 @@ function truncate(str, length) {
 
 /**
  * Reads the persisted dark mode preference from localStorage and wires up
- * the toggle button.
+ * the toggle button. Operates on document.documentElement via data-theme
+ * attribute instead of body.classList, which allows CSS variables to cascade
+ * from :root and avoids FOUC when the preference is restored on load.
  */
 function initDarkMode() {
   const toggleBtn = document.getElementById('darkModeToggle');
@@ -611,18 +613,18 @@ function initDarkMode() {
 
   const savedMode = localStorage.getItem('darkMode');
   if (savedMode === 'enabled') {
-    document.body.classList.add('dark-mode');
+    document.documentElement.setAttribute('data-theme', 'dark');
     toggleBtn.innerHTML = '☀️ Modo claro';
   }
 
   toggleBtn.addEventListener('click', () => {
-    const isDark = document.body.classList.contains('dark-mode');
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     if (isDark) {
-      document.body.classList.remove('dark-mode');
+      document.documentElement.removeAttribute('data-theme');
       toggleBtn.innerHTML = '🌙 Modo oscuro';
       localStorage.setItem('darkMode', 'disabled');
     } else {
-      document.body.classList.add('dark-mode');
+      document.documentElement.setAttribute('data-theme', 'dark');
       toggleBtn.innerHTML = '☀️ Modo claro';
       localStorage.setItem('darkMode', 'enabled');
     }

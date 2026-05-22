@@ -395,8 +395,8 @@
       // Check stored dark mode preference
       if (safeStorage('get', 'darkMode') === 'enabled') {
 
-        // Apply dark mode CSS class
-        document.body.classList.add('dark-mode');
+        // Apply data-theme attribute on <html>
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
 
     })();
