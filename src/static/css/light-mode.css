@@ -114,10 +114,11 @@ header p {
   color: var(--badge-text);
 }
 
-/* Formatos con estilo verde suave (Integrado con la paleta) */
-.format-badge {
-  background: #e2f4f0;
-  color: #006652;
+/* Formatos con estilo verde suave */
+.format-badge,
+.badge.format-badge {
+  background: #bbe4bf !important;
+  color: #2e7d32 !important;
 }
 
 /* Bloque de stats de la tarjeta */

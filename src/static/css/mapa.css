@@ -2,6 +2,26 @@
    MAPA - ESTILOS ESPECÍFICOS
    ============================================ */
 
+/* Variables de color para marcadores — modo claro */
+:root {
+  --marker-gobierno:  #e03535;
+  --marker-cabildo:   #16a34a;
+  --marker-ayto:      #2563eb;
+  --marker-organismo: #d97706;
+  --marker-empresa:   #9333ea;
+  --marker-default:   #475569;
+}
+
+/* Variantes modo oscuro — más vivos sobre fondo oscuro */
+body.dark-mode {
+  --marker-gobierno:  #f87171;
+  --marker-cabildo:   #4ade80;
+  --marker-ayto:      #60a5fa;
+  --marker-organismo: #fbbf24;
+  --marker-empresa:   #c084fc;
+  --marker-default:   #94a3b8;
+}
+
 #map {
   height: calc(100vh - 150px);
   width: 100%;
@@ -15,7 +35,8 @@
 
 /* LEYENDA */
 .legend {
-  background: white;
+  background: var(--bg-card);
+  color: var(--text-primary);
   padding: 12px 16px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -47,43 +68,6 @@
 body.dark-mode .legend {
   background: #1a1a2e;
   color: #e8e8e8;
-}
-
-/* BOTÓN MENÚ */
-.menu-toggle-btn {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: white;
-  padding: 0;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  transition: background 0.2s ease;
-}
-
-.menu-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* MENÚ COLAPSABLE */
-.main-nav.collapsed {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0;
-  border: none;
-  transition: max-height 0.3s ease-out;
-}
-
-.main-nav.expanded {
-  max-height: 300px;
-  overflow: visible;
-  transition: max-height 0.4s ease-in;
-  border-bottom: 1px solid var(--border-color);
 }
 
 /* RESPONSIVE */

@@ -252,8 +252,8 @@ main {
 
 /* Footer pegado al final de la página */
 footer {
-    background: #1a1a2e;
-    color: #e8e8e8;
+    background: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 1.5rem;
     margin-top: auto;
@@ -837,7 +837,7 @@ body.dark-mode .about-text strong {
     font-weight: 600;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-    transition: all 0.3 sease;
+    transition: all 0.3s ease;
 }
 
 /* ============================================
