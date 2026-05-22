@@ -147,6 +147,27 @@
 
     <script>
 
+        /* =========================================================
+           SAFE STORAGE HELPER
+           Wraps localStorage to prevent crashes in sandboxed iframes.
+           Falls back to an in-memory store when localStorage is blocked.
+        ========================================================== */
+
+        const _memoryStore = {};
+
+        function safeStorage(action, key, value) {
+            try {
+                if (action === 'get') return localStorage.getItem(key);
+                if (action === 'set') { localStorage.setItem(key, value); return; }
+                if (action === 'remove') { localStorage.removeItem(key); return; }
+            } catch {
+                if (action === 'get') return _memoryStore[key] ?? null;
+                if (action === 'set') { _memoryStore[key] = value; return; }
+                if (action === 'remove') { delete _memoryStore[key]; return; }
+            }
+        }
+
+
         // Variables globales
         let rawData = [];
         let typeChart, formatChart, islandChart, provinceChart, apiChart,
@@ -439,6 +460,7 @@
                 }
             });
         }
+
         // PIE CHART 3: Machine-readable (con toggle bar/pie)
         function generateMachineReadablePieChart() {
             let yes = 0, no = 0, unknown = 0;
@@ -529,11 +551,11 @@
         // Drag & Drop
         function saveChartOrder() {
             const order = Array.from(document.querySelectorAll('.chart-card')).map(card => card.querySelector('h2').innerText);
-            localStorage.setItem('chartOrder', JSON.stringify(order));
+            safeStorage('set', 'chartOrder', JSON.stringify(order));
         }
 
         function restoreChartOrder() {
-            const savedOrder = localStorage.getItem('chartOrder');
+            const savedOrder = safeStorage('get', 'chartOrder');
             if (!savedOrder) return false;
             const order = JSON.parse(savedOrder);
             const container = document.querySelector('.charts-grid');
@@ -551,7 +573,7 @@
                 const card = Array.from(container.querySelectorAll('.chart-card')).find(c => c.querySelector(`#${id}`));
                 if (card) container.appendChild(card);
             });
-            localStorage.removeItem('chartOrder');
+            safeStorage('remove', 'chartOrder');
         }
 
         function initDragAndDrop() {
@@ -584,15 +606,15 @@
             });
         }
 
-        // Dark mode (persistencia antes de render)
+        // Dark mode — uses safeStorage to prevent iframe crash
         (function () {
-            if (localStorage.getItem('darkMode') === 'enabled') document.body.classList.add('dark-mode');
+            if (safeStorage('get', 'darkMode') === 'enabled') document.body.classList.add('dark-mode');
         })();
 
         const darkBtn = document.getElementById('darkModeToggle');
         darkBtn.addEventListener('click', () => {
             const isDark = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+            safeStorage('set', 'darkMode', isDark ? 'enabled' : 'disabled');
             darkBtn.textContent = isDark ? '☀️ Modo claro' : '🌙 Modo oscuro';
             if (rawData.length > 0) regenerateAll();
         });

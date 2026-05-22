@@ -91,28 +91,30 @@
   ========================== -->
 
   <!-- Leaflet JavaScript -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
 
     /* =========================================================
-       ENFOQUE AUTOMÁTICO DESDE TARJETAS
+       SAFE STORAGE HELPER
+       Wraps localStorage to prevent crashes in sandboxed iframes.
+       Falls back to an in-memory store when localStorage is blocked.
     ========================================================== */
 
-    // Si vienen coordenadas por URL, centrar el mapa
-    if (!isNaN(targetLat) && !isNaN(targetLon)) {
+    const _memoryStore = {};
 
-      map.setView([targetLat, targetLon], 14);
-
-      const marker = L.marker([targetLat, targetLon]).addTo(map);
-
-      if (targetName) {
-        marker.bindPopup(`📍 ${decodeURIComponent(targetName)}`).openPopup();
+    function safeStorage(action, key, value) {
+      try {
+        if (action === 'get') return localStorage.getItem(key);
+        if (action === 'set') { localStorage.setItem(key, value); return; }
+        if (action === 'remove') { localStorage.removeItem(key); return; }
+      } catch {
+        if (action === 'get') return _memoryStore[key] ?? null;
+        if (action === 'set') { _memoryStore[key] = value; return; }
+        if (action === 'remove') { delete _memoryStore[key]; return; }
       }
     }
 
-
-  </script>
-
-  <script>
 
     /* =========================================================
        COLLAPSIBLE MENU LOGIC
@@ -159,7 +161,6 @@
        MAP INITIALIZATION
     ========================================================== */
 
-    
     // Leer parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const targetLat = parseFloat(urlParams.get('lat'));
@@ -213,7 +214,7 @@
 
     /**
      * Returns a marker color depending on entity type
-     * 
+     *
      * @param {string} entity_kind
      * @returns {string} Hex color
      */
@@ -248,7 +249,7 @@
 
     /**
      * Converts internal entity keys into human-readable names
-     * 
+     *
      * @param {string} entity_kind
      * @returns {string}
      */
@@ -432,11 +433,11 @@
        DARK MODE PERSISTENCE
     ========================================================== */
 
-    // Self-executing function
+    // Self-executing function — uses safeStorage to prevent iframe crash
     (function () {
 
       // Check stored dark mode preference
-      if (localStorage.getItem('darkMode') === 'enabled') {
+      if (safeStorage('get', 'darkMode') === 'enabled') {
 
         // Apply dark mode CSS class
         document.body.classList.add('dark-mode');
@@ -444,7 +445,6 @@
 
     })();
 
-  
 
     /* =========================================================
        ENFOQUE AUTOMÁTICO DESDE TARJETAS
