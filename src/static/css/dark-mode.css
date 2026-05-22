@@ -219,9 +219,17 @@ body.dark-mode .reset-btn-empty:hover {
 body.dark-mode .logo-svg {
   background-color: #14b8a6;
 }
+<<<<<<< HEAD
 
 body.dark-mode .map-button {
   background: #14b8a6;
+=======
+/* Botón mapa en dark mode */
+body.dark-mode .map-button {
+  background: #14b8a6;
+  color: white;
+  border: none;
+>>>>>>> 55c9ef4b9949641ae962f9e5bf86422f54bc2f93
 }
 
 body.dark-mode .map-button:hover {

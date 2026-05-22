@@ -467,7 +467,8 @@ function render(list) {
         <a href="${safeUrl(e.portal_url)}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
         </a>
-        ${hasCoords ? `
+    
+   ${hasCoords ? `
   <button 
     class="map-button"
     onclick="window.location.href='/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}'"

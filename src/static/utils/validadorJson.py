@@ -1,4 +1,5 @@
 import json
+import sys
 from pathlib import Path
 from jsonschema import Draft202012Validator
 
@@ -16,10 +17,11 @@ validator = Draft202012Validator(schema)
 errors = sorted(validator.iter_errors(data), key=lambda e: list(e.path))
 
 if not errors:
-    print("JSON válido")
+    print("✅ JSON válido")
 else:
-    print(f"Se encontraron {len(errors)} errores:")
+    print(f"❌ Se encontraron {len(errors)} errores:")
     for i, error in enumerate(errors[:20], 1):
         ruta = "".join(f"[{p}]" if isinstance(p, int) else f".{p}" for p in error.path)
         print(f"{i}. Ruta: {ruta or 'raíz'}")
         print(f"   Error: {error.message}")
+    sys.exit(1)
