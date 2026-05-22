@@ -18,7 +18,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Directory where JSON data files are stored
 DATA_DIR = os.path.join(BASE_DIR, "static", "data")
-
+# Absolute path to the entidades.json file
+ENTIDADES_JSON = os.path.join(DATA_DIR, "entidades.json")
 
 
 def load_entities():
