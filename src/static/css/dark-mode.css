@@ -219,3 +219,13 @@
 [data-theme="dark"] .logo-svg {
   background-color: #14b8a6;
 }
+/* Botón mapa en dark mode */
+[data-theme="dark"] .map-button {
+  background: #14b8a6;
+  color: white;
+  border: none;
+}
+
+[data-theme="dark"] .map-button:hover {
+  background: #1d4ed8;
+}

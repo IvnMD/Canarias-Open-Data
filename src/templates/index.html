@@ -47,6 +47,21 @@
   <link rel="stylesheet"
     href="/static/css/dark-mode.css">
 
+  <!--
+    Anti-FOUC: restore dark theme BEFORE first paint.
+    Must be inline and synchronous — no defer/async.
+    Runs before <body> exists so it targets <html> directly.
+  -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('darkMode') === 'enabled') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) { /* localStorage blocked in sandboxed iframes */ }
+    })();
+  </script>
+
 </head>
 
 <body>
