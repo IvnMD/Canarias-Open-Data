@@ -96,27 +96,6 @@
   <script>
 
     /* =========================================================
-       SAFE STORAGE HELPER
-       Wraps localStorage to prevent crashes in sandboxed iframes.
-       Falls back to an in-memory store when localStorage is blocked.
-    ========================================================== */
-
-    const _memoryStore = {};
-
-    function safeStorage(action, key, value) {
-      try {
-        if (action === 'get') return localStorage.getItem(key);
-        if (action === 'set') { localStorage.setItem(key, value); return; }
-        if (action === 'remove') { localStorage.removeItem(key); return; }
-      } catch {
-        if (action === 'get') return _memoryStore[key] ?? null;
-        if (action === 'set') { _memoryStore[key] = value; return; }
-        if (action === 'remove') { delete _memoryStore[key]; return; }
-      }
-    }
-
-
-    /* =========================================================
        COLLAPSIBLE MENU LOGIC
     ========================================================== */
 
@@ -161,13 +140,6 @@
        MAP INITIALIZATION
     ========================================================== */
 
-    // Leer parámetros de la URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetLat = parseFloat(urlParams.get('lat'));
-    const targetLon = parseFloat(urlParams.get('lon'));
-    const targetName = urlParams.get('name');
-
-
     // Create Leaflet map instance
     const map = L.map('map', {
 
@@ -197,10 +169,8 @@
       {
         // Attribution required by providers
         attribution: '&copy; OpenStreetMap &amp; CartoDB',
-
         // Prevent repeated world maps
         noWrap: true,
-
         // Restrict visible map bounds
         bounds: [[-90, -180], [90, 180]]
       }
@@ -213,33 +183,24 @@
     ========================================================== */
 
     /**
-     * Returns a marker color depending on entity type
+     * Returns a marker color by reading the CSS variable for the entity type.
+     * This respects both light and dark mode automatically.
      *
      * @param {string} entity_kind
-     * @returns {string} Hex color
+     * @returns {string} Resolved color values
      */
     function getColor(entity_kind) {
-
-      switch (entity_kind) {
-
-        case 'gobierno_autonomico':
-          return '#ef4444';
-
-        case 'cabildo':
-          return '#22c55e';
-
-        case 'ayuntamiento':
-          return '#3b82f6';
-
-        case 'organismo':
-          return '#f59e0b';
-
-        case 'empresa_publica':
-          return '#a855f7';
-
-        default:
-          return '#64748b';
-      }
+      const varMap = {
+        'gobierno_autonomico': '--marker-gobierno',
+        'cabildo': '--marker-cabildo',
+        'ayuntamiento': '--marker-ayto',
+        'organismo': '--marker-organismo',
+        'empresa_publica': '--marker-empresa',
+      };
+      const cssVar = varMap[entity_kind] || '--marker-default';
+      return getComputedStyle(document.documentElement)
+        .getPropertyValue(cssVar)
+        .trim();
     }
 
 
@@ -320,19 +281,14 @@
 
             // Marker size
             radius: 8,
-
             // Dynamic marker color
             fillColor: getColor(entidad.entity_kind),
-
             // White border
             color: '#ffffff',
-
             // Border thickness
             weight: 2,
-
             // Border opacity
             opacity: 1,
-
             // Fill transparency
             fillOpacity: 0.9
           })
@@ -392,31 +348,31 @@
 
         <div class="legend-item">
           <span class="color-dot"
-            style="background:#ef4444"></span>
+            style="background:var(--marker-gobierno)"></span>
           Gobierno autonómico
         </div>
 
         <div class="legend-item">
           <span class="color-dot"
-            style="background:#22c55e"></span>
+            style="background:var(--marker-cabildo)"></span>
           Cabildos
         </div>
 
         <div class="legend-item">
           <span class="color-dot"
-            style="background:#3b82f6"></span>
+            style="background:var(--marker-ayto)"></span>
           Ayuntamientos
         </div>
 
         <div class="legend-item">
           <span class="color-dot"
-            style="background:#f59e0b"></span>
+            style="background:var(--marker-organismo)"></span>
           Organismos
         </div>
 
         <div class="legend-item">
           <span class="color-dot"
-            style="background:#a855f7"></span>
+            style="background:var(--marker-empresa)"></span>
           Empresas públicas
         </div>
       `;
@@ -444,24 +400,6 @@
       }
 
     })();
-
-
-    /* =========================================================
-       ENFOQUE AUTOMÁTICO DESDE TARJETAS
-    ========================================================== */
-
-    // Si vienen coordenadas por URL, centrar el mapa
-    if (!isNaN(targetLat) && !isNaN(targetLon)) {
-
-      map.setView([targetLat, targetLon], 14);
-
-      const marker = L.marker([targetLat, targetLon]).addTo(map);
-
-      if (targetName) {
-        marker.bindPopup(`📍 ${decodeURIComponent(targetName)}`).openPopup();
-      }
-    }
-
 
   </script>
 
