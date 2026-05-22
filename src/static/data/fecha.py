@@ -1,7 +1,7 @@
 """
 =========================================================
 Open Data Canarias
-Metadata Updater Script (UPDATED PATH HANDLING)
+Universal API Metadata Updater (ROBUST VERSION)
 =========================================================
 """
 
@@ -12,140 +12,227 @@ from datetime import datetime
 
 
 # =========================================================
-# CONFIGURATION
+# CONFIG
 # =========================================================
 
-# Base directory of this script (prevents path errors)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Path to the JSON file (always relative to script location)
 JSON_FILE = os.path.join(BASE_DIR, "entidades.json")
-
-# HTTP request timeout (seconds)
 TIMEOUT = 10
 
 
 # =========================================================
-# LOAD JSON FILE
+# LOAD / SAVE
 # =========================================================
 
 def load_entities():
-    """
-    Loads entidades.json into memory.
-    """
     with open(JSON_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-# =========================================================
-# SAVE JSON FILE
-# =========================================================
-
 def save_entities(data):
-    """
-    Saves updated entities back to entidades.json.
-    """
     with open(JSON_FILE, "w", encoding="utf-8") as f:
-        json.dump(
-            data,
-            f,
-            indent=2,
-            ensure_ascii=False
-        )
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
 
 # =========================================================
-# DETECT CKAN API URL
+# SAFE HTTP / JSON
 # =========================================================
 
-def build_ckan_api_url(portal_url):
-    portal_url = portal_url.rstrip("/")
-    return f"{portal_url}/api/3/action/package_search?rows=1"
+def safe_get(url):
+    headers = {
+        "User-Agent": "OpenData-API-Checker/1.0",
+        "Accept": "application/json"
+    }
+    return requests.get(url, headers=headers, timeout=TIMEOUT)
 
 
-# =========================================================
-# FETCH LAST MODIFIED DATE
-# =========================================================
-
-def fetch_last_updated(portal_url):
+def safe_json(response):
     try:
-        api_url = build_ckan_api_url(portal_url)
-        print(f"🔍 Fetching: {api_url}")
-
-        response = requests.get(api_url, timeout=TIMEOUT)
-        response.raise_for_status()
-
-        data = response.json()
-
-        results = data.get("result", {}).get("results", [])
-
-        if not results:
-            print("⚠️ No datasets found")
+        if not response or not response.text:
             return None
 
-        first_dataset = results[0]
-        last_modified = first_dataset.get("metadata_modified")
-
-        if not last_modified:
-            print("⚠️ metadata_modified missing")
+        if "application/json" not in response.headers.get("Content-Type", ""):
             return None
 
-        try:
-            parsed_date = datetime.fromisoformat(last_modified.replace("Z", ""))
-            return parsed_date.strftime("%Y-%m-%d")
-        except Exception:
-            return last_modified
-
-    except requests.RequestException as e:
-        print(f"❌ Request error: {e}")
+        return response.json()
+    except ValueError:
         return None
 
-    except Exception as e:
-        print(f"❌ Unexpected error: {e}")
+
+def parse_date(value):
+    if not value:
         return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "")).strftime("%Y-%m-%d")
+    except Exception:
+        return value
 
 
 # =========================================================
-# PROCESS ALL ENTITIES
+# API DETECTION
+# =========================================================
+
+def is_ckan_action(url):
+    try:
+        r = safe_get(url.rstrip("/") + "/api/3/action/site_read")
+        data = safe_json(r)
+        return r.status_code == 200 and data and data.get("success") is True
+    except Exception:
+        return False
+
+
+def is_ckan_rest(url):
+    try:
+        r = safe_get(url.rstrip("/") + "/api/rest/package")
+        data = safe_json(r)
+        return r.status_code == 200 and isinstance(data, list)
+    except Exception:
+        return False
+
+
+def is_socrata(url):
+    try:
+        r = safe_get(url.rstrip("/") + "/api/views")
+        data = safe_json(r)
+        return r.status_code == 200 and isinstance(data, list)
+    except Exception:
+        return False
+
+
+def is_arcgis(url):
+    try:
+        r = safe_get(url.rstrip("/") + "/api/search/v1")
+        data = safe_json(r)
+        return r.status_code == 200 and data and "results" in data
+    except Exception:
+        return False
+
+
+# =========================================================
+# DATE FETCHERS
+# =========================================================
+
+def fetch_ckan_action_date(url):
+    r = safe_get(
+        url.rstrip("/")
+        + "/api/3/action/package_search?rows=1&sort=metadata_modified desc"
+    )
+    data = safe_json(r)
+    if not data:
+        return None
+
+    results = data.get("result", {}).get("results", [])
+    if not results:
+        return None
+
+    return parse_date(results[0].get("metadata_modified"))
+
+
+def fetch_ckan_rest_date(url):
+    r = safe_get(url.rstrip("/") + "/api/rest/package")
+    data = safe_json(r)
+    if not data:
+        return None
+
+    latest = None
+    for pkg in data:
+        date = pkg.get("metadata_modified") or pkg.get("revision_timestamp")
+        if date and (not latest or date > latest):
+            latest = date
+
+    return parse_date(latest)
+
+
+def fetch_socrata_date(url):
+    r = safe_get(url.rstrip("/") + "/api/views")
+    data = safe_json(r)
+    if not data:
+        return None
+
+    timestamps = [v.get("rowsUpdatedAt") for v in data if v.get("rowsUpdatedAt")]
+    if not timestamps:
+        return None
+
+    return datetime.utcfromtimestamp(max(timestamps)).strftime("%Y-%m-%d")
+
+
+def fetch_arcgis_date(url):
+    r = safe_get(
+        url.rstrip("/")
+        + "/api/search/v1?num=1&sortField=modified&sortOrder=desc"
+    )
+    data = safe_json(r)
+    if not data:
+        return None
+
+    results = data.get("results", [])
+    if not results:
+        return None
+
+    return parse_date(results[0].get("modified"))
+
+
+# =========================================================
+# MAIN PROCESS
 # =========================================================
 
 def update_entities():
     entities = load_entities()
-    total_updated = 0
+    updated = 0
 
     for entity in entities:
-        entity_name = entity.get("name", "Unknown Entity")
-
         print("\n================================================")
-        print(f"🏛️ Entity: {entity_name}")
+        print(f"🏛️ Entity: {entity.get('name', 'Unknown')}")
         print("================================================")
 
         for portal in entity.get("portals", []):
-            portal_name = portal.get("name", "Unnamed Portal")
-            portal_url = portal.get("url")
+            name = portal.get("name", "Unnamed portal")
+            url = portal.get("url")
 
-            if not portal_url:
-                print(f"⚠️ {portal_name}: Missing URL")
+            print(f"\n🌐 Portal: {name}")
+
+            if not url:
+                print("⚠️ Missing URL")
                 continue
 
-            print(f"\n🌐 Portal: {portal_name}")
+            try:
+                if is_ckan_action(url):
+                    portal["api_type"] = "CKAN_ACTION"
+                    portal["last_updated"] = fetch_ckan_action_date(url)
 
-            last_updated = fetch_last_updated(portal_url)
+                elif is_ckan_rest(url):
+                    portal["api_type"] = "CKAN_REST"
+                    portal["last_updated"] = fetch_ckan_rest_date(url)
 
-            if last_updated:
-                portal["last_updated"] = last_updated
-                total_updated += 1
-                print(f"✅ Updated: {last_updated}")
-            else:
+                elif is_socrata(url):
+                    portal["api_type"] = "SOCRATA"
+                    portal["last_updated"] = fetch_socrata_date(url)
+
+                elif is_arcgis(url):
+                    portal["api_type"] = "ARCGIS"
+                    portal["last_updated"] = fetch_arcgis_date(url)
+
+                else:
+                    portal["api_type"] = "UNKNOWN"
+                    portal["last_updated"] = None
+
+                if portal["last_updated"]:
+                    updated += 1
+                    print(f"✅ {portal['api_type']} | {portal['last_updated']}")
+                else:
+                    print(f"⚠️ {portal['api_type']} | No date")
+
+            except Exception as e:
+                print(f"❌ Unexpected error: {e}")
+                portal["api_type"] = "ERROR"
                 portal["last_updated"] = None
-                print("⚠️ Could not retrieve date")
 
     save_entities(entities)
 
     print("\n================================================")
     print("🎉 UPDATE COMPLETE")
     print("================================================")
-    print(f"Updated portals: {total_updated}")
+    print(f"Portals updated: {updated}")
 
 
 # =========================================================
