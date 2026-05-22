@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="/static/css/light-mode.css">
     <link rel="stylesheet" href="/static/css/dark-mode.css">
     <link rel="stylesheet" href="/static/css/estadisticas.css">
+
+  <!--
+    Anti-FOUC: restore dark theme BEFORE first paint.
+    Must be inline and synchronous — no defer/async.
+  -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('darkMode') === 'enabled') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) { /* localStorage blocked in sandboxed iframes */ }
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -212,7 +227,7 @@
 
         // Colores según tema
         function getChartColors(count) {
-            const isDark = document.body.classList.contains('dark-mode');
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             const darkPalette = ['#f97316', '#fb923c', '#fdba74', '#fed7aa', '#ea580c', '#c2410c', '#9a3412', '#7c2d12'];
             const lightPalette = ['#2563eb', '#3b82f6', '#60a5fa', '#93c5fd', '#1d4ed8', '#1e40af', '#1e3a8a', '#172554'];
             const palette = isDark ? darkPalette : lightPalette;
@@ -220,11 +235,11 @@
         }
 
         function getChartTextColor() {
-            return document.body.classList.contains('dark-mode') ? '#e2e8f0' : '#1e293b';
+            return document.documentElement.getAttribute('data-theme') === 'dark' ? '#e2e8f0' : '#1e293b';
         }
 
         function getTooltipConfig() {
-            const isDark = document.body.classList.contains('dark-mode');
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             return {
                 backgroundColor: isDark ? '#1f2937' : '#ffffff',
                 titleColor: isDark ? '#f9fafb' : '#1e293b',
@@ -257,7 +272,7 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: typeChartType === 'pie' ? 2 : 0,
                         borderRadius: typeChartType === 'bar' ? 8 : 0,
-                        borderColor: document.body.classList.contains('dark-mode') ? '#020617' : '#ffffff'
+                        borderColor: document.documentElement.getAttribute('data-theme') === 'dark' ? '#020617' : '#ffffff'
                     }]
                 },
                 options: {
@@ -608,17 +623,23 @@
 
         // Dark mode — uses safeStorage to prevent iframe crash
         (function () {
-            if (safeStorage('get', 'darkMode') === 'enabled') document.body.classList.add('dark-mode');
+            if (safeStorage('get', 'darkMode') === 'enabled') document.documentElement.setAttribute('data-theme', 'dark');
         })();
 
         const darkBtn = document.getElementById('darkModeToggle');
         darkBtn.addEventListener('click', () => {
-            const isDark = document.body.classList.toggle('dark-mode');
-            safeStorage('set', 'darkMode', isDark ? 'enabled' : 'disabled');
-            darkBtn.textContent = isDark ? '☀️ Modo claro' : '🌙 Modo oscuro';
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                safeStorage('set', 'darkMode', 'disabled');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                safeStorage('set', 'darkMode', 'enabled');
+            }
+            darkBtn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️ Modo claro' : '🌙 Modo oscuro';
             if (rawData.length > 0) regenerateAll();
         });
-        if (document.body.classList.contains('dark-mode')) darkBtn.textContent = '☀️ Modo claro';
+        if (document.documentElement.getAttribute('data-theme') === 'dark') darkBtn.textContent = '☀️ Modo claro';
 
         // Toggles bar/pie
         document.getElementById('toggleTypeChart').addEventListener('click', () => {

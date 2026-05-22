@@ -3,7 +3,7 @@
    ============================================ */
 
 /* Paleta: gris oscuro + teal, acentos en naranja */
-body.dark-mode {
+[data-theme="dark"] {
   --bg-primary: #111827;      /* fondo principal gris muy oscuro */
   --bg-secondary: #111827;    /* paneles grandes (search, stats) */
   --bg-card: #020617;         /* tarjetas ligeramente más oscuras */
@@ -33,76 +33,76 @@ body.dark-mode {
 }
 
 /* Fondo y texto generales en oscuro */
-body.dark-mode {
+[data-theme="dark"] {
   background: var(--bg-primary);
   color: var(--text-primary);
 }
 
 /* HEADER modo oscuro: gris + teal sutil */
-body.dark-mode header {
+[data-theme="dark"] header {
   background: radial-gradient(circle at top left, #14b8a6 0%, #0b1120 40%, #020617 100%);
 }
 
 /* SEARCH y STATS en modo oscuro */
-body.dark-mode .search,
-body.dark-mode .stats-bar {
+[data-theme="dark"] .search,
+[data-theme="dark"] .stats-bar {
   background: var(--bg-secondary);
   border-color: var(--border-color);
 }
 
 /* Inputs en modo oscuro */
-body.dark-mode .search input,
-body.dark-mode .search select {
+[data-theme="dark"] .search input,
+[data-theme="dark"] .search select {
   background: var(--input-bg);
   border-color: var(--input-border);
   color: var(--text-primary);
 }
 
-body.dark-mode .search input::placeholder {
+[data-theme="dark"] .search input::placeholder {
   color: var(--text-secondary);
 }
 
-body.dark-mode .search input:focus,
-body.dark-mode .search select:focus {
+[data-theme="dark"] .search input:focus,
+[data-theme="dark"] .search select:focus {
   border-color: var(--badge-text);
   box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
 }
 
 /* CARDS en modo oscuro */
-body.dark-mode .card {
+[data-theme="dark"] .card {
   background: var(--bg-card);
   box-shadow: var(--shadow);
   border-color: var(--border-color);
 }
 
-body.dark-mode .card:hover {
+[data-theme="dark"] .card:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
   border-color: #f97316;
 }
 
-body.dark-mode .card h3 {
+[data-theme="dark"] .card h3 {
   color: var(--badge-text);
 }
 
-body.dark-mode .island-tag {
+[data-theme="dark"] .island-tag {
   background: var(--badge-bg);
   color: var(--badge-text);
 }
 
-body.dark-mode .type-text,
-body.dark-mode .card-description,
-body.dark-mode .coordinates {
+[data-theme="dark"] .type-text,
+[data-theme="dark"] .card-description,
+[data-theme="dark"] .coordinates {
   color: var(--text-secondary);
 }
 
 /* Categorías en modo oscuro: más discretas que formatos */
-body.dark-mode .badge {
+[data-theme="dark"] .badge {
   background: #020617;   /* muy oscuro */
   color: var(--text-secondary);
 }
 
 /* Formatos en modo oscuro: fondo gris-azulado, texto teal suave */
-body.dark-mode .format-badge {
+[data-theme="dark"] .format-badge {
   background: #0b1220;   /* gris-azulado oscuro, distinto del verde */
   color: #38d5c4;        /* teal más claro que los meta-badges */
 }
@@ -110,128 +110,120 @@ body.dark-mode .format-badge {
 /* Meta-badges en modo oscuro:
    OK (machine-readable, API) en naranja para destacar,
    warn y neutral se mantienen */
-body.dark-mode .meta-badge.meta-ok {
+[data-theme="dark"] .meta-badge.meta-ok {
   color: #f97316;      /* naranja principal */
 }
 
-body.dark-mode .meta-badge.meta-warn {
+[data-theme="dark"] .meta-badge.meta-warn {
   color: #fb923c;      /* naranja algo más claro */
 }
 
-body.dark-mode .meta-badge.meta-neutral {
+[data-theme="dark"] .meta-badge.meta-neutral {
   color: #94a3b8;      /* gris neutro */
 }
 
 /* Stats dentro de la tarjeta */
-body.dark-mode .card-stats {
+[data-theme="dark"] .card-stats {
   background: var(--bg-primary);
   border-color: var(--border-color);
 }
 
-body.dark-mode .stat-value {
+[data-theme="dark"] .stat-value {
   color: var(--badge-text);
 }
 
-body.dark-mode .stat-label {
+[data-theme="dark"] .stat-label {
   color: var(--text-secondary);
 }
 
 /* Secciones internas de la tarjeta */
-body.dark-mode .card-section {
+[data-theme="dark"] .card-section {
   border-color: var(--border-color);
 }
 
 /* Enlace al portal */
-body.dark-mode .portal-link {
+[data-theme="dark"] .portal-link {
   color: var(--badge-text);
 }
 
-body.dark-mode .portal-link:hover {
+[data-theme="dark"] .portal-link:hover {
   color: #f97316; /* acento naranja en hover */
 }
 
 /* ABOUT en modo oscuro */
-body.dark-mode .about-inner {
+[data-theme="dark"] .about-inner {
   background: var(--bg-card);
   border-color: #14b8a6;
 }
 
-body.dark-mode .about-text {
+[data-theme="dark"] .about-text {
   color: var(--text-secondary);
 }
 
-body.dark-mode .about-text strong {
+[data-theme="dark"] .about-text strong {
   color: var(--text-header);
 }
 
 /* FOOTER en modo oscuro */
-body.dark-mode footer {
+[data-theme="dark"] footer {
   background: var(--footer-bg);
   color: var(--footer-text);
 }
 
 /* LOADING en oscuro */
-body.dark-mode .spinner {
+[data-theme="dark"] .spinner {
   border-color: var(--spinner-border);
   border-top-color: var(--spinner-top);
 }
 
 /* ERROR y EMPTY en oscuro */
-body.dark-mode .error-message {
+[data-theme="dark"] .error-message {
   background: var(--error-bg);
   border-left: 4px solid var(--error-border);
   color: var(--text-primary);
 }
 
-body.dark-mode .empty-state {
+[data-theme="dark"] .empty-state {
   background: var(--empty-bg);
 }
 
-body.dark-mode code {
+[data-theme="dark"] code {
   background: var(--badge-bg);
   color: var(--badge-text);
 }
 
 /* Botones secundarios (reset) en modo oscuro */
-body.dark-mode .reset-btn {
+[data-theme="dark"] .reset-btn {
   border-color: var(--border-color);
   color: var(--text-secondary);
 }
 
-body.dark-mode .reset-btn:hover {
+[data-theme="dark"] .reset-btn:hover {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-primary);
 }
 
 /* Botones primarios (retry / vacíos) en modo oscuro */
-body.dark-mode .retry-btn,
-body.dark-mode .reset-btn-empty {
+[data-theme="dark"] .retry-btn,
+[data-theme="dark"] .reset-btn-empty {
   background: #f97316; /* naranja */
   color: #111827;
 }
 
-body.dark-mode .retry-btn:hover,
-body.dark-mode .reset-btn-empty:hover {
+[data-theme="dark"] .retry-btn:hover,
+[data-theme="dark"] .reset-btn-empty:hover {
   background: #fb923c;
 }
 
 /* Logo en modo oscuro: teal */
-body.dark-mode .logo-svg {
+[data-theme="dark"] .logo-svg {
   background-color: #14b8a6;
 }
-<<<<<<< HEAD
-
-body.dark-mode .map-button {
-  background: #14b8a6;
-=======
 /* Botón mapa en dark mode */
-body.dark-mode .map-button {
+[data-theme="dark"] .map-button {
   background: #14b8a6;
-  color: white;
-  border: none;
->>>>>>> 55c9ef4b9949641ae962f9e5bf86422f54bc2f93
 }
 
-body.dark-mode .map-button:hover {
+[data-theme="dark"] .map-button:hover {
   background: #1d4ed8;
 }

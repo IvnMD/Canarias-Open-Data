@@ -86,17 +86,17 @@
 }
 
 /* DARK MODE */
-body.dark-mode .chart-card {
+[data-theme="dark"] .chart-card {
   background: var(--bg-card);
   border-color: var(--border-color);
 }
 
-body.dark-mode .chart-card:hover {
+[data-theme="dark"] .chart-card:hover {
   border-color: #f97316;
   box-shadow: 0 8px 28px rgba(249, 115, 22, 0.2);
 }
 
-body.dark-mode .chart-card h2 {
+[data-theme="dark"] .chart-card h2 {
   color: var(--text-header);
 }
 
@@ -114,7 +114,7 @@ body.dark-mode .chart-card h2 {
   transition: all 0.2s ease;
 }
 
-body.dark-mode .chart-card.drag-over {
+[data-theme="dark"] .chart-card.drag-over {
   border-color: #f97316;
 }
 
@@ -147,7 +147,7 @@ body.dark-mode .chart-card.drag-over {
   border-color: #2563eb;
 }
 
-body.dark-mode .reset-order-btn:hover {
+[data-theme="dark"] .reset-order-btn:hover {
   background: #f97316;
   border-color: #f97316;
 }
@@ -240,44 +240,44 @@ button.chart-toggle-btn {
 }
 
 /* Modo claro - botones */
-body:not(.dark-mode) .chart-toggle-btn,
-body:not(.dark-mode) button.chart-toggle-btn {
+html:not([data-theme="dark"]) .chart-toggle-btn,
+html:not([data-theme="dark"]) button.chart-toggle-btn {
   border-color: #2563eb;
   color: #2563eb;
   background-color: rgba(37, 99, 235, 0.05);
 }
 
-body:not(.dark-mode) .chart-toggle-btn:hover,
-body:not(.dark-mode) button.chart-toggle-btn:hover {
+html:not([data-theme="dark"]) .chart-toggle-btn:hover,
+html:not([data-theme="dark"]) button.chart-toggle-btn:hover {
   background-color: #2563eb;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-body:not(.dark-mode) .chart-toggle-btn:active,
-body:not(.dark-mode) button.chart-toggle-btn:active {
+html:not([data-theme="dark"]) .chart-toggle-btn:active,
+html:not([data-theme="dark"]) button.chart-toggle-btn:active {
   transform: translateY(0);
 }
 
 /* Modo oscuro - botones */
-body.dark-mode .chart-toggle-btn,
-body.dark-mode button.chart-toggle-btn {
+[data-theme="dark"] .chart-toggle-btn,
+[data-theme="dark"] button.chart-toggle-btn {
   border-color: #f97316;
   color: #f97316;
   background-color: rgba(249, 115, 22, 0.05);
 }
 
-body.dark-mode .chart-toggle-btn:hover,
-body.dark-mode button.chart-toggle-btn:hover {
+[data-theme="dark"] .chart-toggle-btn:hover,
+[data-theme="dark"] button.chart-toggle-btn:hover {
   background-color: #f97316;
   color: #0f172a;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
 }
 
-body.dark-mode .chart-toggle-btn:active,
-body.dark-mode button.chart-toggle-btn:active {
+[data-theme="dark"] .chart-toggle-btn:active,
+[data-theme="dark"] button.chart-toggle-btn:active {
   transform: translateY(0);
 }
 
@@ -286,4 +286,52 @@ body.dark-mode button.chart-toggle-btn:active {
   .card-header {
     flex-wrap: wrap;
   }
+}
+/* CABECERA DE TARJETA - Esto es lo que hace que el botón vaya a la derecha */
+.card-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    gap: 1rem !important;
+}
+
+.card-header h2 {
+    margin: 0 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    flex: 1 !important;
+}
+
+/* Botón de cambiar gráfica */
+.chart-toggle-btn {
+    background-color: transparent !important;
+    border: 2px solid #2563eb !important;
+    border-radius: 8px !important;
+    padding: 0.4rem 0.9rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out !important;
+    color: #2563eb !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+[data-theme="dark"] .chart-toggle-btn {
+    border-color: #f97316 !important;
+    color: #f97316 !important;
+}
+
+.chart-toggle-btn:hover {
+    background-color: #2563eb !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+[data-theme="dark"] .chart-toggle-btn:hover {
+    background-color: #f97316 !important;
+    color: #0f172a !important;
 }

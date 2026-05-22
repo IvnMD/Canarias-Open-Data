@@ -456,24 +456,24 @@ body.layout-detailed .card-apis {
 }
 
 /* Modo oscuro — ajusta colores de texto para legibilidad */
-body.dark-mode .meta-badge.meta-ok {
+[data-theme="dark"] .meta-badge.meta-ok {
     color: #4ade80;
 }
 
-body.dark-mode .meta-badge.meta-warn {
+[data-theme="dark"] .meta-badge.meta-warn {
     color: #fb923c;
 }
 
-body.dark-mode .meta-badge.meta-neutral {
+[data-theme="dark"] .meta-badge.meta-neutral {
     color: #94a3b8;
 }
 
-body.dark-mode .scope-badge {
+[data-theme="dark"] .scope-badge {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.12);
 }
 
-body.dark-mode .api-badge:hover {
+[data-theme="dark"] .api-badge:hover {
     color: #14b8a6;
     /* mantiene el mismo teal en dark mode */
 }
@@ -805,16 +805,16 @@ body.layout-detailed .badge-container {
     font-weight: 600;
 }
 
-body.dark-mode .about-inner {
+[data-theme="dark"] .about-inner {
     background: var(--bg-card);
     border-color: var(--border-color);
 }
 
-body.dark-mode .about-text {
+[data-theme="dark"] .about-text {
     color: var(--text-secondary);
 }
 
-body.dark-mode .about-text strong {
+[data-theme="dark"] .about-text strong {
     color: var(--text-header);
 }
 

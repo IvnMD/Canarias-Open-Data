@@ -28,6 +28,21 @@
 
   <!-- Map-specific styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+
+  <!--
+    Anti-FOUC: restore dark theme BEFORE first paint.
+    Must be inline and synchronous — no defer/async.
+  -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('darkMode') === 'enabled') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) { /* localStorage blocked in sandboxed iframes */ }
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -422,6 +437,8 @@ if (
 
         console.warn('No se pudo acceder a localStorage:', err);
 
+        // Apply data-theme attribute on <html>
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
 
     })();
