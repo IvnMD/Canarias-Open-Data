@@ -65,7 +65,7 @@ body.dark-mode .search input::placeholder {
 body.dark-mode .search input:focus,
 body.dark-mode .search select:focus {
   border-color: var(--badge-text);
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
 }
 
 /* CARDS en modo oscuro */
