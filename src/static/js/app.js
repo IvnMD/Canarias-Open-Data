@@ -467,7 +467,14 @@ function render(list) {
         <a href="${safeUrl(e.portal_url)}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
         </a>
-        ${hasCoords ? `<a href="/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}" class="coordinates map-link">📍 ${coords.lat}, ${coords.lon}</a>` : ""}
+        ${hasCoords ? `
+  <button 
+    class="map-button"
+    onclick="window.location.href='/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}'"
+  >
+    🗺️ Ver en mapa
+  </button>
+` : ""}
       </div>
     `;
 

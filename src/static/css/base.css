@@ -902,3 +902,21 @@ body.dark-mode .about-text strong {
         text-align: center;
     }
 }
+.map-button {
+  background: #14b8a6;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  margin-left: auto;
+  display: block;
+}
+
+.map-button:hover {
+  background: #005fa3;
+}
+
