@@ -87,7 +87,7 @@ header p {
     border-radius: 12px;
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     width: 100%;
@@ -843,6 +843,12 @@ body.dark-mode .about-text strong {
 /* ============================================
    RESPONSIVE (ya definido arriba para results)
    ============================================ */
+
+@media (max-width: 1024px) {
+    .search {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     .search {
