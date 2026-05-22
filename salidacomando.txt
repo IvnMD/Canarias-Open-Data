@@ -1,0 +1,311 @@
+* 03380a9 (HEAD -> main) Mis cambios locales
+*   bd17e96 Merge pull request #114 from IvnMD/buton_fix
+|\  
+| * 9b58bca (origin/buton_fix) Buton bug fixed
+| *   7cc06e1 Boton fix
+| |\  
+| * | d591d65 Boton que lleva al mapa
+| * |   68187a2 Fusion de ramas
+| |\ \  
+| * | | 0579803 cambios menores
+* | | |   ccff6da Merge pull request #113 from IvnMD/feat/actualizar-subtitulo-header
+|\ \ \ \  
+| |_|_|/  
+|/| | |   
+| * | | 0970d18 (origin/feat/actualizar-subtitulo-header, feat/actualizar-subtitulo-header) feat(header): actualizar subtítulo con descripción ampliada del ecosistema
+|/ / /  
+* | |   55c9ef4 Merge pull request #112 from IvnMD/apis_fixes
+|\ \ \  
+| * | | f14279f (origin/apis_fixes) Boton del mapa
+| * | | e327709 cambios menores
+* | | |   50ebca5 Merge pull request #111 from IvnMD/feat/103-github-action-validar-json
+|\ \ \ \  
+| |_|_|/  
+|/| | |   
+| * | | 3318af0 (origin/feat/103-github-action-validar-json) feat(ci): añadir GitHub Action de validación del schema JSON
+|/ / /  
+* | |   4e2f1a9 Merge pull request #110 from IvnMD/webfix
+|\ \ \  
+| |_|/  
+|/| |   
+| * | fcf4ffb Colores hardcodeados en mapa.html resuelto
+| * |   b6e7489 Cambios en mapa.html
+| |\ \  
+| |/ /  
+|/| |   
+* | |   ccf582c Merge pull request #109 from IvnMD/fix/96-localstorage-iframe-crash
+|\ \ \  
+| |_|/  
+|/| |   
+| * | 32e4c10 fix(#96): wrap localStorage in safeStorage helper to prevent iframe crash
+|/ /  
+* |   0821f62 Merge pull request #108 from IvnMD/webfix
+|\ \  
+| | * c9028b1 Cambio de colores de mapa.html a el css
+| |/  
+| *   04607c1 Merge branch 'main' into webfix
+| |\  
+| |/  
+|/|   
+* |   c978a26 Merge pull request #94 from IvnMD/docs/nuevas-entidades
+|\ \  
+| * | 4f93be7 Nuevas entidades
+|/ /  
+| *   460e910 Merge branch 'main' into webfix
+| |\  
+| |/  
+|/|   
+* |   a056920 Merge pull request #91 from IvnMD/piechart
+|\ \  
+| * | 278906e (origin/piechart) Boton con la coordenadas en el mapa
+| | * fbb0e71 Filtrado de semaforo
+| |/  
+|/|   
+* |   4907f55 Merge pull request #89 from IvnMD/bugfix/recuperar-semaforo
+|\ \  
+| * | f38c17d (bugfix/recuperar-semaforo) Recuperacion del badge de semaforo de madurez y comentarios en ingles
+| * | 5e1d728 Recuperacion del badge de semaforo de madurez y comentarios en ingles
+|/ /  
+* |   7e9e224 Merge pull request #88 from IvnMD/feature/docker
+|\ \  
+| * | 2bf58e3 Dockerizar la aplicación Flask y documentar la ejecución con contenedores
+| * | 5017f94 Dockerizar la aplicación Flask y documentar la ejecución con contenedores
+| * | f0ae6d1 Dockerizar la aplicación Flask y documentar la ejecución con contenedores
+* | |   9ed1f0c Merge pull request #87 from IvnMD/piechart
+|\ \ \  
+| | |/  
+| |/|   
+| * | 740d166 Coordenadas actulizadas
+| * | 3985f99 Coordenadas arrgladas
+* | |   a1edf82 Merge pull request #86 from IvnMD/webfix
+|\ \ \  
+| |_|/  
+|/| |   
+| * | c1810a0 Orden por dataset, graficas y apis en modo compacto
+|/ /  
+* |   c46327b Merge pull request #84 from IvnMD/feature/semaforo-madurez
+|\ \  
+| * | d43e61a Añadido el badge de madurez del portal segun su tecnologia
+* | |   962644a Merge pull request #85 from IvnMD/piechart
+|\ \ \  
+| | |/  
+| |/|   
+| * | a756b89 Cambios en estadisticas y primera version de fechas
+* | |   67f219b Merge pull request #83 from IvnMD/feature/prueba-modo-claro
+|\ \ \  
+| |_|/  
+|/| |   
+| * | 24cf415 Nueva paleta modo claro
+|/ /  
+* |   8a6d1b5 Merge pull request #80 from IvnMD/bugfix/mapeado-badges
+|\ \  
+| * \   7cf6e5d Merge branch 'main' into bugfix/mapeado-badges
+| |\ \  
+| |/ /  
+|/| |   
+* | | 6dbd034 cambio en los templates
+* | |   2e265f2 Merge pull request #75 from IvnMD/bugfix/apis-vista-compacta
+|\ \ \  
+| * | | a31ce34 Esconder la lista de apis en vista compacta
+| * | | 6470037 Esconder la lista de apis en vista compacta
+|/ / /  
+| * / 6ea029b Solucion del mapeado de badges
+|/ /  
+* | b6e0eb8 Merge pull request #74 from IvnMD/piechart
+|\| 
+| * b6460e0 Creacion de la PieChart
+|/  
+* 9f41736 Automatizacion de Github Actions para que aparezca fecha y hora en los issues
+*   c1cc420 Merge pull request #71 from IvnMD/webfix
+|\  
+| * fbffe42 Actualización estadisticas y error mapa
+* |   0b32f65 Merge pull request #70 from IvnMD/feature/apis-vista-detallada
+|\ \  
+| |/  
+|/|   
+| * 2fa513d Mostrar APIs disponibles en la vista detallada y estilos de hover
+* | 1400f23 Documentacion de templates
+* |   5a2f6fb Merge branch 'main' of github.com:IvnMD/Practicas-dam-Datos-Abiertos
+|\ \  
+| * | e3d740b Merge pull request #69 from IvnMD/bugfix/footer-estadisticas
+| |\| 
+| | * 8af3915 Unificar footer de la página de estadísticas con la página principal
+| |/  
+* | 8dd69ca Documentacion de templates
+* | a2c7bf9 Merge branch 'main' of github.com:IvnMD/Practicas-dam-Datos-Abiertos
+|\| 
+| *   02888ba Merge pull request #66 from IvnMD/webfix
+| |\  
+| | * 15000f9 Arreglado el color de fondo del mapa
+| |/  
+* / d10fa58 Documentacion de templates
+|/  
+* b375f9b Restaurar borde naranja en hover y acentos en modo oscuro
+*   1bef52f Merge pull request #61 from IvnMD/feature/dark-mode-tuning
+|\  
+| * db5e4c4 Aplicar bordes teal a buscador, filtros y bloque de misión/visión
+| * 677024b Usar borde naranja en hover de tarjetas en modo oscuro
+| * 2736a9e Destacar meta-badges de Machine-readable y API en naranja en modo oscuro
+| * 23d28a2 Afinar paleta del modo oscuro hacia teal
+* |   36de766 Merge pull request #60 from IvnMD/feature/modoClaro
+|\ \  
+| * | c346214 Refinar modo claro alineado con paleta del logo
+| |/  
+* | b1c40ab Merge pull request #59 from IvnMD/feature/dark-mode-tuning
+|\| 
+| * c5a125b Refinar contraste y legibilidad en modo oscuro
+|/  
+*   28dc545 Merge pull request #58 from IvnMD/feature/logoTitulo
+|\  
+| * 6240749 Colocacion de logo junto a titulo de web
+* | e746443 Merge pull request #57 from IvnMD/feature/botonDisposicion
+|\| 
+| * 68214df Informacion ampliada en las cards
+| * afc705e Mejorar vista detallada: más descripción y categorías visibles
+| * dde705e Esconder botone de Ver más en la vista detallada
+| * 1430ecf Mas descripcion e insignias en la vita detallada
+| * 99e93f0 Arreglo de puntos de ruptura del grid
+| * 3b46c17 Ignore repomix output file
+| * 5f5490f Ajustar columnas para la disposicion detallada
+| * 7d5aa04 Añadir fncion de activacion del layout/distribucion
+* | 96869d2 Merge pull request #56 from IvnMD/feature/botonDisposicion
+|\| 
+| * 9a655fa Boton de cambio de distribucion y layout detallado
+|/  
+* 5b2c9cd Creacion de la carpeta utils
+*   e86e4da Merge pull request #50 from IvnMD/webfix
+|\  
+| *   bbe0347 Merge branch 'main' into webfix
+| |\  
+| |/  
+|/|   
+* | 6dd22b6 App.py Documentado completamente en ingles
+* |   853dd14 Merge pull request #49 from IvnMD/webfix
+|\ \  
+| | * 6221a33 Cambios en el Mapa
+| |/  
+| * 010c81b Correción del apartado estadisticas y mapa
+|/  
+*   b70eb95 Merge pull request #47 from IvnMD/docs/json-otras-entidades
+|\  
+| * 117ba51 Cambios MUY GRANDES en la estructura del json + json schema form + validadorJson.py
+| * 420332e Cambios MUY GRANDES en la estructura del json + json schema form + validadorJson.py
+| * 90cc525 Correcciones menores en json
+* | 442912f Update JSON structure in README.md
+|/  
+*   2815d66 Merge pull request #37 from IvnMD/mapa
+|\  
+| * 13af612 Tercera version del mapa de entidades
+|/  
+*   f2fc2ea Merge pull request #34 from IvnMD/feature/new-footer
+|\  
+| * 91ab489 Modificacion del footer ## 📝 Descripción Footer mejorado segun lo hablado.
+* |   cdd4c78 Merge pull request #36 from IvnMD/docs/json-otras-entidades
+|\ \  
+| * \   a227844 Merge branch 'main' into docs/json-otras-entidades
+| |\ \  
+| |/ /  
+|/| |   
+* | | 8b28e49 Creacion de la template mapa.html
+| * | 2d01da9 Nuevas entidades en data
+| * | 024f56a Creacion de seccion mision/vision
+|/ /  
+* |   446535f Merge pull request #33 from IvnMD/webfix
+|\ \  
+| |/  
+|/|   
+| * aae5b05 Boton que muestre la descripcion completa
+* | 07476e3 Merge pull request #32 from IvnMD/webfix
+|\| 
+| * 3c0ae29 Agregado el menu principal de navegación
+* | 20eace8 Creacion de run.py
+|/  
+* 0cdbf0a Creacion de run.py
+* 80e3c4e Update README.md
+* 3f7d789 Creacion de run.py
+* 2b4f8b7 Mejora estructural
+* 0250fbb Creacion de carpeta SRC
+*   2d2f131 Merge pull request #29 from IvnMD/docs/json-actualizado
+|\  
+| * e19292e Json actualizado
+* |   6178314 Merge pull request #28 from IvnMD/webfix
+|\ \  
+| |/  
+|/|   
+| * 7e83baa Actualización de los Styles
+|/  
+*   4042ca2 Merge pull request #26 from IvnMD/graphic-test
+|\  
+| *   46e60ba Merge branch 'main' into graphic-test
+| |\  
+| |/  
+|/|   
+* |   c3db80c Merge pull request #27 from IvnMD/feature/logo-svg
+|\ \  
+| * \   a197228 Merge branch 'main' into feature/logo-svg
+| |\ \  
+| |/ /  
+|/| |   
+| * | 9e2ccb2 feat: añadir logo SVG y favicon con soporte modo oscuro
+| | *   110cff2 Merge branch 'main' into graphic-test
+| | |\  
+| |_|/  
+|/| |   
+* | |   8956632 Merge pull request #25 from IvnMD/webfix
+|\ \ \  
+| |/ /  
+|/| |   
+| * | 76db8d1 Botón desplegable de los Formatos
+| * | 830edb6 Botón desplegable de Categoría
+| | * a1ee30c pull request, Boton que envia a una pagina con estadisticas
+| | * da58ece Boton de las estadisticas
+| |/  
+|/|   
+* | 1c76c50 Fix command capitalization in README.md
+* | a9e7483 Merge pull request #13 from IvnMD/webfix
+|\| 
+| * ae430ce Actualización de los estilos de la web
+* | 737c5e1 Añadir plantilla de mensajes para commits
+|/  
+* 959968e Templates de commits, PR e Issues modificados
+* a2268bb Enhance pull request template with automation details
+* 54ef872 Update README.md
+* de47f06 Se añaden las instrucciones de uso del generado web
+*   d639721 Merge pull request #12 from IvnMD/feature/etiquetado-islas-json
+|\  
+| *   ef89456 Merge remote-tracking branch 'origin/main' into feature/etiquetado-islas-json
+| |\  
+| |/  
+|/|   
+* | 2766352 Cambio a la estructura del proyecto y primera version del lanzador web app.py
+| * 26aacb0 Guardando cambios antes de cambiar de rama
+|/  
+* 03d6608 Update README with web generation command and description
+* 06c580a Actualización de la web
+* 994f0b5 Adhesion de enlaces a la documentacion en el README.md
+* 37e4023 docs: añadir .gitignore, guías de contribución y plantilla de PR
+*   ab03123 Merge pull request #4 from IvnMD/jsonMod
+|\  
+| * 61744a8 Normalizado y añadido de entidades
+* | 1c46f39 Actualización del Style.css
+|/  
+* 6e46fe6 Actualización del json y JavaScript
+* b92f58a Separamos los archivos de la web en subdirectorios
+* 33f6a50 Modelo provisional del index.html
+* f436a47 Primer modelo del index.html
+* 093b418 Correcion del parametro 'islands' y se añaden 2 portles extra
+* e8b6e5a Se han agregado otros 3 portales de datos
+* 72f3df4 Se han añadido otros 3 portales de datos
+* 083ca0e Actualización del json
+* c2b6157 Correccion de la subida de entidades
+* 221945c Enhance README with JSON structure details
+* c8a78c9 Primeras tres entidades
+* 44a39e8 Add files via upload
+* 12bceca Add files via upload
+* 49defb2 Update entidades.json
+* 0975abc Create entidades.json
+* 5f6c917 Revise JSON example for entity structure
+* cf56979 Update license information to GPL-3.0
+* 845f3eb Update README to remove introductory sentence
+* e9f8ec7 Expand README with project details and objectives
+* 5147632 Initial commit

@@ -468,12 +468,9 @@ function render(list) {
           🔗 Acceder al portal <span class="arrow">→</span>
         </a>
         ${hasCoords ? `
-        <button 
-          class="map-button"
-          onclick="window.location.href='/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}'"
-        >
-          🗺️ Ver en mapa
-        </button>
+      <button class="map-button" onclick="window.location.href='/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}'" >
+        <span class="pin-icon">📍</span><span>Ver en mapa</span>
+      </button>
       ` : ""}
             </div>
           `;
@@ -581,44 +578,44 @@ function getIslandTag(item) {
   return islandNames[islands[0]] || null;
 }
 
-function updateData(){
+function updateData() {
   document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("updateBtn");
-  const output = document.getElementById("updateOutput");
+    const btn = document.getElementById("updateBtn");
+    const output = document.getElementById("updateOutput");
 
-  // Seguridad extra
-  if (!btn) {
-    console.error("❌ Botón updateBtn no encontrado en el DOM");
-    return;
-  }
-
-  btn.addEventListener("click", async () => {
-    btn.disabled = true;
-    output.textContent = "⏳ Ejecutando actualización...\n";
-
-    try {
-      const response = await fetch("/run-update", {
-        method: "POST"
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        output.textContent += "✅ Actualización completada\n\n";
-        output.textContent += data.stdout;
-      } else {
-        output.textContent += "❌ Error\n\n";
-        output.textContent += data.stderr || data.error;
-      }
-
-    } catch (err) {
-      output.textContent += "❌ Error de conexión\n";
-      output.textContent += err.toString();
-    } finally {
-      btn.disabled = false;
+    // Seguridad extra
+    if (!btn) {
+      console.error("❌ Botón updateBtn no encontrado en el DOM");
+      return;
     }
+
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      output.textContent = "⏳ Ejecutando actualización...\n";
+
+      try {
+        const response = await fetch("/run-update", {
+          method: "POST"
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          output.textContent += "✅ Actualización completada\n\n";
+          output.textContent += data.stdout;
+        } else {
+          output.textContent += "❌ Error\n\n";
+          output.textContent += data.stderr || data.error;
+        }
+
+      } catch (err) {
+        output.textContent += "❌ Error de conexión\n";
+        output.textContent += err.toString();
+      } finally {
+        btn.disabled = false;
+      }
+    });
   });
-});
 }
 /**
  * Escapes a string for safe insertion into innerHTML.

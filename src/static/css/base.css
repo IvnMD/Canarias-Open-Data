@@ -902,23 +902,49 @@ body.layout-detailed .badge-container {
         text-align: center;
     }
 }
+
+/* ─── BOTÓN MAPA: idéntico a portal-link ─────────────────── */
 .map-button {
-  background: #14b8a6;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 600;
-  transition: background 0.2s ease;
-  margin-left: auto;
-  display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+    /* Idéntico a .portal-link */
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--badge-text);
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: gap 0.2s ease;
 }
 
 .map-button:hover {
-  background: #005fa3;
+    text-decoration: none;        /* quita el subrayado global */
 }
+
+.map-button:hover span:last-child {
+    text-decoration: underline;   /* subraya solo el texto */
+}
+
+/* ─── Animación pin en hover ──────────────────────────────── */
+.map-button .pin-icon {
+    display: inline-block;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.map-button:hover .pin-icon {
+    transform: translateY(-3px);
+}
+
 #updateBtn {
   background-color: #1e88e5;      /* Azul principal */
   color: #ffffff;                 /* Texto blanco */

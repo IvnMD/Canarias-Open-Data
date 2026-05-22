@@ -179,3 +179,11 @@ code {
 header .logo-svg {
   background-color: #ffffff;
 }
+
+.map-button {
+    color: var(--badge-text);
+}
+
+.map-button:hover {
+    color: var(--text-primary);
+}
