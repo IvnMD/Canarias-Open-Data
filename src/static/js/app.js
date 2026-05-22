@@ -675,7 +675,130 @@ function initDarkMode() {
     }
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  // =========================
+  // Elementos del DOM
+  // =========================
+  const updateBtn = document.getElementById("updateBtn");
+  const output = document.getElementById("updateOutput");
+  const entidadesContainer = document.getElementById("entidades");
 
+  // =========================
+  // Seguridad básica
+  // =========================
+  if (!updateBtn) {
+    console.error("❌ No se encontró el botón #updateBtn");
+    return;
+  }
+
+  // =========================
+  // Cargar entidades al iniciar
+  // =========================
+  cargarEntidades();
+
+  // =========================
+  // Evento botón actualizar
+  // =========================
+  updateBtn.addEventListener("click", async () => {
+    updateBtn.disabled = true;
+    output.textContent = "⏳ Ejecutando actualización de datos...\n";
+
+    try {
+      const response = await fetch("/run-update", {
+        method: "POST"
+      });
+
+      if (!response.ok) {
+        throw new Error("Error HTTP " + response.status);
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        output.textContent += "✅ Actualización completada\n\n";
+        output.textContent += data.stdout || "";
+
+        // 🔄 Recargar datos tras la actualización
+        await cargarEntidades();
+      } else {
+        output.textContent += "❌ Error en la actualización\n\n";
+        output.textContent += data.stderr || data.error || "Error desconocido";
+      }
+
+    } catch (err) {
+      output.textContent += "❌ Error de conexión\n";
+      output.textContent += err.toString();
+    } finally {
+      updateBtn.disabled = false;
+    }
+  });
+
+  // =========================
+  // Función: cargar entidades
+  // =========================
+  async function cargarEntidades() {
+    try {
+      const response = await fetch("/api/entidades");
+
+      if (!response.ok) {
+        throw new Error("Error HTTP " + response.status);
+      }
+
+      const entidades = await response.json();
+      renderEntidades(entidades);
+
+    } catch (err) {
+      console.error("❌ Error cargando entidades:", err);
+    }
+  }
+
+  // =========================
+  // Renderizar entidades
+  // =========================
+  function renderEntidades(entidades) {
+    if (!entidadesContainer) return;
+
+    entidadesContainer.innerHTML = "";
+
+    entidades.forEach(entidad => {
+      const div = document.createElement("div");
+      div.className = "entidad";
+
+      div.innerHTML = `
+        <h3>${entidad.nombre}</h3>
+        <p><strong>Última actualización:</strong> ${entidad.last_updated || "—"}</p>
+        <p><strong>Tipo de API:</strong> ${entidad.api_type_detected || "—"}</p>
+      `;
+
+      entidadesContainer.appendChild(div);
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("updateBtn");
+  const output = document.getElementById("updateOutput");
+
+  if (!btn || !output) return;
+
+  btn.addEventListener("click", async () => {
+    output.style.display = "none";
+    output.textContent = "⏳ Actualizando datos...";
+    output.style.display = "block";
+
+    btn.disabled = true;
+
+    try {
+      const res = await fetch("/run-update");
+      const data = await res.json();
+
+      output.textContent = data.message || "✔ Proceso completado";
+    } catch (err) {
+      output.textContent = "❌ Error al ejecutar el script";
+    } finally {
+      btn.disabled = false;
+    }
+  });
+});
 // Layout toggle
 
 /**
