@@ -1062,3 +1062,20 @@ body.layout-detailed .badge-container {
   white-space: pre-wrap;
   text-align: left;
 }
+
+
+.compact-only {
+  display: block;
+}
+
+.detail-only {
+  display: none;
+}
+
+body.layout-detailed .compact-only {
+  display: none;
+}
+
+body.layout-detailed .detail-only {
+  display: block;
+}
