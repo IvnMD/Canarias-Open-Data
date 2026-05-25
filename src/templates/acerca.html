@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Metodología, fuentes oficiales y schema del catálogo Open Data Canarias">
+  <meta name="author" content="Datos Abiertos Canarias">
+  <title>Acerca de — Open Data Canarias</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
+  <link rel="stylesheet" href="/static/css/base.css">
+  <link rel="stylesheet" href="/static/css/light-mode.css">
+  <link rel="stylesheet" href="/static/css/dark-mode.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('darkMode') === 'enabled') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    .acerca-page {
+      max-width: 860px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .acerca-page h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 2rem 0 0.75rem;
+      color: var(--text-primary);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.4rem;
+    }
+
+    .acerca-page p,
+    .acerca-page li {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .acerca-page ul {
+      padding-left: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .acerca-page li {
+      margin-bottom: 0.35rem;
+    }
+
+    .acerca-page a {
+      color: var(--badge-text);
+      text-decoration: underline;
+      word-break: break-word;
+    }
+
+    .acerca-page a:hover {
+      opacity: 0.8;
+    }
+
+    .schema-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 0.75rem;
+    }
+
+    .schema-table th,
+    .schema-table td {
+      padding: 0.55rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .schema-table th {
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+    }
+
+    .schema-table td {
+      color: var(--text-secondary);
+    }
+
+    .schema-table td:first-child {
+      font-family: monospace;
+      font-size: 0.82rem;
+      color: var(--badge-text);
+      white-space: nowrap;
+    }
+
+    .acerca-header {
+      margin-bottom: 0.25rem;
+    }
+
+    .acerca-header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .acerca-header p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    .license-badge-about {
+      display: inline-block;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-bottom:0.5rem;">
+      <span class="logo-svg" role="img" aria-label="Logo Open Data Canarias"></span>
+      <h1>Open Data Canarias</h1>
+    </div>
+    <p>Catálogo unificado de datos abiertos de instituciones, organismos y datasets en Canarias</p>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-link">
+        <span class="nav-icon">🔍</span>
+        <span>Buscador</span>
+      </a>
+      <a href="{{ url_for('estadisticas') }}" class="nav-link">
+        <span class="nav-icon">📊</span>
+        <span>Estadísticas</span>
+      </a>
+      <a href="{{ url_for('mapa') }}" class="nav-link">
+        <span class="nav-icon">🗺️</span>
+        <span>Mapa</span>
+      </a>
+      <a href="{{ url_for('acerca') }}" class="nav-link active">
+        <span class="nav-icon">ℹ️</span>
+        <span>Acerca de</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="acerca-page">
+
+    <div class="acerca-header">
+      <h1>ℹ️ Acerca de este proyecto</h1>
+      <p>
+        Documentación sobre la metodología, las fuentes de datos y
+        la estructura del catálogo de Open Data Canarias.
+      </p>
+    </div>
+
+    <!-- ── METODOLOGÍA ── -->
+    <h2>🔬 Metodología de recopilación</h2>
+    <p>
+      Los datos se recopilan manualmente a partir de fuentes oficiales:
+      portales de transparencia, portales CKAN, sedes electrónicas y
+      páginas institucionales de cada entidad. Cada entrada se valida
+      contra el schema JSON oficial del proyecto antes de incorporarse
+      al catálogo.
+    </p>
+    <p>
+      El campo <code>verification.status</code> indica el nivel de
+      confianza de cada registro:
+    </p>
+    <ul>
+      <li><strong>verified</strong> — dato comprobado directamente en fuente oficial.</li>
+      <li><strong>estimated</strong> — estimado a partir de indicios fiables.</li>
+      <li><strong>inferred</strong> — deducido de otras fuentes.</li>
+      <li><strong>pending</strong> — pendiente de verificación.</li>
+    </ul>
+
+    <!-- ── CAMPOS DEL SCHEMA ── -->
+    <h2>🧩 Campos principales del catálogo</h2>
+    <table class="schema-table" aria-label="Descripción de los campos del catálogo">
+      <thead>
+        <tr>
+          <th>Campo</th>
+          <th>Descripción</th>
+          <th>Valores posibles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td>Identificador único de la entidad</td>
+          <td>Texto en minúsculas con guiones bajos</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>Nombre oficial de la entidad</td>
+          <td>Texto libre</td>
+        </tr>
+        <tr>
+          <td>entity_kind</td>
+          <td>Tipo de entidad</td>
+          <td>gobierno_autonomico · cabildo · ayuntamiento · organismo · empresa_publica</td>
+        </tr>
+        <tr>
+          <td>scope</td>
+          <td>Ámbito administrativo</td>
+          <td>autonomico · insular · municipal · estatal · europeo</td>
+        </tr>
+        <tr>
+          <td>islands</td>
+          <td>Islas a las que pertenece la entidad</td>
+          <td>Tenerife · Gran Canaria · Lanzarote · Fuerteventura · La Palma · La Gomera · El Hierro · La Graciosa · Todas</td>
+        </tr>
+        <tr>
+          <td>portals</td>
+          <td>Lista de portales publicados por la entidad</td>
+          <td>Array de objetos (ver schema)</td>
+        </tr>
+        <tr>
+          <td>portals.kind</td>
+          <td>Tipo de portal</td>
+          <td>open_data · transparencia · estadistica · geoespacial · agregador · other</td>
+        </tr>
+        <tr>
+          <td>portals.machine_readable</td>
+          <td>¿Los datos son legibles por máquina?</td>
+          <td>true / false</td>
+        </tr>
+        <tr>
+          <td>portals.has_api</td>
+          <td>¿Dispone de API?</td>
+          <td>true / false / null</td>
+        </tr>
+        <tr>
+          <td>verification.status</td>
+          <td>Nivel de confianza del registro</td>
+          <td>verified · estimated · inferred · pending</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── FUENTES OFICIALES ── -->
+    <h2>🔗 Fuentes oficiales de referencia</h2>
+    <ul>
+      <li>
+        <a href="https://datos.canarias.es" target="_blank" rel="noopener noreferrer">datos.canarias.es</a>
+        — Portal oficial de datos abiertos del Gobierno de Canarias
+      </li>
+      <li>
+        <a href="https://www.istac.es" target="_blank" rel="noopener noreferrer">istac.es</a>
+        — Instituto Canario de Estadística
+      </li>
+      <li>
+        <a href="https://www.grafcan.es" target="_blank" rel="noopener noreferrer">grafcan.es</a>
+        — Cartografía de Canarias (GRAFCAN)
+      </li>
+      <li>
+        <a href="https://datos.gob.es" target="_blank" rel="noopener noreferrer">datos.gob.es</a>
+        — Catálogo nacional de datos abiertos (España)
+      </li>
+      <li>
+        <a href="https://transparencia.gob.es" target="_blank" rel="noopener noreferrer">transparencia.gob.es</a>
+        — Portal de Transparencia del Estado
+      </li>
+      <li>
+        Sedes electrónicas y portales de transparencia de los cabildos insulares y ayuntamientos
+      </li>
+    </ul>
+
+    <!-- ── LICENCIA ── -->
+    <h2>📄 Licencia del proyecto</h2>
+    <p>
+      El código fuente de este proyecto se distribuye bajo la licencia
+      <strong>MIT</strong>.
+      <span class="license-badge-about">MIT License</span>
+    </p>
+    <p>
+      Los datos del catálogo (<code>entidades.json</code>) se publican
+      bajo <strong>Creative Commons CC BY 4.0</strong> — puedes usarlos
+      libremente citando la fuente.
+    </p>
+
+    <!-- ── ACTUALIZACIÓN ── -->
+    <h2>🗓️ Actualización del catálogo</h2>
+    <p>
+      El catálogo se actualiza manualmente. La fecha de última revisión
+      de cada portal se refleja en el campo
+      <code>portals.last_updated</code> (formato <code>YYYY-MM</code>).
+      El script <code>src/static/data/fecha.py</code> automatiza la
+      consulta a APIs CKAN para mantener esas fechas al día.
+    </p>
+
+    <!-- ── CONTRIBUIR ── -->
+    <h2>🤝 Contribuir al proyecto</h2>
+    <p>
+      ¿Detectas una entidad que falta o un dato incorrecto?
+      Consulta la guía de contribución en el repositorio:
+    </p>
+    <ul>
+      <li>
+        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/blob/main/CONTRIBUTING.md"
+          target="_blank" rel="noopener noreferrer">CONTRIBUTING.md</a>
+      </li>
+      <li>
+        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/issues"
+          target="_blank" rel="noopener noreferrer">Abrir un issue en GitHub</a>
+      </li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p><strong>Open Data Canarias</strong> — Inventario del ecosistema de datos abiertos de las Islas Canarias</p>
+    <p>© 2026 · Los datos proceden de los portales oficiales de cada entidad · Licencias indicadas en cada portal</p>
+    <p>Proyecto académico DAM</p>
+  </footer>
+
+  <script>
+    const _mem = {};
+    function safeStorage(a, k, v) {
+      try {
+        if (a === 'get') return localStorage.getItem(k);
+        if (a === 'set') { localStorage.setItem(k, v); return; }
+      } catch {
+        if (a === 'get') return _mem[k] ?? null;
+        if (a === 'set') { _mem[k] = v; return; }
+      }
+    }
+    const darkBtn = document.getElementById('darkModeToggle');
+    if (darkBtn) {
+      darkBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          safeStorage('set', 'darkMode', 'disabled');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          safeStorage('set', 'darkMode', 'enabled');
+        }
+        darkBtn.textContent = document.documentElement.getAttribute('data-theme') === 'dark'
+          ? '☀️ Modo claro' : '🌙 Modo oscuro';
+      });
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        darkBtn.textContent = '☀️ Modo claro';
+      }
+    }
+  </script>
+
+</body>
+</html>

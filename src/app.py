@@ -60,6 +60,14 @@ def estadisticas():
     return render_template("estadisticas.html")
 
 
+@app.route("/acerca")
+def acerca():
+    """
+    Informational page about methodology, sources and catalog schema.
+    """
+    return render_template("acerca.html")
+
+
 # REST API
 
 @app.route("/api/entidades")
