@@ -417,6 +417,54 @@ python generar_web.py
 
 ---
 
+# API
+
+El servidor Flask expone los siguientes endpoints REST.
+
+## `GET /api/entidades`
+
+Devuelve la lista de entidades en formato JSON.  
+Todos los parámetros son **opcionales y combinables**. Si no hay coincidencias devuelve `[]`.
+
+| Parámetro | Tipo | Descripción | Ejemplo |
+|-----------|------|-------------|---------|
+| `island` | string | Filtra por isla (coincidencia en la lista `islands`) | `?island=Tenerife` |
+| `kind` | string | Filtra por tipo de entidad (`entitykind`) | `?kind=cabildo` |
+| `scope` | string | Filtra por ámbito administrativo | `?scope=insular` |
+| `topic` | string | Filtra por temática (coincidencia parcial, case-insensitive) | `?topic=turismo` |
+| `has_api` | `true`/`false` | Filtra por presencia de API declarada | `?has_api=true` |
+
+### Ejemplos
+
+```bash
+# Todos los ayuntamientos de Gran Canaria
+GET /api/entidades?island=Gran+Canaria&kind=ayuntamiento
+
+# Entidades con API que publican datos de turismo
+GET /api/entidades?topic=turismo&has_api=true
+
+# Cabildos de ámbito insular
+GET /api/entidades?kind=cabildo&scope=insular
+```
+
+## `GET /api/stats`
+
+Devuelve un resumen agregado de KPIs del catálogo, calculado en servidor.
+
+```json
+{
+  "total_entidades": 24,
+  "total_portales": 31,
+  "total_datasets": 4820,
+  "con_api": 12,
+  "machine_readable_pct": 78,
+  "por_tipo": { "cabildo": 8, "ayuntamiento": 6 },
+  "por_isla": { "Tenerife": 9, "Gran Canaria": 8 }
+}
+```
+
+---
+
 # Publicación en GitHub Pages
 
 ## Opción rápida
