@@ -205,7 +205,7 @@ header p {
     color: var(--badge-text);
 }
 
-/* Botón menú colapsable (hamburguesa) */
+/* Hamburger menu toggle button */
 .menu-toggle-btn {
     background: none;
     border: none;
@@ -226,7 +226,7 @@ header p {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Estados del menú colapsable */
+/* Collapsible nav states */
 .main-nav.collapsed {
     max-height: 0;
     overflow: hidden;
@@ -250,7 +250,7 @@ main {
     flex: 1;
 }
 
-/* Footer pegado al final de la página */
+/* Footer pinned to bottom */
 footer {
     background: #1a1a2e;
     color: #e8e8e8;
@@ -356,7 +356,7 @@ body.layout-detailed #results {
     white-space: nowrap;
 }
 
-/* ─── TIPO + SCOPE ───────────────────────────────────── */
+/* ─── TYPE + SCOPE ───────────────────────────────────── */
 
 .card-type {
     padding: 0 1rem;
@@ -365,13 +365,11 @@ body.layout-detailed #results {
     align-items: center;
     gap: 0.4rem;
     flex-wrap: wrap;
-    /* permite salto si el scope no cabe */
 }
 
 .type-icon {
     font-size: 1rem;
     flex-shrink: 0;
-    /* el icono nunca se encoge */
 }
 
 .type-text {
@@ -380,7 +378,7 @@ body.layout-detailed #results {
     letter-spacing: 0.5px;
 }
 
-/* Badge de ámbito (scope): solo aparece cuando aporta info */
+/* Scope badge: only shown when it adds information */
 .scope-badge {
     font-size: 0.7rem;
     padding: 0.15rem 0.5rem;
@@ -413,21 +411,21 @@ body.layout-detailed #results {
     line-height: 1.4;
 }
 
-/* Verde: datos verificados / machine-readable / API */
+/* Green: verified / machine-readable / API */
 .meta-badge.meta-ok {
     background: rgba(34, 197, 94, 0.12);
     color: #16a34a;
     border: 1px solid rgba(34, 197, 94, 0.25);
 }
 
-/* Naranja: advertencia (solo PDFs, pendiente) */
+/* Orange: warning (PDFs only, pending) */
 .meta-badge.meta-warn {
     background: rgba(251, 146, 60, 0.12);
     color: #c2410c;
     border: 1px solid rgba(251, 146, 60, 0.25);
 }
 
-/* Gris neutro: estimado */
+/* Neutral grey: estimated */
 .meta-badge.meta-neutral {
     background: rgba(148, 163, 184, 0.12);
     color: #64748b;
@@ -441,21 +439,31 @@ body.layout-detailed #results {
 
 /* Hover state for API links */
 .api-badge:hover {
-  color: #2563eb;            
+  color: #2563eb;
   text-decoration: underline;
 }
 
-/* Por defecto (vista compacta): ocultar APIs */
+/* Hidden by default in compact view */
 .card-apis {
   display: none;
 }
 
-/* En vista detallada: mostrar bloque de APIs */
+/* Show API block in detailed layout */
 body.layout-detailed .card-apis {
   display: block;
 }
 
-/* Modo oscuro — ajusta colores de texto para legibilidad */
+/* Hidden by default in compact view */
+.card-licenses {
+  display: none;
+}
+
+/* Show license block in detailed layout */
+body.layout-detailed .card-licenses {
+  display: block;
+}
+
+/* Dark mode overrides for meta badges */
 [data-theme="dark"] .meta-badge.meta-ok {
     color: #4ade80;
 }
@@ -475,10 +483,9 @@ body.layout-detailed .card-apis {
 
 [data-theme="dark"] .api-badge:hover {
     color: #14b8a6;
-    /* mantiene el mismo teal en dark mode */
 }
 
-/* ─── RESTO DE LA TARJETA ────────────────────────────── */
+/* ─── REST OF CARD ────────────────────────────── */
 
 .card-description {
     padding: 0 1rem;
@@ -568,6 +575,68 @@ body.layout-detailed .card-apis {
 }
 
 /* ============================================
+   LICENSE BLOCK (detail-only)
+   ============================================ */
+
+/* Row: primary license name + open/restricted badge */
+.license-primary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.35rem;
+}
+
+.license-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Open/restricted badge */
+.license-badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.license-open {
+    background: rgba(34, 197, 94, 0.12);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.license-restricted {
+    background: rgba(251, 146, 60, 0.12);
+    color: #c2410c;
+    border: 1px solid rgba(251, 146, 60, 0.25);
+}
+
+/* Summary text below the primary license */
+.license-summary-text {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Neutral fallback when no license data is available */
+.license-unavailable {
+    font-size: 0.78rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Dark mode overrides for license badges */
+[data-theme="dark"] .license-open {
+    color: #4ade80;
+}
+
+[data-theme="dark"] .license-restricted {
+    color: #fb923c;
+}
+
+/* ============================================
    LOADING / ERROR / EMPTY STATES
    ============================================ */
 
@@ -635,7 +704,7 @@ code {
 }
 
 /* ============================================
-   CATEGORÍAS Y FORMATOS TOGGLEABLES
+   COLLAPSIBLE CATEGORIES AND FORMATS
    ============================================ */
 
 .categories-header {
@@ -689,7 +758,7 @@ code {
 }
 
 /* ============================================
-   DESCRIPCIÓN PLEGABLE CON FLECHA
+   COLLAPSIBLE DESCRIPTION WITH ARROW
    ============================================ */
 
 .description-container {
@@ -714,7 +783,7 @@ code {
     overflow: hidden;
 }
 
-/* In detailed layout, show more lines of description */
+/* Show more lines in detailed layout */
 body.layout-detailed .description-text.collapsed {
     -webkit-line-clamp: 6;
     line-clamp: 6;
@@ -751,7 +820,7 @@ body.layout-detailed .description-text.collapsed {
 }
 
 /* ============================================
-   AJUSTES PARA VISTA DETALLADA
+   DETAILED LAYOUT OVERRIDES
    ============================================ */
 
 /* Hide "see more" buttons in detailed layout */
@@ -766,13 +835,13 @@ body.layout-detailed [id$="-formats-hidden"] {
     display: flex !important;
 }
 
-/* Make badge groups visually denser in detailed layout */
+/* Denser badge groups in detailed layout */
 body.layout-detailed .badge-container {
     row-gap: 0.15rem;
 }
 
 /* ============================================
-   SECCIÓN DE PRESENTACIÓN (ABOUT)
+   ABOUT SECTION
    ============================================ */
 
 .about-section {
@@ -819,7 +888,7 @@ body.layout-detailed .badge-container {
 }
 
 /* ============================================
-   BOTÓN ESTADÍSTICAS
+   STATS BUTTON
    ============================================ */
 
 .stats-button-container {
@@ -837,11 +906,11 @@ body.layout-detailed .badge-container {
     font-weight: 600;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-    transition: all 0.3 sease;
+    transition: all 0.3s ease;
 }
 
 /* ============================================
-   RESPONSIVE (ya definido arriba para results)
+   RESPONSIVE
    ============================================ */
 
 @media (max-width: 1024px) {
@@ -903,7 +972,7 @@ body.layout-detailed .badge-container {
     }
 }
 
-/* ─── BOTÓN MAPA: idéntico a portal-link ─────────────────── */
+/* ─── MAP BUTTON: identical to .portal-link ─────────────────── */
 .map-button {
     appearance: none;
     -webkit-appearance: none;
@@ -914,8 +983,6 @@ body.layout-detailed .badge-container {
     padding: 0;
     margin: 0;
     cursor: pointer;
-
-    /* Idéntico a .portal-link */
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--badge-text);
@@ -928,14 +995,14 @@ body.layout-detailed .badge-container {
 }
 
 .map-button:hover {
-    text-decoration: none;        /* quita el subrayado global */
+    text-decoration: none;
 }
 
 .map-button:hover span:last-child {
-    text-decoration: underline;   /* subraya solo el texto */
+    text-decoration: underline;
 }
 
-/* ─── Animación pin en hover ──────────────────────────────── */
+/* Pin bounce animation on hover */
 .map-button .pin-icon {
     display: inline-block;
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -946,41 +1013,17 @@ body.layout-detailed .badge-container {
 }
 
 #updateBtn {
-  background-color: #1e88e5;      /* Azul principal */
-  color: #ffffff;                 /* Texto blanco */
-  border: none;
-  border-radius: 6px;
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  transition: 
-    background-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.1s ease;
-}
-
-/* Hover */
-#updateBtn {
   background-color: #14b8a6;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-
-  padding: 8px 14px;        /* ⬅ más pequeño */
-  font-size: 0.9rem;        /* ⬅ texto más compacto */
+  padding: 8px 14px;
+  font-size: 0.9rem;
   font-weight: 600;
-
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;                 /* ⬅ menos espacio icono/texto */
-
+  gap: 6px;
   transition:
     background-color 0.2s ease,
     box-shadow 0.2s ease,
@@ -1001,25 +1044,38 @@ body.layout-detailed .badge-container {
   cursor: not-allowed;
   opacity: 0.7;
 }
-#updateOutput {
-  display: none;              /* oculto por defecto */
-  
-  position: relative;         /* ⬅ clave: evita esquinas */
-  margin: 12px auto;          /* ⬅ centrado horizontal */
 
+#updateOutput {
+  display: none;
+  position: relative;
+  margin: 12px auto;
   max-width: 420px;
-  width: 100%;                /* ⬅ necesario para centrar bien */
-  
+  width: 100%;
   padding: 8px 10px;
   background-color: #f5f9ff;
   border: 1px solid #bbdefb;
   border-radius: 5px;
-
   color: #0d47a1;
   font-family: monospace;
   font-size: 0.8rem;
   line-height: 1.3;
-
   white-space: pre-wrap;
   text-align: left;
+}
+
+
+.compact-only {
+  display: block;
+}
+
+.detail-only {
+  display: none;
+}
+
+body.layout-detailed .compact-only {
+  display: none;
+}
+
+body.layout-detailed .detail-only {
+  display: block;
 }

@@ -50,7 +50,7 @@ body {
 
 /* HEADER modo claro */
 header {
-  /* Degradado elegante de teal a azul oscuro */
+  /* Elegant gradient from teal to dark blue */
   background: linear-gradient(135deg, #008080 0%, #1a2b49 100%);
 }
 
@@ -77,7 +77,7 @@ header p {
 .search input:focus,
 .search select:focus {
   border-color: var(--badge-text);
-  outline: none; /* Evita el borde por defecto del navegador */
+  outline: none;
 }
 
 /* CARDS en modo claro */
@@ -88,13 +88,13 @@ header p {
 }
 
 .card:hover {
-  /* Sombra expansiva usando el tono teal */
+  /* Expanding shadow using teal tone */
   box-shadow: 0 8px 24px rgba(0, 128, 128, 0.12);
-  border-color: var(--badge-text); /* Cambiado de #2563eb a tu teal */
+  border-color: var(--badge-text);
 }
 
 .card h3 {
-  color: var(--text-primary); /* Mejor legibilidad en títulos */
+  color: var(--text-primary);
 }
 
 .island-tag {
@@ -108,19 +108,19 @@ header p {
   color: var(--text-secondary);
 }
 
-/* Badges genéricos */
+/* Generic badges */
 .badge {
   background: var(--badge-bg);
   color: var(--badge-text);
 }
 
-/* Formatos con estilo verde suave (Integrado con la paleta) */
+/* Format badges with soft green */
 .format-badge {
   background: #e2f4f0;
   color: #006652;
 }
 
-/* Bloque de stats de la tarjeta */
+/* Card stats block */
 .card-stats {
   background: var(--bg-primary);
   border-color: var(--border-color);
@@ -134,20 +134,30 @@ header p {
   color: var(--text-secondary);
 }
 
-/* Secciones internas de la tarjeta */
+/* Card inner sections */
 .card-section {
   border-color: var(--border-color);
 }
 
-/* Enlace al portal */
+/* Portal link */
 .portal-link {
   color: var(--badge-text);
 }
 .portal-link:hover {
-  color: var(--text-primary); /* Efecto interactivo */
+  color: var(--text-primary);
 }
 
-/* FOOTER en modo claro */
+/* License block — light mode */
+.license-name {
+  color: var(--text-primary);
+}
+
+.license-summary-text,
+.license-unavailable {
+  color: var(--text-secondary);
+}
+
+/* FOOTER */
 footer {
   background: var(--footer-bg);
   color: var(--footer-text);
@@ -175,7 +185,7 @@ code {
   color: var(--badge-text);
 }
 
-/* Logo blanco sobre el header en modo claro */
+/* White logo on header in light mode */
 header .logo-svg {
   background-color: #ffffff;
 }

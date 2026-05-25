@@ -1,14 +1,20 @@
 /**
  * Datos Abiertos Canarias
  * Main application — entity search and visualization
- * Version: 3.2
+ * Version: 3.3
  */
 
 let data = [];
 let typeChart = null;
 
+
 /**
  * Computes the open data maturity level for a normalized entity.
+ *
+ * Rules of thumb:
+ * - high: machine-readable, API available, strong portal technology, and enough datasets
+ * - low: non machine-readable or clearly limited transparency-style publication
+ * - medium: everything in between
  *
  * @param {Object} e
  * @returns {'low'|'medium'|'high'}
@@ -48,19 +54,19 @@ function computeMaturity(e) {
   return 'medium';
 }
 
+
 /**
  * For entities with entity_kind === 'organismo', derives a more specific subtype
  * based on the entity name and portal technology:
  *
- * - organismo_especializado_geoespacial: uses geospatial tech (OGC, WMS, WFS,
- *   OpenStreetMap, GRAFCAN, SITCAN, GIS, cartografía)
- * - organismo_especializado_nacional: national or European bodies not specific
- *   to Canarias (ministerio, SEPE, AENA, policía nacional, european data portal…)
- * - organismo_especializado: all other regional Canarian organisms
+ * - organismo_especializado_geoespacial
+ * - organismo_especializado_nacional
+ * - organismo_especializado
  *
- * All other entity_kind values are returned unchanged.
+ * This is useful for improving filters, icons, labels and card presentation
+ * without changing the original source data.
  *
- * @param {Object} e - Raw entity object from the API response
+ * @param {Object} e
  * @returns {string}
  */
 function deriveOrganismoSubtype(e) {
@@ -76,8 +82,10 @@ function deriveOrganismoSubtype(e) {
     return 'organismo_especializado_geoespacial';
   }
 
-  const nationalKeywords = ['ministerio', 'sepe', 'aena', 'policía nacional', 'policia nacional',
-    'european data portal', 'data.europa', 'agencia estatal', 'nacional', 'estatal'];
+  const nationalKeywords = [
+    'ministerio', 'sepe', 'aena', 'policía nacional', 'policia nacional',
+    'european data portal', 'data.europa', 'agencia estatal', 'nacional', 'estatal'
+  ];
   if (nationalKeywords.some(k => name.includes(k))) {
     return 'organismo_especializado_nacional';
   }
@@ -85,36 +93,43 @@ function deriveOrganismoSubtype(e) {
   return 'organismo_especializado';
 }
 
+
 /**
- * Normalizes a raw entity object from the API into the internal format.
+ * Normalizes a raw entity object from the API into the internal format
+ * expected by filters, rendering and UI helpers.
  *
- * Supports the current schema: entity_kind, scope, portals[], locations[].
- * The open_data portal is preferred when multiple portals are present;
- * otherwise the first entry is used as a fallback.
+ * Main responsibilities:
+ * - choose the most relevant portal
+ * - derive machine-readability even when not explicitly declared
+ * - normalize dataset count
+ * - extract APIs, formats, categories and coordinates
+ * - compute maturity at the end
  *
- * dataset_count is always stored as number|null — never a string — so
- * downstream comparisons and sort logic can rely on typeof checks safely.
- *
- * @param {Object} e - Raw entity object from the API response
- * @returns {Object|null} Normalized entity, or null if the input is invalid
+ * @param {Object} e
+ * @returns {Object|null}
  */
 function normalize(e) {
   if (!e || typeof e !== 'object') return null;
 
+  // Prefer the open data portal; if not present, fallback to the first portal
   const portal = e.portals?.find(p => p.kind === 'open_data') || e.portals?.[0] || null;
 
+  // Pick the first location with valid coordinates for map usage
   const hq = e.locations?.find(
     l => l.coordinates?.lat != null && l.coordinates?.lon != null
   ) || null;
 
+  // Normalize APIs to a guaranteed array
   const apis = portal?.apis && Array.isArray(portal.apis) ? portal.apis : [];
 
+  // Formats can come from several places depending on the source entity
   const formats = portal?.formats || e.formats || e.data?.formats || [];
   const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
   const hasMachineReadableFormat = formats.some(f =>
     machineReadableFormats.includes(String(f).toUpperCase())
   );
 
+  // Normalize dataset count to number|null
   const rawCount = portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? null;
   const parsedCount = rawCount !== null ? Number(rawCount) : null;
   const datasetCount = parsedCount !== null && !isNaN(parsedCount) ? parsedCount : null;
@@ -122,47 +137,43 @@ function normalize(e) {
   const normalized = {
     id: e.id || '',
     name: e.name || 'Sin nombre',
-
-    // Derive a specific subtype for 'organismo' entities based on name/tech
     type: deriveOrganismoSubtype(e),
     scope: e.scope || null,
-
     islands: e.islands || [],
     description: e.description || '',
-
     portal_url: portal?.url || e.portal_url || e.portal?.url || '#',
     portal_kind: portal?.kind || null,
     portal_tech: portal?.technology || [],
-
     machine_readable: portal?.machine_readable ?? hasMachineReadableFormat,
-
     has_api: apis.length > 0 || (portal?.has_api ?? false),
-
     dataset_count: datasetCount,
-
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
     formats,
     license_summary: portal?.license_summary || null,
-
+    licenses: Array.isArray(portal?.licenses) ? portal.licenses : [],
     apis,
-
     coordinates: hq
       ? { lat: hq.coordinates.lat, lon: hq.coordinates.lon }
       : (e.coordinates || e.geographic?.coordinates || null),
-
     verification_status: e.verification?.status || 'pending',
     parent_entity_id: e.parent_entity_id || null,
   };
 
+  // Compute maturity only after every dependent field is normalized
   normalized.maturity = computeMaturity(normalized);
 
   return normalized;
 }
 
-// UI state
+
+/* =========================================================
+   UI state
+   ========================================================= */
 
 function showLoading() {
   const container = document.getElementById("results");
+  if (!container) return;
+
   container.innerHTML = `
     <div class="loading-spinner">
       <div class="spinner"></div>
@@ -172,16 +183,21 @@ function showLoading() {
   updateStatsText('Cargando...');
 }
 
+
 /**
+ * Renders a user-friendly error block in the results container.
+ *
  * @param {string} message
  */
 function showError(message) {
   const container = document.getElementById("results");
+  if (!container) return;
+
   container.innerHTML = `
     <div class="error-message">
       <span class="error-icon">⚠️</span>
       <h3>Error al cargar los datos</h3>
-      <p>${message}</p>
+      <p>${escapeHtml(message)}</p>
       <button onclick="location.reload()" class="retry-btn">⟳ Reintentar</button>
       <details style="margin-top: 1rem;">
         <summary style="cursor: pointer; color: #666;">💡 Soluciones posibles</summary>
@@ -196,7 +212,10 @@ function showError(message) {
   updateStatsText('Error de carga');
 }
 
+
 /**
+ * Updates the compact status text shown above the result grid.
+ *
  * @param {string} text
  */
 function updateStatsText(text) {
@@ -204,8 +223,9 @@ function updateStatsText(text) {
   if (statsSpan) statsSpan.textContent = text;
 }
 
+
 /**
- * Updates the results counter and the visibility of the reset button.
+ * Synchronizes filter UI state after each render.
  *
  * @param {number} filteredCount
  * @param {number} totalCount
@@ -216,6 +236,7 @@ function updateUI(filteredCount, totalCount, hasActiveFilters) {
   if (resetBtn) {
     resetBtn.style.display = hasActiveFilters ? 'inline-flex' : 'none';
   }
+
   if (hasActiveFilters && filteredCount !== totalCount) {
     updateStatsText(`${filteredCount} de ${totalCount} entidades`);
   } else {
@@ -223,7 +244,10 @@ function updateUI(filteredCount, totalCount, hasActiveFilters) {
   }
 }
 
-// Data loading
+
+/* =========================================================
+   Data loading
+   ========================================================= */
 
 function loadData() {
   showLoading();
@@ -243,42 +267,53 @@ function loadData() {
     });
 }
 
-// Events and filtering
+
+/* =========================================================
+   Events and filtering
+   ========================================================= */
 
 function setupEventListeners() {
-  document.getElementById("searchText").addEventListener("input", filter);
-  document.getElementById("filterType").addEventListener("change", filter);
-  document.getElementById("filterIsland").addEventListener("change", filter);
-  document.getElementById("filterMaturity").addEventListener("change", filter);
+  document.getElementById("searchText")?.addEventListener("input", filter);
+  document.getElementById("filterType")?.addEventListener("change", filter);
+  document.getElementById("filterIsland")?.addEventListener("change", filter);
+  document.getElementById("filterMaturity")?.addEventListener("change", filter);
 
   const resetBtn = document.getElementById("resetFilters");
   if (resetBtn) resetBtn.addEventListener("click", resetFilters);
 
   initLayoutToggle();
+  initUpdateButton();
 }
 
-function resetFilters() {
-  document.getElementById("searchText").value = '';
-  document.getElementById("filterType").value = '';
-  document.getElementById("filterIsland").value = '';
-  document.getElementById("filterMaturity").value = '';
-  filter();
-  document.getElementById("searchText").focus();
-}
 
 /**
- * Filters and re-renders the entity list based on the current values of the
- * search field and the type/island selects.
- *
- * Each entity's type is already a derived subtype (organismo_especializado,
- * organismo_especializado_nacional, organismo_especializado_geoespacial), so
- * the filter compares directly without any mapping.
+ * Clears all filters and restores the default full result set.
+ */
+function resetFilters() {
+  const searchText = document.getElementById("searchText");
+  const filterType = document.getElementById("filterType");
+  const filterIsland = document.getElementById("filterIsland");
+  const filterMaturity = document.getElementById("filterMaturity");
+
+  if (searchText) searchText.value = '';
+  if (filterType) filterType.value = '';
+  if (filterIsland) filterIsland.value = '';
+  if (filterMaturity) filterMaturity.value = '';
+
+  filter();
+  searchText?.focus();
+}
+
+
+/**
+ * Applies text, type, island and maturity filters to the normalized dataset,
+ * sorts the result by dataset count and re-renders the cards.
  */
 function filter() {
-  const text = document.getElementById("searchText").value.toLowerCase();
-  const type = document.getElementById("filterType").value;
-  const island = document.getElementById("filterIsland").value;
-  const maturity = document.getElementById("filterMaturity").value;
+  const text = document.getElementById("searchText")?.value.toLowerCase() || '';
+  const type = document.getElementById("filterType")?.value || '';
+  const island = document.getElementById("filterIsland")?.value || '';
+  const maturity = document.getElementById("filterMaturity")?.value || '';
 
   const filtered = data.filter(e => {
     const matchText =
@@ -286,18 +321,14 @@ function filter() {
       e.description.toLowerCase().includes(text) ||
       e.data_categories.join(" ").toLowerCase().includes(text);
 
-    // Types are already derived subtypes — compare directly
     const matchType = !type || e.type === type;
-
-    const matchIsland = !island ||
-      e.islands.includes(island) ||
-      e.islands.includes("Todas");
-
+    const matchIsland = !island || e.islands.includes(island) || e.islands.includes("Todas");
     const matchMaturity = !maturity || e.maturity === maturity;
 
     return matchText && matchType && matchIsland && matchMaturity;
   });
 
+  // Show richer portals first
   filtered.sort((a, b) => {
     const aCount = typeof a.dataset_count === 'number' ? a.dataset_count : 0;
     const bCount = typeof b.dataset_count === 'number' ? b.dataset_count : 0;
@@ -310,10 +341,14 @@ function filter() {
   updateUI(filtered.length, data.length, hasActiveFilters);
 }
 
-// Rendering
+
+/* =========================================================
+   Rendering
+   ========================================================= */
 
 /**
- * Validates a URL and returns it only if the protocol is http or https.
+ * Returns a safe URL for href usage.
+ * Non-http(s) protocols and malformed URLs fallback to '#'.
  *
  * @param {string} url
  * @returns {string}
@@ -328,13 +363,163 @@ function safeUrl(url) {
   }
 }
 
+
+const OPEN_LICENSE_KEYWORDS = [
+  'cc by', 'cc-by', 'creative commons', 'open data commons', 'odc',
+  'odbl', 'pddl', 'mit', 'apache', 'open government', 'iodl',
+  'opendatacommons'
+];
+
+
+/**
+ * Heuristic detection of whether a license string looks open.
+ *
+ * @param {string} name
+ * @returns {boolean}
+ */
+function isOpenLicense(name) {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  return OPEN_LICENSE_KEYWORDS.some(kw => lower.includes(kw));
+}
+
+
+/**
+ * Returns the most representative license, prioritizing the one with the
+ * highest dataset count when that information is available.
+ *
+ * @param {Array} licenses
+ * @returns {Object|null}
+ */
+function getPrimaryLicense(licenses) {
+  if (!Array.isArray(licenses) || licenses.length === 0) return null;
+
+  return licenses.reduce((best, current) => {
+    const bestCount = typeof best.count === 'number' ? best.count : 0;
+    const currentCount = typeof current.count === 'number' ? current.count : 0;
+    return currentCount > bestCount ? current : best;
+  });
+}
+
+
+/**
+ * Builds a secondary human-readable summary when the API does not provide
+ * a direct license_summary field.
+ *
+ * Examples:
+ * - "1.245 datasets bajo CC BY 4.0"
+ * - "120 con CC BY 4.0; 34 con ODbL"
+ *
+ * @param {string|null} licenseSummary
+ * @param {Array} licenses
+ * @returns {string|null}
+ */
+function buildLicenseSummaryText(licenseSummary, licenses) {
+  if (licenseSummary) return licenseSummary;
+
+  if (!Array.isArray(licenses) || licenses.length === 0) return null;
+
+  const sorted = [...licenses]
+    .filter(l => l.name)
+    .sort((a, b) => (b.count || 0) - (a.count || 0))
+    .slice(0, 2);
+
+  if (sorted.length === 0) return null;
+
+  if (sorted.length === 1) {
+    const l = sorted[0];
+    return l.count ? `${l.count.toLocaleString('es-ES')} datasets bajo ${l.name}` : l.name;
+  }
+
+  return sorted
+    .map(l => l.count ? `${l.count.toLocaleString('es-ES')} con ${l.name}` : l.name)
+    .join('; ');
+}
+
+/**
+ * Renders the license block HTML for the card.
+ *
+ * Compact view:
+ * - shows "⚖️ Licencia"
+ * - renders license info as badges
+ *
+ * Detailed view:
+ * - shows "📜 Licencias y reutilización"
+ * - renders the richer explanatory block
+ *
+ * @param {Object} e
+ * @returns {string}
+ */
+function renderLicenseBlock(e) {
+  const licenses = Array.isArray(e.licenses) ? e.licenses : [];
+  const primary = getPrimaryLicense(licenses);
+  const licenseSummary = buildLicenseSummaryText(e.license_summary, licenses);
+
+  const primaryLicense = primary?.name || null;
+  const showPrimaryLicense = primaryLicense && primaryLicense !== licenseSummary;
+
+  if (!licenseSummary && !primaryLicense) {
+    return `
+      <div class="card-section card-licenses detail-only">
+        <strong>📜 Licencias y reutilización</strong>
+        <p class="license-unavailable">Información de licencias no disponible</p>
+      </div>
+    `;
+  }
+
+  const isOpen = primary ? isOpenLicense(primary.name) : false;
+  const badgeClass = isOpen ? 'license-badge license-open' : 'license-badge license-restricted';
+  const badgeLabel = isOpen ? '✅ Abierta' : '⚠️ Aviso legal';
+  const badgeTitle = isOpen
+    ? 'Licencia reconocida como abierta (CC BY, ODbL o similar)'
+    : 'Aviso legal interno o licencia no estándar';
+
+  return `
+    <div class="card-section compact-only">
+      <div class="categories-header">
+        <strong>⚖️ Licencia</strong>
+      </div>
+      <div class="badge-container">
+        ${licenseSummary ? `<span class="badge">${escapeHtml(licenseSummary)}</span>` : ''}
+        ${showPrimaryLicense ? `<span class="badge">${escapeHtml(primaryLicense)}</span>` : ''}
+      </div>
+    </div>
+
+    <div class="card-section card-licenses detail-only">
+      <strong>📜 Licencias y reutilización</strong>
+      ${primary ? `
+        <div class="license-primary">
+          <span class="license-name">${escapeHtml(primary.name)}</span>
+          <span class="${badgeClass}" title="${badgeTitle}">${badgeLabel}</span>
+        </div>
+      ` : ''}
+      ${licenseSummary && licenseSummary !== primaryLicense ? `
+        <p class="license-summary-text">${escapeHtml(licenseSummary)}</p>
+      ` : ''}
+    </div>
+  `;
+}
+
+
 /**
  * Renders entity cards into the results container.
  *
- * @param {Array} list - Normalized and filtered entity list
+ * Each card includes:
+ * - title and island tag
+ * - subtype and scope
+ * - machine-readable / API / verification / maturity badges
+ * - description with collapsible behaviour
+ * - dataset count
+ * - categories and formats
+ * - APIs and license block in detailed layout
+ * - portal link and optional map button
+ *
+ * @param {Array} list
  */
 function render(list) {
   const container = document.getElementById("results");
+  if (!container) return;
+
   container.innerHTML = "";
 
   if (list.length === 0) {
@@ -353,12 +538,12 @@ function render(list) {
     const allCategories = e.data_categories || [];
     const allFormats = e.formats || [];
     const coords = e.coordinates;
-
     const hasCoords = coords && coords.lat != null && coords.lon != null;
     const typeIcon = getTypeIcon(e.type);
     const cardId = 'card-' + (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2, 10));
     const apis = e.apis || [];
 
+    // Some APIs may expose the docs URL under different property names
     const apiDocUrl = api =>
       safeUrl(api.documentationUrl || api.documentationurl || api.url || '#');
 
@@ -463,26 +648,31 @@ function render(list) {
         </div>
       ` : ""}
 
+      ${renderLicenseBlock(e)}
+
       <div class="card-footer">
         <a href="${safeUrl(e.portal_url)}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
         </a>
         ${hasCoords ? `
-      <button class="map-button" onclick="window.location.href='/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}'" >
-        <span class="pin-icon">📍</span><span>Ver en mapa</span>
-      </button>
-      ` : ""}
-            </div>
-          `;
+          <button class="map-button" onclick="window.location.href='/mapa?lat=${coords.lat}&lon=${coords.lon}&name=${encodeURIComponent(e.name)}'">
+            <span class="pin-icon">📍</span><span>Ver en mapa</span>
+          </button>
+        ` : ""}
+      </div>
+    `;
 
     container.appendChild(card);
   });
 }
 
-// Helper functions
+
+/* =========================================================
+   Helper functions
+   ========================================================= */
 
 /**
- * Returns a display icon for a given entity type.
+ * Returns the emoji icon associated with the normalized entity type.
  *
  * @param {string} type
  * @returns {string}
@@ -500,8 +690,9 @@ function getTypeIcon(type) {
   return icons[type] || '📊';
 }
 
+
 /**
- * Returns the Spanish display label for a given entity type.
+ * Converts the internal type code to a human-readable label.
  *
  * @param {string} type
  * @returns {string}
@@ -519,8 +710,9 @@ function formatType(type) {
   return types[type] || type || 'Institución';
 }
 
+
 /**
- * Returns the Spanish display label for a given scope value.
+ * Converts scope values to display labels.
  *
  * @param {string} scope
  * @returns {string}
@@ -536,8 +728,10 @@ function formatScope(scope) {
   return scopes[scope] || scope;
 }
 
+
 /**
- * Returns whether the scope badge should be shown for a given entity type.
+ * Decides whether the scope badge adds useful information for the card.
+ * For very obvious entity types, the scope is omitted to reduce noise.
  *
  * @param {string} type
  * @param {string} scope
@@ -550,10 +744,16 @@ function shouldShowScope(type, scope) {
   return !!scope;
 }
 
+
 /**
- * Returns the island label for a card header.
+ * Returns the short island tag displayed in the card header.
  *
- * @param {Object} item - Normalized entity
+ * Rules:
+ * - no islands => null
+ * - Todas or more than 2 islands => "Canarias"
+ * - otherwise => first island name
+ *
+ * @param {Object} item
  * @returns {string|null}
  */
 function getIslandTag(item) {
@@ -578,45 +778,7 @@ function getIslandTag(item) {
   return islandNames[islands[0]] || null;
 }
 
-function updateData() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("updateBtn");
-    const output = document.getElementById("updateOutput");
 
-    // Seguridad extra
-    if (!btn) {
-      console.error("❌ Botón updateBtn no encontrado en el DOM");
-      return;
-    }
-
-    btn.addEventListener("click", async () => {
-      btn.disabled = true;
-      output.textContent = "⏳ Ejecutando actualización...\n";
-
-      try {
-        const response = await fetch("/run-update", {
-          method: "POST"
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          output.textContent += "✅ Actualización completada\n\n";
-          output.textContent += data.stdout;
-        } else {
-          output.textContent += "❌ Error\n\n";
-          output.textContent += data.stderr || data.error;
-        }
-
-      } catch (err) {
-        output.textContent += "❌ Error de conexión\n";
-        output.textContent += err.toString();
-      } finally {
-        btn.disabled = false;
-      }
-    });
-  });
-}
 /**
  * Escapes a string for safe insertion into innerHTML.
  *
@@ -630,8 +792,20 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+
 /**
- * Truncates a string to the given length, appending an ellipsis if needed.
+ * Escapes a string for safe insertion into HTML attributes.
+ *
+ * @param {string} str
+ * @returns {string}
+ */
+function escapeAttr(str) {
+  return escapeHtml(str).replace(/"/g, '&quot;');
+}
+
+
+/**
+ * Truncates a string to a maximum length.
  *
  * @param {string} str
  * @param {number} length
@@ -642,13 +816,13 @@ function truncate(str, length) {
   return str.length > length ? str.substring(0, length) + '...' : str;
 }
 
-// Dark mode
+
+/* =========================================================
+   Dark mode
+   ========================================================= */
 
 /**
- * Reads the persisted dark mode preference from localStorage and wires up
- * the toggle button. Operates on document.documentElement via data-theme
- * attribute instead of body.classList, which allows CSS variables to cascade
- * from :root and avoids FOUC when the preference is restored on load.
+ * Initializes the dark mode toggle and restores the persisted preference.
  */
 function initDarkMode() {
   const toggleBtn = document.getElementById('darkModeToggle');
@@ -673,134 +847,63 @@ function initDarkMode() {
     }
   });
 }
-document.addEventListener("DOMContentLoaded", () => {
-  // =========================
-  // Elementos del DOM
-  // =========================
-  const updateBtn = document.getElementById("updateBtn");
-  const output = document.getElementById("updateOutput");
-  const entidadesContainer = document.getElementById("entidades");
 
-  // =========================
-  // Seguridad básica
-  // =========================
-  if (!updateBtn) {
-    console.error("❌ No se encontró el botón #updateBtn");
-    return;
-  }
 
-  // =========================
-  // Cargar entidades al iniciar
-  // =========================
-  cargarEntidades();
+/* =========================================================
+   Update button
+   ========================================================= */
 
-  // =========================
-  // Evento botón actualizar
-  // =========================
-  updateBtn.addEventListener("click", async () => {
-    updateBtn.disabled = true;
-    output.textContent = "⏳ Ejecutando actualización de datos...\n";
-
-    try {
-      const response = await fetch("/run-update", {
-        method: "POST"
-      });
-
-      if (!response.ok) {
-        throw new Error("Error HTTP " + response.status);
-      }
-
-      const data = await response.json();
-
-      if (data.success) {
-        output.textContent += "✅ Actualización completada\n\n";
-        output.textContent += data.stdout || "";
-
-        // 🔄 Recargar datos tras la actualización
-        await cargarEntidades();
-      } else {
-        output.textContent += "❌ Error en la actualización\n\n";
-        output.textContent += data.stderr || data.error || "Error desconocido";
-      }
-
-    } catch (err) {
-      output.textContent += "❌ Error de conexión\n";
-      output.textContent += err.toString();
-    } finally {
-      updateBtn.disabled = false;
-    }
-  });
-
-  // =========================
-  // Función: cargar entidades
-  // =========================
-  async function cargarEntidades() {
-    try {
-      const response = await fetch("/api/entidades");
-
-      if (!response.ok) {
-        throw new Error("Error HTTP " + response.status);
-      }
-
-      const entidades = await response.json();
-      renderEntidades(entidades);
-
-    } catch (err) {
-      console.error("❌ Error cargando entidades:", err);
-    }
-  }
-
-  // =========================
-  // Renderizar entidades
-  // =========================
-  function renderEntidades(entidades) {
-    if (!entidadesContainer) return;
-
-    entidadesContainer.innerHTML = "";
-
-    entidades.forEach(entidad => {
-      const div = document.createElement("div");
-      div.className = "entidad";
-
-      div.innerHTML = `
-        <h3>${entidad.nombre}</h3>
-        <p><strong>Última actualización:</strong> ${entidad.last_updated || "—"}</p>
-        <p><strong>Tipo de API:</strong> ${entidad.api_type_detected || "—"}</p>
-      `;
-
-      entidadesContainer.appendChild(div);
-    });
-  }
-});
-document.addEventListener("DOMContentLoaded", () => {
+/**
+ * Initializes the manual update button that triggers the backend refresh.
+ *
+ * UI flow:
+ * - show output area
+ * - disable button while request is running
+ * - show stdout/stderr summary
+ * - reload data if update succeeds
+ */
+function initUpdateButton() {
   const btn = document.getElementById("updateBtn");
   const output = document.getElementById("updateOutput");
-
   if (!btn || !output) return;
 
   btn.addEventListener("click", async () => {
-    output.style.display = "none";
-    output.textContent = "⏳ Actualizando datos...";
     output.style.display = "block";
-
+    output.textContent = "⏳ Ejecutando actualización de datos...\n";
     btn.disabled = true;
 
     try {
-      const res = await fetch("/run-update");
-      const data = await res.json();
+      const response = await fetch("/run-update", { method: "POST" });
+      if (!response.ok) {
+        throw new Error(`Error HTTP ${response.status}`);
+      }
 
-      output.textContent = data.message || "✔ Proceso completado";
+      const result = await response.json();
+
+      if (result.success) {
+        output.textContent += "\n✅ Actualización completada\n\n";
+        output.textContent += result.stdout || "";
+        loadData();
+      } else {
+        output.textContent += "\n❌ Error en la actualización\n\n";
+        output.textContent += result.stderr || result.error || "Error desconocido";
+      }
     } catch (err) {
-      output.textContent = "❌ Error al ejecutar el script";
+      output.textContent += "\n❌ Error de conexión\n";
+      output.textContent += String(err);
     } finally {
       btn.disabled = false;
     }
   });
-});
-// Layout toggle
+}
+
+
+/* =========================================================
+   Layout toggle
+   ========================================================= */
 
 /**
- * Wires up the compact/detailed layout toggle button.
+ * Toggles between compact and detailed card layout.
  */
 function initLayoutToggle() {
   const toggleBtn = document.getElementById('layoutToggle');
@@ -812,8 +915,16 @@ function initLayoutToggle() {
   });
 }
 
-// Card toggles
 
+/* =========================================================
+   Card toggles
+   ========================================================= */
+
+/**
+ * Expands or collapses the hidden category badges of a card.
+ *
+ * @param {string} cardId
+ */
 function toggleCat(cardId) {
   const hiddenDiv = document.getElementById(cardId + '-hidden');
   const btn = document.querySelector(`#${cardId} .toggle-cat-btn`);
@@ -823,6 +934,12 @@ function toggleCat(cardId) {
   if (btn) btn.classList.toggle('rotated');
 }
 
+
+/**
+ * Expands or collapses the hidden format badges of a card.
+ *
+ * @param {string} cardId
+ */
 function toggleFormats(cardId) {
   const hiddenDiv = document.getElementById(cardId + '-formats-hidden');
   const btn = document.querySelector(`#${cardId}-formats .toggle-cat-btn`);
@@ -832,11 +949,18 @@ function toggleFormats(cardId) {
   if (btn) btn.classList.toggle('rotated');
 }
 
+
+/**
+ * Expands or collapses the entity description block.
+ *
+ * @param {string} descId
+ */
 function toggleDescription(descId) {
   const descElement = document.getElementById(descId);
   if (!descElement) return;
   const btn = descElement.nextElementSibling;
   if (!btn) return;
+
   const isCollapsed = descElement.classList.contains('collapsed');
   if (isCollapsed) {
     descElement.classList.remove('collapsed');
@@ -847,8 +971,14 @@ function toggleDescription(descId) {
   }
 }
 
-// Initialization
 
+/* =========================================================
+   Initialization
+   ========================================================= */
+
+/**
+ * Bootstraps the application once the DOM is ready.
+ */
 function init() {
   setupEventListeners();
   loadData();
