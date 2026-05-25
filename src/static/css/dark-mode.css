@@ -2,21 +2,21 @@
    MODO OSCURO - ESTILOS EXCLUSIVOS
    ============================================ */
 
-/* Paleta: gris oscuro + teal, acentos en naranja */
+/* Palette: dark grey + teal, orange accents */
 [data-theme="dark"] {
-  --bg-primary: #111827;      /* fondo principal gris muy oscuro */
-  --bg-secondary: #111827;    /* paneles grandes (search, stats) */
-  --bg-card: #020617;         /* tarjetas ligeramente más oscuras */
+  --bg-primary: #111827;      /* very dark grey main background */
+  --bg-secondary: #111827;    /* large panels (search, stats) */
+  --bg-card: #020617;         /* slightly darker cards */
 
-  --text-primary: #e5e7eb;    /* texto principal gris muy claro */
-  --text-secondary: #9ca3af;  /* texto secundario */
-  --text-header: #f9fafb;     /* títulos */
+  --text-primary: #e5e7eb;    /* very light grey main text */
+  --text-secondary: #9ca3af;  /* secondary text */
+  --text-header: #f9fafb;     /* headings */
 
-  --border-color: #1f2937;    /* bordes suaves */
+  --border-color: #1f2937;    /* soft borders */
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 
-  --badge-bg: #0f172a;        /* chips y badges */
-  --badge-text: #14b8a6;      /* teal brillante para acentos */
+  --badge-bg: #0f172a;        /* chips and badges */
+  --badge-text: #14b8a6;      /* bright teal for accents */
 
   --footer-bg: #020617;
   --footer-text: #9ca3af;
@@ -28,29 +28,29 @@
   --spinner-top: #14b8a6;
 
   --error-bg: #1e1b4b;
-  --error-border: #f97316;    /* naranja para errores */
+  --error-border: #f97316;    /* orange for errors */
   --empty-bg: #020617;
 }
 
-/* Fondo y texto generales en oscuro */
+/* General background and text in dark mode */
 [data-theme="dark"] {
   background: var(--bg-primary);
   color: var(--text-primary);
 }
 
-/* HEADER modo oscuro: gris + teal sutil */
+/* HEADER dark mode: grey + subtle teal */
 [data-theme="dark"] header {
   background: radial-gradient(circle at top left, #14b8a6 0%, #0b1120 40%, #020617 100%);
 }
 
-/* SEARCH y STATS en modo oscuro */
+/* SEARCH and STATS dark mode */
 [data-theme="dark"] .search,
 [data-theme="dark"] .stats-bar {
   background: var(--bg-secondary);
   border-color: var(--border-color);
 }
 
-/* Inputs en modo oscuro */
+/* Inputs dark mode */
 [data-theme="dark"] .search input,
 [data-theme="dark"] .search select {
   background: var(--input-bg);
@@ -68,7 +68,7 @@
   box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.25);
 }
 
-/* CARDS en modo oscuro */
+/* CARDS dark mode */
 [data-theme="dark"] .card {
   background: var(--bg-card);
   box-shadow: var(--shadow);
@@ -95,34 +95,33 @@
   color: var(--text-secondary);
 }
 
-/* Categorías en modo oscuro: más discretas que formatos */
+/* Category badges dark mode: more subtle than format badges */
 [data-theme="dark"] .badge {
-  background: #020617;   /* muy oscuro */
+  background: #020617;
   color: var(--text-secondary);
 }
 
-/* Formatos en modo oscuro: fondo gris-azulado, texto teal suave */
+/* Format badges dark mode: grey-blue background, soft teal text */
 [data-theme="dark"] .format-badge {
-  background: #0b1220;   /* gris-azulado oscuro, distinto del verde */
-  color: #38d5c4;        /* teal más claro que los meta-badges */
+  background: #0b1220;
+  color: #38d5c4;
 }
 
-/* Meta-badges en modo oscuro:
-   OK (machine-readable, API) en naranja para destacar,
-   warn y neutral se mantienen */
+/* Meta-badges dark mode:
+   OK (machine-readable, API) in orange to stand out */
 [data-theme="dark"] .meta-badge.meta-ok {
-  color: #f97316;      /* naranja principal */
+  color: #f97316;
 }
 
 [data-theme="dark"] .meta-badge.meta-warn {
-  color: #fb923c;      /* naranja algo más claro */
+  color: #fb923c;
 }
 
 [data-theme="dark"] .meta-badge.meta-neutral {
-  color: #94a3b8;      /* gris neutro */
+  color: #94a3b8;
 }
 
-/* Stats dentro de la tarjeta */
+/* Card stats dark mode */
 [data-theme="dark"] .card-stats {
   background: var(--bg-primary);
   border-color: var(--border-color);
@@ -136,21 +135,31 @@
   color: var(--text-secondary);
 }
 
-/* Secciones internas de la tarjeta */
+/* Card inner sections */
 [data-theme="dark"] .card-section {
   border-color: var(--border-color);
 }
 
-/* Enlace al portal */
+/* Portal link */
 [data-theme="dark"] .portal-link {
   color: var(--badge-text);
 }
 
 [data-theme="dark"] .portal-link:hover {
-  color: #f97316; /* acento naranja en hover */
+  color: #f97316;
 }
 
-/* ABOUT en modo oscuro */
+/* License block — dark mode */
+[data-theme="dark"] .license-name {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .license-summary-text,
+[data-theme="dark"] .license-unavailable {
+  color: var(--text-secondary);
+}
+
+/* ABOUT dark mode */
 [data-theme="dark"] .about-inner {
   background: var(--bg-card);
   border-color: #14b8a6;
@@ -164,19 +173,19 @@
   color: var(--text-header);
 }
 
-/* FOOTER en modo oscuro */
+/* FOOTER dark mode */
 [data-theme="dark"] footer {
   background: var(--footer-bg);
   color: var(--footer-text);
 }
 
-/* LOADING en oscuro */
+/* LOADING dark mode */
 [data-theme="dark"] .spinner {
   border-color: var(--spinner-border);
   border-top-color: var(--spinner-top);
 }
 
-/* ERROR y EMPTY en oscuro */
+/* ERROR and EMPTY dark mode */
 [data-theme="dark"] .error-message {
   background: var(--error-bg);
   border-left: 4px solid var(--error-border);
@@ -192,7 +201,7 @@
   color: var(--badge-text);
 }
 
-/* Botones secundarios (reset) en modo oscuro */
+/* Secondary buttons (reset) dark mode */
 [data-theme="dark"] .reset-btn {
   border-color: var(--border-color);
   color: var(--text-secondary);
@@ -203,10 +212,10 @@
   color: var(--text-primary);
 }
 
-/* Botones primarios (retry / vacíos) en modo oscuro */
+/* Primary buttons (retry / empty) dark mode */
 [data-theme="dark"] .retry-btn,
 [data-theme="dark"] .reset-btn-empty {
-  background: #f97316; /* naranja */
+  background: #f97316;
   color: #111827;
 }
 
@@ -215,7 +224,7 @@
   background: #fb923c;
 }
 
-/* Logo en modo oscuro: teal */
+/* Logo dark mode: teal */
 [data-theme="dark"] .logo-svg {
   background-color: #14b8a6;
 }
@@ -227,4 +236,3 @@
 [data-theme="dark"] .map-button:hover {
     color: #f97316;
 }
-
