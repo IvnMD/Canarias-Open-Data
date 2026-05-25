@@ -1,7 +1,7 @@
 /**
  * Datos Abiertos Canarias
  * Main application — entity search and visualization
- * Version: 3.2
+ * Version: 3.3
  */
 
 let data = [];
@@ -143,6 +143,9 @@ function normalize(e) {
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
     formats,
     license_summary: portal?.license_summary || null,
+
+    // Raw licenses array from the portal, used to build the license block
+    licenses: portal?.licenses || [],
 
     apis,
 
@@ -329,6 +332,128 @@ function safeUrl(url) {
 }
 
 /**
+ * Known open licenses — used to classify a license as open or restrictive.
+ * Comparison is case-insensitive and partial (includes).
+ */
+const OPEN_LICENSE_KEYWORDS = [
+  'cc by', 'cc-by', 'creative commons', 'open data commons', 'odc',
+  'odbl', 'pddl', 'mit', 'apache', 'open government', 'iodl',
+  'opendatacommons'
+];
+
+/**
+ * Returns true if the license name matches a known open license.
+ *
+ * @param {string} name
+ * @returns {boolean}
+ */
+function isOpenLicense(name) {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  return OPEN_LICENSE_KEYWORDS.some(kw => lower.includes(kw));
+}
+
+/**
+ * Derives the primary license from an array of license objects.
+ * The primary license is the one with the highest dataset count.
+ * Falls back to the first entry if no counts are available.
+ *
+ * @param {Array} licenses - Array of { name, count, url } objects
+ * @returns {Object|null}
+ */
+function getPrimaryLicense(licenses) {
+  if (!Array.isArray(licenses) || licenses.length === 0) return null;
+
+  return licenses.reduce((best, current) => {
+    const bestCount = typeof best.count === 'number' ? best.count : 0;
+    const currentCount = typeof current.count === 'number' ? current.count : 0;
+    return currentCount > bestCount ? current : best;
+  });
+}
+
+/**
+ * Builds the summary text for the license block.
+ * Uses license_summary if present; otherwise generates a short text
+ * from the licenses array.
+ *
+ * @param {string|null} licenseSummary
+ * @param {Array} licenses
+ * @returns {string}
+ */
+function buildLicenseSummaryText(licenseSummary, licenses) {
+  if (licenseSummary) return licenseSummary;
+
+  if (!Array.isArray(licenses) || licenses.length === 0) return null;
+
+  // Build a short summary from the top 2 licenses by count
+  const sorted = [...licenses]
+    .filter(l => l.name)
+    .sort((a, b) => (b.count || 0) - (a.count || 0))
+    .slice(0, 2);
+
+  if (sorted.length === 0) return null;
+
+  if (sorted.length === 1) {
+    const l = sorted[0];
+    return l.count ? `${l.count.toLocaleString('es-ES')} datasets bajo ${l.name}` : l.name;
+  }
+
+  return sorted
+    .map(l => l.count ? `${l.count.toLocaleString('es-ES')} con ${l.name}` : l.name)
+    .join('; ');
+}
+
+/**
+ * Renders the license block HTML for the detailed view of a card.
+ * Only visible in layout-detailed mode via CSS.
+ *
+ * Shows:
+ * - Primary license name with an open/restrictive badge
+ * - Summary text (from license_summary or generated)
+ * - Neutral fallback when no data is available
+ *
+ * @param {Object} e - Normalized entity
+ * @returns {string} HTML string
+ */
+function renderLicenseBlock(e) {
+  const licenses = e.licenses || [];
+  const primary = getPrimaryLicense(licenses);
+  const summaryText = buildLicenseSummaryText(e.license_summary, licenses);
+
+  // No data available: neutral fallback
+  if (!primary && !summaryText) {
+    return `
+      <div class="card-section card-licenses detail-only">
+        <strong>📜 Licencias y reutilización</strong>
+        <p class="license-unavailable">Información de licencias no disponible</p>
+      </div>
+    `;
+  }
+
+  const isOpen = primary ? isOpenLicense(primary.name) : false;
+  const badgeClass = isOpen ? 'license-badge license-open' : 'license-badge license-restricted';
+  const badgeLabel = isOpen ? '✅ Abierta' : '⚠️ Aviso legal';
+  const badgeTitle = isOpen
+    ? 'Licencia reconocida como abierta (CC BY, ODbL o similar)'
+    : 'Aviso legal interno o licencia no estándar';
+
+  return `
+    <div class="card-section card-licenses detail-only">
+      <strong>📜 Licencias y reutilización</strong>
+      ${primary ? `
+        <div class="license-primary">
+          <span class="license-name">${escapeHtml(primary.name)}</span>
+          <span class="${badgeClass}" title="${badgeTitle}">${badgeLabel}</span>
+        </div>
+      ` : ''}
+      ${summaryText ? `
+        <p class="license-summary-text">${escapeHtml(summaryText)}</p>
+      ` : ''}
+    </div>
+  `;
+}
+
+/**
  * Renders entity cards into the results container.
  *
  * @param {Array} list - Normalized and filtered entity list
@@ -463,6 +588,8 @@ function render(list) {
         </div>
       ` : ""}
 
+      ${renderLicenseBlock(e)}
+
       <div class="card-footer">
         <a href="${safeUrl(e.portal_url)}" target="_blank" rel="noopener noreferrer" class="portal-link">
           🔗 Acceder al portal <span class="arrow">→</span>
@@ -583,7 +710,7 @@ function updateData() {
     const btn = document.getElementById("updateBtn");
     const output = document.getElementById("updateOutput");
 
-    // Seguridad extra
+    // Safety check
     if (!btn) {
       console.error("❌ Botón updateBtn no encontrado en el DOM");
       return;
@@ -675,14 +802,14 @@ function initDarkMode() {
 }
 document.addEventListener("DOMContentLoaded", () => {
   // =========================
-  // Elementos del DOM
+  // DOM elements
   // =========================
   const updateBtn = document.getElementById("updateBtn");
   const output = document.getElementById("updateOutput");
   const entidadesContainer = document.getElementById("entidades");
 
   // =========================
-  // Seguridad básica
+  // Safety check
   // =========================
   if (!updateBtn) {
     console.error("❌ No se encontró el botón #updateBtn");
@@ -690,12 +817,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================
-  // Cargar entidades al iniciar
+  // Load entities on startup
   // =========================
   cargarEntidades();
 
   // =========================
-  // Evento botón actualizar
+  // Update button event
   // =========================
   updateBtn.addEventListener("click", async () => {
     updateBtn.disabled = true;
@@ -716,7 +843,7 @@ document.addEventListener("DOMContentLoaded", () => {
         output.textContent += "✅ Actualización completada\n\n";
         output.textContent += data.stdout || "";
 
-        // 🔄 Recargar datos tras la actualización
+        // Reload data after update
         await cargarEntidades();
       } else {
         output.textContent += "❌ Error en la actualización\n\n";
@@ -732,7 +859,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // =========================
-  // Función: cargar entidades
+  // Load entities function
   // =========================
   async function cargarEntidades() {
     try {
@@ -751,7 +878,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =========================
-  // Renderizar entidades
+  // Render entities
   // =========================
   function renderEntidades(entidades) {
     if (!entidadesContainer) return;
