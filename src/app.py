@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 # Application factory and configuration
 
@@ -41,7 +41,6 @@ def home():
     """
     Main landing page for the catalog explorer.
     """
-    # The frontend loads entity data via the /api/entidades endpoint.
     return render_template("index.html")
 
 
@@ -66,12 +65,66 @@ def estadisticas():
 @app.route("/api/entidades")
 def api_entidades():
     """
-    Return the full list of entities as JSON.
+    Return the entities catalog as JSON, with optional query-param filters.
 
-    This endpoint is consumed by the frontend to power filters and visualizations.
+    All parameters are optional and combinable.
+    Returns an empty list (not an error) when no entities match.
+
+    Query parameters
+    ----------------
+    island   : str  -- Filter by island name (e.g. "Tenerife", "Gran Canaria").
+                       Matches if the value is present in the entity's ``islands`` list.
+    kind     : str  -- Filter by entity kind (e.g. "cabildo", "ayuntamiento").
+                       Exact match against ``entitykind``.
+    scope    : str  -- Filter by administrative scope (e.g. "insular", "municipal").
+                       Exact match against ``scope``.
+    topic    : str  -- Filter by topic (e.g. "turismo", "medio_ambiente").
+                       Case-insensitive partial match against the ``topics`` list
+                       of every portal the entity has.
+    has_api  : bool -- "true" returns only entities with at least one API declared.
+                       "false" returns only entities without any API.
     """
     entidades = load_entities()
-    return jsonify(entidades)
+
+    island  = request.args.get("island",  "").strip()
+    kind    = request.args.get("kind",    "").strip()
+    scope   = request.args.get("scope",   "").strip()
+    topic   = request.args.get("topic",   "").strip().lower()
+    has_api = request.args.get("has_api", "").strip().lower()
+
+    def entity_has_api(e):
+        return any(
+            p.get("hasapi") is True or bool(p.get("apis"))
+            for p in e.get("portals", [])
+        )
+
+    def entity_has_topic(e, topic_query):
+        for p in e.get("portals", []):
+            for t in p.get("topics", []):
+                if topic_query in t.lower():
+                    return True
+        return False
+
+    result = entidades
+
+    if island:
+        result = [e for e in result if island in e.get("islands", [])]
+
+    if kind:
+        result = [e for e in result if e.get("entitykind", "") == kind]
+
+    if scope:
+        result = [e for e in result if e.get("scope", "") == scope]
+
+    if topic:
+        result = [e for e in result if entity_has_topic(e, topic)]
+
+    if has_api == "true":
+        result = [e for e in result if entity_has_api(e)]
+    elif has_api == "false":
+        result = [e for e in result if not entity_has_api(e)]
+
+    return jsonify(result)
 
 
 @app.route("/api/stats")
@@ -96,10 +149,8 @@ def api_stats():
 
     total_entidades = len(entidades)
 
-    # Total de portales (una entidad puede tener varios)
     total_portales = sum(len(e.get("portals", [])) for e in entidades)
 
-    # Total datasets sumando datasetcount de cada portal
     total_datasets = 0
     for e in entidades:
         for p in e.get("portals", []):
@@ -107,7 +158,6 @@ def api_stats():
             if isinstance(count, (int, float)) and count:
                 total_datasets += int(count)
 
-    # Entidades con al menos una API declarada
     con_api = sum(
         1 for e in entidades
         if any(
@@ -116,7 +166,6 @@ def api_stats():
         )
     )
 
-    # % portales con formatos machine-readable
     MACHINE_READABLE = {"CSV", "JSON", "GEOJSON", "XML", "XLSX", "ODS", "RDF"}
     portales_total = total_portales or 1
     portales_mr = sum(
@@ -126,13 +175,11 @@ def api_stats():
     )
     machine_readable_pct = round((portales_mr / portales_total) * 100)
 
-    # Distribución por tipo de entidad
     por_tipo = {}
     for e in entidades:
         kind = e.get("entitykind", "desconocido")
         por_tipo[kind] = por_tipo.get(kind, 0) + 1
 
-    # Distribución por isla (una entidad puede estar en varias islas)
     por_isla = {}
     for e in entidades:
         for isla in e.get("islands", []):
@@ -152,5 +199,4 @@ def api_stats():
 # Local entry point
 
 if __name__ == "__main__":
-    # Local development entry point (not used in production Docker images).
     app.run(host="0.0.0.0", port=5000, debug=True)
