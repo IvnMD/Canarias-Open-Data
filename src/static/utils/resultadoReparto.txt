@@ -1,0 +1,251 @@
+Total entidades: 234
+
+=== Ivan ===
+Total entidades: 78
+Suma de dificultad: 170
+Listado:
+  - (5) ministerio_cultura – Ministerio de Cultura
+  - (5) ministerio_economia_comercio_empresa – Ministerio de Economía, Comercio y Empresa
+  - (5) ministerio_interior – Ministerio del Interior
+  - (4) autoridad_portuaria_stc – Autoridad Portuaria de Santa Cruz de Tenerife
+  - (4) fundacion_tutelar_canaria_para_la_accion_social_fucas – FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS
+  - (4) fundacion_canaria_para_el_fomento_del_trabajo_funcatra – Fundación Canaria para el Fomento del Trabajo FUNCATRA
+  - (4) gestion_y_planeamiento_territorial_y_medioambiental_sa_gespl – Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN
+  - (4) instituto_canario_de_desarrollo_cultural_sa – INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A
+  - (4) radio_publica_de_canarias_sa – Radio Pública de Canarias, S.A.
+  - (4) television_publica_de_canarias_sa – Televisión Pública de Canarias, S.A.
+  - (4) gorona_del_viento_el_hierro_sa – GORONA DEL VIENTO EL HIERRO, S.A.
+  - (4) parque_tecnologico_de_fuerteventura_sa – Parque Tecnológico de Fuerteventura, S.A.
+  - (4) fundacion_canaria_gran_canaria_convention_bureau – Fundación Canaria Gran Canaria Convention Bureau
+  - (4) institucion_ferial_de_canarias_infecar – INSTITUCIÓN FERIAL DE CANARIAS INFECAR
+  - (4) sociedad_para_el_desarrollo_de_las_telecomunicaciones_de_gra – Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.
+  - (4) titsa – TITSA
+  - (4) fundacion_canaria_parque_cientifico_tecnologico_de_la_ulpgc – Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT
+  - (4) aena – AENA
+  - (2) ayuntamiento_santa_cruz_tenerife – Ayuntamiento de Santa Cruz de Tenerife
+  - (2) cabildo_la_palma – Cabildo de La Palma – Open Data La Palma
+  - (2) sepe_empleo – SEPE – Datos de Empleo Canarias
+  - (2) ayuntamiento_candelaria – Ayuntamiento de Candelaria
+  - (2) ayuntamiento_la_aldea_de_san_nicolas – Ayuntamiento de La Aldea de San Nicolás
+  - (2) ayuntamiento_san_andres_y_sauces – Ayuntamiento de San Andrés y Sauces
+  - (2) ayuntamiento_tias – Ayuntamiento de Tías
+  - (2) ayuntamiento_agaete – Ayuntamiento de Agaete
+  - (2) ayuntamiento_alajero – Ayuntamiento de Alajeró
+  - (2) ayuntamiento_arico – Ayuntamiento de Arico
+  - (2) ayuntamiento_arucas – Ayuntamiento de Arucas
+  - (2) ayuntamiento_brena_alta – Ayuntamiento de Breña Alta
+  - (2) ayuntamiento_el_pinar_de_el_hierro – Ayuntamiento de El Pinar de El Hierro
+  - (2) ayuntamiento_el_tanque – Ayuntamiento de El Tanque
+  - (2) ayuntamiento_fuencaliente – Ayuntamiento de Fuencaliente
+  - (2) ayuntamiento_guia_de_isora – Ayuntamiento de Guía de Isora
+  - (2) ayuntamiento_hermigua – Ayuntamiento de Hermigua
+  - (2) ayuntamiento_la_frontera – Ayuntamiento de La Frontera
+  - (2) ayuntamiento_la_orotava – Ayuntamiento de La Orotava
+  - (2) ayuntamiento_los_llanos_de_aridane – Ayuntamiento de Los Llanos de Aridane
+  - (2) ayuntamiento_mogan – Ayuntamiento de Mogán
+  - (2) ayuntamiento_puntagorda – Ayuntamiento de Puntagorda
+  - (2) ayuntamiento_san_bartolome – Ayuntamiento de San Bartolomé
+  - (2) ayuntamiento_san_miguel_de_abona – Ayuntamiento de San Miguel de Abona
+  - (2) ayuntamiento_santa_cruz_de_la_palma – Ayuntamiento de Santa Cruz de La Palma
+  - (2) ayuntamiento_santa_ursula – Ayuntamiento de Santa Úrsula
+  - (2) ayuntamiento_tazacorte – Ayuntamiento de Tazacorte
+  - (2) ayuntamiento_tejeda – Ayuntamiento de Tejeda
+  - (2) ayuntamiento_tinajo – Ayuntamiento de Tinajo
+  - (2) ayuntamiento_valleseco – Ayuntamiento de Valleseco
+  - (2) ayuntamiento_vega_de_san_mateo – Ayuntamiento de Vega de San Mateo
+  - (2) cabildo_insular_de_el_hierro – Cabildo Insular de El Hierro
+  - (2) federacion_canaria_de_islas_fecai – Federación Canaria de Islas FECAI
+  - (2) ministerio_sanidad – Ministerio de Sanidad
+  - (2) sepe – Servicio Público de Empleo Estatal
+  - (1) istac – ISTAC – Instituto Canario de Estadística
+  - (1) comisionado_transparencia_canarias – Comisionado de Transparencia de Canarias
+  - (1) european_data_portal – European Data Portal (data.europa.eu)
+  - (1) agencia_tributaria_canaria_atc – Agencia Tributaria Canaria ATC
+  - (1) consorcio_el_rincon_la_orotava – Consorcio El Rincón La Orotava
+  - (1) instituto_canario_de_estadistica_istac – INSTITUTO CANARIO DE ESTADÍSTICA ISTAC
+  - (1) instituto_canario_de_calidad_agroalimentaria_icca – Instituto Canario de Calidad Agroalimentaria ICCA
+  - (1) instituto_canario_de_la_vivienda_icv – Instituto Canario de la Vivienda ICV
+  - (1) servicio_canario_de_la_salud_scs – Servicio Canario de la Salud SCS
+  - (1) consorcio_de_abastecimiento_de_aguas_a_fuerteventura_caaf – Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF
+  - (1) consejo_insular_de_aguas_de_gran_canaria – Consejo Insular de Aguas de Gran Canaria
+  - (1) consorcio_de_viviendas_de_gran_canaria – Consorcio de Viviendas de Gran Canaria
+  - (1) instituto_de_atencion_social_y_sociosanitaria_del_cabildo_de – Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria
+  - (1) consejo_insular_de_aguas_de_la_gomera – Consejo Insular de Aguas de La Gomera
+  - (1) balsas_de_tenerife_balten – Balsas de Tenerife BALTEN
+  - (1) federacion_canaria_de_municipios_fecam – Federación Canaria de Municipios FECAM
+  - (1) ine – Instituto Nacional de Estadística
+  - (1) biblioteca_nacional_de_espana – Biblioteca Nacional de España
+  - (1) ine_estadistica_canarias – INE – Instituto Nacional de Estadística
+  - (1) ministerio_ciencia_innovacion_universidades – Ministerio de Ciencia, Innovación y Universidades
+  - (1) ministerio_derechos_sociales – Ministerio de Derechos Sociales, Consumo y Agenda 2030
+  - (1) ministerio_industria_turismo – Ministerio de Industria y Turismo
+  - (1) ministerio_politica_territorial – Ministerio de Política Territorial y Memoria Democrática
+  - (1) ministerio_vivienda_agenda_urbana – Ministerio de Vivienda y Agenda Urbana
+  - (1) ministerio_transicion_ecologica – Ministerio para la Transición Ecológica y el Reto Demográfico – Portal de Datos Abiertos
+
+=== JP ===
+Total entidades: 78
+Suma de dificultad: 170
+Listado:
+  - (5) ministerio_educacion_fp_deportes – Ministerio de Educación, Formación Profesional y Deportes
+  - (5) ministerio_industria_turismo – Ministerio de Industria y Turismo
+  - (5) ministerio_agricultura_pesca_alimentacion – Ministerio de Agricultura, Pesca y Alimentación
+  - (4) asistencia_integral_tributaria_sa_asista – Asistencia Integral Tributaria, S.A. ASISTA
+  - (4) fundacion_canaria_instituto_de_investigacion_sanitaria_de_ca – Fundación Canaria Instituto de Investigación Sanitaria de Canarias FIISC
+  - (4) gestion_del_medio_rural_de_canarias_sau_gmr_canarias – GESTIÓN DEL MEDIO RURAL DE CANARIAS, S.A.U. GMR CANARIAS
+  - (4) gestur_canarias_sa – Gestur Canarias, S.A.
+  - (4) instituto_tecnologico_de_canarias_sa_itc – Instituto Tecnológico de Canarias, S.A. ITC
+  - (4) sociedad_canaria_de_fomento_economico_sa_proexca – Sociedad Canaria de Fomento Económico, S.A. PROEXCA
+  - (4) viviendas_sociales_e_infraestructuras_de_canarias_sa_vis – VIVIENDAS SOCIALES E INFRAESTRUCTURAS DE CANARIAS, S.A. VIS
+  - (4) mercahierro_sau – MERCAHIERRO, S.A.U.
+  - (4) centro_atlantico_de_arte_moderno_sa_caam – CENTRO ATLÁNTICO DE ARTE MODERNO, S.A. CAAM
+  - (4) fundacion_canaria_orquesta_filarmonica_de_gran_canaria – Fundación Canaria Orquesta Filarmónica de Gran Canaria
+  - (4) mataderos_insulares_de_gran_canaria_sl – Mataderos Insulares de Gran Canaria, S.L.
+  - (4) guaguagomera_sau – GuaguaGomera, S.A.U.
+  - (4) fundacion_canaria_general_de_la_universidad_de_la_laguna – Fundación Canaria General de la Universidad de La Laguna
+  - (4) ric_ulpgc_sau – RIC ULPGC, S.A.U.
+  - (3) ayuntamiento_buena_vista_del_norte – Ayuntamiento de Buenavista del Norte
+  - (2) cabildo_tenerife – Cabildo de Tenerife
+  - (2) ayuntamiento_arona – Ayuntamiento de Arona – Open Data Arona
+  - (2) cabildo_lanzarote – Cabildo de Lanzarote – Centro de Datos
+  - (2) aena_canarios – AENA – Estadísticas de Aeropuertos Canarios
+  - (2) ayuntamiento_granadilla_de_abona – Ayuntamiento de Granadilla de Abona
+  - (2) ayuntamiento_la_oliva – Ayuntamiento de La Oliva
+  - (2) ayuntamiento_san_cristobal_de_la_laguna – Ayuntamiento de San Cristóbal de La Laguna
+  - (2) ayuntamiento_valle_gran_rey – Ayuntamiento de Valle Gran Rey
+  - (2) ayuntamiento_agulo – Ayuntamiento de Agulo
+  - (2) ayuntamiento_antigua – Ayuntamiento de Antigua
+  - (2) ayuntamiento_arrecife – Ayuntamiento de Arrecife
+  - (2) ayuntamiento_barlovento – Ayuntamiento de Barlovento
+  - (2) ayuntamiento_brena_baja – Ayuntamiento de Breña Baja
+  - (2) ayuntamiento_el_rosario – Ayuntamiento de El Rosario
+  - (2) ayuntamiento_fasnia – Ayuntamiento de Fasnia
+  - (2) ayuntamiento_garachico – Ayuntamiento de Garachico
+  - (2) ayuntamiento_galdar – Ayuntamiento de Gáldar
+  - (2) ayuntamiento_icod_de_los_vinos – Ayuntamiento de Icod de los Vinos
+  - (2) ayuntamiento_la_guancha – Ayuntamiento de La Guancha
+  - (2) ayuntamiento_la_victoria_de_acentejo – Ayuntamiento de La Victoria de Acentejo
+  - (2) ayuntamiento_los_realejos – Ayuntamiento de Los Realejos
+  - (2) ayuntamiento_moya – Ayuntamiento de Moya
+  - (2) ayuntamiento_puntallana – Ayuntamiento de Puntallana
+  - (2) ayuntamiento_san_bartolome_de_tirajana – Ayuntamiento de San Bartolomé de Tirajana
+  - (2) ayuntamiento_san_sebastian_de_la_gomera – Ayuntamiento de San Sebastián de La Gomera
+  - (2) ayuntamiento_santa_lucia_de_tirajana – Ayuntamiento de Santa Lucía de Tirajana
+  - (2) ayuntamiento_santiago_del_teide – Ayuntamiento de Santiago del Teide
+  - (2) ayuntamiento_tegueste – Ayuntamiento de Tegueste
+  - (2) ayuntamiento_telde – Ayuntamiento de Telde
+  - (2) ayuntamiento_tuineje – Ayuntamiento de Tuineje
+  - (2) ayuntamiento_valsequillo – Ayuntamiento de Valsequillo
+  - (2) ayuntamiento_vilaflor – Ayuntamiento de Vilaflor
+  - (2) cabildo_insular_de_fuerteventura – Cabildo Insular de Fuerteventura
+  - (2) mancomunidad_sureste_de_gran_canaria – Mancomunidad Sureste de Gran Canaria
+  - (2) datos_justicia – Portal de Datos de Justicia
+  - (2) ministerio_exteriores – Ministerio de Asuntos Exteriores, Unión Europea y Cooperación
+  - (1) gobierno_abierto_canarias – Portal de Gobierno Abierto del Gobierno de Canarias
+  - (1) agencia_canaria_de_calidad_universitaria_y_evaluacion_educat – Agencia Canaria de Calidad Universitaria y Evaluación Educativa ACCUEE
+  - (1) cartografica_de_canarias_sa_grafcan – Cartográfica de Canarias, S.A. GRAFCAN
+  - (1) ente_publico_radio_television_canaria_rtvc – Ente Público Radio Televisión Canaria RTVC
+  - (1) instituto_canario_de_igualdad_ici – INSTITUTO CANARIO DE IGUALDAD ICI
+  - (1) instituto_canario_de_hemodonacion_y_hemoterapia_ichh – Instituto Canario de Hemodonación y Hemoterapia ICHH
+  - (1) puertos_canarios – Puertos Canarios
+  - (1) consejo_insular_de_aguas_de_el_hierro – Consejo Insular de Aguas de El Hierro
+  - (1) patronato_de_turismo_del_cabildo_de_fuerteventura – Patronato de Turismo del Cabildo de Fuerteventura
+  - (1) consejo_insular_de_la_energia_de_gran_canaria – Consejo Insular de la Energía de Gran Canaria
+  - (1) fondo_para_la_etnografia_y_el_desarrollo_de_la_artesania_can – Fondo para la Etnografía y el Desarrollo de la Artesanía Canaria FEDAC
+  - (1) patronato_insular_de_turismo_del_cabildo_de_gran_canaria – Patronato Insular de Turismo del Cabildo de Gran Canaria
+  - (1) consejo_insular_de_aguas_de_la_palma – Consejo Insular de Aguas de La Palma
+  - (1) universidad_de_la_laguna – Universidad de La Laguna
+  - (1) mancomunidad_norte_de_gran_canaria – Mancomunidad Norte de Gran Canaria
+  - (1) aemet – Agencia Estatal de Meteorología
+  - (1) oepm – Oficina Española de Patentes y Marcas
+  - (1) ministerio_agricultura_pesca_alimentacion – Ministerio de Agricultura, Pesca y Alimentación
+  - (1) ministerio_cultura – Ministerio de Cultura
+  - (1) ministerio_igualdad – Ministerio de Igualdad
+  - (1) ministerio_juventud_infancia – Ministerio de Juventud e Infancia
+  - (1) ministerio_trabajo_economia_social – Ministerio de Trabajo y Economía Social
+  - (1) ministerio_interior – Ministerio del Interior
+  - (1) presidencia_del_gobierno – Presidencia del Gobierno
+
+=== Yasier ===
+Total entidades: 78
+Suma de dificultad: 169
+Listado:
+  - (5) ministerio_hacienda – Ministerio de Hacienda
+  - (5) red_electrica – Red Eléctrica
+  - (5) ministerio_educacion_fp_deportes – Ministerio de Educación, Formación Profesional y Deportes
+  - (4) fundacion_canaria_academia_canaria_de_la_lengua – FUNDACIÓN CANARIA ACADEMIA CANARIA DE LA LENGUA
+  - (4) fundacion_canaria_de_juventud_ideo – Fundación Canaria de Juventud IDEO
+  - (4) gestion_de_servicios_para_la_salud_y_seguridad_en_canarias_s – Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC
+  - (4) hoteles_escuela_de_canarias_sa_hecansa – Hoteles Escuela de Canarias, S.A. HECANSA
+  - (4) promotur_turismo_de_canarias_sa – PROMOTUR TURISMO DE CANARIAS, S.A.
+  - (4) sociedad_para_el_desarrollo_economico_de_canarias_sa_sodecan – Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN
+  - (4) empresa_insular_de_servicios_el_meridiano_sa – Empresa Insular de Servicios El Meridiano, S.A.
+  - (4) eolicas_de_fuerteventura – Eólicas de Fuerteventura
+  - (4) ferrocarriles_de_gran_canaria_sa – Ferrocarriles de Gran Canaria, S.A.
+  - (4) fundacion_canaria_de_las_artes_escenicas_y_de_la_musica_de_g – Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria
+  - (4) sociedad_de_promocion_economica_de_gran_canaria_sau_spegc – Sociedad de Promoción Económica de Gran Canaria, S.A.U. SPEGC
+  - (4) auditorio_de_tenerife_sa – AUDITORIO DE TENERIFE, S.A.
+  - (4) fundacion_canaria_lucio_de_las_casas – Fundación Canaria Lucio de las Casas
+  - (4) tic_ulpgc_slu – TIC ULPGC, S.L.U.
+  - (3) datos_gob_es – datos.gob.es
+  - (2) ayuntamiento_las_palmas_gc – Ayuntamiento de Las Palmas de Gran Canaria
+  - (2) cabildo_gran_canaria_ide – Cabildo de Gran Canaria – IDE Gran Canaria
+  - (2) portal_justicia_datos – Portal La Justicia en Datos – Ministerio de Justicia
+  - (2) policia_nacional_canarias – Policía Nacional – Datos de Seguridad Canarias
+  - (2) ayuntamiento_guimar – Ayuntamiento de Güímar
+  - (2) ayuntamiento_puerto_de_la_cruz – Ayuntamiento de Puerto de la Cruz
+  - (2) ayuntamiento_tijarafe – Ayuntamiento de Tijarafe
+  - (2) ayuntamiento_adeje – Ayuntamiento de Adeje
+  - (2) ayuntamiento_aguimes – Ayuntamiento de Agüimes
+  - (2) ayuntamiento_arafo – Ayuntamiento de Arafo
+  - (2) ayuntamiento_artenara – Ayuntamiento de Artenara
+  - (2) ayuntamiento_betancuria – Ayuntamiento de Betancuria
+  - (2) ayuntamiento_el_paso – Ayuntamiento de El Paso
+  - (2) ayuntamiento_el_sauzal – Ayuntamiento de El Sauzal
+  - (2) ayuntamiento_firgas – Ayuntamiento de Firgas
+  - (2) ayuntamiento_garafia – Ayuntamiento de Garafía
+  - (2) ayuntamiento_haria – Ayuntamiento de Haría
+  - (2) ayuntamiento_ingenio – Ayuntamiento de Ingenio
+  - (2) ayuntamiento_la_matanza_de_acentejo – Ayuntamiento de La Matanza de Acentejo
+  - (2) ayuntamiento_la_villa_de_mazo – Ayuntamiento de La Villa de Mazo
+  - (2) ayuntamiento_los_silos – Ayuntamiento de Los Silos
+  - (2) ayuntamiento_puerto_del_rosario – Ayuntamiento de Puerto del Rosario
+  - (2) ayuntamiento_pajara – Ayuntamiento de Pájara
+  - (2) ayuntamiento_san_juan_de_la_rambla – Ayuntamiento de San Juan de la Rambla
+  - (2) ayuntamiento_santa_brigida – Ayuntamiento de Santa Brígida
+  - (2) ayuntamiento_santa_maria_de_guia – Ayuntamiento de Santa María de Guía
+  - (2) ayuntamiento_tacoronte – Ayuntamiento de Tacoronte
+  - (2) ayuntamiento_teguise – Ayuntamiento de Teguise
+  - (2) ayuntamiento_teror – Ayuntamiento de Teror
+  - (2) ayuntamiento_vallehermoso – Ayuntamiento de Vallehermoso
+  - (2) ayuntamiento_valverde – Ayuntamiento de Valverde
+  - (2) ayuntamiento_yaiza – Ayuntamiento de Yaiza
+  - (2) cabildo_insular_de_la_gomera – Cabildo Insular de La Gomera
+  - (2) puertos_del_estado – Puertos del Estado
+  - (2) seguridad_social – Seguridad Social
+  - (1) gobierno_canarias – Gobierno de Canarias – Portal de Datos Abiertos
+  - (1) grafcan_sitcan – GRAFCAN / SITCAN – Sistema de Información Territorial de Canarias
+  - (1) openstreetmap_canarias – OpenStreetMap – Islas Canarias
+  - (1) agencia_canaria_de_proteccion_del_medio_natural_acpmn – Agencia Canaria de Protección del Medio Natural ACPMN
+  - (1) consejo_economico_y_social_de_canarias_ces – Consejo Económico y Social de Canarias CES
+  - (1) escuela_de_servicios_sanitarios_y_sociales_de_canarias_esssc – Escuela de Servicios Sanitarios y Sociales de Canarias ESSSCAN
+  - (1) instituto_canario_de_administracion_publica_icap – Instituto Canario de Administración Pública ICAP
+  - (1) instituto_canario_de_investigaciones_agrarias_icia – Instituto Canario de Investigaciones Agrarias ICIA
+  - (1) servicio_canario_de_empleo_sce – Servicio Canario de Empleo SCE
+  - (1) consejo_insular_de_aguas_de_fuerteventura – Consejo Insular de Aguas de Fuerteventura
+  - (1) consorcio_de_autoridad_unica_del_transporte_de_gran_canaria – CONSORCIO DE AUTORIDAD ÚNICA DEL TRANSPORTE DE GRAN CANARIA
+  - (1) consorcio_de_emergencias_de_gran_canaria – Consorcio de Emergencias de Gran Canaria
+  - (1) instituto_insular_de_deportes_del_cabildo_de_gran_canaria – Instituto Insular de Deportes del Cabildo de Gran Canaria
+  - (1) valora_gestion_tributaria – Valora Gestión Tributaria
+  - (1) consorcio_insular_de_servicios_de_la_palma – Consorcio Insular de Servicios de La Palma
+  - (1) universidad_de_las_palmas_de_gran_canaria – Universidad de Las Palmas de Gran Canaria
+  - (1) mancomunidad_de_medianas_de_gran_canaria – Mancomunidad de Medianas de Gran Canaria
+  - (1) miteco – Ministerio para la Transición Ecológica y el Reto Demográfico
+  - (1) datos_gob_es – datos.gob.es – Portal de Datos Abiertos de España
+  - (1) ministerio_asuntos_exteriores – Ministerio de Asuntos Exteriores, Unión Europea y Cooperación
+  - (1) ministerio_defensa – Ministerio de Defensa
+  - (1) ministerio_inclusion_seguridad_social – Ministerio de Inclusión, Seguridad Social y Migraciones
+  - (1) ministerio_presidencia_justicia – Ministerio de la Presidencia, Justicia y Relaciones con las Cortes
+  - (1) ministerio_transportes_movilidad_sostenible – Ministerio de Transportes y Movilidad Sostenible
+  - (1) ministerio_transformacion_digital – Ministerio para la Transformación Digital y de la Función Pública
+
