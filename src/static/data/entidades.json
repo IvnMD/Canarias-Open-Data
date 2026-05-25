@@ -3690,8 +3690,6 @@
     },
     "notes": null
   },
-  
-  
   {
     "id": "ayuntamiento_el_paso",
     "name": "Ayuntamiento de El Paso",
@@ -13851,38 +13849,80 @@
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Buenavista del Norte.",
+    "description": "Ayuntamiento de Buenavista del Norte, municipio de la isla de Tenerife. Cuenta con sede electrónica y portal de transparencia donde publica información institucional, económica y de contratación, pero no dispone de un portal específico de datos abiertos estructurados.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Buenavista del Norte",
-        "postal_code": null,
+        "address": "Plaza de Los Remedios, 1",
+        "postal_code": "38480",
         "municipality": "Buenavista del Norte",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.371783,
-          "lon": -16.850967
+          "lat": 28.3725,
+          "lon": -16.8533
         },
-        "source_url": null
+        "source_url": "https://buenavistadelnorte.sedelectronica.es/transparency"
       }
     ],
-    "portals": [],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "transparencia",
+        "name": "Portal de transparencia del Ayuntamiento de Buenavista del Norte",
+        "url": "https://buenavistadelnorte.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "Portal Transparencia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Transparencia",
+          "Sector público",
+          "Administración"
+        ],
+        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (atribución requerida)",
+        "licenses": [
+          {
+            "name": "Reutilización abierta",
+            "id": null,
+            "url": null,
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
     "verification": {
       "status": "estimated",
       "last_checked": "2026-05",
-      "source_urls": []
+      "source_urls": [
+        "https://buenavistadelnorte.sedelectronica.es/transparency"
+      ]
     },
     "notes": null
   },
-
   {
     "id": "datos_gob_es",
     "name": "datos.gob.es",
-    "alternate_names": ["Portal de datos abiertos del Gobierno de España"],
+    "alternate_names": [
+      "Portal de datos abiertos del Gobierno de España"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Portal estatal de datos abiertos y agregador nacional del ecosistema español, con federación de catálogos autonómicos y locales, incluido el canario.",
     "locations": [
       {
@@ -13905,10 +13945,29 @@
         "name": "datos.gob.es",
         "url": "https://datos.gob.es/es/",
         "portal_status": "active",
-        "technology": ["CKAN"],
-        "standards": ["DCAT", "DCAT-AP"],
-        "formats": ["CSV", "JSON", "XML", "RDF", "API"],
-        "topics": ["agregacion", "administracion_publica", "economia", "transporte", "medio_ambiente", "turismo", "demografia"],
+        "technology": [
+          "CKAN"
+        ],
+        "standards": [
+          "DCAT",
+          "DCAT-AP"
+        ],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "RDF",
+          "API"
+        ],
+        "topics": [
+          "agregacion",
+          "administracion_publica",
+          "economia",
+          "transporte",
+          "medio_ambiente",
+          "turismo",
+          "demografia"
+        ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
@@ -13947,11 +14006,15 @@
   {
     "id": "ine",
     "name": "Instituto Nacional de Estadística",
-    "alternate_names": ["INE"],
+    "alternate_names": [
+      "INE"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Organismo estadístico oficial de España, imprescindible para demografía, economía, vivienda, empresas y comparativas territoriales de Canarias.",
     "locations": [
       {
@@ -13974,10 +14037,28 @@
         "name": "INE Datos abiertos",
         "url": "https://www.ine.es/datosabiertos/",
         "portal_status": "active",
-        "technology": ["Custom", "OpenAPI"],
-        "standards": ["JSON", "API REST"],
-        "formats": ["JSON", "CSV", "XLSX", "API"],
-        "topics": ["demografia", "poblacion", "economia", "vivienda", "empresas", "turismo"],
+        "technology": [
+          "Custom",
+          "OpenAPI"
+        ],
+        "standards": [
+          "JSON",
+          "API REST"
+        ],
+        "formats": [
+          "JSON",
+          "CSV",
+          "XLSX",
+          "API"
+        ],
+        "topics": [
+          "demografia",
+          "poblacion",
+          "economia",
+          "vivienda",
+          "empresas",
+          "turismo"
+        ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
@@ -14023,11 +14104,16 @@
   {
     "id": "aemet",
     "name": "Agencia Estatal de Meteorología",
-    "alternate_names": ["AEMET", "AEMET OpenData"],
+    "alternate_names": [
+      "AEMET",
+      "AEMET OpenData"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Fuente oficial de meteorología y climatología en España, esencial para series históricas, avisos y observación en Canarias.",
     "locations": [
       {
@@ -14050,10 +14136,27 @@
         "name": "AEMET OpenData",
         "url": "https://opendata.aemet.es/",
         "portal_status": "active",
-        "technology": ["Custom", "API REST"],
-        "standards": ["REST", "JSON"],
-        "formats": ["JSON", "CSV", "XML", "API"],
-        "topics": ["meteorologia", "clima", "temperatura", "precipitacion", "avisos"],
+        "technology": [
+          "Custom",
+          "API REST"
+        ],
+        "standards": [
+          "REST",
+          "JSON"
+        ],
+        "formats": [
+          "JSON",
+          "CSV",
+          "XML",
+          "API"
+        ],
+        "topics": [
+          "meteorologia",
+          "clima",
+          "temperatura",
+          "precipitacion",
+          "avisos"
+        ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
@@ -14092,11 +14195,15 @@
   {
     "id": "miteco",
     "name": "Ministerio para la Transición Ecológica y el Reto Demográfico",
-    "alternate_names": ["MITECO"],
+    "alternate_names": [
+      "MITECO"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio clave para medio ambiente, energía, agua, costas, biodiversidad y residuos, con fuerte relevancia para Canarias.",
     "locations": [
       {
@@ -14119,10 +14226,31 @@
         "name": "Portal de Datos Abiertos MITECO",
         "url": "https://www.datosabiertos.miteco.gob.es/en.html",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["INSPIRE", "REST", "API"],
-        "formats": ["CSV", "JSON", "XML", "GeoJSON", "WMS", "WFS", "API"],
-        "topics": ["medio_ambiente", "energia", "agua", "costas", "biodiversidad", "residuos"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "INSPIRE",
+          "REST",
+          "API"
+        ],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "GeoJSON",
+          "WMS",
+          "WFS",
+          "API"
+        ],
+        "topics": [
+          "medio_ambiente",
+          "energia",
+          "agua",
+          "costas",
+          "biodiversidad",
+          "residuos"
+        ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
@@ -14161,11 +14289,15 @@
   {
     "id": "puertos_del_estado",
     "name": "Puertos del Estado",
-    "alternate_names": ["Puertos del Estado"],
+    "alternate_names": [
+      "Puertos del Estado"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Organismo estatal de referencia para estadísticas portuarias, tráficos, mercancías y pasajeros, muy relevante para puertos canarios.",
     "locations": [
       {
@@ -14188,10 +14320,26 @@
         "name": "Puertos del Estado",
         "url": "https://www.puertos.es",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["CSV", "XLSX", "PDF"],
-        "formats": ["CSV", "XLSX", "PDF"],
-        "topics": ["puertos", "trafico_maritimo", "mercancias", "pasajeros", "logistica"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "puertos",
+          "trafico_maritimo",
+          "mercancias",
+          "pasajeros",
+          "logistica"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -14224,11 +14372,16 @@
   {
     "id": "ministerio_sanidad",
     "name": "Ministerio de Sanidad",
-    "alternate_names": ["Sanidad", "Sanidad en datos"],
+    "alternate_names": [
+      "Sanidad",
+      "Sanidad en datos"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio responsable de la estadística sanitaria estatal y del portal de datos sanitarios del SNS.",
     "locations": [
       {
@@ -14251,10 +14404,28 @@
         "name": "Sanidad en datos",
         "url": "https://www.sanidad.gob.es/estadEstudios/home.htm",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX", "PDF"],
-        "formats": ["HTML", "CSV", "XLSX", "PDF"],
-        "topics": ["salud", "epidemiologia", "hospitales", "vacunacion", "sistema_nacional_de_salud"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "salud",
+          "epidemiologia",
+          "hospitales",
+          "vacunacion",
+          "sistema_nacional_de_salud"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -14278,10 +14449,25 @@
         "name": "Banco de datos del Ministerio de Sanidad",
         "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX", "PDF"],
-        "formats": ["HTML", "CSV", "XLSX", "PDF"],
-        "topics": ["salud", "estadisticas_sanitarias"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "salud",
+          "estadisticas_sanitarias"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -14313,11 +14499,16 @@
   {
     "id": "datos_justicia",
     "name": "Portal de Datos de Justicia",
-    "alternate_names": ["datos.justicia.es", "La Justicia en Datos"],
+    "alternate_names": [
+      "datos.justicia.es",
+      "La Justicia en Datos"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Portal oficial de datos de justicia con estadísticas judiciales y recursos reutilizables de la Administración de Justicia.",
     "locations": [
       {
@@ -14340,10 +14531,26 @@
         "name": "Portal de Datos de Justicia",
         "url": "https://datos.justicia.es",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["CSV", "XLSX", "PDF"],
-        "formats": ["CSV", "XLSX", "PDF"],
-        "topics": ["justicia", "estadistica_judicial", "juzgados", "procedimientos", "registros_civiles"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "justicia",
+          "estadistica_judicial",
+          "juzgados",
+          "procedimientos",
+          "registros_civiles"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -14375,11 +14582,15 @@
   {
     "id": "seguridad_social",
     "name": "Seguridad Social",
-    "alternate_names": ["Portal Estadísticas de la Seguridad Social"],
+    "alternate_names": [
+      "Portal Estadísticas de la Seguridad Social"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Portal estadístico de la Seguridad Social con datos de empleo, cotización, pensiones y protección social.",
     "locations": [
       {
@@ -14402,10 +14613,28 @@
         "name": "Portal Estadísticas de la Seguridad Social",
         "url": "https://portaldatos.seg-social.gob.es",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX", "PDF"],
-        "formats": ["HTML", "CSV", "XLSX", "PDF"],
-        "topics": ["empleo", "cotizacion", "pensiones", "proteccion_social", "mercado_laboral"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "empleo",
+          "cotizacion",
+          "pensiones",
+          "proteccion_social",
+          "mercado_laboral"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -14437,11 +14666,15 @@
   {
     "id": "ministerio_cultura",
     "name": "Ministerio de Cultura",
-    "alternate_names": ["Cultura"],
+    "alternate_names": [
+      "Cultura"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio competente en cultura, patrimonio, museos, archivos y bibliotecas, con conjuntos de datos y recursos de reutilización.",
     "locations": [
       {
@@ -14464,10 +14697,26 @@
         "name": "Ministerio de Cultura",
         "url": "https://www.cultura.gob.es/en/portada.html",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "RDF", "CSV"],
-        "formats": ["HTML", "CSV", "RDF"],
-        "topics": ["cultura", "patrimonio", "museos", "archivos", "bibliotecas"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "RDF",
+          "CSV"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "RDF"
+        ],
+        "topics": [
+          "cultura",
+          "patrimonio",
+          "museos",
+          "archivos",
+          "bibliotecas"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -14499,11 +14748,17 @@
   {
     "id": "biblioteca_nacional_de_espana",
     "name": "Biblioteca Nacional de España",
-    "alternate_names": ["BNE", "datos.bne.es", "BNElab"],
+    "alternate_names": [
+      "BNE",
+      "datos.bne.es",
+      "BNElab"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": "ministerio_cultura",
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Biblioteca nacional con un portal de open data bibliográfico y de autoridades, útil para patrimonio documental y linked data.",
     "locations": [
       {
@@ -14526,10 +14781,29 @@
         "name": "datos.bne.es",
         "url": "https://datos.bne.es",
         "portal_status": "active",
-        "technology": ["Custom", "Linked Data"],
-        "standards": ["RDF", "JSON", "CSV", "SPARQL"],
-        "formats": ["RDF", "JSON", "CSV", "SPARQL"],
-        "topics": ["bibliotecas", "catalogos", "patrimonio_documental", "autoridades", "obras"],
+        "technology": [
+          "Custom",
+          "Linked Data"
+        ],
+        "standards": [
+          "RDF",
+          "JSON",
+          "CSV",
+          "SPARQL"
+        ],
+        "formats": [
+          "RDF",
+          "JSON",
+          "CSV",
+          "SPARQL"
+        ],
+        "topics": [
+          "bibliotecas",
+          "catalogos",
+          "patrimonio_documental",
+          "autoridades",
+          "obras"
+        ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
@@ -14568,11 +14842,16 @@
   {
     "id": "ministerio_educacion_fp_deportes",
     "name": "Ministerio de Educación, Formación Profesional y Deportes",
-    "alternate_names": ["MEFPD", "Ministerio de Educación"],
+    "alternate_names": [
+      "MEFPD",
+      "Ministerio de Educación"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio responsable de educación, FP y deporte, con datasets y referencias útiles para el análisis territorial.",
     "locations": [
       {
@@ -14595,10 +14874,24 @@
         "name": "Ministerio de Educación, Formación Profesional y Deportes",
         "url": "https://www.educacionfpydeportes.gob.es/en/portada.html",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX"],
-        "formats": ["HTML", "CSV", "XLSX"],
-        "topics": ["educacion", "fp", "deportes"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "topics": [
+          "educacion",
+          "fp",
+          "deportes"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -14629,11 +14922,15 @@
   {
     "id": "ministerio_hacienda",
     "name": "Ministerio de Hacienda",
-    "alternate_names": ["Hacienda"],
+    "alternate_names": [
+      "Hacienda"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio clave para presupuestos, gasto público, tributación y administración financiera del Estado.",
     "locations": [
       {
@@ -14656,10 +14953,25 @@
         "name": "Ministerio de Hacienda - Datos Abiertos",
         "url": "https://www.hacienda.gob.es/en-GB/GobiernoAbierto/Datos%20Abiertos/Paginas/Datosabiertos.aspx",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX"],
-        "formats": ["HTML", "CSV", "XLSX"],
-        "topics": ["presupuestos", "gasto_publico", "tributos", "administracion_financiera"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "topics": [
+          "presupuestos",
+          "gasto_publico",
+          "tributos",
+          "administracion_financiera"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -14690,11 +15002,15 @@
   {
     "id": "ministerio_economia_comercio_empresa",
     "name": "Ministerio de Economía, Comercio y Empresa",
-    "alternate_names": ["Economía, Comercio y Empresa"],
+    "alternate_names": [
+      "Economía, Comercio y Empresa"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio con datasets económicos y comerciales útiles para actividad empresarial, comercio exterior e indicadores macroeconómicos.",
     "locations": [
       {
@@ -14717,10 +15033,24 @@
         "name": "Ministerio de Economía, Comercio y Empresa - Datos Abiertos",
         "url": "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX"],
-        "formats": ["HTML", "CSV", "XLSX"],
-        "topics": ["economia", "comercio", "empresa"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "topics": [
+          "economia",
+          "comercio",
+          "empresa"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -14751,11 +15081,15 @@
   {
     "id": "ministerio_industria_turismo",
     "name": "Ministerio de Industria y Turismo",
-    "alternate_names": ["Industria y Turismo"],
+    "alternate_names": [
+      "Industria y Turismo"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio relevante para competitividad, industria, turismo y datos económicos de ámbito estatal.",
     "locations": [
       {
@@ -14778,10 +15112,23 @@
         "name": "Ministerio de Industria y Turismo - Gobierno Abierto",
         "url": "https://www.mintur.gob.es/en-us/gobierno-abierto",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV"],
-        "formats": ["HTML", "CSV"],
-        "topics": ["industria", "turismo", "comercio", "competitividad"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV"
+        ],
+        "formats": [
+          "HTML",
+          "CSV"
+        ],
+        "topics": [
+          "industria",
+          "turismo",
+          "comercio",
+          "competitividad"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -14813,11 +15160,15 @@
   {
     "id": "oepm",
     "name": "Oficina Española de Patentes y Marcas",
-    "alternate_names": ["OEPM"],
+    "alternate_names": [
+      "OEPM"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Organismo de referencia para propiedad industrial, patentes, marcas y actividad innovadora.",
     "locations": [
       {
@@ -14840,10 +15191,23 @@
         "name": "OEPM OpenData",
         "url": "https://sede.oepm.gob.es/eSede/datos/en/",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["CSV", "API"],
-        "formats": ["CSV", "API"],
-        "topics": ["patentes", "marcas", "propiedad_industrial", "innovacion"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "CSV",
+          "API"
+        ],
+        "formats": [
+          "CSV",
+          "API"
+        ],
+        "topics": [
+          "patentes",
+          "marcas",
+          "propiedad_industrial",
+          "innovacion"
+        ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
@@ -14881,11 +15245,15 @@
   {
     "id": "red_electrica",
     "name": "Red Eléctrica",
-    "alternate_names": ["REE"],
+    "alternate_names": [
+      "REE"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Operador del sistema eléctrico español con datos de demanda, producción y contexto energético útiles para Canarias.",
     "locations": [
       {
@@ -14908,10 +15276,25 @@
         "name": "Red Eléctrica",
         "url": "https://www.ree.es/es",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX"],
-        "formats": ["HTML", "CSV", "XLSX"],
-        "topics": ["energia_electrica", "demanda", "produccion", "red_electrica"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "topics": [
+          "energia_electrica",
+          "demanda",
+          "produccion",
+          "red_electrica"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -14942,11 +15325,15 @@
   {
     "id": "aena",
     "name": "AENA",
-    "alternate_names": ["AENA Aeropuertos"],
+    "alternate_names": [
+      "AENA Aeropuertos"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Gestor aeroportuario con estadísticas de tráfico aéreo muy útiles para los aeropuertos canarios.",
     "locations": [
       {
@@ -14969,10 +15356,26 @@
         "name": "AENA Estadísticas",
         "url": "https://www.aena.es/es/estadisticas.html",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["CSV", "XLSX", "PDF"],
-        "formats": ["CSV", "XLSX", "PDF"],
-        "topics": ["transporte_aereo", "aeropuertos", "pasajeros", "operaciones", "mercancias"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "transporte_aereo",
+          "aeropuertos",
+          "pasajeros",
+          "operaciones",
+          "mercancias"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -15003,11 +15406,15 @@
   {
     "id": "sepe",
     "name": "Servicio Público de Empleo Estatal",
-    "alternate_names": ["SEPE"],
+    "alternate_names": [
+      "SEPE"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Organismo estatal de empleo con estadísticas mensuales útiles para paro, contratos y demandantes en Canarias.",
     "locations": [
       {
@@ -15030,10 +15437,25 @@
         "name": "SEPE Datos de Empleo",
         "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["CSV", "XLSX", "PDF"],
-        "formats": ["CSV", "XLSX", "PDF"],
-        "topics": ["empleo", "paro", "contratos", "mercado_laboral"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "formats": [
+          "CSV",
+          "XLSX",
+          "PDF"
+        ],
+        "topics": [
+          "empleo",
+          "paro",
+          "contratos",
+          "mercado_laboral"
+        ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
@@ -15064,11 +15486,15 @@
   {
     "id": "ministerio_interior",
     "name": "Ministerio del Interior",
-    "alternate_names": ["Interior"],
+    "alternate_names": [
+      "Interior"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio competente en seguridad, orden público y estadísticas de criminalidad, con impacto territorial en Canarias.",
     "locations": [
       {
@@ -15091,10 +15517,24 @@
         "name": "Ministerio del Interior",
         "url": "https://www.interior.gob.es/opencms/en/inicio",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "PDF"],
-        "formats": ["HTML", "CSV", "PDF"],
-        "topics": ["seguridad", "criminalidad", "orden_publico"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "PDF"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "PDF"
+        ],
+        "topics": [
+          "seguridad",
+          "criminalidad",
+          "orden_publico"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -15125,11 +15565,16 @@
   {
     "id": "ministerio_exteriores",
     "name": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación",
-    "alternate_names": ["MAEC", "Exteriores"],
+    "alternate_names": [
+      "MAEC",
+      "Exteriores"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio con portal de datos abiertos propio y potencial interés para movilidad internacional, cooperación y relaciones exteriores.",
     "locations": [
       {
@@ -15152,10 +15597,22 @@
         "name": "Ministerio de Asuntos Exteriores - Datos abiertos",
         "url": "https://www.exteriores.gob.es/en/Paginas/Datos-abiertos.aspx",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV"],
-        "formats": ["HTML", "CSV"],
-        "topics": ["relaciones_exteriores", "cooperacion", "movilidad_internacional"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV"
+        ],
+        "formats": [
+          "HTML",
+          "CSV"
+        ],
+        "topics": [
+          "relaciones_exteriores",
+          "cooperacion",
+          "movilidad_internacional"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -15186,11 +15643,15 @@
   {
     "id": "ministerio_agricultura_pesca_alimentacion",
     "name": "Ministerio de Agricultura, Pesca y Alimentación",
-    "alternate_names": ["MAPA"],
+    "alternate_names": [
+      "MAPA"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Fuente estatal esencial para agricultura, ganadería, pesca, mercados agrarios y estadísticas rurales.",
     "locations": [
       {
@@ -15213,10 +15674,23 @@
         "name": "Ministerio de Agricultura, Pesca y Alimentación",
         "url": "https://www.mapa.gob.es/en/mapa-web",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV"],
-        "formats": ["HTML", "CSV"],
-        "topics": ["agricultura", "pesca", "alimentacion", "ganaderia"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV"
+        ],
+        "formats": [
+          "HTML",
+          "CSV"
+        ],
+        "topics": [
+          "agricultura",
+          "pesca",
+          "alimentacion",
+          "ganaderia"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -15248,11 +15722,16 @@
   {
     "id": "ministerio_educacion_fp_deportes",
     "name": "Ministerio de Educación, Formación Profesional y Deportes",
-    "alternate_names": ["MEFPD", "Ministerio de Educación"],
+    "alternate_names": [
+      "MEFPD",
+      "Ministerio de Educación"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
-    "islands": ["Todas"],
+    "islands": [
+      "Todas"
+    ],
     "description": "Ministerio responsable de educación, FP y deporte, con datasets y referencias útiles para el análisis territorial.",
     "locations": [
       {
@@ -15275,10 +15754,24 @@
         "name": "Ministerio de Educación, Formación Profesional y Deportes",
         "url": "https://www.educacionfpydeportes.gob.es/en/portada.html",
         "portal_status": "active",
-        "technology": ["Custom"],
-        "standards": ["HTML", "CSV", "XLSX"],
-        "formats": ["HTML", "CSV", "XLSX"],
-        "topics": ["educacion", "fp", "deportes"],
+        "technology": [
+          "Custom"
+        ],
+        "standards": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX"
+        ],
+        "topics": [
+          "educacion",
+          "fp",
+          "deportes"
+        ],
         "machine_readable": true,
         "has_api": null,
         "apis": [],
@@ -15302,6 +15795,1726 @@
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.educacionfpydeportes.gob.es/en/portada.html"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "datos_gob_es",
+    "name": "datos.gob.es – Portal de Datos Abiertos de España",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Portal nacional que organiza el Catálogo Nacional de Datos Abiertos. Agrega conjuntos de datos de la Administración General del Estado y comunidades autónomas, incluyendo numerosos datasets procedentes de Canarias federados desde datos.canarias.es.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 109",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4517,
+          "lon": -3.6891
+        },
+        "source_url": "https://datos.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Portal de datos – datos.gob.es",
+        "url": "https://datos.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "CKAN",
+          "Drupal"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "RDF",
+          "XLSX"
+        ],
+        "topics": [
+          "Turismo",
+          "Economía",
+          "Transporte",
+          "Medio ambiente",
+          "Sector público",
+          "Demografía",
+          "Energía"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Miles de datasets federados, incluyendo numerosos procedentes de Canarias.",
+        "last_updated": null,
+        "license_summary": "Reutilización abierta según licencia de cada dataset",
+        "licenses": [
+          {
+            "name": "Condiciones de uso datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://datos.gob.es/",
+        "https://administracionelectronica.gob.es/ctt/datosgob"
+      ]
+    },
+    "notes": "Nodo estatal al que están federados múltiples portales canarios (datos.canarias.es, cabildos, etc.)."
+  },
+  {
+    "id": "ine_estadistica_canarias",
+    "name": "INE – Instituto Nacional de Estadística",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Organismo estadístico estatal que ofrece datos demográficos, económicos y sociales desagregados para Canarias (comunidad autónoma y provincias), complementando la producción estadística del ISTAC.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Avenida de Manoteras, 50-52",
+        "postal_code": "28050",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4874,
+          "lon": -3.6621
+        },
+        "source_url": "https://www.ine.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "estadistica",
+        "name": "INEbase – Portal estadístico INE",
+        "url": "https://www.ine.es/inebmenu/indice.htm",
+        "portal_status": "active",
+        "technology": [
+          "Portal estadístico propio"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "XLSX",
+          "JSON",
+          "XML"
+        ],
+        "topics": [
+          "Demografía",
+          "Economía",
+          "Mercado laboral",
+          "Población",
+          "Precios",
+          "Vivienda"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API de servicios INE",
+            "url": "https://servicios.ine.es/wst/ine",
+            "type": "REST",
+            "documentation_url": "https://www.ine.es/dyngs/INEbase/es/categoria.htm?c=Estadistica_P&p=124"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Numerosas operaciones con datos específicos para Canarias.",
+        "last_updated": null,
+        "license_summary": "Reutilización abierta bajo condiciones del INE",
+        "licenses": [
+          {
+            "name": "Condiciones de reutilización INE",
+            "count": null,
+            "id": null,
+            "url": "https://www.ine.es/aviso_legal.htm"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.ine.es/",
+        "https://servicios.ine.es/wst/ine"
+      ]
+    },
+    "notes": "Fuente estatal clave para comparar indicadores canarios con el resto de España."
+  },
+  {
+    "id": "ministerio_agricultura_pesca_alimentacion",
+    "name": "Ministerio de Agricultura, Pesca y Alimentación",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal que publica datos abiertos sobre agricultura, pesca, alimentación y desarrollo rural. Relevante para Canarias por la flota pesquera insular, el sector agropecuario y la aplicación de la PAC.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Infanta Isabel, 1",
+        "postal_code": "28014",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4086,
+          "lon": -3.6906
+        },
+        "source_url": "https://www.mapa.gob.es/es/ministerio/funciones-estructura/sedes"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – MAPA en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-agricultura-pesca-y-alimentacion-0",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Agricultura",
+          "Pesca",
+          "Alimentación",
+          "Medio rural",
+          "Economía"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo MAPA en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-agricultura-pesca-y-alimentacion",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mapa.gob.es/",
+        "https://datos.gob.es/es/organizaciones/ministerio-de-agricultura-pesca-y-alimentacion-0"
+      ]
+    },
+    "notes": "Incluye datos de pesca relevantes para la flota canaria y datos sobre el sector agrícola insular."
+  },
+  {
+    "id": "ministerio_asuntos_exteriores",
+    "name": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre relaciones exteriores, cooperación al desarrollo y política europea. Relevante para Canarias por su posición geoestratégica y relación con África y la UE.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de la Provincia, 1",
+        "postal_code": "28012",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4150,
+          "lon": -3.7074
+        },
+        "source_url": "https://www.exteriores.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Exteriores en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-asuntos-exteriores-union-europea-y-cooperacion",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML"
+        ],
+        "topics": [
+          "Sector público",
+          "Relaciones exteriores",
+          "Cooperación internacional"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Exteriores en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-asuntos-exteriores-union-europea-y-cooperacion",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.exteriores.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Relevante para Canarias por su relación geoestratégica con África Occidental y la política UE-fronteras."
+  },
+  {
+    "id": "ministerio_ciencia_innovacion_universidades",
+    "name": "Ministerio de Ciencia, Innovación y Universidades",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal que publica datos sobre I+D, innovación, universidades y becas. Relevante para Canarias por la actividad de la ULPGC, ULL y centros de investigación como el IAC.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 162",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4583,
+          "lon": -3.6893
+        },
+        "source_url": "https://www.ciencia.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Ciencia en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-ciencia-innovacion-y-universidades",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Ciencia y Tecnología",
+          "Educación",
+          "I+D",
+          "Universidades"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Ciencia en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-ciencia-innovacion-y-universidades",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.ciencia.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Relevante por la actividad universitaria canaria (ULL, ULPGC) y centros de excelencia como el IAC."
+  },
+  {
+    "id": "ministerio_cultura",
+    "name": "Ministerio de Cultura",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal que publica datos abiertos sobre patrimonio cultural, museos, archivos y estadísticas culturales con desagregación por comunidad autónoma, incluyendo Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza del Rey, 1",
+        "postal_code": "28004",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4204,
+          "lon": -3.6964
+        },
+        "source_url": "https://www.cultura.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Cultura en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-cultura",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Cultura",
+          "Patrimonio",
+          "Museos",
+          "Archivos",
+          "Estadística cultural"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Cultura en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-cultura",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.cultura.gob.es/",
+        "https://datos.gob.es/es/blog/datos-abiertos-en-museos"
+      ]
+    },
+    "notes": "Incluye estadísticas culturales y de patrimonio con desagregación para Canarias."
+  },
+  {
+    "id": "ministerio_defensa",
+    "name": "Ministerio de Defensa",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre actividad del Ejército, cartografía militar y estadísticas de defensa. Las Islas Canarias son territorio con presencia militar estratégica.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 109",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4517,
+          "lon": -3.6891
+        },
+        "source_url": "https://www.defensa.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Defensa en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-defensa",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML"
+        ],
+        "topics": [
+          "Sector público",
+          "Administración",
+          "Cartografía"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Defensa en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-defensa",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.defensa.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Canarias cuenta con presencia militar estratégica (Mando de Canarias, instalaciones en varias islas)."
+  },
+  {
+    "id": "ministerio_derechos_sociales",
+    "name": "Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal que publica datos sobre servicios sociales, consumo y agenda 2030. Relevante para Canarias por estadísticas de pobreza, servicios sociales y consumo en el archipiélago.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo del Prado, 18-20",
+        "postal_code": "28014",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4130,
+          "lon": -3.6930
+        },
+        "source_url": "https://www.mdsocialesa2030.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Derechos Sociales en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-derechos-sociales-consumo-y-agenda-2030",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Servicios sociales",
+          "Consumo",
+          "Demografía",
+          "Vivienda",
+          "Sector público"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Derechos Sociales en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-derechos-sociales-consumo-y-agenda-2030",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mdsocialesa2030.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_igualdad",
+    "name": "Ministerio de Igualdad",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre igualdad de género, violencia de género y estadísticas LGTBI desagregadas por comunidad autónoma, incluyendo Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle de Alcalá, 37-41",
+        "postal_code": "28014",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4194,
+          "lon": -3.6978
+        },
+        "source_url": "https://www.igualdad.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Igualdad en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-igualdad",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Igualdad",
+          "Violencia de género",
+          "Demografía",
+          "Sector público"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Igualdad en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-igualdad",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.igualdad.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_inclusion_seguridad_social",
+    "name": "Ministerio de Inclusión, Seguridad Social y Migraciones",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre pensiones, seguridad social, migraciones y flujos migratorios. Especialmente relevante para Canarias como territorio de llegada de migración irregular.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle de Agustín de Bethencourt, 4",
+        "postal_code": "28003",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4363,
+          "lon": -3.7030
+        },
+        "source_url": "https://www.inclusion.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Inclusión y SS en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-inclusion-seguridad-social-y-migraciones",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Seguridad Social",
+          "Migraciones",
+          "Demografía",
+          "Sector público"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Inclusión en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-inclusion-seguridad-social-y-migraciones",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.inclusion.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Canarias es territorio clave en datos de migraciones y llegadas de solicitantes de asilo."
+  },
+  {
+    "id": "ministerio_industria_turismo",
+    "name": "Ministerio de Industria y Turismo",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre industria, turismo y estadísticas de viajeros y pernoctaciones. Relevante para Canarias como principal destino turístico de España.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 160",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4573,
+          "lon": -3.6893
+        },
+        "source_url": "https://www.minetur.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Industria y Turismo en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-industria-y-turismo",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Industria",
+          "Turismo",
+          "Energía",
+          "Economía"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Industria en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-industria-y-turismo",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.minetur.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Muy relevante para Canarias como primer destino turístico de España."
+  },
+  {
+    "id": "ministerio_juventud_infancia",
+    "name": "Ministerio de Juventud e Infancia",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos sobre juventud, infancia y políticas sociales para menores. Incluye estadísticas de protección de menores con desagregación por comunidad autónoma.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Marqués del Riscal, 16",
+        "postal_code": "28010",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4302,
+          "lon": -3.6933
+        },
+        "source_url": "https://www.migualdad.gob.es/juventud/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Juventud e Infancia en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-juventud-e-infancia",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML"
+        ],
+        "topics": [
+          "Demografía",
+          "Sector público",
+          "Servicios sociales"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Juventud en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-juventud-e-infancia",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_presidencia_justicia",
+    "name": "Ministerio de la Presidencia, Justicia y Relaciones con las Cortes",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre estadística judicial, registros civiles y datos del sistema de justicia con desagregación por comunidad autónoma.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Complejo de la Moncloa",
+        "postal_code": "28071",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4381,
+          "lon": -3.7188
+        },
+        "source_url": "https://www.mjusticia.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Justicia en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-la-presidencia-justicia-y-relaciones-con-las-cortes",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Legislación",
+          "Sector público",
+          "Administración"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Justicia en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-la-presidencia-justicia-y-relaciones-con-las-cortes",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mjusticia.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_politica_territorial",
+    "name": "Ministerio de Política Territorial y Memoria Democrática",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos sobre administración territorial, coordinación con comunidades autónomas y memoria histórica. Incluye datos sobre financiación y competencias del régimen especial canario.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 3",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4228,
+          "lon": -3.6927
+        },
+        "source_url": "https://www.mptfd.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Política Territorial en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-politica-territorial-y-memoria-democratica",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML"
+        ],
+        "topics": [
+          "Sector público",
+          "Administración",
+          "Legislación"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Política Territorial en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-politica-territorial-y-memoria-democratica",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mptfd.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_trabajo_economia_social",
+    "name": "Ministerio de Trabajo y Economía Social",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre empleo, condiciones de trabajo, convenios colectivos y estadísticas laborales por comunidad autónoma.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 63",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4426,
+          "lon": -3.6922
+        },
+        "source_url": "https://www.mites.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Trabajo en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-trabajo-y-economia-social",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Empleo",
+          "Mercado laboral",
+          "Sector público",
+          "Economía"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Trabajo en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-trabajo-y-economia-social",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mites.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_transportes_movilidad_sostenible",
+    "name": "Ministerio de Transportes y Movilidad Sostenible",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre transportes, carreteras, movilidad y puertos. Relevante para Canarias por los datos de conectividad interinsular y con la Península.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 67",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4443,
+          "lon": -3.6920
+        },
+        "source_url": "https://www.mitma.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Transportes en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-transportes-y-movilidad-sostenible",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Transporte",
+          "Movilidad",
+          "Infraestructuras",
+          "Economía"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Transportes en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-transportes-y-movilidad-sostenible",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mitma.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Incluye datos de movilidad interinsular e índices de conectividad aérea y marítima de Canarias."
+  },
+  {
+    "id": "ministerio_vivienda_agenda_urbana",
+    "name": "Ministerio de Vivienda y Agenda Urbana",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre vivienda, suelo, rehabilitación y urbanismo. Publica estadísticas de transacciones, precios y parque residencial con desagregación por comunidad autónoma.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 67",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4443,
+          "lon": -3.6920
+        },
+        "source_url": "https://www.mivau.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Vivienda en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-vivienda-y-agenda-urbana",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Vivienda",
+          "Urbanismo",
+          "Economía",
+          "Sector público"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Vivienda en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-vivienda-y-agenda-urbana",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.mivau.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": null
+  },
+  {
+    "id": "ministerio_interior",
+    "name": "Ministerio del Interior",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal con datos abiertos sobre seguridad, estadística electoral, tráfico y DGT. Incluye datos de accidentalidad vial en Canarias y resultados electorales por municipio.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Amador de los Ríos, 7",
+        "postal_code": "28010",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4274,
+          "lon": -3.6913
+        },
+        "source_url": "https://www.interior.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Interior en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-del-interior",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Seguridad",
+          "Sector público",
+          "Transporte",
+          "Legislación"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Interior en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-del-interior",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.interior.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Incluye datos electorales (infoelectoral) con resultados desagregados para los municipios canarios."
+  },
+  {
+    "id": "ministerio_transformacion_digital",
+    "name": "Ministerio para la Transformación Digital y de la Función Pública",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio estatal responsable de la política de datos abiertos, administración digital y función pública en España. Es el organismo rector de datos.gob.es y la interoperabilidad entre administraciones.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana, 109",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4517,
+          "lon": -3.6891
+        },
+        "source_url": "https://www.digitales.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Transformación Digital en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/ministerio-para-la-transformacion-digital-y-de-la-funcion-publica",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Ciencia y Tecnología",
+          "Sector público",
+          "Administración"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Transformación Digital en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-para-la-transformacion-digital-y-de-la-funcion-publica",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.digitales.gob.es/",
+        "https://datos.gob.es/"
+      ]
+    },
+    "notes": "Organismo rector de datos.gob.es y de la política de apertura de datos de la AGE."
+  },
+  {
+    "id": "ministerio_transicion_ecologica",
+    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico – Portal de Datos Abiertos",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Portal de datos abiertos del MITECO con información ambiental, energética y meteorológica de toda España, incluyendo series e indicadores aplicables a las Islas Canarias (clima, agua, energía, biodiversidad).",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de San Juan de la Cruz, 10",
+        "postal_code": "28071",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4406,
+          "lon": -3.6919
+        },
+        "source_url": "https://www.miteco.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Portal de Datos Abiertos MITECO",
+        "url": "https://www.datosabiertos.miteco.gob.es/es.html",
+        "portal_status": "active",
+        "technology": [
+          "Portal propio"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "XLSX"
+        ],
+        "topics": [
+          "Medio ambiente",
+          "Energía",
+          "Agua",
+          "Cambio climático",
+          "Residuos",
+          "Meteorología"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "Servicios de datos abiertos MITECO",
+            "url": "https://www.datosabiertos.miteco.gob.es/es/catalogo",
+            "type": "REST",
+            "documentation_url": "https://www.datosabiertos.miteco.gob.es/es.html"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Catálogo con decenas de datasets ambientales y energéticos.",
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones MITECO)",
+        "licenses": [
+          {
+            "name": "Condiciones de reutilización MITECO",
+            "count": null,
+            "id": null,
+            "url": "https://www.miteco.gob.es/es/aviso-legal.html"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.datosabiertos.miteco.gob.es/es.html"
+      ]
+    },
+    "notes": "Complementa a los datasets específicos que ya tienes modelados (precios de carburantes, etc.)."
+  },
+  {
+    "id": "presidencia_del_gobierno",
+    "name": "Presidencia del Gobierno",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Presidencia del Gobierno de España con datos abiertos sobre planes normativos, estadísticas de la administración y documentos de política pública con ámbito estatal.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Complejo de la Moncloa",
+        "postal_code": "28071",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4381,
+          "lon": -3.7188
+        },
+        "source_url": "https://www.lamoncloa.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Datos abiertos – Presidencia en datos.gob.es",
+        "url": "https://datos.gob.es/es/organizaciones/presidencia-del-gobierno",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML"
+        ],
+        "topics": [
+          "Sector público",
+          "Administración",
+          "Legislación"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API catálogo Presidencia en datos.gob.es",
+            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=presidencia-del-gobierno",
+            "type": "REST",
+            "documentation_url": "https://datos.gob.es/es/apidata"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "licenses": [
+          {
+            "name": "Condiciones datos.gob.es",
+            "count": null,
+            "id": null,
+            "url": "https://datos.gob.es/es/aviso-legal"
+          }
+        ],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "estimated",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.lamoncloa.gob.es/",
+        "https://datos.gob.es/"
       ]
     },
     "notes": null
