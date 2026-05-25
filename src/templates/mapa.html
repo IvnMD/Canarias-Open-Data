@@ -17,17 +17,17 @@
   <!-- Leaflet CSS (map library styles) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-  <!-- Global/base styles -->
+  <!-- Theme variables (light + dark juntos) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+
+  <!-- Base styles (reset + layout) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 
-  <!-- Light theme styles -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/light-mode.css') }}">
-
-  <!-- Dark theme styles -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}">
+  <!-- Shared components (cards, nav, badges, etc.) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
 
   <!-- Map-specific styles -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/mapa.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/mapa.css') }}">
 
   <!--
     Anti-FOUC: restore dark theme BEFORE first paint.
@@ -316,7 +316,7 @@
             .addTo(map)
 
             // Attach popup information
-             .bindPopup(`
+            .bindPopup(`
 
   <div style="min-width:220px">
 
@@ -337,27 +337,27 @@
   </div>
 `);
 
-/* =========================================================
-   ABRIR POPUP Y CENTRAR ENTIDAD
-========================================================= */
+          /* =========================================================
+             ABRIR POPUP Y CENTRAR ENTIDAD
+          ========================================================= */
 
-if (
-  !isNaN(targetLat) &&
-  !isNaN(targetLon) &&
-  entidad.name === decodeURIComponent(params.get('name') || '')
-) {
+          if (
+            !isNaN(targetLat) &&
+            !isNaN(targetLon) &&
+            entidad.name === decodeURIComponent(params.get('name') || '')
+          ) {
 
-  map.setView([lat, lon], 15);
+            map.setView([lat, lon], 15);
 
-  marker.openPopup();
-}
+            marker.openPopup();
+          }
 
-});
-})
+        });
+      })
 
-.catch(error =>
-  console.error('Error cargando entidades:', error)
-);
+      .catch(error =>
+        console.error('Error cargando entidades:', error)
+      );
 
     /* =========================================================
        MAP LEGEND

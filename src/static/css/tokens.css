@@ -1,0 +1,88 @@
+/* ============================================
+   TOKENS - VARIABLES CSS (CLARO + OSCURO)
+   ============================================ */
+
+/* TEMA CLARO (por defecto) */
+:root {
+  /* Fondos */
+  --bg-primary: #f3efea;
+  --bg-secondary: #faf8f5;
+  --bg-card: #faf8f5;
+  --bg-input: #faf8f5;
+
+  /* Texto */
+  --text-primary: #1a2b49;
+  --text-secondary: #5a6e85;
+  --text-header: #faf8f5;
+
+  /* Bordes y sombras */
+  --border-color: #e6dfd5;
+  --shadow-sm: 0 2px 6px rgba(26, 43, 73, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.85);
+
+  /* Badges y acentos */
+  --badge-bg: #e6f2f2;
+  --badge-text: #008080;
+
+  /* Footer */
+  --footer-bg: #e6dfd5;
+  --footer-text: #5a6e85;
+
+  /* Estados */
+  --spinner-border: #e6f2f2;
+  --spinner-top: #008080;
+  --error-bg: #fff5f5;
+  --error-border: #ff6b6b;
+  --empty-bg: #faf8f5;
+
+  /* Marcadores del mapa (claro) */
+  --marker-gobierno: #e03535;
+  --marker-cabildo: #16a34a;
+  --marker-ayto: #2563eb;
+  --marker-organismo: #d97706;
+  --marker-empresa: #9333ea;
+  --marker-default: #475569;
+}
+
+/* TEMA OSCURO */
+[data-theme="dark"] {
+  /* Fondos */
+  --bg-primary: #111827;
+  --bg-secondary: #111827;
+  --bg-card: #020617;
+  --bg-input: #020617;
+
+  /* Texto */
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-header: #f9fafb;
+
+  /* Bordes y sombras */
+  --border-color: #1f2937;
+  --input-border: #374151;
+  --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.6);
+
+  /* Badges y acentos */
+  --badge-bg: #0f172a;
+  --badge-text: #14b8a6;
+
+  /* Footer */
+  --footer-bg: #020617;
+  --footer-text: #9ca3af;
+
+  /* Estados */
+  --spinner-border: #1f2937;
+  --spinner-top: #14b8a6;
+  --error-bg: #1e1b4b;
+  --error-border: #f97316;
+  --empty-bg: #020617;
+
+  /* Marcadores del mapa (oscuro) */
+  --marker-gobierno: #f87171;
+  --marker-cabildo: #4ade80;
+  --marker-ayto: #60a5fa;
+  --marker-organismo: #fbbf24;
+  --marker-empresa: #c084fc;
+  --marker-default: #94a3b8;
+}
