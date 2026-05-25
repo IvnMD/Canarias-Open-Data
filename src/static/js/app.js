@@ -143,6 +143,7 @@ function normalize(e) {
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
     formats,
     license_summary: portal?.license_summary || null,
+    licenses: Array.isArray(portal?.licenses) ? portal.licenses : [],
 
     apis,
 
@@ -358,6 +359,9 @@ function render(list) {
     const typeIcon = getTypeIcon(e.type);
     const cardId = 'card-' + (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2, 10));
     const apis = e.apis || [];
+    const licenses = Array.isArray(e.licenses) ? e.licenses : [];
+    const primaryLicense = licenses[0]?.name || null;
+    const licenseSummary = e.license_summary || null;
 
     const apiDocUrl = api =>
       safeUrl(api.documentationUrl || api.documentationurl || api.url || '#');
@@ -441,6 +445,19 @@ function render(list) {
           </div>
         </div>
       ` : ""}
+      
+    ${licenseSummary || primaryLicense ? `
+       <div class="card-section">
+       <div class="categories-header">
+      <strong>⚖️ Licencia</strong>
+       </div>
+        <div class="badge-container">
+         ${licenseSummary ? `<span class="badge">${escapeHtml(licenseSummary)}</span>` : ''}
+         ${primaryLicense && primaryLicense !== licenseSummary ? `<span class="badge">${escapeHtml(primaryLicense)}</span>` : ''}
+        </div>
+      </div>
+      ` : ""}
+
 
       ${apis.length > 0 ? `
         <div class="card-section card-apis detail-only">
