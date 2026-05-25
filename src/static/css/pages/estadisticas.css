@@ -61,17 +61,18 @@
   box-shadow: 0 8px 28px rgba(249, 115, 22, 0.2);
 }
 
-/* Header de tarjeta con botón a la derecha */
-.card-header {
+/* Header de tarjeta con botón a la derecha - Sobrescribe el .card-header de components */
+.chart-card .card-header {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   width: 100% !important;
   margin-bottom: 1rem !important;
   gap: 1rem !important;
+  padding: 0 !important;
 }
 
-.card-header h2 {
+.chart-card .card-header h2 {
   margin: 0 !important;
   font-size: 1rem !important;
   font-weight: 600 !important;

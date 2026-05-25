@@ -17,6 +17,7 @@
 
   /* Bordes y sombras */
   --border-color: #e6dfd5;
+  --input-border: #cbd5e1;
   --shadow-sm: 0 2px 6px rgba(26, 43, 73, 0.04);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.85);
@@ -36,7 +37,7 @@
   --error-border: #ff6b6b;
   --empty-bg: #faf8f5;
 
-  /* Marcadores del mapa (claro) */
+  /* Marcadores del mapa */
   --marker-gobierno: #e03535;
   --marker-cabildo: #16a34a;
   --marker-ayto: #2563eb;
@@ -61,7 +62,9 @@
   /* Bordes y sombras */
   --border-color: #1f2937;
   --input-border: #374151;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.85);
 
   /* Badges y acentos */
   --badge-bg: #0f172a;
@@ -78,7 +81,7 @@
   --error-border: #f97316;
   --empty-bg: #020617;
 
-  /* Marcadores del mapa (oscuro) */
+  /* Marcadores del mapa */
   --marker-gobierno: #f87171;
   --marker-cabildo: #4ade80;
   --marker-ayto: #60a5fa;

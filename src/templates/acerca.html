@@ -8,26 +8,26 @@
   <meta name="author" content="Datos Abiertos Canarias">
   <title>Acerca de — Open Data Canarias</title>
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
-
+  
   <!-- Theme variables (light + dark juntos) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
-
+  
   <!-- Base styles (reset + layout) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-
+  
   <!-- Shared components (cards, nav, badges, tables, etc.) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
-
+  
   <!-- About page specific styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/acerca.css') }}">
-
+  
   <script>
     (function () {
       try {
         if (localStorage.getItem('darkMode') === 'enabled') {
           document.documentElement.setAttribute('data-theme', 'dark');
         }
-      } catch (e) { }
+      } catch (e) {}
     })();
   </script>
 </head>
@@ -127,8 +127,7 @@
         <tr>
           <td>islands</code></td>
           <td>Islas a las que pertenece la entidad</td>
-          <td>Tenerife · Gran Canaria · Lanzarote · Fuerteventura · La Palma · La Gomera · El Hierro · La Graciosa ·
-            Todas</td>
+          <td>Tenerife · Gran Canaria · Lanzarote · Fuerteventura · La Palma · La Gomera · El Hierro · La Graciosa · Todas</td>
         </tr>
         <tr>
           <td>portals</code></td>
@@ -217,12 +216,12 @@
     </p>
     <ul>
       <li>
-        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/blob/main/CONTRIBUTING.md" target="_blank"
-          rel="noopener noreferrer">CONTRIBUTING.md</a>
+        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/blob/main/CONTRIBUTING.md"
+          target="_blank" rel="noopener noreferrer">CONTRIBUTING.md</a>
       </li>
       <li>
-        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/issues" target="_blank"
-          rel="noopener noreferrer">Abrir un issue en GitHub</a>
+        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/issues"
+          target="_blank" rel="noopener noreferrer">Abrir un issue en GitHub</a>
       </li>
     </ul>
 
@@ -234,37 +233,60 @@
     <p>Proyecto académico DAM</p>
   </footer>
 
+  <!-- Botón de modo oscuro - AHORA SÍ FUNCIONA -->
+  <button id="darkModeToggle">🌙 Modo oscuro</button>
+
   <script>
-    const _mem = {};
-    function safeStorage(a, k, v) {
-      try {
-        if (a === 'get') return localStorage.getItem(k);
-        if (a === 'set') { localStorage.setItem(k, v); return; }
-      } catch {
-        if (a === 'get') return _mem[k] ?? null;
-        if (a === 'set') { _mem[k] = v; return; }
-      }
-    }
-    const darkBtn = document.getElementById('darkModeToggle');
-    if (darkBtn) {
-      darkBtn.addEventListener('click', () => {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        if (isDark) {
-          document.documentElement.removeAttribute('data-theme');
-          safeStorage('set', 'darkMode', 'disabled');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          safeStorage('set', 'darkMode', 'enabled');
+    (function() {
+      // Función segura para localStorage
+      const storage = {
+        get: function(key) {
+          try { return localStorage.getItem(key); } catch(e) { return null; }
+        },
+        set: function(key, value) {
+          try { localStorage.setItem(key, value); } catch(e) {}
         }
-        darkBtn.textContent = document.documentElement.getAttribute('data-theme') === 'dark'
-          ? '☀️ Modo claro' : '🌙 Modo oscuro';
-      });
-      if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        darkBtn.textContent = '☀️ Modo claro';
+      };
+
+      // Actualizar el texto del botón según el tema actual
+      function updateButtonText() {
+        const btn = document.getElementById('darkModeToggle');
+        if (!btn) return;
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        btn.textContent = isDark ? '☀️ Modo claro' : '🌙 Modo oscuro';
       }
-    }
+
+      // Inicializar el tema desde localStorage
+      const savedTheme = storage.get('darkMode');
+      if (savedTheme === 'enabled') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else if (savedTheme === 'disabled') {
+        document.documentElement.removeAttribute('data-theme');
+      }
+
+      // Configurar el evento del botón (esperar a que el DOM esté listo)
+      document.addEventListener('DOMContentLoaded', function() {
+        const darkBtn = document.getElementById('darkModeToggle');
+        if (darkBtn) {
+          updateButtonText();
+          
+          darkBtn.addEventListener('click', function() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            
+            if (isDark) {
+              document.documentElement.removeAttribute('data-theme');
+              storage.set('darkMode', 'disabled');
+            } else {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              storage.set('darkMode', 'enabled');
+            }
+            
+            updateButtonText();
+          });
+        }
+      });
+    })();
   </script>
-  <button id="darkModeToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">🌙 Modo oscuro</button>
 </body>
 
 </html>

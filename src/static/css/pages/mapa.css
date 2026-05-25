@@ -42,12 +42,7 @@
   flex-shrink: 0;
 }
 
-/* Los colores de los marcadores usan las variables CSS de tokens.css */
-/* Ejemplo de uso en el JS:
-   markerColor = getComputedStyle(document.documentElement)
-     .getPropertyValue('--marker-gobierno').trim();
-*/
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-toggle-btn {
     width: 30px;
