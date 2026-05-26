@@ -181,6 +181,18 @@
   border-radius: 20px;
 }
 
+/* Ajustes para la nueva gráfica de madurez */
+.chart-card[data-chart-type="madurez"] .chart-wrapper {
+  height: 300px;
+}
+
+/* Colores específicos para la leyenda de madurez (ya se manejan desde JS) */
+@media (max-width: 768px) {
+  .chart-card[data-chart-type="madurez"] .chart-wrapper {
+    height: 260px;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .charts-grid {
