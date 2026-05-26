@@ -1,7 +1,9 @@
+# Open Data Canarias — Universal API Metadata Updater (Simplified Version)
+
 """
 =========================================================
 Open Data Canarias
-Universal API Metadata Updater (ROBUST VERSION)
+Universal API Metadata Updater (SIMPLIFIED VERSION)
 =========================================================
 """
 
@@ -24,9 +26,11 @@ TIMEOUT = 10
 # LOAD / SAVE
 # =========================================================
 
+
 def load_entities():
     with open(JSON_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 
 def save_entities(data):
@@ -38,12 +42,14 @@ def save_entities(data):
 # SAFE HTTP / JSON
 # =========================================================
 
+
 def safe_get(url):
     headers = {
         "User-Agent": "OpenData-API-Checker/1.0",
         "Accept": "application/json"
     }
     return requests.get(url, headers=headers, timeout=TIMEOUT)
+
 
 
 def safe_json(response):
@@ -59,18 +65,10 @@ def safe_json(response):
         return None
 
 
-def parse_date(value):
-    if not value:
-        return None
-    try:
-        return datetime.fromisoformat(value.replace("Z", "")).strftime("%Y-%m-%d")
-    except Exception:
-        return value
-
-
 # =========================================================
 # API DETECTION
 # =========================================================
+
 
 def is_ckan_action(url):
     try:
@@ -79,6 +77,7 @@ def is_ckan_action(url):
         return r.status_code == 200 and data and data.get("success") is True
     except Exception:
         return False
+
 
 
 def is_ckan_rest(url):
@@ -90,6 +89,7 @@ def is_ckan_rest(url):
         return False
 
 
+
 def is_socrata(url):
     try:
         r = safe_get(url.rstrip("/") + "/api/views")
@@ -97,6 +97,7 @@ def is_socrata(url):
         return r.status_code == 200 and isinstance(data, list)
     except Exception:
         return False
+
 
 
 def is_arcgis(url):
@@ -109,76 +110,16 @@ def is_arcgis(url):
 
 
 # =========================================================
-# DATE FETCHERS
-# =========================================================
-
-def fetch_ckan_action_date(url):
-    r = safe_get(
-        url.rstrip("/")
-        + "/api/3/action/package_search?rows=1&sort=metadata_modified desc"
-    )
-    data = safe_json(r)
-    if not data:
-        return None
-
-    results = data.get("result", {}).get("results", [])
-    if not results:
-        return None
-
-    return parse_date(results[0].get("metadata_modified"))
-
-
-def fetch_ckan_rest_date(url):
-    r = safe_get(url.rstrip("/") + "/api/rest/package")
-    data = safe_json(r)
-    if not data:
-        return None
-
-    latest = None
-    for pkg in data:
-        date = pkg.get("metadata_modified") or pkg.get("revision_timestamp")
-        if date and (not latest or date > latest):
-            latest = date
-
-    return parse_date(latest)
-
-
-def fetch_socrata_date(url):
-    r = safe_get(url.rstrip("/") + "/api/views")
-    data = safe_json(r)
-    if not data:
-        return None
-
-    timestamps = [v.get("rowsUpdatedAt") for v in data if v.get("rowsUpdatedAt")]
-    if not timestamps:
-        return None
-
-    return datetime.utcfromtimestamp(max(timestamps)).strftime("%Y-%m-%d")
-
-
-def fetch_arcgis_date(url):
-    r = safe_get(
-        url.rstrip("/")
-        + "/api/search/v1?num=1&sortField=modified&sortOrder=desc"
-    )
-    data = safe_json(r)
-    if not data:
-        return None
-
-    results = data.get("results", [])
-    if not results:
-        return None
-
-    return parse_date(results[0].get("modified"))
-
-
-# =========================================================
 # MAIN PROCESS
 # =========================================================
+
 
 def update_entities():
     entities = load_entities()
     updated = 0
+
+    # Fecha actual de ejecución
+    today = datetime.now().strftime("%Y-%m-%d")
 
     for entity in entities:
         print("\n================================================")
@@ -198,19 +139,19 @@ def update_entities():
             try:
                 if is_ckan_action(url):
                     portal["api_type"] = "CKAN_ACTION"
-                    portal["last_updated"] = fetch_ckan_action_date(url)
+                    portal["last_updated"] = today
 
                 elif is_ckan_rest(url):
                     portal["api_type"] = "CKAN_REST"
-                    portal["last_updated"] = fetch_ckan_rest_date(url)
+                    portal["last_updated"] = today
 
                 elif is_socrata(url):
                     portal["api_type"] = "SOCRATA"
-                    portal["last_updated"] = fetch_socrata_date(url)
+                    portal["last_updated"] = today
 
                 elif is_arcgis(url):
                     portal["api_type"] = "ARCGIS"
-                    portal["last_updated"] = fetch_arcgis_date(url)
+                    portal["last_updated"] = today
 
                 else:
                     portal["api_type"] = "UNKNOWN"
@@ -220,7 +161,7 @@ def update_entities():
                     updated += 1
                     print(f"✅ {portal['api_type']} | {portal['last_updated']}")
                 else:
-                    print(f"⚠️ {portal['api_type']} | No date")
+                    print(f"⚠️ {portal['api_type']} | No API detected")
 
             except Exception as e:
                 print(f"❌ Unexpected error: {e}")
