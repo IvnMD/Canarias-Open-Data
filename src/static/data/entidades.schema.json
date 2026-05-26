@@ -52,7 +52,10 @@
         ]
       },
       "parent_entity_id": {
-        "type": ["string", "null"]
+        "type": [
+          "string",
+          "null"
+        ]
       },
       "islands": {
         "type": "array",
@@ -102,17 +105,26 @@
               "minLength": 3
             },
             "postal_code": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "municipality": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "island": {
               "type": "string"
             },
             "coordinates": {
               "type": "object",
-              "required": ["lat", "lon"],
+              "required": [
+                "lat",
+                "lon"
+              ],
               "properties": {
                 "lat": {
                   "type": "number",
@@ -145,9 +157,11 @@
             "name",
             "url",
             "technology",
-            "topics",
-            "machine_readable"
+            "topics"
           ],
+          "machine_readable": {
+            "type": "boolean"
+          },
           "properties": {
             "id": {
               "type": "string",
@@ -173,7 +187,10 @@
               "format": "uri"
             },
             "portal_status": {
-              "type": ["string", "null"],
+              "type": [
+                "string",
+                "null"
+              ],
               "enum": [
                 "active",
                 "archived",
@@ -211,7 +228,10 @@
               "type": "boolean"
             },
             "has_api": {
-              "type": ["boolean", "null"]
+              "type": [
+                "boolean",
+                "null"
+              ]
             },
             "apis": {
               "type": "array",
@@ -234,7 +254,10 @@
                     "type": "string"
                   },
                   "documentation_url": {
-                    "type": ["string", "null"],
+                    "type": [
+                      "string",
+                      "null"
+                    ],
                     "format": "uri"
                   }
                 },
@@ -242,37 +265,60 @@
               }
             },
             "dataset_count": {
-              "type": ["integer", "null"],
+              "type": [
+                "integer",
+                "null"
+              ],
               "minimum": 0
             },
             "dataset_count_note": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "last_updated": {
-              "type": ["string", "null"],
+              "type": [
+                "string",
+                "null"
+              ],
               "pattern": "^[0-9]{4}-[0-9]{2}$"
             },
             "license_summary": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             },
             "licenses": {
               "type": "array",
               "items": {
                 "type": "object",
-                "required": ["name"],
+                "required": [
+                  "name"
+                ],
                 "properties": {
                   "id": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "name": {
                     "type": "string"
                   },
                   "url": {
-                    "type": ["string", "null"],
+                    "type": [
+                      "string",
+                      "null"
+                    ],
                     "format": "uri"
                   },
                   "count": {
-                    "type": ["integer", "null"],
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
                     "minimum": 0
                   }
                 },
@@ -280,7 +326,10 @@
               }
             },
             "last_checked": {
-              "type": ["string", "null"],
+              "type": [
+                "string",
+                "null"
+              ],
               "pattern": "^[0-9]{4}-[0-9]{2}$"
             }
           },
@@ -320,7 +369,10 @@
         "additionalProperties": false
       },
       "notes": {
-        "type": ["string", "null"]
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
     "additionalProperties": false

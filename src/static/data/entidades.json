@@ -8383,6 +8383,10 @@
   {
     "id": "fundacion_canaria_academia_canaria_de_la_lengua",
     "name": "FUNDACIÓN CANARIA ACADEMIA CANARIA DE LA LENGUA",
+    "alternate_names": [
+      "Academia Canaria de la Lengua",
+      "ACL"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -8407,7 +8411,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – FUNDACIÓN CANARIA ACADEMIA CANARIA DE LA LENGUA",
         "url": "https://portal.academiacanarialengua.org/transparencia",
         "portal_status": "active",
@@ -8420,15 +8424,16 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "contratacion",
+          "subvenciones"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa, no catálogo de datasets estructurados",
         "last_updated": null,
         "license_summary": "Reutilización abierta",
         "licenses": [
@@ -8442,7 +8447,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://portal.academiacanarialengua.org/transparencia"
@@ -14957,12 +14962,10 @@
           "Custom"
         ],
         "standards": [
-          "HTML",
           "CSV",
           "XLSX"
         ],
         "formats": [
-          "HTML",
           "CSV",
           "XLSX"
         ],
@@ -14991,7 +14994,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.hacienda.gob.es/en-GB/GobiernoAbierto/Datos%20Abiertos/Paginas/Datosabiertos.aspx"
@@ -15272,22 +15275,21 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "other",
-        "name": "Red Eléctrica",
+        "kind": "open_data",
+        "name": "Red Eléctrica - Datos Abiertos",
         "url": "https://www.ree.es/es",
         "portal_status": "active",
         "technology": [
           "Custom"
         ],
         "standards": [
-          "HTML",
           "CSV",
           "XLSX"
         ],
         "formats": [
-          "HTML",
           "CSV",
-          "XLSX"
+          "XLSX",
+          "JSON"
         ],
         "topics": [
           "energia_electrica",
@@ -15296,17 +15298,24 @@
           "red_electrica"
         ],
         "machine_readable": true,
-        "has_api": null,
-        "apis": [],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API de datos de demanda y producción",
+            "url": "https://www.ree.es/es/datos/apidatos",
+            "type": "REST",
+            "documentation_url": "https://www.ree.es/es/datos/apidatos"
+          }
+        ],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Más de 60 conjuntos de datos disponibles en el portal de datos abiertos específico",
         "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Uso permitido para fines informativos no comerciales con cita de fuente, sin alteración y mencionando fecha de actualización",
         "licenses": [
           {
             "id": null,
-            "name": "Reutilización abierta REE",
-            "url": null,
+            "name": "Condiciones de uso de contenidos de Red Eléctrica (Aviso Legal punto 5.1)",
+            "url": "https://www.ree.es/es/aviso-legal",
             "count": null
           }
         ],
@@ -15314,13 +15323,13 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.ree.es/es"
+        "https://www.ree.es/es/datos-abiertos"
       ]
     },
-    "notes": null
+    "notes": "Nota: El sitio principal (ree.es) bloquea el acceso automatizado (error 403), pero el portal de datos abiertos y la API son accesibles."
   },
   {
     "id": "aena",
@@ -15765,7 +15774,8 @@
         "formats": [
           "HTML",
           "CSV",
-          "XLSX"
+          "XLSX",
+          "PDF"
         ],
         "topics": [
           "educacion",
@@ -15791,7 +15801,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.educacionfpydeportes.gob.es/en/portada.html"
