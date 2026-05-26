@@ -2,33 +2,12 @@
    MAPA - ESTILOS ESPECÍFICOS
    ============================================ */
 
-/* Variables de color para marcadores — modo claro */
-:root {
-  --marker-gobierno:  #e03535;
-  --marker-cabildo:   #16a34a;
-  --marker-ayto:      #2563eb;
-  --marker-organismo: #d97706;
-  --marker-empresa:   #9333ea;
-  --marker-default:   #475569;
-}
-
-/* Variantes modo oscuro — más vivos sobre fondo oscuro */
-[data-theme="dark"] {
-  --marker-gobierno:  #f87171;
-  --marker-cabildo:   #4ade80;
-  --marker-ayto:      #60a5fa;
-  --marker-organismo: #fbbf24;
-  --marker-empresa:   #c084fc;
-  --marker-default:   #94a3b8;
-}
-
 #map {
   height: calc(100vh - 150px);
   width: 100%;
   z-index: 1;
 }
 
-/* Ajustar altura cuando el menú está expandido */
 .main-nav.expanded + #map {
   height: calc(100vh - 210px);
 }
@@ -61,13 +40,6 @@
   height: 12px;
   border-radius: 50%;
   flex-shrink: 0;
-  display: inline-block;
-}
-
-/* MODO OSCURO */
-[data-theme="dark"] .legend {
-  background: #1a1a2e;
-  color: #e8e8e8;
 }
 
 /* RESPONSIVE */
