@@ -15011,45 +15011,35 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio con datasets económicos y comerciales útiles para actividad empresarial, comercio exterior e indicadores macroeconómicos.",
+    "description": "Ministerio estatal con datos abiertos reutilizables sobre economía, comercio y actividad empresarial, útiles como referencia para Canarias.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana 162, 28046 Madrid",
-        "postal_code": null,
+        "postal_code": "28046",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.468,
-          "lon": -3.688
+          "lat": 40.4601,
+          "lon": -3.6896
         },
-        "source_url": "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx"
+        "source_url": "https://portal.mineco.gob.es/es-es/Paginas/index.aspx"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "other",
-        "name": "Ministerio de Economía, Comercio y Empresa - Datos Abiertos",
-        "url": "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx",
-        "portal_status": "active",
+        "id": "datos_abiertos",
+        "kind": "open_data",
+        "name": "Datos Abiertos",
+        "url": "https://portal.mineco.gob.es/es-es/ministerio/sedeelectronica/datosabiertos/Paginas/03_Datos_abiertos.aspx",
         "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "HTML",
-          "CSV",
-          "XLSX"
-        ],
-        "formats": [
-          "HTML",
-          "CSV",
-          "XLSX"
+          "datos.gob.es",
+          "Catálogo federado"
         ],
         "topics": [
-          "economia",
-          "comercio",
-          "empresa"
+          "Economia",
+          "Comercio",
+          "Empresa"
         ],
         "has_api": null,
         "apis": [],
@@ -15060,8 +15050,8 @@
         "licenses": [
           {
             "id": null,
-            "name": "Reutilización abierta MINECO",
-            "url": null,
+            "name": "Aviso Legal y condiciones generales de reutilización",
+            "url": "https://portal.mineco.gob.es/es-es/ministerio/Paginas/Aviso_Legal.aspx",
             "count": null
           }
         ],
@@ -15070,13 +15060,14 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://portal.mineco.gob.es/en-us/gobiernoabierto/datosabiertos/Pages/03_Datos_abiertos.aspx"
+        "https://portal.mineco.gob.es/es-es/ministerio/sedeelectronica/datosabiertos/Paginas/03_Datos_abiertos.aspx",
+        "https://portal.mineco.gob.es/es-es/ministerio/Paginas/Aviso_Legal.aspx"
       ]
     },
-    "notes": null
+    "notes": "El portal indica que el ministerio pone a disposición conjuntos de datos abiertos reutilizables bajo modalidad general básica. La página de datos abiertos enlaza al catálogo nacional datos.gob.es como agregador."
   },
   {
     "id": "ministerio_industria_turismo",
@@ -15095,7 +15086,7 @@
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana 160, 28046 Madrid",
-        "postal_code": null,
+        "postal_code": "28046",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
@@ -16218,70 +16209,139 @@
   {
     "id": "ministerio_cultura",
     "name": "Ministerio de Cultura",
+    "alternate_names": [
+      "Cultura",
+      "Ministerio de Cultura y Deporte"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal que publica datos abiertos sobre patrimonio cultural, museos, archivos y estadísticas culturales con desagregación por comunidad autónoma, incluyendo Canarias.",
+    "description": "Ministerio estatal con estadísticas culturales, recursos de reutilización, catálogos y bases de datos de alto interés para el ecosistema de datos abiertos de Canarias.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Plaza del Rey, 1",
+        "address": "Plaza del Rey, 1, 28004 Madrid",
         "postal_code": "28004",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4204,
-          "lon": -3.6964
+          "lat": 40.4226,
+          "lon": -3.6946
         },
-        "source_url": "https://www.cultura.gob.es/"
+        "source_url": "https://www.cultura.gob.es/ministerio/organigrama.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Cultura en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-cultura",
+        "id": "estadisticas_culturales",
+        "kind": "estadistica",
+        "name": "Estadísticas culturales",
+        "url": "https://www.cultura.gob.es/servicios-a-la-ciudadania/estadisticas.html",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "Web"
         ],
-        "standards": [],
-        "formats": [
+        "standards": [
+          "HTML",
           "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "XLSX",
+          "PC-Axis",
+          "PDF"
+        ],
+        "formats": [
+          "HTML",
+          "CSV",
+          "XLSX",
+          "PC-Axis",
+          "PDF"
         ],
         "topics": [
-          "Cultura",
-          "Patrimonio",
-          "Museos",
-          "Archivos",
-          "Estadística cultural"
+          "cultura",
+          "estadistica"
+        ],
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "La sección integra numerosas operaciones, visores, PDFs y descargas; no se ha fijado un recuento único y estable de datasets.",
+        "last_updated": "2026-05",
+        "license_summary": "El contenido se rige por las condiciones generales de reutilización y el aviso legal del Ministerio de Cultura.",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Aviso legal",
+            "url": "https://www.cultura.gob.es/comunes/aviso-legal.html",
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "datos_abiertos_cultura",
+        "kind": "open_data",
+        "name": "Datos Abiertos - España es Cultura",
+        "url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos.html",
+        "portal_status": "active",
+        "technology": [
+          "Web"
+        ],
+        "standards": [
+          "HTML",
+          "OAI-PMH",
+          "SPARQL",
+          "REST",
+          "Z39.50"
+        ],
+        "formats": [
+          "HTML",
+          "XML",
+          "JSON",
+          "RDF"
+        ],
+        "topics": [
+          "cultura",
+          "patrimonio",
+          "reutilizacion"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "API catálogo Cultura en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-cultura",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
+            "name": "API REST",
+            "url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/api-rest.html",
+            "type": "rest",
+            "documentation_url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/api-rest.html"
+          },
+          {
+            "name": "SPARQL",
+            "url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/sparql.html",
+            "type": "sparql",
+            "documentation_url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/sparql.html"
+          },
+          {
+            "name": "OAI-PMH",
+            "url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/oai-pmh.html",
+            "type": "oai-pmh",
+            "documentation_url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/oai-pmh.html"
+          },
+          {
+            "name": "Z39.50",
+            "url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/z39-50.html",
+            "type": "z39.50",
+            "documentation_url": "https://www.xn--espaaescultura-tnb.es/datos-abiertos/z39-50.html"
           }
         ],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "dataset_count": 32,
+        "dataset_count_note": "datos.gob.es muestra al menos 32 recursos catalogados asociados al Ministerio de Cultura; el valor depende del criterio de cómputo.",
+        "last_updated": "2026-05",
+        "license_summary": "La reutilización de contenidos del portal se rige por el aviso legal del Ministerio de Cultura.",
         "licenses": [
           {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
             "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
+            "name": "Aviso legal",
+            "url": "https://www.cultura.gob.es/comunes/aviso-legal.html",
+            "count": null
           }
         ],
         "last_checked": "2026-05",
@@ -16292,11 +16352,19 @@
       "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.cultura.gob.es/",
-        "https://datos.gob.es/es/blog/datos-abiertos-en-museos"
+        "https://www.cultura.gob.es/ministerio/organigrama.html",
+        "https://www.cultura.gob.es/comunes/aviso-legal.html",
+        "https://www.cultura.gob.es/servicios-a-la-ciudadania/estadisticas.html",
+        "https://www.xn--espaaescultura-tnb.es/datos-abiertos.html",
+        "https://www.xn--espaaescultura-tnb.es/datos-abiertos/api-rest.html",
+        "https://www.xn--espaaescultura-tnb.es/datos-abiertos/sparql.html",
+        "https://www.xn--espaaescultura-tnb.es/datos-abiertos/oai-pmh.html",
+        "https://www.xn--espaaescultura-tnb.es/datos-abiertos/z39-50.html",
+        "https://datos.gob.es/es/catalogo/e05234201-culturabase-base-de-datos-de-estadisticas-culturales",
+        "https://datos.gob.es/es/catalogo/conjuntos-datos?publisher_display_name=Ministerio+de+Cultura"
       ]
     },
-    "notes": "Incluye estadísticas culturales y de patrimonio con desagregación para Canarias."
+    "notes": "La estructura del Ministerio de Cultura se apoya en el Real Decreto 323/2024. La sección estadística agrupa CULTURABase, Anuario de Estadísticas Culturales, Encuesta de Hábitos y Prácticas Culturales, Cuenta Satélite de la Cultura, Museos y Colecciones Museográficas, Empleo cultural, Fundaciones sujetas al Protectorado Estatal y otras operaciones sobre libro, ISBN, música, artes escénicas, cine, archivos, bibliotecas, patrimonio, derechos de propiedad intelectual, turismo cultural, comercio exterior cultural, gasto de hogares y empresas culturales. El portal Datos Abiertos - España es Cultura publica información sobre reutilización y ofrece acceso estructurado mediante OAI-PMH, SPARQL, API REST y Z39.50; además, el ecosistema se complementa con recursos catalogados en datos.gob.es."
   },
   {
     "id": "ministerio_defensa",
