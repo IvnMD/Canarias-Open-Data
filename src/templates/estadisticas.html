@@ -240,10 +240,10 @@
         // Colores según tema
         function getChartColors(count) {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            // Modo oscuro: distintos tonos de naranja (como estaba)
-            const darkPalette = ['#f97316', '#fb923c', '#fdba74', '#fed7aa', '#ea580c', '#c2410c', '#9a3412', '#7c2d12'];
-            // Modo claro: distintos tonos de teal/verde azulado
-            const lightPalette = ['#008080', '#1a9e9e', '#33b5b5', '#4dcccc', '#006666', '#004d4d', '#003333', '#66d9d9'];
+            // Modo oscuro: naranjas más luminosos, dejando el marrón solo para el borde.
+            const darkPalette = ['#ff7a1a', '#ff9f3f', '#ffc06b', '#ffd699', '#f15a24', '#d9480f', '#f59e0b', '#fbbf24'];
+            // Modo claro: misma familia cálida, con contraste suficiente sobre fondo claro.
+            const lightPalette = ['#ea580c', '#f97316', '#fb923c', '#fdba74', '#f59e0b', '#fbbf24', '#d97706', '#b45309'];
             const palette = isDark ? darkPalette : lightPalette;
             return Array.from({ length: count }, (_, i) => palette[i % palette.length]);
         }
@@ -253,11 +253,11 @@
         }
 
         function getPieBorderColor() {
-            return document.documentElement.getAttribute('data-theme') === 'dark' ? '#7c2d12' : '#ccfbf1';
+            return document.documentElement.getAttribute('data-theme') === 'dark' ? '#7c2d12' : '#92400e';
         }
 
         function getPieBorderWidth(chartType) {
-            return chartType === 'pie' ? 1.5 : 0;
+            return chartType === 'pie' ? 2 : 0;
         }
 
         function getTooltipConfig() {
@@ -584,8 +584,8 @@
             // Usar la misma paleta que getChartColors
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             const colors = isDark
-                ? ['#f97316', '#fb923c', '#fdba74']  // Tonos de naranja para oscuro
-                : ['#008080', '#33b5b5', '#66d9d9']; // Tonos de teal para claro
+                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']  // Tonos de naranja para oscuro
+                : ['#ea580c', '#fb923c', '#fbbf24']; // Tonos cálidos para claro
 
             machineReadablePieChart = new Chart(ctx, {
                 type: machineReadableChartType,
@@ -692,12 +692,12 @@
             // Usar la misma paleta que getChartColors
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             const barColors = isDark
-                ? ['#f97316', '#fb923c', '#fdba74']  // Tonos de naranja para oscuro
-                : ['#008080', '#33b5b5', '#66d9d9']; // Tonos de teal para claro
+                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']  // Tonos de naranja para oscuro
+                : ['#ea580c', '#fb923c', '#fbbf24']; // Tonos cálidos para claro
 
             const pieColors = isDark
-                ? ['#f97316', '#fb923c', '#fdba74']
-                : ['#008080', '#33b5b5', '#66d9d9'];
+                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
+                : ['#ea580c', '#fb923c', '#fbbf24'];
 
             madurezChart = new Chart(ctx, {
                 type: madurezChartType,
