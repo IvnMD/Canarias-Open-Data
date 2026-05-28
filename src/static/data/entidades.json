@@ -1464,85 +1464,144 @@
   {
     "id": "autoridad_portuaria_stc",
     "name": "Autoridad Portuaria de Santa Cruz de Tenerife",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
+    "alternate_names": [
+      "Puertos de Tenerife",
+      "AP Tenerife"
     ],
-    "description": "Datos abiertos de la Autoridad Portuaria de Santa Cruz de Tenerife: tráfico de pasajeros, cruceros, mercancías y estadísticas portuarias.",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": "puertos_del_estado",
+    "islands": [
+      "Tenerife",
+      "La Palma",
+      "La Gomera",
+      "El Hierro"
+    ],
+    "description": "Ente público estatal dependiente de Puertos del Estado que gestiona los puertos de Santa Cruz de Tenerife, Granadilla, Los Cristianos, Santa Cruz de La Palma, San Sebastián de La Gomera y La Estaca (El Hierro). Publica estadísticas de tráfico portuario en un portal CKAN con 69 datasets y cuenta con portal de transparencia conforme a la Ley 19/2013.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Autoridad Portuaria de Santa Cruz de Tenerife",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Francisco la Roche, 49",
+        "postal_code": "38001",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4722,
           "lon": -16.25
         },
-        "source_url": "https://www.puertosdetenerife.org/datos-abiertos/"
+        "source_url": "https://www.puertosdetenerife.org/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "portal_datos_abiertos",
         "kind": "open_data",
-        "name": "Portal de datos – Autoridad Portuaria de Santa Cruz de Tenerife",
-        "url": "https://www.puertosdetenerife.org/datos-abiertos/",
+        "name": "Portal de Datos Abiertos – Autoridad Portuaria de Santa Cruz de Tenerife",
+        "url": "https://ckan.puertosdetenerife.org",
         "portal_status": "active",
         "technology": [
-          "Portal propio"
+          "CKAN"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
+          "XLS",
           "XLSX",
-          "PDF"
+          "CSV"
         ],
         "topics": [
           "Transporte marítimo",
           "Tráfico portuario",
+          "Tráfico de mercancías",
+          "Mercancías por código arancelario",
+          "Tráfico de pasajeros",
+          "Pasajeros por muelle",
+          "Vehículos en régimen de pasaje",
           "Cruceros",
-          "Mercancías",
-          "Pasajeros",
-          "Logística",
-          "Economía portuaria"
+          "Equipamientos portuarios",
+          "Escalas de buques",
+          "Concesiones"
         ],
-        "machine_readable": true,
         "has_api": true,
         "apis": [
           {
-            "name": "API Puertos de Tenerife",
-            "url": "https://www.puertosdetenerife.org/api/datos/",
+            "name": "CKAN API v3 – Datos Abiertos AP Tenerife",
+            "url": "https://ckan.puertosdetenerife.org/api/3",
             "type": "REST",
-            "documentation_url": null
+            "documentation_url": "http://docs.ckan.org/en/2.10/api/"
           }
         ],
         "dataset_count": 69,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
+        "dataset_count_note": "69 datasets de una única organización. Series anuales 2017–2026 para tráfico de mercancías, pasajeros, vehículos y equipamientos. Datasets en tiempo real/actualizados: escalas previstas/finalizadas, situación del día, buques en puerto, cruceros previstos y concesiones.",
+        "last_updated": "2026-05",
+        "license_summary": "Ley 37/2007 de reutilización de información del sector público (RD 1495/2011). Condiciones: citar fuente, no alterar contenido, no desnaturalizar el sentido.",
         "licenses": [
           {
-            "name": "CC BY 4.0",
             "id": null,
-            "url": null
+            "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+            "url": "https://www.puertosdetenerife.org/aviso-legal/",
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Autoridad Portuaria de Santa Cruz de Tenerife",
+        "url": "https://www.puertosdetenerife.org/transparencia/",
+        "portal_status": "active",
+        "technology": [
+          "Web"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF",
+          "XLS"
+        ],
+        "topics": [
+          "Transparencia",
+          "Sector público",
+          "Administración",
+          "Contratación",
+          "Presupuestos",
+          "Estadística portuaria",
+          "Legislación",
+          "Patrimonio",
+          "Subvenciones",
+          "Convenios",
+          "Urbanismo portuario"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Contenido organizado en secciones A–D conforme a la Ley 19/2013. Documentos individuales, no datasets estructurados.",
+        "last_updated": "2026-04",
+        "license_summary": "Ley 19/2013 de Transparencia",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Ley 19/2013, de 9 de diciembre, de Transparencia, Acceso a la Información Pública y Buen Gobierno",
+            "url": "https://www.puertosdetenerife.org/transparencia/",
+            "count": null
           }
         ],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.puertosdetenerife.org/datos-abiertos/"
+        "https://ckan.puertosdetenerife.org",
+        "https://ckan.puertosdetenerife.org/dataset/",
+        "https://ckan.puertosdetenerife.org/api/3",
+        "https://www.puertosdetenerife.org/transparencia/",
+        "https://www.puertosdetenerife.org/aviso-legal/",
+        "https://www.puertosdetenerife.org",
+        "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codigoUnidad=EA0001317"
       ]
     },
-    "notes": null
+    "notes": "Gestiona 6 puertos en la provincia de S/C de Tenerife: Santa Cruz de Tenerife, Granadilla, Los Cristianos, Santa Cruz de La Palma, San Sebastián de La Gomera y La Estaca (El Hierro). CIF: Q3867002B. Código DIR3: EA0001317. Dependiente de Puertos del Estado (Ministerio de Transportes; el aviso legal corporativo menciona 'Ministerio de Fomento', denominación anterior). La reutilización de datos abiertos se rige por la Ley 37/2007 y el RD 1495/2011; no se aplica licencia abierta estándar tipo CC. El portal CKAN (ckan.puertosdetenerife.org) es distinto de la web corporativa (puertosdetenerife.org). La URL anteriormente registrada en el catálogo (puertosdetenerife.org/datos-abiertos/) era incorrecta."
   },
   {
     "id": "portal_justicia_datos",
@@ -8451,74 +8510,184 @@
     "notes": null
   },
   {
-    "id": "fundacion_tutelar_canaria_para_la_accion_social_fucas",
-    "name": "FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
+    "id": "fucas",
+    "name": "Fundación Tutelar Canaria para la Acción Social (FUCAS)",
+    "alternate_names": [
+      "FUCAS",
+      "FuCAS",
+      "Fundación Tutelar Canaria para la Acción Social, M.P."
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "entity_kind": "organismo",
+    "scope": "autonomico",
+    "parent_entity_id": "gobierno_canarias",
+    "islands": [
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
+    "description": "Fundación pública del Gobierno de Canarias (CIF: G-35.405.836, Registro de Fundaciones Canarias nº 69), constituida el 11 de abril de 1995, adscrita a la Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias. Tiene por objeto la promoción del bienestar jurídico y social de personas con necesidades sociales, especialmente menores y adultos con discapacidad o capacidad judicialmente modificada, ejerciendo tutela, curatela, guarda de hecho y defensa judicial. Actúa como medio propio personificado de la Comunidad Autónoma para dependencia, discapacidad, familia numerosa y valoración de discapacidad.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Goya, 6, Tafira Alta",
+        "postal_code": "35017",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.572194,
+          "lon": -15.459889
         },
-        "source_url": "https://www.fucas.org/portal-de-transparencia"
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Avenida Primero de Mayo, 12, 2ª A",
+        "postal_code": "35002",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1033361,
+          "lon": -15.418151
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Nicaragua esquina Panamá, 6",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4544738,
+          "lon": -16.2669952
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Gara y Jonay s/n, Trasera (Las Delicias)",
+        "postal_code": "38007",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4507417,
+          "lon": -16.2810562
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Francisco Hernández Guerra s/n",
+        "postal_code": "35014",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1035035,
+          "lon": -15.4319916
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Plaza del Cambullonero, 1 (Marzagán)",
+        "postal_code": "35229",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.0422301,
+          "lon": -15.4282082
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Felipe Massieu Falcón, 7",
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1006986,
+          "lon": -15.4139959
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Avenida Pintor Felo Monzón, 2, Local 2-B",
+        "postal_code": "35019",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1113399,
+          "lon": -15.4512001
+        },
+        "source_url": "https://www.fucas.org/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
-        "url": "https://www.fucas.org/portal-de-transparencia",
+        "id": "fucas_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia FUCAS",
+        "url": "https://www.fucas.org/portal-de-transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "WordPress",
+          "custom"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 12/2014 Canarias",
+          "Ley 19/2013 estatal"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "DOCX",
+          "ODT",
+          "TXT",
+          "CSV",
+          "XLSX",
+          "PNG"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "institucional",
+          "contratos",
+          "subvenciones",
+          "retribuciones",
+          "empleo-publico",
+          "servicios-sociales",
+          "convenios",
+          "ayudas",
+          "discapacidad",
+          "dependencia",
+          "educacion"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "dataset_count_note": "Portal de transparencia documental, no catálogo de datasets estructurados",
+        "last_updated": "2025-12",
+        "license_summary": "Todos los derechos reservados (copyright FUCAS). Uso permitido únicamente en ámbito doméstico y sin fines públicos o comerciales. No se permite reproducción, distribución ni comunicación pública sin autorización expresa de FUCAS. Fuente: Aviso Legal fucas.org (actualizado 08-03-2023).",
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.fucas.org/portal-de-transparencia"
+        "https://www.fucas.org/portal-de-transparencia/institucional/",
+        "https://www.fucas.org/wp-content/uploads/2025/04/ESCRITURA-DE-CONSTITUCION-FUCAS-red.pdf",
+        "https://www.fucas.org/wp-content/uploads/2025/05/ESCRITURA-NOTARIAL-MODIFICACION-ESTATUTOS-04.09.2020-PRESENTADO.pdf",
+        "https://www.fucas.org/wp-content/uploads/2021/05/TEXTO-REFUNDIDO-ESTATUTOS-MODIFICADOS-FUCAS-15.04.2021.pdf",
+        "https://www.fucas.org/wp-content/uploads/2026/04/CERTIFICADO_LIBRO_DE_ACTAS_FUCAS_2025-25.03.2026_signed_-AMBAS.pdf"
       ]
     },
-    "notes": null
+    "notes": "Fundación Pública del Gobierno de Canarias (CIF G-35.405.836), inscrita en el Registro de Fundaciones Canarias con el nº 69. Constituida el 11 de abril de 1995. Entidad con presupuesto estimativo incluida en los presupuestos anuales de la Comunidad Autónoma de Canarias. Adscrita a la Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias (antes Derechos Sociales). Medio propio personificado de la CAC. Total trabajadores: 197 (según organigrama publicado en portal de transparencia). Estructura: Gerencia + 9 unidades/centros. Centros y servicios: CPEE Concertado La Casita (Tafira, GC), Centro de Adultos Hermano Pedro (Las Delicias, Tenerife), Centro de Día Los Ruiseñores (GC), Centro de Día para Personas Mayores de Marzagán (GC). Encargos activos: tutela y curatela judicial, familia numerosa, PIAs dependencia, Programa BICÁCARO (Estrategia Canaria de Transición Igualitaria), equipos itinerantes de valoración de discapacidad (desde noviembre 2025). No participa en ninguna sociedad ni grupo empresarial (Art. 42 Código de Comercio). Planes estratégicos: II PE 2017-2021 (ampliado a 2022), III PE 2023-2027 vigente. Certificaciones en curso: SGI ISO 9001 + ISO 14001 (en implantación). RSC: Plan 2025-2026 alineado con Agenda Canaria 2030 y ODS ONU. Patronato: reuniones documentadas desde 2021, frecuencia aproximada trimestral. Última acta publicada: 26-11-2025. Certificados de libro de actas disponibles para 2023, 2024 y 2025. Última actualización del portal (sección institucional): 31-03-2026. Portal de transparencia con 13 secciones, periodicidad semestral. Base legal principal: Ley 2/1998 de Fundaciones Canarias, Ley 12/2014 (transparencia Canarias), Ley 19/2013 (transparencia estatal), Ley 9/2017 (contratos sector público), LOPDGDD 3/2018, XVI Convenio colectivo atención personas con discapacidad (2025). Estatutos vigentes en texto refundido: última reforma 15 de abril de 2021. Presencia física en Gran Canaria y Tenerife; servicios itinerantes en todas las islas."
   },
   {
     "id": "fundacion_canaria_instituto_de_investigacion_sanitaria_de_ca",
@@ -8661,74 +8830,84 @@
     "notes": null
   },
   {
-    "id": "fundacion_canaria_para_el_fomento_del_trabajo_funcatra",
+    "id": "funcatra",
     "name": "Fundación Canaria para el Fomento del Trabajo FUNCATRA",
-    "entity_kind": "empresa_publica",
+    "alternate_names": [
+      "FUNCATRA"
+    ],
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Fundación pública del Gobierno de Canarias (100% participación autonómica), creada al amparo de la Ley 2/1998 de Fundaciones Canarias. Promueve el empleo y la formación profesional en Canarias. Gestiona el Observatorio Canario del Empleo (OBECAN), la Agencia de Colocación y proyectos TIC para el Servicio Canario de Empleo. Adscrita a la Consejería de Turismo y Empleo desde 2023.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Fundación Canaria para el Fomento del Trabajo FUNCATRA",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "C/ Los Ministerios, 1, OFRA, 38009, Santa Cruz de Tenerife",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.4544738,
+          "lon": -16.2669952
         },
-        "source_url": "http://www.funcatra.es/transparencia"
+        "source_url": "https://www.funcatra.es/transparencia"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Cebrián, 3, 4ª Planta, Edificio ITC, 35003, Las Palmas de Gran Canaria",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1033361,
+          "lon": -15.418151
+        },
+        "source_url": "https://www.funcatra.es/transparencia"
       }
     ],
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Fundación Canaria para el Fomento del Trabajo FUNCATRA",
-        "url": "http://www.funcatra.es/transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Fundación Canaria para el Fomento del Trabajo FUNCATRA",
+        "url": "https://www.funcatra.es/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "custom"
         ],
         "standards": [],
         "formats": [
-          "HTML",
+          "ODT",
           "PDF"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "Empleo",
+          "Formación profesional",
+          "Sector público"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "machine_readable": false,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "http://www.funcatra.es/transparencia"
+        "https://www.funcatra.es/transparencia"
       ]
     },
-    "notes": null
+    "notes": "Fundación sin ánimo de lucro creada el 31/12/1998. Dotación fundacional: 60.101,21 €. ~90 trabajadores (2024). Dos sedes permanentes (Tenerife y Gran Canaria) más locales temporales arrendados/cedidos. Período medio de pago a proveedores 2024: ~7,9 días. Informes del Comisionado de Transparencia: 2017–2024."
   },
   {
     "id": "gestion_del_medio_rural_de_canarias_sau_gmr_canarias",
@@ -15476,81 +15655,112 @@
   {
     "id": "ministerio_interior",
     "name": "Ministerio del Interior",
-    "alternate_names": [
-      "Interior"
-    ],
     "entity_kind": "organismo",
     "scope": "estatal",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio competente en seguridad, orden público y estadísticas de criminalidad, con impacto territorial en Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "C/ Amador de los Ríos 7, 28071 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.428,
-          "lon": -3.684
-        },
-        "source_url": "https://www.interior.gob.es/opencms/en/inicio"
-      }
-    ],
+    "description": "Ministerio estatal competente en seguridad ciudadana, extranjería, protección civil, tráfico, política interior, apoyo a víctimas del terrorismo, protección internacional y coordinación estadística ministerial. Para Canarias es relevante como fuente oficial de estadísticas, anuarios, metodologías, transparencia y documentación institucional.",
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.interior.gob.es/opencms/es/inicio/",
+        "https://www.interior.gob.es/opencms/es/el-ministerio/organigrama/",
+        "https://sede.interior.gob.es/portal/sede/informacion-general/datos-abiertos",
+        "https://transparencia.gob.es/",
+        "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/",
+        "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/estadisticas-del-ministerio-del-interior/",
+        "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/metodologias-de-las-estadisticas-del-ministerio-del-interior/",
+        "https://datos.gob.es/es/iniciativas/portal-datos-abiertos-del-ministerio-del-interior"
+      ]
+    },
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "other",
-        "name": "Ministerio del Interior",
-        "url": "https://www.interior.gob.es/opencms/en/inicio",
-        "portal_status": "active",
+        "id": "portal_datos_abiertos_interior",
+        "kind": "open_data",
+        "name": "Portal de Datos Abiertos",
+        "url": "https://sede.interior.gob.es/portal/sede/informacion-general/datos-abiertos",
         "technology": [
-          "Custom"
+          "Web"
         ],
         "standards": [
           "HTML",
-          "CSV",
           "PDF"
         ],
         "formats": [
           "HTML",
-          "CSV",
           "PDF"
         ],
         "topics": [
+          "datos_abiertos",
+          "reutilizacion",
           "seguridad",
-          "criminalidad",
-          "orden_publico"
+          "trafico",
+          "extranjeria",
+          "proteccion_civil",
+          "penitenciario"
         ],
-        "machine_readable": true,
-        "has_api": null,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta Interior",
-            "url": null,
-            "count": null
-          }
+        "machine_readable": null
+      },
+      {
+        "id": "portal_transparencia_interior",
+        "kind": "transparencia",
+        "name": "Portal de transparencia",
+        "url": "https://transparencia.gob.es/",
+        "technology": [
+          "Web"
         ],
-        "last_checked": "2026-05"
+        "standards": [
+          "HTML"
+        ],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "transparencia",
+          "organigrama",
+          "normativa",
+          "estructura",
+          "empleo_publico"
+        ],
+        "machine_readable": null
+      },
+      {
+        "id": "estadistica_interior",
+        "kind": "estadistica",
+        "name": "Anuarios y estadísticas",
+        "url": "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/",
+        "technology": [
+          "Web"
+        ],
+        "standards": [
+          "HTML",
+          "PDF",
+          "ZIP"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ZIP"
+        ],
+        "topics": [
+          "estadistica",
+          "anuarios",
+          "seguridad",
+          "trafico",
+          "violencia_de_genero",
+          "asilo",
+          "migracion",
+          "prision",
+          "drogas",
+          "armas",
+          "metodologia"
+        ],
+        "machine_readable": null
       }
     ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.interior.gob.es/opencms/en/inicio"
-      ]
-    },
-    "notes": null
+    "notes": "La sección de Archivos y Documentación incluye servicios al ciudadano y a la administración, más de 100 bibliotecas y centros de documentación, publicaciones y enlaces de interés. La sección de Anuarios Estadísticos ofrece la serie histórica en PDF desde 1989 hasta 2024, con información reutilizable desde 2012. La sección de Estadísticas incluye la coordinación estadística, operaciones en el Inventario de Operaciones Estadísticas del INE, estadísticas del Programa anual 2025 del Plan Estadístico Nacional y resultados difundidos por varios organismos. La sección de Metodologías reúne proyectos técnicos e informes metodológicos estandarizados para las principales operaciones estadísticas. El enlace de transparencia redirige al portal general transparencia.gob.es. El portal de datos abiertos está alojado en la Sede electrónica del ministerio y enlaza a portales estadísticos oficiales y PDFs."
   },
   {
     "id": "ministerio_exteriores",

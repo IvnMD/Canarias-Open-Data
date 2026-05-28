@@ -1,0 +1,49 @@
+name: Añadir fecha automáticamente
+
+on:
+  issues:
+    types: [opened, closed]
+
+jobs:
+  add-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Añadir fecha al issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fecha = new Date().toLocaleString('es-ES', {
+              timeZone: 'Atlantic/Canary',
+              day: '2-digit',
+              month: '2-digit',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            });
+
+            const issue = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+
+            const cuerpoActual = issue.data.body || '';
+
+            let prefijo = '';
+            if (context.payload.action === 'opened') {
+              prefijo = `🕒 **Fecha de creación:** ${fecha}\n\n`;
+            } else if (context.payload.action === 'closed') {
+              prefijo = `🔒 **Fecha de cierre:** ${fecha}\n\n`;
+            }
+
+            if (!prefijo) return;
+
+            const nuevoCuerpo = prefijo + cuerpoActual;
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: nuevoCuerpo
+            });
