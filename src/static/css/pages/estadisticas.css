@@ -1,0 +1,229 @@
+/* ============================================
+   ESTADÍSTICAS - ESTILOS ESPECÍFICOS
+   ============================================ */
+
+.stats-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  flex: 1;
+  width: 100%;
+}
+
+.stats-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* GRID DE GRÁFICAS */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* TARJETAS DE GRÁFICAS */
+.chart-card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: grab;
+  user-select: none;
+}
+
+.chart-card:active {
+  cursor: grabbing;
+}
+
+.chart-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme="dark"] .chart-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.2);
+}
+
+/* Header de tarjeta con botón a la derecha - Sobrescribe el .card-header de components */
+.chart-card .card-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 1rem !important;
+  gap: 1rem !important;
+  padding: 0 !important;
+}
+
+.chart-card .card-header h2 {
+  margin: 0 !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  flex: 1 !important;
+  color: var(--text-primary);
+}
+
+/* Botón de cambiar gráfica */
+.chart-toggle-btn {
+  background-color: transparent !important;
+  border: 2px solid #2563eb !important;
+  border-radius: 8px !important;
+  padding: 0.4rem 0.9rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease-in-out !important;
+  color: #2563eb !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+[data-theme="dark"] .chart-toggle-btn {
+  border-color: #f97316 !important;
+  color: #f97316 !important;
+}
+
+.chart-toggle-btn:hover {
+  background-color: #2563eb !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+}
+
+[data-theme="dark"] .chart-toggle-btn:hover {
+  background-color: #f97316 !important;
+  color: #0f172a !important;
+}
+
+/* Gráficas que ocupan 2 columnas */
+.chart-card.pie-chart {
+  grid-column: span 2;
+}
+
+.chart-wrapper {
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+.chart-wrapper canvas {
+  max-width: 100%;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Drag & Drop */
+.chart-card.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.chart-card.drag-over {
+  border-color: #2563eb;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .chart-card.drag-over {
+  border-color: #f97316;
+}
+
+.reset-order-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reset-order-btn:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+[data-theme="dark"] .reset-order-btn:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.drag-info {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Ajustes para la nueva gráfica de madurez */
+.chart-card[data-chart-type="madurez"] .chart-wrapper {
+  height: 300px;
+}
+
+/* Colores específicos para la leyenda de madurez (ya se manejan desde JS) */
+@media (max-width: 768px) {
+  .chart-card[data-chart-type="madurez"] .chart-wrapper {
+    height: 260px;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .chart-card.pie-chart {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+  }
+
+  .chart-wrapper {
+    height: 260px;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .chart-card.pie-chart {
+    grid-column: span 1;
+  }
+}

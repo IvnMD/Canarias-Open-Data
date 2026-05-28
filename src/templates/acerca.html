@@ -8,9 +8,19 @@
   <meta name="author" content="Datos Abiertos Canarias">
   <title>Acerca de — Open Data Canarias</title>
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
-  <link rel="stylesheet" href="/static/css/base.css">
-  <link rel="stylesheet" href="/static/css/light-mode.css">
-  <link rel="stylesheet" href="/static/css/dark-mode.css">
+  
+  <!-- Theme variables (light + dark juntos) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+  
+  <!-- Base styles (reset + layout) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  
+  <!-- Shared components (cards, nav, badges, tables, etc.) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+  
+  <!-- About page specific styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/acerca.css') }}">
+  
   <script>
     (function () {
       try {
@@ -20,105 +30,6 @@
       } catch (e) {}
     })();
   </script>
-  <style>
-    .acerca-page {
-      max-width: 860px;
-      margin: 2rem auto;
-      padding: 0 1.5rem 4rem;
-    }
-
-    .acerca-page h2 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin: 2rem 0 0.75rem;
-      color: var(--text-primary);
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.4rem;
-    }
-
-    .acerca-page p,
-    .acerca-page li {
-      font-size: 0.92rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    .acerca-page ul {
-      padding-left: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    .acerca-page li {
-      margin-bottom: 0.35rem;
-    }
-
-    .acerca-page a {
-      color: var(--badge-text);
-      text-decoration: underline;
-      word-break: break-word;
-    }
-
-    .acerca-page a:hover {
-      opacity: 0.8;
-    }
-
-    .schema-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-      margin-top: 0.75rem;
-    }
-
-    .schema-table th,
-    .schema-table td {
-      padding: 0.55rem 0.75rem;
-      text-align: left;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .schema-table th {
-      font-weight: 600;
-      color: var(--text-primary);
-      background: var(--bg-secondary);
-    }
-
-    .schema-table td {
-      color: var(--text-secondary);
-    }
-
-    .schema-table td:first-child {
-      font-family: monospace;
-      font-size: 0.82rem;
-      color: var(--badge-text);
-      white-space: nowrap;
-    }
-
-    .acerca-header {
-      margin-bottom: 0.25rem;
-    }
-
-    .acerca-header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    .acerca-header p {
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-    }
-
-    .license-badge-about {
-      display: inline-block;
-      padding: 0.2rem 0.65rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      background: var(--badge-bg);
-      color: var(--badge-text);
-      margin-top: 0.25rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -194,52 +105,52 @@
       </thead>
       <tbody>
         <tr>
-          <td>id</td>
+          <td>id</code></td>
           <td>Identificador único de la entidad</td>
           <td>Texto en minúsculas con guiones bajos</td>
         </tr>
         <tr>
-          <td>name</td>
+          <td>name</code></td>
           <td>Nombre oficial de la entidad</td>
           <td>Texto libre</td>
         </tr>
         <tr>
-          <td>entity_kind</td>
+          <td>entity_kind</code></td>
           <td>Tipo de entidad</td>
           <td>gobierno_autonomico · cabildo · ayuntamiento · organismo · empresa_publica</td>
         </tr>
         <tr>
-          <td>scope</td>
+          <td>scope</code></td>
           <td>Ámbito administrativo</td>
           <td>autonomico · insular · municipal · estatal · europeo</td>
         </tr>
         <tr>
-          <td>islands</td>
+          <td>islands</code></td>
           <td>Islas a las que pertenece la entidad</td>
           <td>Tenerife · Gran Canaria · Lanzarote · Fuerteventura · La Palma · La Gomera · El Hierro · La Graciosa · Todas</td>
         </tr>
         <tr>
-          <td>portals</td>
+          <td>portals</code></td>
           <td>Lista de portales publicados por la entidad</td>
           <td>Array de objetos (ver schema)</td>
         </tr>
         <tr>
-          <td>portals.kind</td>
+          <td>portals.kind</code></td>
           <td>Tipo de portal</td>
           <td>open_data · transparencia · estadistica · geoespacial · agregador · other</td>
         </tr>
         <tr>
-          <td>portals.machine_readable</td>
+          <td>portals.machine_readable</code></td>
           <td>¿Los datos son legibles por máquina?</td>
           <td>true / false</td>
         </tr>
         <tr>
-          <td>portals.has_api</td>
+          <td>portals.has_api</code></td>
           <td>¿Dispone de API?</td>
           <td>true / false / null</td>
         </tr>
         <tr>
-          <td>verification.status</td>
+          <td>verification.status</code></td>
           <td>Nivel de confianza del registro</td>
           <td>verified · estimated · inferred · pending</td>
         </tr>
@@ -322,36 +233,60 @@
     <p>Proyecto académico DAM</p>
   </footer>
 
-  <script>
-    const _mem = {};
-    function safeStorage(a, k, v) {
-      try {
-        if (a === 'get') return localStorage.getItem(k);
-        if (a === 'set') { localStorage.setItem(k, v); return; }
-      } catch {
-        if (a === 'get') return _mem[k] ?? null;
-        if (a === 'set') { _mem[k] = v; return; }
-      }
-    }
-    const darkBtn = document.getElementById('darkModeToggle');
-    if (darkBtn) {
-      darkBtn.addEventListener('click', () => {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        if (isDark) {
-          document.documentElement.removeAttribute('data-theme');
-          safeStorage('set', 'darkMode', 'disabled');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          safeStorage('set', 'darkMode', 'enabled');
-        }
-        darkBtn.textContent = document.documentElement.getAttribute('data-theme') === 'dark'
-          ? '☀️ Modo claro' : '🌙 Modo oscuro';
-      });
-      if (document.documentElement.getAttribute('data-theme') === 'dark') {
-        darkBtn.textContent = '☀️ Modo claro';
-      }
-    }
-  </script>
+  <!-- Botón de modo oscuro - AHORA SÍ FUNCIONA -->
+  <button id="darkModeToggle">🌙 Modo oscuro</button>
 
+  <script>
+    (function() {
+      // Función segura para localStorage
+      const storage = {
+        get: function(key) {
+          try { return localStorage.getItem(key); } catch(e) { return null; }
+        },
+        set: function(key, value) {
+          try { localStorage.setItem(key, value); } catch(e) {}
+        }
+      };
+
+      // Actualizar el texto del botón según el tema actual
+      function updateButtonText() {
+        const btn = document.getElementById('darkModeToggle');
+        if (!btn) return;
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        btn.textContent = isDark ? '☀️ Modo claro' : '🌙 Modo oscuro';
+      }
+
+      // Inicializar el tema desde localStorage
+      const savedTheme = storage.get('darkMode');
+      if (savedTheme === 'enabled') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else if (savedTheme === 'disabled') {
+        document.documentElement.removeAttribute('data-theme');
+      }
+
+      // Configurar el evento del botón (esperar a que el DOM esté listo)
+      document.addEventListener('DOMContentLoaded', function() {
+        const darkBtn = document.getElementById('darkModeToggle');
+        if (darkBtn) {
+          updateButtonText();
+          
+          darkBtn.addEventListener('click', function() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            
+            if (isDark) {
+              document.documentElement.removeAttribute('data-theme');
+              storage.set('darkMode', 'disabled');
+            } else {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              storage.set('darkMode', 'enabled');
+            }
+            
+            updateButtonText();
+          });
+        }
+      });
+    })();
+  </script>
 </body>
+
 </html>

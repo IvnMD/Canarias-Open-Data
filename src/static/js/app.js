@@ -122,12 +122,17 @@ function normalize(e) {
   // Normalize APIs to a guaranteed array
   const apis = portal?.apis && Array.isArray(portal.apis) ? portal.apis : [];
 
-  // Formats can come from several places depending on the source entity
-  const formats = portal?.formats || e.formats || e.data?.formats || [];
-  const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
-  const hasMachineReadableFormat = formats.some(f =>
-    machineReadableFormats.includes(String(f).toUpperCase())
-  );
+// Formats can come from several places depending on the source entity
+const formats = portal?.formats || e.formats || e.data?.formats || [];
+const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
+
+const hasMachineReadableFormat = formats.some(f => {
+  const value = String(f || '').trim().toUpperCase();
+  return machineReadableFormats.includes(value);
+});
+
+// Machine-readable se decide SOLO por formatos (ignora lo que venga del JSON)
+const machine_readable = hasMachineReadableFormat;
 
   // Normalize dataset count to number|null
   const rawCount = portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? null;
@@ -144,7 +149,7 @@ function normalize(e) {
     portal_url: portal?.url || e.portal_url || e.portal?.url || '#',
     portal_kind: portal?.kind || null,
     portal_tech: portal?.technology || [],
-    machine_readable: portal?.machine_readable ?? hasMachineReadableFormat,
+    machine_readable,
     has_api: apis.length > 0 || (portal?.has_api ?? false),
     dataset_count: datasetCount,
     data_categories: portal?.topics || e.data_categories || e.data?.categories || [],
