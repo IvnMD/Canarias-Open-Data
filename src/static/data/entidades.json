@@ -9078,7 +9078,6 @@
           "lat": 28.1189,
           "lon": -15.4214
         },
-        "phone": "928 301 150",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9091,11 +9090,10 @@
           "lat": 28.1171,
           "lon": -15.4194
         },
-        "phone": "928 301 150",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
-        "kind": "warehouse",
+        "kind": "delegated_office",
         "address": "C/ General Bravo 93, Barranco de La Gallina, 35220",
         "postal_code": "35220",
         "municipality": "Telde",
@@ -9104,7 +9102,6 @@
           "lat": 28.0267,
           "lon": -15.4022
         },
-        "phone": "928 713 102",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9117,7 +9114,6 @@
           "lat": 28.4568,
           "lon": -16.2612
         },
-        "phone": "922 887 887",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9130,11 +9126,10 @@
           "lat": 28.4561,
           "lon": -16.2621
         },
-        "phone": "922 887 887",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
-        "kind": "warehouse",
+        "kind": "delegated_office",
         "address": "C/ Camino Real 154, Agua García, 38350",
         "postal_code": "38350",
         "municipality": "Tacoronte",
@@ -9143,7 +9138,6 @@
           "lat": 28.4589,
           "lon": -16.4025
         },
-        "phone": "922 585 550",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9156,11 +9150,10 @@
           "lat": 28.5083,
           "lon": -13.9189
         },
-        "phone": "928 435 544",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
-        "kind": "warehouse",
+        "kind": "delegated_office",
         "address": "C/ Hernán Cortés 112, local bajo, 35600",
         "postal_code": "35600",
         "municipality": "Puerto del Rosario",
@@ -9169,7 +9162,6 @@
           "lat": 28.4975,
           "lon": -13.8694
         },
-        "phone": "928 855 067",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9182,11 +9174,10 @@
           "lat": 28.9669,
           "lon": -13.5558
         },
-        "phone": "928 435 488",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
-        "kind": "warehouse",
+        "kind": "delegated_office",
         "address": "C/ Andalucía 114, local bajo, 35500",
         "postal_code": "35500",
         "municipality": "Arrecife",
@@ -9195,7 +9186,6 @@
           "lat": 28.9691,
           "lon": -13.5602
         },
-        "phone": "928 808 170",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9208,7 +9198,6 @@
           "lat": 28.6744,
           "lon": -17.7686
         },
-        "phone": "922 415 743",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9221,7 +9210,6 @@
           "lat": 28.6508,
           "lon": -17.8814
         },
-        "phone": "639 454 591",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9234,11 +9222,10 @@
           "lat": 28.0931,
           "lon": -17.1128
         },
-        "phone": "922 141 904",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
-        "kind": "warehouse",
+        "kind": "delegated_office",
         "address": "Carretera General del Sur, Km 2.3, Charco Hondo, 38800",
         "postal_code": "38800",
         "municipality": "San Sebastián de La Gomera",
@@ -9247,7 +9234,6 @@
           "lat": 28.0864,
           "lon": -17.1261
         },
-        "phone": "922 872 019",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
@@ -9260,11 +9246,10 @@
           "lat": 27.8078,
           "lon": -17.9151
         },
-        "phone": "922 891 492",
         "source_url": "https://www.gesplan.es/sedes/"
       },
       {
-        "kind": "warehouse",
+        "kind": "delegated_office",
         "address": "C/ Isla de Fuerteventura nº 5, bajo, 38900",
         "postal_code": "38900",
         "municipality": "Valverde",
@@ -9273,7 +9258,6 @@
           "lat": 27.8105,
           "lon": -17.9122
         },
-        "phone": "922 550 226",
         "source_url": "https://www.gesplan.es/sedes/"
       }
     ],
@@ -9285,14 +9269,13 @@
         "url": "https://www.gesplan.es/transparencias/",
         "portal_status": "active",
         "technology": [
-          "Portal WordPress propio"
+          "WordPress"
         ],
         "standards": [
           "Ley 12/2014 de Canarias",
           "Ley 19/2013 estatal"
         ],
         "formats": [
-          "HTML",
           "PDF",
           "ODT",
           "CSV"
@@ -9315,7 +9298,6 @@
           "Derecho de acceso",
           "Canal de denuncias"
         ],
-        "machine_readable": true,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -9341,7 +9323,7 @@
         "https://www.gesplan.es/canal-de-denuncias/"
       ]
     },
-    "notes": "Empresa pública del Gobierno de Canarias (medio propio, CIF: A38279972). Opera en las 7 islas habitadas con 16 ubicaciones: 1 sede central (Gran Canaria) + 8 oficinas + 5 almacenes + 2 oficinas/almacén."
+    "notes": "Empresa pública del Gobierno de Canarias (medio propio, CIF: A38279972). 16 ubicaciones: 1 sede central (Gran Canaria) + 8 oficinas + 5 almacenes (marcados como delegated_office)."
   },
   {
     "id": "gestur_canarias_sa",
@@ -15881,10 +15863,25 @@
     "name": "Ministerio del Interior",
     "entity_kind": "organismo",
     "scope": "estatal",
+    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
     "description": "Ministerio estatal competente en seguridad ciudadana, extranjería, protección civil, tráfico, política interior, apoyo a víctimas del terrorismo, protección internacional y coordinación estadística ministerial. Para Canarias es relevante como fuente oficial de estadísticas, anuarios, metodologías, transparencia y documentación institucional.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Amador de los Ríos, 7",
+        "postal_code": "28010",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4274,
+          "lon": -3.6913
+        },
+        "source_url": "https://www.interior.gob.es/opencms/es/inicio/"
+      }
+    ],
     "verification": {
       "status": "verified",
       "last_checked": "2026-05",
@@ -15925,7 +15922,15 @@
           "proteccion_civil",
           "penitenciario"
         ],
-        "machine_readable": null
+        "machine_readable": false,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
       },
       {
         "id": "portal_transparencia_interior",
@@ -15948,7 +15953,15 @@
           "estructura",
           "empleo_publico"
         ],
-        "machine_readable": null
+        "machine_readable": false,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
       },
       {
         "id": "estadistica_interior",
@@ -15981,7 +15994,15 @@
           "armas",
           "metodologia"
         ],
-        "machine_readable": null
+        "machine_readable": false,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
       }
     ],
     "notes": "La sección de Archivos y Documentación incluye servicios al ciudadano y a la administración, más de 100 bibliotecas y centros de documentación, publicaciones y enlaces de interés. La sección de Anuarios Estadísticos ofrece la serie histórica en PDF desde 1989 hasta 2024, con información reutilizable desde 2012. La sección de Estadísticas incluye la coordinación estadística, operaciones en el Inventario de Operaciones Estadísticas del INE, estadísticas del Programa anual 2025 del Plan Estadístico Nacional y resultados difundidos por varios organismos. La sección de Metodologías reúne proyectos técnicos e informes metodológicos estandarizados para las principales operaciones estadísticas. El enlace de transparencia redirige al portal general transparencia.gob.es. El portal de datos abiertos está alojado en la Sede electrónica del ministerio y enlaza a portales estadísticos oficiales y PDFs."
@@ -17692,88 +17713,6 @@
       ]
     },
     "notes": null
-  },
-  {
-    "id": "ministerio_interior",
-    "name": "Ministerio del Interior",
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Ministerio estatal con datos abiertos sobre seguridad, estadística electoral, tráfico y DGT. Incluye datos de accidentalidad vial en Canarias y resultados electorales por municipio.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Calle Amador de los Ríos, 7",
-        "postal_code": "28010",
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.4274,
-          "lon": -3.6913
-        },
-        "source_url": "https://www.interior.gob.es/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Interior en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-del-interior",
-        "portal_status": "active",
-        "technology": [
-          "datos.gob.es / CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
-        ],
-        "topics": [
-          "Seguridad",
-          "Sector público",
-          "Transporte",
-          "Legislación"
-        ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Interior en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-del-interior",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
-        "licenses": [
-          {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
-            "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.interior.gob.es/",
-        "https://datos.gob.es/"
-      ]
-    },
-    "notes": "Incluye datos electorales (infoelectoral) con resultados desagregados para los municipios canarios."
   },
   {
     "id": "ministerio_transformacion_digital",
