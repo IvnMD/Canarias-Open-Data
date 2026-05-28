@@ -9050,56 +9050,278 @@
     "notes": null
   },
   {
-    "id": "gestion_y_planeamiento_territorial_y_medioambiental_sa_gespl",
-    "name": "Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
+    "id": "gesplan",
+    "name": "GESPLAN – Gestión y Planeamiento Territorial y Medioambiental S.A.",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
-      "Todas"
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Empresa pública del Gobierno de Canarias especializada en planificación territorial, urbanismo, medio ambiente e ingeniería. Medio propio de la Administración autonómica y de los cabildos insulares. Opera en las siete islas habitadas con sedes, oficinas y almacenes.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "C/ León y Castillo 54, bajo, 35003",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1189,
+          "lon": -15.4214
         },
-        "source_url": "https://www.gesplan.es/transparencia"
+        "phone": "928 301 150",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Profesor Agustín Millares Carlo 10, Planta Baja, 1ª y 3ª (Edificio Iberia), 35003",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1171,
+          "lon": -15.4194
+        },
+        "phone": "928 301 150",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "warehouse",
+        "address": "C/ General Bravo 93, Barranco de La Gallina, 35220",
+        "postal_code": "35220",
+        "municipality": "Telde",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.0267,
+          "lon": -15.4022
+        },
+        "phone": "928 713 102",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Residencial Amarca, Avda. Tres de Mayo 71, local bajo A, 38005",
+        "postal_code": "38005",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4568,
+          "lon": -16.2612
+        },
+        "phone": "922 887 887",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Residencial Marítimo, Avda. Tres de Mayo 77, 38005",
+        "postal_code": "38005",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4561,
+          "lon": -16.2621
+        },
+        "phone": "922 887 887",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "warehouse",
+        "address": "C/ Camino Real 154, Agua García, 38350",
+        "postal_code": "38350",
+        "municipality": "Tacoronte",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4589,
+          "lon": -16.4025
+        },
+        "phone": "922 585 550",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Antiguo Aeropuerto de Los Estancos s/n, 35612",
+        "postal_code": "35612",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
+        "coordinates": {
+          "lat": 28.5083,
+          "lon": -13.9189
+        },
+        "phone": "928 435 544",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "warehouse",
+        "address": "C/ Hernán Cortés 112, local bajo, 35600",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
+        "coordinates": {
+          "lat": 28.4975,
+          "lon": -13.8694
+        },
+        "phone": "928 855 067",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Rambla Medular nº 99, 2º piso, local 2, 35500",
+        "postal_code": "35500",
+        "municipality": "Arrecife",
+        "island": "Lanzarote",
+        "coordinates": {
+          "lat": 28.9669,
+          "lon": -13.5558
+        },
+        "phone": "928 435 488",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "warehouse",
+        "address": "C/ Andalucía 114, local bajo, 35500",
+        "postal_code": "35500",
+        "municipality": "Arrecife",
+        "island": "Lanzarote",
+        "coordinates": {
+          "lat": 28.9691,
+          "lon": -13.5602
+        },
+        "phone": "928 808 170",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Galeón 28, local bajo, 38700",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6744,
+          "lon": -17.7686
+        },
+        "phone": "922 415 743",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Carretera General Padrón nº 2, El Paso, 38750",
+        "postal_code": "38750",
+        "municipality": "El Paso",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6508,
+          "lon": -17.8814
+        },
+        "phone": "639 454 591",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ El Tanquito nº 14, bajo, 38800",
+        "postal_code": "38800",
+        "municipality": "San Sebastián de La Gomera",
+        "island": "La Gomera",
+        "coordinates": {
+          "lat": 28.0931,
+          "lon": -17.1128
+        },
+        "phone": "922 141 904",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "warehouse",
+        "address": "Carretera General del Sur, Km 2.3, Charco Hondo, 38800",
+        "postal_code": "38800",
+        "municipality": "San Sebastián de La Gomera",
+        "island": "La Gomera",
+        "coordinates": {
+          "lat": 28.0864,
+          "lon": -17.1261
+        },
+        "phone": "922 872 019",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Canónigo Leopoldo Morales nº 1, 38900",
+        "postal_code": "38900",
+        "municipality": "Valverde",
+        "island": "El Hierro",
+        "coordinates": {
+          "lat": 27.8078,
+          "lon": -17.9151
+        },
+        "phone": "922 891 492",
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "warehouse",
+        "address": "C/ Isla de Fuerteventura nº 5, bajo, 38900",
+        "postal_code": "38900",
+        "municipality": "Valverde",
+        "island": "El Hierro",
+        "coordinates": {
+          "lat": 27.8105,
+          "lon": -17.9122
+        },
+        "phone": "922 550 226",
+        "source_url": "https://www.gesplan.es/sedes/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
-        "url": "https://www.gesplan.es/transparencia",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia de GESPLAN",
+        "url": "https://www.gesplan.es/transparencias/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "Portal WordPress propio"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 12/2014 de Canarias",
+          "Ley 19/2013 estatal"
+        ],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "CSV"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Estructura organizativa",
+          "Órganos de gobierno",
+          "Normativa aplicable",
+          "Empleo público",
+          "Retribuciones",
+          "Servicios y procedimientos",
+          "Presupuesto",
+          "Gasto público",
+          "Contratación pública",
+          "Convenios",
+          "Encomiendas de gestión",
+          "Ayudas y subvenciones",
+          "Estadística",
+          "Derecho de acceso",
+          "Canal de denuncias"
         ],
         "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "~25 ficheros CSV en secciones de empleo, retribuciones, contratos, convenios y encomiendas. Sin API ni catálogo de datos abiertos.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización abierta (Atribución requerida)",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -9111,13 +9333,15 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.gesplan.es/transparencia"
+        "https://www.gesplan.es/sedes/",
+        "https://www.gesplan.es/transparencias/",
+        "https://www.gesplan.es/canal-de-denuncias/"
       ]
     },
-    "notes": null
+    "notes": "Empresa pública del Gobierno de Canarias (medio propio, CIF: A38279972). Opera en las 7 islas habitadas con 16 ubicaciones: 1 sede central (Gran Canaria) + 8 oficinas + 5 almacenes + 2 oficinas/almacén."
   },
   {
     "id": "gestur_canarias_sa",
