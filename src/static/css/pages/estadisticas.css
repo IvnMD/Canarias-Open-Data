@@ -38,7 +38,7 @@
 /* TARJETAS DE GRÁFICAS */
 .chart-card {
   background: var(--bg-secondary);
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--border-chart);
   border-radius: 18px;
   padding: 1rem;
   transition: all 0.3s ease;
