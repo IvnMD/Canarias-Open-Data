@@ -181,6 +181,14 @@
   border-radius: 20px;
 }
 
+.stats-topbar #darkModeToggle {
+  position: static;
+  inset: auto;
+  z-index: auto;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
 /* Ajustes para la nueva gráfica de madurez */
 .chart-card[data-chart-type="madurez"] .chart-wrapper {
   height: 300px;
@@ -208,6 +216,16 @@
   .stats-topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .stats-topbar > div {
+    width: 100%;
+  }
+
+  .stats-topbar .drag-info,
+  .stats-topbar .reset-order-btn,
+  .stats-topbar #darkModeToggle {
+    min-height: 40px;
   }
 
   .page-title {

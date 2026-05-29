@@ -1020,39 +1020,38 @@ body.layout-detailed .detail-only {
 }
 
 
-/* Botón flotante de modo oscuro */
+/* Botón de modo oscuro */
 #darkModeToggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: var(--badge-text);
-  color: white;
-  border: none;
-  border-radius: 40px;
-  padding: 10px 18px;
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
 
 
 #darkModeToggle:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
 }
 
 
 [data-theme="dark"] #darkModeToggle {
-  background: var(--badge-text);
-  color: #0f172a;
+  color: var(--text-secondary);
 }
 
 
 [data-theme="dark"] #darkModeToggle:hover {
-  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
 }
 
 
