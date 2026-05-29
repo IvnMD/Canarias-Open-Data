@@ -12613,7 +12613,7 @@
     "notes": null
   },
   {
-    "id": "sociedad_de_promocion_economica_de_gran_canaria_sau_spegc",
+    "id": "spegc",
     "name": "Sociedad de Promoción Económica de Gran Canaria, S.A.U. SPEGC",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
@@ -12683,74 +12683,72 @@
     "notes": null
   },
   {
-    "id": "sociedad_para_el_desarrollo_de_las_telecomunicaciones_de_gra",
+    "id": "SODETEGC",
     "name": "Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
+    "parent_entity_id": "SPEGC",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Sociedad mercantil unipersonal (SAU) del sector público del Cabildo de Gran Canaria, constituida el 29 de diciembre de 2009. Accionista único: Sociedad de Promoción Económica de Gran Canaria, S.A.U. (SPEGC). Capital social: 939.900€ en 300 acciones de 3.133€ valor nominal. Opera como operador neutro de fibra oscura inscrito en el Registro de Operadores de la CNMC (RED TERRESTRE, subservicio FIBRA OSCURA), y actúa como medio propio y servicio técnico del Cabildo de Gran Canaria desde el 30 de junio de 2017.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida del Feria, 1",
+        "postal_code": "35012",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1091,
+          "lon": -15.4419
         },
-        "source_url": "https://www.sodetegc.org/portal-de-transparencia"
+        "source_url": "https://www.sodetegc.org/portal-de-transparencia/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
-        "url": "https://www.sodetegc.org/portal-de-transparencia",
+        "id": "sodetegc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia SODETEGC",
+        "url": "https://www.sodetegc.org/portal-de-transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "contratos",
+          "presupuestos",
+          "personal",
+          "retribuciones",
+          "telecomunicaciones"
         ],
         "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "has_api": false,
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS"
         ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "last_updated": "2026-04",
+        "last_checked": "2026-05",
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.sodetegc.org/portal-de-transparencia"
+        "https://www.sodetegc.org/portal-de-transparencia/",
+        "https://www.sodetegc.org/actividades-y-funciones/",
+        "https://www.sodetegc.org/servicio-fibra-oscura-transporte/",
+        "https://www.sodetegc.org/servicio-asistencia-tecnica/"
       ]
     },
-    "notes": null
+    "notes": "Acrónimo: SODETEGC. Accionista único: SPEGC (100%). Capital social: 939.900€ — constituida con 300.000€ en 2009, ampliada en 639.900€ el 7/12/2016 (inscrita RM el 2/03/2017). No participa en ninguna sociedad mercantil, fundación, consorcio ni asociación pública. No tiene entidades dependientes ni unidades administrativas. Declarada medio propio del Cabildo de Gran Canaria el 30/06/2017. Opera como Operador de RED TERRESTRE subservicio FIBRA OSCURA (CNMC). Plantilla: 2 puestos ocupados (laboral fijo) + 6 vacantes (laboral temporal) + 1 Director Gerente (Alta Dirección, contrato desde 12/02/2010). Consejo de Administración: 6 consejeros, cargo no retribuido salvo dietas por asistencia (máx. 95,98€/sesión en 2026). Sin personal eventual ni liberados sindicales. Sin aportaciones a planes de pensiones; seguro colectivo de accidente de trabajo por 12.020,24€ por trabajador (Convenio Oficinas y Despachos de Las Palmas). Presupuestos de personal publicados para ejercicios 2021–2026. Servicios: fibra oscura de transporte (alquiler/IRU), terminación terrestre de cable submarino (alquiler/IRU) y asistencia técnica al Cabildo. Indicadores SLA 2014–2021: 100% de cumplimiento en todos los ejercicios. NOC: 902 570881 / 928 949965 / noc@sodetegc.org. Canal de denuncias (Ley 2/2023): canaldenuncias@sodetegc.org. Plan de Medidas Antifraude publicado (Next Generation EU). Formatos del portal: HTML, PDF, ODT y ODS declarados explícitamente en todas las secciones. Última actualización del portal: 16/04/2026."
   },
   {
     "id": "valora_gestion_tributaria",
