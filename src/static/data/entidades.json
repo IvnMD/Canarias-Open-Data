@@ -2568,66 +2568,110 @@
     "islands": [
       "Lanzarote"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Tías. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de Tías, en Lanzarote. Dispone de portal de transparencia propio, sede electrónica municipal y publicaciones de información institucional, organizativa, económica y de acceso a la información pública.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tías",
-        "postal_code": null,
-        "municipality": null,
+        "address": "C/ Libertad, 50",
+        "postal_code": "35572",
+        "municipality": "Tías",
         "island": "Lanzarote",
         "coordinates": {
-          "lat": 28.9591,
-          "lon": -13.6419
+          "lat": 28.957,
+          "lon": -13.6457
         },
-        "source_url": "https://www.ayuntamientodetias.es/portal-transparencia"
+        "source_url": "https://www.ayuntamientodetias.es/servicios/contacto/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tías",
-        "url": "https://www.ayuntamientodetias.es/portal-transparencia",
-        "portal_status": "active",
+        "id": "portal_transparencia_tias",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia",
+        "url": "https://transparencia.ayuntamientodetias.es/",
         "technology": [
-          "Portal Transparencia"
+          "Web"
         ],
-        "standards": [],
+        "standards": [
+          "HTML",
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "topics": [
+          "transparencia",
+          "acceso_a_la_informacion",
+          "proteccion_de_datos",
+          "organizacion",
+          "retribuciones",
+          "normativa",
+          "contratacion",
+          "presupuestos"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "notes": "Portal con información institucional, organizativa, económica, de gobierno y derecho de acceso. La sede electrónica del ayuntamiento está basada en STA (Servicios Telemáticos Avanzados).",
+        "source_url": "https://transparencia.ayuntamientodetias.es/"
+      },
+      {
+        "id": "sede_electronica_tias",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://sede.ayuntamientodetias.es/",
+        "technology": [
+          "Web"
+        ],
+        "standards": [
+          "HTML",
+          "PDF"
+        ],
         "formats": [
           "HTML",
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "tramites",
+          "registro",
+          "solicitudes",
+          "notificaciones",
+          "carpeta_ciudadana"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "notes": "Sede electrónica titularidad del Ayuntamiento de Tías. El portal indica que facilita el acceso a los servicios de administración electrónica y la tramitación telemática.",
+        "source_url": "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_TITULARSEDE"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.ayuntamientodetias.es/portal-transparencia"
+        "https://www.ayuntamientodetias.es/servicios/contacto/",
+        "https://transparencia.ayuntamientodetias.es/",
+        "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_TITULARSEDE",
+        "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_QUEESLASEDE",
+        "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_INITRAMITACION"
       ]
     },
-    "notes": null
+    "notes": "Entidad normalizada con portal de transparencia propio y sede electrónica municipal. STA se conserva únicamente como nota técnica de plataforma."
   },
   {
     "id": "ayuntamiento_valle_gran_rey",
@@ -4038,66 +4082,141 @@
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de El Tanque. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de El Tanque. Dispone de sede electrónica y portal de transparencia con publicación activa de información institucional, organizativa, económica, contractual y normativa.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Tanque",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Príncipes de España, 24",
+        "postal_code": "38435",
+        "municipality": "El Tanque",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.3422,
-          "lon": -16.8019
+          "lat": 28.3551,
+          "lon": -16.7801
         },
         "source_url": "https://eltanque.sedelectronica.es/transparency"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de El Tanque",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del Ayuntamiento de El Tanque",
         "url": "https://eltanque.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "Sede Electrónica",
+          "WordPress"
         ],
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "DOC",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Contratación",
+          "Información económica",
+          "Normativa",
+          "Derecho de acceso"
         ],
-        "machine_readable": true,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "dataset_count_note": "Portal de transparencia documental; no consta catálogo específico de datasets abiertos estructurados.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://eltanque.sedelectronica.es/transparency"
+        "https://eltanque.sedelectronica.es/transparency",
+        "https://eltanque.sedelectronica.es",
+        "https://www.tenerife.es/el-tanque"
       ]
     },
-    "notes": null
+    "notes": "La tecnología 'WordPress' se observa en la web municipal pública; la sección de transparencia está servida desde la sede electrónica."
+  },
+  {
+    "id": "mancomunidad_servicios_garachico_el_tanque",
+    "name": "Mancomunidad de Servicios Garachico-El Tanque",
+    "entity_kind": "organismo",
+    "scope": "municipal",
+    "parent_entity_id": null,
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Entidad supramunicipal participada por los ayuntamientos de Garachico y El Tanque. Su portal de transparencia publica información institucional, organizativa, empleo, contratación e información económica.
+                  Es relevante para el ecosistema local de transparencia por centralizar servicios vinculados a la recogida de residuos y servicios funerarios.","locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de la Libertad, 1",
+        "postal_code": "38450",
+        "municipality": "Garachico",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.3734,
+          "lon": -16.7644
+        },
+        "source_url": "https://www.eltanque.es/transparencia-mancomunidad-servicios-garachico-el-tanque/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_transparencia_mancomunidad",
+        "kind": "transparencia",
+        "name": "Transparencia Mancomunidad de Servicios Garachico-El Tanque",
+        "url": "https://eltanque.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "Sede Electrónica",
+          "WordPress"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "DOC",
+          "ODT"
+        ],
+        "topics": [
+          "Transparencia",
+          "Información institucional",
+          "Organización",
+          "Empleo público",
+          "Contratación",
+          "Información económica",
+          "Derecho de acceso",
+          "Residuos",
+          "Servicios funerarios"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Se ha identificado transparencia documental, no un catálogo autónomo de datos abiertos estructurados.",
+        "last_updated": "2022-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.eltanque.es/transparencia-mancomunidad-servicios-garachico-el-tanque/",
+        "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codigoUnidad=LA0005476",
+        "http://femp.femp.es/Portal/Front/Atencion_al_asociado/MancomunidadesDetalle/_y3BL5bs6mAqhmzH0xnPSptUYs6HLZqhUHBWb9a42S0w"
+      ]
+    },
+    "notes": "La transparencia de la mancomunidad está publicada dentro del ecosistema web/sede del Ayuntamiento de El Tanque. "
   },
   {
     "id": "ayuntamiento_fasnia",
