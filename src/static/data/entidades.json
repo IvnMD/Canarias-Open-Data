@@ -2648,7 +2648,6 @@
           "notificaciones",
           "carpeta_ciudadana"
         ],
-        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -10980,7 +10979,7 @@
     "name": "GORONA DEL VIENTO EL HIERRO, S.A.",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_insular_de_el_hierro",
     "islands": [
       "El Hierro"
     ],
@@ -12052,72 +12051,76 @@
   {
     "id": "fundacion_canaria_gran_canaria_convention_bureau",
     "name": "Fundación Canaria Gran Canaria Convention Bureau",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_insular_de_el_hierro",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Fundación Canaria Gran Canaria Convention Bureau",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "https://www.grancanariacb.com/transparencia"
-      }
-    ],
+    "description": "Fundación sin ánimo de lucro dependiente del Cabildo de Gran Canaria, inscrita en el Registro de Fundaciones Canarias con el número 162 (CIF: G-35646926). Tiene por objeto la promoción de Gran Canaria como sede de congresos, convenciones, seminarios y viajes de incentivo (sector MICE), así como la captación de rodajes audiovisuales nacionales e internacionales. Constituida en noviembre de 2017. Plantilla de 4 personas.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Fundación Canaria Gran Canaria Convention Bureau",
-        "url": "https://www.grancanariacb.com/transparencia",
-        "portal_status": "active",
+        "id": "fcgccb_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia Gran Canaria Convention Bureau",
+        "url": "https://www.grancanariacb.com/transparencia/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "subvenciones"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOCX",
+          "ODT",
+          "XLSX",
+          "XLS",
+          "ODS"
+        ],
+        "last_checked": "2026-05",
+        "last_updated": "2026-04",
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null
+      },
+      {
+        "id": "fcgccb_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica Fundación Gran Canaria Convention Bureau",
+        "url": "https://fundaciongrancanariacb.sedelectronica.es",
+        "technology": [
+          "sedelectronica"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "contratos",
+          "licitaciones",
+          "organizacion"
+        ],
+        "has_api": false,
+        "formats": null,
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.grancanariacb.com/transparencia"
+        "https://www.grancanariacb.com/transparencia/",
+        "https://www.grancanariacb.com/wp-content/uploads/2025/03/1001-informacion-general.pdf",
+        "https://www.laspalmasgc.es/es/ayuntamiento/organismos-y-empresas/gran-canaria-convention-bureau/",
+        "https://fundaciongrancanariacb.sedelectronica.es"
       ]
     },
-    "notes": null
+    "notes": "Fundación sin ánimo de lucro regulada por la Ley de Fundaciones de Canarias 2/1998. Órgano de gobierno: Patronato. Marca oficial de Turismo de Gran Canaria para el sector MICE. Sede: Avda. Rafael Cabrera 1, Planta 1 Oficina 5, 35002 Las Palmas de Gran Canaria. Plantilla: 4 puestos, todo personal laboral indefinido (sin RPT): 1 Gerente (en excedencia por cargo público), 1 Responsable técnico MICE, 1 Responsable técnico GOLF, 1 Responsable Administración. Puntuación Comisionado de Transparencia de Canarias: 5,90/10 (evaluación 2024). XLSX/XLS/ODS confirmados en: retribuciones personal §1053, contratos menores trimestrales 2022-2025 (§2003), liquidación presupuesto 2021. Cuentas anuales 2022-2025 publicadas solo en PDF. No está autorizada para otorgar subvenciones (DA 16 LGS). Hasta 2026-05 no se ha recibido ninguna solicitud de acceso a la información pública."
   },
   {
     "id": "fundacion_canaria_orquesta_filarmonica_de_gran_canaria",
