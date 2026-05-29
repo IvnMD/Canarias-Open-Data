@@ -240,10 +240,10 @@
         // Colores según tema
         function getChartColors(count) {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            // Modo oscuro: naranjas más luminosos, dejando el marrón solo para el borde.
+            // Modo oscuro: naranjas más luminosos
             const darkPalette = ['#ff7a1a', '#ff9f3f', '#ffc06b', '#ffd699', '#f15a24', '#d9480f', '#f59e0b', '#fbbf24'];
-            // Modo claro: misma familia cálida, con contraste suficiente sobre fondo claro.
-            const lightPalette = ['#ea580c', '#f97316', '#fb923c', '#fdba74', '#f59e0b', '#fbbf24', '#d97706', '#b45309'];
+            // Modo claro: distintos tonos de teal/verde azulado
+            const lightPalette = ['#008080', '#1a9e9e', '#33b5b5', '#4dcccc', '#006666', '#004d4d', '#003333', '#66d9d9'];
             const palette = isDark ? darkPalette : lightPalette;
             return Array.from({ length: count }, (_, i) => palette[i % palette.length]);
         }
@@ -252,12 +252,19 @@
             return document.documentElement.getAttribute('data-theme') === 'dark' ? '#e2e8f0' : '#1e293b';
         }
 
+        // Borde blanco para gráficos circulares
         function getPieBorderColor() {
-            return document.documentElement.getAttribute('data-theme') === 'dark' ? '#7c2d12' : '#92400e';
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            return isDark ? '#9a3412' : '#ffffff';
+        }
+
+        function getPieBorderColors(count) {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            return isDark ? '#9a3412' : '#ffffff';
         }
 
         function getPieBorderWidth(chartType) {
-            return chartType === 'pie' ? 2 : 0;
+            return chartType === 'pie' ? 1.5 : 0;
         }
 
         function getTooltipConfig() {
@@ -352,8 +359,8 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: getPieBorderWidth(typeChartType),
                         borderRadius: typeChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColor(),
-                        hoverBorderColor: getPieBorderColor(),
+                        borderColor: getPieBorderColors(data.length),
+                        hoverBorderColor: getPieBorderColors(data.length),
                         borderAlign: 'inner'
                     }]
                 },
@@ -396,8 +403,8 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: getPieBorderWidth(formatChartType),
                         borderRadius: formatChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColor(),
-                        hoverBorderColor: getPieBorderColor(),
+                        borderColor: getPieBorderColors(data.length),
+                        hoverBorderColor: getPieBorderColors(data.length),
                         borderAlign: 'inner'
                     }]
                 },
@@ -444,7 +451,7 @@
                 type: islandChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: islandChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(islandChartType), borderColor: getPieBorderColor(), hoverBorderColor: getPieBorderColor(), borderAlign: 'inner' }]
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: islandChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(islandChartType), borderColor: getPieBorderColors(data.length), hoverBorderColor: getPieBorderColors(data.length), borderAlign: 'inner' }]
                 },
                 options: {
                     indexAxis: islandChartType === 'bar' ? 'y' : undefined,
@@ -480,7 +487,7 @@
                 type: provinceChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: provinceChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(provinceChartType), borderColor: getPieBorderColor(), hoverBorderColor: getPieBorderColor(), borderAlign: 'inner' }]
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: provinceChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(provinceChartType), borderColor: getPieBorderColors(data.length), hoverBorderColor: getPieBorderColors(data.length), borderAlign: 'inner' }]
                 },
                 options: {
                     indexAxis: provinceChartType === 'bar' ? 'y' : undefined,
@@ -539,8 +546,8 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: getPieBorderWidth(apiChartType),
                         borderRadius: apiChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColor(),
-                        hoverBorderColor: getPieBorderColor(),
+                        borderColor: getPieBorderColors(data.length),
+                        hoverBorderColor: getPieBorderColors(data.length),
                         borderAlign: 'inner'
                     }]
                 },
@@ -564,7 +571,6 @@
             });
         }
 
-        // PIE CHART 3: Machine-readable (con toggle bar/pie)
         // PIE CHART: Machine-readable (con toggle bar/pie)
         function generateMachineReadablePieChart() {
             let yes = 0, no = 0, unknown = 0;
@@ -581,11 +587,10 @@
             const ctx = document.getElementById('machineReadablePieChart').getContext('2d');
             if (machineReadablePieChart) machineReadablePieChart.destroy();
 
-            // Usar la misma paleta que getChartColors
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             const colors = isDark
-                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']  // Tonos de naranja para oscuro
-                : ['#ea580c', '#fb923c', '#fbbf24']; // Tonos cálidos para claro
+                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
+                : ['#008080', '#33b5b5', '#66d9d9'];
 
             machineReadablePieChart = new Chart(ctx, {
                 type: machineReadableChartType,
@@ -596,8 +601,8 @@
                         backgroundColor: colors,
                         borderWidth: getPieBorderWidth(machineReadableChartType),
                         borderRadius: machineReadableChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColor(),
-                        hoverBorderColor: getPieBorderColor(),
+                        borderColor: getPieBorderColors(data.length),
+                        hoverBorderColor: getPieBorderColors(data.length),
                         borderAlign: 'inner'
                     }]
                 },
@@ -627,7 +632,7 @@
                 type: scopeChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: scopeChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(scopeChartType), borderColor: getPieBorderColor(), hoverBorderColor: getPieBorderColor(), borderAlign: 'inner' }]
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: scopeChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(scopeChartType), borderColor: getPieBorderColors(data.length), hoverBorderColor: getPieBorderColors(data.length), borderAlign: 'inner' }]
                 },
                 options: {
                     indexAxis: scopeChartType === 'bar' ? 'x' : undefined,
@@ -689,15 +694,14 @@
 
             if (madurezChart) madurezChart.destroy();
 
-            // Usar la misma paleta que getChartColors
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             const barColors = isDark
-                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']  // Tonos de naranja para oscuro
-                : ['#ea580c', '#fb923c', '#fbbf24']; // Tonos cálidos para claro
+                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
+                : ['#008080', '#33b5b5', '#66d9d9'];
 
             const pieColors = isDark
                 ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
-                : ['#ea580c', '#fb923c', '#fbbf24'];
+                : ['#008080', '#33b5b5', '#66d9d9'];
 
             madurezChart = new Chart(ctx, {
                 type: madurezChartType,
@@ -709,8 +713,8 @@
                         backgroundColor: madurezChartType === 'pie' ? pieColors : barColors,
                         borderRadius: madurezChartType === 'bar' ? 8 : 0,
                         borderWidth: getPieBorderWidth(madurezChartType),
-                        borderColor: getPieBorderColor(),
-                        hoverBorderColor: getPieBorderColor(),
+                        borderColor: getPieBorderColors(data.length),
+                        hoverBorderColor: getPieBorderColors(data.length),
                         borderAlign: 'inner'
                     }]
                 },
