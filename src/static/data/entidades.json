@@ -4153,8 +4153,8 @@
     "islands": [
       "Tenerife"
     ],
-    "description": "Entidad supramunicipal participada por los ayuntamientos de Garachico y El Tanque. Su portal de transparencia publica información institucional, organizativa, empleo, contratación e información económica.
-                  Es relevante para el ecosistema local de transparencia por centralizar servicios vinculados a la recogida de residuos y servicios funerarios.","locations": [
+    "description": "Entidad supramunicipal participada por los ayuntamientos de Garachico y El Tanque. Su portal de transparencia publica información institucional, organizativa, empleo, contratación e información económica. Es relevante para el ecosistema local de transparencia por centralizar servicios vinculados a la recogida de residuos y servicios funerarios.",
+    "locations": [
       {
         "kind": "headquarters",
         "address": "Plaza de la Libertad, 1",
@@ -9586,73 +9586,59 @@
   },
   {
     "id": "instituto_canario_de_desarrollo_cultural_sa",
-    "name": "INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
+    "name": "Instituto Canario de Desarrollo Cultural, S.A.",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "https://www.icdcultural.org/transparencia"
-      }
-    ],
+    "description": "Empresa pública adscrita al área de Cultura del Gobierno de Canarias, responsable de la gestión, promoción y difusión de actividades culturales en el Archipiélago, así como la formación y el fomento de la producción en materia cultural. Opera bajo este nombre desde 2021. Capital social 100% Comunidad Autónoma de Canarias (421.346,64€). Publica información de transparencia conforme a la Ley 12/2014 de Canarias y la Ley 19/2013 estatal.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
+        "id": "icdc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia ICDC",
         "url": "https://www.icdcultural.org/transparencia",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "auditoria",
+          "subvenciones",
+          "igualdad",
+          "cultura",
+          "cine",
+          "videojuegos",
+          "exenciones"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOC",
+          "ODT",
+          "XLS",
+          "ODS"
+        ],
+        "last_checked": "2026-05",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.icdcultural.org/transparencia"
+        "https://www.icdcultural.org",
+        "https://www.gobiernodecanarias.org/organigrama/ficha-sociedades-mercantiles/?ou=41596"
       ]
     },
-    "notes": null
+    "notes": "Acrónimo: ICDC. Web: https://www.icdcultural.org. Anteriores denominaciones: Festival de Música de Canarias S.A. (1984-1985), Sociedad Canaria de las Artes Escénicas y la Música S.A. (1985-2005), Canarias Cultura en Red S.A. (2005-2021). Dos sedes: Las Palmas de Gran Canaria (C/ León y Castillo 57, 4ª planta) y Santa Cruz de Tenerife (C/ Puerta Canseco 49, piso 2). No concede ayudas ni subvenciones propias. XLS/ODS confirmados en: contratos de patrocinio (§2.4.4, 2022-2025), gastos dietas Dirección Adjunta (§7.3, solo 2024), contratos programados (§9.2, 2024-2025), listado contratos formalizados (§9.8.1, 2022-2025), modificaciones contratos (§9.8.2, 2022-2023), contratos menores trimestrales (§9.9, 2022-2025), adendas convenios (§10.1, 2023-2025). Verificado 2026-05."
   },
   {
     "id": "instituto_canario_de_estadistica_istac",
@@ -11335,74 +11321,98 @@
     "notes": null
   },
   {
-    "id": "parque_tecnologico_de_fuerteventura_sa",
+    "id": "ptfue",
     "name": "Parque Tecnológico de Fuerteventura, S.A.",
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
     "islands": [
       "Fuerteventura"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Parque Tecnológico de Fuerteventura, S.A.",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Fuerteventura",
-        "coordinates": {
-          "lat": 28.3587,
-          "lon": -14.0533
-        },
-        "source_url": "https://ptfue.sedelectronica.es/transparency"
-      }
-    ],
+    "description": "Sociedad mercantil pública (Medio Propio) adscrita al Cabildo de Fuerteventura, constituida en 2010 para el fomento del I+D+i, el emprendimiento y la diversificación económica insular mediante infraestructuras y servicios de base tecnológica. Cofinanciada por el Cabildo de Fuerteventura, el Gobierno de Canarias (FDCAN) y fondos europeos (FEDER/Next Generation). Publica transparencia en su web propia y en el portal del Cabildo de Fuerteventura.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Parque Tecnológico de Fuerteventura, S.A.",
-        "url": "https://ptfue.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "ptfue_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia PTFSA",
+        "url": "https://ptfue.com/transparencia/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "contratos",
+          "presupuestos",
+          "personal"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
+        "machine_readable": false,
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "last_checked": "2026-05",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "dataset_count": null,
+        "license_summary": null
+      },
+      {
+        "id": "ptfue_transparencia_cabildo",
+        "kind": "transparencia",
+        "name": "Ficha Transparencia — Portal Cabildo de Fuerteventura",
+        "url": "https://sede.cabildofuer.es/portal/transparencia/se_contenedor2.jsp?seccion=s_fdoc_d4_v1.jsp&contenido=3321&tipo=5&nivel=1400&language=es",
+        "technology": [
+          "web_propia"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "organizacion",
+          "contratos",
+          "presupuestos"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
+      },
+      {
+        "id": "ptfue_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica PTFSA",
+        "url": "https://ptfue.sedelectronica.es",
+        "technology": [
+          "sedelectronica"
+        ],
+        "topics": [
+          "contratos",
+          "licitaciones"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "formats": null,
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://ptfue.sedelectronica.es/transparency"
+        "https://ptfue.com/transparencia/",
+        "https://ptfue.com/quienes-somos/",
+        "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2023-18059",
+        "https://www.apte.org/miembro/parque-tecnologico-de-fuerteventura/"
       ]
     },
-    "notes": null
+    "notes": "Denominación oficial completa: Parque Tecnológico de Fuerteventura, S.A. – M.P. (Medio Propio). Constituida en 2010. Alberga ~20 empresas/emprendedores y ~200 empleos directos. Superficie: 735.000 m², de los cuales 300.000 m² están urbanizados. Contratación publicada en BOE y tablón de la sede electrónica (https://ptfue.sedelectronica.es/board)."
   },
   {
     "id": "patronato_de_turismo_del_cabildo_de_fuerteventura",
