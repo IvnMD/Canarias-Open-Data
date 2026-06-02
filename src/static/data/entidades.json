@@ -13261,73 +13261,114 @@
   },
   {
     "id": "titsa",
-    "name": "TITSA",
+    "name": "Transportes Interurbanos de Tenerife, S.A.",
+    "alternate_names": [
+      "TITSA",
+      "Transportes Interurbanos de Tenerife"
+    ],
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
+    "parent_entity_id": "cabildo_tenerife",
     "islands": [
       "Tenerife"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Empresa pública de transporte interurbano de Tenerife, con portal de transparencia propio y portal de open data con información reutilizable sobre movilidad, planificación del servicio, matrices origen-destino, parkings y expedientes adjudicados. Es relevante para el ecosistema canario por su papel en la movilidad insular y por exponer datos operativos y estadísticos en formatos reutilizables.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "TITSA",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Punta de Anaga, 1",
+        "postal_code": "38111",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.4636,
-          "lon": -16.2518
-        },
-        "source_url": "https://portaldetransparencia.titsa.com/index.php"
+        "source_url": "https://portaldetransparencia.titsa.com/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – TITSA",
-        "url": "https://portaldetransparencia.titsa.com/index.php",
+        "id": "titsa_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia TITSA",
+        "url": "https://portaldetransparencia.titsa.com/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia",
+          "cms"
         ],
-        "standards": [],
         "formats": [
           "HTML",
+          "PHP",
+          "PDF",
+          "ODT",
+          "DOCX",
+          "ODS",
+          "CSV"
+        ],
+        "topics": [
+          "institucional",
+          "normativa",
+          "economico_financiera",
+          "patrimonio",
+          "contratos",
+          "personal",
+          "solicitud_informacion_publica",
+          "quejas_reclamaciones",
+          "servicios",
+          "carta_servicios",
+          "estadisticas",
+          "canal_denuncias"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "titsa_open_data",
+        "kind": "open_data",
+        "name": "Open Data TITSA",
+        "url": "https://portaldetransparencia.titsa.com/index.php/76-estadisticas/482-open-data",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "cms"
+        ],
+        "formats": [
+          "ZIP",
+          "CSV",
+          "ODS",
+          "GTFS",
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "movilidad",
+          "transporte_publico",
+          "lineas",
+          "paradas",
+          "horarios",
+          "recorridos",
+          "matrices_origen_destino",
+          "parkings",
+          "expedientes_adjudicados"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://portaldetransparencia.titsa.com/index.php"
+        "https://portaldetransparencia.titsa.com/",
+        "https://portaldetransparencia.titsa.com/index.php/76-estadisticas/482-open-data",
+        "https://datos.tenerife.es/datos/conjuntos-de-datos/informacion-sobre-el-sistema-de-transporte-de-titsa-en-tenerife",
+        "https://datos.gob.es/es/catalogo/la0010696-informacion-sobre-el-sistema-de-transporte-de-titsa-en-tenerife"
       ]
     },
-    "notes": null
+    "notes": "Los ficheros adjuntos confirman GTFS, matrices origen-destino, dimensiones de paradas, líneas, títulos y calendarios, además de contratación y aparcamientos. La publicación indica actualización mensual y el portal de transparencia expone múltiples formatos reutilizables. Fecha de consulta: 2026-06."
   },
   {
     "id": "fundacion_canaria_general_de_la_universidad_de_la_laguna",
@@ -13469,88 +13510,88 @@
     },
     "notes": null
   },
-{
-  "id": "fcpct_ulpgc",
-  "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC",
-  "alternate_names": [
-    "FCPCT",
-    "Fundación Canaria Parque Científico Tecnológico",
-    "Fundación Canaria Parque Científico Tecnológico de la Universidad de Las Palmas de Gran Canaria"
-  ],
-  "entity_kind": "organismo",
-  "scope": "insular",
-  "parent_entity_id": "ulpgc",
-  "islands": [
-    "Gran Canaria"
-  ],
-  "description": "Fundación pública dependiente de la Universidad de Las Palmas de Gran Canaria que actúa como nexo entre empresas innovadoras y centros de investigación, y gestiona infraestructuras y servicios de apoyo al ecosistema de innovación y emprendimiento en Gran Canaria. Dispone de portal de transparencia activo con información institucional, organizativa, económica, de personal, retribuciones, contratos, convenios, encomiendas, subvenciones y derecho de acceso.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "C/ Practicante Ignacio Rodríguez, s/n, Edificio Polivalente III, Campus Universitario de Tafira",
-      "postal_code": "35017",
-      "municipality": "Las Palmas de Gran Canaria",
-      "island": "Gran Canaria",
-      "coordinates": {
-        "lat": 28.08006632099615,
-        "lon": -15.45162364221795
-      },
-      "source_url": "https://www.fpct.ulpgc.es/es/sobre-nosotros.html"
-    }
-  ],
-  "portals": [
-    {
-      "id": "fcpct_transparencia",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia FCPCT",
-      "url": "https://www.fpct.ulpgc.es/es/transparencia.html",
-      "portal_status": "active",
-      "technology": [
-        "web_propia",
-        "cms"
-      ],
-      "formats": [
-        "HTML",
-        "PDF",
-        "ODT",
-        "DOCX",
-        "XLSX",
-        "ODS"
-      ],
-      "topics": [
-        "institucional",
-        "organizativa",
-        "economico_financiera",
-        "personal",
-        "retribuciones",
-        "empleo_publico",
-        "contratos",
-        "contratos_menores",
-        "convenios",
-        "encomiendas",
-        "subvenciones",
-        "estadisticas",
-        "derecho_acceso"
-      ],
-      "has_api": false,
-      "dataset_count": null,
-      "last_updated": "2025-12",
-      "license_summary": null,
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.fpct.ulpgc.es/es/transparencia.html",
-      "https://www.fpct.ulpgc.es/es/sobre-nosotros.html",
-      "https://www.fpct.ulpgc.es/es/contacto.html",
-      "https://www.ulpgc.es/transparencia/entes-autonomos-dependientes-ulpgc"
-    ]
+  {
+    "id": "fcpct_ulpgc",
+    "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC",
+    "alternate_names": [
+      "FCPCT",
+      "Fundación Canaria Parque Científico Tecnológico",
+      "Fundación Canaria Parque Científico Tecnológico de la Universidad de Las Palmas de Gran Canaria"
+    ],
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "ulpgc",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "description": "Fundación pública dependiente de la Universidad de Las Palmas de Gran Canaria que actúa como nexo entre empresas innovadoras y centros de investigación, y gestiona infraestructuras y servicios de apoyo al ecosistema de innovación y emprendimiento en Gran Canaria. Dispone de portal de transparencia activo con información institucional, organizativa, económica, de personal, retribuciones, contratos, convenios, encomiendas, subvenciones y derecho de acceso.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "C/ Practicante Ignacio Rodríguez, s/n, Edificio Polivalente III, Campus Universitario de Tafira",
+        "postal_code": "35017",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.08006632099615,
+          "lon": -15.45162364221795
+        },
+        "source_url": "https://www.fpct.ulpgc.es/es/sobre-nosotros.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "fcpct_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia FCPCT",
+        "url": "https://www.fpct.ulpgc.es/es/transparencia.html",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "cms"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "DOCX",
+          "XLSX",
+          "ODS"
+        ],
+        "topics": [
+          "institucional",
+          "organizativa",
+          "economico_financiera",
+          "personal",
+          "retribuciones",
+          "empleo_publico",
+          "contratos",
+          "contratos_menores",
+          "convenios",
+          "encomiendas",
+          "subvenciones",
+          "estadisticas",
+          "derecho_acceso"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.fpct.ulpgc.es/es/transparencia.html",
+        "https://www.fpct.ulpgc.es/es/sobre-nosotros.html",
+        "https://www.fpct.ulpgc.es/es/contacto.html",
+        "https://www.ulpgc.es/transparencia/entes-autonomos-dependientes-ulpgc"
+      ]
+    },
+    "notes": "La transparencia de la FCPCT se actualiza a 31/12/2025 en la mayoría de bloques consultados. El portal incluye enlace al trámite de solicitudes de acceso, información para reclamar ante el Comisionado, PMP, cuentas anuales 2019-2025, auditorías 2019-2024, contratos formalizados, contratos menores, convenios, encomiendas de gestión, subvenciones y registros de tratamiento de datos. La fundación declara actualización específica 31/12/2025 en institucional, organizativa, personal, retribuciones, contratos, convenios, ayudas y derecho de acceso. Fecha de consulta: 2026-06."
   },
-  "notes": "La transparencia de la FCPCT se actualiza a 31/12/2025 en la mayoría de bloques consultados. El portal incluye enlace al trámite de solicitudes de acceso, información para reclamar ante el Comisionado, PMP, cuentas anuales 2019-2025, auditorías 2019-2024, contratos formalizados, contratos menores, convenios, encomiendas de gestión, subvenciones y registros de tratamiento de datos. La fundación declara actualización específica 31/12/2025 en institucional, organizativa, personal, retribuciones, contratos, convenios, ayudas y derecho de acceso. Fecha de consulta: 2026-06."
-},
   {
     "id": "ric_ulpgc_sau",
     "name": "RIC ULPGC, S.A.U.",
