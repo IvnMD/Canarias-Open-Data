@@ -13280,6 +13280,10 @@
         "postal_code": "38111",
         "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4239,
+          "lon": -16.3155
+        },
         "source_url": "https://portaldetransparencia.titsa.com/"
       }
     ],
