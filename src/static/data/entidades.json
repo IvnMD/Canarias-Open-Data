@@ -13469,76 +13469,88 @@
     },
     "notes": null
   },
-  {
-    "id": "fundacion_canaria_parque_cientifico_tecnologico_de_la_ulpgc",
-    "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "https://fpct.ulpgc.es/es/transparencia.html"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
-        "url": "https://fpct.ulpgc.es/es/transparencia.html",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "machine_readable": true,
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://fpct.ulpgc.es/es/transparencia.html"
-      ]
-    },
-    "notes": null
+{
+  "id": "fcpct_ulpgc",
+  "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC",
+  "alternate_names": [
+    "FCPCT",
+    "Fundación Canaria Parque Científico Tecnológico",
+    "Fundación Canaria Parque Científico Tecnológico de la Universidad de Las Palmas de Gran Canaria"
+  ],
+  "entity_kind": "organismo",
+  "scope": "insular",
+  "parent_entity_id": "ulpgc",
+  "islands": [
+    "Gran Canaria"
+  ],
+  "description": "Fundación pública dependiente de la Universidad de Las Palmas de Gran Canaria que actúa como nexo entre empresas innovadoras y centros de investigación, y gestiona infraestructuras y servicios de apoyo al ecosistema de innovación y emprendimiento en Gran Canaria. Dispone de portal de transparencia activo con información institucional, organizativa, económica, de personal, retribuciones, contratos, convenios, encomiendas, subvenciones y derecho de acceso.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "C/ Practicante Ignacio Rodríguez, s/n, Edificio Polivalente III, Campus Universitario de Tafira",
+      "postal_code": "35017",
+      "municipality": "Las Palmas de Gran Canaria",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 28.08006632099615,
+        "lon": -15.45162364221795
+      },
+      "source_url": "https://www.fpct.ulpgc.es/es/sobre-nosotros.html"
+    }
+  ],
+  "portals": [
+    {
+      "id": "fcpct_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia FCPCT",
+      "url": "https://www.fpct.ulpgc.es/es/transparencia.html",
+      "portal_status": "active",
+      "technology": [
+        "web_propia",
+        "cms"
+      ],
+      "formats": [
+        "HTML",
+        "PDF",
+        "ODT",
+        "DOCX",
+        "XLSX",
+        "ODS"
+      ],
+      "topics": [
+        "institucional",
+        "organizativa",
+        "economico_financiera",
+        "personal",
+        "retribuciones",
+        "empleo_publico",
+        "contratos",
+        "contratos_menores",
+        "convenios",
+        "encomiendas",
+        "subvenciones",
+        "estadisticas",
+        "derecho_acceso"
+      ],
+      "has_api": false,
+      "dataset_count": null,
+      "last_updated": "2025-12",
+      "license_summary": null,
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.fpct.ulpgc.es/es/transparencia.html",
+      "https://www.fpct.ulpgc.es/es/sobre-nosotros.html",
+      "https://www.fpct.ulpgc.es/es/contacto.html",
+      "https://www.ulpgc.es/transparencia/entes-autonomos-dependientes-ulpgc"
+    ]
   },
+  "notes": "La transparencia de la FCPCT se actualiza a 31/12/2025 en la mayoría de bloques consultados. El portal incluye enlace al trámite de solicitudes de acceso, información para reclamar ante el Comisionado, PMP, cuentas anuales 2019-2025, auditorías 2019-2024, contratos formalizados, contratos menores, convenios, encomiendas de gestión, subvenciones y registros de tratamiento de datos. La fundación declara actualización específica 31/12/2025 en institucional, organizativa, personal, retribuciones, contratos, convenios, ayudas y derecho de acceso. Fecha de consulta: 2026-06."
+},
   {
     "id": "ric_ulpgc_sau",
     "name": "RIC ULPGC, S.A.U.",
