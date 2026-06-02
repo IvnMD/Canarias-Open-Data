@@ -3027,70 +3027,53 @@
     "name": "Ayuntamiento de Alajeró",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "La Gomera"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Alajeró. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Portal de transparencia del Ayuntamiento de Alajeró integrado en la sede electrónica. Publica obligaciones de transparencia y documentos internos en HTML y PDF. No dispone de un portal de datos abiertos estructurados.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Alajeró",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza del Pueblo, 86",
+        "postal_code": "38812",
+        "municipality": "Alajeró",
         "island": "La Gomera",
         "coordinates": {
-          "lat": 28.0564,
-          "lon": -17.2268
-        },
-        "source_url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia"
+          "lat": 28.0617,
+          "lon": -17.2236
+        }
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Alajeró",
-        "url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
+        "id": "portalprincipal",
+        "kind": "transparencia",
+        "name": "Portal de transparencia del Ayuntamiento de Alajeró",
+        "url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia/datos/catalogo",
+        "technology": "Portal Transparencia",
+        "topics": [
+          "Transparencia",
+          "Sector público",
+          "Administración",
+          "Reutilización de la información"
         ],
-        "standards": [],
         "formats": [
           "HTML",
           "PDF"
         ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
         "machine_readable": true,
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "has_api": false
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sedeelectronica.ayuntamientoalajero.es/transparencia"
+        "https://sedeelectronica.ayuntamientoalajero.es/home",
+        "https://sedeelectronica.ayuntamientoalajero.es/transparencia/datos/catalogo"
       ]
     },
-    "notes": null
+    "notes": "El catálogo visible está basado en un aviso legal/condiciones de reutilización dentro de la sede electrónica. Los documentos publicados son HTML y PDF; no se aprecia CKAN ni API. Fecha de consulta: 2026-06."
   },
   {
     "id": "ayuntamiento_antigua",
@@ -4782,70 +4765,67 @@
     "name": "Ayuntamiento de Hermigua",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "La Gomera"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Hermigua. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Hermigua",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Gomera",
-        "coordinates": {
-          "lat": 28.1658,
-          "lon": -17.1836
-        },
-        "source_url": "https://transparencia.villadehermigua.com"
-      }
-    ],
+    "description": "Portal de transparencia del Ayuntamiento de Hermigua, organizado según los indicadores de la Ley Canaria 12/2014. Publica información institucional, organizativa, económica, contractual y de acceso a la información pública con formatos reutilizables visibles en la interfaz.",
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Hermigua",
+        "kind": "transparencia",
+        "name": "Portal de transparencia del Ayuntamiento de Hermigua",
         "url": "https://transparencia.villadehermigua.com",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "Gesgocom SL v10.2.0"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Organización",
+          "Personal de libre nombramiento",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Económico-financiera",
+          "Patrimonio",
+          "Planificación y programación",
+          "Obras públicas",
+          "Contratos",
+          "Convenios y encomiendas",
+          "Servicios públicos",
+          "Ayudas y subvenciones",
+          "Ordenación del territorio",
+          "Derecho de acceso",
+          "Estadísticas",
+          "Evaluación de la transparencia",
+          "Portales de entidades dependientes"
+        ],
+        "formats": [
+          "CSV",
+          "ODS",
+          "XLSX",
+          "JSON",
+          "XML",
+          "Markdown",
+          "DOCX",
+          "TXT"
         ],
         "machine_readable": true,
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.villadehermigua.com"
       ]
     },
-    "notes": null
+    "notes": "El portal muestra formatos reutilizables CSV, ODS, XLSX, JSON, XML, Markdown, DOCX y TXT en la interfaz. En comprobación manual, el botón de descarga XML no funciona y no inicia ninguna acción."
   },
   {
     "id": "ayuntamiento_icod_de_los_vinos",
@@ -10978,73 +10958,83 @@
   },
   {
     "id": "gorona_del_viento_el_hierro_sa",
-    "name": "GORONA DEL VIENTO EL HIERRO, S.A.",
+    "name": "Gorona del Viento El Hierro, S.A.",
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": "cabildo_insular_de_el_hierro",
+    "scope": "insular",
     "islands": [
       "El Hierro"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "GORONA DEL VIENTO EL HIERRO, S.A.",
-        "postal_code": null,
-        "municipality": null,
-        "island": "El Hierro",
-        "coordinates": {
-          "lat": 27.7459,
-          "lon": -18.0338
-        },
-        "source_url": "http://www.goronadelviento.es/portal-de-transparencia"
-      }
-    ],
+    "description": "Sociedad mercantil pública mixta gestora de la Central Hidroeólica de El Hierro, cuyo objetivo es abastecer la isla con energía eléctrica 100% renovable (agua y viento). Capital: Cabildo Insular de El Hierro (60%), Instituto Tecnológico de Canarias/Gobierno de Canarias (10%) y Endesa (30%). Inaugurada el 27 de julio de 2014. Obtuvo puntuación máxima (10/10) en la evaluación del Comisionado de Transparencia de Canarias en 2026.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – GORONA DEL VIENTO EL HIERRO, S.A.",
-        "url": "http://www.goronadelviento.es/portal-de-transparencia",
-        "portal_status": "active",
+        "id": "gorona_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia Gorona del Viento",
+        "url": "https://transparencia.goronadelviento.es",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "medio_ambiente",
+          "energia"
         ],
         "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "has_api": false,
+        "formats": [
+          "CSV",
+          "ODS",
+          "XLSX",
+          "JSON",
+          "XML",
+          "Markdown",
+          "DOCX",
+          "TXT"
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "last_updated": "2025-03",
+        "dataset_count": null,
+        "license_summary": null
+      },
+      {
+        "id": "gorona_transparencia_web",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia (web corporativa)",
+        "url": "https://www.goronadelviento.es/portal-de-transparencia-old/",
+        "portal_status": "archived",
+        "technology": [
+          "web_propia"
+        ],
+        "topics": [
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "formats": null,
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "http://www.goronadelviento.es/portal-de-transparencia"
+        "https://transparencia.goronadelviento.es",
+        "https://www.goronadelviento.es/transparencia/informacion-geografica/",
+        "https://www.idae.es/conozcanos/proyectos-de-excelencia/central-hidro-eolica-de-el-hierro-gorona-del-viento",
+        "https://elhierrohoy.es/cabildo-el-hierro-gorona-del-viento-maxima-nota-transparencia/"
       ]
     },
-    "notes": null
+    "notes": "Capital social: Cabildo Insular de El Hierro 60%, ITC/Gobierno de Canarias 10%, Endesa 30%. Sede: C/ Provisor Magdaleno 8-10, 38900 Valverde (El Hierro). Potencia instalada: parque eólico 11,5 MW, central hidroeléctrica 11,32 MW. Portal de transparencia desarrollado y mantenido por GESGOCOM S.L. (contrato menor adjudicado el 18/12/2025, importe 3.500€, duración 12 meses). El portal incluye asistente conversacional con arquitectura RAG (herramientas: consultardatos + buscar_documentos) que indexa contenido textual pero no ficheros adjuntos. Todos los indicadores son descargables en CSV, ODS, XLSX, JSON, XML, Markdown, DOCX y TXT — portal más avanzado en reutilización de datos de las entidades procesadas hasta 2026-05. Puntuación máxima (10/10) del Comisionado de Transparencia de Canarias, mayo 2026."
   },
   {
     "id": "mercahierro_sau",
