@@ -10345,48 +10345,62 @@
     "notes": null
   },
   {
-  "id": "radio_publica_de_canarias_sa",
-  "name": "Radio Pública de Canarias, S.A.",
-  "alternate_names": ["Radio Pública de Canarias", "RPC"],
-  "entity_kind": "empresa_publica",
-  "scope": "autonomico",
-  "parent_entity_id": "ente_publico_radiotelevision_canaria",
-  "islands": ["Todas"],
-  "description": "Sociedad mercantil pública integrada en el ente público Radiotelevisión Canaria, de ámbito autonómico, responsable de la actividad radiofónica pública de Canarias. Dispone de portal de transparencia activo en la sede electrónica de RTVC, con obligaciones de transparencia publicadas y documentación reutilizable en formatos abiertos.",
-  "portals": [
-    {
-      "id": "rpc_transparencia",
-      "kind": "transparencia",
-      "name": "Transparencia Radio Pública de Canarias, S.A.",
-      "url": "https://sede.rtvc.es/transparencia",
-      "portal_status": "active",
-      "technology": ["sede_electronica", "cms"],
-      "topics": [
-        "organizacion",
-        "presupuestos",
-        "contratos",
-        "personal",
-        "retribuciones",
-        "derecho_acceso"
-      ],
-      "has_api": false,
-      "formats": ["HTML", "PDF", "ODT", "ODS", "XLSX"],
+    "id": "radio_publica_de_canarias_sa",
+    "name": "Radio Pública de Canarias, S.A.",
+    "alternate_names": [
+      "Radio Pública de Canarias",
+      "RPC"
+    ],
+    "entity_kind": "empresa_publica",
+    "scope": "autonomico",
+    "parent_entity_id": "ente_publico_radiotelevision_canaria",
+    "islands": [
+      "Todas"
+    ],
+    "description": "Sociedad mercantil pública integrada en el ente público Radiotelevisión Canaria, de ámbito autonómico, responsable de la actividad radiofónica pública de Canarias. Dispone de portal de transparencia activo en la sede electrónica de RTVC, con obligaciones de transparencia publicadas y documentación reutilizable en formatos abiertos.",
+    "portals": [
+      {
+        "id": "rpc_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia Radio Pública de Canarias, S.A.",
+        "url": "https://sede.rtvc.es/transparencia",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica",
+          "cms"
+        ],
+        "topics": [
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "derecho_acceso"
+        ],
+        "has_api": false,
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLSX"
+        ],
+        "last_checked": "2026-06",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
+      }
+    ],
+    "verification": {
+      "status": "verified",
       "last_checked": "2026-06",
-      "last_updated": null,
-      "dataset_count": null,
-      "license_summary": null
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://sede.rtvc.es/transparencia",
-      "https://sede.rtvc.es/transparencia/indice/ET22"
-    ]
+      "source_urls": [
+        "https://sede.rtvc.es/transparencia",
+        "https://sede.rtvc.es/transparencia/indice/ET22"
+      ]
+    },
+    "notes": "Entidad dependiente del ente público RTVC. El portal de transparencia de la sede electrónica muestra obligaciones publicadas para la entidad. La información de transparencia está accesible desde la sede de RTVC. Fecha de consulta: 2026-06."
   },
-  "notes": "Entidad dependiente del ente público RTVC. El portal de transparencia de la sede electrónica muestra obligaciones publicadas para la entidad. La información de transparencia está accesible desde la sede de RTVC. Fecha de consulta: 2026-06."
-},
   {
     "id": "servicio_canario_de_empleo_sce",
     "name": "Servicio Canario de Empleo SCE",
@@ -10668,76 +10682,90 @@
     "notes": null
   },
   {
-  "id": "television_publica_de_canarias_sa",
-  "name": "Televisión Pública de Canarias, S.A.",
-  "alternate_names": ["Televisión Canaria", "TVC", "TPC"],
-  "entity_kind": "empresa_publica",
-  "scope": "autonomico",
-  "parent_entity_id": "ente_publico_radiotelevision_canaria",
-  "islands": ["Todas"],
-  "description": "Sociedad mercantil pública integrada en el ente público Radiotelevisión Canaria, de ámbito autonómico, responsable de la gestión del servicio público de televisión de la Comunidad Autónoma de Canarias. Su objeto social incluye la producción, edición y difusión de contenidos audiovisuales y servicios conexos o interactivos orientados a fines informativos, culturales, educativos y de entretenimiento. Dispone de portal de transparencia activo y documentación publicada en la sede electrónica de RTVC.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle La Marina, 57",
-      "postal_code": "38071",
-      "municipality": "Santa Cruz de Tenerife",
-      "island": "Tenerife",
-      "coordinates": {
-        "lat": 28.4695,
-        "lon": -16.2494
+    "id": "television_publica_de_canarias_sa",
+    "name": "Televisión Pública de Canarias, S.A.",
+    "alternate_names": [
+      "Televisión Canaria",
+      "TVC",
+      "TPC"
+    ],
+    "entity_kind": "empresa_publica",
+    "scope": "autonomico",
+    "parent_entity_id": "ente_publico_radiotelevision_canaria",
+    "islands": [
+      "Todas"
+    ],
+    "description": "Sociedad mercantil pública integrada en el ente público Radiotelevisión Canaria, de ámbito autonómico, responsable de la gestión del servicio público de televisión de la Comunidad Autónoma de Canarias. Su objeto social incluye la producción, edición y difusión de contenidos audiovisuales y servicios conexos o interactivos orientados a fines informativos, culturales, educativos y de entretenimiento. Dispone de portal de transparencia activo y documentación publicada en la sede electrónica de RTVC.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle La Marina, 57",
+        "postal_code": "38071",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4695,
+          "lon": -16.2494
+        },
+        "source_url": "https://rtvc.es/direcciones-territoriales/"
       },
-      "source_url": "https://rtvc.es/direcciones-territoriales/"
-    },
-    {
-      "kind": "office",
-      "address": "Calle Profesor Lozano, 9, Urbanización El Sebadal",
-      "postal_code": "35008",
-      "municipality": "Las Palmas de Gran Canaria",
-      "island": "Gran Canaria",
-      "coordinates": {
-        "lat": 28.1384,
-        "lon": -15.4242
-      },
-      "source_url": "https://rtvc.es/direcciones-territoriales/"
-    }
-  ],
-  "portals": [
-    {
-      "id": "tvc_transparencia",
-      "kind": "transparencia",
-      "name": "Transparencia Televisión Pública de Canarias, S.A.",
-      "url": "https://sede.rtvc.es/transparencia",
-      "portal_status": "active",
-      "technology": ["sede_electronica", "cms"],
-      "topics": [
-        "organizacion",
-        "contratos",
-        "presupuestos",
-        "personal",
-        "retribuciones",
-        "derecho_acceso"
-      ],
-      "has_api": false,
-      "formats": ["HTML", "PDF", "ODT", "ODS"],
+      {
+        "kind": "office",
+        "address": "Calle Profesor Lozano, 9, Urbanización El Sebadal",
+        "postal_code": "35008",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1384,
+          "lon": -15.4242
+        },
+        "source_url": "https://rtvc.es/direcciones-territoriales/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "tvc_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia Televisión Pública de Canarias, S.A.",
+        "url": "https://sede.rtvc.es/transparencia",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica",
+          "cms"
+        ],
+        "topics": [
+          "organizacion",
+          "contratos",
+          "presupuestos",
+          "personal",
+          "retribuciones",
+          "derecho_acceso"
+        ],
+        "has_api": false,
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS"
+        ],
+        "last_checked": "2026-06",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
+      }
+    ],
+    "verification": {
+      "status": "verified",
       "last_checked": "2026-06",
-      "last_updated": null,
-      "dataset_count": null,
-      "license_summary": null
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.gobiernodecanarias.org/organigrama/ficha-sociedades-mercantiles/?ou=41600",
-      "https://sede.rtvc.es/transparencia",
-      "https://sede.rtvc.es/transparencia/indice/ET22",
-      "https://rtvc.es/direcciones-territoriales/"
-    ]
+      "source_urls": [
+        "https://www.gobiernodecanarias.org/organigrama/ficha-sociedades-mercantiles/?ou=41600",
+        "https://sede.rtvc.es/transparencia",
+        "https://sede.rtvc.es/transparencia/indice/ET22",
+        "https://rtvc.es/direcciones-territoriales/"
+      ]
+    },
+    "notes": "Entidad dependiente del ente público RTVC. Capital social publicado: 811.366,34 euros. Participación: Ente público Radio Televisión Canaria. Recursos económicos: subvenciones en los Presupuestos Generales de la Comunidad Autónoma, venta y comercialización de productos y publicidad. Sedes y centros de producción confirmados en Tenerife y Gran Canaria, con delegaciones en Lanzarote, Fuerteventura, La Palma, El Hierro, La Gomera y Madrid. El portal de transparencia está activo en la sede electrónica de RTVC y la entidad figura en el índice de obligaciones de transparencia. Fecha de consulta: 2026-06."
   },
-  "notes": "Entidad dependiente del ente público RTVC. Capital social publicado: 811.366,34 euros. Participación: Ente público Radio Televisión Canaria. Recursos económicos: subvenciones en los Presupuestos Generales de la Comunidad Autónoma, venta y comercialización de productos y publicidad. Sedes y centros de producción confirmados en Tenerife y Gran Canaria, con delegaciones en Lanzarote, Fuerteventura, La Palma, El Hierro, La Gomera y Madrid. El portal de transparencia está activo en la sede electrónica de RTVC y la entidad figura en el índice de obligaciones de transparencia. Fecha de consulta: 2026-06."
-},
   {
     "id": "viviendas_sociales_e_infraestructuras_de_canarias_sa_vis",
     "name": "VIVIENDAS SOCIALES E INFRAESTRUCTURAS DE CANARIAS, S.A. VIS",
@@ -12237,74 +12265,91 @@
     "notes": null
   },
   {
-    "id": "institucion_ferial_de_canarias_infecar",
-    "name": "INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "id": "INFECAR",
+    "name": "Institución Ferial de Canarias, INFECAR",
+    "alternate_names": [
+      "institucion_ferial_de_canarias_infecar",
+      "Institución Ferial de Canarias"
+    ],
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_de_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Institución oficial dependiente del Cabildo de Gran Canaria, con personalidad jurídica propia e independiente, dedicada a la organización y gestión de ferias, congresos, jornadas, eventos y servicios asociados. Dispone de portal de transparencia activo con información institucional, organizativa, económica, de personal, retribuciones, contratación, subvenciones, estadísticas, derecho de acceso y accesibilidad.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida de la Feria, 1",
+        "postal_code": "35012",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.106188888889,
+          "lon": -15.4466
         },
-        "source_url": "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998"
+        "source_url": "https://infecar.es/transparencia/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
-        "url": "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998",
+        "id": "infecar_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia INFECAR",
+        "url": "https://infecar.es/transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "wordpress",
+          "web_propia"
         ],
-        "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLS",
+          "XLSX",
+          "CSV"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "institucional",
+          "organizativa",
+          "economico_financiera",
+          "personal",
+          "retribuciones",
+          "empleo_publico",
+          "contratos",
+          "contratos_menores",
+          "convenios",
+          "subvenciones",
+          "estadisticas",
+          "derecho_acceso",
+          "accesibilidad"
         ],
         "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998"
+        "https://infecar.es/transparencia/",
+        "https://infecar.es/transparencia/organizativa/",
+        "https://infecar.es/wp-content/uploads/2026/04/1021-Organos-de-gobierno-Administracion-o-direccion-de-la-entidad_-Composicion-y-funciones-1.xlsx.ods",
+        "https://infecar.es/wp-content/uploads/2026/04/1023-COMPOSICION-Y-TITULARES-DE-LOS-ORGANOS-DE-GOBIERNO.xls.ods",
+        "https://infecar.es/wp-content/uploads/2023/01/Contratos-menores-formalizados-csv.csv",
+        "https://infecar.es/wp-content/uploads/2023/01/contratos-menores-formalizados-desde-090318-csv.csv",
+        "https://infecar.es/wp-content/uploads/2023/01/CONTRATOS-MENORES-01-01-19-a-31-03-19-csv.csv"
       ]
     },
-    "notes": null
+    "notes": "Entidad oficial dependiente del Cabildo de Gran Canaria, con personalidad jurídica propia e independiente y sin fines de lucro. La sede se publica en Avenida de la Feria, 1, 35012 Las Palmas de Gran Canaria. El portal de transparencia ofrece descargas en HTML, PDF, ODT, ODS, XLS, XLSX y CSV, incluyendo series de contratos menores y documentación organizativa en formatos reutilizables. La mayor parte de los bloques visibles consultados aparecen actualizados a 2025-12. Fecha de consulta: 2026-06."
   },
   {
     "id": "instituto_insular_de_deportes_del_cabildo_de_gran_canaria",
