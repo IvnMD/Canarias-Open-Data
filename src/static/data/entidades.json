@@ -1464,85 +1464,144 @@
   {
     "id": "autoridad_portuaria_stc",
     "name": "Autoridad Portuaria de Santa Cruz de Tenerife",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
+    "alternate_names": [
+      "Puertos de Tenerife",
+      "AP Tenerife"
     ],
-    "description": "Datos abiertos de la Autoridad Portuaria de Santa Cruz de Tenerife: tráfico de pasajeros, cruceros, mercancías y estadísticas portuarias.",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": "puertos_del_estado",
+    "islands": [
+      "Tenerife",
+      "La Palma",
+      "La Gomera",
+      "El Hierro"
+    ],
+    "description": "Ente público estatal dependiente de Puertos del Estado que gestiona los puertos de Santa Cruz de Tenerife, Granadilla, Los Cristianos, Santa Cruz de La Palma, San Sebastián de La Gomera y La Estaca (El Hierro). Publica estadísticas de tráfico portuario en un portal CKAN con 69 datasets y cuenta con portal de transparencia conforme a la Ley 19/2013.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Autoridad Portuaria de Santa Cruz de Tenerife",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Francisco la Roche, 49",
+        "postal_code": "38001",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4722,
           "lon": -16.25
         },
-        "source_url": "https://www.puertosdetenerife.org/datos-abiertos/"
+        "source_url": "https://www.puertosdetenerife.org/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "portal_datos_abiertos",
         "kind": "open_data",
-        "name": "Portal de datos – Autoridad Portuaria de Santa Cruz de Tenerife",
-        "url": "https://www.puertosdetenerife.org/datos-abiertos/",
+        "name": "Portal de Datos Abiertos – Autoridad Portuaria de Santa Cruz de Tenerife",
+        "url": "https://ckan.puertosdetenerife.org",
         "portal_status": "active",
         "technology": [
-          "Portal propio"
+          "CKAN"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
+          "XLS",
           "XLSX",
-          "PDF"
+          "CSV"
         ],
         "topics": [
           "Transporte marítimo",
           "Tráfico portuario",
+          "Tráfico de mercancías",
+          "Mercancías por código arancelario",
+          "Tráfico de pasajeros",
+          "Pasajeros por muelle",
+          "Vehículos en régimen de pasaje",
           "Cruceros",
-          "Mercancías",
-          "Pasajeros",
-          "Logística",
-          "Economía portuaria"
+          "Equipamientos portuarios",
+          "Escalas de buques",
+          "Concesiones"
         ],
-        "machine_readable": true,
         "has_api": true,
         "apis": [
           {
-            "name": "API Puertos de Tenerife",
-            "url": "https://www.puertosdetenerife.org/api/datos/",
+            "name": "CKAN API v3 – Datos Abiertos AP Tenerife",
+            "url": "https://ckan.puertosdetenerife.org/api/3",
             "type": "REST",
-            "documentation_url": null
+            "documentation_url": "http://docs.ckan.org/en/2.10/api/"
           }
         ],
         "dataset_count": 69,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
+        "dataset_count_note": "69 datasets de una única organización. Series anuales 2017–2026 para tráfico de mercancías, pasajeros, vehículos y equipamientos. Datasets en tiempo real/actualizados: escalas previstas/finalizadas, situación del día, buques en puerto, cruceros previstos y concesiones.",
+        "last_updated": "2026-05",
+        "license_summary": "Ley 37/2007 de reutilización de información del sector público (RD 1495/2011). Condiciones: citar fuente, no alterar contenido, no desnaturalizar el sentido.",
         "licenses": [
           {
-            "name": "CC BY 4.0",
             "id": null,
-            "url": null
+            "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+            "url": "https://www.puertosdetenerife.org/aviso-legal/",
+            "count": null
+          }
+        ],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Autoridad Portuaria de Santa Cruz de Tenerife",
+        "url": "https://www.puertosdetenerife.org/transparencia/",
+        "portal_status": "active",
+        "technology": [
+          "Web"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF",
+          "XLS"
+        ],
+        "topics": [
+          "Transparencia",
+          "Sector público",
+          "Administración",
+          "Contratación",
+          "Presupuestos",
+          "Estadística portuaria",
+          "Legislación",
+          "Patrimonio",
+          "Subvenciones",
+          "Convenios",
+          "Urbanismo portuario"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Contenido organizado en secciones A–D conforme a la Ley 19/2013. Documentos individuales, no datasets estructurados.",
+        "last_updated": "2026-04",
+        "license_summary": "Ley 19/2013 de Transparencia",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Ley 19/2013, de 9 de diciembre, de Transparencia, Acceso a la Información Pública y Buen Gobierno",
+            "url": "https://www.puertosdetenerife.org/transparencia/",
+            "count": null
           }
         ],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.puertosdetenerife.org/datos-abiertos/"
+        "https://ckan.puertosdetenerife.org",
+        "https://ckan.puertosdetenerife.org/dataset/",
+        "https://ckan.puertosdetenerife.org/api/3",
+        "https://www.puertosdetenerife.org/transparencia/",
+        "https://www.puertosdetenerife.org/aviso-legal/",
+        "https://www.puertosdetenerife.org",
+        "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codigoUnidad=EA0001317"
       ]
     },
-    "notes": null
+    "notes": "Gestiona 6 puertos en la provincia de S/C de Tenerife: Santa Cruz de Tenerife, Granadilla, Los Cristianos, Santa Cruz de La Palma, San Sebastián de La Gomera y La Estaca (El Hierro). CIF: Q3867002B. Código DIR3: EA0001317. Dependiente de Puertos del Estado (Ministerio de Transportes; el aviso legal corporativo menciona 'Ministerio de Fomento', denominación anterior). La reutilización de datos abiertos se rige por la Ley 37/2007 y el RD 1495/2011; no se aplica licencia abierta estándar tipo CC. El portal CKAN (ckan.puertosdetenerife.org) es distinto de la web corporativa (puertosdetenerife.org). La URL anteriormente registrada en el catálogo (puertosdetenerife.org/datos-abiertos/) era incorrecta."
   },
   {
     "id": "portal_justicia_datos",
@@ -2509,66 +2568,106 @@
     "islands": [
       "Lanzarote"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Tías. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de Tías, en Lanzarote. Dispone de portal de transparencia propio, sede electrónica municipal y publicaciones de información institucional, organizativa, económica y de acceso a la información pública.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tías",
-        "postal_code": null,
-        "municipality": null,
+        "address": "C/ Libertad, 50",
+        "postal_code": "35572",
+        "municipality": "Tías",
         "island": "Lanzarote",
         "coordinates": {
-          "lat": 28.9591,
-          "lon": -13.6419
+          "lat": 28.957,
+          "lon": -13.6457
         },
-        "source_url": "https://www.ayuntamientodetias.es/portal-transparencia"
+        "source_url": "https://www.ayuntamientodetias.es/servicios/contacto/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tías",
-        "url": "https://www.ayuntamientodetias.es/portal-transparencia",
-        "portal_status": "active",
+        "id": "portal_transparencia_tias",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia",
+        "url": "https://transparencia.ayuntamientodetias.es/",
         "technology": [
-          "Portal Transparencia"
+          "Web"
         ],
-        "standards": [],
+        "standards": [
+          "HTML",
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "topics": [
+          "transparencia",
+          "acceso_a_la_informacion",
+          "proteccion_de_datos",
+          "organizacion",
+          "retribuciones",
+          "normativa",
+          "contratacion",
+          "presupuestos"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": []
+      },
+      {
+        "id": "sede_electronica_tias",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://sede.ayuntamientodetias.es/",
+        "technology": [
+          "Web"
+        ],
+        "standards": [
+          "HTML",
+          "PDF"
+        ],
         "formats": [
           "HTML",
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "tramites",
+          "registro",
+          "solicitudes",
+          "notificaciones",
+          "carpeta_ciudadana"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": []
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.ayuntamientodetias.es/portal-transparencia"
+        "https://www.ayuntamientodetias.es/servicios/contacto/",
+        "https://transparencia.ayuntamientodetias.es/",
+        "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_TITULARSEDE",
+        "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_QUEESLASEDE",
+        "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_INITRAMITACION"
       ]
     },
-    "notes": null
+    "notes": "Portal de transparencia con información institucional, organizativa, económica y de derecho de acceso. La sede electrónica municipal facilita trámites, registro, solicitudes, notificaciones y carpeta ciudadana. La plataforma STA se conserva como nota técnica de la sede electrónica."
   },
   {
     "id": "ayuntamiento_valle_gran_rey",
@@ -2925,70 +3024,63 @@
     "name": "Ayuntamiento de Alajeró",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "La Gomera"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Alajeró. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Alajeró, en La Gomera. Su sede electrónica integra el portal de transparencia y el catálogo de trámites, con publicación de obligaciones de transparencia y documentos en HTML y PDF.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Alajeró",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza del Pueblo, 86",
+        "postal_code": "38812",
+        "municipality": "Alajeró",
         "island": "La Gomera",
         "coordinates": {
-          "lat": 28.0564,
-          "lon": -17.2268
+          "lat": 28.0617,
+          "lon": -17.2236
         },
-        "source_url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia"
+        "source_url": "https://www.ayuntamientoalajero.es/index.php/el-ayto/administracion"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Alajeró",
-        "url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia",
-        "portal_status": "active",
+        "id": "portalprincipal",
+        "kind": "transparencia",
+        "name": "Portal de transparencia del Ayuntamiento de Alajeró",
+        "url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia/datos/catalogo",
         "technology": [
           "Portal Transparencia"
         ],
-        "standards": [],
+        "topics": [
+          "transparencia",
+          "sector_publico",
+          "administracion",
+          "reutilizacion_de_la_informacion"
+        ],
         "formats": [
           "HTML",
           "PDF"
         ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": []
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sedeelectronica.ayuntamientoalajero.es/transparencia"
+        "https://www.ayuntamientoalajero.es",
+        "https://sedeelectronica.ayuntamientoalajero.es",
+        "https://sedeelectronica.ayuntamientoalajero.es/transparencia/datos/catalogo"
       ]
     },
-    "notes": null
+    "notes": "La sede electrónica del Ayuntamiento de Alajeró indica acceso al portal de transparencia y al catálogo completo de trámites. El recurso parece documental e informativo, sin CKAN ni API visible; se mantiene como portal de transparencia integrado en la sede electrónica."
   },
   {
     "id": "ayuntamiento_antigua",
@@ -3979,66 +4071,141 @@
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de El Tanque. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de El Tanque. Dispone de sede electrónica y portal de transparencia con publicación activa de información institucional, organizativa, económica, contractual y normativa.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Tanque",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Príncipes de España, 24",
+        "postal_code": "38435",
+        "municipality": "El Tanque",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.3422,
-          "lon": -16.8019
+          "lat": 28.3551,
+          "lon": -16.7801
         },
         "source_url": "https://eltanque.sedelectronica.es/transparency"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de El Tanque",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del Ayuntamiento de El Tanque",
         "url": "https://eltanque.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "Sede Electrónica",
+          "WordPress"
         ],
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "DOC",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Contratación",
+          "Información económica",
+          "Normativa",
+          "Derecho de acceso"
         ],
-        "machine_readable": true,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "dataset_count_note": "Portal de transparencia documental; no consta catálogo específico de datasets abiertos estructurados.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://eltanque.sedelectronica.es/transparency"
+        "https://eltanque.sedelectronica.es/transparency",
+        "https://eltanque.sedelectronica.es",
+        "https://www.tenerife.es/el-tanque"
       ]
     },
-    "notes": null
+    "notes": "La tecnología 'WordPress' se observa en la web municipal pública; la sección de transparencia está servida desde la sede electrónica."
+  },
+  {
+    "id": "mancomunidad_servicios_garachico_el_tanque",
+    "name": "Mancomunidad de Servicios Garachico-El Tanque",
+    "entity_kind": "organismo",
+    "scope": "municipal",
+    "parent_entity_id": null,
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Entidad supramunicipal participada por los ayuntamientos de Garachico y El Tanque. Su portal de transparencia publica información institucional, organizativa, empleo, contratación e información económica. Es relevante para el ecosistema local de transparencia por centralizar servicios vinculados a la recogida de residuos y servicios funerarios.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de la Libertad, 1",
+        "postal_code": "38450",
+        "municipality": "Garachico",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.3734,
+          "lon": -16.7644
+        },
+        "source_url": "https://www.eltanque.es/transparencia-mancomunidad-servicios-garachico-el-tanque/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_transparencia_mancomunidad",
+        "kind": "transparencia",
+        "name": "Transparencia Mancomunidad de Servicios Garachico-El Tanque",
+        "url": "https://eltanque.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "Sede Electrónica",
+          "WordPress"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "DOC",
+          "ODT"
+        ],
+        "topics": [
+          "Transparencia",
+          "Información institucional",
+          "Organización",
+          "Empleo público",
+          "Contratación",
+          "Información económica",
+          "Derecho de acceso",
+          "Residuos",
+          "Servicios funerarios"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Se ha identificado transparencia documental, no un catálogo autónomo de datos abiertos estructurados.",
+        "last_updated": "2022-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.eltanque.es/transparencia-mancomunidad-servicios-garachico-el-tanque/",
+        "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codigoUnidad=LA0005476",
+        "http://femp.femp.es/Portal/Front/Atencion_al_asociado/MancomunidadesDetalle/_y3BL5bs6mAqhmzH0xnPSptUYs6HLZqhUHBWb9a42S0w"
+      ]
+    },
+    "notes": "La transparencia de la mancomunidad está publicada dentro del ecosistema web/sede del Ayuntamiento de El Tanque. "
   },
   {
     "id": "ayuntamiento_fasnia",
@@ -4605,70 +4772,67 @@
     "name": "Ayuntamiento de Hermigua",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "La Gomera"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Hermigua. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Hermigua",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Gomera",
-        "coordinates": {
-          "lat": 28.1658,
-          "lon": -17.1836
-        },
-        "source_url": "https://transparencia.villadehermigua.com"
-      }
-    ],
+    "description": "Portal de transparencia del Ayuntamiento de Hermigua, organizado según los indicadores de la Ley Canaria 12/2014. Publica información institucional, organizativa, económica, contractual y de acceso a la información pública con formatos reutilizables visibles en la interfaz.",
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Hermigua",
+        "kind": "transparencia",
+        "name": "Portal de transparencia del Ayuntamiento de Hermigua",
         "url": "https://transparencia.villadehermigua.com",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "Gesgocom SL v10.2.0"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Organización",
+          "Personal de libre nombramiento",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Económico-financiera",
+          "Patrimonio",
+          "Planificación y programación",
+          "Obras públicas",
+          "Contratos",
+          "Convenios y encomiendas",
+          "Servicios públicos",
+          "Ayudas y subvenciones",
+          "Ordenación del territorio",
+          "Derecho de acceso",
+          "Estadísticas",
+          "Evaluación de la transparencia",
+          "Portales de entidades dependientes"
+        ],
+        "formats": [
+          "CSV",
+          "ODS",
+          "XLSX",
+          "JSON",
+          "XML",
+          "Markdown",
+          "DOCX",
+          "TXT"
         ],
         "machine_readable": true,
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.villadehermigua.com"
       ]
     },
-    "notes": null
+    "notes": "El portal muestra formatos reutilizables CSV, ODS, XLSX, JSON, XML, Markdown, DOCX y TXT en la interfaz. En comprobación manual, el botón de descarga XML no funciona y no inicia ninguna acción."
   },
   {
     "id": "ayuntamiento_icod_de_los_vinos",
@@ -5029,30 +5193,73 @@
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de La Orotava. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de La Orotava, Tenerife. Dispone de web municipal, portal de transparencia, sede electrónica y recursos temáticos de información pública, incluyendo un apartado municipal de calidad del agua que enlaza a resultados del SINAC por zonas de abastecimiento del municipio.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Orotava",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza del Ayuntamiento, 1",
+        "postal_code": "38300",
+        "municipality": "La Orotava",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.3894,
-          "lon": -16.5239
+          "lat": 28.3904,
+          "lon": -16.5258
         },
-        "source_url": "https://www.laorotava.es/ayuntamiento"
+        "source_url": "https://www.laorotava.es/es/ayuntamiento"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de La Orotava",
-        "url": "https://www.laorotava.es/ayuntamiento",
+        "id": "portal_transparencia_la_orotava",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia",
+        "url": "https://laorotava.sedelectronica.es/transparency/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLS",
+          "XLSX",
+          "XML",
+          "DOCX",
+          "ODP"
+        ],
+        "topics": [
+          "transparencia",
+          "acceso_a_la_informacion_publica",
+          "organizacion",
+          "normativa",
+          "presupuestos",
+          "contratacion",
+          "subvenciones",
+          "patrimonio",
+          "urbanismo",
+          "estadistica"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "El portal publica abundante documentación y tablas descargables por secciones temáticas, pero no se identifica un catálogo de datos abiertos ni API pública.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_la_orotava",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://laorotava.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
         ],
         "standards": [],
         "formats": [
@@ -5060,35 +5267,102 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "tramitacion",
+          "registro",
+          "expedientes",
+          "tablon_de_anuncios",
+          "validacion_de_documentos",
+          "padron",
+          "contribuyentes",
+          "cita_previa",
+          "canal_de_denuncias"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Plataforma de administración electrónica y consulta de expedientes; no se observa catálogo abierto estructurado.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "calidad_agua_la_orotava",
+        "kind": "other",
+        "name": "Calidad del agua",
+        "url": "https://www.laorotava.es/es/calidad-del-agua",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "sinac"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "agua",
+          "calidad_del_agua",
+          "salud_publica",
+          "abastecimiento",
+          "servicios_publicos",
+          "barrios"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Página municipal que agrupa enlaces por zonas de abastecimiento a fichas e informes del SINAC; no expone un catálogo municipal estructurado.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "perfil_contratante_la_orotava",
+        "kind": "other",
+        "name": "Perfil del contratante",
+        "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink%3AperfilContratante&ubicacionOrganica=CVtMNX3BM20%3D",
+        "portal_status": "active",
+        "technology": [
+          "plataforma_contratacion_estado"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "contratacion",
+          "licitaciones",
+          "adjudicaciones",
+          "perfil_del_contratante"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "La sede municipal enlaza el perfil del contratante en la Plataforma de Contratación del Sector Público.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.laorotava.es/ayuntamiento"
+        "https://www.laorotava.es/es/ayuntamiento",
+        "https://laorotava.sedelectronica.es/transparency/",
+        "https://laorotava.sedelectronica.es/",
+        "https://www.laorotava.es/es/calidad-del-agua",
+        "https://sinacv2.sanidad.gob.es/SinacV2/Index.do",
+        "https://contrataciondelestado.es/wps/poc?uri=deeplink%3AperfilContratante&ubicacionOrganica=CVtMNX3BM20%3D"
       ]
     },
-    "notes": null
+    "notes": "El portal de transparencia presenta un volumen alto de información documental y múltiples formatos descargables, con secciones sobre organización, empleo público, retribuciones, normativa, servicios, información económico-financiera, patrimonio, planificación, contratos, subvenciones, ordenación del territorio, estadística y derecho de acceso a la información pública. La sede electrónica incluye tramitación, expediente electrónico, validación documental, tablón de anuncios, padrón, contribuyentes y canal de denuncias. El recurso municipal de calidad del agua aporta valor añadido local al enlazar resultados del SINAC por zonas de abastecimiento del municipio. Fecha de consulta: 2026-06."
   },
   {
     "id": "ayuntamiento_la_victoria_de_acentejo",
@@ -5659,30 +5933,78 @@
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Puntagorda. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Puntagorda, en la isla de La Palma. El portal de transparencia está integrado dentro de la sede electrónica y muestra un índice temático amplio con documentos institucionales, organizativos, económicos, contractuales, de subvenciones, ordenación del territorio, estadística y derecho de acceso.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Puntagorda",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Av. la Constitución, 6",
+        "postal_code": "38789",
+        "municipality": "Puntagorda",
         "island": "La Palma",
         "coordinates": {
-          "lat": 28.7728,
-          "lon": -17.9803
+          "lat": 28.765919,
+          "lon": -17.979893
         },
-        "source_url": "https://puntagorda.sedelectronica.es/transparency"
+        "source_url": "https://www.puntagorda.es/local/ayuntamiento-de-puntagorda/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Puntagorda",
+        "id": "portal_transparencia_puntagorda",
+        "kind": "transparencia",
+        "name": "Portal de transparencia",
         "url": "https://puntagorda.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "JPEG",
+          "DOC"
+        ],
+        "topics": [
+          "institucional",
+          "organizativa",
+          "personal",
+          "empleo_publico",
+          "retribuciones",
+          "normativa",
+          "servicios_y_procedimientos",
+          "economica",
+          "patrimonio",
+          "planificacion",
+          "obras_publicas",
+          "contratos",
+          "convenios",
+          "subvenciones",
+          "ordenacion_del_territorio",
+          "estadistica",
+          "derecho_de_acceso",
+          "consulta_publica",
+          "eventos_y_avisos",
+          "proyectos_diversos"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Índice temático amplio con documentos descargables y previsualizaciones, pero sin API ni catálogo de datos abiertos estructurado.",
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_puntagorda",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://puntagorda.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
         ],
         "standards": [],
         "formats": [
@@ -5690,35 +6012,38 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "tramitacion",
+          "registro",
+          "padron",
+          "contribuyentes",
+          "quejas_y_sugerencias",
+          "participacion_ciudadana",
+          "gobierno_abierto"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "La sede aloja el portal de transparencia y trámites ciudadanos asociados.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://puntagorda.sedelectronica.es/transparency"
+        "https://www.puntagorda.es/local/ayuntamiento-de-puntagorda/",
+        "https://puntagorda.sedelectronica.es/",
+        "https://puntagorda.sedelectronica.es/transparency",
+        "https://puntagorda.sedelectronica.es/catalog/t/cb08f2a7-e5f7-42eb-bbfa-13a2b485e606",
+        "https://puntagorda.sedelectronica.es/catalog/t/eec1d111-c724-4967-b122-077375011648",
+        "https://puntagorda.sedelectronica.es/preview-document/d7e5bfb6-acc3-4d12-ba0d-fa499f796544/"
       ]
     },
-    "notes": null
+    "notes": "El portal de transparencia aparece integrado en la sede electrónica, con fecha de actualización 31/12/2025 y categorías visibles por bloques temáticos. Se han verificado documentos descargables y previsualizados en HTML, PDF, JPEG y DOC (Word 97/2003). La sección incluye mecanismos de acceso a la información pública y participación normativa. Fecha de consulta: 2026-06."
   },
   {
     "id": "ayuntamiento_puntallana",
@@ -6700,76 +7025,136 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_tazacorte",
-    "name": "Ayuntamiento de Tazacorte",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "La Palma"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Tazacorte. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Tazacorte",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Palma",
-        "coordinates": {
-          "lat": 28.6428,
-          "lon": -17.9369
-        },
-        "source_url": "https://transparencia.tazacorte.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tazacorte",
-        "url": "https://transparencia.tazacorte.es",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "machine_readable": true,
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparencia.tazacorte.es"
-      ]
+ {
+  "id": "ayuntamiento_tazacorte",
+  "name": "Ayuntamiento de Tazacorte",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "parent_entity_id": null,
+  "islands": ["La Palma"],
+  "description": "Ayuntamiento de Tazacorte, en la isla de La Palma. Dispone de un portal de transparencia propio y de un portal de transparencia integrado en la sede electrónica. El portal propio concentra información institucional, económica, normativa, contractual, de subvenciones y de rendición de cuentas. El portal de la sede electrónica ofrece navegación HTML, documentos PDF y algunos documentos DOCX previsualizados.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Primero de Mayo, 1",
+      "postal_code": "38770",
+      "municipality": "Villa y Puerto de Tazacorte",
+      "island": "La Palma",
+      "coordinates": {
+        "lat": 28.6489,
+        "lon": -17.9304
+      },
+      "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codUnico=..."
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_transparencia_tazacorte",
+      "kind": "transparencia",
+      "name": "Portal de transparencia",
+      "url": "https://transparencia.tazacorte.es",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["HTML", "PDF", "ODT", "TXT", "XLSX", "ODS", "CSV", "JSON", "DOC"],
+      "topics": [
+        "institucional",
+        "organizativa",
+        "económica",
+        "retribuciones",
+        "presupuestos",
+        "actas",
+        "normativa",
+        "contratos",
+        "subvenciones",
+        "cuentas_anuales",
+        "canal_interno",
+        "participacion"
+      ],
+      "machine_readable": false,
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal propio con múltiples secciones y formatos variados de descarga; incluye documentos estructurados y tablas de datos.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "portal_transparencia_sede_tazacorte",
+      "kind": "transparencia",
+      "name": "Portal de transparencia en sede electrónica",
+      "url": "https://tazacorte.sedelectronica.es/transparency",
+      "portal_status": "active",
+      "technology": ["sedelectronica"],
+      "standards": [],
+      "formats": ["HTML", "PDF", "DOCX"],
+      "topics": [
+        "institucional",
+        "normativa",
+        "económica",
+        "ayudas_y_subvenciones",
+        "patrimonio",
+        "contratación",
+        "urbanismo",
+        "obras_publicas",
+        "medio_ambiente",
+        "atencion_ciudadano"
+      ],
+      "machine_readable": false,
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia con estructura HTML y documentos previsualizados, principalmente PDF y algunos DOCX.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "sede_electronica_tazacorte",
+      "kind": "other",
+      "name": "Sede Electrónica",
+      "url": "https://tazacorte.sedelectronica.es",
+      "portal_status": "active",
+      "technology": ["sedelectronica"],
+      "standards": [],
+      "formats": ["HTML", "PDF"],
+      "topics": [
+        "tramitacion",
+        "registro",
+        "expedientes",
+        "buzon_electronico",
+        "perfil_del_contratante"
+      ],
+      "machine_readable": false,
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Sede electrónica con acceso a trámites y servicios administrativos, que hospeda el portal de transparencia.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://transparencia.tazacorte.es",
+      "https://tazacorte.sedelectronica.es/transparency",
+      "https://tazacorte.sedelectronica.es",
+      "https://www.tazacorte.es/web/",
+      "https://transparencia.tazacorte.es/accesibilidad/",
+      "https://transparencia.tazacorte.es/contratos/informacion-necesaria-conveniente/",
+      "https://transparencia.tazacorte.es/contratos/contratos-formalizados/",
+      "https://transparencia.tazacorte.es/contratos/licitaciones-en-curso/"
+    ]
   },
+  "notes": "El portal propio es claramente el más completo y presenta formatos reutilizables diversos. En la sede electrónica el portal de transparencia es más simple, con navegación HTML, enlaces y documentos PDF, además de algún DOCX previsualizado. Se han verificado secciones como institucional, normativa, económica, ayudas y subvenciones, patrimonio, contratación, urbanismo y accesibilidad. Fecha de consulta: 2026-06."
+},
   {
     "id": "ayuntamiento_tegueste",
     "name": "Ayuntamiento de Tegueste",
@@ -8456,74 +8841,184 @@
     "notes": null
   },
   {
-    "id": "fundacion_tutelar_canaria_para_la_accion_social_fucas",
-    "name": "FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
+    "id": "fucas",
+    "name": "Fundación Tutelar Canaria para la Acción Social (FUCAS)",
+    "alternate_names": [
+      "FUCAS",
+      "FuCAS",
+      "Fundación Tutelar Canaria para la Acción Social, M.P."
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "entity_kind": "organismo",
+    "scope": "autonomico",
+    "parent_entity_id": "gobierno_canarias",
+    "islands": [
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
+    ],
+    "description": "Fundación pública del Gobierno de Canarias (CIF: G-35.405.836, Registro de Fundaciones Canarias nº 69), constituida el 11 de abril de 1995, adscrita a la Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias. Tiene por objeto la promoción del bienestar jurídico y social de personas con necesidades sociales, especialmente menores y adultos con discapacidad o capacidad judicialmente modificada, ejerciendo tutela, curatela, guarda de hecho y defensa judicial. Actúa como medio propio personificado de la Comunidad Autónoma para dependencia, discapacidad, familia numerosa y valoración de discapacidad.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Goya, 6, Tafira Alta",
+        "postal_code": "35017",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.572194,
+          "lon": -15.459889
         },
-        "source_url": "https://www.fucas.org/portal-de-transparencia"
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Avenida Primero de Mayo, 12, 2ª A",
+        "postal_code": "35002",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1033361,
+          "lon": -15.418151
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Nicaragua esquina Panamá, 6",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4544738,
+          "lon": -16.2669952
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Gara y Jonay s/n, Trasera (Las Delicias)",
+        "postal_code": "38007",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4507417,
+          "lon": -16.2810562
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Francisco Hernández Guerra s/n",
+        "postal_code": "35014",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1035035,
+          "lon": -15.4319916
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Plaza del Cambullonero, 1 (Marzagán)",
+        "postal_code": "35229",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.0422301,
+          "lon": -15.4282082
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Felipe Massieu Falcón, 7",
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1006986,
+          "lon": -15.4139959
+        },
+        "source_url": "https://www.fucas.org/portal-de-transparencia/institucional/"
+      },
+      {
+        "kind": "office",
+        "address": "Avenida Pintor Felo Monzón, 2, Local 2-B",
+        "postal_code": "35019",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1113399,
+          "lon": -15.4512001
+        },
+        "source_url": "https://www.fucas.org/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – FUNDACIÓN TUTELAR CANARIA PARA LA ACCIÓN SOCIAL FUCAS",
-        "url": "https://www.fucas.org/portal-de-transparencia",
+        "id": "fucas_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia FUCAS",
+        "url": "https://www.fucas.org/portal-de-transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "WordPress",
+          "custom"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 12/2014 Canarias",
+          "Ley 19/2013 estatal"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "DOCX",
+          "ODT",
+          "TXT",
+          "CSV",
+          "XLSX",
+          "PNG"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "institucional",
+          "contratos",
+          "subvenciones",
+          "retribuciones",
+          "empleo-publico",
+          "servicios-sociales",
+          "convenios",
+          "ayudas",
+          "discapacidad",
+          "dependencia",
+          "educacion"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "dataset_count_note": "Portal de transparencia documental, no catálogo de datasets estructurados",
+        "last_updated": "2025-12",
+        "license_summary": "Todos los derechos reservados (copyright FUCAS). Uso permitido únicamente en ámbito doméstico y sin fines públicos o comerciales. No se permite reproducción, distribución ni comunicación pública sin autorización expresa de FUCAS. Fuente: Aviso Legal fucas.org (actualizado 08-03-2023).",
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.fucas.org/portal-de-transparencia"
+        "https://www.fucas.org/portal-de-transparencia/institucional/",
+        "https://www.fucas.org/wp-content/uploads/2025/04/ESCRITURA-DE-CONSTITUCION-FUCAS-red.pdf",
+        "https://www.fucas.org/wp-content/uploads/2025/05/ESCRITURA-NOTARIAL-MODIFICACION-ESTATUTOS-04.09.2020-PRESENTADO.pdf",
+        "https://www.fucas.org/wp-content/uploads/2021/05/TEXTO-REFUNDIDO-ESTATUTOS-MODIFICADOS-FUCAS-15.04.2021.pdf",
+        "https://www.fucas.org/wp-content/uploads/2026/04/CERTIFICADO_LIBRO_DE_ACTAS_FUCAS_2025-25.03.2026_signed_-AMBAS.pdf"
       ]
     },
-    "notes": null
+    "notes": "Fundación Pública del Gobierno de Canarias (CIF G-35.405.836), inscrita en el Registro de Fundaciones Canarias con el nº 69. Constituida el 11 de abril de 1995. Entidad con presupuesto estimativo incluida en los presupuestos anuales de la Comunidad Autónoma de Canarias. Adscrita a la Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias (antes Derechos Sociales). Medio propio personificado de la CAC. Total trabajadores: 197 (según organigrama publicado en portal de transparencia). Estructura: Gerencia + 9 unidades/centros. Centros y servicios: CPEE Concertado La Casita (Tafira, GC), Centro de Adultos Hermano Pedro (Las Delicias, Tenerife), Centro de Día Los Ruiseñores (GC), Centro de Día para Personas Mayores de Marzagán (GC). Encargos activos: tutela y curatela judicial, familia numerosa, PIAs dependencia, Programa BICÁCARO (Estrategia Canaria de Transición Igualitaria), equipos itinerantes de valoración de discapacidad (desde noviembre 2025). No participa en ninguna sociedad ni grupo empresarial (Art. 42 Código de Comercio). Planes estratégicos: II PE 2017-2021 (ampliado a 2022), III PE 2023-2027 vigente. Certificaciones en curso: SGI ISO 9001 + ISO 14001 (en implantación). RSC: Plan 2025-2026 alineado con Agenda Canaria 2030 y ODS ONU. Patronato: reuniones documentadas desde 2021, frecuencia aproximada trimestral. Última acta publicada: 26-11-2025. Certificados de libro de actas disponibles para 2023, 2024 y 2025. Última actualización del portal (sección institucional): 31-03-2026. Portal de transparencia con 13 secciones, periodicidad semestral. Base legal principal: Ley 2/1998 de Fundaciones Canarias, Ley 12/2014 (transparencia Canarias), Ley 19/2013 (transparencia estatal), Ley 9/2017 (contratos sector público), LOPDGDD 3/2018, XVI Convenio colectivo atención personas con discapacidad (2025). Estatutos vigentes en texto refundido: última reforma 15 de abril de 2021. Presencia física en Gran Canaria y Tenerife; servicios itinerantes en todas las islas."
   },
   {
     "id": "fundacion_canaria_instituto_de_investigacion_sanitaria_de_ca",
@@ -8666,74 +9161,84 @@
     "notes": null
   },
   {
-    "id": "fundacion_canaria_para_el_fomento_del_trabajo_funcatra",
+    "id": "funcatra",
     "name": "Fundación Canaria para el Fomento del Trabajo FUNCATRA",
-    "entity_kind": "empresa_publica",
+    "alternate_names": [
+      "FUNCATRA"
+    ],
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Fundación pública del Gobierno de Canarias (100% participación autonómica), creada al amparo de la Ley 2/1998 de Fundaciones Canarias. Promueve el empleo y la formación profesional en Canarias. Gestiona el Observatorio Canario del Empleo (OBECAN), la Agencia de Colocación y proyectos TIC para el Servicio Canario de Empleo. Adscrita a la Consejería de Turismo y Empleo desde 2023.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Fundación Canaria para el Fomento del Trabajo FUNCATRA",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "C/ Los Ministerios, 1, OFRA, 38009, Santa Cruz de Tenerife",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.4544738,
+          "lon": -16.2669952
         },
-        "source_url": "http://www.funcatra.es/transparencia"
+        "source_url": "https://www.funcatra.es/transparencia"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Cebrián, 3, 4ª Planta, Edificio ITC, 35003, Las Palmas de Gran Canaria",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1033361,
+          "lon": -15.418151
+        },
+        "source_url": "https://www.funcatra.es/transparencia"
       }
     ],
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Fundación Canaria para el Fomento del Trabajo FUNCATRA",
-        "url": "http://www.funcatra.es/transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Fundación Canaria para el Fomento del Trabajo FUNCATRA",
+        "url": "https://www.funcatra.es/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "custom"
         ],
         "standards": [],
         "formats": [
-          "HTML",
+          "ODT",
           "PDF"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "Empleo",
+          "Formación profesional",
+          "Sector público"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "machine_readable": false,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "http://www.funcatra.es/transparencia"
+        "https://www.funcatra.es/transparencia"
       ]
     },
-    "notes": null
+    "notes": "Fundación sin ánimo de lucro creada el 31/12/1998. Dotación fundacional: 60.101,21 €. ~90 trabajadores (2024). Dos sedes permanentes (Tenerife y Gran Canaria) más locales temporales arrendados/cedidos. Período medio de pago a proveedores 2024: ~7,9 días. Informes del Comisionado de Transparencia: 2017–2024."
   },
   {
     "id": "gestion_del_medio_rural_de_canarias_sau_gmr_canarias",
@@ -8876,56 +9381,260 @@
     "notes": null
   },
   {
-    "id": "gestion_y_planeamiento_territorial_y_medioambiental_sa_gespl",
-    "name": "Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
+    "id": "gesplan",
+    "name": "GESPLAN – Gestión y Planeamiento Territorial y Medioambiental S.A.",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
-      "Todas"
+      "Todas",
+      "Gran Canaria",
+      "Tenerife",
+      "Lanzarote",
+      "Fuerteventura",
+      "La Palma",
+      "La Gomera",
+      "El Hierro",
+      "La Graciosa"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Empresa pública del Gobierno de Canarias especializada en planificación territorial, urbanismo, medio ambiente e ingeniería. Medio propio de la Administración autonómica y de los cabildos insulares. Opera en las siete islas habitadas con sedes, oficinas y almacenes.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "C/ León y Castillo 54, bajo, 35003",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1189,
+          "lon": -15.4214
         },
-        "source_url": "https://www.gesplan.es/transparencia"
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Profesor Agustín Millares Carlo 10, Planta Baja, 1ª y 3ª (Edificio Iberia), 35003",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1171,
+          "lon": -15.4194
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "delegated_office",
+        "address": "C/ General Bravo 93, Barranco de La Gallina, 35220",
+        "postal_code": "35220",
+        "municipality": "Telde",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.0267,
+          "lon": -15.4022
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Residencial Amarca, Avda. Tres de Mayo 71, local bajo A, 38005",
+        "postal_code": "38005",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4568,
+          "lon": -16.2612
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Residencial Marítimo, Avda. Tres de Mayo 77, 38005",
+        "postal_code": "38005",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4561,
+          "lon": -16.2621
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "delegated_office",
+        "address": "C/ Camino Real 154, Agua García, 38350",
+        "postal_code": "38350",
+        "municipality": "Tacoronte",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4589,
+          "lon": -16.4025
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Antiguo Aeropuerto de Los Estancos s/n, 35612",
+        "postal_code": "35612",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
+        "coordinates": {
+          "lat": 28.5083,
+          "lon": -13.9189
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "delegated_office",
+        "address": "C/ Hernán Cortés 112, local bajo, 35600",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
+        "coordinates": {
+          "lat": 28.4975,
+          "lon": -13.8694
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Rambla Medular nº 99, 2º piso, local 2, 35500",
+        "postal_code": "35500",
+        "municipality": "Arrecife",
+        "island": "Lanzarote",
+        "coordinates": {
+          "lat": 28.9669,
+          "lon": -13.5558
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "delegated_office",
+        "address": "C/ Andalucía 114, local bajo, 35500",
+        "postal_code": "35500",
+        "municipality": "Arrecife",
+        "island": "Lanzarote",
+        "coordinates": {
+          "lat": 28.9691,
+          "lon": -13.5602
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Galeón 28, local bajo, 38700",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6744,
+          "lon": -17.7686
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "Carretera General Padrón nº 2, El Paso, 38750",
+        "postal_code": "38750",
+        "municipality": "El Paso",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6508,
+          "lon": -17.8814
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ El Tanquito nº 14, bajo, 38800",
+        "postal_code": "38800",
+        "municipality": "San Sebastián de La Gomera",
+        "island": "La Gomera",
+        "coordinates": {
+          "lat": 28.0931,
+          "lon": -17.1128
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "delegated_office",
+        "address": "Carretera General del Sur, Km 2.3, Charco Hondo, 38800",
+        "postal_code": "38800",
+        "municipality": "San Sebastián de La Gomera",
+        "island": "La Gomera",
+        "coordinates": {
+          "lat": 28.0864,
+          "lon": -17.1261
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "office",
+        "address": "C/ Canónigo Leopoldo Morales nº 1, 38900",
+        "postal_code": "38900",
+        "municipality": "Valverde",
+        "island": "El Hierro",
+        "coordinates": {
+          "lat": 27.8078,
+          "lon": -17.9151
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
+      },
+      {
+        "kind": "delegated_office",
+        "address": "C/ Isla de Fuerteventura nº 5, bajo, 38900",
+        "postal_code": "38900",
+        "municipality": "Valverde",
+        "island": "El Hierro",
+        "coordinates": {
+          "lat": 27.8105,
+          "lon": -17.9122
+        },
+        "source_url": "https://www.gesplan.es/sedes/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Gestión y Planeamiento Territorial y Medioambiental, S.A. GESPLAN",
-        "url": "https://www.gesplan.es/transparencia",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia de GESPLAN",
+        "url": "https://www.gesplan.es/transparencias/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "WordPress"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 12/2014 de Canarias",
+          "Ley 19/2013 estatal"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "CSV"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Estructura organizativa",
+          "Órganos de gobierno",
+          "Normativa aplicable",
+          "Empleo público",
+          "Retribuciones",
+          "Servicios y procedimientos",
+          "Presupuesto",
+          "Gasto público",
+          "Contratación pública",
+          "Convenios",
+          "Encomiendas de gestión",
+          "Ayudas y subvenciones",
+          "Estadística",
+          "Derecho de acceso",
+          "Canal de denuncias"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "~25 ficheros CSV en secciones de empleo, retribuciones, contratos, convenios y encomiendas. Sin API ni catálogo de datos abiertos.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización abierta (Atribución requerida)",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -8937,13 +9646,15 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.gesplan.es/transparencia"
+        "https://www.gesplan.es/sedes/",
+        "https://www.gesplan.es/transparencias/",
+        "https://www.gesplan.es/canal-de-denuncias/"
       ]
     },
-    "notes": null
+    "notes": "Empresa pública del Gobierno de Canarias (medio propio, CIF: A38279972). 16 ubicaciones: 1 sede central (Gran Canaria) + 8 oficinas + 5 almacenes (marcados como delegated_office)."
   },
   {
     "id": "gestur_canarias_sa",
@@ -9087,73 +9798,59 @@
   },
   {
     "id": "instituto_canario_de_desarrollo_cultural_sa",
-    "name": "INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
+    "name": "Instituto Canario de Desarrollo Cultural, S.A.",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "https://www.icdcultural.org/transparencia"
-      }
-    ],
+    "description": "Empresa pública adscrita al área de Cultura del Gobierno de Canarias, responsable de la gestión, promoción y difusión de actividades culturales en el Archipiélago, así como la formación y el fomento de la producción en materia cultural. Opera bajo este nombre desde 2021. Capital social 100% Comunidad Autónoma de Canarias (421.346,64€). Publica información de transparencia conforme a la Ley 12/2014 de Canarias y la Ley 19/2013 estatal.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – INSTITUTO CANARIO DE DESARROLLO CULTURAL S.A",
+        "id": "icdc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia ICDC",
         "url": "https://www.icdcultural.org/transparencia",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "auditoria",
+          "subvenciones",
+          "igualdad",
+          "cultura",
+          "cine",
+          "videojuegos",
+          "exenciones"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOC",
+          "ODT",
+          "XLS",
+          "ODS"
+        ],
+        "last_checked": "2026-05",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.icdcultural.org/transparencia"
+        "https://www.icdcultural.org",
+        "https://www.gobiernodecanarias.org/organigrama/ficha-sociedades-mercantiles/?ou=41596"
       ]
     },
-    "notes": null
+    "notes": "Acrónimo: ICDC. Web: https://www.icdcultural.org. Anteriores denominaciones: Festival de Música de Canarias S.A. (1984-1985), Sociedad Canaria de las Artes Escénicas y la Música S.A. (1985-2005), Canarias Cultura en Red S.A. (2005-2021). Dos sedes: Las Palmas de Gran Canaria (C/ León y Castillo 57, 4ª planta) y Santa Cruz de Tenerife (C/ Puerta Canseco 49, piso 2). No concede ayudas ni subvenciones propias. XLS/ODS confirmados en: contratos de patrocinio (§2.4.4, 2022-2025), gastos dietas Dirección Adjunta (§7.3, solo 2024), contratos programados (§9.2, 2024-2025), listado contratos formalizados (§9.8.1, 2022-2025), modificaciones contratos (§9.8.2, 2022-2023), contratos menores trimestrales (§9.9, 2022-2025), adendas convenios (§10.1, 2023-2025). Verificado 2026-05."
   },
   {
     "id": "instituto_canario_de_estadistica_istac",
@@ -9858,72 +10555,59 @@
   {
     "id": "radio_publica_de_canarias_sa",
     "name": "Radio Pública de Canarias, S.A.",
+    "alternate_names": [
+      "Radio Pública de Canarias",
+      "RPC"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "ente_publico_radiotelevision_canaria",
     "islands": [
       "Todas"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Radio Pública de Canarias, S.A.",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "https://sede.rtvc.es/transparencia/indice/RP22"
-      }
-    ],
+    "description": "Sociedad mercantil pública integrada en el ente público Radiotelevisión Canaria, de ámbito autonómico, responsable de la actividad radiofónica pública de Canarias. Dispone de portal de transparencia activo en la sede electrónica de RTVC, con obligaciones de transparencia publicadas y documentación reutilizable en formatos abiertos.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Radio Pública de Canarias, S.A.",
-        "url": "https://sede.rtvc.es/transparencia/indice/RP22",
+        "id": "rpc_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia Radio Pública de Canarias, S.A.",
+        "url": "https://sede.rtvc.es/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica",
+          "cms"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "derecho_acceso"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
+        "has_api": false,
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLSX"
+        ],
+        "last_checked": "2026-06",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.rtvc.es/transparencia/indice/RP22"
+        "https://sede.rtvc.es/transparencia",
+        "https://sede.rtvc.es/transparencia/indice/ET22"
       ]
     },
-    "notes": null
+    "notes": "Entidad dependiente del ente público RTVC. El portal de transparencia de la sede electrónica muestra obligaciones publicadas para la entidad. La información de transparencia está accesible desde la sede de RTVC. Fecha de consulta: 2026-06."
   },
   {
     "id": "servicio_canario_de_empleo_sce",
@@ -10208,72 +10892,87 @@
   {
     "id": "television_publica_de_canarias_sa",
     "name": "Televisión Pública de Canarias, S.A.",
+    "alternate_names": [
+      "Televisión Canaria",
+      "TVC",
+      "TPC"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "ente_publico_radiotelevision_canaria",
     "islands": [
       "Todas"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Sociedad mercantil pública integrada en el ente público Radiotelevisión Canaria, de ámbito autonómico, responsable de la gestión del servicio público de televisión de la Comunidad Autónoma de Canarias. Su objeto social incluye la producción, edición y difusión de contenidos audiovisuales y servicios conexos o interactivos orientados a fines informativos, culturales, educativos y de entretenimiento. Dispone de portal de transparencia activo y documentación publicada en la sede electrónica de RTVC.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Televisión Pública de Canarias, S.A.",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle La Marina, 57",
+        "postal_code": "38071",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.4695,
+          "lon": -16.2494
         },
-        "source_url": "https://sede.rtvc.es/transparencia/indice/TP22"
+        "source_url": "https://rtvc.es/direcciones-territoriales/"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Profesor Lozano, 9, Urbanización El Sebadal",
+        "postal_code": "35008",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1384,
+          "lon": -15.4242
+        },
+        "source_url": "https://rtvc.es/direcciones-territoriales/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Televisión Pública de Canarias, S.A.",
-        "url": "https://sede.rtvc.es/transparencia/indice/TP22",
+        "id": "tvc_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia Televisión Pública de Canarias, S.A.",
+        "url": "https://sede.rtvc.es/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica",
+          "cms"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "contratos",
+          "presupuestos",
+          "personal",
+          "retribuciones",
+          "derecho_acceso"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
+        "has_api": false,
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS"
+        ],
+        "last_checked": "2026-06",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.rtvc.es/transparencia/indice/TP22"
+        "https://www.gobiernodecanarias.org/organigrama/ficha-sociedades-mercantiles/?ou=41600",
+        "https://sede.rtvc.es/transparencia",
+        "https://sede.rtvc.es/transparencia/indice/ET22",
+        "https://rtvc.es/direcciones-territoriales/"
       ]
     },
-    "notes": null
+    "notes": "Entidad dependiente del ente público RTVC. Capital social publicado: 811.366,34 euros. Participación: Ente público Radio Televisión Canaria. Recursos económicos: subvenciones en los Presupuestos Generales de la Comunidad Autónoma, venta y comercialización de productos y publicidad. Sedes y centros de producción confirmados en Tenerife y Gran Canaria, con delegaciones en Lanzarote, Fuerteventura, La Palma, El Hierro, La Gomera y Madrid. El portal de transparencia está activo en la sede electrónica de RTVC y la entidad figura en el índice de obligaciones de transparencia. Fecha de consulta: 2026-06."
   },
   {
     "id": "viviendas_sociales_e_infraestructuras_de_canarias_sa_vis",
@@ -10487,62 +11186,74 @@
   },
   {
     "id": "gorona_del_viento_el_hierro_sa",
-    "name": "GORONA DEL VIENTO EL HIERRO, S.A.",
+    "name": "Gorona del Viento El Hierro, S.A.",
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
+    "scope": "insular",
     "parent_entity_id": null,
     "islands": [
       "El Hierro"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "GORONA DEL VIENTO EL HIERRO, S.A.",
-        "postal_code": null,
-        "municipality": null,
-        "island": "El Hierro",
-        "coordinates": {
-          "lat": 27.7459,
-          "lon": -18.0338
-        },
-        "source_url": "http://www.goronadelviento.es/portal-de-transparencia"
-      }
-    ],
+    "description": "Sociedad mercantil pública mixta gestora de la Central Hidroeólica de El Hierro, orientada al abastecimiento eléctrico renovable de la isla. Publica información de transparencia corporativa y documentación institucional relevante para el ecosistema público insular.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – GORONA DEL VIENTO EL HIERRO, S.A.",
-        "url": "http://www.goronadelviento.es/portal-de-transparencia",
-        "portal_status": "active",
+        "id": "gorona_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia Gorona del Viento",
+        "url": "https://transparencia.goronadelviento.es",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "medio_ambiente",
+          "energia"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
+        "formats": [
+          "CSV",
+          "ODS",
+          "XLSX",
+          "JSON",
+          "XML",
+          "Markdown",
+          "DOCX",
+          "TXT"
+        ],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2025-03",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "gorona_transparencia_web",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia (web corporativa)",
+        "url": "https://www.goronadelviento.es/portal-de-transparencia-old/",
+        "portal_status": "archived",
+        "technology": [
+          "web_propia"
+        ],
+        "topics": [
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal"
+        ],
+        "has_api": false,
+        "apis": [],
+        "formats": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
+        "license_summary": null,
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
@@ -10550,10 +11261,14 @@
       "status": "estimated",
       "last_checked": "2026-05",
       "source_urls": [
-        "http://www.goronadelviento.es/portal-de-transparencia"
+        "https://transparencia.goronadelviento.es",
+        "https://www.goronadelviento.es/transparencia/informacion-geografica/",
+        "https://www.idae.es/conozcanos/proyectos-de-excelencia/central-hidro-eolica-de-el-hierro-gorona-del-viento",
+        "https://www.goronadelviento.es/portal-de-transparencia-old/",
+        "https://www.goronadelviento.es/gorona-del-viento-premio-excelencia-transformacion-digital/"
       ]
     },
-    "notes": null
+    "notes": "Capital social: Cabildo Insular de El Hierro 60%, ITC/Gobierno de Canarias 10%, Endesa 30%. Sede: C/ Provisor Magdaleno 8-10, 38900 Valverde (El Hierro). Potencia instalada: parque eólico 11,5 MW, central hidroeléctrica 11,32 MW. Portal de transparencia desarrollado y mantenido por GESGOCOM S.L. (contrato menor adjudicado el 18/12/2025, importe 3.500€, duración 12 meses). El portal incluye asistente conversacional con arquitectura RAG (herramientas: consultardatos + buscar_documentos) que indexa contenido textual pero no ficheros adjuntos. Todos los indicadores son descargables en CSV, ODS, XLSX, JSON, XML, Markdown, DOCX y TXT — portal más avanzado en reutilización de datos de las entidades procesadas hasta 2026-05. Puntuación máxima (10/10) del Comisionado de Transparencia de Canarias, mayo 2026."
   },
   {
     "id": "mercahierro_sau",
@@ -10836,74 +11551,98 @@
     "notes": null
   },
   {
-    "id": "parque_tecnologico_de_fuerteventura_sa",
+    "id": "ptfue",
     "name": "Parque Tecnológico de Fuerteventura, S.A.",
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
     "islands": [
       "Fuerteventura"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Parque Tecnológico de Fuerteventura, S.A.",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Fuerteventura",
-        "coordinates": {
-          "lat": 28.3587,
-          "lon": -14.0533
-        },
-        "source_url": "https://ptfue.sedelectronica.es/transparency"
-      }
-    ],
+    "description": "Sociedad mercantil pública (Medio Propio) adscrita al Cabildo de Fuerteventura, constituida en 2010 para el fomento del I+D+i, el emprendimiento y la diversificación económica insular mediante infraestructuras y servicios de base tecnológica. Cofinanciada por el Cabildo de Fuerteventura, el Gobierno de Canarias (FDCAN) y fondos europeos (FEDER/Next Generation). Publica transparencia en su web propia y en el portal del Cabildo de Fuerteventura.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Parque Tecnológico de Fuerteventura, S.A.",
-        "url": "https://ptfue.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "ptfue_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia PTFSA",
+        "url": "https://ptfue.com/transparencia/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "contratos",
+          "presupuestos",
+          "personal"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
+        "machine_readable": false,
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "last_checked": "2026-05",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "dataset_count": null,
+        "license_summary": null
+      },
+      {
+        "id": "ptfue_transparencia_cabildo",
+        "kind": "transparencia",
+        "name": "Ficha Transparencia — Portal Cabildo de Fuerteventura",
+        "url": "https://sede.cabildofuer.es/portal/transparencia/se_contenedor2.jsp?seccion=s_fdoc_d4_v1.jsp&contenido=3321&tipo=5&nivel=1400&language=es",
+        "technology": [
+          "web_propia"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "organizacion",
+          "contratos",
+          "presupuestos"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOCX",
+          "ODT"
+        ],
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
+      },
+      {
+        "id": "ptfue_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica PTFSA",
+        "url": "https://ptfue.sedelectronica.es",
+        "technology": [
+          "sedelectronica"
+        ],
+        "topics": [
+          "contratos",
+          "licitaciones"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "formats": [],
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://ptfue.sedelectronica.es/transparency"
+        "https://ptfue.com/transparencia/",
+        "https://ptfue.com/quienes-somos/",
+        "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2023-18059",
+        "https://www.apte.org/miembro/parque-tecnologico-de-fuerteventura/"
       ]
     },
-    "notes": null
+    "notes": "Denominación oficial completa: Parque Tecnológico de Fuerteventura, S.A. – M.P. (Medio Propio). Constituida en 2010. Alberga ~20 empresas/emprendedores y ~200 empleos directos. Superficie: 735.000 m², de los cuales 300.000 m² están urbanizados. Contratación publicada en BOE y tablón de la sede electrónica (https://ptfue.sedelectronica.es/board)."
   },
   {
     "id": "patronato_de_turismo_del_cabildo_de_fuerteventura",
@@ -11538,72 +12277,76 @@
   {
     "id": "fundacion_canaria_gran_canaria_convention_bureau",
     "name": "Fundación Canaria Gran Canaria Convention Bureau",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_insular_de_el_hierro",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Fundación Canaria Gran Canaria Convention Bureau",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "https://www.grancanariacb.com/transparencia"
-      }
-    ],
+    "description": "Fundación sin ánimo de lucro dependiente del Cabildo de Gran Canaria, inscrita en el Registro de Fundaciones Canarias con el número 162 (CIF: G-35646926). Tiene por objeto la promoción de Gran Canaria como sede de congresos, convenciones, seminarios y viajes de incentivo (sector MICE), así como la captación de rodajes audiovisuales nacionales e internacionales. Constituida en noviembre de 2017. Plantilla de 4 personas.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Fundación Canaria Gran Canaria Convention Bureau",
-        "url": "https://www.grancanariacb.com/transparencia",
-        "portal_status": "active",
+        "id": "fcgccb_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia Gran Canaria Convention Bureau",
+        "url": "https://www.grancanariacb.com/transparencia/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "presupuestos",
+          "contratos",
+          "personal",
+          "retribuciones",
+          "subvenciones"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
+        "formats": [
+          "PDF",
+          "DOCX",
+          "ODT",
+          "XLSX",
+          "XLS",
+          "ODS"
+        ],
+        "last_checked": "2026-05",
+        "last_updated": "2026-04",
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null
+      },
+      {
+        "id": "fcgccb_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica Fundación Gran Canaria Convention Bureau",
+        "url": "https://fundaciongrancanariacb.sedelectronica.es",
+        "technology": [
+          "sedelectronica"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "contratos",
+          "licitaciones",
+          "organizacion"
+        ],
+        "has_api": false,
+        "formats": [],
+        "last_checked": "2026-05",
+        "last_updated": null,
+        "dataset_count": null,
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.grancanariacb.com/transparencia"
+        "https://www.grancanariacb.com/transparencia/",
+        "https://www.grancanariacb.com/wp-content/uploads/2025/03/1001-informacion-general.pdf",
+        "https://www.laspalmasgc.es/es/ayuntamiento/organismos-y-empresas/gran-canaria-convention-bureau/",
+        "https://fundaciongrancanariacb.sedelectronica.es"
       ]
     },
-    "notes": null
+    "notes": "Fundación sin ánimo de lucro regulada por la Ley de Fundaciones de Canarias 2/1998. Órgano de gobierno: Patronato. Marca oficial de Turismo de Gran Canaria para el sector MICE. Sede: Avda. Rafael Cabrera 1, Planta 1 Oficina 5, 35002 Las Palmas de Gran Canaria. Plantilla: 4 puestos, todo personal laboral indefinido (sin RPT): 1 Gerente (en excedencia por cargo público), 1 Responsable técnico MICE, 1 Responsable técnico GOLF, 1 Responsable Administración. Puntuación Comisionado de Transparencia de Canarias: 5,90/10 (evaluación 2024). XLSX/XLS/ODS confirmados en: retribuciones personal §1053, contratos menores trimestrales 2022-2025 (§2003), liquidación presupuesto 2021. Cuentas anuales 2022-2025 publicadas solo en PDF. No está autorizada para otorgar subvenciones (DA 16 LGS). Hasta 2026-05 no se ha recibido ninguna solicitud de acceso a la información pública."
   },
   {
     "id": "fundacion_canaria_orquesta_filarmonica_de_gran_canaria",
@@ -11746,74 +12489,91 @@
     "notes": null
   },
   {
-    "id": "institucion_ferial_de_canarias_infecar",
-    "name": "INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "id": "infecar",
+    "name": "Institución Ferial de Canarias, INFECAR",
+    "alternate_names": [
+      "institucion_ferial_de_canarias_infecar",
+      "Institución Ferial de Canarias"
+    ],
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_de_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Institución oficial dependiente del Cabildo de Gran Canaria, con personalidad jurídica propia e independiente, dedicada a la organización y gestión de ferias, congresos, jornadas, eventos y servicios asociados. Dispone de portal de transparencia activo con información institucional, organizativa, económica, de personal, retribuciones, contratación, subvenciones, estadísticas, derecho de acceso y accesibilidad.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida de la Feria, 1",
+        "postal_code": "35012",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.106188888889,
+          "lon": -15.4466
         },
-        "source_url": "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998"
+        "source_url": "https://infecar.es/transparencia/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – INSTITUCIÓN FERIAL DE CANARIAS INFECAR",
-        "url": "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998",
+        "id": "infecar_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia INFECAR",
+        "url": "https://infecar.es/transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "wordpress",
+          "web_propia"
         ],
-        "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLS",
+          "XLSX",
+          "CSV"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "institucional",
+          "organizativa",
+          "economico_financiera",
+          "personal",
+          "retribuciones",
+          "empleo_publico",
+          "contratos",
+          "contratos_menores",
+          "convenios",
+          "subvenciones",
+          "estadisticas",
+          "derecho_acceso",
+          "accesibilidad"
         ],
         "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.infecar.es/index.php?option=com_content&view=article&id=101&Itemid=998"
+        "https://infecar.es/transparencia/",
+        "https://infecar.es/transparencia/organizativa/",
+        "https://infecar.es/wp-content/uploads/2026/04/1021-Organos-de-gobierno-Administracion-o-direccion-de-la-entidad_-Composicion-y-funciones-1.xlsx.ods",
+        "https://infecar.es/wp-content/uploads/2026/04/1023-COMPOSICION-Y-TITULARES-DE-LOS-ORGANOS-DE-GOBIERNO.xls.ods",
+        "https://infecar.es/wp-content/uploads/2023/01/Contratos-menores-formalizados-csv.csv",
+        "https://infecar.es/wp-content/uploads/2023/01/contratos-menores-formalizados-desde-090318-csv.csv",
+        "https://infecar.es/wp-content/uploads/2023/01/CONTRATOS-MENORES-01-01-19-a-31-03-19-csv.csv"
       ]
     },
-    "notes": null
+    "notes": "Entidad oficial dependiente del Cabildo de Gran Canaria, con personalidad jurídica propia e independiente y sin fines de lucro. La sede se publica en Avenida de la Feria, 1, 35012 Las Palmas de Gran Canaria. El portal de transparencia ofrece descargas en HTML, PDF, ODT, ODS, XLS, XLSX y CSV, incluyendo series de contratos menores y documentación organizativa en formatos reutilizables. La mayor parte de los bloques visibles consultados aparecen actualizados a 2025-12. Fecha de consulta: 2026-06."
   },
   {
     "id": "instituto_insular_de_deportes_del_cabildo_de_gran_canaria",
@@ -12096,7 +12856,7 @@
     "notes": null
   },
   {
-    "id": "sociedad_de_promocion_economica_de_gran_canaria_sau_spegc",
+    "id": "spegc",
     "name": "Sociedad de Promoción Económica de Gran Canaria, S.A.U. SPEGC",
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
@@ -12166,74 +12926,72 @@
     "notes": null
   },
   {
-    "id": "sociedad_para_el_desarrollo_de_las_telecomunicaciones_de_gra",
+    "id": "sodetegc",
     "name": "Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
+    "parent_entity_id": "SPEGC",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Sociedad mercantil unipersonal (SAU) del sector público del Cabildo de Gran Canaria, constituida el 29 de diciembre de 2009. Accionista único: Sociedad de Promoción Económica de Gran Canaria, S.A.U. (SPEGC). Capital social: 939.900€ en 300 acciones de 3.133€ valor nominal. Opera como operador neutro de fibra oscura inscrito en el Registro de Operadores de la CNMC (RED TERRESTRE, subservicio FIBRA OSCURA), y actúa como medio propio y servicio técnico del Cabildo de Gran Canaria desde el 30 de junio de 2017.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida del Feria, 1",
+        "postal_code": "35012",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1091,
+          "lon": -15.4419
         },
-        "source_url": "https://www.sodetegc.org/portal-de-transparencia"
+        "source_url": "https://www.sodetegc.org/portal-de-transparencia/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
-        "url": "https://www.sodetegc.org/portal-de-transparencia",
+        "id": "sodetegc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia SODETEGC",
+        "url": "https://www.sodetegc.org/portal-de-transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "contratos",
+          "presupuestos",
+          "personal",
+          "retribuciones",
+          "telecomunicaciones"
         ],
         "machine_readable": true,
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "has_api": false,
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS"
         ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "last_updated": "2026-04",
+        "last_checked": "2026-05",
+        "license_summary": null
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
-        "https://www.sodetegc.org/portal-de-transparencia"
+        "https://www.sodetegc.org/portal-de-transparencia/",
+        "https://www.sodetegc.org/actividades-y-funciones/",
+        "https://www.sodetegc.org/servicio-fibra-oscura-transporte/",
+        "https://www.sodetegc.org/servicio-asistencia-tecnica/"
       ]
     },
-    "notes": null
+    "notes": "Acrónimo: SODETEGC. Accionista único: SPEGC (100%). Capital social: 939.900€ — constituida con 300.000€ en 2009, ampliada en 639.900€ el 7/12/2016 (inscrita RM el 2/03/2017). No participa en ninguna sociedad mercantil, fundación, consorcio ni asociación pública. No tiene entidades dependientes ni unidades administrativas. Declarada medio propio del Cabildo de Gran Canaria el 30/06/2017. Opera como Operador de RED TERRESTRE subservicio FIBRA OSCURA (CNMC). Plantilla: 2 puestos ocupados (laboral fijo) + 6 vacantes (laboral temporal) + 1 Director Gerente (Alta Dirección, contrato desde 12/02/2010). Consejo de Administración: 6 consejeros, cargo no retribuido salvo dietas por asistencia (máx. 95,98€/sesión en 2026). Sin personal eventual ni liberados sindicales. Sin aportaciones a planes de pensiones; seguro colectivo de accidente de trabajo por 12.020,24€ por trabajador (Convenio Oficinas y Despachos de Las Palmas). Presupuestos de personal publicados para ejercicios 2021–2026. Servicios: fibra oscura de transporte (alquiler/IRU), terminación terrestre de cable submarino (alquiler/IRU) y asistencia técnica al Cabildo. Indicadores SLA 2014–2021: 100% de cumplimiento en todos los ejercicios. NOC: 902 570881 / 928 949965 / noc@sodetegc.org. Canal de denuncias (Ley 2/2023): canaldenuncias@sodetegc.org. Plan de Medidas Antifraude publicado (Next Generation EU). Formatos del portal: HTML, PDF, ODT y ODS declarados explícitamente en todas las secciones. Última actualización del portal: 16/04/2026."
   },
   {
     "id": "valora_gestion_tributaria",
@@ -12727,73 +13485,118 @@
   },
   {
     "id": "titsa",
-    "name": "TITSA",
+    "name": "Transportes Interurbanos de Tenerife, S.A.",
+    "alternate_names": [
+      "TITSA",
+      "Transportes Interurbanos de Tenerife"
+    ],
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
+    "parent_entity_id": "cabildo_tenerife",
     "islands": [
       "Tenerife"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Empresa pública de transporte interurbano de Tenerife, con portal de transparencia propio y portal de open data con información reutilizable sobre movilidad, planificación del servicio, matrices origen-destino, parkings y expedientes adjudicados. Es relevante para el ecosistema canario por su papel en la movilidad insular y por exponer datos operativos y estadísticos en formatos reutilizables.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "TITSA",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Punta de Anaga, 1",
+        "postal_code": "38111",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.4636,
-          "lon": -16.2518
+          "lat": 28.4239,
+          "lon": -16.3155
         },
-        "source_url": "https://portaldetransparencia.titsa.com/index.php"
+        "source_url": "https://portaldetransparencia.titsa.com/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – TITSA",
-        "url": "https://portaldetransparencia.titsa.com/index.php",
+        "id": "titsa_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia TITSA",
+        "url": "https://portaldetransparencia.titsa.com/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia",
+          "cms"
         ],
-        "standards": [],
         "formats": [
           "HTML",
+          "PHP",
+          "PDF",
+          "ODT",
+          "DOCX",
+          "ODS",
+          "CSV"
+        ],
+        "topics": [
+          "institucional",
+          "normativa",
+          "economico_financiera",
+          "patrimonio",
+          "contratos",
+          "personal",
+          "solicitud_informacion_publica",
+          "quejas_reclamaciones",
+          "servicios",
+          "carta_servicios",
+          "estadisticas",
+          "canal_denuncias"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "titsa_open_data",
+        "kind": "open_data",
+        "name": "Open Data TITSA",
+        "url": "https://portaldetransparencia.titsa.com/index.php/76-estadisticas/482-open-data",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "cms"
+        ],
+        "formats": [
+          "ZIP",
+          "CSV",
+          "ODS",
+          "GTFS",
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "movilidad",
+          "transporte_publico",
+          "lineas",
+          "paradas",
+          "horarios",
+          "recorridos",
+          "matrices_origen_destino",
+          "parkings",
+          "expedientes_adjudicados"
         ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [],
+        "has_api": false,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://portaldetransparencia.titsa.com/index.php"
+        "https://portaldetransparencia.titsa.com/",
+        "https://portaldetransparencia.titsa.com/index.php/76-estadisticas/482-open-data",
+        "https://datos.tenerife.es/datos/conjuntos-de-datos/informacion-sobre-el-sistema-de-transporte-de-titsa-en-tenerife",
+        "https://datos.gob.es/es/catalogo/la0010696-informacion-sobre-el-sistema-de-transporte-de-titsa-en-tenerife"
       ]
     },
-    "notes": null
+    "notes": "Los ficheros adjuntos confirman GTFS, matrices origen-destino, dimensiones de paradas, líneas, títulos y calendarios, además de contratación y aparcamientos. La publicación indica actualización mensual y el portal de transparencia expone múltiples formatos reutilizables. Fecha de consulta: 2026-06."
   },
   {
     "id": "fundacion_canaria_general_de_la_universidad_de_la_laguna",
@@ -12936,74 +13739,86 @@
     "notes": null
   },
   {
-    "id": "fundacion_canaria_parque_cientifico_tecnologico_de_la_ulpgc",
-    "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
-    "entity_kind": "empresa_publica",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "id": "fcpct_ulpgc",
+    "name": "Fundación Canaria Parque Científico Tecnológico de la ULPGC",
+    "alternate_names": [
+      "FCPCT",
+      "Fundación Canaria Parque Científico Tecnológico",
+      "Fundación Canaria Parque Científico Tecnológico de la Universidad de Las Palmas de Gran Canaria"
+    ],
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "ulpgc",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Fundación pública dependiente de la Universidad de Las Palmas de Gran Canaria que actúa como nexo entre empresas innovadoras y centros de investigación, y gestiona infraestructuras y servicios de apoyo al ecosistema de innovación y emprendimiento en Gran Canaria. Dispone de portal de transparencia activo con información institucional, organizativa, económica, de personal, retribuciones, contratos, convenios, encomiendas, subvenciones y derecho de acceso.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
-        "postal_code": null,
-        "municipality": null,
+        "address": "C/ Practicante Ignacio Rodríguez, s/n, Edificio Polivalente III, Campus Universitario de Tafira",
+        "postal_code": "35017",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.08006632099615,
+          "lon": -15.45162364221795
         },
-        "source_url": "https://fpct.ulpgc.es/es/transparencia.html"
+        "source_url": "https://www.fpct.ulpgc.es/es/sobre-nosotros.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Fundación Canaria Parque Científico Tecnológico de la ULPGC FCPCT",
-        "url": "https://fpct.ulpgc.es/es/transparencia.html",
+        "id": "fcpct_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia FCPCT",
+        "url": "https://www.fpct.ulpgc.es/es/transparencia.html",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia",
+          "cms"
         ],
-        "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "DOCX",
+          "XLSX",
+          "ODS"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "institucional",
+          "organizativa",
+          "economico_financiera",
+          "personal",
+          "retribuciones",
+          "empleo_publico",
+          "contratos",
+          "contratos_menores",
+          "convenios",
+          "encomiendas",
+          "subvenciones",
+          "estadisticas",
+          "derecho_acceso"
         ],
-        "machine_readable": true,
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://fpct.ulpgc.es/es/transparencia.html"
+        "https://www.fpct.ulpgc.es/es/transparencia.html",
+        "https://www.fpct.ulpgc.es/es/sobre-nosotros.html",
+        "https://www.fpct.ulpgc.es/es/contacto.html",
+        "https://www.ulpgc.es/transparencia/entes-autonomos-dependientes-ulpgc"
       ]
     },
-    "notes": null
+    "notes": "La transparencia de la FCPCT se actualiza a 31/12/2025 en la mayoría de bloques consultados. El portal incluye enlace al trámite de solicitudes de acceso, información para reclamar ante el Comisionado, PMP, cuentas anuales 2019-2025, auditorías 2019-2024, contratos formalizados, contratos menores, convenios, encomiendas de gestión, subvenciones y registros de tratamiento de datos. La fundación declara actualización específica 31/12/2025 en institucional, organizativa, personal, retribuciones, contratos, convenios, ayudas y derecho de acceso. Fecha de consulta: 2026-06."
   },
   {
     "id": "ric_ulpgc_sau",
@@ -15323,84 +16138,286 @@
   },
   {
     "id": "aena",
-    "name": "AENA",
-    "alternate_names": [
-      "AENA Aeropuertos"
-    ],
+    "name": "Aena S.M.E., S.A.",
     "entity_kind": "empresa_publica",
     "scope": "estatal",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Gestor aeroportuario con estadísticas de tráfico aéreo muy útiles para los aeropuertos canarios.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Peonías 12, 28042 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.465,
-          "lon": -3.607
-        },
-        "source_url": "https://www.aena.es/es/estadisticas.html"
-      }
-    ],
+    "description": "Sociedad mercantil estatal gestora de la red de aeropuertos de interés general en España. Es relevante para Canarias por su actividad aeroportuaria directa, transparencia corporativa, sostenibilidad, estadísticas de tráfico aéreo y gobierno corporativo con impacto sobre el ecosistema aeroportuario del archipiélago.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "AENA Estadísticas",
-        "url": "https://www.aena.es/es/estadisticas.html",
-        "portal_status": "active",
+        "id": "transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia de Aena",
+        "url": "https://www.aena.es/es/corporativa/transparencia/transparencia.html",
         "technology": [
           "Custom"
         ],
-        "standards": [
-          "CSV",
-          "XLSX",
-          "PDF"
+        "topics": [
+          "transparencia",
+          "organizacion",
+          "informacion_economica_y_financiera",
+          "buen_gobierno",
+          "derecho_de_acceso"
         ],
         "formats": [
-          "CSV",
-          "XLSX",
+          "HTML",
           "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Portal documental de transparencia con publicación periódica de información institucional, organizativa y económico-financiera. No funciona como catálogo estructurado de datasets.",
+        "last_updated": null,
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "estadisticas_trafico_aereo",
+        "kind": "estadistica",
+        "name": "Aena Estadísticas de tráfico aéreo",
+        "url": "https://www.aena.es/es/estadisticas/inicio.html",
+        "technology": [
+          "Custom"
         ],
         "topics": [
           "transporte_aereo",
           "aeropuertos",
           "pasajeros",
           "operaciones",
-          "mercancias"
+          "mercancias",
+          "turismo"
         ],
-        "machine_readable": true,
+        "formats": [
+          "XLS",
+          "PDF"
+        ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta AENA",
-            "url": null,
-            "count": null
-          }
+        "dataset_count_note": "Publica informes estadísticos mensuales y anuales por aeropuerto y por red. La fuente no muestra un número estable de datasets.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "consultas_personalizadas",
+        "kind": "estadistica",
+        "name": "Consultas personalizadas",
+        "url": "https://www.aena.es/es/estadisticas/consultas-personalizadas.html",
+        "technology": [
+          "Portal de estadísticas"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "estadisticas",
+          "cuadros_de_mando",
+          "consultas_personalizadas",
+          "trafico_aereo",
+          "pasajeros",
+          "mercancias",
+          "companias_aereas",
+          "aeropuertos",
+          "destinos"
+        ],
+        "formats": [
+          "HTML"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Portal interactivo con registro para visualizar cuadros de mando y consultas personalizadas. No se aprecia descarga directa de datos desde la sección principal.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sostenibilidad",
+        "kind": "other",
+        "name": "Estrategia de Sostenibilidad de Aena",
+        "url": "https://www.aena.es/es/corporativa/sostenibilidad-ambiental/estrategia/estrategia-de-sostenibilidad.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "sostenibilidad",
+          "esg",
+          "medioambiente",
+          "gobernanza",
+          "informacion_no_financiera",
+          "ods"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Sección corporativa con estrategia 2021-2030, políticas y memorias anuales de sostenibilidad. No es un catálogo de datasets estructurados.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "principales_datos_indicadores",
+        "kind": "estadistica",
+        "name": "Principales datos e indicadores",
+        "url": "https://www.aena.es/es/accionistas-e-inversores/informacion-general/principales-datos-e-indicadores.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "pasajeros",
+          "ingresos",
+          "ebitda",
+          "beneficio",
+          "operaciones",
+          "trafico_aereo",
+          "indicadores_financieros"
+        ],
+        "formats": [
+          "HTML",
+          "XLS",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Página de visualización de indicadores anuales y trimestrales con gráficos y descargas documentales asociadas. Canarias aparece como grupo agregado en el desglose.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "publicaciones_financieras_operativas",
+        "kind": "estadistica",
+        "name": "Publicaciones financieras y operativas",
+        "url": "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/publicaciones-financieras-y-operativas.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "cuentas_anuales",
+          "informe_gestion",
+          "resultados",
+          "presentaciones_inversores",
+          "informacion_financiera"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLS"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Agrupa resultados, presentaciones e informes periódicos anuales, semestrales y trimestrales.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "presupuestos_generales_estado",
+        "kind": "estadistica",
+        "name": "Presupuestos Generales del Estado – Aena consolidado",
+        "url": "https://www.sepg.pap.hacienda.gob.es/Presup/PGE2023/MaestroDocumentosPGE-ROM/N23ER500N009720.htm",
+        "technology": [
+          "SEPG PGE ROM"
+        ],
+        "topics": [
+          "presupuestos",
+          "cuenta_de_resultados",
+          "flujos_de_efectivo",
+          "balance",
+          "sector_publico_empresarial"
+        ],
+        "formats": [
+          "HTML",
+          "XML",
+          "CSV",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Los estados presupuestarios del Aena consolidado están disponibles en HTML, XML, CSV y PDF dentro del portal de los Presupuestos Generales del Estado.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "cnmv_ipp_aena",
+        "kind": "other",
+        "name": "Visualización y descarga de informes IPP – Aena (CNMV)",
+        "url": "https://www.cnmv.es/ipps",
+        "technology": [
+          "CNMV IPP/XBRL"
+        ],
+        "topics": [
+          "informacion_financiera_intermedia",
+          "xbrl",
+          "cnmv",
+          "informes_regulados",
+          "aena"
+        ],
+        "formats": [
+          "XBRL",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "La herramienta permite seleccionar informes IPP de Aena y descargar ficheros XBRL originales, además de visualizar informes en la interfaz.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "transparencia_fiscal",
+        "kind": "other",
+        "name": "Transparencia fiscal de Aena",
+        "url": "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/transparencia-fiscal/transparencia-fiscal.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "transparencia_fiscal",
+          "politica_fiscal",
+          "contribucion_tributaria",
+          "contribucion_tributaria_por_territorios",
+          "buenas_practicas_tributarias",
+          "resultado_contable",
+          "impuesto_sobre_sociedades",
+          "litigios_fiscales",
+          "paraisos_fiscales",
+          "blanqueo_de_capitales",
+          "conducta_etica",
+          "auditor_externo",
+          "gobierno_corporativo",
+          "cumplimiento_normativo",
+          "canarias"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Bloque temático único que agrupa los subapartados: Política Fiscal Corporativa, Contribución tributaria por impuestos, Contribución tributaria por territorios, Buenas prácticas tributarias, Resultado contable y gasto del impuesto de sociedades, Litigios, Paraísos fiscales, Blanqueo de capitales, Conducta ética, Compromiso con la transparencia fiscal y Relación con el auditor externo.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.aena.es/es/estadisticas.html"
+        "https://www.aena.es/es/corporativa/transparencia/transparencia.html",
+        "https://www.aena.es/es/estadisticas/inicio.html",
+        "https://www.aena.es/es/estadisticas/consultas-personalizadas.html",
+        "https://www.aena.es/es/corporativa/sostenibilidad-ambiental/estrategia/estrategia-de-sostenibilidad.html",
+        "https://www.aena.es/es/accionistas-e-inversores/informacion-general/principales-datos-e-indicadores.html",
+        "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/publicaciones-financieras-y-operativas.html",
+        "https://www.sepg.pap.hacienda.gob.es/Presup/PGE2023/MaestroDocumentosPGE-ROM/N23ER500N009720.htm",
+        "https://www.cnmv.es/ipps",
+        "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/transparencia-fiscal/transparencia-fiscal.html"
       ]
     },
-    "notes": null
+    "notes": "Aena gestiona directamente los aeropuertos canarios (Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote, Fuerteventura, La Palma, La Gomera y El Hierro). El portal estadístico publica informes mensuales y anuales de tráfico aéreo en XLS y PDF con desglose por aeropuerto, siendo Canarias uno de los grupos del desglose. El bloque de transparencia fiscal agrupa once subapartados verificados individualmente, incluyendo contribución tributaria, buenas prácticas tributarias, resultado contable y gasto del impuesto de sociedades, litigios, paraísos fiscales, blanqueo de capitales, conducta ética, compromiso con la transparencia fiscal y relación con el auditor externo. Los Presupuestos Generales del Estado incluyen a Aena consolidado con descarga en HTML, XML, CSV y PDF. La herramienta IPP de la CNMV permite descarga de informes XBRL de Aena. El portal de consultas personalizadas requiere registro y no ofrece descarga directa visible desde la pantalla principal. Fecha de consulta: 2026-06."
   },
   {
     "id": "sepe",
@@ -15485,81 +16502,151 @@
   {
     "id": "ministerio_interior",
     "name": "Ministerio del Interior",
-    "alternate_names": [
-      "Interior"
-    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio competente en seguridad, orden público y estadísticas de criminalidad, con impacto territorial en Canarias.",
+    "description": "Ministerio estatal competente en seguridad ciudadana, extranjería, protección civil, tráfico, política interior, apoyo a víctimas del terrorismo, protección internacional y coordinación estadística ministerial. Para Canarias es relevante como fuente oficial de estadísticas, anuarios, metodologías, transparencia y documentación institucional.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "C/ Amador de los Ríos 7, 28071 Madrid",
-        "postal_code": null,
+        "address": "Calle Amador de los Ríos, 7",
+        "postal_code": "28010",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.428,
-          "lon": -3.684
+          "lat": 40.4274,
+          "lon": -3.6913
         },
-        "source_url": "https://www.interior.gob.es/opencms/en/inicio"
+        "source_url": "https://www.interior.gob.es/opencms/es/inicio/"
       }
     ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "https://www.interior.gob.es/opencms/es/inicio/",
+        "https://www.interior.gob.es/opencms/es/el-ministerio/organigrama/",
+        "https://sede.interior.gob.es/portal/sede/informacion-general/datos-abiertos",
+        "https://transparencia.gob.es/",
+        "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/",
+        "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/estadisticas-del-ministerio-del-interior/",
+        "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/metodologias-de-las-estadisticas-del-ministerio-del-interior/",
+        "https://datos.gob.es/es/iniciativas/portal-datos-abiertos-del-ministerio-del-interior"
+      ]
+    },
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "other",
-        "name": "Ministerio del Interior",
-        "url": "https://www.interior.gob.es/opencms/en/inicio",
-        "portal_status": "active",
+        "id": "portal_datos_abiertos_interior",
+        "kind": "open_data",
+        "name": "Portal de Datos Abiertos",
+        "url": "https://sede.interior.gob.es/portal/sede/informacion-general/datos-abiertos",
         "technology": [
-          "Custom"
+          "Web"
         ],
         "standards": [
           "HTML",
-          "CSV",
           "PDF"
         ],
         "formats": [
           "HTML",
-          "CSV",
           "PDF"
         ],
         "topics": [
+          "datos_abiertos",
+          "reutilizacion",
           "seguridad",
-          "criminalidad",
-          "orden_publico"
+          "trafico",
+          "extranjeria",
+          "proteccion_civil",
+          "penitenciario"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta Interior",
-            "url": null,
-            "count": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "portal_transparencia_interior",
+        "kind": "transparencia",
+        "name": "Portal de transparencia",
+        "url": "https://transparencia.gob.es/",
+        "technology": [
+          "Web"
         ],
+        "standards": [
+          "HTML"
+        ],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "transparencia",
+          "organigrama",
+          "normativa",
+          "estructura",
+          "empleo_publico"
+        ],
+        "machine_readable": false,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
+      },
+      {
+        "id": "estadistica_interior",
+        "kind": "estadistica",
+        "name": "Anuarios y estadísticas",
+        "url": "https://www.interior.gob.es/opencms/es/archivos-y-documentacion/documentacion-y-publicaciones/anuarios-y-estadisticas/",
+        "technology": [
+          "Web"
+        ],
+        "standards": [
+          "HTML",
+          "PDF",
+          "ZIP"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ZIP"
+        ],
+        "topics": [
+          "estadistica",
+          "anuarios",
+          "seguridad",
+          "trafico",
+          "violencia_de_genero",
+          "asilo",
+          "migracion",
+          "prision",
+          "drogas",
+          "armas",
+          "metodologia"
+        ],
+        "machine_readable": false,
+        "has_api": null,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
         "last_checked": "2026-05"
       }
     ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.interior.gob.es/opencms/en/inicio"
-      ]
-    },
-    "notes": null
+    "notes": "La sección de Archivos y Documentación incluye servicios al ciudadano y a la administración, más de 100 bibliotecas y centros de documentación, publicaciones y enlaces de interés. La sección de Anuarios Estadísticos ofrece la serie histórica en PDF desde 1989 hasta 2024, con información reutilizable desde 2012. La sección de Estadísticas incluye la coordinación estadística, operaciones en el Inventario de Operaciones Estadísticas del INE, estadísticas del Programa anual 2025 del Plan Estadístico Nacional y resultados difundidos por varios organismos. La sección de Metodologías reúne proyectos técnicos e informes metodológicos estandarizados para las principales operaciones estadísticas. El enlace de transparencia redirige al portal general transparencia.gob.es. El portal de datos abiertos está alojado en la Sede electrónica del ministerio y enlaza a portales estadísticos oficiales y PDFs."
   },
   {
     "id": "ministerio_exteriores",
@@ -17268,88 +18355,6 @@
       ]
     },
     "notes": null
-  },
-  {
-    "id": "ministerio_interior",
-    "name": "Ministerio del Interior",
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Ministerio estatal con datos abiertos sobre seguridad, estadística electoral, tráfico y DGT. Incluye datos de accidentalidad vial en Canarias y resultados electorales por municipio.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Calle Amador de los Ríos, 7",
-        "postal_code": "28010",
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.4274,
-          "lon": -3.6913
-        },
-        "source_url": "https://www.interior.gob.es/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Interior en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-del-interior",
-        "portal_status": "active",
-        "technology": [
-          "datos.gob.es / CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
-        ],
-        "topics": [
-          "Seguridad",
-          "Sector público",
-          "Transporte",
-          "Legislación"
-        ],
-        "machine_readable": true,
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Interior en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-del-interior",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
-        "licenses": [
-          {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
-            "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.interior.gob.es/",
-        "https://datos.gob.es/"
-      ]
-    },
-    "notes": "Incluye datos electorales (infoelectoral) con resultados desagregados para los municipios canarios."
   },
   {
     "id": "ministerio_transformacion_digital",
