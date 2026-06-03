@@ -2621,9 +2621,7 @@
         "dataset_count_note": null,
         "last_updated": "2026-04",
         "license_summary": null,
-        "licenses": [],
-        "notes": "Portal con información institucional, organizativa, económica, de gobierno y derecho de acceso. La sede electrónica del ayuntamiento está basada en STA (Servicios Telemáticos Avanzados).",
-        "source_url": "https://transparencia.ayuntamientodetias.es/"
+        "licenses": []
       },
       {
         "id": "sede_electronica_tias",
@@ -2648,15 +2646,14 @@
           "notificaciones",
           "carpeta_ciudadana"
         ],
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "licenses": [],
-        "notes": "Sede electrónica titularidad del Ayuntamiento de Tías. El portal indica que facilita el acceso a los servicios de administración electrónica y la tramitación telemática.",
-        "source_url": "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_TITULARSEDE"
+        "licenses": []
       }
     ],
     "verification": {
@@ -2670,7 +2667,7 @@
         "https://sede.ayuntamientodetias.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS_INITRAMITACION"
       ]
     },
-    "notes": "Entidad normalizada con portal de transparencia propio y sede electrónica municipal. STA se conserva únicamente como nota técnica de plataforma."
+    "notes": "Portal de transparencia con información institucional, organizativa, económica y de derecho de acceso. La sede electrónica municipal facilita trámites, registro, solicitudes, notificaciones y carpeta ciudadana. La plataforma STA se conserva como nota técnica de la sede electrónica."
   },
   {
     "id": "ayuntamiento_valle_gran_rey",
@@ -3030,7 +3027,7 @@
     "islands": [
       "La Gomera"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Alajeró integrado en la sede electrónica. Publica obligaciones de transparencia y documentos internos en HTML y PDF. No dispone de un portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Alajeró, en La Gomera. Su sede electrónica integra el portal de transparencia y el catálogo de trámites, con publicación de obligaciones de transparencia y documentos en HTML y PDF.",
     "locations": [
       {
         "kind": "headquarters",
@@ -3041,7 +3038,8 @@
         "coordinates": {
           "lat": 28.0617,
           "lon": -17.2236
-        }
+        },
+        "source_url": "https://www.ayuntamientoalajero.es/index.php/el-ayto/administracion"
       }
     ],
     "portals": [
@@ -3050,30 +3048,39 @@
         "kind": "transparencia",
         "name": "Portal de transparencia del Ayuntamiento de Alajeró",
         "url": "https://sedeelectronica.ayuntamientoalajero.es/transparencia/datos/catalogo",
-        "technology": "Portal Transparencia",
+        "technology": [
+          "Portal Transparencia"
+        ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración",
-          "Reutilización de la información"
+          "transparencia",
+          "sector_publico",
+          "administracion",
+          "reutilizacion_de_la_informacion"
         ],
         "formats": [
           "HTML",
           "PDF"
         ],
-        "machine_readable": true,
-        "has_api": false
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": []
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
-        "https://sedeelectronica.ayuntamientoalajero.es/home",
+        "https://www.ayuntamientoalajero.es",
+        "https://sedeelectronica.ayuntamientoalajero.es",
         "https://sedeelectronica.ayuntamientoalajero.es/transparencia/datos/catalogo"
       ]
     },
-    "notes": "El catálogo visible está basado en un aviso legal/condiciones de reutilización dentro de la sede electrónica. Los documentos publicados son HTML y PDF; no se aprecia CKAN ni API. Fecha de consulta: 2026-06."
+    "notes": "La sede electrónica del Ayuntamiento de Alajeró indica acceso al portal de transparencia y al catálogo completo de trámites. El recurso parece documental e informativo, sin CKAN ni API visible; se mantiene como portal de transparencia integrado en la sede electrónica."
   },
   {
     "id": "ayuntamiento_antigua",
@@ -10961,10 +10968,11 @@
     "name": "Gorona del Viento El Hierro, S.A.",
     "entity_kind": "empresa_publica",
     "scope": "insular",
+    "parent_entity_id": null,
     "islands": [
       "El Hierro"
     ],
-    "description": "Sociedad mercantil pública mixta gestora de la Central Hidroeólica de El Hierro, cuyo objetivo es abastecer la isla con energía eléctrica 100% renovable (agua y viento). Capital: Cabildo Insular de El Hierro (60%), Instituto Tecnológico de Canarias/Gobierno de Canarias (10%) y Endesa (30%). Inaugurada el 27 de julio de 2014. Obtuvo puntuación máxima (10/10) en la evaluación del Comisionado de Transparencia de Canarias en 2026.",
+    "description": "Sociedad mercantil pública mixta gestora de la Central Hidroeólica de El Hierro, orientada al abastecimiento eléctrico renovable de la isla. Publica información de transparencia corporativa y documentación institucional relevante para el ecosistema público insular.",
     "portals": [
       {
         "id": "gorona_transparencia",
@@ -10983,8 +10991,8 @@
           "medio_ambiente",
           "energia"
         ],
-        "machine_readable": true,
         "has_api": false,
+        "apis": [],
         "formats": [
           "CSV",
           "ODS",
@@ -10995,10 +11003,12 @@
           "DOCX",
           "TXT"
         ],
-        "last_checked": "2026-05",
-        "last_updated": "2025-03",
         "dataset_count": null,
-        "license_summary": null
+        "dataset_count_note": null,
+        "last_updated": "2025-03",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
       },
       {
         "id": "gorona_transparencia_web",
@@ -11015,23 +11025,26 @@
           "contratos",
           "personal"
         ],
-        "machine_readable": false,
         "has_api": false,
-        "formats": null,
-        "last_checked": "2026-05",
-        "last_updated": null,
+        "apis": [],
+        "formats": [],
         "dataset_count": null,
-        "license_summary": null
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "verified",
+      "status": "estimated",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.goronadelviento.es",
         "https://www.goronadelviento.es/transparencia/informacion-geografica/",
         "https://www.idae.es/conozcanos/proyectos-de-excelencia/central-hidro-eolica-de-el-hierro-gorona-del-viento",
-        "https://elhierrohoy.es/cabildo-el-hierro-gorona-del-viento-maxima-nota-transparencia/"
+        "https://www.goronadelviento.es/portal-de-transparencia-old/",
+        "https://www.goronadelviento.es/gorona-del-viento-premio-excelencia-transformacion-digital/"
       ]
     },
     "notes": "Capital social: Cabildo Insular de El Hierro 60%, ITC/Gobierno de Canarias 10%, Endesa 30%. Sede: C/ Provisor Magdaleno 8-10, 38900 Valverde (El Hierro). Potencia instalada: parque eólico 11,5 MW, central hidroeléctrica 11,32 MW. Portal de transparencia desarrollado y mantenido por GESGOCOM S.L. (contrato menor adjudicado el 18/12/2025, importe 3.500€, duración 12 meses). El portal incluye asistente conversacional con arquitectura RAG (herramientas: consultardatos + buscar_documentos) que indexa contenido textual pero no ficheros adjuntos. Todos los indicadores son descargables en CSV, ODS, XLSX, JSON, XML, Markdown, DOCX y TXT — portal más avanzado en reutilización de datos de las entidades procesadas hasta 2026-05. Puntuación máxima (10/10) del Comisionado de Transparencia de Canarias, mayo 2026."
@@ -11391,7 +11404,7 @@
         ],
         "machine_readable": false,
         "has_api": false,
-        "formats": null,
+        "formats": [],
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
@@ -12095,7 +12108,7 @@
           "organizacion"
         ],
         "has_api": false,
-        "formats": null,
+        "formats": [],
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
@@ -12255,7 +12268,7 @@
     "notes": null
   },
   {
-    "id": "INFECAR",
+    "id": "infecar",
     "name": "Institución Ferial de Canarias, INFECAR",
     "alternate_names": [
       "institucion_ferial_de_canarias_infecar",
@@ -12692,7 +12705,7 @@
     "notes": null
   },
   {
-    "id": "SODETEGC",
+    "id": "sodetegc",
     "name": "Sociedad para el Desarrollo de las Telecomunicaciones de Gran Canaria, S.A.U.",
     "entity_kind": "empresa_publica",
     "scope": "insular",
@@ -15904,84 +15917,286 @@
   },
   {
     "id": "aena",
-    "name": "AENA",
-    "alternate_names": [
-      "AENA Aeropuertos"
-    ],
+    "name": "Aena S.M.E., S.A.",
     "entity_kind": "empresa_publica",
     "scope": "estatal",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Gestor aeroportuario con estadísticas de tráfico aéreo muy útiles para los aeropuertos canarios.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Peonías 12, 28042 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.465,
-          "lon": -3.607
-        },
-        "source_url": "https://www.aena.es/es/estadisticas.html"
-      }
-    ],
+    "description": "Sociedad mercantil estatal gestora de la red de aeropuertos de interés general en España. Es relevante para Canarias por su actividad aeroportuaria directa, transparencia corporativa, sostenibilidad, estadísticas de tráfico aéreo y gobierno corporativo con impacto sobre el ecosistema aeroportuario del archipiélago.",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "AENA Estadísticas",
-        "url": "https://www.aena.es/es/estadisticas.html",
-        "portal_status": "active",
+        "id": "transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia de Aena",
+        "url": "https://www.aena.es/es/corporativa/transparencia/transparencia.html",
         "technology": [
           "Custom"
         ],
-        "standards": [
-          "CSV",
-          "XLSX",
-          "PDF"
+        "topics": [
+          "transparencia",
+          "organizacion",
+          "informacion_economica_y_financiera",
+          "buen_gobierno",
+          "derecho_de_acceso"
         ],
         "formats": [
-          "CSV",
-          "XLSX",
+          "HTML",
           "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Portal documental de transparencia con publicación periódica de información institucional, organizativa y económico-financiera. No funciona como catálogo estructurado de datasets.",
+        "last_updated": null,
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "estadisticas_trafico_aereo",
+        "kind": "estadistica",
+        "name": "Aena Estadísticas de tráfico aéreo",
+        "url": "https://www.aena.es/es/estadisticas/inicio.html",
+        "technology": [
+          "Custom"
         ],
         "topics": [
           "transporte_aereo",
           "aeropuertos",
           "pasajeros",
           "operaciones",
-          "mercancias"
+          "mercancias",
+          "turismo"
         ],
-        "machine_readable": true,
+        "formats": [
+          "XLS",
+          "PDF"
+        ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta AENA",
-            "url": null,
-            "count": null
-          }
+        "dataset_count_note": "Publica informes estadísticos mensuales y anuales por aeropuerto y por red. La fuente no muestra un número estable de datasets.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "consultas_personalizadas",
+        "kind": "estadistica",
+        "name": "Consultas personalizadas",
+        "url": "https://www.aena.es/es/estadisticas/consultas-personalizadas.html",
+        "technology": [
+          "Portal de estadísticas"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "estadisticas",
+          "cuadros_de_mando",
+          "consultas_personalizadas",
+          "trafico_aereo",
+          "pasajeros",
+          "mercancias",
+          "companias_aereas",
+          "aeropuertos",
+          "destinos"
+        ],
+        "formats": [
+          "HTML"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Portal interactivo con registro para visualizar cuadros de mando y consultas personalizadas. No se aprecia descarga directa de datos desde la sección principal.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sostenibilidad",
+        "kind": "other",
+        "name": "Estrategia de Sostenibilidad de Aena",
+        "url": "https://www.aena.es/es/corporativa/sostenibilidad-ambiental/estrategia/estrategia-de-sostenibilidad.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "sostenibilidad",
+          "esg",
+          "medioambiente",
+          "gobernanza",
+          "informacion_no_financiera",
+          "ods"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Sección corporativa con estrategia 2021-2030, políticas y memorias anuales de sostenibilidad. No es un catálogo de datasets estructurados.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "principales_datos_indicadores",
+        "kind": "estadistica",
+        "name": "Principales datos e indicadores",
+        "url": "https://www.aena.es/es/accionistas-e-inversores/informacion-general/principales-datos-e-indicadores.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "pasajeros",
+          "ingresos",
+          "ebitda",
+          "beneficio",
+          "operaciones",
+          "trafico_aereo",
+          "indicadores_financieros"
+        ],
+        "formats": [
+          "HTML",
+          "XLS",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Página de visualización de indicadores anuales y trimestrales con gráficos y descargas documentales asociadas. Canarias aparece como grupo agregado en el desglose.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "publicaciones_financieras_operativas",
+        "kind": "estadistica",
+        "name": "Publicaciones financieras y operativas",
+        "url": "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/publicaciones-financieras-y-operativas.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "cuentas_anuales",
+          "informe_gestion",
+          "resultados",
+          "presentaciones_inversores",
+          "informacion_financiera"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLS"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Agrupa resultados, presentaciones e informes periódicos anuales, semestrales y trimestrales.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "presupuestos_generales_estado",
+        "kind": "estadistica",
+        "name": "Presupuestos Generales del Estado – Aena consolidado",
+        "url": "https://www.sepg.pap.hacienda.gob.es/Presup/PGE2023/MaestroDocumentosPGE-ROM/N23ER500N009720.htm",
+        "technology": [
+          "SEPG PGE ROM"
+        ],
+        "topics": [
+          "presupuestos",
+          "cuenta_de_resultados",
+          "flujos_de_efectivo",
+          "balance",
+          "sector_publico_empresarial"
+        ],
+        "formats": [
+          "HTML",
+          "XML",
+          "CSV",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Los estados presupuestarios del Aena consolidado están disponibles en HTML, XML, CSV y PDF dentro del portal de los Presupuestos Generales del Estado.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "cnmv_ipp_aena",
+        "kind": "other",
+        "name": "Visualización y descarga de informes IPP – Aena (CNMV)",
+        "url": "https://www.cnmv.es/ipps",
+        "technology": [
+          "CNMV IPP/XBRL"
+        ],
+        "topics": [
+          "informacion_financiera_intermedia",
+          "xbrl",
+          "cnmv",
+          "informes_regulados",
+          "aena"
+        ],
+        "formats": [
+          "XBRL",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "La herramienta permite seleccionar informes IPP de Aena y descargar ficheros XBRL originales, además de visualizar informes en la interfaz.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "transparencia_fiscal",
+        "kind": "other",
+        "name": "Transparencia fiscal de Aena",
+        "url": "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/transparencia-fiscal/transparencia-fiscal.html",
+        "technology": [
+          "Custom"
+        ],
+        "topics": [
+          "transparencia_fiscal",
+          "politica_fiscal",
+          "contribucion_tributaria",
+          "contribucion_tributaria_por_territorios",
+          "buenas_practicas_tributarias",
+          "resultado_contable",
+          "impuesto_sobre_sociedades",
+          "litigios_fiscales",
+          "paraisos_fiscales",
+          "blanqueo_de_capitales",
+          "conducta_etica",
+          "auditor_externo",
+          "gobierno_corporativo",
+          "cumplimiento_normativo",
+          "canarias"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "has_api": false,
+        "dataset_count": null,
+        "dataset_count_note": "Bloque temático único que agrupa los subapartados: Política Fiscal Corporativa, Contribución tributaria por impuestos, Contribución tributaria por territorios, Buenas prácticas tributarias, Resultado contable y gasto del impuesto de sociedades, Litigios, Paraísos fiscales, Blanqueo de capitales, Conducta ética, Compromiso con la transparencia fiscal y Relación con el auditor externo.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.aena.es/es/estadisticas.html"
+        "https://www.aena.es/es/corporativa/transparencia/transparencia.html",
+        "https://www.aena.es/es/estadisticas/inicio.html",
+        "https://www.aena.es/es/estadisticas/consultas-personalizadas.html",
+        "https://www.aena.es/es/corporativa/sostenibilidad-ambiental/estrategia/estrategia-de-sostenibilidad.html",
+        "https://www.aena.es/es/accionistas-e-inversores/informacion-general/principales-datos-e-indicadores.html",
+        "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/publicaciones-financieras-y-operativas.html",
+        "https://www.sepg.pap.hacienda.gob.es/Presup/PGE2023/MaestroDocumentosPGE-ROM/N23ER500N009720.htm",
+        "https://www.cnmv.es/ipps",
+        "https://www.aena.es/es/accionistas-e-inversores/informacion-economico-financiera/transparencia-fiscal/transparencia-fiscal.html"
       ]
     },
-    "notes": null
+    "notes": "Aena gestiona directamente los aeropuertos canarios (Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote, Fuerteventura, La Palma, La Gomera y El Hierro). El portal estadístico publica informes mensuales y anuales de tráfico aéreo en XLS y PDF con desglose por aeropuerto, siendo Canarias uno de los grupos del desglose. El bloque de transparencia fiscal agrupa once subapartados verificados individualmente, incluyendo contribución tributaria, buenas prácticas tributarias, resultado contable y gasto del impuesto de sociedades, litigios, paraísos fiscales, blanqueo de capitales, conducta ética, compromiso con la transparencia fiscal y relación con el auditor externo. Los Presupuestos Generales del Estado incluyen a Aena consolidado con descarga en HTML, XML, CSV y PDF. La herramienta IPP de la CNMV permite descarga de informes XBRL de Aena. El portal de consultas personalizadas requiere registro y no ofrece descarga directa visible desde la pantalla principal. Fecha de consulta: 2026-06."
   },
   {
     "id": "sepe",
