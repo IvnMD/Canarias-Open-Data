@@ -5933,30 +5933,78 @@
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Puntagorda. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Puntagorda, en la isla de La Palma. El portal de transparencia está integrado dentro de la sede electrónica y muestra un índice temático amplio con documentos institucionales, organizativos, económicos, contractuales, de subvenciones, ordenación del territorio, estadística y derecho de acceso.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Puntagorda",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Av. la Constitución, 6",
+        "postal_code": "38789",
+        "municipality": "Puntagorda",
         "island": "La Palma",
         "coordinates": {
-          "lat": 28.7728,
-          "lon": -17.9803
+          "lat": 28.765919,
+          "lon": -17.979893
         },
-        "source_url": "https://puntagorda.sedelectronica.es/transparency"
+        "source_url": "https://www.puntagorda.es/local/ayuntamiento-de-puntagorda/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Puntagorda",
+        "id": "portal_transparencia_puntagorda",
+        "kind": "transparencia",
+        "name": "Portal de transparencia",
         "url": "https://puntagorda.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "JPEG",
+          "DOC"
+        ],
+        "topics": [
+          "institucional",
+          "organizativa",
+          "personal",
+          "empleo_publico",
+          "retribuciones",
+          "normativa",
+          "servicios_y_procedimientos",
+          "economica",
+          "patrimonio",
+          "planificacion",
+          "obras_publicas",
+          "contratos",
+          "convenios",
+          "subvenciones",
+          "ordenacion_del_territorio",
+          "estadistica",
+          "derecho_de_acceso",
+          "consulta_publica",
+          "eventos_y_avisos",
+          "proyectos_diversos"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Índice temático amplio con documentos descargables y previsualizaciones, pero sin API ni catálogo de datos abiertos estructurado.",
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_puntagorda",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://puntagorda.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
         ],
         "standards": [],
         "formats": [
@@ -5964,35 +6012,38 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "tramitacion",
+          "registro",
+          "padron",
+          "contribuyentes",
+          "quejas_y_sugerencias",
+          "participacion_ciudadana",
+          "gobierno_abierto"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "La sede aloja el portal de transparencia y trámites ciudadanos asociados.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://puntagorda.sedelectronica.es/transparency"
+        "https://www.puntagorda.es/local/ayuntamiento-de-puntagorda/",
+        "https://puntagorda.sedelectronica.es/",
+        "https://puntagorda.sedelectronica.es/transparency",
+        "https://puntagorda.sedelectronica.es/catalog/t/cb08f2a7-e5f7-42eb-bbfa-13a2b485e606",
+        "https://puntagorda.sedelectronica.es/catalog/t/eec1d111-c724-4967-b122-077375011648",
+        "https://puntagorda.sedelectronica.es/preview-document/d7e5bfb6-acc3-4d12-ba0d-fa499f796544/"
       ]
     },
-    "notes": null
+    "notes": "El portal de transparencia aparece integrado en la sede electrónica, con fecha de actualización 31/12/2025 y categorías visibles por bloques temáticos. Se han verificado documentos descargables y previsualizados en HTML, PDF, JPEG y DOC (Word 97/2003). La sección incluye mecanismos de acceso a la información pública y participación normativa. Fecha de consulta: 2026-06."
   },
   {
     "id": "ayuntamiento_puntallana",
@@ -6974,76 +7025,136 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_tazacorte",
-    "name": "Ayuntamiento de Tazacorte",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "La Palma"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Tazacorte. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Tazacorte",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Palma",
-        "coordinates": {
-          "lat": 28.6428,
-          "lon": -17.9369
-        },
-        "source_url": "https://transparencia.tazacorte.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tazacorte",
-        "url": "https://transparencia.tazacorte.es",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "machine_readable": true,
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparencia.tazacorte.es"
-      ]
+ {
+  "id": "ayuntamiento_tazacorte",
+  "name": "Ayuntamiento de Tazacorte",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "parent_entity_id": null,
+  "islands": ["La Palma"],
+  "description": "Ayuntamiento de Tazacorte, en la isla de La Palma. Dispone de un portal de transparencia propio y de un portal de transparencia integrado en la sede electrónica. El portal propio concentra información institucional, económica, normativa, contractual, de subvenciones y de rendición de cuentas. El portal de la sede electrónica ofrece navegación HTML, documentos PDF y algunos documentos DOCX previsualizados.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Primero de Mayo, 1",
+      "postal_code": "38770",
+      "municipality": "Villa y Puerto de Tazacorte",
+      "island": "La Palma",
+      "coordinates": {
+        "lat": 28.6489,
+        "lon": -17.9304
+      },
+      "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codUnico=..."
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_transparencia_tazacorte",
+      "kind": "transparencia",
+      "name": "Portal de transparencia",
+      "url": "https://transparencia.tazacorte.es",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["HTML", "PDF", "ODT", "TXT", "XLSX", "ODS", "CSV", "JSON", "DOC"],
+      "topics": [
+        "institucional",
+        "organizativa",
+        "económica",
+        "retribuciones",
+        "presupuestos",
+        "actas",
+        "normativa",
+        "contratos",
+        "subvenciones",
+        "cuentas_anuales",
+        "canal_interno",
+        "participacion"
+      ],
+      "machine_readable": false,
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal propio con múltiples secciones y formatos variados de descarga; incluye documentos estructurados y tablas de datos.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "portal_transparencia_sede_tazacorte",
+      "kind": "transparencia",
+      "name": "Portal de transparencia en sede electrónica",
+      "url": "https://tazacorte.sedelectronica.es/transparency",
+      "portal_status": "active",
+      "technology": ["sedelectronica"],
+      "standards": [],
+      "formats": ["HTML", "PDF", "DOCX"],
+      "topics": [
+        "institucional",
+        "normativa",
+        "económica",
+        "ayudas_y_subvenciones",
+        "patrimonio",
+        "contratación",
+        "urbanismo",
+        "obras_publicas",
+        "medio_ambiente",
+        "atencion_ciudadano"
+      ],
+      "machine_readable": false,
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia con estructura HTML y documentos previsualizados, principalmente PDF y algunos DOCX.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "sede_electronica_tazacorte",
+      "kind": "other",
+      "name": "Sede Electrónica",
+      "url": "https://tazacorte.sedelectronica.es",
+      "portal_status": "active",
+      "technology": ["sedelectronica"],
+      "standards": [],
+      "formats": ["HTML", "PDF"],
+      "topics": [
+        "tramitacion",
+        "registro",
+        "expedientes",
+        "buzon_electronico",
+        "perfil_del_contratante"
+      ],
+      "machine_readable": false,
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Sede electrónica con acceso a trámites y servicios administrativos, que hospeda el portal de transparencia.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://transparencia.tazacorte.es",
+      "https://tazacorte.sedelectronica.es/transparency",
+      "https://tazacorte.sedelectronica.es",
+      "https://www.tazacorte.es/web/",
+      "https://transparencia.tazacorte.es/accesibilidad/",
+      "https://transparencia.tazacorte.es/contratos/informacion-necesaria-conveniente/",
+      "https://transparencia.tazacorte.es/contratos/contratos-formalizados/",
+      "https://transparencia.tazacorte.es/contratos/licitaciones-en-curso/"
+    ]
   },
+  "notes": "El portal propio es claramente el más completo y presenta formatos reutilizables diversos. En la sede electrónica el portal de transparencia es más simple, con navegación HTML, enlaces y documentos PDF, además de algún DOCX previsualizado. Se han verificado secciones como institucional, normativa, económica, ayudas y subvenciones, patrimonio, contratación, urbanismo y accesibilidad. Fecha de consulta: 2026-06."
+},
   {
     "id": "ayuntamiento_tegueste",
     "name": "Ayuntamiento de Tegueste",
