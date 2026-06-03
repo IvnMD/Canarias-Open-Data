@@ -5193,30 +5193,73 @@
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de La Orotava. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de La Orotava, Tenerife. Dispone de web municipal, portal de transparencia, sede electrónica y recursos temáticos de información pública, incluyendo un apartado municipal de calidad del agua que enlaza a resultados del SINAC por zonas de abastecimiento del municipio.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Orotava",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza del Ayuntamiento, 1",
+        "postal_code": "38300",
+        "municipality": "La Orotava",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.3894,
-          "lon": -16.5239
+          "lat": 28.3904,
+          "lon": -16.5258
         },
-        "source_url": "https://www.laorotava.es/ayuntamiento"
+        "source_url": "https://www.laorotava.es/es/ayuntamiento"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de La Orotava",
-        "url": "https://www.laorotava.es/ayuntamiento",
+        "id": "portal_transparencia_la_orotava",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia",
+        "url": "https://laorotava.sedelectronica.es/transparency/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLS",
+          "XLSX",
+          "XML",
+          "DOCX",
+          "ODP"
+        ],
+        "topics": [
+          "transparencia",
+          "acceso_a_la_informacion_publica",
+          "organizacion",
+          "normativa",
+          "presupuestos",
+          "contratacion",
+          "subvenciones",
+          "patrimonio",
+          "urbanismo",
+          "estadistica"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "El portal publica abundante documentación y tablas descargables por secciones temáticas, pero no se identifica un catálogo de datos abiertos ni API pública.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_la_orotava",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://laorotava.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
         ],
         "standards": [],
         "formats": [
@@ -5224,35 +5267,102 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "tramitacion",
+          "registro",
+          "expedientes",
+          "tablon_de_anuncios",
+          "validacion_de_documentos",
+          "padron",
+          "contribuyentes",
+          "cita_previa",
+          "canal_de_denuncias"
         ],
-        "machine_readable": true,
+        "machine_readable": false,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Plataforma de administración electrónica y consulta de expedientes; no se observa catálogo abierto estructurado.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "calidad_agua_la_orotava",
+        "kind": "other",
+        "name": "Calidad del agua",
+        "url": "https://www.laorotava.es/es/calidad-del-agua",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "sinac"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "agua",
+          "calidad_del_agua",
+          "salud_publica",
+          "abastecimiento",
+          "servicios_publicos",
+          "barrios"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Página municipal que agrupa enlaces por zonas de abastecimiento a fichas e informes del SINAC; no expone un catálogo municipal estructurado.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "perfil_contratante_la_orotava",
+        "kind": "other",
+        "name": "Perfil del contratante",
+        "url": "https://contrataciondelestado.es/wps/poc?uri=deeplink%3AperfilContratante&ubicacionOrganica=CVtMNX3BM20%3D",
+        "portal_status": "active",
+        "technology": [
+          "plataforma_contratacion_estado"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "contratacion",
+          "licitaciones",
+          "adjudicaciones",
+          "perfil_del_contratante"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "La sede municipal enlaza el perfil del contratante en la Plataforma de Contratación del Sector Público.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.laorotava.es/ayuntamiento"
+        "https://www.laorotava.es/es/ayuntamiento",
+        "https://laorotava.sedelectronica.es/transparency/",
+        "https://laorotava.sedelectronica.es/",
+        "https://www.laorotava.es/es/calidad-del-agua",
+        "https://sinacv2.sanidad.gob.es/SinacV2/Index.do",
+        "https://contrataciondelestado.es/wps/poc?uri=deeplink%3AperfilContratante&ubicacionOrganica=CVtMNX3BM20%3D"
       ]
     },
-    "notes": null
+    "notes": "El portal de transparencia presenta un volumen alto de información documental y múltiples formatos descargables, con secciones sobre organización, empleo público, retribuciones, normativa, servicios, información económico-financiera, patrimonio, planificación, contratos, subvenciones, ordenación del territorio, estadística y derecho de acceso a la información pública. La sede electrónica incluye tramitación, expediente electrónico, validación documental, tablón de anuncios, padrón, contribuyentes y canal de denuncias. El recurso municipal de calidad del agua aporta valor añadido local al enlazar resultados del SINAC por zonas de abastecimiento del municipio. Fecha de consulta: 2026-06."
   },
   {
     "id": "ayuntamiento_la_victoria_de_acentejo",
