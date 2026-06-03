@@ -543,7 +543,7 @@
           "Infraestructuras",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -810,7 +810,7 @@
           "Sector público",
           "Turismo"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -990,7 +990,7 @@
           "Turismo",
           "Sector público"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -1435,7 +1435,7 @@
           "Economía",
           "Sector público"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": 95,
@@ -1822,7 +1822,7 @@
           "Turismo",
           "Aeropuertos"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2043,7 +2043,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2253,7 +2253,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2463,7 +2463,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2713,7 +2713,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2923,7 +2923,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3126,7 +3126,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3336,7 +3336,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3546,7 +3546,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3756,7 +3756,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3966,7 +3966,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4251,7 +4251,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4461,7 +4461,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4671,7 +4671,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4878,7 +4878,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5088,7 +5088,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5408,7 +5408,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5618,7 +5618,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5828,7 +5828,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6089,7 +6089,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6299,7 +6299,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6509,7 +6509,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6719,7 +6719,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6929,7 +6929,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7025,136 +7025,161 @@
     },
     "notes": null
   },
- {
-  "id": "ayuntamiento_tazacorte",
-  "name": "Ayuntamiento de Tazacorte",
-  "entity_kind": "ayuntamiento",
-  "scope": "municipal",
-  "parent_entity_id": null,
-  "islands": ["La Palma"],
-  "description": "Ayuntamiento de Tazacorte, en la isla de La Palma. Dispone de un portal de transparencia propio y de un portal de transparencia integrado en la sede electrónica. El portal propio concentra información institucional, económica, normativa, contractual, de subvenciones y de rendición de cuentas. El portal de la sede electrónica ofrece navegación HTML, documentos PDF y algunos documentos DOCX previsualizados.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle Primero de Mayo, 1",
-      "postal_code": "38770",
-      "municipality": "Villa y Puerto de Tazacorte",
-      "island": "La Palma",
-      "coordinates": {
-        "lat": 28.6489,
-        "lon": -17.9304
+  {
+    "id": "ayuntamiento_tazacorte",
+    "name": "Ayuntamiento de Tazacorte",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "parent_entity_id": null,
+    "islands": [
+      "La Palma"
+    ],
+    "description": "Ayuntamiento de Tazacorte, en la isla de La Palma. Dispone de un portal de transparencia propio y de un portal de transparencia integrado en la sede electrónica. El portal propio concentra información institucional, económica, normativa, contractual, de subvenciones y de rendición de cuentas. El portal de la sede electrónica ofrece navegación HTML, documentos PDF y algunos documentos DOCX previsualizados.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Primero de Mayo, 1",
+        "postal_code": "38770",
+        "municipality": "Villa y Puerto de Tazacorte",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6489,
+          "lon": -17.9304
+        },
+        "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codUnico=..."
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_transparencia_tazacorte",
+        "kind": "transparencia",
+        "name": "Portal de transparencia",
+        "url": "https://transparencia.tazacorte.es",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "TXT",
+          "XLSX",
+          "ODS",
+          "CSV",
+          "JSON",
+          "DOC"
+        ],
+        "topics": [
+          "institucional",
+          "organizativa",
+          "económica",
+          "retribuciones",
+          "presupuestos",
+          "actas",
+          "normativa",
+          "contratos",
+          "subvenciones",
+          "cuentas_anuales",
+          "canal_interno",
+          "participacion"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal propio con múltiples secciones y formatos variados de descarga; incluye documentos estructurados y tablas de datos.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       },
-      "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codUnico=..."
-    }
-  ],
-  "portals": [
-    {
-      "id": "portal_transparencia_tazacorte",
-      "kind": "transparencia",
-      "name": "Portal de transparencia",
-      "url": "https://transparencia.tazacorte.es",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [],
-      "formats": ["HTML", "PDF", "ODT", "TXT", "XLSX", "ODS", "CSV", "JSON", "DOC"],
-      "topics": [
-        "institucional",
-        "organizativa",
-        "económica",
-        "retribuciones",
-        "presupuestos",
-        "actas",
-        "normativa",
-        "contratos",
-        "subvenciones",
-        "cuentas_anuales",
-        "canal_interno",
-        "participacion"
-      ],
-      "machine_readable": false,
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal propio con múltiples secciones y formatos variados de descarga; incluye documentos estructurados y tablas de datos.",
-      "last_updated": "2026-04",
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
+      {
+        "id": "portal_transparencia_sede_tazacorte",
+        "kind": "transparencia",
+        "name": "Portal de transparencia en sede electrónica",
+        "url": "https://tazacorte.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "DOCX"
+        ],
+        "topics": [
+          "institucional",
+          "normativa",
+          "económica",
+          "ayudas_y_subvenciones",
+          "patrimonio",
+          "contratación",
+          "urbanismo",
+          "obras_publicas",
+          "medio_ambiente",
+          "atencion_ciudadano"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia con estructura HTML y documentos previsualizados, principalmente PDF y algunos DOCX.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_tazacorte",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://tazacorte.sedelectronica.es",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "tramitacion",
+          "registro",
+          "expedientes",
+          "buzon_electronico",
+          "perfil_del_contratante"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica con acceso a trámites y servicios administrativos, que hospeda el portal de transparencia.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://transparencia.tazacorte.es",
+        "https://tazacorte.sedelectronica.es/transparency",
+        "https://tazacorte.sedelectronica.es",
+        "https://www.tazacorte.es/web/",
+        "https://transparencia.tazacorte.es/accesibilidad/",
+        "https://transparencia.tazacorte.es/contratos/informacion-necesaria-conveniente/",
+        "https://transparencia.tazacorte.es/contratos/contratos-formalizados/",
+        "https://transparencia.tazacorte.es/contratos/licitaciones-en-curso/"
+      ]
     },
-    {
-      "id": "portal_transparencia_sede_tazacorte",
-      "kind": "transparencia",
-      "name": "Portal de transparencia en sede electrónica",
-      "url": "https://tazacorte.sedelectronica.es/transparency",
-      "portal_status": "active",
-      "technology": ["sedelectronica"],
-      "standards": [],
-      "formats": ["HTML", "PDF", "DOCX"],
-      "topics": [
-        "institucional",
-        "normativa",
-        "económica",
-        "ayudas_y_subvenciones",
-        "patrimonio",
-        "contratación",
-        "urbanismo",
-        "obras_publicas",
-        "medio_ambiente",
-        "atencion_ciudadano"
-      ],
-      "machine_readable": false,
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal de transparencia con estructura HTML y documentos previsualizados, principalmente PDF y algunos DOCX.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    },
-    {
-      "id": "sede_electronica_tazacorte",
-      "kind": "other",
-      "name": "Sede Electrónica",
-      "url": "https://tazacorte.sedelectronica.es",
-      "portal_status": "active",
-      "technology": ["sedelectronica"],
-      "standards": [],
-      "formats": ["HTML", "PDF"],
-      "topics": [
-        "tramitacion",
-        "registro",
-        "expedientes",
-        "buzon_electronico",
-        "perfil_del_contratante"
-      ],
-      "machine_readable": false,
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Sede electrónica con acceso a trámites y servicios administrativos, que hospeda el portal de transparencia.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://transparencia.tazacorte.es",
-      "https://tazacorte.sedelectronica.es/transparency",
-      "https://tazacorte.sedelectronica.es",
-      "https://www.tazacorte.es/web/",
-      "https://transparencia.tazacorte.es/accesibilidad/",
-      "https://transparencia.tazacorte.es/contratos/informacion-necesaria-conveniente/",
-      "https://transparencia.tazacorte.es/contratos/contratos-formalizados/",
-      "https://transparencia.tazacorte.es/contratos/licitaciones-en-curso/"
-    ]
+    "notes": "El portal propio es claramente el más completo y presenta formatos reutilizables diversos. En la sede electrónica el portal de transparencia es más simple, con navegación HTML, enlaces y documentos PDF, además de algún DOCX previsualizado. Se han verificado secciones como institucional, normativa, económica, ayudas y subvenciones, patrimonio, contratación, urbanismo y accesibilidad. Fecha de consulta: 2026-06."
   },
-  "notes": "El portal propio es claramente el más completo y presenta formatos reutilizables diversos. En la sede electrónica el portal de transparencia es más simple, con navegación HTML, enlaces y documentos PDF, además de algún DOCX previsualizado. Se han verificado secciones como institucional, normativa, económica, ayudas y subvenciones, patrimonio, contratación, urbanismo y accesibilidad. Fecha de consulta: 2026-06."
-},
   {
     "id": "ayuntamiento_tegueste",
     "name": "Ayuntamiento de Tegueste",
@@ -7199,7 +7224,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7409,7 +7434,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7619,7 +7644,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7829,7 +7854,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -8039,7 +8064,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -8179,7 +8204,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -8389,7 +8414,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -8459,7 +8484,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -8669,7 +8694,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -9064,7 +9089,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -9284,7 +9309,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -9700,7 +9725,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -9966,7 +9991,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10176,7 +10201,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10386,7 +10411,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10526,7 +10551,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10793,7 +10818,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11018,7 +11043,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11088,7 +11113,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11314,7 +11339,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11688,7 +11713,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11758,7 +11783,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11968,7 +11993,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12248,7 +12273,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12392,7 +12417,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12759,7 +12784,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12829,7 +12854,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13177,7 +13202,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13247,7 +13272,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13642,7 +13667,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -13864,7 +13889,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14004,7 +14029,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14214,7 +14239,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14494,7 +14519,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14564,7 +14589,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -14704,7 +14729,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -14977,7 +15002,7 @@
           "precipitacion",
           "avisos"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -15371,7 +15396,7 @@
           "procedimientos",
           "registros_civiles"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -15537,7 +15562,7 @@
           "archivos",
           "bibliotecas"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -15712,7 +15737,7 @@
           "fp",
           "deportes"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -15937,7 +15962,7 @@
           "comercio",
           "competitividad"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16016,7 +16041,7 @@
           "propiedad_industrial",
           "innovacion"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -16563,7 +16588,7 @@
           "proteccion_civil",
           "penitenciario"
         ],
-        "machine_readable": false,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16594,7 +16619,7 @@
           "estructura",
           "empleo_publico"
         ],
-        "machine_readable": false,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16635,7 +16660,7 @@
           "armas",
           "metodologia"
         ],
-        "machine_readable": false,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16699,7 +16724,7 @@
           "cooperacion",
           "movilidad_internacional"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16777,7 +16802,7 @@
           "alimentacion",
           "ganaderia"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16859,7 +16884,7 @@
           "fp",
           "deportes"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -17105,7 +17130,7 @@
           "Medio rural",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -17158,7 +17183,7 @@
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4150,
+          "lat": 40.415,
           "lon": -3.7074
         },
         "source_url": "https://www.exteriores.gob.es/"
@@ -17559,8 +17584,8 @@
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4130,
-          "lon": -3.6930
+          "lat": 40.413,
+          "lon": -3.693
         },
         "source_url": "https://www.mdsocialesa2030.gob.es/"
       }
@@ -17671,7 +17696,7 @@
           "Demografía",
           "Sector público"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -17725,7 +17750,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4363,
-          "lon": -3.7030
+          "lon": -3.703
         },
         "source_url": "https://www.inclusion.gob.es/"
       }
@@ -17835,7 +17860,7 @@
           "Energía",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -17915,7 +17940,7 @@
           "Sector público",
           "Servicios sociales"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -18157,7 +18182,7 @@
           "Sector público",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -18211,7 +18236,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4443,
-          "lon": -3.6920
+          "lon": -3.692
         },
         "source_url": "https://www.mitma.gob.es/"
       }
@@ -18293,7 +18318,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4443,
-          "lon": -3.6920
+          "lon": -3.692
         },
         "source_url": "https://www.mivau.gob.es/"
       }
@@ -18565,7 +18590,7 @@
           "Administración",
           "Legislación"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
