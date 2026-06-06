@@ -17305,7 +17305,7 @@
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4150,
+          "lat": 40.415,
           "lon": -3.7074
         },
         "source_url": "https://www.exteriores.gob.es/"
@@ -17703,8 +17703,8 @@
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4130,
-          "lon": -3.6930
+          "lat": 40.413,
+          "lon": -3.693
         },
         "source_url": "https://www.mdsocialesa2030.gob.es/"
       }
@@ -17867,7 +17867,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4363,
-          "lon": -3.7030
+          "lon": -3.703
         },
         "source_url": "https://www.inclusion.gob.es/"
       }
@@ -18347,7 +18347,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4443,
-          "lon": -3.6920
+          "lon": -3.692
         },
         "source_url": "https://www.mitma.gob.es/"
       }
@@ -18428,7 +18428,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4443,
-          "lon": -3.6920
+          "lon": -3.692
         },
         "source_url": "https://www.mivau.gob.es/"
       }
