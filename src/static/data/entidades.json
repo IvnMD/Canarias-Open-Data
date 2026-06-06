@@ -1436,16 +1436,16 @@
         "has_api": true,
         "apis": [
           {
-            "id": "ckan_action_api",
             "name": "CKAN Action API",
             "url": "https://lapalmasmart-open.lapalma.es/datosabiertos/catalogo/api/3/action/",
-            "notes": "API oficial de CKAN (package_list, package_search, group_list, tag_list, etc.) para listar, buscar y consultar datasets, grupos y recursos en JSON."
+            "type": "REST",
+            "documentation_url": null
           },
           {
-            "id": "sparql_endpoint",
             "name": "SPARQL endpoint (RDF)",
             "url": "https://lapalmasmart-open.lapalma.es/datosabiertos/sparql",
-            "notes": "Endpoint SPARQL sobre los grafos RDF del catálogo La Palma Smart Island; permite consultas avanzadas sobre los datasets como Linked Data."
+            "type": "SPARQL",
+            "documentation_url": null
           }
         ],
         "formats": [
@@ -1477,14 +1477,12 @@
           {
             "name": "Creative Commons Attribution 4.0",
             "id": "CC-BY-4.0",
-            "url": "https://creativecommons.org/licenses/by/4.0/",
-            "count": 47
+            "url": "https://creativecommons.org/licenses/by/4.0/"
           },
           {
             "name": "Open Data Commons Attribution License",
             "id": "ODC-BY",
-            "url": "https://opendatacommons.org/licenses/by/1-0/",
-            "count": 2
+            "url": "https://opendatacommons.org/licenses/by/1-0/"
           }
         ],
         "last_checked": "2026-06"
@@ -1523,10 +1521,10 @@
         "has_api": true,
         "apis": [
           {
-            "id": "dcat_ap_2_1_1",
             "name": "Feed DCAT-AP 2.1.1",
             "url": "https://www.opendatalapalma.es/api/feed/dcat-ap/2.1.1.json",
-            "notes": "Catálogo completo en formato DCAT-AP 2.1.1 en JSON-LD; expone 815 ítems con metadatos normalizados (datasets, mapas, documentos y apps)."
+            "type": "JSON-LD",
+            "documentation_url": null
           }
         ],
         "formats": [
@@ -1549,14 +1547,12 @@
           {
             "name": "Licencia personalizada",
             "id": null,
-            "url": null,
-            "count": 373
+            "url": null
           },
           {
             "name": "Sin licencia declarada",
             "id": null,
-            "url": null,
-            "count": 106
+            "url": null
           }
         ],
         "last_checked": "2026-06"
@@ -1566,6 +1562,7 @@
       "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
+        "https://www.cabildodelapalma.es",
         "https://www.opendatalapalma.es",
         "https://www.opendatalapalma.es/api/feed/dcat-ap/2.1.1.json",
         "https://lapalmasmart-open.lapalma.es/datosabiertos/catalogo/",
@@ -2145,7 +2142,6 @@
         "source_url": "https://www.candelaria.es/areas/servicio-de-atencion-a-la-ciudadania/"
       }
     ],
-    "source_url": "https://www.candelaria.es/",
     "portals": [
       {
         "id": "candelaria_transparencia",
