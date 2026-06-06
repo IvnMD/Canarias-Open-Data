@@ -665,91 +665,80 @@
     "notes": null
   },
   {
-    "id": "ayuntamiento_santa_cruz_tenerife",
-    "name": "Ayuntamiento de Santa Cruz de Tenerife",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de datos abiertos del Ayuntamiento de Santa Cruz de Tenerife con información sobre movilidad, urbanismo, tráfico, playas, turismo, medio ambiente, cultura y servicios municipales.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Santa Cruz de Tenerife",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.4632,
-          "lon": -16.2518
-        },
-        "source_url": "https://opendata.santacruzdetenerife.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Santa Cruz de Tenerife",
-        "url": "https://opendata.santacruzdetenerife.es",
-        "portal_status": "active",
-        "technology": [
-          "CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "GeoJSON"
-        ],
-        "topics": [
-          "Movilidad",
-          "Transporte",
-          "Tráfico",
-          "Urbanismo",
-          "Medio ambiente",
-          "Turismo",
-          "Cultura",
-          "Playas",
-          "Seguridad",
-          "Equipamientos",
-          "Participación ciudadana",
-          "Datos institucionales"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "CKAN API",
-            "url": "https://opendata.santacruzdetenerife.es/api/3/action/package_search",
-            "type": "REST",
-            "documentation_url": null
-          }
-        ],
-        "dataset_count": 140,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
-        "licenses": [
-          {
-            "name": "CC BY 4.0",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://opendata.santacruzdetenerife.es"
-      ]
-    },
-    "notes": null
-  },
+  "id": "ayuntamiento_santa_cruz_tenerife",
+  "name": "Ayuntamiento de Santa Cruz de Tenerife",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "islands": ["Tenerife"],
+  "description": "Ayuntamiento de Santa Cruz de Tenerife, capital de la isla de Tenerife y de la Comunidad Autónoma de Canarias. Publica datos abiertos mediante un portal CKAN con 104 conjuntos de datos temáticos: geolocalización de equipamientos urbanos, viales, rutas saludables e históricas, arbolado por distrito, datos electorales, demográficos y de hacienda.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Viera y Clavijo, 46",
+      "postal_code": "38004",
+      "municipality": "Santa Cruz de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4682,
+        "lon": -16.2573
+      },
+      "source_url": "https://www.santacruzdetenerife.es"
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_opendata_sct",
+      "kind": "open_data",
+      "name": "Portal de datos abiertos – Ayuntamiento de Santa Cruz de Tenerife",
+      "url": "https://www.santacruzdetenerife.es/opendata/es/",
+      "portal_status": "active",
+      "technology": ["CKAN"],
+      "standards": [],
+      "formats": [
+        "CSV", "JSON", "GeoJSON", "KML", "KMZ",
+        "SHP", "XLS", "XLSX", "RDF", "ZIP"
+      ],
+      "topics": [
+        "Movilidad", "Transporte", "Tráfico", "Urbanismo",
+        "Medio ambiente", "Turismo", "Cultura", "Historia",
+        "Deportes", "Elecciones", "Arbolado", "Seguridad",
+        "Equipamientos", "Participación ciudadana",
+        "Datos institucionales", "Hacienda"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "CKAN API",
+          "url": "https://www.santacruzdetenerife.es/opendata/api/3/action/package_search",
+          "type": "REST",
+          "documentation_url": null
+        }
+      ],
+      "dataset_count": 104,
+      "dataset_count_note": "104 conjuntos de datos verificados en 2026-06 vía portal web. Formatos predominantes: CSV, JSON, KML/KMZ, SHP, XLS. Temáticas principales: geolocalización de canchas deportivas, fuentes públicas, papeleras, parques de calistenia, aparatos biosaludables, skate parks, cámaras foto-rojo; rutas saludables en Parque La Granja (250m, 500m, 1000m, 1125m); rutas históricas y de esculturas (Ramblas, Parque García Sanabria); viales y numeración desglosados por distrito; colegios y paneles electorales (2016, 2019, 2023); barrios con datos demográficos (2017, 2019); deuda pública y deuda por habitante; ofertas de empleo público; agenda cultural; arbolado por distrito; senderos del Macizo de Anaga.",
+      "license_summary": "CC BY",
+      "licenses": [
+        {
+          "name": "Creative Commons Attribution",
+          "id": "cc-by",
+          "url": "http://www.opendefinition.org/licenses/cc-by"
+        }
+      ],
+      "last_updated": "2023-05",
+      "last_checked": "2026-06"
+    }
+  ],
+  "notes": "SALUD DEL PORTAL (evaluación 2026-06): Portal CKAN activo y accesible. API REST funcional verificada. 104 datasets disponibles con descarga directa en múltiples formatos. SEÑALES DE ALERTA: el dataset más reciente modificado según API es de 2023-05-25, lo que indica que el catálogo lleva más de 3 años sin actualizaciones nuevas — riesgo de datos desactualizados. Los datasets electorales más recientes corresponden a las elecciones de mayo 2023, coherente con la fecha de última modificación. PUNTOS FUERTES: cobertura geoespacial muy destacada (la mayoría de datasets incluyen SHP, GeoJSON, KML/KMZ, además de CSV/XLS); datasets de numeración y arbolado desglosados por distrito (Suroeste, Salud-La Salle, Ofra-Costa Sur, Centro-Ifara, Anaga); licencia abierta CC BY en todos los datasets verificados. PENDIENTE: verificar si existen datasets fuera del portal principal (ej. transparencia, contratación). La versión exacta de la licencia CC BY no está especificada en el portal (CKAN devuelve 'cc-by' genérico sin versión).",
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.santacruzdetenerife.es/opendata/es/",
+      "https://www.santacruzdetenerife.es/opendata/api/3/action/package_search?rows=1&sort=metadata_modified+desc",
+      "https://www.santacruzdetenerife.es/opendata/api/3/action/package_show?id=canchas-deportivas"
+    ]
+  }
+},
   {
     "id": "ayuntamiento_arona",
     "name": "Ayuntamiento de Arona – Open Data Arona",
