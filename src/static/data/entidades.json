@@ -2345,75 +2345,167 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_la_aldea_de_san_nicolas",
-    "name": "Ayuntamiento de La Aldea de San Nicolás",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de La Aldea de San Nicolás. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de La Aldea de San Nicolás",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9936,
-          "lon": -15.7914
-        },
-        "source_url": "https://transparencia.laaldeasanicolas.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de La Aldea de San Nicolás",
-        "url": "https://transparencia.laaldeasanicolas.es",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparencia.laaldeasanicolas.es"
-      ]
+ {
+  "id": "ayuntamiento_la_aldea_de_san_nicolas",
+  "name": "Ayuntamiento de La Aldea de San Nicolás",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "parent_entity_id": "cabildo_gran_canaria",
+  "islands": ["Gran Canaria"],
+  "description": "Ayuntamiento del municipio de La Aldea de San Nicolás (Gran Canaria). Publica información de transparencia activa a través de su portal propio y portales independientes para sus sociedades municipales (Sociedad de Deportes y SASAC). No se ha detectado portal de datos abiertos con datasets estructurados descargables.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Real, 28",
+      "postal_code": "35470",
+      "municipality": "La Aldea de San Nicolás",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 28.0024,
+        "lon": -15.7809
+      },
+      "source_url": "https://laaldeasanicolas.es/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_transparencia_ayuntamiento",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Ayuntamiento de La Aldea de San Nicolás",
+      "url": "https://transparencia.laaldeasanicolas.es/t",
+      "portal_status": "active",
+      "technology": ["GobiernoAbierto / Fernandopoo"],
+      "standards": [],
+      "formats": ["HTML", "ODT", "ODS", "DOCX", "XLSX", "CSV"],
+      "topics": [
+        "Organización y funcionamiento",
+        "Órganos de gobierno",
+        "Recursos humanos",
+        "Plantilla",
+        "Oferta de empleo público",
+        "Retribuciones",
+        "Compatibilidades",
+        "Contratos",
+        "Subvenciones",
+        "Presupuestos",
+        "Cuentas anuales",
+        "Endeudamiento",
+        "Hacienda",
+        "Patrimonio",
+        "Urbanismo",
+        "Medio ambiente",
+        "Servicios sociales",
+        "Seguridad ciudadana",
+        "Educación",
+        "Cultura",
+        "Deportes",
+        "Participación ciudadana",
+        "Normativa",
+        "Licitaciones"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia activa con publicación de documentos. No expone datasets estructurados ni API de descarga masiva. Última actualización verificada: 2026-05-29 (Cuentas Anuales, Gastos).",
+      "last_updated": "2026-05",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
-  },
+    {
+      "id": "portal_transparencia_deportes",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Sociedad de Deportes de La Aldea S.L.",
+      "url": "https://transparencia-deportes.laaldeasanicolas.es/t",
+      "portal_status": "active",
+      "technology": ["GobiernoAbierto / Fernandopoo"],
+      "standards": [],
+      "formats": ["HTML", "CSV", "DOCX", "XLSX", "ODT"],
+      "topics": [
+        "Organización",
+        "Personal",
+        "Contratos",
+        "Subvenciones",
+        "Cuentas anuales",
+        "Auditoría",
+        "Servicios deportivos"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia de la sociedad municipal Deportes de La Aldea S.L. Última actualización verificada: 2026-05-07.",
+      "last_updated": "2026-05",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "portal_transparencia_sasac",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Sociedad Aldeana de Servicios y Atención Ciudadana (SASAC)",
+      "url": "https://transparencia-sasac.laaldeasanicolas.es/t",
+      "portal_status": "active",
+      "technology": ["GobiernoAbierto / Fernandopoo"],
+      "standards": [],
+      "formats": ["HTML", "CSV", "DOCX", "XLSX", "ODT"],
+      "topics": [
+        "Organización",
+        "Personal",
+        "Contratos",
+        "Subvenciones",
+        "Cuentas anuales",
+        "Auditoría",
+        "Servicios sociales y asistenciales",
+        "Residencia de mayores"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia de la sociedad municipal SASAC (servicios asistenciales y residencia de mayores). Última actualización verificada: 2026-05-07.",
+      "last_updated": "2026-05",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Ayuntamiento de La Aldea de San Nicolás",
+      "url": "https://laaldeadesannicolas.sedelectronica.es/info.0",
+      "portal_status": "active",
+      "technology": ["sedelectronica.es"],
+      "standards": [],
+      "formats": [],
+      "topics": [
+        "Trámites electrónicos",
+        "Catálogo de procedimientos",
+        "Cita previa",
+        "Gobierno abierto",
+        "Hacienda pública"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Sede electrónica para trámites ciudadanos. No publica datasets abiertos. Código DIR3: L01350206.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "notes": "No se ha detectado portal de datos abiertos (CKAN u equivalente). La transparencia se canaliza a través de tres portales independientes: ayuntamiento, Sociedad de Deportes y SASAC, todos bajo la plataforma GobiernoAbierto/Fernandopoo. Sociedades municipales: Sociedad de Deportes de La Aldea S.L. (sede: https://sociedaddedeportesdelaaldea.sedelectronica.es/info.0) y SASAC (https://sasac.laaldeasanicolas.es/). Integrada en la Mancomunidad de Ayuntamientos del Norte de Gran Canaria.",
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://laaldeasanicolas.es/",
+      "https://transparencia.laaldeasanicolas.es/t",
+      "https://transparencia-deportes.laaldeasanicolas.es/t",
+      "https://transparencia-sasac.laaldeasanicolas.es/t",
+      "https://laaldeadesannicolas.sedelectronica.es/info.0"
+    ]
+  }
+},
   {
     "id": "ayuntamiento_la_oliva",
     "name": "Ayuntamiento de La Oliva",
