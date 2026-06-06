@@ -543,7 +543,7 @@
           "Infraestructuras",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -810,7 +810,7 @@
           "Sector público",
           "Turismo"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -990,7 +990,7 @@
           "Turismo",
           "Sector público"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -1624,7 +1624,7 @@
           "Economía",
           "Sector público"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": 95,
@@ -2011,7 +2011,7 @@
           "Turismo",
           "Aeropuertos"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2283,7 +2283,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2493,7 +2493,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2728,7 +2728,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -2978,7 +2978,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3188,7 +3188,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3391,7 +3391,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3601,7 +3601,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -3811,7 +3811,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4068,7 +4068,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4302,7 +4302,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4587,7 +4587,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -4797,7 +4797,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5007,7 +5007,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5214,7 +5214,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5424,7 +5424,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5744,7 +5744,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -5954,7 +5954,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6164,7 +6164,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6425,7 +6425,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6635,7 +6635,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -6845,7 +6845,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7055,7 +7055,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7265,7 +7265,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7560,7 +7560,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7770,7 +7770,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -7980,7 +7980,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -8213,7 +8213,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -8405,6 +8405,7 @@
           "Contratos",
           "Subvenciones"
         ],
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -8540,7 +8541,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -8750,7 +8751,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -8820,7 +8821,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -9030,7 +9031,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -9425,7 +9426,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -9645,7 +9646,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10061,7 +10062,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -10327,7 +10328,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10537,7 +10538,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10747,7 +10748,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -10887,7 +10888,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11154,7 +11155,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11379,7 +11380,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11449,7 +11450,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -11675,7 +11676,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12049,7 +12050,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12119,7 +12120,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12329,7 +12330,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12609,7 +12610,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -12753,7 +12754,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13120,7 +13121,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13190,7 +13191,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13538,7 +13539,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -13608,7 +13609,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14003,7 +14004,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -14225,7 +14226,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14365,7 +14366,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14575,7 +14576,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14855,7 +14856,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [],
         "dataset_count": null,
@@ -14925,7 +14926,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -15065,7 +15066,7 @@
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -15338,7 +15339,7 @@
           "precipitacion",
           "avisos"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -15732,7 +15733,7 @@
           "procedimientos",
           "registros_civiles"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
@@ -15898,7 +15899,7 @@
           "archivos",
           "bibliotecas"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16073,7 +16074,7 @@
           "fp",
           "deportes"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16298,7 +16299,7 @@
           "comercio",
           "competitividad"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16377,7 +16378,7 @@
           "propiedad_industrial",
           "innovacion"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -16924,7 +16925,7 @@
           "proteccion_civil",
           "penitenciario"
         ],
-        "machine_readable": false,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16955,7 +16956,7 @@
           "estructura",
           "empleo_publico"
         ],
-        "machine_readable": false,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -16996,7 +16997,7 @@
           "armas",
           "metodologia"
         ],
-        "machine_readable": false,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -17060,7 +17061,7 @@
           "cooperacion",
           "movilidad_internacional"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -17138,7 +17139,7 @@
           "alimentacion",
           "ganaderia"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -17220,7 +17221,7 @@
           "fp",
           "deportes"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": null,
         "apis": [],
         "dataset_count": null,
@@ -17466,7 +17467,7 @@
           "Medio rural",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -17519,7 +17520,7 @@
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4150,
+          "lat": 40.415,
           "lon": -3.7074
         },
         "source_url": "https://www.exteriores.gob.es/"
@@ -17920,8 +17921,8 @@
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.4130,
-          "lon": -3.6930
+          "lat": 40.413,
+          "lon": -3.693
         },
         "source_url": "https://www.mdsocialesa2030.gob.es/"
       }
@@ -18032,7 +18033,7 @@
           "Demografía",
           "Sector público"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -18086,7 +18087,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4363,
-          "lon": -3.7030
+          "lon": -3.703
         },
         "source_url": "https://www.inclusion.gob.es/"
       }
@@ -18196,7 +18197,7 @@
           "Energía",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -18276,7 +18277,7 @@
           "Sector público",
           "Servicios sociales"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -18518,7 +18519,7 @@
           "Sector público",
           "Economía"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
@@ -18572,7 +18573,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4443,
-          "lon": -3.6920
+          "lon": -3.692
         },
         "source_url": "https://www.mitma.gob.es/"
       }
@@ -18654,7 +18655,7 @@
         "island": "Todas",
         "coordinates": {
           "lat": 40.4443,
-          "lon": -3.6920
+          "lon": -3.692
         },
         "source_url": "https://www.mivau.gob.es/"
       }
@@ -18926,7 +18927,7 @@
           "Administración",
           "Legislación"
         ],
-        "machine_readable": true,
+        "machine_readable": null,
         "has_api": true,
         "apis": [
           {
