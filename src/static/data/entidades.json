@@ -1304,87 +1304,279 @@
   },
   {
     "id": "cabildo_la_palma",
-    "name": "Cabildo de La Palma – Open Data La Palma",
+    "name": "Cabildo Insular de La Palma",
     "entity_kind": "cabildo",
     "scope": "insular",
     "parent_entity_id": null,
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de datos abiertos del Cabildo de La Palma con información territorial, medioambiental, turística y datos institucionales.",
+    "description": "Cabildo Insular de La Palma. Publica datos abiertos a través de un hub ArcGIS (Open Data La Palma) y de un catálogo CKAN propio (La Palma Smart Open), complementados con un portal de transparencia y una sede electrónica. Forma parte del proyecto La Palma Smart Island.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Cabildo de La Palma – Open Data La Palma",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Marítima, 3",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
         "island": "La Palma",
         "coordinates": {
           "lat": 28.6835,
-          "lon": -17.7642
+          "lon": -17.7634
         },
-        "source_url": "https://www.opendatalapalma.es/"
+        "source_url": "https://www.cabildodelapalma.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "cabildo_lapalma_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Cabildo de La Palma",
+        "url": "https://sedeelectronica.cabildodelapalma.es",
+        "portal_status": "active",
+        "technology": [
+          "STA (Sede Electrónica)"
+        ],
+        "standards": [],
+        "topics": [
+          "tramites",
+          "registro",
+          "expedientes",
+          "notificaciones_electronicas",
+          "firma_electronica",
+          "factura_electronica",
+          "contratacion",
+          "tablon_anuncios",
+          "pagos",
+          "tributos",
+          "proveedores"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "formats": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de tramitación electrónica orientado a procedimientos, carpeta ciudadana y servicios como tablón, perfil del contratante, factura electrónica y pagos. No expone un catálogo de datasets reutilizables.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "cabildo_lapalma_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del Cabildo de La Palma",
+        "url": "https://transparencia.cabildodelapalma.es",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "topics": [
+          "institucional",
+          "organizacion",
+          "personal",
+          "empleo_publico",
+          "retribuciones",
+          "normativa",
+          "servicios_procedimientos",
+          "economico_financiera",
+          "patrimonio",
+          "planificacion",
+          "obras_publicas",
+          "contratos",
+          "convenios",
+          "concesiones",
+          "subvenciones",
+          "ordenacion_territorio",
+          "estadistica",
+          "derecho_acceso",
+          "consulta_publica",
+          "antifraude"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "formats": [
+          "CSV",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLSX"
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia activa con secciones normalizadas (referencia legal, descripción, fecha de actualización, periodicidad, formatos, etc.). Ofrece numerosos documentos descargables; en Estadística se declaran explícitamente formatos CSV, ODS, ODT, PDF, TXT y XLSX, pero no existe un catálogo unificado de datasets ni contador global.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "cabildo_lapalma_ckan",
         "kind": "open_data",
-        "name": "Portal de datos – Cabildo de La Palma – Open Data La Palma",
-        "url": "https://opendata.cabildodelapalma.es",
+        "name": "La Palma Smart Open – Catálogo CKAN",
+        "url": "https://lapalmasmart-open.lapalma.es",
         "portal_status": "active",
         "technology": [
           "CKAN"
         ],
         "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "GeoJSON",
-          "XLSX",
-          "XML"
-        ],
         "topics": [
-          "Medio ambiente",
-          "Turismo",
-          "Demografía",
-          "Economía",
-          "Sector público",
-          "Territorio",
-          "Cultura"
+          "medio_ambiente",
+          "turismo",
+          "territorio",
+          "urbanismo",
+          "transporte",
+          "demografia",
+          "sector_publico",
+          "ciencia_tecnologia",
+          "energia"
         ],
         "machine_readable": true,
         "has_api": true,
         "apis": [
           {
-            "name": "CKAN API",
-            "url": "https://opendata.cabildodelapalma.es/api/3/action/package_search",
-            "type": "REST",
-            "documentation_url": null
+            "id": "ckan_action_api",
+            "name": "CKAN Action API",
+            "url": "https://lapalmasmart-open.lapalma.es/datosabiertos/catalogo/api/3/action/",
+            "notes": "API oficial de CKAN (package_list, package_search, group_list, tag_list, etc.) para listar, buscar y consultar datasets, grupos y recursos en JSON."
+          },
+          {
+            "id": "sparql_endpoint",
+            "name": "SPARQL endpoint (RDF)",
+            "url": "https://lapalmasmart-open.lapalma.es/datosabiertos/sparql",
+            "notes": "Endpoint SPARQL sobre los grafos RDF del catálogo La Palma Smart Island; permite consultas avanzadas sobre los datasets como Linked Data."
           }
         ],
-        "dataset_count": 63,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
+        "formats": [
+          "CSV",
+          "JSON",
+          "GeoJSON",
+          "XLS",
+          "XLSX",
+          "XLSM",
+          "ODS",
+          "TXT",
+          "HTML",
+          "XML",
+          "SHP",
+          "DXF",
+          "KML",
+          "GPKG",
+          "GML",
+          "PDF",
+          "GTFS",
+          "ZIP",
+          "API"
+        ],
+        "dataset_count": 49,
+        "dataset_count_note": "El catálogo CKAN La Palma Smart Open muestra 49 conjuntos de datos activos para el Cabildo Insular de La Palma, con estadísticas de formatos (CSV en 47, JSON en 27, GeoJSON/XLS en 26, XLSX en 25, HTML/XML en 23, SHP en 17, DXF en 14, PDF en 5) y grupos temáticos (Medio Ambiente 29, Urbanismo e infraestructuras 12, Transporte 6, Turismo 5, etc.).",
+        "last_updated": "2026-06",
+        "license_summary": "La sección de términos y licencias indica que, salvo indicación en contrario, los datasets se publican bajo Creative Commons Reconocimiento 4.0 (CC BY 4.0). El panel de estadísticas del catálogo refleja 47 datasets con CC BY y 2 con Open Data Commons Attribution (ODC-BY).",
         "licenses": [
           {
-            "name": "CC BY 4.0",
-            "id": null,
-            "url": null
+            "name": "Creative Commons Attribution 4.0",
+            "id": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "count": 47
+          },
+          {
+            "name": "Open Data Commons Attribution License",
+            "id": "ODC-BY",
+            "url": "https://opendatacommons.org/licenses/by/1-0/",
+            "count": 2
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "cabildo_lapalma_arcgis_hub",
+        "kind": "open_data",
+        "name": "Open Data La Palma – ArcGIS Hub",
+        "url": "https://www.opendatalapalma.es",
+        "portal_status": "active",
+        "technology": [
+          "ArcGIS Hub",
+          "ArcGIS Online"
+        ],
+        "standards": [
+          "DCAT-AP 2.1.1"
+        ],
+        "topics": [
+          "medio_ambiente",
+          "volcan",
+          "emergencias",
+          "urbanismo",
+          "transporte",
+          "turismo",
+          "cultura",
+          "sector_publico",
+          "ciencia_tecnologia",
+          "residuos",
+          "agua",
+          "forestal",
+          "demografia",
+          "contratos",
+          "presupuestos"
+        ],
+        "machine_readable": true,
+        "has_api": true,
+        "apis": [
+          {
+            "id": "dcat_ap_2_1_1",
+            "name": "Feed DCAT-AP 2.1.1",
+            "url": "https://www.opendatalapalma.es/api/feed/dcat-ap/2.1.1.json",
+            "notes": "Catálogo completo en formato DCAT-AP 2.1.1 en JSON-LD; expone 815 ítems con metadatos normalizados (datasets, mapas, documentos y apps)."
+          }
+        ],
+        "formats": [
+          "HTML",
+          "JSON",
+          "CSV",
+          "KML",
+          "GeoJSON",
+          "ZIP",
+          "XLSX",
+          "GPKG",
+          "GDB",
+          "TXT"
+        ],
+        "dataset_count": 815,
+        "dataset_count_note": "Según el feed DCAT-AP 2.1.1 (junio 2026) el catálogo incluye 815 ítems: 469 datasets con datos descargables (típicamente HTML+JSON+CSV+KML+GeoJSON+ZIP, y en algunos casos XLSX/GPKG/GDB/TXT), 205 mapas, 101 documentos, 38 aplicaciones y 2 otros, con 3.511 distribuciones en total.",
+        "last_updated": "2026-05",
+        "license_summary": "Clasificación interna del hub ArcGIS con 373 elementos bajo licencia personalizada y 106 sin licencia declarada; el acceso está marcado como público en todos los ítems del feed DCAT-AP.",
+        "licenses": [
+          {
+            "name": "Licencia personalizada",
+            "id": null,
+            "url": null,
+            "count": 373
+          },
+          {
+            "name": "Sin licencia declarada",
+            "id": null,
+            "url": null,
+            "count": 106
+          }
+        ],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://opendata.cabildodelapalma.es"
+        "https://www.opendatalapalma.es",
+        "https://www.opendatalapalma.es/api/feed/dcat-ap/2.1.1.json",
+        "https://lapalmasmart-open.lapalma.es/datosabiertos/catalogo/",
+        "https://lapalmasmart-open.lapalma.es/datosabiertos/api",
+        "https://lapalmasmart-open.lapalma.es/datosabiertos/sparql",
+        "https://transparencia.cabildodelapalma.es",
+        "https://sedeelectronica.cabildodelapalma.es",
+        "https://www.lapalmasmartisland.es/datos-abiertos/"
       ]
     },
-    "notes": null
+    "notes": "La ficha consolida la información del portal de transparencia (secciones institucional, organizativa, empleo, económico-financiera, contratos, subvenciones, ordenación del territorio, estadística, etc.), la sede electrónica (trámites, carpeta ciudadana, tablón y servicios complementarios), el catálogo CKAN La Palma Smart Open (49 datasets del Cabildo con formatos amplios y APIs CKAN + SPARQL) y el hub ArcGIS Open Data La Palma (815 ítems expuestos vía DCAT-AP 2.1.1, con fuerte peso de datos geoespaciales y de la erupción del volcán Tajogaite)."
   },
   {
     "id": "cabildo_lanzarote",
@@ -1934,70 +2126,122 @@
     "name": "Ayuntamiento de Candelaria",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_tenerife",
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Candelaria. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Candelaria (Tenerife). Publica información de transparencia conforme a la Ley 12/2014 de Canarias y la Ley 19/2013 estatal, con cumplimiento del 100% de indicadores IT2025. No dispone de portal de datos abiertos ni datasets estructurados accesibles públicamente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Candelaria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida La Constitución, 7",
+        "postal_code": "38530",
+        "municipality": "Candelaria",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.3562,
-          "lon": -16.3732
+          "lat": 28.3546,
+          "lon": -16.3681
         },
-        "source_url": "https://sedeelectronica.candelaria.es/transparencia"
+        "source_url": "https://www.candelaria.es/areas/servicio-de-atencion-a-la-ciudadania/"
       }
     ],
+    "source_url": "https://www.candelaria.es/",
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Candelaria",
+        "id": "candelaria_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Candelaria",
         "url": "https://sedeelectronica.candelaria.es/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "sede_electronica"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "DOCX",
+          "ODT",
+          "ODS",
+          "XLSX"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Contratos",
+          "Subvenciones",
+          "Economía",
+          "Normativa"
         ],
-        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "La plataforma incluye una sección llamada 'Catálogo de datos abiertos' (/transparencia/datos/catalogo) con 152 entradas, pero todas son PDFs firmados electrónicamente que acreditan la existencia de documentos en el gestor documental interno — no son accesibles ni descargables públicamente. No existen datasets reutilizables verificados. El selector de formatos de la interfaz (CSV, JSON, XML…) es propio de la plataforma y no refleja contenido real. Indicadores IT2025: Ayuntamiento 100%, EPELCAN 97%, CANDESOL 98%, E.I. Viviendas 93%.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "candelaria_sede",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Candelaria",
+        "url": "https://sedeelectronica.candelaria.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Administración electrónica",
+          "Sector público"
+        ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "candelaria_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Candelaria",
+        "url": "https://www.candelaria.es",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Sector público",
+          "Administración"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sedeelectronica.candelaria.es/transparencia"
+        "https://sedeelectronica.candelaria.es/transparencia",
+        "https://sedeelectronica.candelaria.es/transparencia/datos/catalogo",
+        "https://sedeelectronica.candelaria.es/transparencia/indice/IT21",
+        "https://sedeelectronica.candelaria.es/transparencia/economica/indicadores"
       ]
     },
-    "notes": null
+    "notes": "Teléfono SAC: 922 500 800. Email SAC: sac@candelaria.es. Entidades dependientes con sede electrónica y transparencia propia (candidatas a entidades separadas en el catálogo): EPELCAN – Entidad Pública Empresarial de Gestión de Empresas y Servicios Públicos (epelcan.sedelectronica.es); Viviendas y Servicios Municipales de Candelaria – Empresa de Inserción (empresadeinsercion.sedelectronica.es); Fundación Canaria Candelaria Solidaria – CANDESOL (candesol.sedelectronica.es). Indicadores económicos no descargables en /transparencia/economica/indicadores. Perfil de contratante vacío en candelaria.es/perfil-del-contratante/."
   },
   {
     "id": "ayuntamiento_granadilla_de_abona",
@@ -2354,70 +2598,95 @@
     "name": "Ayuntamiento de San Andrés y Sauces",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_la_palma",
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de San Andrés y Sauces. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de San Andrés y Sauces (La Palma). Dispone de sede electrónica y portal de transparencia municipal. No se ha verificado un portal de datos abiertos reutilizables independiente; la información pública se canaliza principalmente mediante transparencia y trámites electrónicos.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de San Andrés y Sauces",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle La Calle, 2",
+        "postal_code": "38720",
+        "municipality": "Los Sauces",
         "island": "La Palma",
         "coordinates": {
-          "lat": 28.8016,
-          "lon": -17.7894
+          "lat": 28.8021,
+          "lon": -17.7719
         },
-        "source_url": "https://sanandresysauces.sedelectronica.es/transparency"
+        "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm;jsessionid=JH-UEHtZ3vWttXzJz_Rlw3o3qVYUC3EiP_1DGRK5.pagaplic_wildfly_node1?codigoUnidad=L01380337"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de San Andrés y Sauces",
-        "url": "https://sanandresysauces.sedelectronica.es/transparency",
+        "id": "sanandresysauces_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de San Andrés y Sauces",
+        "url": "https://sanandresysauces.sedelectronica.es/transparency/",
         "portal_status": "active",
         "technology": [
           "Portal Transparencia"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "ODT",
+          "ODS",
+          "DOC",
+          "PDF",
+          "HTML"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Contratos",
+          "Subvenciones"
         ],
-        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia con formatos documentales; no se ha verificado un catálogo de datos abiertos reutilizables independiente.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sanandresysauces_sede",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de San Andrés y Sauces",
+        "url": "https://sanandresysauces.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Administración electrónica",
+          "Sector público"
+        ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sanandresysauces.sedelectronica.es/transparency"
+        "https://sanandresysauces.sedelectronica.es/",
+        "https://sanandresysauces.sedelectronica.es/transparency/",
+        "https://sanandresysauces.es/servicios/",
+        "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm;jsessionid=JH-UEHtZ3vWttXzJz_Rlw3o3qVYUC3EiP_1DGRK5.pagaplic_wildfly_node1?codigoUnidad=L01380337"
       ]
     },
-    "notes": null
+    "notes": "La web oficial enlaza la sede electrónica y el portal de transparencia. No se ha verificado un catálogo de datos abiertos independiente; la salida documental del portal es principalmente PDF, ODT, ODS, DOC y HTML."
   },
   {
     "id": "ayuntamiento_san_cristobal_de_la_laguna",
@@ -3644,73 +3913,120 @@
   },
   {
     "id": "ayuntamiento_brena_alta",
-    "name": "Ayuntamiento de Breña Alta",
+    "name": "Ayuntamiento de la Villa de Breña Alta",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_la_palma",
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Breña Alta. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Municipio del sector oriental de La Palma (Santa Cruz de Tenerife), con 30,82 km² y ~7.476 habitantes (2025). Publica transparencia activa conforme a la Ley 12/2014 de Canarias (arts. 17-23) y dispone de sede electrónica. No se ha detectado portal de datos abiertos ni API pública.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Breña Alta",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Blas Pérez González, nº 1",
+        "postal_code": "38710",
+        "municipality": "Breña Alta",
         "island": "La Palma",
         "coordinates": {
-          "lat": 28.6572,
-          "lon": -17.7847
+          "lat": 28.65224,
+          "lon": -17.80078
         },
-        "source_url": "https://transparencia.brenaalta.es"
+        "source_url": "https://brenaalta.es/aviso-legal/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Breña Alta",
+        "id": "brena_alta_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia de Breña Alta",
         "url": "https://transparencia.brenaalta.es",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "web_propia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "organizacion",
+          "personal",
+          "retribuciones",
+          "presupuestos",
+          "contratos",
+          "normativa",
+          "urbanismo",
+          "tramitacion"
         ],
         "machine_readable": true,
         "has_api": false,
         "apis": [],
+        "formats": [
+          "ODT",
+          "ODS",
+          "PDF",
+          "TXT",
+          "DOC"
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia activa, arts. 17-23 Ley 12/2014 canaria. No expone datasets reutilizables de forma explícita.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "brena_alta_sede",
+        "kind": "other",
+        "name": "Sede Electrónica de Breña Alta",
+        "url": "https://brenaalta.sedelectronica.es/",
+        "technology": [
+          "sedelectronica"
+        ],
+        "topics": [
+          "tramitacion"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "formats": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "brena_alta_web",
+        "kind": "other",
+        "name": "Web corporativa del Ayuntamiento de Breña Alta",
+        "url": "https://www.brenaalta.es",
+        "technology": [
+          "web_propia"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "organizacion"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "formats": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.brenaalta.es"
+        "https://transparencia.brenaalta.es",
+        "https://brenaalta.es/aviso-legal/",
+        "https://brenaalta.es/el-municipio/ubicacion-geografica/",
+        "https://www.canariashistoria.com/es/islas/la-palma/municipios/brena-alta/"
       ]
     },
-    "notes": null
+    "notes": "CIF: P-3800800-I. Teléfono: 922 437 009. Fax: 922 437 597. El portal de transparencia está activo y actualizado (última entrada: 27 abril 2026). Formatos detectados: ODT, ODS, PDF, TXT, DOC. No se ha detectado portal de datos abiertos ni catálogo CKAN. El aviso legal oficial lista tres dominios: brenaalta.es (web corporativa), brenaalta.sedelectronica.es (sede) y transparencia.brenaalta.es (transparencia). El dominio balta.org es un alias secundario. La sede electrónica menciona explícitamente datos abiertos bajo RD 1495/2011. Fecha de consulta: 2026-06."
   },
   {
     "id": "ayuntamiento_brena_baja",
@@ -3857,30 +4173,30 @@
     "name": "Ayuntamiento de El Pinar de El Hierro",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_el_hierro",
     "islands": [
       "El Hierro"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de El Pinar de El Hierro. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de El Pinar de El Hierro (El Hierro). Dispone de sede electrónica y portal de transparencia municipal. No se ha verificado un portal de datos abiertos reutilizables independiente; la información pública se canaliza principalmente mediante transparencia y trámites electrónicos.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Pinar de El Hierro",
-        "postal_code": null,
-        "municipality": null,
+        "address": "C/ José Padrón Machín S/N",
+        "postal_code": "38914",
+        "municipality": "El Pinar de El Hierro",
         "island": "El Hierro",
         "coordinates": {
-          "lat": 27.7406,
-          "lon": -17.9503
+          "lat": 27.7534,
+          "lon": -18.0267
         },
-        "source_url": "https://elpinardeelhierro.sedelectronica.es/transparency"
+        "source_url": "https://elpinardeelhierro.sedelectronica.es/info.0"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de El Pinar de El Hierro",
+        "id": "elpinar_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de El Pinar de El Hierro",
         "url": "https://elpinardeelhierro.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
@@ -3888,39 +4204,63 @@
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "ODT",
+          "ODS",
+          "PDF",
+          "HTML"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Contratos",
+          "Subvenciones"
         ],
-        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia con formatos documentales; no se ha verificado un catálogo de datos abiertos reutilizables independiente.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "elpinar_sede",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de El Pinar de El Hierro",
+        "url": "https://elpinardeelhierro.sedelectronica.es/info.0",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Administración electrónica",
+          "Sector público"
+        ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://elpinardeelhierro.sedelectronica.es/transparency"
+        "https://elpinardeelhierro.sedelectronica.es/info.0",
+        "https://elpinardeelhierro.sedelectronica.es/transparency",
+        "https://elpinardeelhierro.sedelectronica.es",
+        "https://transparenciacanarias.org/tag/el-pinar-de-el-hierro/"
       ]
     },
-    "notes": null
+    "notes": "La sede electrónica y el portal de transparencia están activos. No se ha verificado un portal de datos abiertos independiente; el contenido disponible es documental y de administración electrónica."
   },
   {
     "id": "ayuntamiento_el_rosario",
@@ -7025,136 +7365,161 @@
     },
     "notes": null
   },
- {
-  "id": "ayuntamiento_tazacorte",
-  "name": "Ayuntamiento de Tazacorte",
-  "entity_kind": "ayuntamiento",
-  "scope": "municipal",
-  "parent_entity_id": null,
-  "islands": ["La Palma"],
-  "description": "Ayuntamiento de Tazacorte, en la isla de La Palma. Dispone de un portal de transparencia propio y de un portal de transparencia integrado en la sede electrónica. El portal propio concentra información institucional, económica, normativa, contractual, de subvenciones y de rendición de cuentas. El portal de la sede electrónica ofrece navegación HTML, documentos PDF y algunos documentos DOCX previsualizados.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle Primero de Mayo, 1",
-      "postal_code": "38770",
-      "municipality": "Villa y Puerto de Tazacorte",
-      "island": "La Palma",
-      "coordinates": {
-        "lat": 28.6489,
-        "lon": -17.9304
+  {
+    "id": "ayuntamiento_tazacorte",
+    "name": "Ayuntamiento de Tazacorte",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "parent_entity_id": null,
+    "islands": [
+      "La Palma"
+    ],
+    "description": "Ayuntamiento de Tazacorte, en la isla de La Palma. Dispone de un portal de transparencia propio y de un portal de transparencia integrado en la sede electrónica. El portal propio concentra información institucional, económica, normativa, contractual, de subvenciones y de rendición de cuentas. El portal de la sede electrónica ofrece navegación HTML, documentos PDF y algunos documentos DOCX previsualizados.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Primero de Mayo, 1",
+        "postal_code": "38770",
+        "municipality": "Villa y Puerto de Tazacorte",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6489,
+          "lon": -17.9304
+        },
+        "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codUnico=..."
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_transparencia_tazacorte",
+        "kind": "transparencia",
+        "name": "Portal de transparencia",
+        "url": "https://transparencia.tazacorte.es",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "TXT",
+          "XLSX",
+          "ODS",
+          "CSV",
+          "JSON",
+          "DOC"
+        ],
+        "topics": [
+          "institucional",
+          "organizativa",
+          "económica",
+          "retribuciones",
+          "presupuestos",
+          "actas",
+          "normativa",
+          "contratos",
+          "subvenciones",
+          "cuentas_anuales",
+          "canal_interno",
+          "participacion"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal propio con múltiples secciones y formatos variados de descarga; incluye documentos estructurados y tablas de datos.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       },
-      "source_url": "https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigrama/fichaUnidadOrganica.htm?codUnico=..."
-    }
-  ],
-  "portals": [
-    {
-      "id": "portal_transparencia_tazacorte",
-      "kind": "transparencia",
-      "name": "Portal de transparencia",
-      "url": "https://transparencia.tazacorte.es",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [],
-      "formats": ["HTML", "PDF", "ODT", "TXT", "XLSX", "ODS", "CSV", "JSON", "DOC"],
-      "topics": [
-        "institucional",
-        "organizativa",
-        "económica",
-        "retribuciones",
-        "presupuestos",
-        "actas",
-        "normativa",
-        "contratos",
-        "subvenciones",
-        "cuentas_anuales",
-        "canal_interno",
-        "participacion"
-      ],
-      "machine_readable": false,
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal propio con múltiples secciones y formatos variados de descarga; incluye documentos estructurados y tablas de datos.",
-      "last_updated": "2026-04",
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
+      {
+        "id": "portal_transparencia_sede_tazacorte",
+        "kind": "transparencia",
+        "name": "Portal de transparencia en sede electrónica",
+        "url": "https://tazacorte.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "DOCX"
+        ],
+        "topics": [
+          "institucional",
+          "normativa",
+          "económica",
+          "ayudas_y_subvenciones",
+          "patrimonio",
+          "contratación",
+          "urbanismo",
+          "obras_publicas",
+          "medio_ambiente",
+          "atencion_ciudadano"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia con estructura HTML y documentos previsualizados, principalmente PDF y algunos DOCX.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_tazacorte",
+        "kind": "other",
+        "name": "Sede Electrónica",
+        "url": "https://tazacorte.sedelectronica.es",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "tramitacion",
+          "registro",
+          "expedientes",
+          "buzon_electronico",
+          "perfil_del_contratante"
+        ],
+        "machine_readable": false,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica con acceso a trámites y servicios administrativos, que hospeda el portal de transparencia.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://transparencia.tazacorte.es",
+        "https://tazacorte.sedelectronica.es/transparency",
+        "https://tazacorte.sedelectronica.es",
+        "https://www.tazacorte.es/web/",
+        "https://transparencia.tazacorte.es/accesibilidad/",
+        "https://transparencia.tazacorte.es/contratos/informacion-necesaria-conveniente/",
+        "https://transparencia.tazacorte.es/contratos/contratos-formalizados/",
+        "https://transparencia.tazacorte.es/contratos/licitaciones-en-curso/"
+      ]
     },
-    {
-      "id": "portal_transparencia_sede_tazacorte",
-      "kind": "transparencia",
-      "name": "Portal de transparencia en sede electrónica",
-      "url": "https://tazacorte.sedelectronica.es/transparency",
-      "portal_status": "active",
-      "technology": ["sedelectronica"],
-      "standards": [],
-      "formats": ["HTML", "PDF", "DOCX"],
-      "topics": [
-        "institucional",
-        "normativa",
-        "económica",
-        "ayudas_y_subvenciones",
-        "patrimonio",
-        "contratación",
-        "urbanismo",
-        "obras_publicas",
-        "medio_ambiente",
-        "atencion_ciudadano"
-      ],
-      "machine_readable": false,
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal de transparencia con estructura HTML y documentos previsualizados, principalmente PDF y algunos DOCX.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    },
-    {
-      "id": "sede_electronica_tazacorte",
-      "kind": "other",
-      "name": "Sede Electrónica",
-      "url": "https://tazacorte.sedelectronica.es",
-      "portal_status": "active",
-      "technology": ["sedelectronica"],
-      "standards": [],
-      "formats": ["HTML", "PDF"],
-      "topics": [
-        "tramitacion",
-        "registro",
-        "expedientes",
-        "buzon_electronico",
-        "perfil_del_contratante"
-      ],
-      "machine_readable": false,
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Sede electrónica con acceso a trámites y servicios administrativos, que hospeda el portal de transparencia.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://transparencia.tazacorte.es",
-      "https://tazacorte.sedelectronica.es/transparency",
-      "https://tazacorte.sedelectronica.es",
-      "https://www.tazacorte.es/web/",
-      "https://transparencia.tazacorte.es/accesibilidad/",
-      "https://transparencia.tazacorte.es/contratos/informacion-necesaria-conveniente/",
-      "https://transparencia.tazacorte.es/contratos/contratos-formalizados/",
-      "https://transparencia.tazacorte.es/contratos/licitaciones-en-curso/"
-    ]
+    "notes": "El portal propio es claramente el más completo y presenta formatos reutilizables diversos. En la sede electrónica el portal de transparencia es más simple, con navegación HTML, enlaces y documentos PDF, además de algún DOCX previsualizado. Se han verificado secciones como institucional, normativa, económica, ayudas y subvenciones, patrimonio, contratación, urbanismo y accesibilidad. Fecha de consulta: 2026-06."
   },
-  "notes": "El portal propio es claramente el más completo y presenta formatos reutilizables diversos. En la sede electrónica el portal de transparencia es más simple, con navegación HTML, enlaces y documentos PDF, además de algún DOCX previsualizado. Se han verificado secciones como institucional, normativa, económica, ayudas y subvenciones, patrimonio, contratación, urbanismo y accesibilidad. Fecha de consulta: 2026-06."
-},
   {
     "id": "ayuntamiento_tegueste",
     "name": "Ayuntamiento de Tegueste",
@@ -7720,70 +8085,93 @@
     "name": "Ayuntamiento de Valleseco",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Valleseco. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Valleseco (Gran Canaria). Dispone de sede electrónica y portal de transparencia municipal. El portal de transparencia incluye la información del Ilustre Ayuntamiento de Valleseco y de sus entidades dependientes Somdevalle S.L. y Sendero del Valle S.L.U. La información publicada es de carácter documental y de transparencia, no un portal de datos abiertos reutilizables independiente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Valleseco",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle León y Castillo, 12",
+        "postal_code": "35340",
+        "municipality": "Valleseco",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.0411,
-          "lon": -15.5597
+          "lat": 28.0601,
+          "lon": -15.5756
         },
-        "source_url": "https://valleseco.sedelectronica.es/transparency/f972a818-0152-46ba-9a03-b5946e7683e7"
+        "source_url": "https://valleseco.sedelectronica.es/info.1"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Valleseco",
-        "url": "https://valleseco.sedelectronica.es/transparency/f972a818-0152-46ba-9a03-b5946e7683e7",
+        "id": "valleseco_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Valleseco",
+        "url": "https://valleseco.sedelectronica.es/transparency/",
         "portal_status": "active",
         "technology": [
           "Portal Transparencia"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "ODT",
+          "ODS",
+          "DOC",
+          "PDF",
+          "HTML"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Contratos",
+          "Subvenciones"
         ],
-        "machine_readable": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "El portal incluye tres bloques: Ilustre Ayuntamiento de Valleseco (3129), Somdevalle S.L. (723) y Sendero del Valle S.L.U. (365). Los formatos visibles son ODT, ODS, DOC, PDF y HTML. No se ha confirmado un catálogo de datos abiertos reutilizables independiente.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "valleseco_sede",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Valleseco",
+        "url": "https://valleseco.sedelectronica.es/info.1",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Administración electrónica",
+          "Sector público"
+        ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://valleseco.sedelectronica.es/transparency/f972a818-0152-46ba-9a03-b5946e7683e7"
+        "https://valleseco.sedelectronica.es/info.1",
+        "https://valleseco.sedelectronica.es/transparency/"
       ]
     },
-    "notes": null
+    "notes": "El portal de transparencia agrupa también la información de Somdevalle S.L. y Sendero del Valle S.L.U. Los formatos verificados son ODT, ODS, DOC, PDF y HTML."
   },
   {
     "id": "ayuntamiento_valsequillo",
@@ -7930,30 +8318,78 @@
     "name": "Ayuntamiento de Vega de San Mateo",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Vega de San Mateo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento de Vega de San Mateo (Gran Canaria). Dispone de sede electrónica, portal institucional y portal de transparencia municipal. El portal de transparencia incluye también información de Vegalia y de AGROGEST; la información publicada es de carácter documental y de transparencia, no un portal de datos abiertos reutilizables independiente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Vega de San Mateo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Alameda de Sta. Ana, 3",
+        "postal_code": "35320",
+        "municipality": "Vega de San Mateo",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.0008,
-          "lon": -15.5694
+          "lat": 28.0108,
+          "lon": -15.5323
         },
-        "source_url": "https://vegadesanmateo.sedelectronica.es/transparency"
+        "source_url": "https://www.vegadesanmateo.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Vega de San Mateo",
+        "id": "vegadesanmateo_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Vega de San Mateo",
+        "url": "https://www.vegadesanmateo.es/",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Sector público",
+          "Administración"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "vegadesanmateo_sede",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Vega de San Mateo",
+        "url": "https://vegadesanmateo.sedelectronica.es/info.1",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Administración electrónica",
+          "Sector público"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "vegadesanmateo_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Vega de San Mateo",
         "url": "https://vegadesanmateo.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
@@ -7961,109 +8397,38 @@
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "ODT",
+          "DOCX",
+          "PDF",
+          "HTML"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Contratos",
+          "Subvenciones"
         ],
-        "machine_readable": true,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "dataset_count_note": "El portal de transparencia incluye información del Ayuntamiento de Vega de San Mateo (1298), Sociedad Urbanística Municipal (Vegalia) (355) y Empresa Agroganadera de Gestión y Comercialización S.L. (Agrogest) (312). Los formatos visibles son ODT, DOCX, PDF y HTML. No se ha confirmado un catálogo de datos abiertos reutilizables independiente.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
+        "https://www.vegadesanmateo.es/",
+        "https://vegadesanmateo.sedelectronica.es/info.1",
         "https://vegadesanmateo.sedelectronica.es/transparency"
       ]
     },
-    "notes": null
-  },
-  {
-    "id": "ayuntamiento_vilaflor",
-    "name": "Ayuntamiento de Vilaflor",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Vilaflor. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Vilaflor",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.1569,
-          "lon": -16.6383
-        },
-        "source_url": "https://vilaflordechasna.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Vilaflor",
-        "url": "https://vilaflordechasna.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "machine_readable": true,
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://vilaflordechasna.sedelectronica.es/transparency"
-      ]
-    },
-    "notes": null
+    "notes": "El portal de transparencia agrupa también información de Vegalia y AGROGEST. Los formatos verificados son ODT, DOCX, PDF y HTML. No se ha verificado un portal de datos abiertos independiente."
   },
   {
     "id": "ayuntamiento_yaiza",
