@@ -6641,6 +6641,20 @@
   "scope": "municipal",
   "islands": ["Lanzarote"],
   "description": "Ayuntamiento del municipio de San Bartolomé (Lanzarote). Dispone de sede electrónica y portal de transparencia/gobierno abierto operativos, pero su sección de datos abiertos (opendata) está actualmente vacía, sin conjuntos de datos publicados.",
+    "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Plaza León y Castillo, s/n",
+      "postal_code": null,
+      "municipality": "San Bartolomé",
+      "island": "Lanzarote",
+      "coordinates": {
+        "lat": 28.9918,
+        "lon": -13.6063
+      },
+      "source_url": "https://www.sanbartolome.es"
+    }
+  ],
   "portals": [
     {
       "id": "transparencia_san_bartolome",
