@@ -6634,75 +6634,72 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_san_bartolome",
-    "name": "Ayuntamiento de San Bartolomé",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Lanzarote"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de San Bartolomé. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de San Bartolomé",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Lanzarote",
-        "coordinates": {
-          "lat": 28.9983,
-          "lon": -13.6058
-        },
-        "source_url": "https://eadmin.sanbartolome.es/transparencia"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de San Bartolomé",
-        "url": "https://eadmin.sanbartolome.es/transparencia",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://eadmin.sanbartolome.es/transparencia"
-      ]
+{
+  "id": "ayuntamiento_san_bartolome",
+  "name": "Ayuntamiento de San Bartolomé",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "islands": ["Lanzarote"],
+  "description": "Ayuntamiento del municipio de San Bartolomé (Lanzarote). Dispone de sede electrónica y portal de transparencia/gobierno abierto operativos, pero su sección de datos abiertos (opendata) está actualmente vacía, sin conjuntos de datos publicados.",
+  "portals": [
+    {
+      "id": "transparencia_san_bartolome",
+      "kind": "transparencia",
+      "name": "Portal de Gobierno Abierto – Ayuntamiento de San Bartolomé",
+      "url": "https://transparencia.sanbartolome.es",
+      "portal_status": "active",
+      "technology": ["ATM Gruppo Maggioli"],
+      "standards": [],
+      "formats": ["HTML", "DOCX", "ODS", "ODT", "XLSX"],
+      "topics": [
+        "Institucional", "Organizativa", "Miembros electos",
+        "Empleo público", "Retribuciones", "Normativa",
+        "Servicios y procedimientos", "Económica-Financiera",
+        "Patrimonio", "Planes y programas", "Obras públicas",
+        "Contratos", "Convenios", "Ordenación del territorio",
+        "Ayudas y subvenciones", "Estadística", "Derecho de acceso"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": 0,
+      "dataset_count_note": "Sección opendata en https://transparencia.sanbartolome.es/opendata funcional pero sin conjuntos de datos añadidos a 2026-06.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
-  },
+    {
+      "id": "sede_electronica_san_bartolome",
+      "kind": "other",
+      "name": "Sede Electrónica – Ayuntamiento de San Bartolomé",
+      "url": "https://eadmin.sanbartolome.es",
+      "portal_status": "active",
+      "technology": ["ATM Gruppo Maggioli"],
+      "standards": [],
+      "formats": [],
+      "topics": ["Trámites", "Padrón", "Urbanismo", "Tributos", "Servicios sociales"],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "notes": "Portal opendata vacío a fecha 2026-06. Plataforma de transparencia gestionada por ATM Gruppo Maggioli. CIF: P3501900I. Sede electrónica en eadmin.sanbartolome.es. Alcalde 2023-2027: Isidro Pérez Martín (PSOE).",
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.sanbartolome.es",
+      "https://eadmin.sanbartolome.es",
+      "https://transparencia.sanbartolome.es",
+      "https://transparencia.sanbartolome.es/opendata"
+    ]
+  }
+},
   {
     "id": "ayuntamiento_san_bartolome_de_tirajana",
     "name": "Ayuntamiento de San Bartolomé de Tirajana",
