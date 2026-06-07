@@ -6110,74 +6110,135 @@
     "notes": null
   },
   {
-    "id": "ayuntamiento_mogan",
-    "name": "Ayuntamiento de Mogán",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Mogán. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Mogán",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.8928,
-          "lon": -15.7242
-        },
-        "source_url": "https://transparencia.mogan.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Mogán",
-        "url": "https://transparencia.mogan.es",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparencia.mogan.es"
-      ]
+  "id": "ayuntamiento_mogan",
+  "name": "Ayuntamiento de Mogán",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "parent_entity_id": "cabildo_gran_canaria",
+  "islands": ["Gran Canaria"],
+  "description": "Ayuntamiento del municipio de Mogán (Gran Canaria), en el suroeste de la isla. Municipio turístico de tamaño medio con presupuesto de 58 M€ (2025), 21 concejales y alcaldesa Onalia Bueno García (Juntos por Mogán). Dispone de portal de transparencia propio en dominio dedicado con histórico desde 2017, sede electrónica OAT y empresa municipal (Mogán Gestión Municipal S.L.) con transparencia propia. No cuenta con portal de datos abiertos reutilizables.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Av. de la Constitución, 4",
+      "postal_code": "35140",
+      "municipality": "Mogán",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 27.8841,
+        "lon": -15.7247
+      },
+      "source_url": "https://transparencia.mogan.es/acceso-a-la-informacion/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Ayuntamiento de Mogán",
+      "url": "https://transparencia.mogan.es",
+      "portal_status": "active",
+      "technology": ["WordPress"],
+      "standards": [
+        "Ley 19/2013 de Transparencia",
+        "Ley 12/2014 Canaria de Transparencia"
+      ],
+      "formats": ["PDF", "HTML", "ODT", "ODS", "XLSX"],
+      "topics": [
+        "Institucional",
+        "Organización y personal",
+        "Empleo público",
+        "Retribuciones",
+        "Normativa",
+        "Patrimonio",
+        "Servicios y procedimientos",
+        "Económico-financiero",
+        "Presupuesto",
+        "Contratación",
+        "Convenios y concesiones",
+        "Subvenciones",
+        "Planificación",
+        "Obras públicas",
+        "Ordenación del territorio",
+        "Estadística",
+        "Participación ciudadana",
+        "Derecho de acceso"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia activa con dominio propio. Última actualización: 01/06/2026. Histórico presupuestario 2017–2025 (presupuesto 2025: 58.029.588,81 €; superávit por habitante: 533,90 €; gasto por habitante: 2.624,01 €). 8 secciones temáticas según arts. 17–33 Ley 12/2014. Documentos en PDF, HTML, ODT, ODS y XLSX. Sin datasets reutilizables en formato abierto estándar.",
+      "last_updated": "2026-06",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Ayuntamiento de Mogán",
+      "url": "https://oat.mogan.es:8448/ventanilla/web/ayuntamiento",
+      "portal_status": "active",
+      "technology": ["OAT"],
+      "standards": ["ENS", "Ley 39/2015"],
+      "formats": [],
+      "topics": [
+        "Trámites electrónicos",
+        "Padrón de habitantes",
+        "Impuestos y tasas",
+        "Urbanismo",
+        "Empleo público",
+        "Servicios sociales",
+        "Cultura y deportes",
+        "Transporte y tráfico",
+        "Participación ciudadana"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "transparencia_empresa_municipal",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Mogán Gestión Municipal S.L.",
+      "url": "https://www.gestmogan.com/portal-de-transparencia/",
+      "portal_status": "active",
+      "technology": [],
+      "standards": ["Ley 19/2013 de Transparencia"],
+      "formats": [],
+      "topics": [
+        "Empresa pública",
+        "Gestión municipal",
+        "Contratación",
+        "Subvenciones"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia de la entidad participada Mogán Gestión Municipal S.L. Dirección: Av. de la Constitución, 14.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://transparencia.mogan.es",
+      "https://oat.mogan.es:8448/ventanilla/web/ayuntamiento",
+      "https://www.gestmogan.com/portal-de-transparencia/",
+      "https://transparencia.mogan.es/acceso-a-la-informacion/"
+    ]
   },
+  "notes": "Municipio turístico del suroeste de Gran Canaria (~22.000 habitantes). Presupuesto 2025: 58.029.588,81 €. 21 concejales; gobierno municipal: Juntos por Mogán (mayoría). Contacto transparencia: transparencia@mogan.es / 928 158 800. No dispone de portal de datos abiertos propio. Empresa municipal participada: Mogán Gestión Municipal S.L."
+},
   {
     "id": "ayuntamiento_moya",
     "name": "Ayuntamiento de Moya",
