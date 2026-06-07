@@ -7692,74 +7692,103 @@
     "notes": null
   },
   {
-    "id": "ayuntamiento_tejeda",
-    "name": "Ayuntamiento de Tejeda",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Tejeda. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Tejeda",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9933,
-          "lon": -15.6133
-        },
-        "source_url": "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tejeda",
-        "url": "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda"
-      ]
+  "id": "ayuntamiento_tejeda",
+  "name": "Ayuntamiento de Tejeda",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "parent_entity_id": "cabildo_gran_canaria",
+  "islands": ["Gran Canaria"],
+  "description": "Ayuntamiento del municipio de Tejeda (Gran Canaria), en el interior de la isla. Publica transparencia activa mediante su sede electrónica, con 3.023 documentos en 19 categorías (institucional, económico-financiero, contratación, ordenación del territorio, etc.). No dispone de portal de datos abiertos propio ni API reutilizable.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Plaza Nuestra Señora del Socorro, 3",
+      "postal_code": "35360",
+      "municipality": "Tejeda",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 27.9951,
+        "lon": -15.6152
+      },
+      "source_url": "https://tejeda.eu"
+    }
+  ],
+  "portals": [
+    {
+      "id": "sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Ayuntamiento de Tejeda",
+      "url": "https://tejeda.sedelectronica.es",
+      "portal_status": "active",
+      "technology": ["eAdministración"],
+      "standards": ["ENS", "Ley 39/2015"],
+      "formats": [],
+      "topics": [
+        "Trámites electrónicos",
+        "Padrón de habitantes",
+        "Contratación",
+        "Empleo público",
+        "Subvenciones",
+        "Urbanismo",
+        "Presupuesto"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "portal_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Ayuntamiento de Tejeda",
+      "url": "https://tejeda.sedelectronica.es/transparency",
+      "portal_status": "active",
+      "technology": ["eAdministración"],
+      "standards": ["Ley 19/2013 de Transparencia", "Ley 12/2014 Canaria de Transparencia"],
+      "formats": ["PDF", "OASIS 1.2"],
+      "topics": [
+        "Institucional",
+        "Organización",
+        "Empleo público",
+        "Retribuciones",
+        "Normativa",
+        "Servicios y procedimientos",
+        "Económico-financiero",
+        "Patrimonio",
+        "Planificación",
+        "Obras públicas",
+        "Contratación",
+        "Convenios",
+        "Concesiones",
+        "Ayudas y subvenciones",
+        "Ordenación del territorio",
+        "Estadística",
+        "Derecho de acceso"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": 3023,
+      "dataset_count_note": "3.023 documentos en 19 categorías. Información actualizada a 20/04/2026. Categorías principales: Institucional (979), Económico-financiero (938), Contratación (261), Ordenación del territorio (301), Retribuciones (179). Formatos: PDF y OASIS 1.2.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://tejeda.sedelectronica.es",
+      "https://tejeda.sedelectronica.es/transparency"
+    ]
   },
+  "notes": "Municipio pequeño (~800 habitantes). No dispone de portal de datos abiertos propio. El portal de transparencia está integrado en la sede electrónica (eAdministración) con 3.023 documentos en formatos PDF y OASIS 1.2. Sin datasets reutilizables en formato abierto estándar (CSV, JSON, etc.)."
+},
   {
     "id": "ayuntamiento_telde",
     "name": "Ayuntamiento de Telde",
