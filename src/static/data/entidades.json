@@ -669,31 +669,30 @@
     "name": "Ayuntamiento de Santa Cruz de Tenerife",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de datos abiertos del Ayuntamiento de Santa Cruz de Tenerife con información sobre movilidad, urbanismo, tráfico, playas, turismo, medio ambiente, cultura y servicios municipales.",
+    "description": "Ayuntamiento de Santa Cruz de Tenerife, capital de la isla de Tenerife y de la Comunidad Autónoma de Canarias. Publica datos abiertos mediante un portal CKAN con 104 conjuntos de datos temáticos: geolocalización de equipamientos urbanos, viales, rutas saludables e históricas, arbolado por distrito, datos electorales, demográficos y de hacienda.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Santa Cruz de Tenerife",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Viera y Clavijo, 46",
+        "postal_code": "38004",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.4632,
-          "lon": -16.2518
+          "lat": 28.4682,
+          "lon": -16.2573
         },
-        "source_url": "https://opendata.santacruzdetenerife.es"
+        "source_url": "https://www.santacruzdetenerife.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "portal_opendata_sct",
         "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Santa Cruz de Tenerife",
-        "url": "https://opendata.santacruzdetenerife.es",
+        "name": "Portal de datos abiertos – Ayuntamiento de Santa Cruz de Tenerife",
+        "url": "https://www.santacruzdetenerife.es/opendata/es/",
         "portal_status": "active",
         "technology": [
           "CKAN"
@@ -702,7 +701,14 @@
         "formats": [
           "CSV",
           "JSON",
-          "GeoJSON"
+          "GeoJSON",
+          "KML",
+          "KMZ",
+          "SHP",
+          "XLS",
+          "XLSX",
+          "RDF",
+          "ZIP"
         ],
         "topics": [
           "Movilidad",
@@ -712,43 +718,49 @@
           "Medio ambiente",
           "Turismo",
           "Cultura",
-          "Playas",
+          "Historia",
+          "Deportes",
+          "Elecciones",
+          "Arbolado",
           "Seguridad",
           "Equipamientos",
           "Participación ciudadana",
-          "Datos institucionales"
+          "Datos institucionales",
+          "Hacienda"
         ],
         "has_api": true,
         "apis": [
           {
             "name": "CKAN API",
-            "url": "https://opendata.santacruzdetenerife.es/api/3/action/package_search",
+            "url": "https://www.santacruzdetenerife.es/opendata/api/3/action/package_search",
             "type": "REST",
             "documentation_url": null
           }
         ],
-        "dataset_count": 140,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
+        "dataset_count": 104,
+        "dataset_count_note": "104 conjuntos de datos verificados en 2026-06 vía portal web. Formatos predominantes: CSV, JSON, KML/KMZ, SHP, XLS. Temáticas principales: geolocalización de canchas deportivas, fuentes públicas, papeleras, parques de calistenia, aparatos biosaludables, skate parks, cámaras foto-rojo; rutas saludables en Parque La Granja (250m, 500m, 1000m, 1125m); rutas históricas y de esculturas (Ramblas, Parque García Sanabria); viales y numeración desglosados por distrito; colegios y paneles electorales (2016, 2019, 2023); barrios con datos demográficos (2017, 2019); deuda pública y deuda por habitante; ofertas de empleo público; agenda cultural; arbolado por distrito; senderos del Macizo de Anaga.",
+        "license_summary": "CC BY",
         "licenses": [
           {
-            "name": "CC BY 4.0",
-            "id": null,
-            "url": null
+            "name": "Creative Commons Attribution",
+            "id": "cc-by",
+            "url": "http://www.opendefinition.org/licenses/cc-by"
           }
         ],
-        "last_checked": "2026-05"
+        "last_updated": "2023-05",
+        "last_checked": "2026-06"
       }
     ],
+    "notes": "SALUD DEL PORTAL (evaluación 2026-06): Portal CKAN activo y accesible. API REST funcional verificada. 104 datasets disponibles con descarga directa en múltiples formatos. SEÑALES DE ALERTA: el dataset más reciente modificado según API es de 2023-05-25, lo que indica que el catálogo lleva más de 3 años sin actualizaciones nuevas — riesgo de datos desactualizados. Los datasets electorales más recientes corresponden a las elecciones de mayo 2023, coherente con la fecha de última modificación. PUNTOS FUERTES: cobertura geoespacial muy destacada (la mayoría de datasets incluyen SHP, GeoJSON, KML/KMZ, además de CSV/XLS); datasets de numeración y arbolado desglosados por distrito (Suroeste, Salud-La Salle, Ofra-Costa Sur, Centro-Ifara, Anaga); licencia abierta CC BY en todos los datasets verificados. PENDIENTE: verificar si existen datasets fuera del portal principal (ej. transparencia, contratación). La versión exacta de la licencia CC BY no está especificada en el portal (CKAN devuelve 'cc-by' genérico sin versión).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://opendata.santacruzdetenerife.es"
+        "https://www.santacruzdetenerife.es/opendata/es/",
+        "https://www.santacruzdetenerife.es/opendata/api/3/action/package_search?rows=1&sort=metadata_modified+desc",
+        "https://www.santacruzdetenerife.es/opendata/api/3/action/package_show?id=canchas-deportivas"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_arona",
@@ -838,93 +850,156 @@
     "notes": null
   },
   {
-    "id": "comisionado_transparencia_canarias",
-    "name": "Comisionado de Transparencia de Canarias",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
-    ],
-    "description": "Portal de datos abiertos del Comisionado de Transparencia de Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Comisionado de Transparencia de Canarias",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.4636,
-          "lon": -16.2518
-        },
-        "source_url": "https://transparenciacanarias.org/datos/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Comisionado de Transparencia de Canarias",
-        "url": "https://transparenciacanarias.org/datos/",
-        "portal_status": "active",
-        "technology": [
-          "CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "Visualizaciones Embebidas"
-        ],
-        "topics": [
-          "Medio ambiente",
-          "Transporte",
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API TCanaria",
-            "url": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/",
-            "type": "REST",
-            "documentation_url": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/"
-          }
-        ],
-        "dataset_count": 22357,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
-        "licenses": [
-          {
-            "name": "CC BY 4.0",
-            "count": 22357,
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparenciacanarias.org/datos/"
-      ]
+  "id": "comisionado_transparencia_canarias",
+  "name": "Comisionado de Transparencia y Acceso a la Información Pública de Canarias",
+  "entity_kind": "organismo",
+  "scope": "autonomico",
+  "parent_entity_id": null,
+  "islands": ["Todas", "Gran Canaria", "Tenerife", "Lanzarote", "Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+  "description": "Órgano independiente de la Comunidad Autónoma de Canarias encargado del fomento, análisis, control y protección de la transparencia pública y del derecho de acceso a la información pública. Gestiona la evaluación anual de los portales de transparencia mediante T-Canaria y publica el Índice de Transparencia de Canarias (ITCanarias).",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Teobaldo Power, 7, Edificio del Parlamento de Canarias",
+      "postal_code": "38002",
+      "municipality": "Santa Cruz de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4674,
+        "lon": -16.2497
+      },
+      "source_url": "https://transparenciacanarias.org/contacto/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "comisionado_web",
+      "kind": "other",
+      "name": "Web oficial – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.org/",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["HTML", "TXT", "PDF", "ODT", "ODS", "XLSX"],
+      "topics": [
+        "transparencia",
+        "derecho_de_acceso",
+        "evaluacion",
+        "itcanarias",
+        "t-canaria",
+        "sector_publico",
+        "reclamaciones"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "comisionado_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.org/transparencia/",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["ODS", "PDF", "ODT", "HTML", "TXT"],
+      "topics": [
+        "institucional",
+        "organizativa",
+        "empleo_publico",
+        "retribuciones",
+        "servicios_procedimientos",
+        "economico_financiera",
+        "patrimonio",
+        "normativa",
+        "contratos",
+        "convenios",
+        "subvenciones",
+        "acceso_a_la_informacion_publica",
+        "canal_de_denuncias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "El portal ofrece la información organizada por ámbitos y permite descarga de páginas y documentos en ODS, PDF, ODT, HTML y TXT. No se ha verificado un catálogo de datasets reutilizables independiente.",
+      "last_updated": "2026-06",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "comisionado_datos",
+      "kind": "open_data",
+      "name": "Portal de evaluación y datos – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.org/datos/",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["XLSX", "ODT", "ODS"],
+      "topics": [
+        "itcanarias",
+        "evaluacion",
+        "puntuaciones",
+        "sector_publico",
+        "transparencia"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Las tablas de resultados se pueden descargar en ODT, ODS y XLSX. El portal publica puntuaciones del ITCanarias por entidad y por año.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "comisionado_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.eadministracion.es/home",
+      "portal_status": "active",
+      "technology": ["ATM Grupo Maggioli"],
+      "standards": [],
+      "formats": ["HTML", "PDF"],
+      "topics": [
+        "tramitacion_electronica",
+        "reclamaciones",
+        "acceso_a_la_informacion",
+        "evaluacion",
+        "sugerencias",
+        "denuncias",
+        "instancia_generica"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": "2026-06",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://transparenciacanarias.org/",
+      "https://transparenciacanarias.org/contacto/",
+      "https://transparenciacanarias.org/transparencia/",
+      "https://transparenciacanarias.org/datos/",
+      "https://transparenciacanarias.eadministracion.es/home",
+      "https://www.gobiernodecanarias.org/justicia/RelacionesLaborales/Instituciones/comisionado/",
+      "https://www.parcan.es/glosario/30/"
+    ]
   },
+  "notes": "CIF: S3800106A. Teléfonos de contacto publicados: evaluación (+34) 922 473 964 y reclamaciones (+34) 922 473 969. Correo: comisionadotransparencia@transparenciacanarias.org y evaluacion@transparenciacanarias.org. La sede electrónica migró a nueva plataforma en 2025. El portal de transparencia publica contenidos por ámbitos y permite descarga en ODS, PDF, ODT, HTML y TXT. El portal /datos/ publica la evaluación del ITCanarias y tablas descargables en ODT, ODS y XLSX."
+},
   {
     "id": "gobierno_abierto_canarias",
     "name": "Portal de Gobierno Abierto del Gobierno de Canarias",
@@ -2219,73 +2294,122 @@
     "notes": "Teléfono SAC: 922 500 800. Email SAC: sac@candelaria.es. Entidades dependientes con sede electrónica y transparencia propia (candidatas a entidades separadas en el catálogo): EPELCAN – Entidad Pública Empresarial de Gestión de Empresas y Servicios Públicos (epelcan.sedelectronica.es); Viviendas y Servicios Municipales de Candelaria – Empresa de Inserción (empresadeinsercion.sedelectronica.es); Fundación Canaria Candelaria Solidaria – CANDESOL (candesol.sedelectronica.es). Indicadores económicos no descargables en /transparencia/economica/indicadores. Perfil de contratante vacío en candelaria.es/perfil-del-contratante/."
   },
   {
-    "id": "ayuntamiento_granadilla_de_abona",
-    "name": "Ayuntamiento de Granadilla de Abona",
+    "id": "ayuntamiento_san_miguel_de_abona",
+    "name": "Ayuntamiento de San Miguel de Abona",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Granadilla de Abona. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_tenerife",
+    "description": "Ayuntamiento del municipio de San Miguel de Abona, sur de Tenerife. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de un portal propio en transparencia.sanmigueldeabona.es, con formatos reutilizables (CSV, JSON, XML, ODS). La sede electrónica opera sobre la plataforma STA/Gestiona.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Granadilla de Abona",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Carretera a Los Abrigos, 30, 38620 San Miguel de Abona",
+        "postal_code": "38620",
+        "municipality": "San Miguel de Abona",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.1197,
-          "lon": -16.5756
+          "lat": 28.0982,
+          "lon": -16.6163
         },
-        "source_url": "https://transparencia.granadilladeabona.org"
+        "source_url": "https://transparencia.sanmigueldeabona.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Granadilla de Abona",
-        "url": "https://transparencia.granadilladeabona.org",
-        "portal_status": "active",
+        "id": "sanmiguel_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de San Miguel de Abona",
+        "url": "https://transparencia.sanmigueldeabona.es/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "custom"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "JSON",
+          "ODS",
+          "ODT",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
+        "machine_readable": true,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-04",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "sanmiguel_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de San Miguel de Abona",
+        "url": "https://aytosanmigueldeabona.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "sanmiguel_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de San Miguel de Abona",
+        "url": "https://www.sanmigueldeabona.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3803500B. Portal de transparencia propio (tecnología custom), alineado con Ley 12/2014 canaria. La sede STA/Gestiona no incluye sección /transparency/. Existe sede tributaria adicional en sede.sanmigueldeabona.es (perfil del contratante). Teléfono: 922 700 000.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.granadilladeabona.org"
+        "https://www.sanmigueldeabona.es/",
+        "https://transparencia.sanmigueldeabona.es/",
+        "https://aytosanmigueldeabona.sedelectronica.es"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_guimar",
@@ -2361,69 +2485,190 @@
     "name": "Ayuntamiento de La Aldea de San Nicolás",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de La Aldea de San Nicolás. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de La Aldea de San Nicolás (Gran Canaria). Publica información de transparencia activa a través de su portal propio y portales independientes para sus sociedades municipales (Sociedad de Deportes y SASAC). No se ha detectado portal de datos abiertos con datasets estructurados descargables.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Aldea de San Nicolás",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Real, 28",
+        "postal_code": "35470",
+        "municipality": "La Aldea de San Nicolás",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9936,
-          "lon": -15.7914
+          "lat": 28.0024,
+          "lon": -15.7809
         },
-        "source_url": "https://transparencia.laaldeasanicolas.es"
+        "source_url": "https://laaldeasanicolas.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de La Aldea de San Nicolás",
-        "url": "https://transparencia.laaldeasanicolas.es",
+        "id": "portal_transparencia_ayuntamiento",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de La Aldea de San Nicolás",
+        "url": "https://transparencia.laaldeasanicolas.es/t",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "GobiernoAbierto / Fernandopoo"
         ],
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "ODT",
+          "ODS",
+          "DOCX",
+          "XLSX",
+          "CSV"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Organización y funcionamiento",
+          "Órganos de gobierno",
+          "Recursos humanos",
+          "Plantilla",
+          "Oferta de empleo público",
+          "Retribuciones",
+          "Compatibilidades",
+          "Contratos",
+          "Subvenciones",
+          "Presupuestos",
+          "Cuentas anuales",
+          "Endeudamiento",
+          "Hacienda",
+          "Patrimonio",
+          "Urbanismo",
+          "Medio ambiente",
+          "Servicios sociales",
+          "Seguridad ciudadana",
+          "Educación",
+          "Cultura",
+          "Deportes",
+          "Participación ciudadana",
+          "Normativa",
+          "Licitaciones"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "dataset_count_note": "Portal de transparencia activa con publicación de documentos. No expone datasets estructurados ni API de descarga masiva. Última actualización verificada: 2026-05-29 (Cuentas Anuales, Gastos).",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "portal_transparencia_deportes",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Sociedad de Deportes de La Aldea S.L.",
+        "url": "https://transparencia-deportes.laaldeasanicolas.es/t",
+        "portal_status": "active",
+        "technology": [
+          "GobiernoAbierto / Fernandopoo"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [
+          "HTML",
+          "CSV",
+          "DOCX",
+          "XLSX",
+          "ODT"
+        ],
+        "topics": [
+          "Organización",
+          "Personal",
+          "Contratos",
+          "Subvenciones",
+          "Cuentas anuales",
+          "Auditoría",
+          "Servicios deportivos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia de la sociedad municipal Deportes de La Aldea S.L. Última actualización verificada: 2026-05-07.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "portal_transparencia_sasac",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Sociedad Aldeana de Servicios y Atención Ciudadana (SASAC)",
+        "url": "https://transparencia-sasac.laaldeasanicolas.es/t",
+        "portal_status": "active",
+        "technology": [
+          "GobiernoAbierto / Fernandopoo"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "CSV",
+          "DOCX",
+          "XLSX",
+          "ODT"
+        ],
+        "topics": [
+          "Organización",
+          "Personal",
+          "Contratos",
+          "Subvenciones",
+          "Cuentas anuales",
+          "Auditoría",
+          "Servicios sociales y asistenciales",
+          "Residencia de mayores"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia de la sociedad municipal SASAC (servicios asistenciales y residencia de mayores). Última actualización verificada: 2026-05-07.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de La Aldea de San Nicolás",
+        "url": "https://laaldeadesannicolas.sedelectronica.es/info.0",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica.es"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Catálogo de procedimientos",
+          "Cita previa",
+          "Gobierno abierto",
+          "Hacienda pública"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica para trámites ciudadanos. No publica datasets abiertos. Código DIR3: L01350206.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
+    "notes": "No se ha detectado portal de datos abiertos (CKAN u equivalente). La transparencia se canaliza a través de tres portales independientes: ayuntamiento, Sociedad de Deportes y SASAC, todos bajo la plataforma GobiernoAbierto/Fernandopoo. Sociedades municipales: Sociedad de Deportes de La Aldea S.L. (sede: https://sociedaddedeportesdelaaldea.sedelectronica.es/info.0) y SASAC (https://sasac.laaldeasanicolas.es/). Integrada en la Mancomunidad de Ayuntamientos del Norte de Gran Canaria.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.laaldeasanicolas.es"
+        "https://laaldeasanicolas.es/",
+        "https://transparencia.laaldeasanicolas.es/t",
+        "https://transparencia-deportes.laaldeasanicolas.es/t",
+        "https://transparencia-sasac.laaldeasanicolas.es/t",
+        "https://laaldeadesannicolas.sedelectronica.es/info.0"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_la_oliva",
@@ -3047,69 +3292,90 @@
     "name": "Ayuntamiento de Agaete",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Agaete. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_gran_canaria",
+    "description": "Ayuntamiento del municipio de Agaete, noroeste de Gran Canaria. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), que integra el portal de transparencia con 1.739 documentos en dos secciones: el propio Ayuntamiento y la Sociedad Municipal ACUDE. Sin portal de datos abiertos reutilizables independiente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Agaete",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Antonio de Armas, 1, 35480 Agaete",
+        "postal_code": "35480",
+        "municipality": "Agaete",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.0994,
-          "lon": -15.7012
+          "lat": 28.1002,
+          "lon": -15.7009
         },
-        "source_url": "https://agaete.sedelectronica.es/transparency"
+        "source_url": "https://www.agaete.es/ciudadano"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Agaete",
-        "url": "https://agaete.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "agaete_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Agaete",
+        "url": "https://agaete.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "tramites"
+        ],
+        "formats": [
+          "DOCX",
+          "ODT",
+          "PDF",
+          "XLS",
+          "XLSX"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "agaete_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Agaete",
+        "url": "https://www.agaete.es",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3500100G. Portal de transparencia (STA/Gestiona) con dos secciones: Ayuntamiento (1.610 docs, DOCX/ODT/PDF) y Sociedad Municipal ACUDE (129 docs, DOCX/ODT/PDF/XLS/XLSX). Sin CKAN ni sección de datos abiertos reutilizables. last_updated no declarado explícitamente en el índice.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://agaete.sedelectronica.es/transparency"
+        "https://www.agaete.es",
+        "https://agaete.sedelectronica.es/transparency/",
+        "https://agaete.es/ayuntamiento/aviso-legal"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_agulo",
@@ -3454,69 +3720,94 @@
     "name": "Ayuntamiento de Arico",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Arico. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_tenerife",
+    "description": "Ayuntamiento del municipio de Arico, sur de Tenerife. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), con más de 4.500 documentos en 18 secciones temáticas. Sin portal de datos abiertos reutilizables independiente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Arico",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Meleque, 1, 38589 Villa de Arico",
+        "postal_code": "38589",
+        "municipality": "Arico",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.1639,
-          "lon": -16.4822
+          "lat": 28.1643,
+          "lon": -16.4914
         },
-        "source_url": "https://ayuntamientodearico.sedelectronica.es/transparency"
+        "source_url": "https://www.ayuntamientodearico.com/contactar/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Arico",
-        "url": "https://ayuntamientodearico.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "arico_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Arico",
+        "url": "https://ayuntamientodearico.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "DOC",
+          "DOCX",
+          "HTML",
+          "ODT",
+          "PDF",
+          "XLS",
+          "XLSX",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-04",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "arico_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Arico",
+        "url": "https://www.ayuntamientodearico.com",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3800500E. Portal de transparencia (STA/Gestiona) con ~4.551 docs en 18 secciones, última revisión 27-04-2026 (sección Económica-Financiera). Formato '.word' publicado por la plataforma equivale a DOCX. Sin CKAN ni sección de datos abiertos reutilizables.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ayuntamientodearico.sedelectronica.es/transparency"
+        "https://www.ayuntamientodearico.com",
+        "https://ayuntamientodearico.sedelectronica.es/transparency/",
+        "https://www.ayuntamientodearico.com/contactar/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_arrecife",
@@ -3661,69 +3952,94 @@
     "name": "Ayuntamiento de Arucas",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Arucas. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_gran_canaria",
+    "description": "Ayuntamiento del municipio de Arucas, norte de Gran Canaria. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), con más de 11.400 documentos en tres secciones: el Ayuntamiento, la Sociedad Municipal para el Desarrollo de Arucas S.A. y el Organismo Autónomo de Cultura. Sin portal de datos abiertos reutilizables propio.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Arucas",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Constitución, 1, 35400 Arucas",
+        "postal_code": "35400",
+        "municipality": "Arucas",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.1228,
-          "lon": -15.5234
+          "lat": 28.1189,
+          "lon": -15.5222
         },
-        "source_url": "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5"
+        "source_url": "https://www.arucas.org/modules.php?mod=portal&file=index"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Arucas",
-        "url": "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5",
-        "portal_status": "active",
+        "id": "arucas_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Arucas",
+        "url": "https://arucas.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "DOCX",
+          "ODG",
+          "ODF",
+          "ODT",
+          "ODS",
+          "PDF",
+          "TXT",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-05",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "arucas_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Arucas",
+        "url": "https://www.arucas.org",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "Portal de transparencia (STA/Gestiona) con tres secciones: Ayuntamiento (~9.895 docs, PDF/ODT, actualización semanal), Sociedad Municipal Arucas S.A. (697 docs, PDF/ODT/ODG/ODS/ODF/TXT/DOCX/XML) y Organismo Autónomo de Cultura (892 docs, PDF/ODT). Sin portal CKAN ni datos abiertos propios (0% open data según dyntra.org, 2024). Coordenadas aproximadas al casco urbano (inferred).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5"
+        "https://www.arucas.org",
+        "https://arucas.sedelectronica.es/transparency/",
+        "https://www.dyntra.org/poi/ayuntamiento-de-arucas/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_barlovento",
@@ -4632,72 +4948,93 @@
   },
   {
     "id": "ayuntamiento_fuencaliente",
-    "name": "Ayuntamiento de Fuencaliente",
+    "name": "Ayuntamiento de Fuencaliente de La Palma",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Fuencaliente. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_la_palma",
+    "description": "Ayuntamiento del municipio de Fuencaliente de La Palma, al sur de la isla. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), que integra el portal de transparencia con 711 documentos en 18 secciones. Elevó su índice ITCanarias de 3,04 a 8,59 puntos entre 2019 y 2024.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Fuencaliente",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle San Antonio, s/n, 38740 Los Canarios, Fuencaliente",
+        "postal_code": "38740",
+        "municipality": "Fuencaliente de La Palma",
         "island": "La Palma",
         "coordinates": {
-          "lat": 28.4769,
-          "lon": -17.8408
+          "lat": 28.4842,
+          "lon": -17.8425
         },
-        "source_url": "https://fuencalientedelapalma.sedelectronica.es/transparency"
+        "source_url": "https://fuencalientedelapalma.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Fuencaliente",
-        "url": "https://fuencalientedelapalma.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "fuencaliente_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Fuencaliente de La Palma",
+        "url": "https://fuencalientedelapalma.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "tramites"
+        ],
+        "formats": [
+          "HTML",
+          "ODT",
+          "PDF",
+          "PNG",
+          "XLS",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-03",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "fuencaliente_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Fuencaliente de La Palma",
+        "url": "https://fuencalientedelapalma.es",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "Portal de transparencia integrado en la sede electrónica (STA/Gestiona), sin dominio independiente. 711 documentos en 18 secciones; última revisión verificada 2026-03. No se detecta portal CKAN ni sección de datos abiertos reutilizables. CIF: P3801400G. Índice ITCanarias: 3,04 (anterior corporación) → 8,59 (julio 2024).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://fuencalientedelapalma.sedelectronica.es/transparency"
+        "https://fuencalientedelapalma.es",
+        "https://fuencalientedelapalma.sedelectronica.es/transparency/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_garachico",
@@ -4842,69 +5179,118 @@
     "name": "Ayuntamiento de Guía de Isora",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Guía de Isora. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_tenerife",
+    "description": "Ayuntamiento del municipio de Guía de Isora, suroeste de Tenerife. Publica transparencia activa a través de un portal propio basado en la plataforma Gesgocom, que genera automáticamente formatos reutilizables y se integra con PLACSP y BDNS. Obtiene un 44,57% en el índice de transparencia municipal según dyntra.org.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Guía de Isora",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle del Ayuntamiento, 4, 38680 Guía de Isora",
+        "postal_code": "38680",
+        "municipality": "Guía de Isora",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2111,
-          "lon": -16.7764
+          "lat": 28.2112,
+          "lon": -16.7794
         },
-        "source_url": "http://servicios.guiadeisora.es/transparencia/indice/GCAN"
+        "source_url": "https://www.guiadeisora.org/corp/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Guía de Isora",
-        "url": "http://servicios.guiadeisora.es/transparencia/indice/GCAN",
-        "portal_status": "active",
+        "id": "guiadeisora_transparencia_gesgocom",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Guía de Isora",
+        "url": "https://transparencia.guiadeisora.es/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "gesgocom"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "estadistica",
+          "tramites"
         ],
-        "has_api": false,
-        "apis": [],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "guiadeisora_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Guía de Isora",
+        "url": "https://guiadeisora.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "guiadeisora_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Guía de Isora",
+        "url": "https://www.guiadeisora.org",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-04",
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3801900F. Portal de transparencia basado en Gesgocom SL (https://www.gesgocom.es). La sede STA/Gestiona no incluye sección /transparency/. 44,57% en índice dyntra.org (82/184 indicadores, posición 168, 2026).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "http://servicios.guiadeisora.es/transparencia/indice/GCAN"
+        "https://www.guiadeisora.org/corp/",
+        "https://transparencia.guiadeisora.es/",
+        "https://www.dyntra.org/poi/ayuntamiento-de-guia-de-isora/",
+        "https://www.gesgocom.es"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_galdar",
@@ -5253,69 +5639,109 @@
     "name": "Ayuntamiento de La Frontera",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "El Hierro"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de La Frontera. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_el_hierro",
+    "description": "Ayuntamiento del municipio de La Frontera, el más poblado de la isla de El Hierro. Publica información de transparencia activa en portal propio con dominio independiente (transparencia.aytofrontera.org), con formatos CSV, XLS, ODT y PDF. Dispone de sede electrónica con tramitación en línea.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Frontera",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle La Corredera, 10, 38911 Frontera",
+        "postal_code": "38911",
+        "municipality": "La Frontera",
         "island": "El Hierro",
         "coordinates": {
-          "lat": 27.75365,
-          "lon": -18.011031
+          "lat": 27.7667,
+          "lon": -18.0050
         },
-        "source_url": "https://ayuntamientodelafrontera.sedelectronica.es/transparency"
+        "source_url": "https://www.aytofrontera.org"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de La Frontera",
-        "url": "https://ayuntamientodelafrontera.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "lafrontera_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de La Frontera",
+        "url": "https://transparencia.aytofrontera.org",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "plataforma_transparencia"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo"
+        ],
+        "formats": [
+          "CSV",
+          "XLS",
+          "ODT",
+          "PDF"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "lafrontera_sede",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de La Frontera",
+        "url": "https://ayuntamientodelafrontera.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "tramites",
+          "administracion"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "lafrontera_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de La Frontera",
+        "url": "https://www.aytofrontera.org",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "Portal de transparencia con dominio propio (transparencia.aytofrontera.org), plataforma distinta a la sede electrónica. Existe sección 'Datos' (https://transparencia.aytofrontera.org/data/1) pendiente de verificar si contiene datasets reutilizables o es solo documental. Si contiene datasets descargables en CSV, reclasificar portal como kind: 'open_data'. Coordenadas aproximadas al casco urbano de Frontera (inferred). Confirmar CIF antes de commitear.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ayuntamientodelafrontera.sedelectronica.es/transparency"
+        "https://www.aytofrontera.org",
+        "https://ayuntamientodelafrontera.sedelectronica.es",
+        "https://transparencia.aytofrontera.org"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_la_guancha",
@@ -5981,69 +6407,147 @@
     "name": "Ayuntamiento de Mogán",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Mogán. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de Mogán (Gran Canaria), en el suroeste de la isla. Municipio turístico de tamaño medio con presupuesto de 58 M€ (2025), 21 concejales y alcaldesa Onalia Bueno García (Juntos por Mogán). Dispone de portal de transparencia propio en dominio dedicado con histórico desde 2017, sede electrónica OAT y empresa municipal (Mogán Gestión Municipal S.L.) con transparencia propia. No cuenta con portal de datos abiertos reutilizables.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Mogán",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Av. de la Constitución, 4",
+        "postal_code": "35140",
+        "municipality": "Mogán",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.8928,
-          "lon": -15.7242
+          "lat": 27.8841,
+          "lon": -15.7247
         },
-        "source_url": "https://transparencia.mogan.es"
+        "source_url": "https://transparencia.mogan.es/acceso-a-la-informacion/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Mogán",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Mogán",
         "url": "https://transparencia.mogan.es",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "WordPress"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 19/2013 de Transparencia",
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
         "formats": [
+          "PDF",
           "HTML",
-          "PDF"
+          "ODT",
+          "ODS",
+          "XLSX"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Institucional",
+          "Organización y personal",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Patrimonio",
+          "Servicios y procedimientos",
+          "Económico-financiero",
+          "Presupuesto",
+          "Contratación",
+          "Convenios y concesiones",
+          "Subvenciones",
+          "Planificación",
+          "Obras públicas",
+          "Ordenación del territorio",
+          "Estadística",
+          "Participación ciudadana",
+          "Derecho de acceso"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia activa con dominio propio. Última actualización: 01/06/2026. Histórico presupuestario 2017–2025 (presupuesto 2025: 58.029.588,81 €; superávit por habitante: 533,90 €; gasto por habitante: 2.624,01 €). 8 secciones temáticas según arts. 17–33 Ley 12/2014. Documentos en PDF, HTML, ODT, ODS y XLSX. Sin datasets reutilizables en formato abierto estándar.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Mogán",
+        "url": "https://oat.mogan.es:8448/ventanilla/web/ayuntamiento",
+        "portal_status": "active",
+        "technology": [
+          "OAT"
+        ],
+        "standards": [
+          "ENS",
+          "Ley 39/2015"
+        ],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Padrón de habitantes",
+          "Impuestos y tasas",
+          "Urbanismo",
+          "Empleo público",
+          "Servicios sociales",
+          "Cultura y deportes",
+          "Transporte y tráfico",
+          "Participación ciudadana"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "transparencia_empresa_municipal",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Mogán Gestión Municipal S.L.",
+        "url": "https://www.gestmogan.com/portal-de-transparencia/",
+        "portal_status": "active",
+        "technology": [],
+        "standards": [
+          "Ley 19/2013 de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "formats": [],
+        "topics": [
+          "Empresa pública",
+          "Gestión municipal",
+          "Contratación",
+          "Subvenciones"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia de la entidad participada Mogán Gestión Municipal S.L. Dirección: Av. de la Constitución, 14.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.mogan.es"
+        "https://transparencia.mogan.es",
+        "https://oat.mogan.es:8448/ventanilla/web/ayuntamiento",
+        "https://www.gestmogan.com/portal-de-transparencia/",
+        "https://transparencia.mogan.es/acceso-a-la-informacion/"
       ]
     },
-    "notes": null
+    "notes": "Municipio turístico del suroeste de Gran Canaria (~22.000 habitantes). Presupuesto 2025: 58.029.588,81 €. 21 concejales; gobierno municipal: Juntos por Mogán (mayoría). Contacto transparencia: transparencia@mogan.es / 928 158 800. No dispone de portal de datos abiertos propio. Empresa municipal participada: Mogán Gestión Municipal S.L."
   },
   {
     "id": "ayuntamiento_moya",
@@ -6445,69 +6949,109 @@
     "name": "Ayuntamiento de San Bartolomé",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Lanzarote"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de San Bartolomé. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de San Bartolomé (Lanzarote). Dispone de sede electrónica y portal de transparencia/gobierno abierto operativos, pero su sección de datos abiertos (opendata) está actualmente vacía, sin conjuntos de datos publicados.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de San Bartolomé",
+        "address": "Plaza León y Castillo, s/n",
         "postal_code": null,
-        "municipality": null,
+        "municipality": "San Bartolomé",
         "island": "Lanzarote",
         "coordinates": {
-          "lat": 28.9983,
-          "lon": -13.6058
+          "lat": 28.9918,
+          "lon": -13.6063
         },
-        "source_url": "https://eadmin.sanbartolome.es/transparencia"
+        "source_url": "https://www.sanbartolome.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de San Bartolomé",
-        "url": "https://eadmin.sanbartolome.es/transparencia",
+        "id": "transparencia_san_bartolome",
+        "kind": "transparencia",
+        "name": "Portal de Gobierno Abierto – Ayuntamiento de San Bartolomé",
+        "url": "https://transparencia.sanbartolome.es",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "ATM Gruppo Maggioli"
         ],
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "DOCX",
+          "ODS",
+          "ODT",
+          "XLSX"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Institucional",
+          "Organizativa",
+          "Miembros electos",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Económica-Financiera",
+          "Patrimonio",
+          "Planes y programas",
+          "Obras públicas",
+          "Contratos",
+          "Convenios",
+          "Ordenación del territorio",
+          "Ayudas y subvenciones",
+          "Estadística",
+          "Derecho de acceso"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": 0,
+        "dataset_count_note": "Sección opendata en https://transparencia.sanbartolome.es/opendata funcional pero sin conjuntos de datos añadidos a 2026-06.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_san_bartolome",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de San Bartolomé",
+        "url": "https://eadmin.sanbartolome.es",
+        "portal_status": "active",
+        "technology": [
+          "ATM Gruppo Maggioli"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites",
+          "Padrón",
+          "Urbanismo",
+          "Tributos",
+          "Servicios sociales"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
+    "notes": "Portal opendata vacío a fecha 2026-06. Plataforma de transparencia gestionada por ATM Gruppo Maggioli. CIF: P3501900I. Sede electrónica en eadmin.sanbartolome.es. Alcalde 2023-2027: Isidro Pérez Martín (PSOE).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://eadmin.sanbartolome.es/transparencia"
+        "https://www.sanbartolome.es",
+        "https://eadmin.sanbartolome.es",
+        "https://transparencia.sanbartolome.es",
+        "https://transparencia.sanbartolome.es/opendata"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_san_bartolome_de_tirajana",
@@ -6859,69 +7403,113 @@
     "name": "Ayuntamiento de Santa Cruz de La Palma",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "La Palma"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Santa Cruz de La Palma. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_insular_de_la_palma",
+    "description": "Ayuntamiento de la capital de la isla de La Palma. Publica transparencia activa y datos abiertos a través de un portal propio de Gobierno Abierto (plataforma OGOV) en transparencia.santacruzdelapalma.es, conforme a la Ley 12/2014 canaria. Incluye visores interactivos de presupuestos, contratación y subvenciones con descarga en CSV y XLSX. Dispone de sede electrónica propia independiente de la plataforma STA/Gestiona.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Santa Cruz de La Palma",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de España, 6, 38700 Santa Cruz de La Palma",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
         "island": "La Palma",
         "coordinates": {
-          "lat": 28.6836,
+          "lat": 28.6835,
           "lon": -17.7642
         },
-        "source_url": "https://sede.santacruzdelapalma.es/transparencia/indice/IT22"
+        "source_url": "https://transparencia.santacruzdelapalma.es/t/acceso-informacion"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Santa Cruz de La Palma",
-        "url": "https://sede.santacruzdelapalma.es/transparencia/indice/IT22",
-        "portal_status": "active",
+        "id": "scruzpalma_gobierno_abierto",
+        "kind": "transparencia",
+        "name": "Portal de Gobierno Abierto – Ayuntamiento de Santa Cruz de La Palma",
+        "url": "https://transparencia.santacruzdelapalma.es",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "ogov"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
         ],
-        "has_api": false,
-        "apis": [],
+        "formats": [
+          "CSV",
+          "XLSX"
+        ],
+        "has_api": null,
+        "machine_readable": true,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "scruzpalma_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Santa Cruz de La Palma",
+        "url": "https://sede.santacruzdelapalma.es",
+        "technology": [
+          "custom"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "scruzpalma_tributos",
+        "kind": "other",
+        "name": "Portal de Tributos – Ayuntamiento de Santa Cruz de La Palma",
+        "url": "https://portaltributos.santacruzdelapalma.es",
+        "technology": [
+          "custom"
+        ],
+        "topics": [
+          "economia"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3803700H. Teléfono: 922 426 500. Plataforma OGOV con visor presupuestario interactivo, calculadora de impuestos, visor de contratación y subvenciones; descarga en CSV y XLSX. Sede electrónica propia (no STA/Gestiona).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.santacruzdelapalma.es/transparencia/indice/IT22"
+        "https://transparencia.santacruzdelapalma.es",
+        "https://sede.santacruzdelapalma.es",
+        "https://www.einforma.com/informacion-empresa/ayuntamiento-santa-cruz-palma"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_santa_lucia_de_tirajana",
@@ -7563,69 +8151,113 @@
     "name": "Ayuntamiento de Tejeda",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Tejeda. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de Tejeda (Gran Canaria), en el interior de la isla. Publica transparencia activa mediante su sede electrónica, con 3.023 documentos en 19 categorías (institucional, económico-financiero, contratación, ordenación del territorio, etc.). No dispone de portal de datos abiertos propio ni API reutilizable.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tejeda",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza Nuestra Señora del Socorro, 3",
+        "postal_code": "35360",
+        "municipality": "Tejeda",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9933,
-          "lon": -15.6133
+          "lat": 27.9951,
+          "lon": -15.6152
         },
-        "source_url": "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda"
+        "source_url": "https://tejeda.eu"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tejeda",
-        "url": "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda",
+        "id": "sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Tejeda",
+        "url": "https://tejeda.sedelectronica.es",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "eAdministración"
         ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+        "standards": [
+          "ENS",
+          "Ley 39/2015"
         ],
+        "formats": [],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Trámites electrónicos",
+          "Padrón de habitantes",
+          "Contratación",
+          "Empleo público",
+          "Subvenciones",
+          "Urbanismo",
+          "Presupuesto"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Tejeda",
+        "url": "https://tejeda.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "eAdministración"
         ],
-        "last_checked": "2026-05"
+        "standards": [
+          "Ley 19/2013 de Transparencia",
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "formats": [
+          "PDF",
+          "OASIS 1.2"
+        ],
+        "topics": [
+          "Institucional",
+          "Organización",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Económico-financiero",
+          "Patrimonio",
+          "Planificación",
+          "Obras públicas",
+          "Contratación",
+          "Convenios",
+          "Concesiones",
+          "Ayudas y subvenciones",
+          "Ordenación del territorio",
+          "Estadística",
+          "Derecho de acceso"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": 3023,
+        "dataset_count_note": "3.023 documentos en 19 categorías. Información actualizada a 20/04/2026. Categorías principales: Institucional (979), Económico-financiero (938), Contratación (261), Ordenación del territorio (301), Retribuciones (179). Formatos: PDF y OASIS 1.2.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://tejeda.eu/transparencia-ayuntamiento-de-tejeda"
+        "https://tejeda.sedelectronica.es",
+        "https://tejeda.sedelectronica.es/transparency"
       ]
     },
-    "notes": null
+    "notes": "Municipio pequeño (~800 habitantes). No dispone de portal de datos abiertos propio. El portal de transparencia está integrado en la sede electrónica (eAdministración) con 3.023 documentos en formatos PDF y OASIS 1.2. Sin datasets reutilizables en formato abierto estándar (CSV, JSON, etc.)."
   },
   {
     "id": "ayuntamiento_telde",
@@ -7770,69 +8402,119 @@
     "name": "Ayuntamiento de Tinajo",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
+    "parent_entity_id": "cabildo_lanzarote",
     "islands": [
       "Lanzarote"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Tinajo. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "description": "Ayuntamiento del municipio de Tinajo (Lanzarote). Dispone de sede electrónica para tramitación en línea y portal de transparencia activo con publicidad activa, visor presupuestario interactivo y visor de obras. No se ha detectado portal de datos abiertos dedicado ni API pública de datasets.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tinajo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de San Roque, 1",
+        "postal_code": "35560",
+        "municipality": "Tinajo",
         "island": "Lanzarote",
         "coordinates": {
-          "lat": 29.0661,
-          "lon": -13.6944
+          "lat": 29.0622,
+          "lon": -13.6761
         },
-        "source_url": "https://tinajo.sedelectronica.es/transparency"
+        "source_url": "https://www.tinajo.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Tinajo",
-        "url": "https://tinajo.sedelectronica.es/transparency",
+        "id": "transparencia_tinajo",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del Ayuntamiento de Tinajo",
+        "url": "https://transparencia.tinajo.es/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "transparenciacanarias.org"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 19/2013 de Transparencia",
+          "Ley 12/2014 de Transparencia Canaria"
+        ],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "DOCX",
+          "XLSX",
+          "CSV"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Institucional",
+          "Estructura orgánica",
+          "Órganos de gobierno",
+          "Empleo público",
+          "Retribuciones",
+          "Plantilla",
+          "Normativa",
+          "Contratación",
+          "Contratos menores",
+          "Presupuestos",
+          "Hacienda",
+          "Cuentas anuales",
+          "Patrimonio",
+          "Subvenciones",
+          "Convenios",
+          "Urbanismo",
+          "Obras públicas",
+          "Servicios públicos",
+          "Participación ciudadana",
+          "Estadísticas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de publicidad activa con ~60 secciones documentales. Incluye visor presupuestario interactivo (presupuesto 11.896.478 €, 1.760,09 €/hab.) con descarga en XLS/XML/VSX, visor de obras y calculadora fiscal. Sin API ni datasets estructurados reutilizables. El XML del visor presupuestario presenta errores de formato.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sede_electronica_tinajo",
+        "kind": "other",
+        "name": "Sede Electrónica del Ayuntamiento de Tinajo",
+        "url": "https://tinajo.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica.es"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Tramitación electrónica",
+          "Registro",
+          "Padrón de habitantes",
+          "Contratación pública",
+          "Empleo público",
+          "Factura electrónica",
+          "Perfil del contratante"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
+    "notes": "Sin portal de datos abiertos detectado a junio 2026. La transparencia se canaliza a través de https://transparencia.tinajo.es/, plataforma del Comisionado de Transparencia de Canarias (transparenciacanarias.org), compartida con otros municipios canarios. El visor presupuestario ofrece exportación en XLS y XML, pero el XML presenta errores de formato. Evaluación disponible: 'IT-Canarias Ayuntamiento 2024'. Padrón municipal aproximado ~6.760 hab. (estimado por cálculo inverso: 11.896.478 € / 1.760,09 €/hab.). Contacto: registro@tinajo.es / 928 84 00 21.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://tinajo.sedelectronica.es/transparency"
+        "https://www.tinajo.es/",
+        "https://transparencia.tinajo.es/",
+        "https://tinajo.sedelectronica.es/",
+        "https://transparencia.tinajo.es/vp"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_tuineje",
@@ -8805,72 +9487,99 @@
   },
   {
     "id": "consorcio_el_rincon_la_orotava",
-    "name": "Consorcio El Rincón La Orotava",
+    "name": "Consorcio El Rincón – La Orotava",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
-      "Todas"
+      "Tenerife"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "gobierno_de_canarias",
+    "description": "Entidad de derecho público con personalidad jurídica propia, creada al amparo de la Ley 5/1992 y el Plan Especial aprobado por Decreto 343/1997 para la ordenación urbanística del paraje El Rincón en La Orotava. Integrada por la Comunidad Autónoma de Canarias, el Cabildo Insular de Tenerife, el Ayuntamiento de La Orotava y entidades privadas vecinales y ecologistas; adscrita formalmente a la CA de Canarias. Publica información de transparencia como secciones integradas en su propia web WordPress. Dispone de sede electrónica en plataforma STA/Gestiona.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Consorcio El Rincón La Orotava",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Nicandro González Borges, 3, 38300 La Orotava",
+        "postal_code": "38300",
+        "municipality": "La Orotava",
+        "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.3888,
+          "lon": -16.5246
         },
-        "source_url": "https://consorcioelrincon.es"
+        "source_url": "https://elconsorcioelrincon.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consorcio El Rincón La Orotava",
-        "url": "https://consorcioelrincon.es",
-        "portal_status": "active",
+        "id": "elrincon_transparencia_web",
+        "kind": "transparencia",
+        "name": "Sección de Transparencia – Consorcio El Rincón – La Orotava",
+        "url": "https://elconsorcioelrincon.es/institucional-historico/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "wordpress"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "urbanismo",
+          "medio_ambiente",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "presupuestos",
+          "convenios"
         ],
-        "has_api": true,
-        "apis": [],
+        "formats": [
+          "DOCX",
+          "PDF",
+          "XLS"
+        ],
+        "has_api": false,
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elrincon_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Consorcio El Rincón – La Orotava",
+        "url": "https://consorcioelrincon.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites",
+          "urbanismo",
+          "subvenciones",
+          "normativa"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3800023H. CNAE: 8411. Adscrito formalmente a la CA de Canarias. Miembros: Gobierno de Canarias, Cabildo de Tenerife, Ayuntamiento de La Orotava, Agrupación de Propietarios El Rincón, AAVV Unión Vistas del Teide, Coordinadora El Rincón–Ecologistas en Acción. La transparencia se publica como secciones de la web WordPress (sin portal dedicado externo); mayoría de secciones vacías. Sede electrónica en STA/Gestiona. Cuentas anuales publicadas en la Intervención General del Gobierno de Canarias.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://consorcioelrincon.es"
+        "https://elconsorcioelrincon.es",
+        "https://consorcioelrincon.sedelectronica.es",
+        "https://www.einforma.com/informacion-empresa/consorcio-rincon-orotava"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ente_publico_radio_television_canaria_rtvc",
@@ -10297,73 +11006,79 @@
     "notes": null
   },
   {
-    "id": "instituto_canario_de_calidad_agroalimentaria_icca",
-    "name": "Instituto Canario de Calidad Agroalimentaria ICCA",
+    "id": "icca",
+    "name": "Instituto Canario de Calidad Agroalimentaria (ICCA)",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "gobierno_de_canarias",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias, creado por la Ley 1/2005, responsable del control, certificación y promoción de la calidad agroalimentaria en Canarias: denominaciones de origen protegidas, indicaciones geográficas, agricultura ecológica, control de residuos de plaguicidas y apoyo a producciones vitivinícolas (POSEI, ISV, PEPAC). Adscrito a la Consejería de Presidencia, Agricultura, Ganadería y Pesca. Dispone de sedes en Santa Cruz de Tenerife y Las Palmas de Gran Canaria, y laboratorio en La Laguna. Transparencia y tramitación articuladas a través de los portales centrales del Gobierno de Canarias.",
     "locations": [
       {
-        "kind": "headquarters",
-        "address": "Instituto Canario de Calidad Agroalimentaria ICCA",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "kind": "office",
+        "address": "Calle León y Castillo, 89, Planta 1ª, 35004 Las Palmas de Gran Canaria",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1192,
+          "lon": -15.4243
         },
-        "source_url": "https://www.gobiernodecanarias.org/agp/icca"
+        "source_url": "https://www.gobiernodecanarias.org/agpsa/icca/"
+      },
+      {
+        "kind": "office",
+        "address": "Carretera La Cuesta-Taco, 94, 38320 San Cristóbal de La Laguna",
+        "postal_code": "38320",
+        "municipality": "San Cristóbal de La Laguna",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4601,
+          "lon": -16.2926
+        },
+        "source_url": "https://www.gobiernodecanarias.org/agpsa/icca/temas/laboratorio/localizacion_lab.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Instituto Canario de Calidad Agroalimentaria ICCA",
-        "url": "https://www.gobiernodecanarias.org/agp/icca",
-        "portal_status": "active",
+        "id": "icca_web_gobcan",
+        "kind": "other",
+        "name": "Web oficial – ICCA – Gobierno de Canarias",
+        "url": "https://www.gobiernodecanarias.org/agpsa/icca/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "cms"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "agricultura",
+          "alimentacion",
+          "normativa",
+          "subvenciones",
+          "medio_ambiente"
         ],
-        "has_api": true,
-        "apis": [],
+        "formats": [
+          "PDF"
+        ],
+        "has_api": false,
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: Q3800459D. . Director: Ilmo. Sr. D. Luis Arráez Guadalupe (Decreto 294/2023). Marco legal: Ley 1/2005 y Ley 6/2019. Reglamento: Decreto 213/2008. Transparencia canalizada a través de https://www.gobiernodecanarias.org/transparencia/ (enlace explícito en la web del ICCA). Sede electrónica a través de https://sede.gobiernodecanarias.org/sede/. Sin portal de transparencia ni sede electrónica propios. Laboratorio en La Laguna (Tel. 922 475 592).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/agp/icca"
+        "https://www.gobiernodecanarias.org/agpsa/icca/",
+        "https://www.gobiernodecanarias.org/agpsa/icca/temas/laboratorio/localizacion_lab.html"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "instituto_canario_de_hemodonacion_y_hemoterapia_ichh",
@@ -10504,73 +11219,152 @@
     "notes": null
   },
   {
-    "id": "instituto_canario_de_la_vivienda_icv",
-    "name": "Instituto Canario de la Vivienda ICV",
+    "id": "instituto_canario_de_la_vivienda",
+    "name": "Instituto Canario de la Vivienda (ICV)",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "gobierno_de_canarias",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias adscrito a la Consejería de Obras Públicas, responsable de la planificación, gestión y promoción de la vivienda protegida y pública en el archipiélago. Gestiona el Registro de Demandantes de Vivienda Protegida y el Registro de Agentes Inmobiliarios de Canarias. Dispone de sedes en Santa Cruz de Tenerife y Las Palmas de Gran Canaria, y oficinas insulares en La Palma, Lanzarote y Fuerteventura. Transparencia y tramitación electrónica canalizadas a través de los portales centrales del Gobierno de Canarias.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Instituto Canario de la Vivienda ICV",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Carlos J.R. Hamilton, 16, Planta 1, Edificio Daida, 38071 Santa Cruz de Tenerife",
+        "postal_code": "38071",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.4632,
+          "lon": -16.2644
         },
-        "source_url": "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIA_PRINC_V2.html"
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Profesor Agustín Millares Carló, 18, Planta 1, Edificio de Usos Múltiples II, 35071 Las Palmas de Gran Canaria",
+        "postal_code": "35071",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1158,
+          "lon": -15.4162
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Avenida los Indianos, 20, Edificio Bolsa de Agua, Planta Baja, 38700 Santa Cruz de La Palma",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6775,
+          "lon": -17.7661
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Vía Medular, 99, Planta 1ª, 35500 Arrecife",
+        "postal_code": "35500",
+        "municipality": "Arrecife",
+        "island": "Lanzarote",
+        "coordinates": {
+          "lat": 28.9669,
+          "lon": -13.5574
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Hispanidad, 19, 35600 Puerto del Rosario",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
+        "coordinates": {
+          "lat": 28.5034,
+          "lon": -13.8647
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Instituto Canario de la Vivienda ICV",
-        "url": "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIA_PRINC_V2.html",
-        "portal_status": "active",
+        "id": "icv_transparencia_gobcan",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Instituto Canario de la Vivienda",
+        "url": "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIAPRINCV2.html",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "cms"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "vivienda",
+          "institucional",
+          "personal",
+          "retribuciones",
+          "normativa",
+          "contratos",
+          "convenios",
+          "subvenciones",
+          "patrimonio",
+          "presupuestos",
+          "estadistica"
         ],
-        "has_api": true,
-        "apis": [],
+        "formats": [
+          "PDF",
+          "ODT"
+        ],
+        "has_api": false,
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia",
+          "Ley 19/2013"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "icv_web_gobcan",
+        "kind": "other",
+        "name": "Web oficial – Instituto Canario de la Vivienda",
+        "url": "https://www.gobiernodecanarias.org/vivienda/",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "vivienda",
+          "urbanismo",
+          "subvenciones",
+          "normativa"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: Q3800444F. Tel. sede SCT: 922 922 690. Tel. sede LPGC: 928 306 000. Adscrito a la Consejería de Obras Públicas. Sede electrónica a través de https://sede.gobiernodecanarias.org/sede/. Sin portal de transparencia ni sede electrónica propios.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIA_PRINC_V2.html"
+        "https://www.gobiernodecanarias.org/vivienda/",
+        "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html",
+        "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIAPRINCV2.html"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "instituto_tecnologico_de_canarias_sa_itc",
@@ -11630,72 +12424,140 @@
   },
   {
     "id": "consorcio_de_abastecimiento_de_aguas_a_fuerteventura_caaf",
-    "name": "Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
+    "name": "Consorcio de Abastecimiento de Aguas a Fuerteventura (CAAF)",
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "insular",
     "parent_entity_id": null,
     "islands": [
       "Fuerteventura"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Consorcio público insular que gestiona el abastecimiento de agua potable en toda Fuerteventura, integrado por el Cabildo y los 6 municipios de la isla. Publica obligaciones de transparencia activa conforme a la Ley 12/2014 de Canarias y la Ley 19/2013 estatal. Dispone de sede electrónica y una sección de datos abiertos integrada en el portal de transparencia, actualmente vacía.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Máximo Escobar, 2",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
         "island": "Fuerteventura",
         "coordinates": {
-          "lat": 28.3587,
-          "lon": -14.0533
+          "lat": 28.5042,
+          "lon": -13.8615
         },
-        "source_url": "https://sede.caaf.es/transparencia"
+        "source_url": "https://caaf.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
-        "url": "https://sede.caaf.es/transparencia",
+        "id": "caaf_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – CAAF",
+        "url": "https://transparencia.caaf.es",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "DOCX",
+          "XLSM",
+          "ODS"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "institucional",
+          "organizacion",
+          "personal",
+          "empleo_publico",
+          "retribuciones",
+          "servicios_procedimientos",
+          "economico_financiera",
+          "patrimonio",
+          "contratos",
+          "convenios",
+          "concesiones",
+          "subvenciones",
+          "estadistica",
+          "derecho_acceso",
+          "agua",
+          "sector_publico"
         ],
-        "has_api": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sección de datos abiertos existente (https://transparencia.caaf.es/?page_id=545) pero completamente vacía a 2026-06. No se publican datasets reutilizables.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "caaf_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – CAAF",
+        "url": "https://sede.caaf.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "tramites",
+          "registro",
+          "notificaciones",
+          "carpeta_ciudadana",
+          "normativa",
+          "calendario_inhabiles"
+        ],
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "caaf_web",
+        "kind": "other",
+        "name": "Web oficial – CAAF",
+        "url": "https://caaf.es",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "agua",
+          "sector_publico"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.caaf.es/transparencia"
+        "https://caaf.es",
+        "https://transparencia.caaf.es",
+        "https://transparencia.caaf.es/?page_id=545",
+        "https://sede.caaf.es/eAdmin/Sede.do",
+        "https://sede.caaf.es/eAdmin/InfoSede.do?pagina=avisoLegal",
+        "https://transparencia.caaf.es/?page_id=541"
       ]
     },
-    "notes": null
+    "notes": "CIF: P3500005H. Tel.: 928 850 761. Consorcio formado por el Cabildo de Fuerteventura y los 6 municipios de la isla. La sección de datos abiertos del portal de transparencia (page_id=545) existe pero está vacía a fecha 2026-06: no hay datasets publicados ni reutilizables. Histórico ITCanarias: 2017 Incumplidora · 2018 6,80 · 2019 5,85 · 2020 6,61 · 2021 5,30 · 2022 0,21 · 2023 sin dato · 2024 sin dato. Tendencia descendente pronunciada desde 2018; caída drástica en 2022. Entidad distinta al Consejo Insular de Aguas de Fuerteventura (transparencia.aguasfuerteventura.com)."
   },
   {
     "id": "eolicas_de_fuerteventura",
@@ -12483,7 +13345,7 @@
     "name": "Fundación Canaria Gran Canaria Convention Bureau",
     "entity_kind": "organismo",
     "scope": "insular",
-    "parent_entity_id": "cabildo_insular_de_el_hierro",
+    "parent_entity_id": "cabildo_el_hierro",
     "islands": [
       "Gran Canaria"
     ],
@@ -13258,73 +14120,112 @@
     "notes": null
   },
   {
-    "id": "consejo_insular_de_aguas_de_la_gomera",
+    "id": "aguas_la_gomera",
     "name": "Consejo Insular de Aguas de La Gomera",
     "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
     "islands": [
       "La Gomera"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_insular_de_la_gomera",
+    "description": "Organismo autónomo responsable de la gestión del ciclo integral del agua y la planificación hidrológica insular de La Gomera. Entidad dependiente del Cabildo Insular de La Gomera. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de portal propio Gesgocom en transparencia.aguasgomera.es. No dispone de sede electrónica propia.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Consejo Insular de Aguas de La Gomera",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Real, 18, 38800 San Sebastián de La Gomera",
+        "postal_code": "38800",
+        "municipality": "San Sebastián de La Gomera",
         "island": "La Gomera",
         "coordinates": {
-          "lat": 28.0916,
-          "lon": -17.1133
+          "lat": 28.0924,
+          "lon": -17.1122
         },
-        "source_url": "https://transparencia.aguasgomera.es"
+        "source_url": "https://aguasgomera.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consejo Insular de Aguas de La Gomera",
+        "id": "aguasgomera_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Consejo Insular de Aguas de La Gomera",
         "url": "https://transparencia.aguasgomera.es",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "gesgocom"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "agua",
+          "medio_ambiente",
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "planificacion",
+          "obras_publicas",
+          "estadistica"
         ],
-        "has_api": true,
-        "apis": [],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-05",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "aguasgomera_web",
+        "kind": "other",
+        "name": "Web oficial – Consejo Insular de Aguas de La Gomera",
+        "url": "https://aguasgomera.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "agua",
+          "planificacion",
+          "medio_ambiente"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: Q8850004F. Teléfono: 922 141 410. Sin sede electrónica propia. Transparencia Gesgocom v10.2.0, mismo patrón que cabildo_insular_de_el_hierro. Entidad dependiente del Cabildo Insular de La Gomera (www.lagomera.es). Publica planes hidrológicos insulares (ciclos 2015-2021, 2021-2027 y 2027-2033 en tramitación) y planes de gestión del riesgo de inundación en formato PDF.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.aguasgomera.es"
+        "https://aguasgomera.es",
+        "https://transparencia.aguasgomera.es",
+        "https://transparencia.aguasgomera.es/aviso-legal"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "guaguagomera_sau",
@@ -14287,69 +15188,205 @@
     "name": "Cabildo Insular de El Hierro",
     "entity_kind": "cabildo",
     "scope": "insular",
-    "parent_entity_id": null,
     "islands": [
-      "Todas"
+      "El Hierro"
     ],
-    "description": "Cabildo insular de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Cabildo Insular de El Hierro, referente canario en transparencia y datos abiertos. Obtiene nota máxima (10) en el Índice de Transparencia del Comisionado de Canarias (2022-2023). Dispone de portal CKAN propio con API REST v3, endpoint SPARQL y metadatos RDF-DCAT, visor geoespacial y portal de transparencia Gesgocom. Adherido a la iniciativa El Hierro en Red y Red de Destinos Turísticos Inteligentes.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Cabildo Insular de El Hierro",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Dr. Quintero, 11, 38900 Valverde",
+        "postal_code": "38900",
+        "municipality": "Valverde",
+        "island": "El Hierro",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 27.8073,
+          "lon": -17.9152
         },
-        "source_url": "https://transparencia.elhierro.es"
+        "source_url": "https://www.elhierro.es/es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "elhierro_opendata_ckan",
         "kind": "open_data",
-        "name": "Portal de datos – Cabildo Insular de El Hierro",
-        "url": "https://transparencia.elhierro.es",
-        "portal_status": "active",
+        "name": "Portal de Datos Abiertos CKAN – Cabildo Insular de El Hierro",
+        "url": "https://datosabiertos.elhierro.es",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "ckan"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "medio_ambiente",
+          "meteorologia",
+          "volcanes",
+          "agua",
+          "turismo",
+          "transporte",
+          "economia",
+          "urbanismo",
+          "educacion",
+          "cultura"
+        ],
+        "formats": [
+          "CSV",
+          "RDF",
+          "Turtle",
+          "XML"
         ],
         "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
+        "machine_readable": true,
+        "dataset_count": 4,
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [
+          "DCAT",
+          "SPARQL",
+          "RDF"
+        ],
+        "apis": [
           {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
+            "name": "CKAN API REST v3",
+            "url": "https://datosabiertos.elhierro.es/api/3",
+            "type": "rest",
+            "documentation_url": "http://docs.ckan.org/en/2.8/api/"
+          },
+          {
+            "name": "SPARQL Endpoint",
+            "url": "https://datosabiertos.elhierro.es/sparql",
+            "type": "sparql",
+            "documentation_url": null
           }
         ],
-        "last_checked": "2026-05"
+        "licenses": [
+          {
+            "id": "cieh-aviso-legal",
+            "name": "Aviso Legal del Cabildo Insular de El Hierro",
+            "url": null,
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": "elhierro_transparencia_gesgocom",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Cabildo Insular de El Hierro",
+        "url": "https://transparencia.elhierro.es",
+        "technology": [
+          "gesgocom"
+        ],
+        "topics": [
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elhierro_geoespacial",
+        "kind": "geoespacial",
+        "name": "Visor Geoespacial – Cabildo Insular de El Hierro",
+        "url": "https://geo.elhierro.es/visor/",
+        "technology": [
+          "custom"
+        ],
+        "topics": [
+          "cartografia",
+          "urbanismo",
+          "medio_ambiente"
+        ],
+        "formats": [],
+        "has_api": null,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elhierro_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Cabildo Insular de El Hierro",
+        "url": "https://elhierro.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elhierro_web",
+        "kind": "other",
+        "name": "Web oficial – Cabildo Insular de El Hierro",
+        "url": "https://www.elhierro.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3800003J. Teléfono: 922 550 078. Presupuesto: 39.023.139 EUR (dyntra.org). 55,79% en índice dyntra.org DCI (106/190 indicadores, posición 6, 2026). Nota máxima (10) ITCanarias 2022-2023. Portal CKAN con 4 datasets activos (CSV): estaciones meteorológicas, prevención de incendios, estaciones volcánicas y depósitos de agua; todos bajo licencia propia cieh-aviso-legal. Metadatos exportables en RDF/XML/Turtle (DCAT). API REST v3 + SPARQL endpoint. Portal informativo adicional en opendata.elhierro.es. Transparencia Gesgocom v10.2.0. La sede STA/Gestiona no incluye sección /transparency/.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.elhierro.es"
+        "https://www.elhierro.es/es",
+        "https://datosabiertos.elhierro.es/dataset",
+        "https://datosabiertos.elhierro.es/api/3",
+        "https://transparencia.elhierro.es/",
+        "https://www.dyntra.org/poi/cabildo-insular-de-el-hierro/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "cabildo_insular_de_fuerteventura",
@@ -14490,143 +15527,269 @@
     "notes": null
   },
   {
-    "id": "federacion_canaria_de_islas_fecai",
-    "name": "Federación Canaria de Islas FECAI",
+    "id": "fecai",
+    "name": "Federación Canaria de Islas (FECAI)",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Asociaciones públicas dependiente de .",
+    "parent_entity_id": null,
+    "description": "Asociación con personalidad jurídica plena constituida en 1992, integrada voluntariamente por los siete cabildos insulares del archipiélago canario (El Hierro, Fuerteventura, Gran Canaria, La Gomera, Lanzarote, La Palma y Tenerife). Ostenta la representación institucional de los cabildos ante la CA de Canarias, conforme a la Ley 8/2015 de Cabildos Insulares. Su domicilio social es itinerante: coincide con el Cabildo que ostenta la Presidencia. Publica transparencia activa a través de portal propio Gesgocom con nota 9,94/10 en el Índice de Transparencia del Comisionado de Canarias.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Federación Canaria de Islas FECAI",
+        "address": "Sede itinerante – Cabildo de Fuerteventura (presidencia actual)",
         "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.4994,
+          "lon": -13.8626
         },
-        "source_url": "https://transparencia.fecai.es"
+        "source_url": "https://www.fecai.es/quienes-somos/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Federación Canaria de Islas FECAI",
+        "id": "fecai_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Federación Canaria de Islas FECAI",
         "url": "https://transparencia.fecai.es",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "gesgocom"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "institucional",
+          "personal",
+          "retribuciones",
+          "normativa",
+          "presupuestos",
+          "contratos",
+          "convenios",
+          "subvenciones",
+          "patrimonio",
+          "planificacion",
+          "estadistica"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-05",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "fecai_web",
+        "kind": "other",
+        "name": "Web oficial – Federación Canaria de Islas FECAI",
+        "url": "https://www.fecai.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "institucional",
+          "normativa"
+        ],
+        "formats": [
+          "PDF"
         ],
         "has_api": false,
-        "apis": [],
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "Sin CIF propio registrado: opera bajo los CIF de los cabildos miembros que asumen la secretaría general técnica y contabilidad según el periodo (actualmente Cabildo de Fuerteventura). Domicilio social itinerante por estatutos: sede efectiva en el Cabildo que ostenta la Presidencia en cada momento; actualmente presidida por Lola García (Cabildo de Fuerteventura). Gesgocom v10.2.0. ITCanarias 9,94/10 (2022-2023). Sin sede electrónica propia detectada.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
+        "https://www.fecai.es/",
+        "https://www.fecai.es/quienes-somos/",
         "https://transparencia.fecai.es"
       ]
-    },
-    "notes": null
+    }
   },
-  {
-    "id": "federacion_canaria_de_municipios_fecam",
-    "name": "Federación Canaria de Municipios FECAM",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Asociaciones públicas dependiente de .",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Federación Canaria de Municipios FECAM",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "https://fecam.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Federación Canaria de Municipios FECAM",
-        "url": "https://fecam.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://fecam.sedelectronica.es/transparency"
-      ]
+ {
+  "id": "fecam",
+  "name": "Federación Canaria de Municipios (FECAM)",
+  "entity_kind": "organismo",
+  "scope": "autonomico",
+  "parent_entity_id": null,
+  "islands": [
+    "Todas",
+    "Gran Canaria",
+    "Tenerife",
+    "Lanzarote",
+    "Fuerteventura",
+    "La Palma",
+    "La Gomera",
+    "El Hierro",
+    "La Graciosa"
+  ],
+  "description": "Asociación de entidades locales que agrupa a los municipios canarios. Promueve la cooperación interadministrativa, la formación de empleados públicos y la implantación de la transparencia y el gobierno abierto en los ayuntamientos de Canarias. Dispone de sede electrónica, portal de transparencia y servicio de formación con sedes en Tenerife, Gran Canaria y La Palma.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Avenida Veinticinco de Julio, 47",
+      "postal_code": "38004",
+      "municipality": "Santa Cruz de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4716,
+        "lon": -16.2577
+      },
+      "source_url": "https://www.fecam.es/sedes.cfm"
     },
-    "notes": null
+    {
+      "kind": "office",
+      "address": "Calle Pérez del Toro, 97",
+      "postal_code": "35004",
+      "municipality": "Las Palmas de Gran Canaria",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 28.1221,
+        "lon": -15.4267
+      },
+      "source_url": "https://www.fecam.es/sedes.cfm"
+    },
+    {
+      "kind": "office",
+      "address": "Avenida Los Indianos, 22, 2ª planta",
+      "postal_code": "38700",
+      "municipality": "Santa Cruz de La Palma",
+      "island": "La Palma",
+      "coordinates": {
+        "lat": 28.6773,
+        "lon": -17.7662
+      },
+      "source_url": "https://www.fecam.es/sedes.cfm"
+    }
+  ],
+  "portals": [
+    {
+      "id": "fecam_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – FECAM",
+      "url": "https://fecam.sedelectronica.es/transparency",
+      "portal_status": "active",
+      "technology": ["sede_electronica"],
+      "standards": [],
+      "formats": ["ODT", "PDF"],
+      "topics": [
+        "transparencia",
+        "institucional",
+        "organizacion",
+        "personal",
+        "empleo_publico",
+        "retribuciones",
+        "servicios_procedimientos",
+        "economico_financiera",
+        "contratos",
+        "convenios",
+        "subvenciones",
+        "derecho_acceso",
+        "sector_publico",
+        "administracion_local"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": 675,
+      "dataset_count_note": "675 documentos distribuidos en secciones: Institucional 95 · Organizativa 100 · Miembros electos y libre nombramiento 10 · Empleo sector público 73 · Retribuciones 56 · Servicios y procedimientos 18 · Económico-financiera 158 · Contratos 143 · Convenios y encomiendas 52 · Ayudas y subvenciones 30 · Derecho de acceso 36. Formatos ODT y PDF; no son datasets reutilizables estructurados.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "fecam_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – FECAM",
+      "url": "https://fecam.sedelectronica.es",
+      "portal_status": "active",
+      "technology": ["sede_electronica"],
+      "standards": [],
+      "formats": [],
+      "topics": [
+        "tramites",
+        "factura_electronica",
+        "perfil_contratante",
+        "validacion_documentos",
+        "empleados_publicos",
+        "organos_colegiados",
+        "canal_denuncias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "fecam_web",
+      "kind": "other",
+      "name": "Web oficial – FECAM",
+      "url": "https://www.fecam.es",
+      "portal_status": "active",
+      "technology": ["web_corporativa"],
+      "standards": [],
+      "formats": [],
+      "topics": [
+        "administracion_local",
+        "formacion",
+        "sector_publico",
+        "municipios_canarios"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.fecam.es",
+      "https://www.fecam.es/sedes.cfm",
+      "https://fecam.sedelectronica.es/info.0",
+      "https://fecam.sedelectronica.es/transparency",
+      "https://www.femp.es/federaciones-territoriales/federacion-canaria-de-municipios-fecam",
+      "https://transparenciacanarias.org/tag/fecam/"
+    ]
   },
+  "notes": "CIF: G76730399. Tel. sede Tenerife: 922 237 600 · infotenerife@fecam.es. Tel. sede Gran Canaria: 928 297 837 · infograncanaria@fecam.es. Tel. sede La Palma: 922 411 342 · infolapalma@fecam.es. Presidenta (2026): Mª Concepción Brito Núñez (Alcaldesa de Candelaria). Secretario General: Vicente Rodríguez Lorenzo. ITCanarias 2022-2023: 8,55 (primera evaluación a asociaciones públicas junto con FECAI, media 9,25); primera evaluación 2018: media 4,18. No dispone de portal de datos abiertos ni datasets estructurados reutilizables. La FECAM ha impulsado activamente la Red Canaria de Gobierno Abierto junto al Gobierno de Canarias."
+},
   {
     "id": "mancomunidad_norte_de_gran_canaria",
     "name": "Mancomunidad Norte de Gran Canaria",
