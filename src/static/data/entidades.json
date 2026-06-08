@@ -12964,144 +12964,106 @@
     },
     "notes": null
   },
-  {
-    "id": "consejo_insular_de_aguas_de_gran_canaria",
-    "name": "Consejo Insular de Aguas de Gran Canaria",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Consejo Insular de Aguas de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "http://www.aguasgrancanaria.com/transparencia.php"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consejo Insular de Aguas de Gran Canaria",
-        "url": "http://www.aguasgrancanaria.com/transparencia.php",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "http://www.aguasgrancanaria.com/transparencia.php"
-      ]
+ {
+  "id": "ciagc",
+  "name": "Consejo Insular de Aguas de Gran Canaria (CIAGC)",
+  "entity_kind": "organismo",
+  "scope": "insular",
+  "parent_entity_id": "cabildo_gran_canaria",
+  "islands": ["Gran Canaria"],
+  "description": "Organismo autónomo administrativo adscrito al Cabildo de Gran Canaria, con personalidad jurídica propia, responsable de la planificación, gestión y control del dominio público hidráulico insular desde 1995. Publica obligaciones de transparencia activa mediante OGOV y dispone de sede electrónica propia. No cuenta con portal de datos abiertos estructurado ni datasets en datos.gob.es a fecha 2026-06.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Avenida Juan XXIII, 2, 1º",
+      "postal_code": "35004",
+      "municipality": "Las Palmas de Gran Canaria",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 28.1189,
+        "lon": -15.4247
+      },
+      "source_url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership"
+    }
+  ],
+  "portals": [
+    {
+      "id": "ciagc_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – CIAGC",
+      "url": "https://transparencia.aguasgrancanaria.com/index",
+      "portal_status": "active",
+      "technology": ["OGOV"],
+      "standards": [
+        "Ley 12/2014 Transparencia Canarias",
+        "Ley 19/2013 Transparencia Estatal"
+      ],
+      "formats": ["CSV", "XLS", "ODT"],
+      "topics": [
+        "Agua",
+        "Recursos hídricos",
+        "Contratación pública",
+        "Presupuestos",
+        "Subvenciones",
+        "Personal",
+        "Cuentas anuales",
+        "Planes y programas",
+        "Obras públicas"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Publicidad activa estructurada en ~70 secciones temáticas (OGOV). Última actualización masiva: 14/05/2026. No expone catálogo de datasets ni API de descarga.",
+      "last_updated": "2026-05",
+      "license_summary": "Reproducción autorizada citando origen, salvo indicación expresa en contrario (aviso legal web)",
+      "licenses": [
+        {
+          "name": "Reutilización con atribución (aviso legal propio)",
+          "id": null,
+          "url": "https://www.aguasgrancanaria.com"
+        }
+      ],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "ciagc_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Consejo Insular de Aguas de Gran Canaria",
+      "url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+      "portal_status": "active",
+      "technology": ["SedElectronica"],
+      "standards": ["ENS", "Ley 39/2015"],
+      "formats": ["PDF"],
+      "topics": [
+        "Trámites administrativos",
+        "Tablón de anuncios",
+        "Contratación pública",
+        "Empleo público",
+        "Ordenanzas"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Sede electrónica de tramitación; no publica datasets reutilizables.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.aguasgrancanaria.com",
+      "https://transparencia.aguasgrancanaria.com/index",
+      "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+      "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership",
+      "https://transparenciacanarias.org/informeanual2017/anexo-censo-de-entidades/"
+    ]
   },
-  {
-    "id": "consejo_insular_de_la_energia_de_gran_canaria",
-    "name": "Consejo Insular de la Energía de Gran Canaria",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Consejo Insular de la Energía de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "https://energiagrancanaria.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consejo Insular de la Energía de Gran Canaria",
-        "url": "https://energiagrancanaria.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://energiagrancanaria.sedelectronica.es/transparency"
-      ]
-    },
-    "notes": null
-  },
+  "notes": "Creado por la Ley de Aguas de Canarias de 26 de julio de 1990; operativo desde el 25 de mayo de 1995. Financia sus actividades mediante transferencias del Cabildo de Gran Canaria, tasas propias, fondos europeos (Plan FDCAN, PERTE) y convenios con el Gobierno de Canarias. Evaluado con IT Canarias 63% (2025). Perfil de contratante en Vortal: https://community.vortal.biz/sts/Login?SkinName=aguasgrancanaria. No publica datasets en datos.gob.es bajo identificador propio."
+},
   {
     "id": "consorcio_de_emergencias_de_gran_canaria",
     "name": "Consorcio de Emergencias de Gran Canaria",
