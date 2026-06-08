@@ -2231,73 +2231,122 @@
     "notes": "Teléfono SAC: 922 500 800. Email SAC: sac@candelaria.es. Entidades dependientes con sede electrónica y transparencia propia (candidatas a entidades separadas en el catálogo): EPELCAN – Entidad Pública Empresarial de Gestión de Empresas y Servicios Públicos (epelcan.sedelectronica.es); Viviendas y Servicios Municipales de Candelaria – Empresa de Inserción (empresadeinsercion.sedelectronica.es); Fundación Canaria Candelaria Solidaria – CANDESOL (candesol.sedelectronica.es). Indicadores económicos no descargables en /transparencia/economica/indicadores. Perfil de contratante vacío en candelaria.es/perfil-del-contratante/."
   },
   {
-    "id": "ayuntamiento_granadilla_de_abona",
-    "name": "Ayuntamiento de Granadilla de Abona",
+    "id": "ayuntamiento_san_miguel_de_abona",
+    "name": "Ayuntamiento de San Miguel de Abona",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Granadilla de Abona. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_tenerife",
+    "description": "Ayuntamiento del municipio de San Miguel de Abona, sur de Tenerife. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de un portal propio en transparencia.sanmigueldeabona.es, con formatos reutilizables (CSV, JSON, XML, ODS). La sede electrónica opera sobre la plataforma STA/Gestiona.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Granadilla de Abona",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Carretera a Los Abrigos, 30, 38620 San Miguel de Abona",
+        "postal_code": "38620",
+        "municipality": "San Miguel de Abona",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.1197,
-          "lon": -16.5756
+          "lat": 28.0982,
+          "lon": -16.6163
         },
-        "source_url": "https://transparencia.granadilladeabona.org"
+        "source_url": "https://transparencia.sanmigueldeabona.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Granadilla de Abona",
-        "url": "https://transparencia.granadilladeabona.org",
-        "portal_status": "active",
+        "id": "sanmiguel_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de San Miguel de Abona",
+        "url": "https://transparencia.sanmigueldeabona.es/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "custom"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "JSON",
+          "ODS",
+          "ODT",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
+        "machine_readable": true,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-04",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "sanmiguel_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de San Miguel de Abona",
+        "url": "https://aytosanmigueldeabona.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "sanmiguel_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de San Miguel de Abona",
+        "url": "https://www.sanmigueldeabona.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3803500B. Portal de transparencia propio (tecnología custom), alineado con Ley 12/2014 canaria. La sede STA/Gestiona no incluye sección /transparency/. Existe sede tributaria adicional en sede.sanmigueldeabona.es (perfil del contratante). Teléfono: 922 700 000.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.granadilladeabona.org"
+        "https://www.sanmigueldeabona.es/",
+        "https://transparencia.sanmigueldeabona.es/",
+        "https://aytosanmigueldeabona.sedelectronica.es"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_guimar",
@@ -5062,100 +5111,124 @@
     },
     "notes": null
   },
- {
-  "id": "ayuntamiento_guia_de_isora",
-  "name": "Ayuntamiento de Guía de Isora",
-  "entity_kind": "ayuntamiento",
-  "scope": "municipal",
-  "islands": ["Tenerife"],
-  "parent_entity_id": "cabildo_tenerife",
-  "description": "Ayuntamiento del municipio de Guía de Isora, suroeste de Tenerife. Publica transparencia activa a través de un portal propio basado en la plataforma Gesgocom, que genera automáticamente formatos reutilizables y se integra con PLACSP y BDNS. Obtiene un 44,57% en el índice de transparencia municipal según dyntra.org.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle del Ayuntamiento, 4, 38680 Guía de Isora",
-      "postal_code": "38680",
-      "municipality": "Guía de Isora",
-      "island": "Tenerife",
-      "coordinates": {
-        "lat": 28.2112,
-        "lon": -16.7794
+  {
+    "id": "ayuntamiento_guia_de_isora",
+    "name": "Ayuntamiento de Guía de Isora",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "islands": [
+      "Tenerife"
+    ],
+    "parent_entity_id": "cabildo_tenerife",
+    "description": "Ayuntamiento del municipio de Guía de Isora, suroeste de Tenerife. Publica transparencia activa a través de un portal propio basado en la plataforma Gesgocom, que genera automáticamente formatos reutilizables y se integra con PLACSP y BDNS. Obtiene un 44,57% en el índice de transparencia municipal según dyntra.org.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle del Ayuntamiento, 4, 38680 Guía de Isora",
+        "postal_code": "38680",
+        "municipality": "Guía de Isora",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.2112,
+          "lon": -16.7794
+        },
+        "source_url": "https://www.guiadeisora.org/corp/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "guiadeisora_transparencia_gesgocom",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Guía de Isora",
+        "url": "https://transparencia.guiadeisora.es/",
+        "technology": [
+          "gesgocom"
+        ],
+        "topics": [
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       },
-      "source_url": "https://www.guiadeisora.org/corp/"
+      {
+        "id": "guiadeisora_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Guía de Isora",
+        "url": "https://guiadeisora.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "guiadeisora_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Guía de Isora",
+        "url": "https://www.guiadeisora.org",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-04",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      }
+    ],
+    "notes": "CIF: P3801900F. Portal de transparencia basado en Gesgocom SL (https://www.gesgocom.es). La sede STA/Gestiona no incluye sección /transparency/. 44,57% en índice dyntra.org (82/184 indicadores, posición 168, 2026).",
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.guiadeisora.org/corp/",
+        "https://transparencia.guiadeisora.es/",
+        "https://www.dyntra.org/poi/ayuntamiento-de-guia-de-isora/",
+        "https://www.gesgocom.es"
+      ]
     }
-  ],
-  "portals": [
-    {
-      "id": "guiadeisora_transparencia_gesgocom",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – Ayuntamiento de Guía de Isora",
-      "url": "https://transparencia.guiadeisora.es/",
-      "technology": ["gesgocom"],
-      "topics": [
-        "presupuestos",
-        "contratos",
-        "subvenciones",
-        "personal",
-        "normativa",
-        "patrimonio",
-        "estadistica",
-        "tramites"
-      ],
-      "formats": ["CSV", "DOCX", "HTML", "JSON", "Markdown", "ODS", "ODT", "PDF", "XLS", "XLSX", "XML"],
-      "has_api": null,
-      "machine_readable": true,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    },
-    {
-      "id": "guiadeisora_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – Ayuntamiento de Guía de Isora",
-      "url": "https://guiadeisora.sedelectronica.es",
-      "technology": ["sede_electronica"],
-      "topics": ["tramites"],
-      "formats": [],
-      "has_api": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    },
-    {
-      "id": "guiadeisora_web",
-      "kind": "other",
-      "name": "Web oficial – Ayuntamiento de Guía de Isora",
-      "url": "https://www.guiadeisora.org",
-      "technology": ["cms"],
-      "topics": ["informacion_municipal"],
-      "formats": [],
-      "has_api": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": "2026-04",
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    }
-  ],
-  "notes": "CIF: P3801900F. Portal de transparencia basado en Gesgocom SL (https://www.gesgocom.es). La sede STA/Gestiona no incluye sección /transparency/. 44,57% en índice dyntra.org (82/184 indicadores, posición 168, 2026).",
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.guiadeisora.org/corp/",
-      "https://transparencia.guiadeisora.es/",
-      "https://www.dyntra.org/poi/ayuntamiento-de-guia-de-isora/",
-      "https://www.gesgocom.es"
-    ]
-  }
-},
+  },
   {
     "id": "ayuntamiento_galdar",
     "name": "Ayuntamiento de Gáldar",
