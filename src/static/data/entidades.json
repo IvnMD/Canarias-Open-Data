@@ -13058,7 +13058,7 @@
     "name": "Fundación Canaria Gran Canaria Convention Bureau",
     "entity_kind": "organismo",
     "scope": "insular",
-    "parent_entity_id": "cabildo_insular_de_el_hierro",
+    "parent_entity_id": "cabildo_el_hierro",
     "islands": [
       "Gran Canaria"
     ],
@@ -14862,69 +14862,205 @@
     "name": "Cabildo Insular de El Hierro",
     "entity_kind": "cabildo",
     "scope": "insular",
-    "parent_entity_id": null,
     "islands": [
-      "Todas"
+      "El Hierro"
     ],
-    "description": "Cabildo insular de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Cabildo Insular de El Hierro, referente canario en transparencia y datos abiertos. Obtiene nota máxima (10) en el Índice de Transparencia del Comisionado de Canarias (2022-2023). Dispone de portal CKAN propio con API REST v3, endpoint SPARQL y metadatos RDF-DCAT, visor geoespacial y portal de transparencia Gesgocom. Adherido a la iniciativa El Hierro en Red y Red de Destinos Turísticos Inteligentes.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Cabildo Insular de El Hierro",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Dr. Quintero, 11, 38900 Valverde",
+        "postal_code": "38900",
+        "municipality": "Valverde",
+        "island": "El Hierro",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 27.8073,
+          "lon": -17.9152
         },
-        "source_url": "https://transparencia.elhierro.es"
+        "source_url": "https://www.elhierro.es/es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "elhierro_opendata_ckan",
         "kind": "open_data",
-        "name": "Portal de datos – Cabildo Insular de El Hierro",
-        "url": "https://transparencia.elhierro.es",
-        "portal_status": "active",
+        "name": "Portal de Datos Abiertos CKAN – Cabildo Insular de El Hierro",
+        "url": "https://datosabiertos.elhierro.es",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "ckan"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "medio_ambiente",
+          "meteorologia",
+          "volcanes",
+          "agua",
+          "turismo",
+          "transporte",
+          "economia",
+          "urbanismo",
+          "educacion",
+          "cultura"
+        ],
+        "formats": [
+          "CSV",
+          "RDF",
+          "Turtle",
+          "XML"
         ],
         "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
+        "machine_readable": true,
+        "dataset_count": 4,
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [
+          "DCAT",
+          "SPARQL",
+          "RDF"
+        ],
+        "apis": [
           {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
+            "name": "CKAN API REST v3",
+            "url": "https://datosabiertos.elhierro.es/api/3",
+            "type": "rest",
+            "documentation_url": "http://docs.ckan.org/en/2.8/api/"
+          },
+          {
+            "name": "SPARQL Endpoint",
+            "url": "https://datosabiertos.elhierro.es/sparql",
+            "type": "sparql",
+            "documentation_url": null
           }
         ],
-        "last_checked": "2026-05"
+        "licenses": [
+          {
+            "id": "cieh-aviso-legal",
+            "name": "Aviso Legal del Cabildo Insular de El Hierro",
+            "url": null,
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": "elhierro_transparencia_gesgocom",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Cabildo Insular de El Hierro",
+        "url": "https://transparencia.elhierro.es",
+        "technology": [
+          "gesgocom"
+        ],
+        "topics": [
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elhierro_geoespacial",
+        "kind": "geoespacial",
+        "name": "Visor Geoespacial – Cabildo Insular de El Hierro",
+        "url": "https://geo.elhierro.es/visor/",
+        "technology": [
+          "custom"
+        ],
+        "topics": [
+          "cartografia",
+          "urbanismo",
+          "medio_ambiente"
+        ],
+        "formats": [],
+        "has_api": null,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elhierro_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Cabildo Insular de El Hierro",
+        "url": "https://elhierro.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elhierro_web",
+        "kind": "other",
+        "name": "Web oficial – Cabildo Insular de El Hierro",
+        "url": "https://www.elhierro.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3800003J. Teléfono: 922 550 078. Presupuesto: 39.023.139 EUR (dyntra.org). 55,79% en índice dyntra.org DCI (106/190 indicadores, posición 6, 2026). Nota máxima (10) ITCanarias 2022-2023. Portal CKAN con 4 datasets activos (CSV): estaciones meteorológicas, prevención de incendios, estaciones volcánicas y depósitos de agua; todos bajo licencia propia cieh-aviso-legal. Metadatos exportables en RDF/XML/Turtle (DCAT). API REST v3 + SPARQL endpoint. Portal informativo adicional en opendata.elhierro.es. Transparencia Gesgocom v10.2.0. La sede STA/Gestiona no incluye sección /transparency/.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.elhierro.es"
+        "https://www.elhierro.es/es",
+        "https://datosabiertos.elhierro.es/dataset",
+        "https://datosabiertos.elhierro.es/api/3",
+        "https://transparencia.elhierro.es/",
+        "https://www.dyntra.org/poi/cabildo-insular-de-el-hierro/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "cabildo_insular_de_fuerteventura",
