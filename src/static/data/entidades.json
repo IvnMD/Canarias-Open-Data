@@ -16576,130 +16576,220 @@
     "notes": null
   },
   {
-    "id": "ministerio_sanidad",
-    "name": "Ministerio de Sanidad",
-    "alternate_names": [
-      "Sanidad",
-      "Sanidad en datos"
-    ],
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Ministerio responsable de la estadística sanitaria estatal y del portal de datos sanitarios del SNS.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Paseo del Prado 18-20, 28014 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.413,
-          "lon": -3.694
-        },
-        "source_url": "https://www.sanidad.gob.es/estadEstudios/home.htm"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "Sanidad en datos",
-        "url": "https://www.sanidad.gob.es/estadEstudios/home.htm",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "formats": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "topics": [
-          "salud",
-          "epidemiologia",
-          "hospitales",
-          "vacunacion",
-          "sistema_nacional_de_salud"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": "La fuente publicada es un portal estadístico con múltiples tablas y documentos.",
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta Sanidad",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05"
+  "id": "ministerio_sanidad",
+  "name": "Ministerio de Sanidad",
+  "entity_kind": "organismo",
+  "scope": "estatal",
+  "parent_entity_id": null,
+  "islands": ["Todas"],
+  "description": "Ministerio de Sanidad del Gobierno de España (CIF: S2827001E). Desarrolla y mantiene el Sistema de Información Sanitaria (SIS) conjuntamente con las Comunidades Autónomas desde 2004. Relevante para Canarias como fuente de estadísticas del SNS con desagregación por CCAA: microdatos de encuestas de salud, catálogos de centros sanitarios, indicadores clave del SNS con API REST (INCLASNS, ccaa=canarias), banco de datos del SNS y portal estadístico. Sus datos se federan en datos.gob.es.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Paseo del Prado, 18-20",
+      "postal_code": "28071",
+      "municipality": "Madrid",
+      "island": "Todas",
+      "coordinates": {
+        "lat": 40.4136,
+        "lon": -3.6934
       },
-      {
-        "id": "portal_banco_datos",
-        "kind": "estadistica",
-        "name": "Banco de datos del Ministerio de Sanidad",
-        "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "formats": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "topics": [
-          "salud",
-          "estadisticas_sanitarias"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta Sanidad",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.sanidad.gob.es/estadEstudios/home.htm",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm"
-      ]
+      "source_url": "https://www.sanidad.gob.es/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "sanidad_inclasns",
+      "kind": "estadistica",
+      "name": "INCLASNS – Indicadores Clave del Sistema Nacional de Salud",
+      "url": "https://inclasns.sanidad.gob.es/",
+      "portal_status": "active",
+      "technology": ["web_propia", "API REST propia"],
+      "standards": [],
+      "formats": ["JSON", "CSV"],
+      "topics": [
+        "Salud",
+        "Indicadores sanitarios",
+        "Sistema Nacional de Salud",
+        "Atención primaria",
+        "Atención especializada",
+        "Farmacia",
+        "Salud pública",
+        "Mortalidad",
+        "Esperanza de vida",
+        "Calidad asistencial",
+        "Equidad",
+        "Demografía sanitaria",
+        "Gasto sanitario",
+        "Canarias"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "INCLASNS API REST v2 – Indicadores",
+          "url": "https://inclasns.sanidad.gob.es/api/v2/indicador",
+          "type": "REST",
+          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+        },
+        {
+          "name": "INCLASNS API REST v2 – Variables",
+          "url": "https://inclasns.sanidad.gob.es/api/v2/variable",
+          "type": "REST",
+          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+        },
+        {
+          "name": "INCLASNS API REST v2 – Datos (JSON)",
+          "url": "https://inclasns.sanidad.gob.es/api/v2/datos",
+          "type": "REST",
+          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+        },
+        {
+          "name": "INCLASNS API REST v2 – Datos (CSV)",
+          "url": "https://inclasns.sanidad.gob.es/api/v2/datos/csv",
+          "type": "REST",
+          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+        },
+        {
+          "name": "INCLASNS API REST v2 – Gráfica (JSON para NVD3)",
+          "url": "https://inclasns.sanidad.gob.es/api/v2/datos/grafica",
+          "type": "REST",
+          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+        }
+      ],
+      "dataset_count": null,
+      "dataset_count_note": "API REST con autenticación por API_KEY (solicitar en https://inclasns.sanidad.gob.es/contact). Endpoints: /indicador, /variable, /datos (JSON), /datos/csv (CSV), /datos/grafica (JSON NVD3). Filtros combinables por parámetro GET: indicador, sexo, ccaa, anio, educativo, ingresos, clase/social. Para Canarias usar ccaa=canarias. Parámetro vacío (ccaa=) devuelve todas las CCAA. Ejemplo: /api/v2/datos?indicador=1000&sexo=total&ccaa=canarias&anio=&API_KEY=CLAVE",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "sanidad_banco_datos",
+      "kind": "estadistica",
+      "name": "Banco de Datos del SNS – Ministerio de Sanidad",
+      "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["CSV", "XLS", "XLSX", "PDF", "MDB"],
+      "topics": [
+        "Salud",
+        "Encuesta Nacional de Salud",
+        "Encuesta Europea de Salud",
+        "Barómetro Sanitario",
+        "Estadística de Centros Sanitarios de Atención Especializada",
+        "Catálogo Nacional de Hospitales",
+        "Catálogo de Centros de Atención Primaria",
+        "Catálogo de Centros de Atención Urgente",
+        "Microdatos",
+        "Farmacia",
+        "Nomenclátor",
+        "COVID-19",
+        "Vacunación",
+        "REBECA",
+        "Canarias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": 13,
+      "dataset_count_note": "13 datasets federados en datos.gob.es (última actualización del índice: 2019-02). Microdatos anonimizados de descarga directa: Barómetro Sanitario (desde 1996/97), Encuesta de Salud de España 2023, Encuesta Europea de Salud 2009/2014, Encuesta Nacional de Salud 1987-2017, EERI 1996-2009, ESCAE desde 2010. Directorios de centros: Catálogo Nacional de Hospitales (desde 1995), Catálogo AP (desde 2007), Catálogo Urgente (desde 2015). Alta relevancia para Canarias: Catálogo Nacional de Hospitales y Catálogo AP (búsqueda por CCAA/provincia), FARMACIA Nomenclátor de facturación, REBECA – Estadísticas sanitarias CCAA (formato MDB/Access).",
+      "last_updated": "2019-02",
+      "license_summary": "Reutilización con condiciones – Ley 37/2007 / RD 1495/2011",
+      "licenses": [
+        {
+          "name": "Reutilización información sector público – Ley 37/2007 / RD 1495/2011",
+          "id": null,
+          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17560"
+        }
+      ],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "sanidad_portal_estadistico",
+      "kind": "estadistica",
+      "name": "Sistema de Información Sanitaria – Sanidad en Datos",
+      "url": "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["HTML", "PDF", "XLS", "XLSX"],
+      "topics": [
+        "Salud",
+        "Sistema Nacional de Salud",
+        "Salud y estilos de vida",
+        "Centros y establecimientos sanitarios",
+        "Atención primaria",
+        "Atención especializada",
+        "Medicamentos y productos sanitarios",
+        "Financiación y gasto sanitario",
+        "Barómetro Sanitario",
+        "Experiencia de pacientes",
+        "Informe Anual del SNS",
+        "Recursos humanos sanitarios",
+        "Clasificaciones CIE",
+        "Normalización estadística",
+        "Canarias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal del SIS desarrollado con las CCAA desde 2004. Informe Anual del SNS última edición: 2024 (publicado 2025-12, datos de 2023-2024, NIPO 133-20-031-6) con monográficos de Prestación Farmacéutica (NIPO 133-22-089-8) y RRHH (NIPO 133-22-098-4). Infografía 'Sanidad en un vistazo' actualizada a 2026-06 en ES/EN/FR. Calendario de difusión: https://www.sanidad.gob.es/estadEstudios/portada/docs/Calendario_DifusionSIS.pdf. No expone catálogo CKAN ni API.",
+      "last_updated": "2025-12",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "sanidad_aplicaciones_consulta",
+      "kind": "estadistica",
+      "name": "Portal Estadístico – Aplicaciones de Consulta Interactiva",
+      "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["HTML"],
+      "topics": [
+        "Salud",
+        "Encuestas de salud",
+        "Mortalidad",
+        "Causas de muerte",
+        "Atención primaria",
+        "Atención especializada",
+        "Hospitalización",
+        "Vacunaciones",
+        "Farmacia",
+        "Drogas",
+        "Directorio centros sanitarios",
+        "Clasificaciones CIE",
+        "Canarias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "13 aplicaciones interactivas sin descarga masiva ni API: Encuestas de Salud 1987-2023, Mortalidad CIE-9/CIE-10 desde 1981, SIAP desde 2004, BDCAP desde 2013, SIAE/ESCAE desde 1997, RAE-CMBD desde 1997, Barómetro Sanitario desde 1995, Población desde 1981, SIVAMIN, Consumo Farmacéutico, ESTUDES, EDADES, i-CMBD. Directorio REGCESS y clasificaciones eCIEmaps (CIE-10-ES, CIE-O-3, CIE-9-MC). Solo consulta en navegador.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.sanidad.gob.es/",
+      "https://www.sanidad.gob.es/estadEstudios/home.htm",
+      "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
+      "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
+      "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
+      "https://inclasns.sanidad.gob.es/",
+      "https://inclasns.sanidad.gob.es/doc/api",
+      "https://sede.mscbs.gob.es/datosabiertos/home.htm",
+      "https://transparencia.gob.es/transparencia/transparencia_Home/index/PublicidadActiva/TaxPorMinisterios/MSND.html"
+    ]
   },
+  "notes": "CIF: S2827001E. Sede: Paseo del Prado, 18-20, 28071 Madrid (lat: 40.4136, lon: -3.6934) — entidad continental, sin isla asignada, se modela island='Todas' por requerimiento del schema. API INCLASNS: requiere API_KEY (formulario https://inclasns.sanidad.gob.es/contact); plantillas de endpoints: /api/v2/datos?indicador=[INDICADORES]&sexo=[SEXOS]&ccaa=[CCAAs]&anio=[AÑOS]&educativo=[EDUCATIVO]&ingresos=[INGRESOS]&clase=[CLASE]&API_KEY=CLAVE y /api/v2/datos/csv con parámetro social=[SOCIAL]. La URL histórica del ministerio era mscbs.gob.es (Ministerio de Sanidad, Consumo y Bienestar Social). El portal sede.mscbs.gob.es/datosabiertos actúa como índice de 13 enlaces a datos.gob.es (última actualización 2019-02), no como repositorio propio; no se modela como portal independiente. La sección 'Sanidad en la UE' (https://sanidad-ue.es) queda pendiente de investigación como posible entidad separada de scope='europeo'."
+},
   {
     "id": "datos_justicia",
     "name": "Portal de Datos de Justicia",
