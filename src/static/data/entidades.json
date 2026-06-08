@@ -7335,75 +7335,102 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_santa_cruz_de_la_palma",
-    "name": "Ayuntamiento de Santa Cruz de La Palma",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "La Palma"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Santa Cruz de La Palma. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Santa Cruz de La Palma",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Palma",
-        "coordinates": {
-          "lat": 28.6836,
-          "lon": -17.7642
-        },
-        "source_url": "https://sede.santacruzdelapalma.es/transparencia/indice/IT22"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Santa Cruz de La Palma",
-        "url": "https://sede.santacruzdelapalma.es/transparencia/indice/IT22",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://sede.santacruzdelapalma.es/transparencia/indice/IT22"
-      ]
+ {
+  "id": "ayuntamiento_santa_cruz_de_la_palma",
+  "name": "Ayuntamiento de Santa Cruz de La Palma",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "islands": ["La Palma"],
+  "parent_entity_id": "cabildo_insular_de_la_palma",
+  "description": "Ayuntamiento de la capital de la isla de La Palma. Publica transparencia activa y datos abiertos a través de un portal propio de Gobierno Abierto (plataforma OGOV) en transparencia.santacruzdelapalma.es, conforme a la Ley 12/2014 canaria. Incluye visores interactivos de presupuestos, contratación y subvenciones con descarga en CSV y XLSX. Dispone de sede electrónica propia independiente de la plataforma STA/Gestiona.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Plaza de España, 6, 38700 Santa Cruz de La Palma",
+      "postal_code": "38700",
+      "municipality": "Santa Cruz de La Palma",
+      "island": "La Palma",
+      "coordinates": {
+        "lat": 28.6835,
+        "lon": -17.7642
+      },
+      "source_url": "https://transparencia.santacruzdelapalma.es/t/acceso-informacion"
+    }
+  ],
+  "portals": [
+    {
+      "id": "scruzpalma_gobierno_abierto",
+      "kind": "transparencia",
+      "name": "Portal de Gobierno Abierto – Ayuntamiento de Santa Cruz de La Palma",
+      "url": "https://transparencia.santacruzdelapalma.es",
+      "technology": ["ogov"],
+      "topics": [
+        "presupuestos",
+        "contratos",
+        "subvenciones",
+        "personal",
+        "normativa",
+        "patrimonio",
+        "urbanismo",
+        "estadistica",
+        "tramites"
+      ],
+      "formats": ["CSV", "XLSX"],
+      "has_api": null,
+      "machine_readable": true,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": "2026-06",
+      "standards": ["Ley 12/2014 Canaria de Transparencia"],
+      "apis": [],
+      "licenses": []
     },
-    "notes": null
-  },
+    {
+      "id": "scruzpalma_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Ayuntamiento de Santa Cruz de La Palma",
+      "url": "https://sede.santacruzdelapalma.es",
+      "technology": ["custom"],
+      "topics": ["tramites"],
+      "formats": [],
+      "has_api": false,
+      "machine_readable": false,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": null,
+      "standards": [],
+      "apis": [],
+      "licenses": []
+    },
+    {
+      "id": "scruzpalma_tributos",
+      "kind": "other",
+      "name": "Portal de Tributos – Ayuntamiento de Santa Cruz de La Palma",
+      "url": "https://portaltributos.santacruzdelapalma.es",
+      "technology": ["custom"],
+      "topics": ["economia"],
+      "formats": [],
+      "has_api": false,
+      "machine_readable": false,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": null,
+      "standards": [],
+      "apis": [],
+      "licenses": []
+    }
+  ],
+  "notes": "CIF: P3803700H. Teléfono: 922 426 500. Plataforma OGOV con visor presupuestario interactivo, calculadora de impuestos, visor de contratación y subvenciones; descarga en CSV y XLSX. Sede electrónica propia (no STA/Gestiona).",
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://transparencia.santacruzdelapalma.es",
+      "https://sede.santacruzdelapalma.es",
+      "https://www.einforma.com/informacion-empresa/ayuntamiento-santa-cruz-palma"
+    ]
+  }
+},
   {
     "id": "ayuntamiento_santa_lucia_de_tirajana",
     "name": "Ayuntamiento de Santa Lucía de Tirajana",
