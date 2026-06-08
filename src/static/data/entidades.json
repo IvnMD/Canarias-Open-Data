@@ -11156,111 +11156,153 @@
     "notes": null
   },
   {
-  "id": "instituto_canario_de_la_vivienda",
-  "name": "Instituto Canario de la Vivienda (ICV)",
-  "entity_kind": "organismo",
-  "scope": "autonomico",
-  "islands": ["Todas"],
-  "parent_entity_id": "gobierno_de_canarias",
-  "description": "Organismo autónomo de la Comunidad Autónoma de Canarias adscrito a la Consejería de Obras Públicas, responsable de la planificación, gestión y promoción de la vivienda protegida y pública en el archipiélago. Gestiona el Registro de Demandantes de Vivienda Protegida y el Registro de Agentes Inmobiliarios de Canarias. Dispone de sedes en Santa Cruz de Tenerife y Las Palmas de Gran Canaria, y oficinas insulares en La Palma, Lanzarote y Fuerteventura. Transparencia y tramitación electrónica canalizadas a través de los portales centrales del Gobierno de Canarias.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle Carlos J.R. Hamilton, 16, Planta 1, Edificio Daida, 38071 Santa Cruz de Tenerife",
-      "postal_code": "38071",
-      "municipality": "Santa Cruz de Tenerife",
-      "island": "Tenerife",
-      "coordinates": { "lat": 28.4632, "lon": -16.2644 },
-      "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
-    },
-    {
-      "kind": "office",
-      "address": "Calle Profesor Agustín Millares Carló, 18, Planta 1, Edificio de Usos Múltiples II, 35071 Las Palmas de Gran Canaria",
-      "postal_code": "35071",
-      "municipality": "Las Palmas de Gran Canaria",
-      "island": "Gran Canaria",
-      "coordinates": { "lat": 28.1158, "lon": -15.4162 },
-      "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
-    },
-    {
-      "kind": "office",
-      "address": "Avenida los Indianos, 20, Edificio Bolsa de Agua, Planta Baja, 38700 Santa Cruz de La Palma",
-      "postal_code": "38700",
-      "municipality": "Santa Cruz de La Palma",
-      "island": "La Palma",
-      "coordinates": { "lat": 28.6775, "lon": -17.7661 },
-      "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
-    },
-    {
-      "kind": "office",
-      "address": "Vía Medular, 99, Planta 1ª, 35500 Arrecife",
-      "postal_code": "35500",
-      "municipality": "Arrecife",
-      "island": "Lanzarote",
-      "coordinates": { "lat": 28.9669, "lon": -13.5574 },
-      "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
-    },
-    {
-      "kind": "office",
-      "address": "Calle Hispanidad, 19, 35600 Puerto del Rosario",
-      "postal_code": "35600",
-      "municipality": "Puerto del Rosario",
-      "island": "Fuerteventura",
-      "coordinates": { "lat": 28.5034, "lon": -13.8647 },
-      "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+    "id": "instituto_canario_de_la_vivienda",
+    "name": "Instituto Canario de la Vivienda (ICV)",
+    "entity_kind": "organismo",
+    "scope": "autonomico",
+    "islands": [
+      "Todas"
+    ],
+    "parent_entity_id": "gobierno_de_canarias",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias adscrito a la Consejería de Obras Públicas, responsable de la planificación, gestión y promoción de la vivienda protegida y pública en el archipiélago. Gestiona el Registro de Demandantes de Vivienda Protegida y el Registro de Agentes Inmobiliarios de Canarias. Dispone de sedes en Santa Cruz de Tenerife y Las Palmas de Gran Canaria, y oficinas insulares en La Palma, Lanzarote y Fuerteventura. Transparencia y tramitación electrónica canalizadas a través de los portales centrales del Gobierno de Canarias.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Carlos J.R. Hamilton, 16, Planta 1, Edificio Daida, 38071 Santa Cruz de Tenerife",
+        "postal_code": "38071",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4632,
+          "lon": -16.2644
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Profesor Agustín Millares Carló, 18, Planta 1, Edificio de Usos Múltiples II, 35071 Las Palmas de Gran Canaria",
+        "postal_code": "35071",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1158,
+          "lon": -15.4162
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Avenida los Indianos, 20, Edificio Bolsa de Agua, Planta Baja, 38700 Santa Cruz de La Palma",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6775,
+          "lon": -17.7661
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Vía Medular, 99, Planta 1ª, 35500 Arrecife",
+        "postal_code": "35500",
+        "municipality": "Arrecife",
+        "island": "Lanzarote",
+        "coordinates": {
+          "lat": 28.9669,
+          "lon": -13.5574
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      },
+      {
+        "kind": "office",
+        "address": "Calle Hispanidad, 19, 35600 Puerto del Rosario",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
+        "coordinates": {
+          "lat": 28.5034,
+          "lon": -13.8647
+        },
+        "source_url": "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html"
+      }
+    ],
+    "portals": [
+      {
+        "id": "icv_transparencia_gobcan",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Instituto Canario de la Vivienda",
+        "url": "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIAPRINCV2.html",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "vivienda",
+          "institucional",
+          "personal",
+          "retribuciones",
+          "normativa",
+          "contratos",
+          "convenios",
+          "subvenciones",
+          "patrimonio",
+          "presupuestos",
+          "estadistica"
+        ],
+        "formats": [
+          "PDF",
+          "ODT"
+        ],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia",
+          "Ley 19/2013"
+        ],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "icv_web_gobcan",
+        "kind": "other",
+        "name": "Web oficial – Instituto Canario de la Vivienda",
+        "url": "https://www.gobiernodecanarias.org/vivienda/",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "vivienda",
+          "urbanismo",
+          "subvenciones",
+          "normativa"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      }
+    ],
+    "notes": "CIF: Q3800444F. Tel. sede SCT: 922 922 690. Tel. sede LPGC: 928 306 000. Adscrito a la Consejería de Obras Públicas. Sede electrónica a través de https://sede.gobiernodecanarias.org/sede/. Sin portal de transparencia ni sede electrónica propios.",
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.gobiernodecanarias.org/vivienda/",
+        "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html",
+        "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIAPRINCV2.html"
+      ]
     }
-  ],
-  "portals": [
-    {
-      "id": "icv_transparencia_gobcan",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – Instituto Canario de la Vivienda",
-      "url": "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIAPRINCV2.html",
-      "technology": ["cms"],
-      "topics": [
-        "vivienda", "institucional", "personal", "retribuciones",
-        "normativa", "contratos", "convenios", "subvenciones",
-        "patrimonio", "presupuestos", "estadistica"
-      ],
-      "formats": ["PDF", "ODT"],
-      "has_api": false,
-      "machine_readable": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": ["Ley 12/2014 Canaria de Transparencia", "Ley 19/2013"],
-      "apis": [],
-      "licenses": []
-    },
-    {
-      "id": "icv_web_gobcan",
-      "kind": "other",
-      "name": "Web oficial – Instituto Canario de la Vivienda",
-      "url": "https://www.gobiernodecanarias.org/vivienda/",
-      "technology": ["cms"],
-      "topics": ["vivienda", "urbanismo", "subvenciones", "normativa"],
-      "formats": ["PDF"],
-      "has_api": false,
-      "machine_readable": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    }
-  ],
-  "notes": "CIF: Q3800444F. Tel. sede SCT: 922 922 690. Tel. sede LPGC: 928 306 000. Adscrito a la Consejería de Obras Públicas. Sede electrónica a través de https://sede.gobiernodecanarias.org/sede/. Sin portal de transparencia ni sede electrónica propios.",
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.gobiernodecanarias.org/vivienda/",
-      "https://www.gobiernodecanarias.org/vivienda/icv/dondeestamos/index2v2.html",
-      "https://www.gobiernodecanarias.org/vivienda/destacados/TRANSPARENCIAPRINCV2.html"
-    ]
-  }
-},
+  },
   {
     "id": "instituto_tecnologico_de_canarias_sa_itc",
     "name": "Instituto Tecnológico de Canarias, S.A. ITC",
@@ -12319,72 +12361,140 @@
   },
   {
     "id": "consorcio_de_abastecimiento_de_aguas_a_fuerteventura_caaf",
-    "name": "Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
+    "name": "Consorcio de Abastecimiento de Aguas a Fuerteventura (CAAF)",
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "insular",
     "parent_entity_id": null,
     "islands": [
       "Fuerteventura"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Consorcio público insular que gestiona el abastecimiento de agua potable en toda Fuerteventura, integrado por el Cabildo y los 6 municipios de la isla. Publica obligaciones de transparencia activa conforme a la Ley 12/2014 de Canarias y la Ley 19/2013 estatal. Dispone de sede electrónica y una sección de datos abiertos integrada en el portal de transparencia, actualmente vacía.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Máximo Escobar, 2",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
         "island": "Fuerteventura",
         "coordinates": {
-          "lat": 28.3587,
-          "lon": -14.0533
+          "lat": 28.5042,
+          "lon": -13.8615
         },
-        "source_url": "https://sede.caaf.es/transparencia"
+        "source_url": "https://caaf.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consorcio de Abastecimiento de Aguas a Fuerteventura CAAF",
-        "url": "https://sede.caaf.es/transparencia",
+        "id": "caaf_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – CAAF",
+        "url": "https://transparencia.caaf.es",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "ODT",
+          "DOCX",
+          "XLSM",
+          "ODS"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "institucional",
+          "organizacion",
+          "personal",
+          "empleo_publico",
+          "retribuciones",
+          "servicios_procedimientos",
+          "economico_financiera",
+          "patrimonio",
+          "contratos",
+          "convenios",
+          "concesiones",
+          "subvenciones",
+          "estadistica",
+          "derecho_acceso",
+          "agua",
+          "sector_publico"
         ],
-        "has_api": true,
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sección de datos abiertos existente (https://transparencia.caaf.es/?page_id=545) pero completamente vacía a 2026-06. No se publican datasets reutilizables.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "caaf_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – CAAF",
+        "url": "https://sede.caaf.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "tramites",
+          "registro",
+          "notificaciones",
+          "carpeta_ciudadana",
+          "normativa",
+          "calendario_inhabiles"
+        ],
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "caaf_web",
+        "kind": "other",
+        "name": "Web oficial – CAAF",
+        "url": "https://caaf.es",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "agua",
+          "sector_publico"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.caaf.es/transparencia"
+        "https://caaf.es",
+        "https://transparencia.caaf.es",
+        "https://transparencia.caaf.es/?page_id=545",
+        "https://sede.caaf.es/eAdmin/Sede.do",
+        "https://sede.caaf.es/eAdmin/InfoSede.do?pagina=avisoLegal",
+        "https://transparencia.caaf.es/?page_id=541"
       ]
     },
-    "notes": null
+    "notes": "CIF: P3500005H. Tel.: 928 850 761. Consorcio formado por el Cabildo de Fuerteventura y los 6 municipios de la isla. La sección de datos abiertos del portal de transparencia (page_id=545) existe pero está vacía a fecha 2026-06: no hay datasets publicados ni reutilizables. Histórico ITCanarias: 2017 Incumplidora · 2018 6,80 · 2019 5,85 · 2020 6,61 · 2021 5,30 · 2022 0,21 · 2023 sin dato · 2024 sin dato. Tendencia descendente pronunciada desde 2018; caída drástica en 2022. Entidad distinta al Consejo Insular de Aguas de Fuerteventura (transparencia.aguasfuerteventura.com)."
   },
   {
     "id": "eolicas_de_fuerteventura",
