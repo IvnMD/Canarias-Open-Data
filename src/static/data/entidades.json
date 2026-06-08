@@ -3180,69 +3180,90 @@
     "name": "Ayuntamiento de Agaete",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Agaete. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_gran_canaria",
+    "description": "Ayuntamiento del municipio de Agaete, noroeste de Gran Canaria. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), que integra el portal de transparencia con 1.739 documentos en dos secciones: el propio Ayuntamiento y la Sociedad Municipal ACUDE. Sin portal de datos abiertos reutilizables independiente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Agaete",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Antonio de Armas, 1, 35480 Agaete",
+        "postal_code": "35480",
+        "municipality": "Agaete",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.0994,
-          "lon": -15.7012
+          "lat": 28.1002,
+          "lon": -15.7009
         },
-        "source_url": "https://agaete.sedelectronica.es/transparency"
+        "source_url": "https://www.agaete.es/ciudadano"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Agaete",
-        "url": "https://agaete.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "agaete_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Agaete",
+        "url": "https://agaete.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "tramites"
+        ],
+        "formats": [
+          "DOCX",
+          "ODT",
+          "PDF",
+          "XLS",
+          "XLSX"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "agaete_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Agaete",
+        "url": "https://www.agaete.es",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3500100G. Portal de transparencia (STA/Gestiona) con dos secciones: Ayuntamiento (1.610 docs, DOCX/ODT/PDF) y Sociedad Municipal ACUDE (129 docs, DOCX/ODT/PDF/XLS/XLSX). Sin CKAN ni sección de datos abiertos reutilizables. last_updated no declarado explícitamente en el índice.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://agaete.sedelectronica.es/transparency"
+        "https://www.agaete.es",
+        "https://agaete.sedelectronica.es/transparency/",
+        "https://agaete.es/ayuntamiento/aviso-legal"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_agulo",
