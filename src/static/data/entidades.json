@@ -10943,73 +10943,79 @@
     "notes": null
   },
   {
-    "id": "instituto_canario_de_calidad_agroalimentaria_icca",
-    "name": "Instituto Canario de Calidad Agroalimentaria ICCA",
+    "id": "icca",
+    "name": "Instituto Canario de Calidad Agroalimentaria (ICCA)",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "gobierno_de_canarias",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias, creado por la Ley 1/2005, responsable del control, certificación y promoción de la calidad agroalimentaria en Canarias: denominaciones de origen protegidas, indicaciones geográficas, agricultura ecológica, control de residuos de plaguicidas y apoyo a producciones vitivinícolas (POSEI, ISV, PEPAC). Adscrito a la Consejería de Presidencia, Agricultura, Ganadería y Pesca. Dispone de sedes en Santa Cruz de Tenerife y Las Palmas de Gran Canaria, y laboratorio en La Laguna. Transparencia y tramitación articuladas a través de los portales centrales del Gobierno de Canarias.",
     "locations": [
       {
-        "kind": "headquarters",
-        "address": "Instituto Canario de Calidad Agroalimentaria ICCA",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "kind": "office",
+        "address": "Calle León y Castillo, 89, Planta 1ª, 35004 Las Palmas de Gran Canaria",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1192,
+          "lon": -15.4243
         },
-        "source_url": "https://www.gobiernodecanarias.org/agp/icca"
+        "source_url": "https://www.gobiernodecanarias.org/agpsa/icca/"
+      },
+      {
+        "kind": "office",
+        "address": "Carretera La Cuesta-Taco, 94, 38320 San Cristóbal de La Laguna",
+        "postal_code": "38320",
+        "municipality": "San Cristóbal de La Laguna",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4601,
+          "lon": -16.2926
+        },
+        "source_url": "https://www.gobiernodecanarias.org/agpsa/icca/temas/laboratorio/localizacion_lab.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Instituto Canario de Calidad Agroalimentaria ICCA",
-        "url": "https://www.gobiernodecanarias.org/agp/icca",
-        "portal_status": "active",
+        "id": "icca_web_gobcan",
+        "kind": "other",
+        "name": "Web oficial – ICCA – Gobierno de Canarias",
+        "url": "https://www.gobiernodecanarias.org/agpsa/icca/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "cms"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "agricultura",
+          "alimentacion",
+          "normativa",
+          "subvenciones",
+          "medio_ambiente"
         ],
-        "has_api": true,
-        "apis": [],
+        "formats": [
+          "PDF"
+        ],
+        "has_api": false,
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: Q3800459D. . Director: Ilmo. Sr. D. Luis Arráez Guadalupe (Decreto 294/2023). Marco legal: Ley 1/2005 y Ley 6/2019. Reglamento: Decreto 213/2008. Transparencia canalizada a través de https://www.gobiernodecanarias.org/transparencia/ (enlace explícito en la web del ICCA). Sede electrónica a través de https://sede.gobiernodecanarias.org/sede/. Sin portal de transparencia ni sede electrónica propios. Laboratorio en La Laguna (Tel. 922 475 592).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/agp/icca"
+        "https://www.gobiernodecanarias.org/agpsa/icca/",
+        "https://www.gobiernodecanarias.org/agpsa/icca/temas/laboratorio/localizacion_lab.html"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "instituto_canario_de_hemodonacion_y_hemoterapia_ichh",
