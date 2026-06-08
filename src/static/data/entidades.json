@@ -7335,102 +7335,119 @@
     },
     "notes": null
   },
- {
-  "id": "ayuntamiento_santa_cruz_de_la_palma",
-  "name": "Ayuntamiento de Santa Cruz de La Palma",
-  "entity_kind": "ayuntamiento",
-  "scope": "municipal",
-  "islands": ["La Palma"],
-  "parent_entity_id": "cabildo_insular_de_la_palma",
-  "description": "Ayuntamiento de la capital de la isla de La Palma. Publica transparencia activa y datos abiertos a través de un portal propio de Gobierno Abierto (plataforma OGOV) en transparencia.santacruzdelapalma.es, conforme a la Ley 12/2014 canaria. Incluye visores interactivos de presupuestos, contratación y subvenciones con descarga en CSV y XLSX. Dispone de sede electrónica propia independiente de la plataforma STA/Gestiona.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Plaza de España, 6, 38700 Santa Cruz de La Palma",
-      "postal_code": "38700",
-      "municipality": "Santa Cruz de La Palma",
-      "island": "La Palma",
-      "coordinates": {
-        "lat": 28.6835,
-        "lon": -17.7642
+  {
+    "id": "ayuntamiento_santa_cruz_de_la_palma",
+    "name": "Ayuntamiento de Santa Cruz de La Palma",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "islands": [
+      "La Palma"
+    ],
+    "parent_entity_id": "cabildo_insular_de_la_palma",
+    "description": "Ayuntamiento de la capital de la isla de La Palma. Publica transparencia activa y datos abiertos a través de un portal propio de Gobierno Abierto (plataforma OGOV) en transparencia.santacruzdelapalma.es, conforme a la Ley 12/2014 canaria. Incluye visores interactivos de presupuestos, contratación y subvenciones con descarga en CSV y XLSX. Dispone de sede electrónica propia independiente de la plataforma STA/Gestiona.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de España, 6, 38700 Santa Cruz de La Palma",
+        "postal_code": "38700",
+        "municipality": "Santa Cruz de La Palma",
+        "island": "La Palma",
+        "coordinates": {
+          "lat": 28.6835,
+          "lon": -17.7642
+        },
+        "source_url": "https://transparencia.santacruzdelapalma.es/t/acceso-informacion"
+      }
+    ],
+    "portals": [
+      {
+        "id": "scruzpalma_gobierno_abierto",
+        "kind": "transparencia",
+        "name": "Portal de Gobierno Abierto – Ayuntamiento de Santa Cruz de La Palma",
+        "url": "https://transparencia.santacruzdelapalma.es",
+        "technology": [
+          "ogov"
+        ],
+        "topics": [
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "CSV",
+          "XLSX"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-06",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "apis": [],
+        "licenses": []
       },
-      "source_url": "https://transparencia.santacruzdelapalma.es/t/acceso-informacion"
+      {
+        "id": "scruzpalma_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Santa Cruz de La Palma",
+        "url": "https://sede.santacruzdelapalma.es",
+        "technology": [
+          "custom"
+        ],
+        "topics": [
+          "tramites"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "scruzpalma_tributos",
+        "kind": "other",
+        "name": "Portal de Tributos – Ayuntamiento de Santa Cruz de La Palma",
+        "url": "https://portaltributos.santacruzdelapalma.es",
+        "technology": [
+          "custom"
+        ],
+        "topics": [
+          "economia"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      }
+    ],
+    "notes": "CIF: P3803700H. Teléfono: 922 426 500. Plataforma OGOV con visor presupuestario interactivo, calculadora de impuestos, visor de contratación y subvenciones; descarga en CSV y XLSX. Sede electrónica propia (no STA/Gestiona).",
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://transparencia.santacruzdelapalma.es",
+        "https://sede.santacruzdelapalma.es",
+        "https://www.einforma.com/informacion-empresa/ayuntamiento-santa-cruz-palma"
+      ]
     }
-  ],
-  "portals": [
-    {
-      "id": "scruzpalma_gobierno_abierto",
-      "kind": "transparencia",
-      "name": "Portal de Gobierno Abierto – Ayuntamiento de Santa Cruz de La Palma",
-      "url": "https://transparencia.santacruzdelapalma.es",
-      "technology": ["ogov"],
-      "topics": [
-        "presupuestos",
-        "contratos",
-        "subvenciones",
-        "personal",
-        "normativa",
-        "patrimonio",
-        "urbanismo",
-        "estadistica",
-        "tramites"
-      ],
-      "formats": ["CSV", "XLSX"],
-      "has_api": null,
-      "machine_readable": true,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": "2026-06",
-      "standards": ["Ley 12/2014 Canaria de Transparencia"],
-      "apis": [],
-      "licenses": []
-    },
-    {
-      "id": "scruzpalma_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – Ayuntamiento de Santa Cruz de La Palma",
-      "url": "https://sede.santacruzdelapalma.es",
-      "technology": ["custom"],
-      "topics": ["tramites"],
-      "formats": [],
-      "has_api": false,
-      "machine_readable": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    },
-    {
-      "id": "scruzpalma_tributos",
-      "kind": "other",
-      "name": "Portal de Tributos – Ayuntamiento de Santa Cruz de La Palma",
-      "url": "https://portaltributos.santacruzdelapalma.es",
-      "technology": ["custom"],
-      "topics": ["economia"],
-      "formats": [],
-      "has_api": false,
-      "machine_readable": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    }
-  ],
-  "notes": "CIF: P3803700H. Teléfono: 922 426 500. Plataforma OGOV con visor presupuestario interactivo, calculadora de impuestos, visor de contratación y subvenciones; descarga en CSV y XLSX. Sede electrónica propia (no STA/Gestiona).",
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://transparencia.santacruzdelapalma.es",
-      "https://sede.santacruzdelapalma.es",
-      "https://www.einforma.com/informacion-empresa/ayuntamiento-santa-cruz-palma"
-    ]
-  }
-},
+  },
   {
     "id": "ayuntamiento_santa_lucia_de_tirajana",
     "name": "Ayuntamiento de Santa Lucía de Tirajana",
@@ -9407,72 +9424,99 @@
   },
   {
     "id": "consorcio_el_rincon_la_orotava",
-    "name": "Consorcio El Rincón La Orotava",
+    "name": "Consorcio El Rincón – La Orotava",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
-      "Todas"
+      "Tenerife"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "gobierno_de_canarias",
+    "description": "Entidad de derecho público con personalidad jurídica propia, creada al amparo de la Ley 5/1992 y el Plan Especial aprobado por Decreto 343/1997 para la ordenación urbanística del paraje El Rincón en La Orotava. Integrada por la Comunidad Autónoma de Canarias, el Cabildo Insular de Tenerife, el Ayuntamiento de La Orotava y entidades privadas vecinales y ecologistas; adscrita formalmente a la CA de Canarias. Publica información de transparencia como secciones integradas en su propia web WordPress. Dispone de sede electrónica en plataforma STA/Gestiona.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Consorcio El Rincón La Orotava",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Nicandro González Borges, 3, 38300 La Orotava",
+        "postal_code": "38300",
+        "municipality": "La Orotava",
+        "island": "Tenerife",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.3888,
+          "lon": -16.5246
         },
-        "source_url": "https://consorcioelrincon.es"
+        "source_url": "https://elconsorcioelrincon.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consorcio El Rincón La Orotava",
-        "url": "https://consorcioelrincon.es",
-        "portal_status": "active",
+        "id": "elrincon_transparencia_web",
+        "kind": "transparencia",
+        "name": "Sección de Transparencia – Consorcio El Rincón – La Orotava",
+        "url": "https://elconsorcioelrincon.es/institucional-historico/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "wordpress"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "urbanismo",
+          "medio_ambiente",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "presupuestos",
+          "convenios"
         ],
-        "has_api": true,
-        "apis": [],
+        "formats": [
+          "DOCX",
+          "PDF",
+          "XLS"
+        ],
+        "has_api": false,
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
-        "last_checked": "2026-05"
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "elrincon_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Consorcio El Rincón – La Orotava",
+        "url": "https://consorcioelrincon.sedelectronica.es",
+        "technology": [
+          "sede_electronica"
+        ],
+        "topics": [
+          "tramites",
+          "urbanismo",
+          "subvenciones",
+          "normativa"
+        ],
+        "formats": [],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3800023H. CNAE: 8411. Adscrito formalmente a la CA de Canarias. Miembros: Gobierno de Canarias, Cabildo de Tenerife, Ayuntamiento de La Orotava, Agrupación de Propietarios El Rincón, AAVV Unión Vistas del Teide, Coordinadora El Rincón–Ecologistas en Acción. La transparencia se publica como secciones de la web WordPress (sin portal dedicado externo); mayoría de secciones vacías. Sede electrónica en STA/Gestiona. Cuentas anuales publicadas en la Intervención General del Gobierno de Canarias.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://consorcioelrincon.es"
+        "https://elconsorcioelrincon.es",
+        "https://consorcioelrincon.sedelectronica.es",
+        "https://www.einforma.com/informacion-empresa/consorcio-rincon-orotava"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ente_publico_radio_television_canaria_rtvc",
@@ -13860,86 +13904,113 @@
     "notes": null
   },
   {
-  "id": "aguas_la_gomera",
-  "name": "Consejo Insular de Aguas de La Gomera",
-  "entity_kind": "organismo",
-  "scope": "insular",
-  "islands": ["La Gomera"],
-  "parent_entity_id": "cabildo_insular_de_la_gomera",
-  "description": "Organismo autónomo responsable de la gestión del ciclo integral del agua y la planificación hidrológica insular de La Gomera. Entidad dependiente del Cabildo Insular de La Gomera. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de portal propio Gesgocom en transparencia.aguasgomera.es. No dispone de sede electrónica propia.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle Real, 18, 38800 San Sebastián de La Gomera",
-      "postal_code": "38800",
-      "municipality": "San Sebastián de La Gomera",
-      "island": "La Gomera",
-      "coordinates": {
-        "lat": 28.0924,
-        "lon": -17.1122
+    "id": "aguas_la_gomera",
+    "name": "Consejo Insular de Aguas de La Gomera",
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "islands": [
+      "La Gomera"
+    ],
+    "parent_entity_id": "cabildo_insular_de_la_gomera",
+    "description": "Organismo autónomo responsable de la gestión del ciclo integral del agua y la planificación hidrológica insular de La Gomera. Entidad dependiente del Cabildo Insular de La Gomera. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de portal propio Gesgocom en transparencia.aguasgomera.es. No dispone de sede electrónica propia.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Real, 18, 38800 San Sebastián de La Gomera",
+        "postal_code": "38800",
+        "municipality": "San Sebastián de La Gomera",
+        "island": "La Gomera",
+        "coordinates": {
+          "lat": 28.0924,
+          "lon": -17.1122
+        },
+        "source_url": "https://aguasgomera.es"
+      }
+    ],
+    "portals": [
+      {
+        "id": "aguasgomera_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Consejo Insular de Aguas de La Gomera",
+        "url": "https://transparencia.aguasgomera.es",
+        "technology": [
+          "gesgocom"
+        ],
+        "topics": [
+          "agua",
+          "medio_ambiente",
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "planificacion",
+          "obras_publicas",
+          "estadistica"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-05",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "apis": [],
+        "licenses": []
       },
-      "source_url": "https://aguasgomera.es"
+      {
+        "id": "aguasgomera_web",
+        "kind": "other",
+        "name": "Web oficial – Consejo Insular de Aguas de La Gomera",
+        "url": "https://aguasgomera.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "agua",
+          "planificacion",
+          "medio_ambiente"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "has_api": false,
+        "machine_readable": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      }
+    ],
+    "notes": "CIF: Q8850004F. Teléfono: 922 141 410. Sin sede electrónica propia. Transparencia Gesgocom v10.2.0, mismo patrón que cabildo_insular_de_el_hierro. Entidad dependiente del Cabildo Insular de La Gomera (www.lagomera.es). Publica planes hidrológicos insulares (ciclos 2015-2021, 2021-2027 y 2027-2033 en tramitación) y planes de gestión del riesgo de inundación en formato PDF.",
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://aguasgomera.es",
+        "https://transparencia.aguasgomera.es",
+        "https://transparencia.aguasgomera.es/aviso-legal"
+      ]
     }
-  ],
-  "portals": [
-    {
-      "id": "aguasgomera_transparencia",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – Consejo Insular de Aguas de La Gomera",
-      "url": "https://transparencia.aguasgomera.es",
-      "technology": ["gesgocom"],
-      "topics": [
-        "agua",
-        "medio_ambiente",
-        "presupuestos",
-        "contratos",
-        "subvenciones",
-        "personal",
-        "normativa",
-        "patrimonio",
-        "planificacion",
-        "obras_publicas",
-        "estadistica"
-      ],
-      "formats": ["CSV", "DOCX", "HTML", "JSON", "Markdown", "ODS", "ODT", "PDF", "TXT", "XLS", "XLSX", "XML"],
-      "has_api": null,
-      "machine_readable": true,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": "2026-05",
-      "standards": ["Ley 12/2014 Canaria de Transparencia"],
-      "apis": [],
-      "licenses": []
-    },
-    {
-      "id": "aguasgomera_web",
-      "kind": "other",
-      "name": "Web oficial – Consejo Insular de Aguas de La Gomera",
-      "url": "https://aguasgomera.es",
-      "technology": ["cms"],
-      "topics": ["agua", "planificacion", "medio_ambiente"],
-      "formats": ["PDF"],
-      "has_api": false,
-      "machine_readable": false,
-      "dataset_count": null,
-      "portal_status": "active",
-      "last_updated": null,
-      "standards": [],
-      "apis": [],
-      "licenses": []
-    }
-  ],
-  "notes": "CIF: Q8850004F. Teléfono: 922 141 410. Sin sede electrónica propia. Transparencia Gesgocom v10.2.0, mismo patrón que cabildo_insular_de_el_hierro. Entidad dependiente del Cabildo Insular de La Gomera (www.lagomera.es). Publica planes hidrológicos insulares (ciclos 2015-2021, 2021-2027 y 2027-2033 en tramitación) y planes de gestión del riesgo de inundación en formato PDF.",
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://aguasgomera.es",
-      "https://transparencia.aguasgomera.es",
-      "https://transparencia.aguasgomera.es/aviso-legal"
-    ]
-  }
-},
+  },
   {
     "id": "guaguagomera_sau",
     "name": "GuaguaGomera, S.A.U.",
