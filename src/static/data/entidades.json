@@ -850,93 +850,156 @@
     "notes": null
   },
   {
-    "id": "comisionado_transparencia_canarias",
-    "name": "Comisionado de Transparencia de Canarias",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
-    ],
-    "description": "Portal de datos abiertos del Comisionado de Transparencia de Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Comisionado de Transparencia de Canarias",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.4636,
-          "lon": -16.2518
-        },
-        "source_url": "https://transparenciacanarias.org/datos/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Comisionado de Transparencia de Canarias",
-        "url": "https://transparenciacanarias.org/datos/",
-        "portal_status": "active",
-        "technology": [
-          "CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "Visualizaciones Embebidas"
-        ],
-        "topics": [
-          "Medio ambiente",
-          "Transporte",
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API TCanaria",
-            "url": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/",
-            "type": "REST",
-            "documentation_url": "https://transparenciacanarias.org/manuales/manual-api-tcanaria/"
-          }
-        ],
-        "dataset_count": 22357,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
-        "licenses": [
-          {
-            "name": "CC BY 4.0",
-            "count": 22357,
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparenciacanarias.org/datos/"
-      ]
+  "id": "comisionado_transparencia_canarias",
+  "name": "Comisionado de Transparencia y Acceso a la Información Pública de Canarias",
+  "entity_kind": "organismo",
+  "scope": "autonomico",
+  "parent_entity_id": null,
+  "islands": ["Todas", "Gran Canaria", "Tenerife", "Lanzarote", "Fuerteventura", "La Palma", "La Gomera", "El Hierro", "La Graciosa"],
+  "description": "Órgano independiente de la Comunidad Autónoma de Canarias encargado del fomento, análisis, control y protección de la transparencia pública y del derecho de acceso a la información pública. Gestiona la evaluación anual de los portales de transparencia mediante T-Canaria y publica el Índice de Transparencia de Canarias (ITCanarias).",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Teobaldo Power, 7, Edificio del Parlamento de Canarias",
+      "postal_code": "38002",
+      "municipality": "Santa Cruz de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4674,
+        "lon": -16.2497
+      },
+      "source_url": "https://transparenciacanarias.org/contacto/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "comisionado_web",
+      "kind": "other",
+      "name": "Web oficial – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.org/",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["HTML", "TXT", "PDF", "ODT", "ODS", "XLSX"],
+      "topics": [
+        "transparencia",
+        "derecho_de_acceso",
+        "evaluacion",
+        "itcanarias",
+        "t-canaria",
+        "sector_publico",
+        "reclamaciones"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "comisionado_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.org/transparencia/",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["ODS", "PDF", "ODT", "HTML", "TXT"],
+      "topics": [
+        "institucional",
+        "organizativa",
+        "empleo_publico",
+        "retribuciones",
+        "servicios_procedimientos",
+        "economico_financiera",
+        "patrimonio",
+        "normativa",
+        "contratos",
+        "convenios",
+        "subvenciones",
+        "acceso_a_la_informacion_publica",
+        "canal_de_denuncias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "El portal ofrece la información organizada por ámbitos y permite descarga de páginas y documentos en ODS, PDF, ODT, HTML y TXT. No se ha verificado un catálogo de datasets reutilizables independiente.",
+      "last_updated": "2026-06",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "comisionado_datos",
+      "kind": "open_data",
+      "name": "Portal de evaluación y datos – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.org/datos/",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [],
+      "formats": ["XLSX", "ODT", "ODS"],
+      "topics": [
+        "itcanarias",
+        "evaluacion",
+        "puntuaciones",
+        "sector_publico",
+        "transparencia"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Las tablas de resultados se pueden descargar en ODT, ODS y XLSX. El portal publica puntuaciones del ITCanarias por entidad y por año.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "comisionado_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Comisionado de Transparencia de Canarias",
+      "url": "https://transparenciacanarias.eadministracion.es/home",
+      "portal_status": "active",
+      "technology": ["ATM Grupo Maggioli"],
+      "standards": [],
+      "formats": ["HTML", "PDF"],
+      "topics": [
+        "tramitacion_electronica",
+        "reclamaciones",
+        "acceso_a_la_informacion",
+        "evaluacion",
+        "sugerencias",
+        "denuncias",
+        "instancia_generica"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": "2026-06",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://transparenciacanarias.org/",
+      "https://transparenciacanarias.org/contacto/",
+      "https://transparenciacanarias.org/transparencia/",
+      "https://transparenciacanarias.org/datos/",
+      "https://transparenciacanarias.eadministracion.es/home",
+      "https://www.gobiernodecanarias.org/justicia/RelacionesLaborales/Instituciones/comisionado/",
+      "https://www.parcan.es/glosario/30/"
+    ]
   },
+  "notes": "CIF: S3800106A. Teléfonos de contacto publicados: evaluación (+34) 922 473 964 y reclamaciones (+34) 922 473 969. Correo: comisionadotransparencia@transparenciacanarias.org y evaluacion@transparenciacanarias.org. La sede electrónica migró a nueva plataforma en 2025. El portal de transparencia publica contenidos por ámbitos y permite descarga en ODS, PDF, ODT, HTML y TXT. El portal /datos/ publica la evaluación del ITCanarias y tablas descargables en ODT, ODS y XLSX."
+},
   {
     "id": "gobierno_abierto_canarias",
     "name": "Portal de Gobierno Abierto del Gobierno de Canarias",
