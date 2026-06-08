@@ -5062,75 +5062,100 @@
     },
     "notes": null
   },
-  {
-    "id": "ayuntamiento_guia_de_isora",
-    "name": "Ayuntamiento de Guía de Isora",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de Guía de Isora. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Guía de Isora",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.2111,
-          "lon": -16.7764
-        },
-        "source_url": "http://servicios.guiadeisora.es/transparencia/indice/GCAN"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Guía de Isora",
-        "url": "http://servicios.guiadeisora.es/transparencia/indice/GCAN",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "http://servicios.guiadeisora.es/transparencia/indice/GCAN"
-      ]
+ {
+  "id": "ayuntamiento_guia_de_isora",
+  "name": "Ayuntamiento de Guía de Isora",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "islands": ["Tenerife"],
+  "parent_entity_id": "cabildo_tenerife",
+  "description": "Ayuntamiento del municipio de Guía de Isora, suroeste de Tenerife. Publica transparencia activa a través de un portal propio basado en la plataforma Gesgocom, que genera automáticamente formatos reutilizables y se integra con PLACSP y BDNS. Obtiene un 44,57% en el índice de transparencia municipal según dyntra.org.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle del Ayuntamiento, 4, 38680 Guía de Isora",
+      "postal_code": "38680",
+      "municipality": "Guía de Isora",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.2112,
+        "lon": -16.7794
+      },
+      "source_url": "https://www.guiadeisora.org/corp/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "guiadeisora_transparencia_gesgocom",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Ayuntamiento de Guía de Isora",
+      "url": "https://transparencia.guiadeisora.es/",
+      "technology": ["gesgocom"],
+      "topics": [
+        "presupuestos",
+        "contratos",
+        "subvenciones",
+        "personal",
+        "normativa",
+        "patrimonio",
+        "estadistica",
+        "tramites"
+      ],
+      "formats": ["CSV", "DOCX", "HTML", "JSON", "Markdown", "ODS", "ODT", "PDF", "XLS", "XLSX", "XML"],
+      "has_api": null,
+      "machine_readable": true,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": null,
+      "standards": [],
+      "apis": [],
+      "licenses": []
     },
-    "notes": null
-  },
+    {
+      "id": "guiadeisora_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Ayuntamiento de Guía de Isora",
+      "url": "https://guiadeisora.sedelectronica.es",
+      "technology": ["sede_electronica"],
+      "topics": ["tramites"],
+      "formats": [],
+      "has_api": false,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": null,
+      "standards": [],
+      "apis": [],
+      "licenses": []
+    },
+    {
+      "id": "guiadeisora_web",
+      "kind": "other",
+      "name": "Web oficial – Ayuntamiento de Guía de Isora",
+      "url": "https://www.guiadeisora.org",
+      "technology": ["cms"],
+      "topics": ["informacion_municipal"],
+      "formats": [],
+      "has_api": false,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": "2026-04",
+      "standards": [],
+      "apis": [],
+      "licenses": []
+    }
+  ],
+  "notes": "CIF: P3801900F. Portal de transparencia basado en Gesgocom SL (https://www.gesgocom.es). La sede STA/Gestiona no incluye sección /transparency/. 44,57% en índice dyntra.org (82/184 indicadores, posición 168, 2026).",
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.guiadeisora.org/corp/",
+      "https://transparencia.guiadeisora.es/",
+      "https://www.dyntra.org/poi/ayuntamiento-de-guia-de-isora/",
+      "https://www.gesgocom.es"
+    ]
+  }
+},
   {
     "id": "ayuntamiento_galdar",
     "name": "Ayuntamiento de Gáldar",
