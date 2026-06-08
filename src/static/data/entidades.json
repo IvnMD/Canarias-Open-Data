@@ -15570,75 +15570,163 @@
       ]
     }
   },
-  {
-    "id": "federacion_canaria_de_municipios_fecam",
-    "name": "Federación Canaria de Municipios FECAM",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Asociaciones públicas dependiente de .",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Federación Canaria de Municipios FECAM",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "https://fecam.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Federación Canaria de Municipios FECAM",
-        "url": "https://fecam.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://fecam.sedelectronica.es/transparency"
-      ]
+ {
+  "id": "fecam",
+  "name": "Federación Canaria de Municipios (FECAM)",
+  "entity_kind": "organismo",
+  "scope": "autonomico",
+  "parent_entity_id": null,
+  "islands": [
+    "Todas",
+    "Gran Canaria",
+    "Tenerife",
+    "Lanzarote",
+    "Fuerteventura",
+    "La Palma",
+    "La Gomera",
+    "El Hierro",
+    "La Graciosa"
+  ],
+  "description": "Asociación de entidades locales que agrupa a los municipios canarios. Promueve la cooperación interadministrativa, la formación de empleados públicos y la implantación de la transparencia y el gobierno abierto en los ayuntamientos de Canarias. Dispone de sede electrónica, portal de transparencia y servicio de formación con sedes en Tenerife, Gran Canaria y La Palma.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Avenida Veinticinco de Julio, 47",
+      "postal_code": "38004",
+      "municipality": "Santa Cruz de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4716,
+        "lon": -16.2577
+      },
+      "source_url": "https://www.fecam.es/sedes.cfm"
     },
-    "notes": null
+    {
+      "kind": "office",
+      "address": "Calle Pérez del Toro, 97",
+      "postal_code": "35004",
+      "municipality": "Las Palmas de Gran Canaria",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 28.1221,
+        "lon": -15.4267
+      },
+      "source_url": "https://www.fecam.es/sedes.cfm"
+    },
+    {
+      "kind": "office",
+      "address": "Avenida Los Indianos, 22, 2ª planta",
+      "postal_code": "38700",
+      "municipality": "Santa Cruz de La Palma",
+      "island": "La Palma",
+      "coordinates": {
+        "lat": 28.6773,
+        "lon": -17.7662
+      },
+      "source_url": "https://www.fecam.es/sedes.cfm"
+    }
+  ],
+  "portals": [
+    {
+      "id": "fecam_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – FECAM",
+      "url": "https://fecam.sedelectronica.es/transparency",
+      "portal_status": "active",
+      "technology": ["sede_electronica"],
+      "standards": [],
+      "formats": ["ODT", "PDF"],
+      "topics": [
+        "transparencia",
+        "institucional",
+        "organizacion",
+        "personal",
+        "empleo_publico",
+        "retribuciones",
+        "servicios_procedimientos",
+        "economico_financiera",
+        "contratos",
+        "convenios",
+        "subvenciones",
+        "derecho_acceso",
+        "sector_publico",
+        "administracion_local"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": 675,
+      "dataset_count_note": "675 documentos distribuidos en secciones: Institucional 95 · Organizativa 100 · Miembros electos y libre nombramiento 10 · Empleo sector público 73 · Retribuciones 56 · Servicios y procedimientos 18 · Económico-financiera 158 · Contratos 143 · Convenios y encomiendas 52 · Ayudas y subvenciones 30 · Derecho de acceso 36. Formatos ODT y PDF; no son datasets reutilizables estructurados.",
+      "last_updated": "2026-04",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "fecam_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – FECAM",
+      "url": "https://fecam.sedelectronica.es",
+      "portal_status": "active",
+      "technology": ["sede_electronica"],
+      "standards": [],
+      "formats": [],
+      "topics": [
+        "tramites",
+        "factura_electronica",
+        "perfil_contratante",
+        "validacion_documentos",
+        "empleados_publicos",
+        "organos_colegiados",
+        "canal_denuncias"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    },
+    {
+      "id": "fecam_web",
+      "kind": "other",
+      "name": "Web oficial – FECAM",
+      "url": "https://www.fecam.es",
+      "portal_status": "active",
+      "technology": ["web_corporativa"],
+      "standards": [],
+      "formats": [],
+      "topics": [
+        "administracion_local",
+        "formacion",
+        "sector_publico",
+        "municipios_canarios"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.fecam.es",
+      "https://www.fecam.es/sedes.cfm",
+      "https://fecam.sedelectronica.es/info.0",
+      "https://fecam.sedelectronica.es/transparency",
+      "https://www.femp.es/federaciones-territoriales/federacion-canaria-de-municipios-fecam",
+      "https://transparenciacanarias.org/tag/fecam/"
+    ]
   },
+  "notes": "CIF: G76730399. Tel. sede Tenerife: 922 237 600 · infotenerife@fecam.es. Tel. sede Gran Canaria: 928 297 837 · infograncanaria@fecam.es. Tel. sede La Palma: 922 411 342 · infolapalma@fecam.es. Presidenta (2026): Mª Concepción Brito Núñez (Alcaldesa de Candelaria). Secretario General: Vicente Rodríguez Lorenzo. ITCanarias 2022-2023: 8,55 (primera evaluación a asociaciones públicas junto con FECAI, media 9,25); primera evaluación 2018: media 4,18. No dispone de portal de datos abiertos ni datasets estructurados reutilizables. La FECAM ha impulsado activamente la Red Canaria de Gobierno Abierto junto al Gobierno de Canarias."
+},
   {
     "id": "mancomunidad_norte_de_gran_canaria",
     "name": "Mancomunidad Norte de Gran Canaria",
