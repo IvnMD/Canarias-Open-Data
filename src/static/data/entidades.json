@@ -3608,69 +3608,94 @@
     "name": "Ayuntamiento de Arico",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Tenerife"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Arico. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_tenerife",
+    "description": "Ayuntamiento del municipio de Arico, sur de Tenerife. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), con más de 4.500 documentos en 18 secciones temáticas. Sin portal de datos abiertos reutilizables independiente.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Arico",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Meleque, 1, 38589 Villa de Arico",
+        "postal_code": "38589",
+        "municipality": "Arico",
         "island": "Tenerife",
         "coordinates": {
-          "lat": 28.1639,
-          "lon": -16.4822
+          "lat": 28.1643,
+          "lon": -16.4914
         },
-        "source_url": "https://ayuntamientodearico.sedelectronica.es/transparency"
+        "source_url": "https://www.ayuntamientodearico.com/contactar/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Arico",
-        "url": "https://ayuntamientodearico.sedelectronica.es/transparency",
-        "portal_status": "active",
+        "id": "arico_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Arico",
+        "url": "https://ayuntamientodearico.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "DOC",
+          "DOCX",
+          "HTML",
+          "ODT",
+          "PDF",
+          "XLS",
+          "XLSX",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-04",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "arico_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Arico",
+        "url": "https://www.ayuntamientodearico.com",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "CIF: P3800500E. Portal de transparencia (STA/Gestiona) con ~4.551 docs en 18 secciones, última revisión 27-04-2026 (sección Económica-Financiera). Formato '.word' publicado por la plataforma equivale a DOCX. Sin CKAN ni sección de datos abiertos reutilizables.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ayuntamientodearico.sedelectronica.es/transparency"
+        "https://www.ayuntamientodearico.com",
+        "https://ayuntamientodearico.sedelectronica.es/transparency/",
+        "https://www.ayuntamientodearico.com/contactar/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_arrecife",
