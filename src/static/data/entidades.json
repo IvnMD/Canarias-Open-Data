@@ -12964,144 +12964,106 @@
     },
     "notes": null
   },
-  {
-    "id": "consejo_insular_de_aguas_de_gran_canaria",
-    "name": "Consejo Insular de Aguas de Gran Canaria",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Consejo Insular de Aguas de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "http://www.aguasgrancanaria.com/transparencia.php"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consejo Insular de Aguas de Gran Canaria",
-        "url": "http://www.aguasgrancanaria.com/transparencia.php",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "http://www.aguasgrancanaria.com/transparencia.php"
-      ]
+ {
+  "id": "ciagc",
+  "name": "Consejo Insular de Aguas de Gran Canaria (CIAGC)",
+  "entity_kind": "organismo",
+  "scope": "insular",
+  "parent_entity_id": "cabildo_gran_canaria",
+  "islands": ["Gran Canaria"],
+  "description": "Organismo autónomo administrativo adscrito al Cabildo de Gran Canaria, con personalidad jurídica propia, responsable de la planificación, gestión y control del dominio público hidráulico insular desde 1995. Publica obligaciones de transparencia activa mediante OGOV y dispone de sede electrónica propia. No cuenta con portal de datos abiertos estructurado ni datasets en datos.gob.es a fecha 2026-06.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Avenida Juan XXIII, 2, 1º",
+      "postal_code": "35004",
+      "municipality": "Las Palmas de Gran Canaria",
+      "island": "Gran Canaria",
+      "coordinates": {
+        "lat": 28.1189,
+        "lon": -15.4247
+      },
+      "source_url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership"
+    }
+  ],
+  "portals": [
+    {
+      "id": "ciagc_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – CIAGC",
+      "url": "https://transparencia.aguasgrancanaria.com/index",
+      "portal_status": "active",
+      "technology": ["OGOV"],
+      "standards": [
+        "Ley 12/2014 Transparencia Canarias",
+        "Ley 19/2013 Transparencia Estatal"
+      ],
+      "formats": ["CSV", "XLS", "ODT"],
+      "topics": [
+        "Agua",
+        "Recursos hídricos",
+        "Contratación pública",
+        "Presupuestos",
+        "Subvenciones",
+        "Personal",
+        "Cuentas anuales",
+        "Planes y programas",
+        "Obras públicas"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Publicidad activa estructurada en ~70 secciones temáticas (OGOV). Última actualización masiva: 14/05/2026. No expone catálogo de datasets ni API de descarga.",
+      "last_updated": "2026-05",
+      "license_summary": "Reproducción autorizada citando origen, salvo indicación expresa en contrario (aviso legal web)",
+      "licenses": [
+        {
+          "name": "Reutilización con atribución (aviso legal propio)",
+          "id": null,
+          "url": "https://www.aguasgrancanaria.com"
+        }
+      ],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "ciagc_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Consejo Insular de Aguas de Gran Canaria",
+      "url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+      "portal_status": "active",
+      "technology": ["SedElectronica"],
+      "standards": ["ENS", "Ley 39/2015"],
+      "formats": ["PDF"],
+      "topics": [
+        "Trámites administrativos",
+        "Tablón de anuncios",
+        "Contratación pública",
+        "Empleo público",
+        "Ordenanzas"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Sede electrónica de tramitación; no publica datasets reutilizables.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.aguasgrancanaria.com",
+      "https://transparencia.aguasgrancanaria.com/index",
+      "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+      "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership",
+      "https://transparenciacanarias.org/informeanual2017/anexo-censo-de-entidades/"
+    ]
   },
-  {
-    "id": "consejo_insular_de_la_energia_de_gran_canaria",
-    "name": "Consejo Insular de la Energía de Gran Canaria",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Gran Canaria"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Consejo Insular de la Energía de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Gran Canaria",
-        "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
-        },
-        "source_url": "https://energiagrancanaria.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consejo Insular de la Energía de Gran Canaria",
-        "url": "https://energiagrancanaria.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://energiagrancanaria.sedelectronica.es/transparency"
-      ]
-    },
-    "notes": null
-  },
+  "notes": "Creado por la Ley de Aguas de Canarias de 26 de julio de 1990; operativo desde el 25 de mayo de 1995. Financia sus actividades mediante transferencias del Cabildo de Gran Canaria, tasas propias, fondos europeos (Plan FDCAN, PERTE) y convenios con el Gobierno de Canarias. Evaluado con IT Canarias 63% (2025). Perfil de contratante en Vortal: https://community.vortal.biz/sts/Login?SkinName=aguasgrancanaria. No publica datasets en datos.gob.es bajo identificador propio."
+},
   {
     "id": "consorcio_de_emergencias_de_gran_canaria",
     "name": "Consorcio de Emergencias de Gran Canaria",
@@ -14541,75 +14503,121 @@
     },
     "notes": null
   },
-  {
-    "id": "balsas_de_tenerife_balten",
-    "name": "Balsas de Tenerife BALTEN",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Balsas de Tenerife BALTEN",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.4636,
-          "lon": -16.2518
-        },
-        "source_url": "https://www.balten.es/CategoriaDisplay/4?titulo=transparencia"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Balsas de Tenerife BALTEN",
-        "url": "https://www.balten.es/CategoriaDisplay/4?titulo=transparencia",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.balten.es/CategoriaDisplay/4?titulo=transparencia"
-      ]
+ {
+  "id": "balten",
+  "name": "BALTEN – Balsas de Tenerife, EPEL",
+  "entity_kind": "empresa_publica",
+  "scope": "insular",
+  "parent_entity_id": "cabildo_tenerife",
+  "islands": ["Tenerife"],
+  "description": "Entidad Pública Empresarial Local (EPEL) del Cabildo Insular de Tenerife, creada para la gestión de recursos hídricos insulares: explotación y mantenimiento de balsas de agua, distribución en alta y obras hidráulicas. Publica transparencia activa conforme a la Ley 19/2013 y la Ley 12/2014 de Canarias en su portal propio (balten.es/transparencia) y una sede electrónica (balten.sedelectronica.es). Incluye una sección 'Volúmenes de Balsas' con representación gráfica de almacenamiento hídrico. Todos los documentos del portal de transparencia están en PDF. No dispone de portal de datos abiertos ni datasets estructurados reutilizables a fecha 2026-06.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Panamá, 34, Nave 1, Polígono Costa Sur",
+      "postal_code": "38009",
+      "municipality": "Santa Cruz de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4485,
+        "lon": -16.2713
+      },
+      "source_url": "https://www.balten.es/"
+    }
+  ],
+  "portals": [
+    {
+      "id": "balten_transparencia_web",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – BALTEN",
+      "url": "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
+      "portal_status": "active",
+      "technology": ["web_propia"],
+      "standards": [
+        "Ley 19/2013 Transparencia Estatal",
+        "Ley 12/2014 Transparencia Canarias"
+      ],
+      "formats": ["PDF"],
+      "topics": [
+        "Institucional",
+        "Organizativa",
+        "Información normativa",
+        "Información estadística",
+        "Informe anual",
+        "Órganos de gobierno",
+        "Consejo de Administración",
+        "Personal de libre nombramiento",
+        "Empleo público",
+        "Retribuciones",
+        "Presupuestos",
+        "Información económica y presupuestaria",
+        "Contratos",
+        "Convenios y encomiendas",
+        "Subvenciones",
+        "Patrimonio",
+        "Planes y programas",
+        "Información sobre servicios",
+        "Información sobre procedimientos",
+        "Ayudas y subvenciones",
+        "Derecho de acceso",
+        "Agua",
+        "Recursos hídricos",
+        "Volúmenes de balsas"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Portal de transparencia activa con 18 secciones temáticas. Todos los documentos disponibles están en formato PDF; no se han encontrado otros formatos (última verificación: 2026-06). Última actualización del portal detectada: mayo 2026. Destacar la sección 'Volúmenes Balsas' con representación gráfica de almacenamiento hídrico, e 'Información Estadística' con datos de cumplimiento de servicios de la EPEL.",
+      "last_updated": "2026-05",
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
     },
-    "notes": null
+    {
+      "id": "balten_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – BALTEN",
+      "url": "https://balten.sedelectronica.es/info.0",
+      "portal_status": "active",
+      "technology": ["sede_electronica"],
+      "standards": [],
+      "formats": [],
+      "topics": [
+        "Trámites electrónicos",
+        "Tablón de anuncios",
+        "Empleo público",
+        "Ordenanzas y reglamentos",
+        "Órganos de gobierno",
+        "Presupuesto",
+        "Proveedores",
+        "Canal de denuncias",
+        "Carpeta ciudadana",
+        "Órganos colegiados"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": null,
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.balten.es/",
+      "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
+      "https://www.balten.es/Categoria/Display/58?titulo=volumenes-balsas",
+      "https://www.balten.es/Categoria/Display/141?titulo=informacion-estadistica",
+      "https://www.balten.es/Categoria/Display/6?titulo=informacion-institucional",
+      "https://balten.sedelectronica.es/info.0"
+    ]
   },
+  "notes": "BALTEN (Balsas de Tenerife) es una EPEL del Cabildo de Tenerife. Gestiona la red de balsas de almacenamiento hídrico, infraestructuras hidráulicas y distribución en alta. La sección 'Volúmenes Balsas' publica representación gráfica del agua almacenada en las balsas gestionadas, potencialmente de interés como dato ambiental/hídrico, pero sin formato de descarga estructurado verificado. 'Información Estadística' publica datos de cumplimiento de servicios. El Comisionado de Transparencia de Canarias emite autoevaluación anual del portal (sección 'Informe Anual'). Normativa reguladora: Estatutos EPEL BALTEN y Ordenanza de Precios Públicos BALTEN (publicados en sección Información Normativa). La sede electrónica incorpora 'Canal de Denuncias' y sección de Proveedores (e-invoice), ausente en el Consorcio de Viviendas GC."
+},
   {
     "id": "titsa",
     "name": "Transportes Interurbanos de Tenerife, S.A.",
