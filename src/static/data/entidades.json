@@ -13833,74 +13833,86 @@
     "notes": null
   },
   {
-    "id": "consejo_insular_de_aguas_de_la_gomera",
-    "name": "Consejo Insular de Aguas de La Gomera",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "La Gomera"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Consejo Insular de Aguas de La Gomera",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Gomera",
-        "coordinates": {
-          "lat": 28.0916,
-          "lon": -17.1133
-        },
-        "source_url": "https://transparencia.aguasgomera.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Consejo Insular de Aguas de La Gomera",
-        "url": "https://transparencia.aguasgomera.es",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://transparencia.aguasgomera.es"
-      ]
+  "id": "aguas_la_gomera",
+  "name": "Consejo Insular de Aguas de La Gomera",
+  "entity_kind": "organismo",
+  "scope": "insular",
+  "islands": ["La Gomera"],
+  "parent_entity_id": "cabildo_insular_de_la_gomera",
+  "description": "Organismo autónomo responsable de la gestión del ciclo integral del agua y la planificación hidrológica insular de La Gomera. Entidad dependiente del Cabildo Insular de La Gomera. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de portal propio Gesgocom en transparencia.aguasgomera.es. No dispone de sede electrónica propia.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Calle Real, 18, 38800 San Sebastián de La Gomera",
+      "postal_code": "38800",
+      "municipality": "San Sebastián de La Gomera",
+      "island": "La Gomera",
+      "coordinates": {
+        "lat": 28.0924,
+        "lon": -17.1122
+      },
+      "source_url": "https://aguasgomera.es"
+    }
+  ],
+  "portals": [
+    {
+      "id": "aguasgomera_transparencia",
+      "kind": "transparencia",
+      "name": "Portal de Transparencia – Consejo Insular de Aguas de La Gomera",
+      "url": "https://transparencia.aguasgomera.es",
+      "technology": ["gesgocom"],
+      "topics": [
+        "agua",
+        "medio_ambiente",
+        "presupuestos",
+        "contratos",
+        "subvenciones",
+        "personal",
+        "normativa",
+        "patrimonio",
+        "planificacion",
+        "obras_publicas",
+        "estadistica"
+      ],
+      "formats": ["CSV", "DOCX", "HTML", "JSON", "Markdown", "ODS", "ODT", "PDF", "TXT", "XLS", "XLSX", "XML"],
+      "has_api": null,
+      "machine_readable": true,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": "2026-05",
+      "standards": ["Ley 12/2014 Canaria de Transparencia"],
+      "apis": [],
+      "licenses": []
     },
-    "notes": null
-  },
+    {
+      "id": "aguasgomera_web",
+      "kind": "other",
+      "name": "Web oficial – Consejo Insular de Aguas de La Gomera",
+      "url": "https://aguasgomera.es",
+      "technology": ["cms"],
+      "topics": ["agua", "planificacion", "medio_ambiente"],
+      "formats": ["PDF"],
+      "has_api": false,
+      "machine_readable": false,
+      "dataset_count": null,
+      "portal_status": "active",
+      "last_updated": null,
+      "standards": [],
+      "apis": [],
+      "licenses": []
+    }
+  ],
+  "notes": "CIF: Q8850004F. Teléfono: 922 141 410. Sin sede electrónica propia. Transparencia Gesgocom v10.2.0, mismo patrón que cabildo_insular_de_el_hierro. Entidad dependiente del Cabildo Insular de La Gomera (www.lagomera.es). Publica planes hidrológicos insulares (ciclos 2015-2021, 2021-2027 y 2027-2033 en tramitación) y planes de gestión del riesgo de inundación en formato PDF.",
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://aguasgomera.es",
+      "https://transparencia.aguasgomera.es",
+      "https://transparencia.aguasgomera.es/aviso-legal"
+    ]
+  }
+},
   {
     "id": "guaguagomera_sau",
     "name": "GuaguaGomera, S.A.U.",
