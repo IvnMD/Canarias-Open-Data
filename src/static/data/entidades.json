@@ -15317,73 +15317,111 @@
     "notes": null
   },
   {
-    "id": "federacion_canaria_de_islas_fecai",
-    "name": "Federación Canaria de Islas FECAI",
+    "id": "fecai",
+    "name": "Federación Canaria de Islas (FECAI)",
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Asociaciones públicas dependiente de .",
+    "parent_entity_id": null,
+    "description": "Asociación con personalidad jurídica plena constituida en 1992, integrada voluntariamente por los siete cabildos insulares del archipiélago canario (El Hierro, Fuerteventura, Gran Canaria, La Gomera, Lanzarote, La Palma y Tenerife). Ostenta la representación institucional de los cabildos ante la CA de Canarias, conforme a la Ley 8/2015 de Cabildos Insulares. Su domicilio social es itinerante: coincide con el Cabildo que ostenta la Presidencia. Publica transparencia activa a través de portal propio Gesgocom con nota 9,94/10 en el Índice de Transparencia del Comisionado de Canarias.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Federación Canaria de Islas FECAI",
+        "address": "Sede itinerante – Cabildo de Fuerteventura (presidencia actual)",
         "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "municipality": "Puerto del Rosario",
+        "island": "Fuerteventura",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.4994,
+          "lon": -13.8626
         },
-        "source_url": "https://transparencia.fecai.es"
+        "source_url": "https://www.fecai.es/quienes-somos/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Federación Canaria de Islas FECAI",
+        "id": "fecai_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Federación Canaria de Islas FECAI",
         "url": "https://transparencia.fecai.es",
-        "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "gesgocom"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "institucional",
+          "personal",
+          "retribuciones",
+          "normativa",
+          "presupuestos",
+          "contratos",
+          "convenios",
+          "subvenciones",
+          "patrimonio",
+          "planificacion",
+          "estadistica"
+        ],
+        "formats": [
+          "CSV",
+          "DOCX",
+          "HTML",
+          "JSON",
+          "Markdown",
+          "ODS",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "has_api": null,
+        "machine_readable": true,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": "2026-05",
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "fecai_web",
+        "kind": "other",
+        "name": "Web oficial – Federación Canaria de Islas FECAI",
+        "url": "https://www.fecai.es",
+        "technology": [
+          "cms"
+        ],
+        "topics": [
+          "institucional",
+          "normativa"
+        ],
+        "formats": [
+          "PDF"
         ],
         "has_api": false,
-        "apis": [],
+        "machine_readable": false,
         "dataset_count": null,
-        "dataset_count_note": null,
+        "portal_status": "active",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "Sin CIF propio registrado: opera bajo los CIF de los cabildos miembros que asumen la secretaría general técnica y contabilidad según el periodo (actualmente Cabildo de Fuerteventura). Domicilio social itinerante por estatutos: sede efectiva en el Cabildo que ostenta la Presidencia en cada momento; actualmente presidida por Lola García (Cabildo de Fuerteventura). Gesgocom v10.2.0. ITCanarias 9,94/10 (2022-2023). Sin sede electrónica propia detectada.",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
+        "https://www.fecai.es/",
+        "https://www.fecai.es/quienes-somos/",
         "https://transparencia.fecai.es"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "federacion_canaria_de_municipios_fecam",
