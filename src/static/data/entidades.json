@@ -3840,69 +3840,94 @@
     "name": "Ayuntamiento de Arucas",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
-    "parent_entity_id": null,
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Portal de transparencia del Ayuntamiento de Arucas. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
+    "parent_entity_id": "cabildo_gran_canaria",
+    "description": "Ayuntamiento del municipio de Arucas, norte de Gran Canaria. Publica transparencia activa a través de su sede electrónica (plataforma STA/Gestiona), con más de 11.400 documentos en tres secciones: el Ayuntamiento, la Sociedad Municipal para el Desarrollo de Arucas S.A. y el Organismo Autónomo de Cultura. Sin portal de datos abiertos reutilizables propio.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Arucas",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Constitución, 1, 35400 Arucas",
+        "postal_code": "35400",
+        "municipality": "Arucas",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.1228,
-          "lon": -15.5234
+          "lat": 28.1189,
+          "lon": -15.5222
         },
-        "source_url": "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5"
+        "source_url": "https://www.arucas.org/modules.php?mod=portal&file=index"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Arucas",
-        "url": "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5",
-        "portal_status": "active",
+        "id": "arucas_sede_transparencia",
+        "kind": "transparencia",
+        "name": "Sede Electrónica y Portal de Transparencia – Ayuntamiento de Arucas",
+        "url": "https://arucas.sedelectronica.es/transparency/",
         "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
+          "sede_electronica"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
+        ],
+        "formats": [
+          "DOCX",
+          "ODG",
+          "ODF",
+          "ODT",
+          "ODS",
+          "PDF",
+          "TXT",
+          "XML"
         ],
         "has_api": false,
-        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "portal_status": "active",
+        "last_updated": "2026-05",
+        "standards": [],
+        "apis": [],
+        "licenses": []
+      },
+      {
+        "id": "arucas_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Arucas",
+        "url": "https://www.arucas.org",
+        "technology": [
+          "cms"
         ],
-        "last_checked": "2026-05"
+        "topics": [
+          "informacion_municipal"
+        ],
+        "formats": [],
+        "has_api": false,
+        "dataset_count": null,
+        "portal_status": "active",
+        "last_updated": null,
+        "standards": [],
+        "apis": [],
+        "licenses": []
       }
     ],
+    "notes": "Portal de transparencia (STA/Gestiona) con tres secciones: Ayuntamiento (~9.895 docs, PDF/ODT, actualización semanal), Sociedad Municipal Arucas S.A. (697 docs, PDF/ODT/ODG/ODS/ODF/TXT/DOCX/XML) y Organismo Autónomo de Cultura (892 docs, PDF/ODT). Sin portal CKAN ni datos abiertos propios (0% open data según dyntra.org, 2024). Coordenadas aproximadas al casco urbano (inferred).",
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://arucas.sedelectronica.es/transparency/ecec8ae4-5fd9-415d-bc46-5d41ec714ed5"
+        "https://www.arucas.org",
+        "https://arucas.sedelectronica.es/transparency/",
+        "https://www.dyntra.org/poi/ayuntamiento-de-arucas/"
       ]
-    },
-    "notes": null
+    }
   },
   {
     "id": "ayuntamiento_barlovento",
