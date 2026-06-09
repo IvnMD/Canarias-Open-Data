@@ -11022,75 +11022,7 @@
     },
     "notes": "Acrónimo: ICDC. Web: https://www.icdcultural.org. Anteriores denominaciones: Festival de Música de Canarias S.A. (1984-1985), Sociedad Canaria de las Artes Escénicas y la Música S.A. (1985-2005), Canarias Cultura en Red S.A. (2005-2021). Dos sedes: Las Palmas de Gran Canaria (C/ León y Castillo 57, 4ª planta) y Santa Cruz de Tenerife (C/ Puerta Canseco 49, piso 2). No concede ayudas ni subvenciones propias. XLS/ODS confirmados en: contratos de patrocinio (§2.4.4, 2022-2025), gastos dietas Dirección Adjunta (§7.3, solo 2024), contratos programados (§9.2, 2024-2025), listado contratos formalizados (§9.8.1, 2022-2025), modificaciones contratos (§9.8.2, 2022-2023), contratos menores trimestrales (§9.9, 2022-2025), adendas convenios (§10.1, 2023-2025). Verificado 2026-05."
   },
-  {
-    "id": "instituto_canario_de_estadistica_istac",
-    "name": "INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "http://www.gobiernodecanarias.org/istac/istac/transparencia"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
-        "url": "http://www.gobiernodecanarias.org/istac/istac/transparencia",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "http://www.gobiernodecanarias.org/istac/istac/transparencia"
-      ]
-    },
-    "notes": null
-  },
+ 
   {
     "id": "instituto_canario_de_igualdad_ici",
     "name": "INSTITUTO CANARIO DE IGUALDAD ICI",
