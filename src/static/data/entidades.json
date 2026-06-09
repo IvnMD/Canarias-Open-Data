@@ -16992,9 +16992,10 @@
   },
   {
     "id": "ine",
-    "name": "Instituto Nacional de Estadística",
+    "name": "Instituto Nacional de Estadística – INEbase / API WSTempus",
     "alternate_names": [
-      "INE"
+      "INE",
+      "Instituto Nacional de Estadística"
     ],
     "entity_kind": "organismo",
     "scope": "estatal",
@@ -17002,91 +17003,194 @@
     "islands": [
       "Todas"
     ],
-    "description": "Organismo estadístico oficial de España, imprescindible para demografía, economía, vivienda, empresas y comparativas territoriales de Canarias.",
+    "description": "Organismo estadístico estatal que produce y difunde las estadísticas oficiales de España. Relevante para Canarias porque todas sus grandes encuestas (EPA, ECV, EPF, IPC, EOH, ETH, Movimientos Turísticos, MNP, Atlas de Renta, Estadística Continua de Población, etc.) desagregan resultados a nivel de CCAA Canarias (ES7) y en muchos casos a nivel provincial (Las Palmas, Santa Cruz de Tenerife). La API REST WSTempus permite filtrar series directamente por Canarias mediante el parámetro g1=70:5.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Paseo de la Castellana 183, 28046 Madrid",
-        "postal_code": null,
+        "address": "Paseo de la Castellana, 183",
+        "postal_code": "28046",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.451,
-          "lon": -3.692
+          "lat": 40.4706,
+          "lon": -3.6878
         },
-        "source_url": "https://www.ine.es/datosabiertos/"
+        "source_url": "https://www.ine.es/infoine/?L=0"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "ine_inebase",
         "kind": "estadistica",
-        "name": "INE Datos abiertos",
-        "url": "https://www.ine.es/datosabiertos/",
+        "name": "INEbase – Portal estadístico del INE",
+        "url": "https://www.ine.es/dyngs/INEbase/listaoperaciones.htm",
         "portal_status": "active",
         "technology": [
-          "Custom",
-          "OpenAPI"
+          "INEbase",
+          "Tempus3",
+          "PC-Axis"
         ],
         "standards": [
-          "JSON",
-          "API REST"
+          "PC-Axis",
+          "SDMX",
+          "OpenAPI 3.1"
         ],
         "formats": [
-          "JSON",
+          "PC-Axis",
           "CSV",
+          "JSON",
           "XLSX",
-          "API"
+          "XML",
+          "HTML",
+          "PDF"
         ],
         "topics": [
-          "demografia",
-          "poblacion",
-          "economia",
-          "vivienda",
-          "empresas",
-          "turismo"
+          "Demografía",
+          "Población",
+          "Empleo",
+          "Mercado laboral",
+          "IPC",
+          "Economía",
+          "Turismo",
+          "Comercio",
+          "Industria",
+          "Sociedad",
+          "Salud",
+          "Educación",
+          "Medio ambiente",
+          "Vivienda",
+          "Hacienda",
+          "Justicia",
+          "Elecciones",
+          "Agricultura",
+          "Transporte",
+          "Calidad de vida",
+          "Ciencia y tecnología"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "INEbase OpenAPI",
-            "url": "https://www.ine.es/OpenAPI/en/index.html",
+            "name": "API JSON WSTempus – INEbase",
+            "url": "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
             "type": "REST",
-            "documentation_url": "https://www.ine.es/OpenAPI/en/index.html"
+            "documentation_url": "https://www.ine.es/dyngs/DataLab/manual.html?cid=1259945948443"
           },
           {
-            "name": "API JSON del INE",
-            "url": "https://www.ine.es/dyngs/DAB/index.htm",
-            "type": "REST",
-            "documentation_url": "https://www.ine.es/dyngs/DAB/index.htm"
+            "name": "OpenAPI 3.1 – Especificación WSTempus",
+            "url": "https://www.ine.es/OpenAPI/index.html",
+            "type": "OpenAPI",
+            "documentation_url": "https://www.ine.es/OpenAPI/index.html"
           }
         ],
-        "dataset_count": null,
-        "dataset_count_note": "Publica numerosos datasets y series; el catálogo exacto cambia con frecuencia.",
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
+        "dataset_count": 5353,
+        "dataset_count_note": "Verificado 2026-06 consultando /OPERACIONES_DISPONIBLES + /TABLAS_OPERACION/{Id} para las 112 operaciones activas en Tempus3. Total tablas: 5.353. Top operaciones por número de tablas: EPA (1.039), Atlas de distribución de renta de los hogares (540), IDB – Indicadores Demográficos Básicos (342), ECV – Encuesta de Condiciones de Vida (254), Estadística de Migraciones (171), Estadística de Migraciones y Cambios de Residencia (127), Encuesta Cuatrienal de Estructura Salarial (152), Encuesta de turismo de residentes (103), ICM – Índices de Comercio al por Menor (97), Estadística de Violencia Doméstica y VG (95), EPF – Encuesta de Presupuestos Familiares (126), MNP Matrimonios (114), MNP Nacimientos (74), MNP Defunciones (61), Estadística Continua de Población (78), Estadstica de Nulidades, Separaciones y Divorcios (127), Cifras Oficiales de Población – Padrón Municipal (65), EOH – Encuesta de Ocupación Hotelera (41), Encuesta de Ocupación en Apartamentos Turísticos (40), Encuesta de Ocupación en Campings (42), Encuesta de Ocupación en Albergues (31), Movimientos Turísticos en Fronteras (30). 13 operaciones sin tablas en Tempus3 (datos en PC-Axis/descarga directa): Distribución de Nombres (opid 16), Distribución de Apellidos (opid 49), ePOBa (opid 21), Contabilidad Nacional Base 2000 (opid 20), Contabilidad Nacional Base 2008 (opid 51), Contabilidad Nacional Base 2010 (opid 247), Cifras de Poblacin (opid 72), Proyecciones de Población CP (opid 52), Proyecciones de Población LP (opid 54), Encuesta Industrial Anual de Productos (opid 93), Encuesta de Ocupación en Alojamientos Turísticos – antigua (opid 39), Encuesta Cuatrienal Estructural Salarial – nueva (opid 407), Indicador Multidimensional de Calidad de Vida (opid 433). Filtro Canarias en WSTempus: parámetro g1=70:5 (variable CCAA código 70, valor Canarias código 5). Jerarquía de acceso: OPERACIONES_DISPONIBLES → TABLAS_OPERACION/{Id} → SERIES_TABLA/{IdTabla} → DATOS_SERIE/{IdSerie}. Licencia CC BY 4.0.",
+        "last_updated": null,
+        "license_summary": "CC BY 4.0",
         "licenses": [
           {
-            "id": null,
-            "name": "Reutilización abierta INE",
-            "url": null,
+            "name": "Creative Commons Attribution 4.0",
+            "id": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
             "count": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "ine_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – INE",
+        "url": "https://www.ine.es/dyngs/INE/index.htm?cid=401",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLSX",
+          "CSV"
+        ],
+        "topics": [
+          "Instituciones",
+          "Organización",
+          "Alto cargo",
+          "Retribuciones",
+          "Empleo público",
+          "Relación de puestos de trabajo",
+          "Normativa",
+          "Planificación estadística",
+          "Plan Estadístico Nacional",
+          "Calidad",
+          "Contratos",
+          "Convenios",
+          "Encomiendas",
+          "Subvenciones",
+          "Becas",
+          "Presupuestos",
+          "Ejecución presupuestaria",
+          "Cuentas anuales",
+          "Bienes inmuebles",
+          "Disposiciones legales",
+          "Participación pública"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "5 secciones de publicidad activa conforme a Ley 19/2013: (1) Organización, información institucional y empleo — organigrama, currículums y retribuciones de altos cargos, RPT (abril 2026), normativa; (2) Planificación, calidad y servicios — PEN 2025-2028, programas anuales, IOE, Carta de servicios 2026-2029, indicadores de seguimiento; (3) Contratos, Convenios y Subvenciones — perfil del contratante, relación de contratos 2023-2025, modificaciones, encomiendas, convenios; (4) Disposiciones legales — participación pública en proyectos normativos (último: Anteproyecto Ley modificación Ley 12/1989, finalizado 22/05/2026); (5) Información Económico-Presupuestaria — presupuestos gastos/ingresos 2023-2026, ejecución presupuestaria 2023-2025, cuentas anuales, bienes inmuebles. Información complementaria al Portal de Transparencia estatal (transparencia.gob.es). Fechas de actualización verificadas: Organización 20/04/2026, Planificación 06/03/2026, Contratos 09/06/2026, Disposiciones 22/05/2026, Económico-Presupuestaria 26/05/2026.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ine_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – INE",
+        "url": "https://sede.ine.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_estatal"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Padrón municipal",
+          "Padrón de españoles en el extranjero",
+          "Censo electoral",
+          "Certificados IPC",
+          "Sanciones",
+          "Becas",
+          "Registro electrónico",
+          "Protección de datos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica del INE con 4 bloques de trámites: (1) Datos padronales — consulta de inscripción en base padronal, histórico de municipios, certificado PERE, consulta datos PERE; (2) Censo Electoral — manifestación de voluntad de voto UE, impugnación, reclamación, consulta de inscripción, exclusión/inclusión copias propaganda electoral; (3) Sanciones y pagos — pagos web, procedimiento sancionador; (4) Becas, premios y subvenciones — becas postgrado, Premio Nacional de Estadística, proyectos de investigación. Trámites adicionales: certificados telemáticos del IPC, consulta estado tramitación, actuaciones ante DPD, canal protección del informante. Registro electrónico disponible.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.ine.es/datosabiertos/",
-        "https://www.ine.es/OpenAPI/en/index.html",
-        "https://www.ine.es/dyngs/DAB/index.htm"
+        "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
+        "https://www.ine.es/OpenAPI/index.html",
+        "https://www.ine.es/dyngs/DataLab/manual.html?cid=1259945948443",
+        "https://www.ine.es/dyngs/INEbase/listaoperaciones.htm"
       ]
     },
-    "notes": null
+    "notes": "Entidad de ámbito estatal incluida como referencia cruzada por su relevancia directa para Canarias: todas las grandes encuestas (EPA, ECV, EPF, IPC, ETH, EOH, MNP, Atlas de Renta, Estadística Continua de Población) desagregan resultados a nivel CCAA=ES7 (Canarias) y en muchos casos a nivel provincial LP/TF. El parámetro de filtro territorial en WSTempus es g1=70:5. Inventario completo verificado 2026-06: 112 operaciones activas, 5.353 tablas. Las 13 operaciones sin tablas en Tempus3 exponen sus datos en formato PC-Axis descargable desde INEbase. islands=[\"Todas\"] indica cobertura de todas las islas pero sin desagregación insular propia del INE; la desagregación más fina disponible es provincial (Las Palmas / Santa Cruz de Tenerife). Operaciones con mayor relevancia específica para Canarias: EPA (empleo por CCAA), EOH/EOAP (turismo por provincias), Movimientos Turísticos en Fronteras, Encuesta de Turismo de Residentes, Atlas de Distribución de Renta (hasta nivel sección censal), Estadística Continua de Población, Cifras de Población – Padrón Municipal."
   },
   {
     "id": "aemet",
@@ -18800,7 +18904,6 @@
     },
     "notes": "Aena gestiona directamente los aeropuertos canarios (Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote, Fuerteventura, La Palma, La Gomera y El Hierro). El portal estadístico publica informes mensuales y anuales de tráfico aéreo en XLS y PDF con desglose por aeropuerto, siendo Canarias uno de los grupos del desglose. El bloque de transparencia fiscal agrupa once subapartados verificados individualmente, incluyendo contribución tributaria, buenas prácticas tributarias, resultado contable y gasto del impuesto de sociedades, litigios, paraísos fiscales, blanqueo de capitales, conducta ética, compromiso con la transparencia fiscal y relación con el auditor externo. Los Presupuestos Generales del Estado incluyen a Aena consolidado con descarga en HTML, XML, CSV y PDF. La herramienta IPP de la CNMV permite descarga de informes XBRL de Aena. El portal de consultas personalizadas requiere registro y no ofrece descarga directa visible desde la pantalla principal. Fecha de consulta: 2026-06."
   },
-
   {
     "id": "ministerio_interior",
     "name": "Ministerio del Interior",
@@ -19274,90 +19377,6 @@
       ]
     },
     "notes": "Nodo estatal al que están federados múltiples portales canarios (datos.canarias.es, cabildos, etc.)."
-  },
-  {
-    "id": "ine_estadistica_canarias",
-    "name": "INE – Instituto Nacional de Estadística",
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Organismo estadístico estatal que ofrece datos demográficos, económicos y sociales desagregados para Canarias (comunidad autónoma y provincias), complementando la producción estadística del ISTAC.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Avenida de Manoteras, 50-52",
-        "postal_code": "28050",
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.4874,
-          "lon": -3.6621
-        },
-        "source_url": "https://www.ine.es/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "INEbase – Portal estadístico INE",
-        "url": "https://www.ine.es/inebmenu/indice.htm",
-        "portal_status": "active",
-        "technology": [
-          "Portal estadístico propio"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "XLSX",
-          "JSON",
-          "XML"
-        ],
-        "topics": [
-          "Demografía",
-          "Economía",
-          "Mercado laboral",
-          "Población",
-          "Precios",
-          "Vivienda"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API de servicios INE",
-            "url": "https://servicios.ine.es/wst/ine",
-            "type": "REST",
-            "documentation_url": "https://www.ine.es/dyngs/INEbase/es/categoria.htm?c=Estadistica_P&p=124"
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": "Numerosas operaciones con datos específicos para Canarias.",
-        "last_updated": null,
-        "license_summary": "Reutilización abierta bajo condiciones del INE",
-        "licenses": [
-          {
-            "name": "Condiciones de reutilización INE",
-            "count": null,
-            "id": null,
-            "url": "https://www.ine.es/aviso_legal.htm"
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.ine.es/",
-        "https://servicios.ine.es/wst/ine"
-      ]
-    },
-    "notes": "Fuente estatal clave para comparar indicadores canarios con el resto de España."
   },
   {
     "id": "ministerio_agricultura_pesca_alimentacion",
