@@ -121,7 +121,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -135,180 +136,370 @@
   },
   {
     "id": "istac",
-    "name": "ISTAC – Instituto Canario de Estadística",
+    "name": "Instituto Canario de Estadística",
+    "alternate_names": [
+      "ISTAC",
+      "Instituto Canario de Estadística (ISTAC)"
+    ],
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
+      "Todas"
     ],
-    "description": "Principal fuente estadística de Canarias. 21.755+ datasets con APIs especializadas (eDatos: e-Base, e-Cubos, e-Indicadores, e-Operaciones, e-Semántica). Acceso mediante APIs REST, plugin QGIS, librerías R/Python.",
+    "description": "Organismo estadístico oficial de la Comunidad Autónoma de Canarias (CIF: Q8550002C), adscrito a la Consejería de Economía, Hacienda y Seguridad. Produce y difunde las estadísticas oficiales del sistema estadístico canario. Gestiona datos.canarias.es, el catálogo de datos abiertos más completo de Canarias, con 22.359 datasets (2026-06), 11 APIs REST propias y cobertura temática de toda la actividad socioeconómica, demográfica y territorial de las islas.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "ISTAC – Instituto Canario de Estadística",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Luis Doreste Silva, 101, Planta 7ª",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.12,
-          "lon": -15.43
+          "lat": 28.1218,
+          "lon": -15.4262
         },
-        "source_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/"
+        "source_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+      },
+      {
+        "kind": "office",
+        "address": "Plaza Sixto Machado, 3",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4552,
+          "lon": -16.2709
+        },
+        "source_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "istac_datos_canarias",
         "kind": "open_data",
-        "name": "Portal de datos – ISTAC – Instituto Canario de Estadística",
-        "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/",
+        "name": "Portal de Datos Abiertos de Canarias – datos.canarias.es",
+        "url": "https://datos.canarias.es/",
         "portal_status": "active",
         "technology": [
-          "eDatos (Infraestructura de Datos y Metadatos Estadísticos)"
+          "CKAN",
+          "eDatos (e-Base, e-Cubos, e-Indicadores, e-Operaciones, e-Semántica)",
+          "GeoServer",
+          "SDMX"
         ],
-        "standards": [],
+        "standards": [
+          "SDMX",
+          "EURO-SDMX Metadata Structure release 4 (2014)",
+          "OGC WMS",
+          "OGC WFS",
+          "OGC SensorThings API Part 1",
+          "INSPIRE – Unidades estadísticas",
+          "INSPIRE – Unidades administrativas",
+          "DCAT",
+          "NTI-RISP",
+          "PC-Axis",
+          "RSS",
+          "OpenAPI"
+        ],
         "formats": [
-          "PC-Axis (.px)",
-          "JSON",
           "CSV",
+          "JSON",
+          "JSONSTAT",
           "XLSX",
+          "XLS",
           "XML",
-          "Google Visualization API",
           "TSV",
-          "RDF"
+          "PC-Axis",
+          "KML",
+          "KMZ",
+          "WMS",
+          "WFS",
+          "GeoJSON",
+          "GML",
+          "GPKG",
+          "TIFF",
+          "JPEG",
+          "PNG",
+          "ODS",
+          "ZIP",
+          "PDF",
+          "HTML",
+          "TXT",
+          "RSS",
+          "NetCDF",
+          "RDF",
+          "SHP/SHX/DBF/PRJ (Shapefile ESRI)",
+          "LAS",
+          "FIP"
         ],
         "topics": [
           "Demografía",
           "Población",
-          "Padrón municipal",
-          "Migraciones",
-          "Mercado laboral",
-          "Empleo registrado",
-          "Paro registrado",
-          "Afiliaciones a SS",
-          "Turismo",
-          "Ocupación hotelera",
-          "Pernoctaciones",
-          "Llegadas de viajeros",
-          "Salud",
-          "Epidemiología",
-          "Hospitales",
-          "Vacunación",
-          "Educación",
-          "Formación Profesional",
-          "Universidades",
+          "Empleo",
           "Economía",
-          "PIB",
-          "Renta per cápita",
-          "Indicadores coyunturales",
-          "Precios",
-          "IPC",
-          "Vivienda",
-          "Régimen de vivienda",
-          "Construcción",
-          "Obras de edificación",
-          "Sector público",
-          "Administración",
-          "Gasto público",
-          "Industria",
-          "Producción industrial",
-          "Energía",
-          "Consumo energético",
+          "Turismo",
+          "Salud",
+          "Sociedad y bienestar",
+          "Educación",
           "Medio ambiente",
-          "Clima",
-          "Temperatura",
-          "Precipitaciones",
-          "Agua",
-          "Recursos hídricos",
+          "Medio rural",
+          "Agricultura y pesca",
+          "Industria",
           "Comercio",
-          "Exportaciones",
-          "Importaciones",
-          "Actividad económica",
-          "CNAE",
-          "Agricultura",
-          "Ganadería",
-          "Pesca",
-          "Minería",
-          "Servicios",
           "Transporte",
-          "Comunicaciones",
-          "Cultura",
-          "Deporte",
-          "Ciencia y Tecnología",
-          "TIC",
-          "I+D"
+          "Vivienda",
+          "Urbanismo e infraestructuras",
+          "Energía",
+          "Hacienda",
+          "Sector público",
+          "Legislación y justicia",
+          "Ciencia y tecnología",
+          "Cultura y ocio",
+          "Deportes",
+          "Seguridad",
+          "Geoespacial",
+          "Meteorología",
+          "Canarias"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "e-Base API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html",
+            "name": "API de operaciones estadísticas (e-Operaciones)",
+            "url": "https://datos.canarias.es/api/estadisticas/operations/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/operations"
           },
           {
-            "name": "e-Cubos API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html",
+            "name": "API de indicadores (e-Indicadores)",
+            "url": "https://datos.canarias.es/api/estadisticas/indicators/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/indicators"
           },
           {
-            "name": "e-Indicadores API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html",
+            "name": "API de recursos estadísticos (e-Base / e-Cubos)",
+            "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/statistical-resources"
           },
           {
-            "name": "e-Operaciones API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html",
+            "name": "API de recursos estructurales – e-Semántica (SDMX)",
+            "url": "https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/structural-resources"
           },
           {
-            "name": "e-Semántica API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html",
+            "name": "API de metadatos comunes",
+            "url": "https://datos.canarias.es/api/estadisticas/cmetadata/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/cmetadata"
           },
           {
-            "name": "API Georreferenciación",
-            "url": "https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones",
+            "name": "API de georreferenciación estadística",
+            "url": "https://datos.canarias.es/api/estadisticas/georref/latest",
             "type": "REST",
-            "documentation_url": "https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/georref"
+          },
+          {
+            "name": "API de registro SDMX",
+            "url": "https://datos.canarias.es/api/estadisticas/registry/v2.1/",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/registry"
+          },
+          {
+            "name": "API de exportaciones",
+            "url": "https://datos.canarias.es/api/estadisticas/export/v1.0/",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/export"
+          },
+          {
+            "name": "API de enlaces permanentes (permalinks)",
+            "url": "https://datos.canarias.es/api/estadisticas/permalinks/v1.0/",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/permalinks"
+          },
+          {
+            "name": "API CKAN",
+            "url": "https://datos.canarias.es/api/estadisticas/catalogo/latest",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/catalogo"
+          },
+          {
+            "name": "API GeoServer OGC (WMS/WFS)",
+            "url": "https://datos.canarias.es/api/estadisticas/geo/latest",
+            "type": "OGC",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/geo"
           }
         ],
-        "dataset_count": 21755,
-        "dataset_count_note": null,
+        "dataset_count": 22359,
+        "dataset_count_note": "Infraestructura eDatos compuesta por: e-Base (repositorio principal de tablas estadísticas, en migración gradual a e-Cubos), e-Cubos (nuevo repositorio de cubos estadísticos), e-Indicadores (sistemas de indicadores por territorio: CA, isla, municipio; alimentado automáticamente desde e-Base), e-Operaciones (inventario de operaciones estadísticas, solo accesible vía API), e-Semántica (recursos estructurales SDMX: clasificaciones, conceptos, DSD, solo accesible vía API). 22.359 datasets verificados en 2026-06 desde el portal CKAN. Por organización: ISTAC 21.758, Cabildo de Tenerife 281, Consejería de Política Territorial 102, Consejería de Presidencia 63, Consejería de Transición Ecológica 38, Consejería de Agricultura 26, GRAFCAN 23, Presidencia del Gobierno 18, Consejería de Hacienda 15, Consejería de Turismo 11, Servicio Canario de Empleo 6, Consejería de Educación 5, Cabildo de El Hierro 4, Consejería de Sanidad 3, Consejería de Universidades 3, Consejería de Bienestar Social 1, Consejería de Economía 1, Consejería de Obras Públicas 1. Formatos más frecuentes: KML (12.271), WMS (12.226), TIFF (11.917), CSV (9.996), JSON (9.503). Conectores oficiales disponibles: R (istacr/CRAN), Python (istacpy/PyPI), QGIS (plugin istacqgis), Tableau Web Data Connector, widgets incrustables y formato PC-Axis para consulta offline.",
         "last_updated": null,
-        "license_summary": "Aviso Legal ISTAC",
+        "license_summary": "Aviso Legal del ISTAC (21.758 datasets); Aviso Legal Gobierno de Canarias (292); CC BY (281); Aviso Legal SITCAN (24); Aviso Legal Cabildo El Hierro (4).",
         "licenses": [
           {
-            "name": "Aviso Legal ISTAC",
-            "count": 21755,
-            "id": null,
-            "url": null
+            "name": "Aviso Legal del ISTAC",
+            "id": "istac-aviso-legal",
+            "url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html",
+            "count": 21758
+          },
+          {
+            "name": "Aviso Legal del Gobierno de Canarias",
+            "id": "gobcan-aviso-legal",
+            "url": "http://opendata.gobiernodecanarias.org/opendata/datos-abiertos/directrices-y-normas",
+            "count": 292
+          },
+          {
+            "name": "Creative Commons Attribution (CC BY)",
+            "id": "cc-by",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "count": 281
+          },
+          {
+            "name": "Aviso Legal del SITCAN",
+            "id": "sitcan-aviso-legal",
+            "url": "https://datos.canarias.es/portal/aviso-legal-y-condiciones-de-uso",
+            "count": 24
+          },
+          {
+            "name": "Aviso Legal del Cabildo de El Hierro",
+            "id": "cieh-aviso-legal",
+            "url": "https://datos.canarias.es/catalogos/general/dataset/?license_id=cieh-aviso-legal",
+            "count": 4
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "istac_portal_estadistico",
+        "kind": "estadistica",
+        "name": "Portal Estadístico del ISTAC – gobiernodecanarias.org/istac",
+        "url": "https://www.gobiernodecanarias.org/istac/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF",
+          "XLS",
+          "XLSX",
+          "HTML",
+          "PC-Axis"
+        ],
+        "topics": [
+          "Estadística oficial",
+          "Plan Estadístico de Canarias",
+          "Demografía",
+          "Economía",
+          "Turismo",
+          "Mercado de trabajo",
+          "Calidad estadística",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal institucional del ISTAC con acceso a publicaciones estadísticas, calendario de difusión, Plan Estadístico de Canarias y metodología. Los datasets están centralizados en datos.canarias.es.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "istac_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – ISTAC",
+        "url": "https://www.gobiernodecanarias.org/istac/istac/transparencia/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 12/2014, de 26 de diciembre, de transparencia y de acceso a la información pública"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLS",
+          "XLSX",
+          "CSV",
+          "DOCX"
+        ],
+        "topics": [
+          "Instituciones",
+          "Organización",
+          "Alto cargo",
+          "Empleados públicos",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Económico financiera",
+          "Patrimonio",
+          "Planificación",
+          "Obras públicas",
+          "Contratación",
+          "Convenios y encomiendas",
+          "Ayudas y subvenciones",
+          "Ordenación del territorio",
+          "Estadísticas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "16 secciones de transparencia activa conforme a la Ley 12/2014. Responsable: Instituto Canario de Estadística. Periodicidades: anual (economía, patrimonio, planificación, obras, subvenciones, estadísticas), trimestral (contratos menores), semestral (indemnizaciones), y ad hoc (nombramientos, normativa, convenios). Última actualización global: 30 de marzo de 2026.",
+        "last_updated": "2026-03",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "istac_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – ISTAC (Gobierno de Canarias)",
+        "url": "https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites?contentTypeId=321b9560-73a9-11df-8da5-bf2cae36f426&titulo=&tema=&departamento=c3254a40-6c07-11e5-8789-faa465ab1552&perfil=&organo=44f44490-6e56-11e5-8789-3a94baacdf31&tipo_tramite=&dirGral=44f44490-6e56-11e5-8789-3a94baacdf31&subtema=&enviado=true",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_gobcan"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "tramites",
+          "certificacion_estadistica",
+          "atencion_ciudadana"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica del Gobierno de Canarias filtrada por el ISTAC. Permite solicitar certificaciones oficiales de resultados estadísticos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/istac/datos-abiertos/"
+        "https://www.gobiernodecanarias.org/istac/",
+        "https://www.gobiernodecanarias.org/istac/aviso_legal.html",
+        "https://datos.canarias.es/portal/",
+        "https://datos.canarias.es/api/estadisticas/",
+        "https://www.gobiernodecanarias.org/istac/datos-abiertos/herramientas-de-consulta/",
+        "https://www3.gobiernodecanarias.org/aplicaciones/appsistac/",
+        "https://datos.canarias.es/catalogos/general/catalog/gobcan.rdf",
+        "https://datos.canarias.es/catalogos/estadisticas/dcat/catalog.rdf",
+        "https://opendata.sitcan.es/catalog.rdf",
+        "https://www.gobiernodecanarias.org/istac/istac/transparencia/"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q8550002C. Adscrito a la Consejería de Economía, Hacienda y Seguridad del Gobierno de Canarias. Contacto: consultas.istac@gobiernodecanarias.org | Las Palmas: 928 89 92 60 | Tenerife: 922 92 28 01. Entidad central del ecosistema de datos abiertos de Canarias. La plataforma datos.canarias.es integra CKAN + 11 APIs REST propias + GeoServer OGC. Las APIs implementan EURO-SDMX Metadata Structure (release 4, 2014) en alineación con Eurostat. La infraestructura eDatos se compone de cinco bancos especializados: e-Base (tablas, en migración a e-Cubos), e-Cubos, e-Indicadores (alimentado automáticamente desde e-Base), e-Operaciones (IOE, solo vía API) y e-Semántica (recursos estructurales SDMX, solo vía API). La API de georreferenciación estadística convierte direcciones/coordenadas con fines estadísticos (precisión no garantizada). El portal actúa como agregador multiorganismo: además de los 21.758 datasets del ISTAC, aloja datasets del Cabildo de Tenerife, GRAFCAN, 9 consejerías del Gobierno de Canarias, Cabildo de El Hierro y Servicio Canario de Empleo. Ofrece conectores oficiales para R (istacr/CRAN), Python (istacpy/PyPI), QGIS (plugin istacqgis), Tableau (Web Data Connector) y widgets incrustables. Visualizador estadístico: https://www3.gobiernodecanarias.org/istac/statistical-visualizer/ Aplicaciones especializadas: Sistema de información electoral (https://www3.gobiernodecanarias.org/istac/elecciones, datos desde 1979), Portal de profesionales del turismo (https://www3.gobiernodecanarias.org/aplicaciones/profesionalesistac), Banco de activos semánticos (clasificaciones, conceptos y definiciones SDMX). Portal de transparencia activa: https://www.gobiernodecanarias.org/istac/istac/transparencia/ — 16 secciones bajo Ley 12/2014, última actualización 2026-03. Catálogos RDF/DCAT verificados en 2026-06: gobcan.rdf (actualizado 2026-06-09), catalog.rdf estadístico (2026-06-08), SITCAN catalog.rdf (2026-06-09)."
   },
   {
     "id": "grafcan_sitcan",
@@ -469,7 +660,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -566,7 +758,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -652,7 +845,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -748,7 +942,8 @@
           }
         ],
         "last_updated": "2023-05",
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "notes": "SALUD DEL PORTAL (evaluación 2026-06): Portal CKAN activo y accesible. API REST funcional verificada. 104 datasets disponibles con descarga directa en múltiples formatos. SEÑALES DE ALERTA: el dataset más reciente modificado según API es de 2023-05-25, lo que indica que el catálogo lleva más de 3 años sin actualizaciones nuevas — riesgo de datos desactualizados. Los datasets electorales más recientes corresponden a las elecciones de mayo 2023, coherente con la fecha de última modificación. PUNTOS FUERTES: cobertura geoespacial muy destacada (la mayoría de datasets incluyen SHP, GeoJSON, KML/KMZ, además de CSV/XLS); datasets de numeración y arbolado desglosados por distrito (Suroeste, Salud-La Salle, Ofra-Costa Sur, Centro-Ifara, Anaga); licencia abierta CC BY en todos los datasets verificados. PENDIENTE: verificar si existen datasets fuera del portal principal (ej. transparencia, contratación). La versión exacta de la licencia CC BY no está especificada en el portal (CKAN devuelve 'cc-by' genérico sin versión).",
@@ -837,7 +1032,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -916,7 +1112,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "comisionado_transparencia",
@@ -957,7 +1154,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "comisionado_datos",
@@ -988,7 +1186,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "comisionado_sede_electronica",
@@ -1020,7 +1219,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -1116,7 +1316,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1214,7 +1415,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1307,7 +1509,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1391,7 +1594,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1459,7 +1663,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "cabildo_lapalma_transparencia",
@@ -1508,7 +1713,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "cabildo_lapalma_ckan",
@@ -1583,7 +1789,8 @@
             "url": "https://opendatacommons.org/licenses/by/1-0/"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "cabildo_lapalma_arcgis_hub",
@@ -1652,7 +1859,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1734,7 +1942,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1827,7 +2036,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia",
@@ -1870,7 +2080,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1957,7 +2168,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2039,7 +2251,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2118,7 +2331,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2198,7 +2412,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2268,7 +2483,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "candelaria_sede",
@@ -2292,7 +2508,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "candelaria_web",
@@ -2316,7 +2533,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2415,7 +2633,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "sanmiguel_web",
@@ -2435,7 +2654,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3803500B. Portal de transparencia propio (tecnología custom), alineado con Ley 12/2014 canaria. La sede STA/Gestiona no incluye sección /transparency/. Existe sede tributaria adicional en sede.sanmigueldeabona.es (perfil del contratante). Teléfono: 922 700 000.",
@@ -2506,7 +2726,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2594,7 +2815,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia_deportes",
@@ -2629,7 +2851,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia_sasac",
@@ -2665,7 +2888,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica",
@@ -2692,7 +2916,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "notes": "No se ha detectado portal de datos abiertos (CKAN u equivalente). La transparencia se canaliza a través de tres portales independientes: ayuntamiento, Sociedad de Deportes y SASAC, todos bajo la plataforma GobiernoAbierto/Fernandopoo. Sociedades municipales: Sociedad de Deportes de La Aldea S.L. (sede: https://sociedaddedeportesdelaaldea.sedelectronica.es/info.0) y SASAC (https://sasac.laaldeasanicolas.es/). Integrada en la Mancomunidad de Ayuntamientos del Norte de Gran Canaria.",
@@ -2765,7 +2990,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2834,7 +3060,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2902,7 +3129,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sanandresysauces_sede",
@@ -2926,7 +3154,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2998,7 +3227,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3067,7 +3297,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3140,7 +3371,8 @@
         "dataset_count_note": null,
         "last_updated": "2026-04",
         "license_summary": null,
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "sede_electronica_tias",
@@ -3171,7 +3403,8 @@
         "dataset_count_note": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3244,7 +3477,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3313,7 +3547,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3381,7 +3616,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "agaete_web",
@@ -3401,7 +3637,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3500100G. Portal de transparencia (STA/Gestiona) con dos secciones: Ayuntamiento (1.610 docs, DOCX/ODT/PDF) y Sociedad Municipal ACUDE (129 docs, DOCX/ODT/PDF/XLS/XLSX). Sin CKAN ni sección de datos abiertos reutilizables. last_updated no declarado explícitamente en el índice.",
@@ -3472,7 +3709,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3541,7 +3779,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3601,7 +3840,8 @@
         "dataset_count_note": null,
         "last_updated": null,
         "license_summary": null,
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3672,7 +3912,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3741,7 +3982,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3813,7 +4055,8 @@
         "last_updated": "2026-04",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "arico_web",
@@ -3833,7 +4076,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3800500E. Portal de transparencia (STA/Gestiona) con ~4.551 docs en 18 secciones, última revisión 27-04-2026 (sección Económica-Financiera). Formato '.word' publicado por la plataforma equivale a DOCX. Sin CKAN ni sección de datos abiertos reutilizables.",
@@ -3904,7 +4148,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3973,7 +4218,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4045,7 +4291,8 @@
         "last_updated": "2026-05",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "arucas_web",
@@ -4065,7 +4312,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "Portal de transparencia (STA/Gestiona) con tres secciones: Ayuntamiento (~9.895 docs, PDF/ODT, actualización semanal), Sociedad Municipal Arucas S.A. (697 docs, PDF/ODT/ODG/ODS/ODF/TXT/DOCX/XML) y Organismo Autónomo de Cultura (892 docs, PDF/ODT). Sin portal CKAN ni datos abiertos propios (0% open data según dyntra.org, 2024). Coordenadas aproximadas al casco urbano (inferred).",
@@ -4136,7 +4384,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4205,7 +4454,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4274,7 +4524,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "brena_alta_sede",
@@ -4295,7 +4546,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "brena_alta_web",
@@ -4316,7 +4568,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4388,7 +4641,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4457,7 +4711,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4524,7 +4779,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "elpinar_sede",
@@ -4548,7 +4804,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4620,7 +4877,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4689,7 +4947,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4758,7 +5017,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4832,7 +5092,8 @@
         "last_updated": "2022-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4903,7 +5164,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4972,7 +5234,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5041,7 +5304,8 @@
         "last_updated": "2026-03",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "fuencaliente_web",
@@ -5061,7 +5325,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "Portal de transparencia integrado en la sede electrónica (STA/Gestiona), sin dominio independiente. 711 documentos en 18 secciones; última revisión verificada 2026-03. No se detecta portal CKAN ni sección de datos abiertos reutilizables. CIF: P3801400G. Índice ITCanarias: 3,04 (anterior corporación) → 8,59 (julio 2024).",
@@ -5131,7 +5396,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5200,7 +5466,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5295,7 +5562,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "guiadeisora_web",
@@ -5315,7 +5583,8 @@
         "last_updated": "2026-04",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3801900F. Portal de transparencia basado en Gesgocom SL (https://www.gesgocom.es). La sede STA/Gestiona no incluye sección /transparency/. 44,57% en índice dyntra.org (82/184 indicadores, posición 168, 2026).",
@@ -5387,7 +5656,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5456,7 +5726,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5522,7 +5793,8 @@
         "dataset_count": null,
         "last_updated": null,
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -5591,7 +5863,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5660,7 +5933,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5691,7 +5965,7 @@
         "island": "El Hierro",
         "coordinates": {
           "lat": 27.7667,
-          "lon": -18.0050
+          "lon": -18.005
         },
         "source_url": "https://www.aytofrontera.org"
       }
@@ -5726,7 +6000,8 @@
         "last_updated": "2026-06",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "lafrontera_sede",
@@ -5747,7 +6022,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "lafrontera_web",
@@ -5767,7 +6043,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "Portal de transparencia con dominio propio (transparencia.aytofrontera.org), plataforma distinta a la sede electrónica. Existe sección 'Datos' (https://transparencia.aytofrontera.org/data/1) pendiente de verificar si contiene datasets reutilizables o es solo documental. Si contiene datasets descargables en CSV, reclasificar portal como kind: 'open_data'. Coordenadas aproximadas al casco urbano de Frontera (inferred). Confirmar CIF antes de commitear.",
@@ -5838,7 +6115,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5907,7 +6185,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5984,7 +6263,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica_la_orotava",
@@ -6018,7 +6298,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "calidad_agua_la_orotava",
@@ -6049,7 +6330,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "perfil_contratante_la_orotava",
@@ -6078,7 +6360,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6152,7 +6435,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6221,7 +6505,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6290,7 +6575,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6359,7 +6645,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6428,7 +6715,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6512,7 +6800,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica",
@@ -6546,7 +6835,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "transparencia_empresa_municipal",
@@ -6572,7 +6862,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6644,7 +6935,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6713,7 +7005,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6795,7 +7088,8 @@
         "last_updated": "2025-12",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sede_electronica_puntagorda",
@@ -6827,7 +7121,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6901,7 +7196,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6970,7 +7266,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7049,7 +7346,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica_san_bartolome",
@@ -7076,7 +7374,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "notes": "Portal opendata vacío a fecha 2026-06. Plataforma de transparencia gestionada por ATM Gruppo Maggioli. CIF: P3501900I. Sede electrónica en eadmin.sanbartolome.es. Alcalde 2023-2027: Isidro Pérez Martín (PSOE).",
@@ -7148,7 +7447,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7217,7 +7517,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7286,7 +7587,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7355,7 +7657,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7424,7 +7727,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7606,7 +7910,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7675,7 +7980,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7744,7 +8050,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7813,7 +8120,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7882,7 +8190,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7961,7 +8270,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia_sede_tazacorte",
@@ -7997,7 +8307,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sede_electronica_tazacorte",
@@ -8027,7 +8338,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8103,7 +8415,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8172,7 +8485,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8239,7 +8553,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "portal_transparencia",
@@ -8284,7 +8599,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8354,7 +8670,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8423,7 +8740,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8510,7 +8828,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica_tinajo",
@@ -8539,7 +8858,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "notes": "Sin portal de datos abiertos detectado a junio 2026. La transparencia se canaliza a través de https://transparencia.tinajo.es/, plataforma del Comisionado de Transparencia de Canarias (transparenciacanarias.org), compartida con otros municipios canarios. El visor presupuestario ofrece exportación en XLS y XML, pero el XML presenta errores de formato. Evaluación disponible: 'IT-Canarias Ayuntamiento 2024'. Padrón municipal aproximado ~6.760 hab. (estimado por cálculo inverso: 11.896.478 € / 1.760,09 €/hab.). Contacto: registro@tinajo.es / 928 84 00 21.",
@@ -8611,7 +8931,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8680,7 +9001,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8748,7 +9070,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "valleseco_sede",
@@ -8772,7 +9095,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8842,7 +9166,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8911,7 +9236,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8970,7 +9296,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "vegadesanmateo_sede",
@@ -8994,7 +9321,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "vegadesanmateo_transparencia",
@@ -9026,7 +9354,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9097,7 +9426,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9166,7 +9496,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9235,7 +9566,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9248,73 +9580,139 @@
     "notes": null
   },
   {
-    "id": "agencia_tributaria_canaria_atc",
-    "name": "Agencia Tributaria Canaria ATC",
+    "id": "agencia_tributaria_canaria",
+    "name": "Agencia Tributaria Canaria",
+    "alternate_names": [
+      "ATC",
+      "Agencia Tributaria Canaria (ATC)"
+    ],
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias (CIF: Q3500461C), adscrito a la Consejería de Hacienda, responsable de la gestión, inspección y recaudación de los tributos propios de la Comunidad Autónoma y de los cedidos por el Estado. Gestiona tributos exclusivos del régimen económico-fiscal canario: IGIC, AIEM, impuesto sobre combustibles, labores del tabaco, juego e impuesto sobre residuos. Publica transparencia activa con 9 secciones conforme a la Ley 12/2014. No dispone de portal de datos abiertos propio ni publica datasets en datos.canarias.es.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Agencia Tributaria Canaria ATC",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Profesor Agustín Millares Carló, 22, Edificio Royal",
+        "postal_code": "35071",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1154,
+          "lon": -15.417
         },
-        "source_url": "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp"
+        "source_url": "https://www3.gobiernodecanarias.org/tributos/atc/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Agencia Tributaria Canaria ATC",
-        "url": "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp",
+        "id": "atc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Agencia Tributaria Canaria",
+        "url": "https://www3.gobiernodecanarias.org/tributos/atc/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 12/2014, de 26 de diciembre, de transparencia y de acceso a la información pública de Canarias",
+          "Ley 19/2013, de 9 de diciembre, de transparencia estatal"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "ODS",
+          "ODT",
+          "XLSX",
+          "PDF",
+          "HTML"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Institucional y organizativa",
+          "Altos cargos y personal directivo",
+          "Empleados públicos",
+          "Retribuciones",
+          "Servicios y procedimientos",
+          "Económico-financiera",
+          "Patrimonio",
+          "Normativa",
+          "Planificación",
+          "Contratos y subastas",
+          "Convenios y encargos a medios propios",
+          "Ayudas y subvenciones",
+          "Concesiones de servicios públicos",
+          "Derecho de acceso a la información pública",
+          "Fiscalidad canaria",
+          "IGIC",
+          "AIEM"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "9 secciones de transparencia activa verificadas en 2026-06: Institucional y organizativa, Altos cargos/empleados públicos/retribuciones, Servicios y procedimientos, Económica-financiera y Patrimonio, Normativa, Planificación, Contratos y subastas/Convenios/Encargos a medios propios, Ayudas y subvenciones/Concesiones, Derecho de acceso a la información pública. Documentos descargables en ODS, ODT, XLSX y PDF. Contacto transparencia: https://www3.gobiernodecanarias.org/tributos/atc/contacto-transparencia.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "atc_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Agencia Tributaria Canaria",
+        "url": "https://sede.gobiernodecanarias.org/tributos/jsf/publico/sede/inicio_sede.jsp",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_gobcan"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "IGIC",
+          "AIEM",
+          "Transmisiones patrimoniales",
+          "Actos jurídicos documentados",
+          "Sucesiones y donaciones",
+          "Combustibles",
+          "Importaciones",
+          "Labores del tabaco",
+          "Juego",
+          "Tasas",
+          "Ingresos no tributarios",
+          "Certificados tributarios",
+          "Recaudación",
+          "Liquidaciones",
+          "Denuncias tributarias",
+          "Valoraciones",
+          "Impuesto sobre residuos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica propia de la ATC, titularidad de la Agencia Tributaria Canaria. Gestión tecnológica a cargo del Servicio de Informática Tributaria de la Dirección General de Tributos. Acceso mediante certificado digital o Cl@ve. 17 categorías de trámites en línea verificadas en 2026-06. Última actualización de la sede: 2026-05-06.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp"
+        "https://www3.gobiernodecanarias.org/tributos/atc/",
+        "https://www3.gobiernodecanarias.org/tributos/atc/transparencia",
+        "https://www3.gobiernodecanarias.org/tributos/atc/transparencia/institucional-y-organizativa",
+        "https://www3.gobiernodecanarias.org/tributos/atc/transparencia/economica-financiera-y-patrimonio",
+        "https://www3.gobiernodecanarias.org/tributos/atc/contacto-transparencia",
+        "https://sede.gobiernodecanarias.org/tributos/jsf/publico/sede/inicio_sede.jsp",
+        "https://sede.gobiernodecanarias.org/tributos/jsf/publico/sede/la_sede/la_sede.jsp"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q3500461C. Sede única verificada: Calle Profesor Agustín Millares Carló, 22, Edificio Royal, 35071 Las Palmas de Gran Canaria. Adscrita a la Consejería de Hacienda del Gobierno de Canarias. Gestiona el régimen económico-fiscal especial de Canarias (REF): IGIC (equivalente al IVA peninsular), AIEM, impuesto sobre combustibles derivados del petróleo, labores del tabaco, juego, impuesto sobre residuos, tasas e ingresos no tributarios autonómicos. La sede electrónica es titularidad exclusiva de la ATC (a diferencia del SCS, que comparte la sede general del Gobierno de Canarias). No publica datasets en datos.canarias.es ni en ningún otro portal de datos abiertos (verificado en 2026-06). La transparencia activa se articula en 9 secciones bajo Ley 12/2014; los documentos se publican en ODS, ODT, XLSX y PDF."
   },
   {
     "id": "asistencia_integral_tributaria_sa_asista",
@@ -9373,7 +9771,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9442,7 +9841,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9511,7 +9911,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9573,7 +9974,7 @@
           "XLS"
         ],
         "has_api": false,
-        "machine_readable": false,
+        "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
         "last_updated": null,
@@ -9676,7 +10077,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9745,7 +10147,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9819,7 +10222,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9995,7 +10399,8 @@
         "last_updated": "2025-12",
         "license_summary": "Todos los derechos reservados (copyright FUCAS). Uso permitido únicamente en ámbito doméstico y sin fines públicos o comerciales. No se permite reproducción, distribución ni comunicación pública sin autorización expresa de FUCAS. Fuente: Aviso Legal fucas.org (actualizado 08-03-2023).",
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -10068,7 +10473,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10137,7 +10543,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10216,7 +10623,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10285,7 +10693,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10354,7 +10763,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10628,7 +11038,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -10699,7 +11110,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10768,7 +11180,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10823,7 +11236,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -10835,75 +11249,6 @@
       ]
     },
     "notes": "Acrónimo: ICDC. Web: https://www.icdcultural.org. Anteriores denominaciones: Festival de Música de Canarias S.A. (1984-1985), Sociedad Canaria de las Artes Escénicas y la Música S.A. (1985-2005), Canarias Cultura en Red S.A. (2005-2021). Dos sedes: Las Palmas de Gran Canaria (C/ León y Castillo 57, 4ª planta) y Santa Cruz de Tenerife (C/ Puerta Canseco 49, piso 2). No concede ayudas ni subvenciones propias. XLS/ODS confirmados en: contratos de patrocinio (§2.4.4, 2022-2025), gastos dietas Dirección Adjunta (§7.3, solo 2024), contratos programados (§9.2, 2024-2025), listado contratos formalizados (§9.8.1, 2022-2025), modificaciones contratos (§9.8.2, 2022-2023), contratos menores trimestrales (§9.9, 2022-2025), adendas convenios (§10.1, 2023-2025). Verificado 2026-05."
-  },
-  {
-    "id": "instituto_canario_de_estadistica_istac",
-    "name": "INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
-        },
-        "source_url": "http://www.gobiernodecanarias.org/istac/istac/transparencia"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – INSTITUTO CANARIO DE ESTADÍSTICA ISTAC",
-        "url": "http://www.gobiernodecanarias.org/istac/istac/transparencia",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": true,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05"
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "http://www.gobiernodecanarias.org/istac/istac/transparencia"
-      ]
-    },
-    "notes": null
   },
   {
     "id": "instituto_canario_de_igualdad_ici",
@@ -10962,7 +11307,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11031,7 +11377,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11175,7 +11522,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11244,7 +11592,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11461,7 +11810,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11530,7 +11880,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11599,7 +11950,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11655,7 +12007,8 @@
         "last_checked": "2026-06",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -11725,7 +12078,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11738,73 +12092,207 @@
     "notes": null
   },
   {
-    "id": "servicio_canario_de_la_salud_scs",
-    "name": "Servicio Canario de la Salud SCS",
+    "id": "servicio_canario_de_la_salud",
+    "name": "Servicio Canario de la Salud",
+    "alternate_names": [
+      "SCS",
+      "Servicio Canario de Salud"
+    ],
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias (CIF: Q8555011I), adscrito a la Consejería de Sanidad, responsable de la planificación, financiación y gestión de las prestaciones sanitarias públicas en todas las islas. Publica transparencia activa con 15 secciones conforme a la Ley 12/2014 canaria. No dispone de portal de datos abiertos propio; sus datasets reutilizables se publican a través de la Consejería de Sanidad en datos.canarias.es. En 2025–2026 está implantando un Data Lake Sanitario (1.763.834,68 € con fondos Next Generation EU) para integrar datos clínicos de todos sus centros.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Servicio Canario de la Salud SCS",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Avenida Juan XXIII, 17",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1179,
+          "lon": -15.4261
         },
-        "source_url": "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia"
+        "source_url": "https://www3.gobiernodecanarias.org/sanidad/scs/"
+      },
+      {
+        "kind": "headquarters",
+        "address": "Calle Pérez de Rozas, 5",
+        "postal_code": "38004",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4691,
+          "lon": -16.2573
+        },
+        "source_url": "https://www3.gobiernodecanarias.org/sanidad/scs/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Servicio Canario de la Salud SCS",
-        "url": "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia",
+        "id": "scs_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Servicio Canario de la Salud",
+        "url": "https://www3.gobiernodecanarias.org/sanidad/scs/tematica.jsp?idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 12/2014, de 26 de diciembre, de transparencia y de acceso a la información pública de Canarias",
+          "Ley 19/2013, de 9 de diciembre, de transparencia estatal"
+        ],
+        "formats": [
+          "ODS",
+          "ODT",
+          "PDF",
+          "HTML"
+        ],
+        "topics": [
+          "Organización",
+          "Altos cargos y personal directivo",
+          "Empleados públicos",
+          "Retribuciones",
+          "Inventario",
+          "Económico-financiera",
+          "Contratación",
+          "Convenios y encomiendas",
+          "Ayudas y subvenciones",
+          "Infraestructuras",
+          "Planificación",
+          "Servicios y procedimientos",
+          "Normativa",
+          "Salud pública",
+          "Acceso a la información pública"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "15 secciones de transparencia activa verificadas en 2026-06. Publicación sistemática en ODS + PDF (dato reutilizable + copia firmada) para contratos, retribuciones y económico-financiera; ODT + PDF para planes de contratación. Periodicidad: trimestral (contratos, ejecución presupuestaria), anual (retribuciones, inventario, planificación), ad hoc (normativa, convenios). Última actualización global verificada: 2026-05-26 (Importe total adjudicado / Gasto personal). Contacto transparencia: urip.scs@gobiernodecanarias.org | Las Palmas: 928 11 73 87 | Tenerife: 922 95 18 09.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "scs_estadisticas",
+        "kind": "estadistica",
+        "name": "Informes y Estadísticas – Servicio Canario de la Salud",
+        "url": "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=3eb7778a-df0a-11eb-b984-6f2bcbfa916b&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "XLS",
+          "HTML"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Salud pública",
+          "Epidemiología",
+          "Listas de espera",
+          "Actividad asistencial",
+          "Atención primaria",
+          "Atención hospitalaria",
+          "Recursos sanitarios",
+          "Mortalidad",
+          "Enfermedades crónicas",
+          "Vacunación",
+          "Salud mental",
+          "Urgencias",
+          "Profesionales sanitarios"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Publicación de informes periódicos y estadísticas sanitarias en PDF/XLS. Incluye: Observatorio Canario de la Salud (actualizado 2026-04), Encuesta de Salud de Canarias 2021, Encuesta de satisfacción al alta hospitalaria (2025-08), Estadística de listas de espera (vía ISTAC). Los datasets reutilizables del grupo 'salud' se publican en datos.canarias.es; el SCS enlaza directamente a https://datos.canarias.es/catalogos/general/dataset/?q=&sort=score+desc&groups=salud desde su portal de transparencia (última actualización del enlace: 2026-04-13).",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "scs_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Gobierno de Canarias – trámites SCS",
+        "url": "https://sede.gobiernodecanarias.org/sede/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_gobcan"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Reclamación sanitaria",
+          "Acceso a la información pública",
+          "Factura electrónica",
+          "Renovación de demanda de empleo"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica compartida del Gobierno de Canarias. Trámites SCS verificados: 1768 (Reclamación ámbito sanitario), 4177 (Acceso a la información pública), 4005 (Factura Electrónica), 4049/4050 (Renovación Demanda). No publica datasets abiertos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "scs_miscs",
+        "kind": "other",
+        "name": "miSCS – Servicios Digitales de Salud",
+        "url": "https://www3.gobiernodecanarias.org/sanidad/scs/tematica.jsp?idCarpeta=f49a382a-c894-11e4-b8de-159dab37263e",
+        "portal_status": "active",
+        "technology": [
+          "app_movil",
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Historia clínica electrónica",
+          "Resultados de pruebas",
+          "Cita previa",
+          "Servicios digitales sanitarios",
+          "Salud digital"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Catálogo de servicios digitales de salud del SCS (app + web). No expone datasets abiertos. Soporte: miscs.scs@gobiernodecanarias.org.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia"
+        "https://www3.gobiernodecanarias.org/sanidad/scs/",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/tematica.jsp?idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=bfccf3c7-a3fb-11ea-8b8c-f7bac25b9b1e&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=b2540aca-fdab-11dd-b2aa-596c3deb1b4e&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=7c12527c-325f-11ec-9127-196742e38597&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=3eb7778a-df0a-11eb-b984-6f2bcbfa916b&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=3d597a94-3266-11ec-9127-196742e38597&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://sede.gobiernodecanarias.org/sede/",
+        "https://datos.canarias.es/catalogos/general/dataset/noticias-de-la-consejeria-de-sanidad-de-canarias",
+        "https://www3.gobiernodecanarias.org/noticias/sanidad-impulsa-un-data-lake-sanitario-con-una-inversion-de-17-millones-para-la-integracion-y-analisis-de-datos/"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q8555011I. Dos sedes centrales verificadas: Las Palmas de Gran Canaria (Av. Juan XXIII, 17) y Santa Cruz de Tenerife (C/ Pérez de Rozas, 5). Adscrito a la Consejería de Sanidad del Gobierno de Canarias. No gestiona un portal de datos abiertos propio; sus publicaciones reutilizables se canalizan a través de la Consejería de Sanidad en datos.canarias.es (grupo temático 'salud', enlazado directamente desde el portal de transparencia del SCS). El portal de transparencia publica sistemáticamente en ODS + PDF (dato + copia firmada) para contratos, retribuciones y económico-financiera; ODT + PDF para planes de contratación. Formatos XLSX/CSV/DOCX no se usan en el portal del SCS. La sección 'Más información' del portal de transparencia (actualizada 2026-04-13) enlaza a: datos de salud en datos.canarias.es (grupo 'salud'), estadísticas ISTAC de salud y listas de espera, Observatorio Canario de la Salud (actualizado 2026-04-20), Encuesta de Salud de Canarias 2021 (publicada 2023-03-27), Encuesta de satisfacción al alta hospitalaria (2025-08-05), e Indicadores clave del SNS (inclasns.sanidad.gob.es). En 2025–2026 está implantando un Data Lake Sanitario (licitación 1.763.834,68 € con fondos Next Generation EU, PRTR Componente 18 Inversión 6) para integrar datos clínicos de hospitales, centros de salud y laboratorios, con conexión al futuro Data Lake Nacional del SNS. Áreas de Salud: Tenerife, Gran Canaria, Lanzarote–Fuerteventura, La Palma–La Gomera–El Hierro. Contacto: urip.scs@gobiernodecanarias.org | 928 11 73 87 (Las Palmas) | 922 95 18 09 (Tenerife)."
   },
   {
     "id": "sociedad_canaria_de_fomento_economico_sa_proexca",
@@ -11863,7 +12351,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11932,7 +12421,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12014,7 +12504,8 @@
         "last_checked": "2026-06",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -12086,7 +12577,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12155,7 +12647,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12224,7 +12717,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12281,7 +12775,8 @@
         "last_updated": "2025-03",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       },
       {
         "id": "gorona_transparencia_web",
@@ -12306,7 +12801,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12379,7 +12875,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12448,7 +12945,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12528,7 +13026,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "caaf_sede_electronica",
@@ -12556,7 +13055,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "caaf_web",
@@ -12580,7 +13080,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12654,7 +13155,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12699,7 +13201,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       },
       {
         "id": "ptfue_transparencia_cabildo",
@@ -12723,7 +13226,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       },
       {
         "id": "ptfue_sede_electronica",
@@ -12742,7 +13246,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12814,7 +13319,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12883,7 +13389,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12952,7 +13459,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12964,106 +13472,123 @@
     },
     "notes": null
   },
- {
-  "id": "ciagc",
-  "name": "Consejo Insular de Aguas de Gran Canaria (CIAGC)",
-  "entity_kind": "organismo",
-  "scope": "insular",
-  "parent_entity_id": "cabildo_gran_canaria",
-  "islands": ["Gran Canaria"],
-  "description": "Organismo autónomo administrativo adscrito al Cabildo de Gran Canaria, con personalidad jurídica propia, responsable de la planificación, gestión y control del dominio público hidráulico insular desde 1995. Publica obligaciones de transparencia activa mediante OGOV y dispone de sede electrónica propia. No cuenta con portal de datos abiertos estructurado ni datasets en datos.gob.es a fecha 2026-06.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Avenida Juan XXIII, 2, 1º",
-      "postal_code": "35004",
-      "municipality": "Las Palmas de Gran Canaria",
-      "island": "Gran Canaria",
-      "coordinates": {
-        "lat": 28.1189,
-        "lon": -15.4247
+  {
+    "id": "ciagc",
+    "name": "Consejo Insular de Aguas de Gran Canaria (CIAGC)",
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_gran_canaria",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "description": "Organismo autónomo administrativo adscrito al Cabildo de Gran Canaria, con personalidad jurídica propia, responsable de la planificación, gestión y control del dominio público hidráulico insular desde 1995. Publica obligaciones de transparencia activa mediante OGOV y dispone de sede electrónica propia. No cuenta con portal de datos abiertos estructurado ni datasets en datos.gob.es a fecha 2026-06.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Avenida Juan XXIII, 2, 1º",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1189,
+          "lon": -15.4247
+        },
+        "source_url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership"
+      }
+    ],
+    "portals": [
+      {
+        "id": "ciagc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – CIAGC",
+        "url": "https://transparencia.aguasgrancanaria.com/index",
+        "portal_status": "active",
+        "technology": [
+          "OGOV"
+        ],
+        "standards": [
+          "Ley 12/2014 Transparencia Canarias",
+          "Ley 19/2013 Transparencia Estatal"
+        ],
+        "formats": [
+          "CSV",
+          "XLS",
+          "ODT"
+        ],
+        "topics": [
+          "Agua",
+          "Recursos hídricos",
+          "Contratación pública",
+          "Presupuestos",
+          "Subvenciones",
+          "Personal",
+          "Cuentas anuales",
+          "Planes y programas",
+          "Obras públicas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Publicidad activa estructurada en ~70 secciones temáticas (OGOV). Última actualización masiva: 14/05/2026. No expone catálogo de datasets ni API de descarga.",
+        "last_updated": "2026-05",
+        "license_summary": "Reproducción autorizada citando origen, salvo indicación expresa en contrario (aviso legal web)",
+        "licenses": [
+          {
+            "name": "Reutilización con atribución (aviso legal propio)",
+            "id": null,
+            "url": "https://www.aguasgrancanaria.com"
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
-      "source_url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership"
-    }
-  ],
-  "portals": [
-    {
-      "id": "ciagc_transparencia",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – CIAGC",
-      "url": "https://transparencia.aguasgrancanaria.com/index",
-      "portal_status": "active",
-      "technology": ["OGOV"],
-      "standards": [
-        "Ley 12/2014 Transparencia Canarias",
-        "Ley 19/2013 Transparencia Estatal"
-      ],
-      "formats": ["CSV", "XLS", "ODT"],
-      "topics": [
-        "Agua",
-        "Recursos hídricos",
-        "Contratación pública",
-        "Presupuestos",
-        "Subvenciones",
-        "Personal",
-        "Cuentas anuales",
-        "Planes y programas",
-        "Obras públicas"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Publicidad activa estructurada en ~70 secciones temáticas (OGOV). Última actualización masiva: 14/05/2026. No expone catálogo de datasets ni API de descarga.",
-      "last_updated": "2026-05",
-      "license_summary": "Reproducción autorizada citando origen, salvo indicación expresa en contrario (aviso legal web)",
-      "licenses": [
-        {
-          "name": "Reutilización con atribución (aviso legal propio)",
-          "id": null,
-          "url": "https://www.aguasgrancanaria.com"
-        }
-      ],
-      "last_checked": "2026-06"
+      {
+        "id": "ciagc_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Consejo Insular de Aguas de Gran Canaria",
+        "url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+        "portal_status": "active",
+        "technology": [
+          "SedElectronica"
+        ],
+        "standards": [
+          "ENS",
+          "Ley 39/2015"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "Trámites administrativos",
+          "Tablón de anuncios",
+          "Contratación pública",
+          "Empleo público",
+          "Ordenanzas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica de tramitación; no publica datasets reutilizables.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.aguasgrancanaria.com",
+        "https://transparencia.aguasgrancanaria.com/index",
+        "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+        "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership",
+        "https://transparenciacanarias.org/informeanual2017/anexo-censo-de-entidades/"
+      ]
     },
-    {
-      "id": "ciagc_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – Consejo Insular de Aguas de Gran Canaria",
-      "url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
-      "portal_status": "active",
-      "technology": ["SedElectronica"],
-      "standards": ["ENS", "Ley 39/2015"],
-      "formats": ["PDF"],
-      "topics": [
-        "Trámites administrativos",
-        "Tablón de anuncios",
-        "Contratación pública",
-        "Empleo público",
-        "Ordenanzas"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Sede electrónica de tramitación; no publica datasets reutilizables.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.aguasgrancanaria.com",
-      "https://transparencia.aguasgrancanaria.com/index",
-      "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
-      "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership",
-      "https://transparenciacanarias.org/informeanual2017/anexo-censo-de-entidades/"
-    ]
+    "notes": "Creado por la Ley de Aguas de Canarias de 26 de julio de 1990; operativo desde el 25 de mayo de 1995. Financia sus actividades mediante transferencias del Cabildo de Gran Canaria, tasas propias, fondos europeos (Plan FDCAN, PERTE) y convenios con el Gobierno de Canarias. Evaluado con IT Canarias 63% (2025). Perfil de contratante en Vortal: https://community.vortal.biz/sts/Login?SkinName=aguasgrancanaria. No publica datasets en datos.gob.es bajo identificador propio."
   },
-  "notes": "Creado por la Ley de Aguas de Canarias de 26 de julio de 1990; operativo desde el 25 de mayo de 1995. Financia sus actividades mediante transferencias del Cabildo de Gran Canaria, tasas propias, fondos europeos (Plan FDCAN, PERTE) y convenios con el Gobierno de Canarias. Evaluado con IT Canarias 63% (2025). Perfil de contratante en Vortal: https://community.vortal.biz/sts/Login?SkinName=aguasgrancanaria. No publica datasets en datos.gob.es bajo identificador propio."
-},
   {
     "id": "consorcio_de_emergencias_de_gran_canaria",
     "name": "Consorcio de Emergencias de Gran Canaria",
@@ -13121,7 +13646,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13190,7 +13716,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13259,7 +13786,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13328,7 +13856,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13379,7 +13908,8 @@
         "last_checked": "2026-05",
         "last_updated": "2026-04",
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       },
       {
         "id": "fcgccb_sede_electronica",
@@ -13399,7 +13929,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13471,7 +14002,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13540,7 +14072,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13620,7 +14153,8 @@
         "dataset_count_note": null,
         "last_updated": "2025-12",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -13695,7 +14229,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13708,73 +14243,165 @@
     "notes": null
   },
   {
-    "id": "instituto_de_atencion_social_y_sociosanitaria_del_cabildo_de",
+    "id": "iasgc",
     "name": "Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
+    "alternate_names": [
+      "IAS Gran Canaria",
+      "IAS"
+    ],
     "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Organismo autónomo del Cabildo de Gran Canaria responsable de la atención social y sociosanitaria en la isla (CIF: P8500012C). Gestiona centros residenciales, servicios de dependencia, discapacidad y salud mental. Publica portal de transparencia activo (desde 2025-02, Ley 12/2014 de Canarias) y mapa sociosanitario georreferenciado en el IDE de Gran Canaria (IDEGC) con actualización diaria de centros de mayores, discapacidad y salud mental.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Tomás Morales, 3, 4ª planta",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1073,
+          "lon": -15.4216
         },
-        "source_url": "https://ias.sedelectronica.es/transparency"
+        "source_url": "https://www.instituto-as.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
-        "url": "https://ias.sedelectronica.es/transparency",
+        "id": "ias_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del IAS Gran Canaria",
+        "url": "https://www.instituto-as.es/transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "WordPress"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 19/2013 de transparencia estatal",
+          "Ley 12/2014 de transparencia de Canarias"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "CSV",
+          "XLSX",
+          "ODT",
+          "DOCX",
+          "ODS",
+          "TXT"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Organización",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Presupuestos",
+          "Contratos",
+          "Convenios",
+          "Ayudas y subvenciones",
+          "Estadística",
+          "Atención social",
+          "Dependencia",
+          "Gran Canaria"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "dataset_count_note": "Portal renovado el 2025-02-17 (Ley 12/2014 de Canarias). Documentación desde ejercicio 2023. Documentación anterior a 2023 disponible en la sede electrónica: https://ias.sedelectronica.es/transparency. Incluye ficheros descargables en múltiples formatos: información general (TXT, ODT, DOCX, PDF) y evolución de presupuestos 2011-2025 (CSV, ODS, XLSX, PDF). Secciones: Institucional, Organizativa, Electos y personal, Empleo público, Retribuciones, Normativa, Servicios, Económico-financiera, Patrimonio, Planes, Obras, Contratos, Convenios, Ayudas y subvenciones, Estadística, Derecho de acceso, Canal de denuncias (Ley 2023), Informe anual de transparencia.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "ias_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del IAS Gran Canaria",
+        "url": "https://ias.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica.es"
         ],
-        "last_checked": "2026-05"
+        "standards": [
+          "Ley 39/2015 procedimiento administrativo",
+          "ENS – Esquema Nacional de Seguridad"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "Tramitación electrónica",
+          "Transparencia",
+          "Contratación pública",
+          "Empleo público",
+          "Tablón de anuncios",
+          "Atención social",
+          "Gran Canaria"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "35 procedimientos electrónicos disponibles: tramitación general, LOPD, empleo temporal, contratos menores, formación, prácticas universitarias, acceso VPN, GUIAS, etc. Tablón de anuncios con secciones de Ayudas, Empleo Público, Ordenanzas, Presupuesto. Portal de transparencia histórico (documentación anterior a 2023): https://ias.sedelectronica.es/transparency.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ias_visor_centros",
+        "kind": "geoespacial",
+        "name": "Visor de Centros Sociosanitarios del IAS Gran Canaria",
+        "url": "https://extranet.instituto-as.es/centros/index.php",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "PHP"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Centros sociosanitarios",
+          "Residencias",
+          "Discapacidad",
+          "Salud mental",
+          "Mayores",
+          "Dependencia",
+          "Geolocalización",
+          "Gran Canaria"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Visor cartográfico de centros sociosanitarios dependientes del IAS Gran Canaria. Acceso público en extranet.instituto-as.es. Tecnología PHP con visualización adaptativa (parámetros width/height en URL). Relacionado con el Mapa Sociosanitario publicado en IDEGC (idegrancanaria.es) en 2025-11 con actualización diaria. No expone API ni descarga de datos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ias.sedelectronica.es/transparency"
+        "https://www.instituto-as.es/",
+        "https://www.instituto-as.es/transparencia/",
+        "https://ias.sedelectronica.es/info.0",
+        "https://ias.sedelectronica.es/transparency",
+        "https://www.instituto-as.es/organos-de-gobierno/"
       ]
     },
-    "notes": null
+    "notes": "CIF: P8500012C. No confundir con el IASS del Cabildo de Tenerife (www.iass.es), entidad distinta. El IAS gestiona el Mapa Sociosanitario de Gran Canaria publicado en el IDE de Gran Canaria (IDEGC, idegrancanaria.es) con actualización diaria de centros de discapacidad, mayores y salud mental (publicado 2025-11). Solicitud de acceso a información pública tramitable en: https://ias.sedelectronica.es/catalog/t/cb08f2a7-e5f7-42eb-bbfa-13a2b485e606. Comisionado de Transparencia de Canarias: https://transparenciacanarias.org/."
   },
   {
     "id": "mataderos_insulares_de_gran_canaria_sl",
@@ -13833,7 +14460,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13902,7 +14530,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13971,7 +14600,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14035,7 +14665,8 @@
         "dataset_count": null,
         "last_updated": "2026-04",
         "last_checked": "2026-05",
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -14107,7 +14738,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14284,7 +14916,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14353,7 +14986,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14422,7 +15056,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14491,7 +15126,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14503,121 +15139,131 @@
     },
     "notes": null
   },
- {
-  "id": "balten",
-  "name": "BALTEN – Balsas de Tenerife, EPEL",
-  "entity_kind": "empresa_publica",
-  "scope": "insular",
-  "parent_entity_id": "cabildo_tenerife",
-  "islands": ["Tenerife"],
-  "description": "Entidad Pública Empresarial Local (EPEL) del Cabildo Insular de Tenerife, creada para la gestión de recursos hídricos insulares: explotación y mantenimiento de balsas de agua, distribución en alta y obras hidráulicas. Publica transparencia activa conforme a la Ley 19/2013 y la Ley 12/2014 de Canarias en su portal propio (balten.es/transparencia) y una sede electrónica (balten.sedelectronica.es). Incluye una sección 'Volúmenes de Balsas' con representación gráfica de almacenamiento hídrico. Todos los documentos del portal de transparencia están en PDF. No dispone de portal de datos abiertos ni datasets estructurados reutilizables a fecha 2026-06.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle Panamá, 34, Nave 1, Polígono Costa Sur",
-      "postal_code": "38009",
-      "municipality": "Santa Cruz de Tenerife",
-      "island": "Tenerife",
-      "coordinates": {
-        "lat": 28.4485,
-        "lon": -16.2713
+  {
+    "id": "balten",
+    "name": "BALTEN – Balsas de Tenerife, EPEL",
+    "entity_kind": "empresa_publica",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_tenerife",
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Entidad Pública Empresarial Local (EPEL) del Cabildo Insular de Tenerife, creada para la gestión de recursos hídricos insulares: explotación y mantenimiento de balsas de agua, distribución en alta y obras hidráulicas. Publica transparencia activa conforme a la Ley 19/2013 y la Ley 12/2014 de Canarias en su portal propio (balten.es/transparencia) y una sede electrónica (balten.sedelectronica.es). Incluye una sección 'Volúmenes de Balsas' con representación gráfica de almacenamiento hídrico. Todos los documentos del portal de transparencia están en PDF. No dispone de portal de datos abiertos ni datasets estructurados reutilizables a fecha 2026-06.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Panamá, 34, Nave 1, Polígono Costa Sur",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4485,
+          "lon": -16.2713
+        },
+        "source_url": "https://www.balten.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "balten_transparencia_web",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – BALTEN",
+        "url": "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013 Transparencia Estatal",
+          "Ley 12/2014 Transparencia Canarias"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "Institucional",
+          "Organizativa",
+          "Información normativa",
+          "Información estadística",
+          "Informe anual",
+          "Órganos de gobierno",
+          "Consejo de Administración",
+          "Personal de libre nombramiento",
+          "Empleo público",
+          "Retribuciones",
+          "Presupuestos",
+          "Información económica y presupuestaria",
+          "Contratos",
+          "Convenios y encomiendas",
+          "Subvenciones",
+          "Patrimonio",
+          "Planes y programas",
+          "Información sobre servicios",
+          "Información sobre procedimientos",
+          "Ayudas y subvenciones",
+          "Derecho de acceso",
+          "Agua",
+          "Recursos hídricos",
+          "Volúmenes de balsas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia activa con 18 secciones temáticas. Todos los documentos disponibles están en formato PDF; no se han encontrado otros formatos (última verificación: 2026-06). Última actualización del portal detectada: mayo 2026. Destacar la sección 'Volúmenes Balsas' con representación gráfica de almacenamiento hídrico, e 'Información Estadística' con datos de cumplimiento de servicios de la EPEL.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
-      "source_url": "https://www.balten.es/"
-    }
-  ],
-  "portals": [
-    {
-      "id": "balten_transparencia_web",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – BALTEN",
-      "url": "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [
-        "Ley 19/2013 Transparencia Estatal",
-        "Ley 12/2014 Transparencia Canarias"
-      ],
-      "formats": ["PDF"],
-      "topics": [
-        "Institucional",
-        "Organizativa",
-        "Información normativa",
-        "Información estadística",
-        "Informe anual",
-        "Órganos de gobierno",
-        "Consejo de Administración",
-        "Personal de libre nombramiento",
-        "Empleo público",
-        "Retribuciones",
-        "Presupuestos",
-        "Información económica y presupuestaria",
-        "Contratos",
-        "Convenios y encomiendas",
-        "Subvenciones",
-        "Patrimonio",
-        "Planes y programas",
-        "Información sobre servicios",
-        "Información sobre procedimientos",
-        "Ayudas y subvenciones",
-        "Derecho de acceso",
-        "Agua",
-        "Recursos hídricos",
-        "Volúmenes de balsas"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal de transparencia activa con 18 secciones temáticas. Todos los documentos disponibles están en formato PDF; no se han encontrado otros formatos (última verificación: 2026-06). Última actualización del portal detectada: mayo 2026. Destacar la sección 'Volúmenes Balsas' con representación gráfica de almacenamiento hídrico, e 'Información Estadística' con datos de cumplimiento de servicios de la EPEL.",
-      "last_updated": "2026-05",
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
+      {
+        "id": "balten_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – BALTEN",
+        "url": "https://balten.sedelectronica.es/info.0",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Tablón de anuncios",
+          "Empleo público",
+          "Ordenanzas y reglamentos",
+          "Órganos de gobierno",
+          "Presupuesto",
+          "Proveedores",
+          "Canal de denuncias",
+          "Carpeta ciudadana",
+          "Órganos colegiados"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.balten.es/",
+        "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
+        "https://www.balten.es/Categoria/Display/58?titulo=volumenes-balsas",
+        "https://www.balten.es/Categoria/Display/141?titulo=informacion-estadistica",
+        "https://www.balten.es/Categoria/Display/6?titulo=informacion-institucional",
+        "https://balten.sedelectronica.es/info.0"
+      ]
     },
-    {
-      "id": "balten_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – BALTEN",
-      "url": "https://balten.sedelectronica.es/info.0",
-      "portal_status": "active",
-      "technology": ["sede_electronica"],
-      "standards": [],
-      "formats": [],
-      "topics": [
-        "Trámites electrónicos",
-        "Tablón de anuncios",
-        "Empleo público",
-        "Ordenanzas y reglamentos",
-        "Órganos de gobierno",
-        "Presupuesto",
-        "Proveedores",
-        "Canal de denuncias",
-        "Carpeta ciudadana",
-        "Órganos colegiados"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": null,
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.balten.es/",
-      "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
-      "https://www.balten.es/Categoria/Display/58?titulo=volumenes-balsas",
-      "https://www.balten.es/Categoria/Display/141?titulo=informacion-estadistica",
-      "https://www.balten.es/Categoria/Display/6?titulo=informacion-institucional",
-      "https://balten.sedelectronica.es/info.0"
-    ]
+    "notes": "BALTEN (Balsas de Tenerife) es una EPEL del Cabildo de Tenerife. Gestiona la red de balsas de almacenamiento hídrico, infraestructuras hidráulicas y distribución en alta. La sección 'Volúmenes Balsas' publica representación gráfica del agua almacenada en las balsas gestionadas, potencialmente de interés como dato ambiental/hídrico, pero sin formato de descarga estructurado verificado. 'Información Estadística' publica datos de cumplimiento de servicios. El Comisionado de Transparencia de Canarias emite autoevaluación anual del portal (sección 'Informe Anual'). Normativa reguladora: Estatutos EPEL BALTEN y Ordenanza de Precios Públicos BALTEN (publicados en sección Información Normativa). La sede electrónica incorpora 'Canal de Denuncias' y sección de Proveedores (e-invoice), ausente en el Consorcio de Viviendas GC."
   },
-  "notes": "BALTEN (Balsas de Tenerife) es una EPEL del Cabildo de Tenerife. Gestiona la red de balsas de almacenamiento hídrico, infraestructuras hidráulicas y distribución en alta. La sección 'Volúmenes Balsas' publica representación gráfica del agua almacenada en las balsas gestionadas, potencialmente de interés como dato ambiental/hídrico, pero sin formato de descarga estructurado verificado. 'Información Estadística' publica datos de cumplimiento de servicios. El Comisionado de Transparencia de Canarias emite autoevaluación anual del portal (sección 'Informe Anual'). Normativa reguladora: Estatutos EPEL BALTEN y Ordenanza de Precios Públicos BALTEN (publicados en sección Información Normativa). La sede electrónica incorpora 'Canal de Denuncias' y sección de Proveedores (e-invoice), ausente en el Consorcio de Viviendas GC."
-},
   {
     "id": "titsa",
     "name": "Transportes Interurbanos de Tenerife, S.A.",
@@ -14684,7 +15330,8 @@
         "dataset_count": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "titsa_open_data",
@@ -14718,7 +15365,8 @@
         "dataset_count": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -14790,7 +15438,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14859,7 +15508,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14938,7 +15588,8 @@
         "dataset_count": null,
         "last_updated": "2025-12",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -15010,7 +15661,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15079,7 +15731,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15148,7 +15801,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15217,7 +15871,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15491,7 +16146,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15560,7 +16216,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15773,7 +16430,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "fecam_sede_electronica",
@@ -15802,7 +16460,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "fecam_web",
@@ -15828,7 +16487,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15902,7 +16562,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15971,7 +16632,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16040,7 +16702,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16110,7 +16773,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16200,7 +16864,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16296,7 +16961,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16387,7 +17053,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16480,7 +17147,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16561,7 +17229,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16578,127 +17247,248 @@
   {
     "id": "ministerio_sanidad",
     "name": "Ministerio de Sanidad",
-    "alternate_names": [
-      "Sanidad",
-      "Sanidad en datos"
-    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio responsable de la estadística sanitaria estatal y del portal de datos sanitarios del SNS.",
+    "description": "Ministerio de Sanidad del Gobierno de España (CIF: S2827001E). Desarrolla y mantiene el Sistema de Información Sanitaria (SIS) conjuntamente con las Comunidades Autónomas desde 2004. Relevante para Canarias como fuente de estadísticas del SNS con desagregación por CCAA: microdatos de encuestas de salud, catálogos de centros sanitarios, indicadores clave del SNS con API REST (INCLASNS, ccaa=canarias), banco de datos del SNS y portal estadístico. Sus datos se federan en datos.gob.es.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Paseo del Prado 18-20, 28014 Madrid",
-        "postal_code": null,
+        "address": "Paseo del Prado, 18-20",
+        "postal_code": "28071",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.413,
-          "lon": -3.694
+          "lat": 40.4136,
+          "lon": -3.6934
         },
-        "source_url": "https://www.sanidad.gob.es/estadEstudios/home.htm"
+        "source_url": "https://www.sanidad.gob.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "sanidad_inclasns",
         "kind": "estadistica",
-        "name": "Sanidad en datos",
-        "url": "https://www.sanidad.gob.es/estadEstudios/home.htm",
+        "name": "INCLASNS – Indicadores Clave del Sistema Nacional de Salud",
+        "url": "https://inclasns.sanidad.gob.es/",
         "portal_status": "active",
         "technology": [
-          "Custom"
+          "web_propia",
+          "API REST propia"
         ],
-        "standards": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
+        "standards": [],
         "formats": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
+          "JSON",
+          "CSV"
         ],
         "topics": [
-          "salud",
-          "epidemiologia",
-          "hospitales",
-          "vacunacion",
-          "sistema_nacional_de_salud"
+          "Salud",
+          "Indicadores sanitarios",
+          "Sistema Nacional de Salud",
+          "Atención primaria",
+          "Atención especializada",
+          "Farmacia",
+          "Salud pública",
+          "Mortalidad",
+          "Esperanza de vida",
+          "Calidad asistencial",
+          "Equidad",
+          "Demografía sanitaria",
+          "Gasto sanitario",
+          "Canarias"
         ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": "La fuente publicada es un portal estadístico con múltiples tablas y documentos.",
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
+        "has_api": true,
+        "apis": [
           {
-            "id": null,
-            "name": "Reutilización abierta Sanidad",
-            "url": null,
-            "count": null
+            "name": "INCLASNS API REST v2 – Indicadores",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/indicador",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Variables",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/variable",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Datos (JSON)",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/datos",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Datos (CSV)",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/datos/csv",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Gráfica (JSON para NVD3)",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/datos/grafica",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
           }
         ],
-        "last_checked": "2026-05"
+        "dataset_count": null,
+        "dataset_count_note": "API REST con autenticación por API_KEY (solicitar en https://inclasns.sanidad.gob.es/contact). Endpoints: /indicador, /variable, /datos (JSON), /datos/csv (CSV), /datos/grafica (JSON NVD3). Filtros combinables por parámetro GET: indicador, sexo, ccaa, anio, educativo, ingresos, clase/social. Para Canarias usar ccaa=canarias. Parámetro vacío (ccaa=) devuelve todas las CCAA. Ejemplo: /api/v2/datos?indicador=1000&sexo=total&ccaa=canarias&anio=&API_KEY=CLAVE",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
-        "id": "portal_banco_datos",
+        "id": "sanidad_banco_datos",
         "kind": "estadistica",
-        "name": "Banco de datos del Ministerio de Sanidad",
+        "name": "Banco de Datos del SNS – Ministerio de Sanidad",
         "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
         "portal_status": "active",
         "technology": [
-          "Custom"
+          "web_propia"
         ],
-        "standards": [
-          "HTML",
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
+        "standards": [],
         "formats": [
-          "HTML",
           "CSV",
+          "XLS",
           "XLSX",
-          "PDF"
+          "PDF",
+          "MDB"
         ],
         "topics": [
-          "salud",
-          "estadisticas_sanitarias"
+          "Salud",
+          "Encuesta Nacional de Salud",
+          "Encuesta Europea de Salud",
+          "Barómetro Sanitario",
+          "Estadística de Centros Sanitarios de Atención Especializada",
+          "Catálogo Nacional de Hospitales",
+          "Catálogo de Centros de Atención Primaria",
+          "Catálogo de Centros de Atención Urgente",
+          "Microdatos",
+          "Farmacia",
+          "Nomenclátor",
+          "COVID-19",
+          "Vacunación",
+          "REBECA",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": 13,
+        "dataset_count_note": "13 datasets federados en datos.gob.es (última actualización del índice: 2019-02). Microdatos anonimizados de descarga directa: Barómetro Sanitario (desde 1996/97), Encuesta de Salud de España 2023, Encuesta Europea de Salud 2009/2014, Encuesta Nacional de Salud 1987-2017, EERI 1996-2009, ESCAE desde 2010. Directorios de centros: Catálogo Nacional de Hospitales (desde 1995), Catálogo AP (desde 2007), Catálogo Urgente (desde 2015). Alta relevancia para Canarias: Catálogo Nacional de Hospitales y Catálogo AP (búsqueda por CCAA/provincia), FARMACIA Nomenclátor de facturación, REBECA – Estadísticas sanitarias CCAA (formato MDB/Access).",
+        "last_updated": "2019-02",
+        "license_summary": "Reutilización con condiciones – Ley 37/2007 / RD 1495/2011",
+        "licenses": [
+          {
+            "name": "Reutilización información sector público – Ley 37/2007 / RD 1495/2011",
+            "id": null,
+            "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17560"
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "sanidad_portal_estadistico",
+        "kind": "estadistica",
+        "name": "Sistema de Información Sanitaria – Sanidad en Datos",
+        "url": "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLS",
+          "XLSX"
+        ],
+        "topics": [
+          "Salud",
+          "Sistema Nacional de Salud",
+          "Salud y estilos de vida",
+          "Centros y establecimientos sanitarios",
+          "Atención primaria",
+          "Atención especializada",
+          "Medicamentos y productos sanitarios",
+          "Financiación y gasto sanitario",
+          "Barómetro Sanitario",
+          "Experiencia de pacientes",
+          "Informe Anual del SNS",
+          "Recursos humanos sanitarios",
+          "Clasificaciones CIE",
+          "Normalización estadística",
+          "Canarias"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta Sanidad",
-            "url": null,
-            "count": null
-          }
+        "dataset_count_note": "Portal del SIS desarrollado con las CCAA desde 2004. Informe Anual del SNS última edición: 2024 (publicado 2025-12, datos de 2023-2024, NIPO 133-20-031-6) con monográficos de Prestación Farmacéutica (NIPO 133-22-089-8) y RRHH (NIPO 133-22-098-4). Infografía 'Sanidad en un vistazo' actualizada a 2026-06 en ES/EN/FR. Calendario de difusión: https://www.sanidad.gob.es/estadEstudios/portada/docs/Calendario_DifusionSIS.pdf. No expone catálogo CKAN ni API.",
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "sanidad_aplicaciones_consulta",
+        "kind": "estadistica",
+        "name": "Portal Estadístico – Aplicaciones de Consulta Interactiva",
+        "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Salud",
+          "Encuestas de salud",
+          "Mortalidad",
+          "Causas de muerte",
+          "Atención primaria",
+          "Atención especializada",
+          "Hospitalización",
+          "Vacunaciones",
+          "Farmacia",
+          "Drogas",
+          "Directorio centros sanitarios",
+          "Clasificaciones CIE",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "13 aplicaciones interactivas sin descarga masiva ni API: Encuestas de Salud 1987-2023, Mortalidad CIE-9/CIE-10 desde 1981, SIAP desde 2004, BDCAP desde 2013, SIAE/ESCAE desde 1997, RAE-CMBD desde 1997, Barómetro Sanitario desde 1995, Población desde 1981, SIVAMIN, Consumo Farmacéutico, ESTUDES, EDADES, i-CMBD. Directorio REGCESS y clasificaciones eCIEmaps (CIE-10-ES, CIE-O-3, CIE-9-MC). Solo consulta en navegador.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
+        "https://www.sanidad.gob.es/",
         "https://www.sanidad.gob.es/estadEstudios/home.htm",
-        "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm"
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
+        "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
+        "https://inclasns.sanidad.gob.es/",
+        "https://inclasns.sanidad.gob.es/doc/api",
+        "https://sede.mscbs.gob.es/datosabiertos/home.htm",
+        "https://transparencia.gob.es/transparencia/transparencia_Home/index/PublicidadActiva/TaxPorMinisterios/MSND.html"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2827001E. Sede: Paseo del Prado, 18-20, 28071 Madrid (lat: 40.4136, lon: -3.6934) — entidad continental, sin isla asignada, se modela island='Todas' por requerimiento del schema. API INCLASNS: requiere API_KEY (formulario https://inclasns.sanidad.gob.es/contact); plantillas de endpoints: /api/v2/datos?indicador=[INDICADORES]&sexo=[SEXOS]&ccaa=[CCAAs]&anio=[AÑOS]&educativo=[EDUCATIVO]&ingresos=[INGRESOS]&clase=[CLASE]&API_KEY=CLAVE y /api/v2/datos/csv con parámetro social=[SOCIAL]. La URL histórica del ministerio era mscbs.gob.es (Ministerio de Sanidad, Consumo y Bienestar Social). El portal sede.mscbs.gob.es/datosabiertos actúa como índice de 13 enlaces a datos.gob.es (última actualización 2019-02), no como repositorio propio; no se modela como portal independiente. La sección 'Sanidad en la UE' (https://sanidad-ue.es) queda pendiente de investigación como posible entidad separada de scope='europeo'."
   },
   {
     "id": "datos_justicia",
@@ -16769,7 +17559,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16852,7 +17643,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16933,7 +17725,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17052,7 +17845,8 @@
             "url": "https://creativecommons.org/licenses/by/4.0/"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "bne_linked_open_data",
@@ -17106,7 +17900,8 @@
             "url": "https://creativecommons.org/publicdomain/zero/1.0/"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17190,7 +17985,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17267,7 +18063,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17335,7 +18132,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -17413,7 +18211,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17498,7 +18297,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17583,7 +18383,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17629,7 +18430,8 @@
         "dataset_count_note": "Portal documental de transparencia con publicación periódica de información institucional, organizativa y económico-financiera. No funciona como catálogo estructurado de datasets.",
         "last_updated": null,
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "estadisticas_trafico_aereo",
@@ -17656,7 +18458,8 @@
         "dataset_count_note": "Publica informes estadísticos mensuales y anuales por aeropuerto y por red. La fuente no muestra un número estable de datasets.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "consultas_personalizadas",
@@ -17685,7 +18488,8 @@
         "dataset_count_note": "Portal interactivo con registro para visualizar cuadros de mando y consultas personalizadas. No se aprecia descarga directa de datos desde la sección principal.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sostenibilidad",
@@ -17712,7 +18516,8 @@
         "dataset_count_note": "Sección corporativa con estrategia 2021-2030, políticas y memorias anuales de sostenibilidad. No es un catálogo de datasets estructurados.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "principales_datos_indicadores",
@@ -17741,7 +18546,8 @@
         "dataset_count_note": "Página de visualización de indicadores anuales y trimestrales con gráficos y descargas documentales asociadas. Canarias aparece como grupo agregado en el desglose.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "publicaciones_financieras_operativas",
@@ -17768,7 +18574,8 @@
         "dataset_count_note": "Agrupa resultados, presentaciones e informes periódicos anuales, semestrales y trimestrales.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "presupuestos_generales_estado",
@@ -17796,7 +18603,8 @@
         "dataset_count_note": "Los estados presupuestarios del Aena consolidado están disponibles en HTML, XML, CSV y PDF dentro del portal de los Presupuestos Generales del Estado.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "cnmv_ipp_aena",
@@ -17822,7 +18630,8 @@
         "dataset_count_note": "La herramienta permite seleccionar informes IPP de Aena y descargar ficheros XBRL originales, además de visualizar informes en la interfaz.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "transparencia_fiscal",
@@ -17858,7 +18667,8 @@
         "dataset_count_note": "Bloque temático único que agrupa los subapartados: Política Fiscal Corporativa, Contribución tributaria por impuestos, Contribución tributaria por territorios, Buenas prácticas tributarias, Resultado contable y gasto del impuesto de sociedades, Litigios, Paraísos fiscales, Blanqueo de capitales, Conducta ética, Compromiso con la transparencia fiscal y Relación con el auditor externo.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -17945,7 +18755,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18028,7 +18839,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       },
       {
         "id": "portal_transparencia_interior",
@@ -18058,7 +18870,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       },
       {
         "id": "estadistica_interior",
@@ -18098,7 +18911,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "notes": "La sección de Archivos y Documentación incluye servicios al ciudadano y a la administración, más de 100 bibliotecas y centros de documentación, publicaciones y enlaces de interés. La sección de Anuarios Estadísticos ofrece la serie histórica en PDF desde 1989 hasta 2024, con información reutilizable desde 2012. La sección de Estadísticas incluye la coordinación estadística, operaciones en el Inventario de Operaciones Estadísticas del INE, estadísticas del Programa anual 2025 del Plan Estadístico Nacional y resultados difundidos por varios organismos. La sección de Metodologías reúne proyectos técnicos e informes metodológicos estandarizados para las principales operaciones estadísticas. El enlace de transparencia redirige al portal general transparencia.gob.es. El portal de datos abiertos está alojado en la Sede electrónica del ministerio y enlaza a portales estadísticos oficiales y PDFs."
@@ -18168,7 +18982,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18245,7 +19060,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18326,7 +19142,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18411,7 +19228,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18494,7 +19312,8 @@
             "url": "https://www.ine.es/aviso_legal.htm"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18576,7 +19395,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18655,7 +19475,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18736,7 +19557,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18819,7 +19641,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       },
       {
         "id": "datos_abiertos_cultura",
@@ -18887,7 +19710,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18974,7 +19798,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19056,7 +19881,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19137,7 +19963,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19218,7 +20045,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19299,7 +20127,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19378,7 +20207,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19457,7 +20287,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19536,7 +20367,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19617,7 +20449,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19698,7 +20531,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19779,7 +20613,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19859,7 +20694,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19942,7 +20778,8 @@
             "url": "https://www.miteco.gob.es/es/aviso-legal.html"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20020,7 +20857,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
