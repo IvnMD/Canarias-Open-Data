@@ -2182,87 +2182,199 @@
     "notes": null
   },
   {
-    "id": "sepe_empleo",
-    "name": "SEPE – Datos de Empleo Canarias",
+    "id": "sepe",
+    "name": "Servicio Público de Empleo Estatal",
+    "alternate_names": [
+      "SEPE"
+    ],
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
+      "Todas"
     ],
-    "description": "Datos mensuales del SEPE sobre paro registrado, contratos y demandantes de empleo desagregados por provincia canaria (Las Palmas y Santa Cruz de Tenerife).",
+    "description": "Organismo autónomo estatal adscrito al Ministerio de Trabajo y Economía Social (CIF: Q2819009H), responsable de la gestión de las prestaciones por desempleo, la intermediación laboral y las estadísticas del mercado de trabajo en España. Relevante para Canarias por publicar datos de paro registrado, contratos y demandantes de empleo desagregados por provincia (Las Palmas y Santa Cruz de Tenerife) y municipio, con series históricas desde 1996. Sus datasets están federados en datos.gob.es y son referencia cruzada para el ISTAC y el Servicio Canario de Empleo.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "SEPE – Datos de Empleo Canarias",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Condesa de Venadito, 9",
+        "postal_code": "28027",
+        "municipality": "Madrid",
+        "island": "",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 40.4471,
+          "lon": -3.6548
         },
-        "source_url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
+        "source_url": "https://www.sepe.es/HomeSepe/es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "sepe_datos_abiertos",
         "kind": "open_data",
-        "name": "Portal de datos – SEPE – Datos de Empleo Canarias",
-        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
+        "name": "Catálogo de Datos Abiertos – SEPE",
+        "url": "https://sede.sepe.gob.es/portalSede/datos-abiertos/catalogo-de-datos-del-SEPE.html",
         "portal_status": "active",
         "technology": [
-          "Portal estático SEPE"
+          "web_propia"
         ],
-        "standards": [],
+        "standards": [
+          "NTI-RISP",
+          "DCAT"
+        ],
         "formats": [
+          "XLS",
           "CSV",
-          "XLSX",
+          "XML",
+          "JSON",
           "PDF"
         ],
         "topics": [
           "Empleo",
           "Paro registrado",
-          "Demandantes",
-          "Contratos",
-          "ERTE",
+          "Contratos registrados",
+          "Demandantes de empleo",
+          "Prestaciones por desempleo",
+          "Gasto en prestaciones",
           "Mercado laboral",
-          "Prestaciones"
+          "Formación profesional para el empleo",
+          "Estadística laboral",
+          "Canarias"
         ],
         "has_api": false,
         "apis": [],
-        "dataset_count": 14,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta SEPE",
-            "id": null,
-            "url": null
-          }
+        "dataset_count": null,
+        "dataset_count_note": "Catálogo de datos reutilizables federado en datos.gob.es (https://datos.gob.es/es/catalogo/conjuntos-datos?publisher_display_name=Servicio+P%C3%BAblico+de+Empleo+Estatal). Datasets principales verificados en 2026-06: Paro Registrado (municipio, sexo, edad, sector), Contratos Registrados (municipio, sexo, tipo, sector), Demandantes de Empleo (municipio, sexo, edad, sector), Gasto en Prestaciones por Desempleo (provincia, tipo). Datos de Canarias desagregados por provincia (Las Palmas y Santa Cruz de Tenerife) y municipio. Series históricas desde 1996 (metodología SISPE desde 2005). Series retrospectivas SISPE: enero 1996–enero 2001 y febrero 2001–abril 2005.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sepe_estadisticas",
+        "kind": "estadistica",
+        "name": "Estadísticas – Servicio Público de Empleo Estatal",
+        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas.html",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
         ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "standards": [
+          "SISPE"
+        ],
+        "formats": [
+          "PDF",
+          "XLS"
+        ],
+        "topics": [
+          "Paro registrado",
+          "Contratos registrados",
+          "Demandantes de empleo",
+          "Prestaciones por desempleo",
+          "Estadísticas de formación",
+          "Boletines estadísticos",
+          "Mercado laboral",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal estadístico con 6 apartados verificados en 2026-06: Resumen estadística mensual, Estadísticas de empleo, Estadísticas por municipios (paro registrado y contratos), Estadísticas de formación, Estadísticas de contratos, Estadísticas de prestaciones por desempleo, Boletines estadísticos. Series históricas disponibles también en Movimiento Laboral Registrado (MITES): http://expinterweb.mites.gob.es/series/. Actualización mensual; datos de avance a principios de mes. Metodología SISPE desde mayo 2005.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sepe_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Servicio Público de Empleo Estatal",
+        "url": "https://www.sepe.es/HomeSepe/es/que-es-el-sepe/transparencia-sepe.html",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "PDF",
+          "HTML"
+        ],
+        "topics": [
+          "Institucional y organizativa",
+          "Organigrama",
+          "Convocatorias y provisión de puestos",
+          "Carta de servicios",
+          "Planes y programas",
+          "Encuestas de satisfacción",
+          "Relevancia jurídica",
+          "Normativa",
+          "Instrucciones y directrices",
+          "Económica, presupuestaria y estadística",
+          "Contratos suscritos",
+          "Presupuestos y cuentas anuales",
+          "Convenios y encomiendas",
+          "Estadísticas de empleo"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "3 bloques de transparencia activa conforme a arts. 6, 7 y 8 de la Ley 19/2013: (1) Institucional, organizativa y de planificación — incluye informes de satisfacción semestrales de servicios electrónicos (último: 1S-2026) y oficinas de prestaciones (último: 2025). (2) Relevancia jurídica — normativa e instrucciones de prestaciones. (3) Económica, presupuestaria y estadística — contratos, presupuestos, convenios y estadísticas. Complementado por el Portal de Transparencia de la AGE: https://transparencia.gob.es.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sepe_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – SEPE",
+        "url": "https://sede.sepe.gob.es/portalSede/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Prestaciones por desempleo",
+          "Contratos",
+          "Empleo",
+          "Formación en el trabajo",
+          "Formación dual",
+          "Licitaciones",
+          "Notificaciones electrónicas",
+          "Recursos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica propia del SEPE. Trámites para personas y empresas. Incluye perfiles de contratante provinciales: Las Palmas (https://sede.sepe.gob.es/portalSede/licitaciones/servicios-provinciales/perfil-contratante-provincial/perfil-de-contratante-lasPalmas.html) y Tenerife (https://sede.sepe.gob.es/portalSede/licitaciones/servicios-provinciales/perfil-contratante-provincial/perfil-de-contratante-tenerife.html). No publica datasets independientes. Última actualización sede: 2026-05-06.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
+        "https://www.sepe.es/HomeSepe/es/",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas.html",
+        "https://www.sepe.es/HomeSepe/es/que-es-el-sepe/transparencia-sepe.html",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe/informacion-institucional-organizativa-planificacion.html",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe/informacion-relevancia-juridica.html",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe/informacion-economica-presupuestaria-estadistica.html",
+        "https://sede.sepe.gob.es/portalSede/datos-abiertos/catalogo-de-datos-del-SEPE.html",
+        "https://sede.sepe.gob.es/portalSede/",
+        "https://datos.gob.es/es/catalogo/conjuntos-datos?publisher_display_name=Servicio+P%C3%BAblico+de+Empleo+Estatal",
+        "https://datos.gob.es/es/iniciativas/portal-datos-abiertos-sepe"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q2819009H. Sede central: Calle Condesa de Venadito, 9, 28027 Madrid. Entidad de ámbito estatal incluida en el catálogo por su relevancia directa para Canarias: es la fuente primaria de estadísticas de paro registrado, contratos y demandantes de empleo desagregados hasta nivel municipal para las provincias de Las Palmas y Santa Cruz de Tenerife. En islands se indica 'Todas' aunque la desagregación territorial llega a provincia y municipio, no a isla. Datasets federados en datos.gob.es y referenciados por el ISTAC. Series históricas desde 1996 (metodología SISPE desde 2005; series retrospectivas disponibles en MITES: http://expinterweb.mites.gob.es/series/). Perfiles de contratante provinciales activos para Las Palmas y Tenerife en la sede electrónica. La transparencia activa se complementa con el Portal de Transparencia de la AGE (transparencia.gob.es). Dispone de lectura fácil del portal de transparencia: https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe_Lectura-Facil.html."
   },
   {
     "id": "aena_canarios",
@@ -18688,86 +18800,7 @@
     },
     "notes": "Aena gestiona directamente los aeropuertos canarios (Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote, Fuerteventura, La Palma, La Gomera y El Hierro). El portal estadístico publica informes mensuales y anuales de tráfico aéreo en XLS y PDF con desglose por aeropuerto, siendo Canarias uno de los grupos del desglose. El bloque de transparencia fiscal agrupa once subapartados verificados individualmente, incluyendo contribución tributaria, buenas prácticas tributarias, resultado contable y gasto del impuesto de sociedades, litigios, paraísos fiscales, blanqueo de capitales, conducta ética, compromiso con la transparencia fiscal y relación con el auditor externo. Los Presupuestos Generales del Estado incluyen a Aena consolidado con descarga en HTML, XML, CSV y PDF. La herramienta IPP de la CNMV permite descarga de informes XBRL de Aena. El portal de consultas personalizadas requiere registro y no ofrece descarga directa visible desde la pantalla principal. Fecha de consulta: 2026-06."
   },
-  {
-    "id": "sepe",
-    "name": "Servicio Público de Empleo Estatal",
-    "alternate_names": [
-      "SEPE"
-    ],
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Organismo estatal de empleo con estadísticas mensuales útiles para paro, contratos y demandantes en Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "C/ Condesa de Venadito 9, 28027 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.436,
-          "lon": -3.637
-        },
-        "source_url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "SEPE Datos de Empleo",
-        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "formats": [
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "topics": [
-          "empleo",
-          "paro",
-          "contratos",
-          "mercado_laboral"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta SEPE",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
-      ]
-    },
-    "notes": null
-  },
+
   {
     "id": "ministerio_interior",
     "name": "Ministerio del Interior",
