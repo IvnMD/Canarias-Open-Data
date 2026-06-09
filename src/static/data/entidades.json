@@ -17284,100 +17284,6 @@
     "notes": null
   },
   {
-    "id": "miteco",
-    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico",
-    "alternate_names": [
-      "MITECO"
-    ],
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Ministerio clave para medio ambiente, energía, agua, costas, biodiversidad y residuos, con fuerte relevancia para Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Plaza de San Juan de la Cruz 10, 28071 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.431,
-          "lon": -3.69
-        },
-        "source_url": "https://www.datosabiertos.miteco.gob.es/en.html"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de Datos Abiertos MITECO",
-        "url": "https://www.datosabiertos.miteco.gob.es/en.html",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "INSPIRE",
-          "REST",
-          "API"
-        ],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "GeoJSON",
-          "WMS",
-          "WFS",
-          "API"
-        ],
-        "topics": [
-          "medio_ambiente",
-          "energia",
-          "agua",
-          "costas",
-          "biodiversidad",
-          "residuos"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "MITECO API",
-            "url": "https://www.datosabiertos.miteco.gob.es/en/acceso.html",
-            "type": "REST",
-            "documentation_url": "https://www.datosabiertos.miteco.gob.es/en/acceso.html"
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": "Catálogo temático amplio; el conteo no se normaliza en la fuente revisada.",
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta MITECO",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.datosabiertos.miteco.gob.es/en.html",
-        "https://www.datosabiertos.miteco.gob.es/en/acceso.html"
-      ]
-    },
-    "notes": null
-  },
-  {
     "id": "puertos_del_estado",
     "name": "Puertos del Estado",
     "alternate_names": [
@@ -18363,196 +18269,198 @@
     "notes": "El portal indica que el ministerio pone a disposición conjuntos de datos abiertos reutilizables bajo modalidad general básica. La página de datos abiertos enlaza al catálogo nacional datos.gob.es como agregador."
   },
   {
-  "id": "ministerio_industria_turismo",
-  "name": "Ministerio de Industria y Turismo",
-  "alternate_names": [
-    "MINTUR",
-    "Industria y Turismo",
-    "Ministerio de Industria y Turismo"
-  ],
-  "entity_kind": "organismo",
-  "scope": "estatal",
-  "parent_entity_id": null,
-  "islands": [
-    "Todas"
-  ],
-  "description": "Ministerio del Gobierno de España responsable de la política industrial, turística y comercial de ámbito nacional. Relevante para Canarias por ser el principal destino turístico de España: publica datos de competitividad, industria y turismo federados en datos.gob.es. Las estadísticas turísticas (FRONTUR, EGATUR, EOH) se producen en convenio con el INE con desagregación por CCAA y provincias canarias (Las Palmas / Santa Cruz de Tenerife).",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Paseo de la Castellana 160, 28046 Madrid",
-      "postal_code": "28046",
-      "municipality": "Madrid",
-      "island": "Todas",
-      "coordinates": {
-        "lat": 40.467,
-        "lon": -3.688
+    "id": "ministerio_industria_turismo",
+    "name": "Ministerio de Industria y Turismo",
+    "alternate_names": [
+      "MINTUR",
+      "Industria y Turismo",
+      "Ministerio de Industria y Turismo"
+    ],
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio del Gobierno de España responsable de la política industrial, turística y comercial de ámbito nacional. Relevante para Canarias por ser el principal destino turístico de España: publica datos de competitividad, industria y turismo federados en datos.gob.es. Las estadísticas turísticas (FRONTUR, EGATUR, EOH) se producen en convenio con el INE con desagregación por CCAA y provincias canarias (Las Palmas / Santa Cruz de Tenerife).",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo de la Castellana 160, 28046 Madrid",
+        "postal_code": "28046",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.467,
+          "lon": -3.688
+        },
+        "source_url": "https://www.mintur.gob.es/es-es/Paginas/index.aspx"
+      }
+    ],
+    "portals": [
+      {
+        "id": "mintur_datos_abiertos",
+        "kind": "open_data",
+        "name": "Datos Abiertos – Sede Electrónica Ministerio de Industria y Turismo",
+        "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "HTML",
+          "JSON",
+          "KML",
+          "ODS",
+          "PDF",
+          "REST",
+          "WMS",
+          "XLS",
+          "XLSX",
+          "XML"
+        ],
+        "topics": [
+          "Industria",
+          "Energía",
+          "Economía",
+          "Transporte",
+          "Turismo",
+          "Empleo",
+          "Urbanismo e infraestructuras",
+          "Ciencia y tecnología",
+          "Comercio",
+          "Medio ambiente",
+          "Hacienda",
+          "Sector público"
+        ],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "REST – Registro de Firmas de Fabricantes de Vehículos (GIAVEH)",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/registro-de-firmas-de-fabricantes-de-vehiculos",
+            "type": "REST",
+            "documentation_url": null
+          },
+          {
+            "name": "REST – Consulta Fichas Reducidas GIAVEH",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-fichas-reducidas",
+            "type": "REST",
+            "documentation_url": null
+          },
+          {
+            "name": "REST – Consulta Productores Registro AEE",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-productores-rii-aee",
+            "type": "REST",
+            "documentation_url": null
+          },
+          {
+            "name": "Catálogo DCAT/RDF – Ministerio de Industria y Turismo",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf",
+            "type": "RDF",
+            "documentation_url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx"
+          }
+        ],
+        "dataset_count": 33,
+        "dataset_count_note": "33 datasets verificados en 2026-06 desde el catálogo oficial de la sede (sede.serviciosmin.gob.es/es-es/datosabiertos). Distribución por área responsable: Industria y PYME (24), Energía (9), Turismo (0 en área propia — los 4 datasets con temática 'Turismo' están bajo otras áreas). Distribución por temática: Industria (24), Energía (12), Economía (7), Transporte (7), Turismo (4), Empleo (3). Formatos por número de datasets: CSV (22), XLSX (21), HTML (18), XLS (6), PDF (3), REST (3), WMS (3), XML (3), KML (2), ODS (2), JSON (1). Catálogo disponible también en DCAT/RDF: https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf",
+        "last_updated": null,
+        "license_summary": "Ley 37/2007 – Reutilización información sector público",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+            "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
+            "count": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
-      "source_url": "https://www.mintur.gob.es/es-es/Paginas/index.aspx"
-    }
-  ],
-  "portals": [
-    {
-      "id": "mintur_datos_abiertos",
-      "kind": "open_data",
-      "name": "Datos Abiertos – Sede Electrónica Ministerio de Industria y Turismo",
-      "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
-      "portal_status": "active",
-      "technology": [
-        "web_corporativa"
-      ],
-      "standards": [],
-      "formats": [
-        "CSV",
-        "HTML",
-        "JSON",
-        "KML",
-        "ODS",
-        "PDF",
-        "REST",
-        "WMS",
-        "XLS",
-        "XLSX",
-        "XML"
-      ],
-      "topics": [
-        "Industria",
-        "Energía",
-        "Economía",
-        "Transporte",
-        "Turismo",
-        "Empleo",
-        "Urbanismo e infraestructuras",
-        "Ciencia y tecnología",
-        "Comercio",
-        "Medio ambiente",
-        "Hacienda",
-        "Sector público"
-      ],
-      "has_api": true,
-      "apis": [
-        {
-          "name": "REST – Registro de Firmas de Fabricantes de Vehículos (GIAVEH)",
-          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/registro-de-firmas-de-fabricantes-de-vehiculos",
-          "type": "REST",
-          "documentation_url": null
-        },
-        {
-          "name": "REST – Consulta Fichas Reducidas GIAVEH",
-          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-fichas-reducidas",
-          "type": "REST",
-          "documentation_url": null
-        },
-        {
-          "name": "REST – Consulta Productores Registro AEE",
-          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-productores-rii-aee",
-          "type": "REST",
-          "documentation_url": null
-        },
-        {
-          "name": "Catálogo DCAT/RDF – Ministerio de Industria y Turismo",
-          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf",
-          "type": "RDF",
-          "documentation_url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx"
-        }
-      ],
-      "dataset_count": 33,
-      "dataset_count_note": "33 datasets verificados en 2026-06 desde el catálogo oficial de la sede (sede.serviciosmin.gob.es/es-es/datosabiertos). Distribución por área responsable: Industria y PYME (24), Energía (9), Turismo (0 en área propia — los 4 datasets con temática 'Turismo' están bajo otras áreas). Distribución por temática: Industria (24), Energía (12), Economía (7), Transporte (7), Turismo (4), Empleo (3). Formatos por número de datasets: CSV (22), XLSX (21), HTML (18), XLS (6), PDF (3), REST (3), WMS (3), XML (3), KML (2), ODS (2), JSON (1). Catálogo disponible también en DCAT/RDF: https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf""last_updated": null,
-      "license_summary": "Ley 37/2007 – Reutilización información sector público",
-      "licenses": [
-        {
-          "id": null,
-          "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
-          "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
-          "count": null
-        }
-      ],
+      {
+        "id": "mintur_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ministerio de Industria y Turismo",
+        "url": "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_estatal"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Trámites electrónicos",
+          "Industria",
+          "Turismo",
+          "Ayudas y subvenciones",
+          "Perfil del contratante",
+          "Notificaciones electrónicas",
+          "Recursos y reclamaciones"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica compartida por la Subsecretaría, S.E. de Industria, S.E. de Turismo, Turespaña y SEPIDES. Incluye sección propia de Datos Abiertos en /es-es/datosabiertos/.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mintur_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia – Ministerio de Industria y Turismo",
+        "url": "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Organización",
+          "Empleo público",
+          "Altos cargos",
+          "Planificación y estadística",
+          "Normativa",
+          "Contratos",
+          "Convenios",
+          "Subvenciones",
+          "Presupuestos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "machine_readable": false,
+        "dataset_count_note": "Portal de publicidad activa que actúa exclusivamente como índice de enlaces hacia el Portal de Transparencia estatal (transparencia.gob.es). No aloja documentos propios ni datasets descargables. Las solicitudes de derecho de acceso se tramitan en sede.transparencia.gob.es. Contenido verificado en 2026-06: todas las secciones redirigen a transparencia.gob.es salvo 'Información pública: normas', que enlaza a la sección de participación pública del propio portal ministerial.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      }
+    ],
+    "verification": {
+      "status": "verified",
       "last_checked": "2026-06",
-      "machine_readable": true
+      "source_urls": [
+        "https://www.mintur.gob.es/es-es/Paginas/index.aspx",
+        "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/datos-abiertos.aspx",
+        "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
+        "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
+        "https://datos.gob.es/es/catalogo?publisher%5B0%5D=E05062701"
+      ]
     },
-    {
-      "id": "mintur_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – Ministerio de Industria y Turismo",
-      "url": "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
-      "portal_status": "active",
-      "technology": [
-        "sede_electronica_estatal"
-      ],
-      "standards": [],
-      "formats": [
-        "HTML",
-        "PDF"
-      ],
-      "topics": [
-        "Trámites electrónicos",
-        "Industria",
-        "Turismo",
-        "Ayudas y subvenciones",
-        "Perfil del contratante",
-        "Notificaciones electrónicas",
-        "Recursos y reclamaciones"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Sede electrónica compartida por la Subsecretaría, S.E. de Industria, S.E. de Turismo, Turespaña y SEPIDES. Incluye sección propia de Datos Abiertos en /es-es/datosabiertos/.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06",
-      "machine_readable": false
-    },
-    {
-      "id": "mintur_transparencia",
-      "kind": "transparencia",
-      "name": "Transparencia – Ministerio de Industria y Turismo",
-      "url": "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
-      "portal_status": "active",
-      "technology": [
-        "web_corporativa"
-      ],
-      "standards": [
-        "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
-      ],
-      "formats": [
-        "HTML"
-      ],
-      "topics": [
-        "Organización",
-        "Empleo público",
-        "Altos cargos",
-        "Planificación y estadística",
-        "Normativa",
-        "Contratos",
-        "Convenios",
-        "Subvenciones",
-        "Presupuestos"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "machine_readable": false,
-      "dataset_count_note": "Portal de publicidad activa que actúa exclusivamente como índice de enlaces hacia el Portal de Transparencia estatal (transparencia.gob.es). No aloja documentos propios ni datasets descargables. Las solicitudes de derecho de acceso se tramitan en sede.transparencia.gob.es. Contenido verificado en 2026-06: todas las secciones redirigen a transparencia.gob.es salvo 'Información pública: normas', que enlaza a la sección de participación pública del propio portal ministerial.""last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06",
-      "machine_readable": false
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.mintur.gob.es/es-es/Paginas/index.aspx",
-      "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/datos-abiertos.aspx",
-      "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
-      "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
-      "https://datos.gob.es/es/catalogo?publisher%5B0%5D=E05062701"
-    ]
+    "notes": "Entidad estatal incluida por relevancia directa para Canarias como principal destino turístico nacional. Las estadísticas FRONTUR/EGATUR/EOH se producen en convenio con el INE con desagregación provincial (Las Palmas / Santa Cruz de Tenerife), sin desagregación insular propia. El catálogo de datos abiertos está federado en datos.gob.es (publisher E05062701). La sede electrónica está en sede.serviciosmin.gob.es (dominio compartido con otros ministerios históricos). Organismos dependientes con tramitación propia en la sede: Turespaña (Instituto de Turismo de España) y SEPIDES (Sociedad Estatal de Promoción Industrial y Desarrollo Empresarial). La URL correcta del portal es /es-es/ (no /en-us/ como constaba en la versión anterior)."
   },
-  "notes": "Entidad estatal incluida por relevancia directa para Canarias como principal destino turístico nacional. Las estadísticas FRONTUR/EGATUR/EOH se producen en convenio con el INE con desagregación provincial (Las Palmas / Santa Cruz de Tenerife), sin desagregación insular propia. El catálogo de datos abiertos está federado en datos.gob.es (publisher E05062701). La sede electrónica está en sede.serviciosmin.gob.es (dominio compartido con otros ministerios históricos). Organismos dependientes con tramitación propia en la sede: Turespaña (Instituto de Turismo de España) y SEPIDES (Sociedad Estatal de Promoción Industrial y Desarrollo Empresarial). La URL correcta del portal es /es-es/ (no /en-us/ como constaba en la versión anterior)."
-},
   {
     "id": "oepm",
     "name": "Oficina Española de Patentes y Marcas",
@@ -20874,86 +20782,327 @@
   },
   {
     "id": "ministerio_transicion_ecologica",
-    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico – Portal de Datos Abiertos",
+    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico",
+    "alternate_names": [
+      "MITECO",
+      "Transición Ecológica",
+      "Ministerio para la Transición Ecológica"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Portal de datos abiertos del MITECO con información ambiental, energética y meteorológica de toda España, incluyendo series e indicadores aplicables a las Islas Canarias (clima, agua, energía, biodiversidad).",
+    "description": "Ministerio del Gobierno de España responsable de la política ambiental, energética, climática, de agua y de reto demográfico. Relevante para Canarias por gestionar datos de calidad del aire, biodiversidad, costas, agua, energía y cambio climático con desagregación territorial que incluye las islas. Publica datos de alto valor (HVD) de las categorías Geoespacial y Observación de la Tierra conforme al Reglamento UE 138/2023, así como el Registro de Autoconsumo con cobertura canaria.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Plaza de San Juan de la Cruz, 10",
         "postal_code": "28071",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4406,
-          "lon": -3.6919
+          "lat": 40.4422,
+          "lon": -3.6925
         },
-        "source_url": "https://www.miteco.gob.es/"
+        "source_url": "https://www.miteco.gob.es/es.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "miteco_datos_abiertos",
         "kind": "open_data",
         "name": "Portal de Datos Abiertos MITECO",
         "url": "https://www.datosabiertos.miteco.gob.es/es.html",
         "portal_status": "active",
         "technology": [
-          "Portal propio"
+          "CKAN",
+          "ckanext-miteco (TRAGSA)"
         ],
-        "standards": [],
+        "standards": [
+          "DCAT",
+          "GeoDCAT-AP 2.0",
+          "INSPIRE",
+          "Reglamento de Ejecución (UE) 138/2023 (HVD)",
+          "NTI-RISP"
+        ],
+        "formats": [
+          "CSV",
+          "HTML",
+          "API",
+          "XML",
+          "WFS",
+          "WMS",
+          "ZIP",
+          "PDF",
+          "XLSX",
+          "GeoJSON",
+          "KML",
+          "KMZ",
+          "SHP",
+          "ODS",
+          "XLS",
+          "RSS",
+          "TXT"
+        ],
+        "topics": [
+          "Medio ambiente",
+          "Energía",
+          "Sector público",
+          "Transporte",
+          "Turismo",
+          "Ruido",
+          "Observación de la Tierra",
+          "Emisiones",
+          "Agua",
+          "Lugares protegidos",
+          "Clima",
+          "Biodiversidad",
+          "Geoespacial",
+          "Hidrografía",
+          "Residuos"
+        ],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API CKAN – Catálogo Datos Abiertos MITECO",
+            "url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/api/3/action/package_list",
+            "type": "REST",
+            "documentation_url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/ckan/"
+          },
+          {
+            "name": "API Datastore – Portal Datos Abiertos MITECO",
+            "url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/datastore/",
+            "type": "REST",
+            "documentation_url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/datastore/"
+          }
+        ],
+        "dataset_count": 58,
+        "dataset_count_note": "58 datasets verificados en 2026-06 (publicador: Ministerio para la Transición Ecológica y el Reto Demográfico, Autoridad nacional). Distribución: 34 espaciales + 24 no espaciales. Categorías HVD: Ruido (9), Observación de la Tierra y medio ambiente (8), Emisiones (7), Agua (5), Lugares protegidos (5), Clima (3+3 subtipos), Biodiversidad (2), otros (16). Temas INSPIRE principales: Condiciones atmosféricas AC (12), Lugares protegidos PS (5), Hidrografía HY (3), Hábitats y biotopos HB (3), Regiones marinas SR (3). Temáticas NTI-RISP: Medio ambiente (44), Energía (8), Sector público (5), Transporte (2), Turismo (1). Formatos más frecuentes: CSV (36), HTML (11), API (4), XML (4), WFS (3), WMS (3). Suborganizaciones publicadoras incluyen AEMET (5 datasets). Cobertura geográfica: España (58/58), sin desagregación insular explícita pero los datos ambientales y climáticos cubren Canarias.",
+        "last_updated": "2026-01",
+        "license_summary": "Ley 37/2007 – Reutilización información sector público",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+            "url": "https://www.datosabiertos.miteco.gob.es/es/que-es-el-portal-de-datos-abiertos.html",
+            "count": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "miteco_datos_gob_es",
+        "kind": "agregador",
+        "name": "Catálogo MITECO en datos.gob.es",
+        "url": "https://datos.gob.es/es/catalogo?publisher%5B0%5D=E05068001",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [
+          "DCAT-AP-ES",
+          "NTI-RISP"
+        ],
         "formats": [
           "CSV",
           "JSON",
           "XML",
-          "XLSX"
+          "GeoJSON",
+          "WMS",
+          "WFS",
+          "API"
         ],
         "topics": [
           "Medio ambiente",
           "Energía",
           "Agua",
-          "Cambio climático",
-          "Residuos",
-          "Meteorología"
+          "Biodiversidad",
+          "Geoespacial",
+          "Observación de la Tierra"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "Servicios de datos abiertos MITECO",
-            "url": "https://www.datosabiertos.miteco.gob.es/es/catalogo",
+            "name": "API CKAN – datos.gob.es (publisher MITECO E05068001)",
+            "url": "https://datos.gob.es/apidata/catalog/dataset?publisher=http://datos.gob.es/recurso/sector-publico/org/Organismo/E05068001",
             "type": "REST",
-            "documentation_url": "https://www.datosabiertos.miteco.gob.es/es.html"
+            "documentation_url": "https://datos.gob.es/es/documentacion/api-de-datos-gob-es"
           }
         ],
         "dataset_count": null,
-        "dataset_count_note": "Catálogo con decenas de datasets ambientales y energéticos.",
+        "dataset_count_note": "Datasets del MITECO federados en el catálogo nacional datos.gob.es bajo publisher E05068001. Pendiente verificar conteo exacto.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones MITECO)",
-        "licenses": [
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "miteco_gis",
+        "kind": "geoespacial",
+        "name": "Infraestructura de Datos Espaciales MITECO (IDE-MITECO)",
+        "url": "https://sig.mapama.gob.es/geoportal/index.html",
+        "portal_status": "active",
+        "technology": [
+          "OGC API",
+          "WMS",
+          "WFS",
+          "INSPIRE"
+        ],
+        "standards": [
+          "INSPIRE",
+          "OGC API Features",
+          "WMS",
+          "WFS"
+        ],
+        "formats": [
+          "SHP",
+          "KMZ",
+          "JPG",
+          "PDF",
+          "XML",
+          "GeoJSON",
+          "GML"
+        ],
+        "topics": [
+          "Geoespacial",
+          "Medio ambiente",
+          "Agua",
+          "Biodiversidad",
+          "Costas",
+          "Energía",
+          "Cartografía",
+          "Ruido ambiental",
+          "Cambio climático",
+          "Emisiones industriales",
+          "Vías pecuarias",
+          "Aguas residuales"
+        ],
+        "has_api": true,
+        "apis": [
           {
-            "name": "Condiciones de reutilización MITECO",
-            "count": null,
-            "id": null,
-            "url": "https://www.miteco.gob.es/es/aviso-legal.html"
+            "name": "OGC API – IDE MITECO",
+            "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicio-ogc-api.html",
+            "type": "OGC API Features",
+            "documentation_url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicio-ogc-api.html"
+          },
+          {
+            "name": "Servicios de visualización WMS/WFS – INSPIRE",
+            "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicios_web_mapas.html",
+            "type": "WMS",
+            "documentation_url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicios_web_mapas.html"
           }
         ],
-        "last_checked": "2026-05",
+        "dataset_count": null,
+        "dataset_count_note": "Geoportal en pruebas (activo en 2026-06) con visores temáticos organizados en categorías: Agua (calidad aguas subterráneas, superficiales, saneamiento, zonas de baño 2022), Banco de Datos de la Naturaleza BDN (espacios protegidos, vías pecuarias), Calidad y Evaluación Ambiental (emisiones industriales, ruido ambiental UME/MER), Cambio Climático. Infraestructura GIS completa con 4 componentes: (1) Catálogo de metadatos INSPIRE; (2) Visores geográficos temáticos; (3) Servicios WMS/WFS INSPIRE; (4) Descargas SHP/KMZ/PDF/XML. OGC API para interoperabilidad geoespacial. URL histórica del antiguo MAPAMA, aún activa. Pendiente URL definitiva del nuevo geoportal y verificar cobertura específica de Canarias en los visores.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "miteco_estadisticas",
+        "kind": "estadistica",
+        "name": "Estadísticas – Ministerio para la Transición Ecológica y el Reto Demográfico",
+        "url": "https://www.miteco.gob.es/es/ministerio/servicios/estadisticas.html",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
+        ],
+        "standards": [
+          "Plan Estadístico Nacional 2025-2028 (PEN2025-2028)",
+          "Programa Anual 2026 (PA2026)",
+          "Inventario de Operaciones Estadísticas (IOE)",
+          "Código de Buenas Prácticas de las Estadísticas Europeas (CBPEE)"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLSX"
+        ],
+        "topics": [
+          "Energía",
+          "Minas",
+          "Agua",
+          "Biodiversidad",
+          "Forestal",
+          "Calidad del aire",
+          "Meteorología",
+          "Economía circular",
+          "Residuos",
+          "Cambio climático",
+          "Desarrollo sostenible",
+          "ODS / Agenda 2030"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal estadístico del MITECO integrado en el Plan Estadístico Nacional 2025-2028. 8 áreas temáticas con operaciones estadísticas delegadas: Energía, Minas, Agua, Biodiversidad, Forestal, Calidad y Evaluación Ambiental, Meteorológica, Recursos y Economía Circular. Incluye indicadores ODS/Agenda 2030 para 9 de los 17 ODS. Calendario de difusión de publicaciones 2026 disponible en PDF. El MITECO fue evaluado en la Ronda de Peer Review 2021-2023 del Sistema Estadístico Europeo. Futuras estadísticas previstas: Cambio Climático, Costas y Medio Marino, Reto Demográfico, Transición Justa. Nota: las Cuentas Medioambientales son competencia del INE, no del MITECO.",
+        "last_updated": "2026-02",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "miteco_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica MITECO",
+        "url": "https://sede.miteco.gob.es/portal/site/seMITECO",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_estatal"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Agua",
+          "Biodiversidad y Bosques",
+          "Calidad y Evaluación Ambiental",
+          "Cambio Climático",
+          "Costas y Medio Marino",
+          "Energía",
+          "Reto Demográfico",
+          "Residuos",
+          "Radiactividad"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "276 procedimientos electrónicos organizados en 8 temas: Energía (109), Agua (60), Biodiversidad y Bosques (26), Otros (23), Calidad y Evaluación Ambiental (20), Cambio Climático (14), Costas y Medio Marino (12), Reto Demográfico (12). Servicios con relevancia canaria: SOTER (suplementos territoriales sistemas no peninsulares, incluye Canarias), RADNE (Registro de Autoconsumo), REPRO (producción eléctrica), ESCILA/ESFINGE (estadísticas energía eléctrica y gas).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.datosabiertos.miteco.gob.es/es.html"
+        "https://www.miteco.gob.es/es.html",
+        "https://www.datosabiertos.miteco.gob.es/es.html",
+        "https://www.datosabiertos.miteco.gob.es/es/que-es-el-portal-de-datos-abiertos.html",
+        "https://www.datosabiertos.miteco.gob.es/es/catalogo-de-datos.html",
+        "https://www.datosabiertos.miteco.gob.es/es/acceso.html",
+        "https://www.datosabiertos.miteco.gob.es/es/gis.html",
+        "https://catalogo.datosabiertos.miteco.gob.es/catalogo/api/3/action/package_list",
+        "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/ckan/",
+        "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/datastore/",
+        "https://sig.mapama.gob.es/geoportal",
+        "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicio-ogc-api.html",
+        "https://sede.miteco.gob.es/portal/site/seMITECO"
       ]
     },
-    "notes": "Complementa a los datasets específicos que ya tienes modelados (precios de carburantes, etc.)."
+    "notes": "Entidad estatal incluida por relevancia directa para Canarias: gestiona datos de costas, biodiversidad, calidad del aire, energías renovables, agua y cambio climático con cobertura insular. El SOTER (sede MITECO) gestiona los suplementos territoriales del sistema eléctrico para territorios no peninsulares incluyendo Canarias. El RADNE incluye datos de instalaciones de autoconsumo por isla. Portal CKAN propio (ckanext-miteco, desarrollado por TRAGSA) en datosabiertos.miteco.gob.es con 58 datasets HVD (2026-06), en expansión progresiva. IDE-MITECO con geoportal en sig.mapama.gob.es/geoportal (URL histórica del antiguo MAPAMA, aún activa). Duplicado eliminado: existía también como id='miteco' con portal en /en.html y topics en snake_case; fusionado en 2026-06. CIF: S2801401G."
   },
   {
     "id": "presidencia_del_gobierno",
