@@ -9747,6 +9747,10 @@
   {
     "id": "promotur_turismo_de_canarias_sa",
     "name": "PROMOTUR TURISMO DE CANARIAS, S.A.",
+    "alternate_names": [
+        "Promotur Turismo Canarias",
+        "Promotur"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -9770,13 +9774,13 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – PROMOTUR TURISMO DE CANARIAS, S.A.",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia  – PROMOTUR TURISMO DE CANARIAS, S.A.",
         "url": "https://transparencia.turismodeislascanarias.com",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "Portal personalizado"
         ],
         "standards": [],
         "formats": [
@@ -9785,16 +9789,17 @@
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "sector_publico",
+          "turismo",
+          "marca_islas_canarias",
+          "promocion_turistica"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables. No es un catálogo de datasets estructurados.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -9802,12 +9807,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.turismodeislascanarias.com"
       ]
