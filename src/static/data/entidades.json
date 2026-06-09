@@ -9434,73 +9434,137 @@
     "notes": null
   },
   {
-    "id": "agencia_tributaria_canaria_atc",
-    "name": "Agencia Tributaria Canaria ATC",
+    "id": "agencia_tributaria_canaria",
+    "name": "Agencia Tributaria Canaria",
+    "alternate_names": [
+      "ATC",
+      "Agencia Tributaria Canaria (ATC)"
+    ],
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias (CIF: Q3500461C), adscrito a la Consejería de Hacienda, responsable de la gestión, inspección y recaudación de los tributos propios de la Comunidad Autónoma y de los cedidos por el Estado. Gestiona tributos exclusivos del régimen económico-fiscal canario: IGIC, AIEM, impuesto sobre combustibles, labores del tabaco, juego e impuesto sobre residuos. Publica transparencia activa con 9 secciones conforme a la Ley 12/2014. No dispone de portal de datos abiertos propio ni publica datasets en datos.canarias.es.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Agencia Tributaria Canaria ATC",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Profesor Agustín Millares Carló, 22, Edificio Royal",
+        "postal_code": "35071",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1154,
+          "lon": -15.4170
         },
-        "source_url": "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp"
+        "source_url": "https://www3.gobiernodecanarias.org/tributos/atc/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Agencia Tributaria Canaria ATC",
-        "url": "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp",
+        "id": "atc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Agencia Tributaria Canaria",
+        "url": "https://www3.gobiernodecanarias.org/tributos/atc/transparencia",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 12/2014, de 26 de diciembre, de transparencia y de acceso a la información pública de Canarias",
+          "Ley 19/2013, de 9 de diciembre, de transparencia estatal"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "ODS",
+          "ODT",
+          "XLSX",
+          "PDF",
+          "HTML"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Institucional y organizativa",
+          "Altos cargos y personal directivo",
+          "Empleados públicos",
+          "Retribuciones",
+          "Servicios y procedimientos",
+          "Económico-financiera",
+          "Patrimonio",
+          "Normativa",
+          "Planificación",
+          "Contratos y subastas",
+          "Convenios y encargos a medios propios",
+          "Ayudas y subvenciones",
+          "Concesiones de servicios públicos",
+          "Derecho de acceso a la información pública",
+          "Fiscalidad canaria",
+          "IGIC",
+          "AIEM"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "9 secciones de transparencia activa verificadas en 2026-06: Institucional y organizativa, Altos cargos/empleados públicos/retribuciones, Servicios y procedimientos, Económica-financiera y Patrimonio, Normativa, Planificación, Contratos y subastas/Convenios/Encargos a medios propios, Ayudas y subvenciones/Concesiones, Derecho de acceso a la información pública. Documentos descargables en ODS, ODT, XLSX y PDF. Contacto transparencia: https://www3.gobiernodecanarias.org/tributos/atc/contacto-transparencia.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "atc_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Agencia Tributaria Canaria",
+        "url": "https://sede.gobiernodecanarias.org/tributos/jsf/publico/sede/inicio_sede.jsp",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_gobcan"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "IGIC",
+          "AIEM",
+          "Transmisiones patrimoniales",
+          "Actos jurídicos documentados",
+          "Sucesiones y donaciones",
+          "Combustibles",
+          "Importaciones",
+          "Labores del tabaco",
+          "Juego",
+          "Tasas",
+          "Ingresos no tributarios",
+          "Certificados tributarios",
+          "Recaudación",
+          "Liquidaciones",
+          "Denuncias tributarias",
+          "Valoraciones",
+          "Impuesto sobre residuos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica propia de la ATC, titularidad de la Agencia Tributaria Canaria. Gestión tecnológica a cargo del Servicio de Informática Tributaria de la Dirección General de Tributos. Acceso mediante certificado digital o Cl@ve. 17 categorías de trámites en línea verificadas en 2026-06. Última actualización de la sede: 2026-05-06.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www3.gobiernodecanarias.org/tributos/atc/jsf/publico/transparencia/inicio.jsp"
+        "https://www3.gobiernodecanarias.org/tributos/atc/",
+        "https://www3.gobiernodecanarias.org/tributos/atc/transparencia",
+        "https://www3.gobiernodecanarias.org/tributos/atc/transparencia/institucional-y-organizativa",
+        "https://www3.gobiernodecanarias.org/tributos/atc/transparencia/economica-financiera-y-patrimonio",
+        "https://www3.gobiernodecanarias.org/tributos/atc/contacto-transparencia",
+        "https://sede.gobiernodecanarias.org/tributos/jsf/publico/sede/inicio_sede.jsp",
+        "https://sede.gobiernodecanarias.org/tributos/jsf/publico/sede/la_sede/la_sede.jsp"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q3500461C. Sede única verificada: Calle Profesor Agustín Millares Carló, 22, Edificio Royal, 35071 Las Palmas de Gran Canaria. Adscrita a la Consejería de Hacienda del Gobierno de Canarias. Gestiona el régimen económico-fiscal especial de Canarias (REF): IGIC (equivalente al IVA peninsular), AIEM, impuesto sobre combustibles derivados del petróleo, labores del tabaco, juego, impuesto sobre residuos, tasas e ingresos no tributarios autonómicos. La sede electrónica es titularidad exclusiva de la ATC (a diferencia del SCS, que comparte la sede general del Gobierno de Canarias). No publica datasets en datos.canarias.es ni en ningún otro portal de datos abiertos (verificado en 2026-06). La transparencia activa se articula en 9 secciones bajo Ley 12/2014; los documentos se publican en ODS, ODT, XLSX y PDF."
   },
   {
     "id": "asistencia_integral_tributaria_sa_asista",
