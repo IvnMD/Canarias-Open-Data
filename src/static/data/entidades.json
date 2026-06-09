@@ -12964,106 +12964,121 @@
     },
     "notes": null
   },
- {
-  "id": "ciagc",
-  "name": "Consejo Insular de Aguas de Gran Canaria (CIAGC)",
-  "entity_kind": "organismo",
-  "scope": "insular",
-  "parent_entity_id": "cabildo_gran_canaria",
-  "islands": ["Gran Canaria"],
-  "description": "Organismo autónomo administrativo adscrito al Cabildo de Gran Canaria, con personalidad jurídica propia, responsable de la planificación, gestión y control del dominio público hidráulico insular desde 1995. Publica obligaciones de transparencia activa mediante OGOV y dispone de sede electrónica propia. No cuenta con portal de datos abiertos estructurado ni datasets en datos.gob.es a fecha 2026-06.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Avenida Juan XXIII, 2, 1º",
-      "postal_code": "35004",
-      "municipality": "Las Palmas de Gran Canaria",
-      "island": "Gran Canaria",
-      "coordinates": {
-        "lat": 28.1189,
-        "lon": -15.4247
+  {
+    "id": "ciagc",
+    "name": "Consejo Insular de Aguas de Gran Canaria (CIAGC)",
+    "entity_kind": "organismo",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_gran_canaria",
+    "islands": [
+      "Gran Canaria"
+    ],
+    "description": "Organismo autónomo administrativo adscrito al Cabildo de Gran Canaria, con personalidad jurídica propia, responsable de la planificación, gestión y control del dominio público hidráulico insular desde 1995. Publica obligaciones de transparencia activa mediante OGOV y dispone de sede electrónica propia. No cuenta con portal de datos abiertos estructurado ni datasets en datos.gob.es a fecha 2026-06.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Avenida Juan XXIII, 2, 1º",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1189,
+          "lon": -15.4247
+        },
+        "source_url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership"
+      }
+    ],
+    "portals": [
+      {
+        "id": "ciagc_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – CIAGC",
+        "url": "https://transparencia.aguasgrancanaria.com/index",
+        "portal_status": "active",
+        "technology": [
+          "OGOV"
+        ],
+        "standards": [
+          "Ley 12/2014 Transparencia Canarias",
+          "Ley 19/2013 Transparencia Estatal"
+        ],
+        "formats": [
+          "CSV",
+          "XLS",
+          "ODT"
+        ],
+        "topics": [
+          "Agua",
+          "Recursos hídricos",
+          "Contratación pública",
+          "Presupuestos",
+          "Subvenciones",
+          "Personal",
+          "Cuentas anuales",
+          "Planes y programas",
+          "Obras públicas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Publicidad activa estructurada en ~70 secciones temáticas (OGOV). Última actualización masiva: 14/05/2026. No expone catálogo de datasets ni API de descarga.",
+        "last_updated": "2026-05",
+        "license_summary": "Reproducción autorizada citando origen, salvo indicación expresa en contrario (aviso legal web)",
+        "licenses": [
+          {
+            "name": "Reutilización con atribución (aviso legal propio)",
+            "id": null,
+            "url": "https://www.aguasgrancanaria.com"
+          }
+        ],
+        "last_checked": "2026-06"
       },
-      "source_url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership"
-    }
-  ],
-  "portals": [
-    {
-      "id": "ciagc_transparencia",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – CIAGC",
-      "url": "https://transparencia.aguasgrancanaria.com/index",
-      "portal_status": "active",
-      "technology": ["OGOV"],
-      "standards": [
-        "Ley 12/2014 Transparencia Canarias",
-        "Ley 19/2013 Transparencia Estatal"
-      ],
-      "formats": ["CSV", "XLS", "ODT"],
-      "topics": [
-        "Agua",
-        "Recursos hídricos",
-        "Contratación pública",
-        "Presupuestos",
-        "Subvenciones",
-        "Personal",
-        "Cuentas anuales",
-        "Planes y programas",
-        "Obras públicas"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Publicidad activa estructurada en ~70 secciones temáticas (OGOV). Última actualización masiva: 14/05/2026. No expone catálogo de datasets ni API de descarga.",
-      "last_updated": "2026-05",
-      "license_summary": "Reproducción autorizada citando origen, salvo indicación expresa en contrario (aviso legal web)",
-      "licenses": [
-        {
-          "name": "Reutilización con atribución (aviso legal propio)",
-          "id": null,
-          "url": "https://www.aguasgrancanaria.com"
-        }
-      ],
-      "last_checked": "2026-06"
+      {
+        "id": "ciagc_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Consejo Insular de Aguas de Gran Canaria",
+        "url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+        "portal_status": "active",
+        "technology": [
+          "SedElectronica"
+        ],
+        "standards": [
+          "ENS",
+          "Ley 39/2015"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "Trámites administrativos",
+          "Tablón de anuncios",
+          "Contratación pública",
+          "Empleo público",
+          "Ordenanzas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica de tramitación; no publica datasets reutilizables.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.aguasgrancanaria.com",
+        "https://transparencia.aguasgrancanaria.com/index",
+        "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
+        "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership",
+        "https://transparenciacanarias.org/informeanual2017/anexo-censo-de-entidades/"
+      ]
     },
-    {
-      "id": "ciagc_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – Consejo Insular de Aguas de Gran Canaria",
-      "url": "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
-      "portal_status": "active",
-      "technology": ["SedElectronica"],
-      "standards": ["ENS", "Ley 39/2015"],
-      "formats": ["PDF"],
-      "topics": [
-        "Trámites administrativos",
-        "Tablón de anuncios",
-        "Contratación pública",
-        "Empleo público",
-        "Ordenanzas"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Sede electrónica de tramitación; no publica datasets reutilizables.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.aguasgrancanaria.com",
-      "https://transparencia.aguasgrancanaria.com/index",
-      "https://consejoinsularaguasgrancanaria.sedelectronica.es/info",
-      "https://consejoinsularaguasgrancanaria.sedelectronica.es/ownership",
-      "https://transparenciacanarias.org/informeanual2017/anexo-censo-de-entidades/"
-    ]
+    "notes": "Creado por la Ley de Aguas de Canarias de 26 de julio de 1990; operativo desde el 25 de mayo de 1995. Financia sus actividades mediante transferencias del Cabildo de Gran Canaria, tasas propias, fondos europeos (Plan FDCAN, PERTE) y convenios con el Gobierno de Canarias. Evaluado con IT Canarias 63% (2025). Perfil de contratante en Vortal: https://community.vortal.biz/sts/Login?SkinName=aguasgrancanaria. No publica datasets en datos.gob.es bajo identificador propio."
   },
-  "notes": "Creado por la Ley de Aguas de Canarias de 26 de julio de 1990; operativo desde el 25 de mayo de 1995. Financia sus actividades mediante transferencias del Cabildo de Gran Canaria, tasas propias, fondos europeos (Plan FDCAN, PERTE) y convenios con el Gobierno de Canarias. Evaluado con IT Canarias 63% (2025). Perfil de contratante en Vortal: https://community.vortal.biz/sts/Login?SkinName=aguasgrancanaria. No publica datasets en datos.gob.es bajo identificador propio."
-},
   {
     "id": "consorcio_de_emergencias_de_gran_canaria",
     "name": "Consorcio de Emergencias de Gran Canaria",
@@ -13708,73 +13723,162 @@
     "notes": null
   },
   {
-    "id": "instituto_de_atencion_social_y_sociosanitaria_del_cabildo_de",
+    "id": "iasgc",
     "name": "Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
+    "alternate_names": [
+      "IAS Gran Canaria",
+      "IAS"
+    ],
     "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
+    "scope": "insular",
+    "parent_entity_id": "cabildo_gran_canaria",
     "islands": [
       "Gran Canaria"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Organismo autónomo del Cabildo de Gran Canaria responsable de la atención social y sociosanitaria en la isla (CIF: P8500012C). Gestiona centros residenciales, servicios de dependencia, discapacidad y salud mental. Publica portal de transparencia activo (desde 2025-02, Ley 12/2014 de Canarias) y mapa sociosanitario georreferenciado en el IDE de Gran Canaria (IDEGC) con actualización diaria de centros de mayores, discapacidad y salud mental.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Tomás Morales, 3, 4ª planta",
+        "postal_code": "35003",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1073,
+          "lon": -15.4216
         },
-        "source_url": "https://ias.sedelectronica.es/transparency"
+        "source_url": "https://www.instituto-as.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Instituto de Atención Social y Sociosanitaria del Cabildo de Gran Canaria",
-        "url": "https://ias.sedelectronica.es/transparency",
+        "id": "ias_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del IAS Gran Canaria",
+        "url": "https://www.instituto-as.es/transparencia/",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "WordPress"
         ],
-        "standards": [],
+        "standards": [
+          "Ley 19/2013 de transparencia estatal",
+          "Ley 12/2014 de transparencia de Canarias"
+        ],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "CSV",
+          "XLSX",
+          "ODT",
+          "DOCX",
+          "ODS",
+          "TXT"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "Información institucional",
+          "Organización",
+          "Empleo público",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Presupuestos",
+          "Contratos",
+          "Convenios",
+          "Ayudas y subvenciones",
+          "Estadística",
+          "Atención social",
+          "Dependencia",
+          "Gran Canaria"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "dataset_count_note": "Portal renovado el 2025-02-17 (Ley 12/2014 de Canarias). Documentación desde ejercicio 2023. Documentación anterior a 2023 disponible en la sede electrónica: https://ias.sedelectronica.es/transparency. Incluye ficheros descargables en múltiples formatos: información general (TXT, ODT, DOCX, PDF) y evolución de presupuestos 2011-2025 (CSV, ODS, XLSX, PDF). Secciones: Institucional, Organizativa, Electos y personal, Empleo público, Retribuciones, Normativa, Servicios, Económico-financiera, Patrimonio, Planes, Obras, Contratos, Convenios, Ayudas y subvenciones, Estadística, Derecho de acceso, Canal de denuncias (Ley 2023), Informe anual de transparencia.",
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "ias_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del IAS Gran Canaria",
+        "url": "https://ias.sedelectronica.es/",
+        "portal_status": "active",
+        "technology": [
+          "sedelectronica.es"
         ],
-        "last_checked": "2026-05"
+        "standards": [
+          "Ley 39/2015 procedimiento administrativo",
+          "ENS – Esquema Nacional de Seguridad"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "Tramitación electrónica",
+          "Transparencia",
+          "Contratación pública",
+          "Empleo público",
+          "Tablón de anuncios",
+          "Atención social",
+          "Gran Canaria"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "35 procedimientos electrónicos disponibles: tramitación general, LOPD, empleo temporal, contratos menores, formación, prácticas universitarias, acceso VPN, GUIAS, etc. Tablón de anuncios con secciones de Ayudas, Empleo Público, Ordenanzas, Presupuesto. Portal de transparencia histórico (documentación anterior a 2023): https://ias.sedelectronica.es/transparency.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "ias_visor_centros",
+        "kind": "geoespacial",
+        "name": "Visor de Centros Sociosanitarios del IAS Gran Canaria",
+        "url": "https://extranet.instituto-as.es/centros/index.php",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "PHP"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Centros sociosanitarios",
+          "Residencias",
+          "Discapacidad",
+          "Salud mental",
+          "Mayores",
+          "Dependencia",
+          "Geolocalización",
+          "Gran Canaria"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Visor cartográfico de centros sociosanitarios dependientes del IAS Gran Canaria. Acceso público en extranet.instituto-as.es. Tecnología PHP con visualización adaptativa (parámetros width/height en URL). Relacionado con el Mapa Sociosanitario publicado en IDEGC (idegrancanaria.es) en 2025-11 con actualización diaria. No expone API ni descarga de datos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ias.sedelectronica.es/transparency"
+        "https://www.instituto-as.es/",
+        "https://www.instituto-as.es/transparencia/",
+        "https://ias.sedelectronica.es/info.0",
+        "https://ias.sedelectronica.es/transparency",
+        "https://www.instituto-as.es/organos-de-gobierno/"
       ]
     },
-    "notes": null
+    "notes": "CIF: P8500012C. No confundir con el IASS del Cabildo de Tenerife (www.iass.es), entidad distinta. El IAS gestiona el Mapa Sociosanitario de Gran Canaria publicado en el IDE de Gran Canaria (IDEGC, idegrancanaria.es) con actualización diaria de centros de discapacidad, mayores y salud mental (publicado 2025-11). Solicitud de acceso a información pública tramitable en: https://ias.sedelectronica.es/catalog/t/cb08f2a7-e5f7-42eb-bbfa-13a2b485e606. Comisionado de Transparencia de Canarias: https://transparenciacanarias.org/."
   },
   {
     "id": "mataderos_insulares_de_gran_canaria_sl",
@@ -14503,121 +14607,129 @@
     },
     "notes": null
   },
- {
-  "id": "balten",
-  "name": "BALTEN – Balsas de Tenerife, EPEL",
-  "entity_kind": "empresa_publica",
-  "scope": "insular",
-  "parent_entity_id": "cabildo_tenerife",
-  "islands": ["Tenerife"],
-  "description": "Entidad Pública Empresarial Local (EPEL) del Cabildo Insular de Tenerife, creada para la gestión de recursos hídricos insulares: explotación y mantenimiento de balsas de agua, distribución en alta y obras hidráulicas. Publica transparencia activa conforme a la Ley 19/2013 y la Ley 12/2014 de Canarias en su portal propio (balten.es/transparencia) y una sede electrónica (balten.sedelectronica.es). Incluye una sección 'Volúmenes de Balsas' con representación gráfica de almacenamiento hídrico. Todos los documentos del portal de transparencia están en PDF. No dispone de portal de datos abiertos ni datasets estructurados reutilizables a fecha 2026-06.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Calle Panamá, 34, Nave 1, Polígono Costa Sur",
-      "postal_code": "38009",
-      "municipality": "Santa Cruz de Tenerife",
-      "island": "Tenerife",
-      "coordinates": {
-        "lat": 28.4485,
-        "lon": -16.2713
+  {
+    "id": "balten",
+    "name": "BALTEN – Balsas de Tenerife, EPEL",
+    "entity_kind": "empresa_publica",
+    "scope": "insular",
+    "parent_entity_id": "cabildo_tenerife",
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Entidad Pública Empresarial Local (EPEL) del Cabildo Insular de Tenerife, creada para la gestión de recursos hídricos insulares: explotación y mantenimiento de balsas de agua, distribución en alta y obras hidráulicas. Publica transparencia activa conforme a la Ley 19/2013 y la Ley 12/2014 de Canarias en su portal propio (balten.es/transparencia) y una sede electrónica (balten.sedelectronica.es). Incluye una sección 'Volúmenes de Balsas' con representación gráfica de almacenamiento hídrico. Todos los documentos del portal de transparencia están en PDF. No dispone de portal de datos abiertos ni datasets estructurados reutilizables a fecha 2026-06.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle Panamá, 34, Nave 1, Polígono Costa Sur",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4485,
+          "lon": -16.2713
+        },
+        "source_url": "https://www.balten.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "balten_transparencia_web",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – BALTEN",
+        "url": "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013 Transparencia Estatal",
+          "Ley 12/2014 Transparencia Canarias"
+        ],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "Institucional",
+          "Organizativa",
+          "Información normativa",
+          "Información estadística",
+          "Informe anual",
+          "Órganos de gobierno",
+          "Consejo de Administración",
+          "Personal de libre nombramiento",
+          "Empleo público",
+          "Retribuciones",
+          "Presupuestos",
+          "Información económica y presupuestaria",
+          "Contratos",
+          "Convenios y encomiendas",
+          "Subvenciones",
+          "Patrimonio",
+          "Planes y programas",
+          "Información sobre servicios",
+          "Información sobre procedimientos",
+          "Ayudas y subvenciones",
+          "Derecho de acceso",
+          "Agua",
+          "Recursos hídricos",
+          "Volúmenes de balsas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal de transparencia activa con 18 secciones temáticas. Todos los documentos disponibles están en formato PDF; no se han encontrado otros formatos (última verificación: 2026-06). Última actualización del portal detectada: mayo 2026. Destacar la sección 'Volúmenes Balsas' con representación gráfica de almacenamiento hídrico, e 'Información Estadística' con datos de cumplimiento de servicios de la EPEL.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       },
-      "source_url": "https://www.balten.es/"
-    }
-  ],
-  "portals": [
-    {
-      "id": "balten_transparencia_web",
-      "kind": "transparencia",
-      "name": "Portal de Transparencia – BALTEN",
-      "url": "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [
-        "Ley 19/2013 Transparencia Estatal",
-        "Ley 12/2014 Transparencia Canarias"
-      ],
-      "formats": ["PDF"],
-      "topics": [
-        "Institucional",
-        "Organizativa",
-        "Información normativa",
-        "Información estadística",
-        "Informe anual",
-        "Órganos de gobierno",
-        "Consejo de Administración",
-        "Personal de libre nombramiento",
-        "Empleo público",
-        "Retribuciones",
-        "Presupuestos",
-        "Información económica y presupuestaria",
-        "Contratos",
-        "Convenios y encomiendas",
-        "Subvenciones",
-        "Patrimonio",
-        "Planes y programas",
-        "Información sobre servicios",
-        "Información sobre procedimientos",
-        "Ayudas y subvenciones",
-        "Derecho de acceso",
-        "Agua",
-        "Recursos hídricos",
-        "Volúmenes de balsas"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal de transparencia activa con 18 secciones temáticas. Todos los documentos disponibles están en formato PDF; no se han encontrado otros formatos (última verificación: 2026-06). Última actualización del portal detectada: mayo 2026. Destacar la sección 'Volúmenes Balsas' con representación gráfica de almacenamiento hídrico, e 'Información Estadística' con datos de cumplimiento de servicios de la EPEL.",
-      "last_updated": "2026-05",
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
+      {
+        "id": "balten_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – BALTEN",
+        "url": "https://balten.sedelectronica.es/info.0",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Tablón de anuncios",
+          "Empleo público",
+          "Ordenanzas y reglamentos",
+          "Órganos de gobierno",
+          "Presupuesto",
+          "Proveedores",
+          "Canal de denuncias",
+          "Carpeta ciudadana",
+          "Órganos colegiados"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.balten.es/",
+        "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
+        "https://www.balten.es/Categoria/Display/58?titulo=volumenes-balsas",
+        "https://www.balten.es/Categoria/Display/141?titulo=informacion-estadistica",
+        "https://www.balten.es/Categoria/Display/6?titulo=informacion-institucional",
+        "https://balten.sedelectronica.es/info.0"
+      ]
     },
-    {
-      "id": "balten_sede_electronica",
-      "kind": "other",
-      "name": "Sede Electrónica – BALTEN",
-      "url": "https://balten.sedelectronica.es/info.0",
-      "portal_status": "active",
-      "technology": ["sede_electronica"],
-      "standards": [],
-      "formats": [],
-      "topics": [
-        "Trámites electrónicos",
-        "Tablón de anuncios",
-        "Empleo público",
-        "Ordenanzas y reglamentos",
-        "Órganos de gobierno",
-        "Presupuesto",
-        "Proveedores",
-        "Canal de denuncias",
-        "Carpeta ciudadana",
-        "Órganos colegiados"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": null,
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.balten.es/",
-      "https://www.balten.es/Categoria/Display/4?titulo=transparencia",
-      "https://www.balten.es/Categoria/Display/58?titulo=volumenes-balsas",
-      "https://www.balten.es/Categoria/Display/141?titulo=informacion-estadistica",
-      "https://www.balten.es/Categoria/Display/6?titulo=informacion-institucional",
-      "https://balten.sedelectronica.es/info.0"
-    ]
+    "notes": "BALTEN (Balsas de Tenerife) es una EPEL del Cabildo de Tenerife. Gestiona la red de balsas de almacenamiento hídrico, infraestructuras hidráulicas y distribución en alta. La sección 'Volúmenes Balsas' publica representación gráfica del agua almacenada en las balsas gestionadas, potencialmente de interés como dato ambiental/hídrico, pero sin formato de descarga estructurado verificado. 'Información Estadística' publica datos de cumplimiento de servicios. El Comisionado de Transparencia de Canarias emite autoevaluación anual del portal (sección 'Informe Anual'). Normativa reguladora: Estatutos EPEL BALTEN y Ordenanza de Precios Públicos BALTEN (publicados en sección Información Normativa). La sede electrónica incorpora 'Canal de Denuncias' y sección de Proveedores (e-invoice), ausente en el Consorcio de Viviendas GC."
   },
-  "notes": "BALTEN (Balsas de Tenerife) es una EPEL del Cabildo de Tenerife. Gestiona la red de balsas de almacenamiento hídrico, infraestructuras hidráulicas y distribución en alta. La sección 'Volúmenes Balsas' publica representación gráfica del agua almacenada en las balsas gestionadas, potencialmente de interés como dato ambiental/hídrico, pero sin formato de descarga estructurado verificado. 'Información Estadística' publica datos de cumplimiento de servicios. El Comisionado de Transparencia de Canarias emite autoevaluación anual del portal (sección 'Informe Anual'). Normativa reguladora: Estatutos EPEL BALTEN y Ordenanza de Precios Públicos BALTEN (publicados en sección Información Normativa). La sede electrónica incorpora 'Canal de Denuncias' y sección de Proveedores (e-invoice), ausente en el Consorcio de Viviendas GC."
-},
   {
     "id": "titsa",
     "name": "Transportes Interurbanos de Tenerife, S.A.",
@@ -16576,220 +16688,247 @@
     "notes": null
   },
   {
-  "id": "ministerio_sanidad",
-  "name": "Ministerio de Sanidad",
-  "entity_kind": "organismo",
-  "scope": "estatal",
-  "parent_entity_id": null,
-  "islands": ["Todas"],
-  "description": "Ministerio de Sanidad del Gobierno de España (CIF: S2827001E). Desarrolla y mantiene el Sistema de Información Sanitaria (SIS) conjuntamente con las Comunidades Autónomas desde 2004. Relevante para Canarias como fuente de estadísticas del SNS con desagregación por CCAA: microdatos de encuestas de salud, catálogos de centros sanitarios, indicadores clave del SNS con API REST (INCLASNS, ccaa=canarias), banco de datos del SNS y portal estadístico. Sus datos se federan en datos.gob.es.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Paseo del Prado, 18-20",
-      "postal_code": "28071",
-      "municipality": "Madrid",
-      "island": "Todas",
-      "coordinates": {
-        "lat": 40.4136,
-        "lon": -3.6934
+    "id": "ministerio_sanidad",
+    "name": "Ministerio de Sanidad",
+    "entity_kind": "organismo",
+    "scope": "estatal",
+    "parent_entity_id": null,
+    "islands": [
+      "Todas"
+    ],
+    "description": "Ministerio de Sanidad del Gobierno de España (CIF: S2827001E). Desarrolla y mantiene el Sistema de Información Sanitaria (SIS) conjuntamente con las Comunidades Autónomas desde 2004. Relevante para Canarias como fuente de estadísticas del SNS con desagregación por CCAA: microdatos de encuestas de salud, catálogos de centros sanitarios, indicadores clave del SNS con API REST (INCLASNS, ccaa=canarias), banco de datos del SNS y portal estadístico. Sus datos se federan en datos.gob.es.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Paseo del Prado, 18-20",
+        "postal_code": "28071",
+        "municipality": "Madrid",
+        "island": "Todas",
+        "coordinates": {
+          "lat": 40.4136,
+          "lon": -3.6934
+        },
+        "source_url": "https://www.sanidad.gob.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "sanidad_inclasns",
+        "kind": "estadistica",
+        "name": "INCLASNS – Indicadores Clave del Sistema Nacional de Salud",
+        "url": "https://inclasns.sanidad.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia",
+          "API REST propia"
+        ],
+        "standards": [],
+        "formats": [
+          "JSON",
+          "CSV"
+        ],
+        "topics": [
+          "Salud",
+          "Indicadores sanitarios",
+          "Sistema Nacional de Salud",
+          "Atención primaria",
+          "Atención especializada",
+          "Farmacia",
+          "Salud pública",
+          "Mortalidad",
+          "Esperanza de vida",
+          "Calidad asistencial",
+          "Equidad",
+          "Demografía sanitaria",
+          "Gasto sanitario",
+          "Canarias"
+        ],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "INCLASNS API REST v2 – Indicadores",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/indicador",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Variables",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/variable",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Datos (JSON)",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/datos",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Datos (CSV)",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/datos/csv",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          },
+          {
+            "name": "INCLASNS API REST v2 – Gráfica (JSON para NVD3)",
+            "url": "https://inclasns.sanidad.gob.es/api/v2/datos/grafica",
+            "type": "REST",
+            "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
+          }
+        ],
+        "dataset_count": null,
+        "dataset_count_note": "API REST con autenticación por API_KEY (solicitar en https://inclasns.sanidad.gob.es/contact). Endpoints: /indicador, /variable, /datos (JSON), /datos/csv (CSV), /datos/grafica (JSON NVD3). Filtros combinables por parámetro GET: indicador, sexo, ccaa, anio, educativo, ingresos, clase/social. Para Canarias usar ccaa=canarias. Parámetro vacío (ccaa=) devuelve todas las CCAA. Ejemplo: /api/v2/datos?indicador=1000&sexo=total&ccaa=canarias&anio=&API_KEY=CLAVE",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       },
-      "source_url": "https://www.sanidad.gob.es/"
-    }
-  ],
-  "portals": [
-    {
-      "id": "sanidad_inclasns",
-      "kind": "estadistica",
-      "name": "INCLASNS – Indicadores Clave del Sistema Nacional de Salud",
-      "url": "https://inclasns.sanidad.gob.es/",
-      "portal_status": "active",
-      "technology": ["web_propia", "API REST propia"],
-      "standards": [],
-      "formats": ["JSON", "CSV"],
-      "topics": [
-        "Salud",
-        "Indicadores sanitarios",
-        "Sistema Nacional de Salud",
-        "Atención primaria",
-        "Atención especializada",
-        "Farmacia",
-        "Salud pública",
-        "Mortalidad",
-        "Esperanza de vida",
-        "Calidad asistencial",
-        "Equidad",
-        "Demografía sanitaria",
-        "Gasto sanitario",
-        "Canarias"
-      ],
-      "has_api": true,
-      "apis": [
-        {
-          "name": "INCLASNS API REST v2 – Indicadores",
-          "url": "https://inclasns.sanidad.gob.es/api/v2/indicador",
-          "type": "REST",
-          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
-        },
-        {
-          "name": "INCLASNS API REST v2 – Variables",
-          "url": "https://inclasns.sanidad.gob.es/api/v2/variable",
-          "type": "REST",
-          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
-        },
-        {
-          "name": "INCLASNS API REST v2 – Datos (JSON)",
-          "url": "https://inclasns.sanidad.gob.es/api/v2/datos",
-          "type": "REST",
-          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
-        },
-        {
-          "name": "INCLASNS API REST v2 – Datos (CSV)",
-          "url": "https://inclasns.sanidad.gob.es/api/v2/datos/csv",
-          "type": "REST",
-          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
-        },
-        {
-          "name": "INCLASNS API REST v2 – Gráfica (JSON para NVD3)",
-          "url": "https://inclasns.sanidad.gob.es/api/v2/datos/grafica",
-          "type": "REST",
-          "documentation_url": "https://inclasns.sanidad.gob.es/doc/api"
-        }
-      ],
-      "dataset_count": null,
-      "dataset_count_note": "API REST con autenticación por API_KEY (solicitar en https://inclasns.sanidad.gob.es/contact). Endpoints: /indicador, /variable, /datos (JSON), /datos/csv (CSV), /datos/grafica (JSON NVD3). Filtros combinables por parámetro GET: indicador, sexo, ccaa, anio, educativo, ingresos, clase/social. Para Canarias usar ccaa=canarias. Parámetro vacío (ccaa=) devuelve todas las CCAA. Ejemplo: /api/v2/datos?indicador=1000&sexo=total&ccaa=canarias&anio=&API_KEY=CLAVE",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
+      {
+        "id": "sanidad_banco_datos",
+        "kind": "estadistica",
+        "name": "Banco de Datos del SNS – Ministerio de Sanidad",
+        "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "CSV",
+          "XLS",
+          "XLSX",
+          "PDF",
+          "MDB"
+        ],
+        "topics": [
+          "Salud",
+          "Encuesta Nacional de Salud",
+          "Encuesta Europea de Salud",
+          "Barómetro Sanitario",
+          "Estadística de Centros Sanitarios de Atención Especializada",
+          "Catálogo Nacional de Hospitales",
+          "Catálogo de Centros de Atención Primaria",
+          "Catálogo de Centros de Atención Urgente",
+          "Microdatos",
+          "Farmacia",
+          "Nomenclátor",
+          "COVID-19",
+          "Vacunación",
+          "REBECA",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": 13,
+        "dataset_count_note": "13 datasets federados en datos.gob.es (última actualización del índice: 2019-02). Microdatos anonimizados de descarga directa: Barómetro Sanitario (desde 1996/97), Encuesta de Salud de España 2023, Encuesta Europea de Salud 2009/2014, Encuesta Nacional de Salud 1987-2017, EERI 1996-2009, ESCAE desde 2010. Directorios de centros: Catálogo Nacional de Hospitales (desde 1995), Catálogo AP (desde 2007), Catálogo Urgente (desde 2015). Alta relevancia para Canarias: Catálogo Nacional de Hospitales y Catálogo AP (búsqueda por CCAA/provincia), FARMACIA Nomenclátor de facturación, REBECA – Estadísticas sanitarias CCAA (formato MDB/Access).",
+        "last_updated": "2019-02",
+        "license_summary": "Reutilización con condiciones – Ley 37/2007 / RD 1495/2011",
+        "licenses": [
+          {
+            "name": "Reutilización información sector público – Ley 37/2007 / RD 1495/2011",
+            "id": null,
+            "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17560"
+          }
+        ],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sanidad_portal_estadistico",
+        "kind": "estadistica",
+        "name": "Sistema de Información Sanitaria – Sanidad en Datos",
+        "url": "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLS",
+          "XLSX"
+        ],
+        "topics": [
+          "Salud",
+          "Sistema Nacional de Salud",
+          "Salud y estilos de vida",
+          "Centros y establecimientos sanitarios",
+          "Atención primaria",
+          "Atención especializada",
+          "Medicamentos y productos sanitarios",
+          "Financiación y gasto sanitario",
+          "Barómetro Sanitario",
+          "Experiencia de pacientes",
+          "Informe Anual del SNS",
+          "Recursos humanos sanitarios",
+          "Clasificaciones CIE",
+          "Normalización estadística",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal del SIS desarrollado con las CCAA desde 2004. Informe Anual del SNS última edición: 2024 (publicado 2025-12, datos de 2023-2024, NIPO 133-20-031-6) con monográficos de Prestación Farmacéutica (NIPO 133-22-089-8) y RRHH (NIPO 133-22-098-4). Infografía 'Sanidad en un vistazo' actualizada a 2026-06 en ES/EN/FR. Calendario de difusión: https://www.sanidad.gob.es/estadEstudios/portada/docs/Calendario_DifusionSIS.pdf. No expone catálogo CKAN ni API.",
+        "last_updated": "2025-12",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "sanidad_aplicaciones_consulta",
+        "kind": "estadistica",
+        "name": "Portal Estadístico – Aplicaciones de Consulta Interactiva",
+        "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Salud",
+          "Encuestas de salud",
+          "Mortalidad",
+          "Causas de muerte",
+          "Atención primaria",
+          "Atención especializada",
+          "Hospitalización",
+          "Vacunaciones",
+          "Farmacia",
+          "Drogas",
+          "Directorio centros sanitarios",
+          "Clasificaciones CIE",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "13 aplicaciones interactivas sin descarga masiva ni API: Encuestas de Salud 1987-2023, Mortalidad CIE-9/CIE-10 desde 1981, SIAP desde 2004, BDCAP desde 2013, SIAE/ESCAE desde 1997, RAE-CMBD desde 1997, Barómetro Sanitario desde 1995, Población desde 1981, SIVAMIN, Consumo Farmacéutico, ESTUDES, EDADES, i-CMBD. Directorio REGCESS y clasificaciones eCIEmaps (CIE-10-ES, CIE-O-3, CIE-9-MC). Solo consulta en navegador.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://www.sanidad.gob.es/",
+        "https://www.sanidad.gob.es/estadEstudios/home.htm",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
+        "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
+        "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
+        "https://inclasns.sanidad.gob.es/",
+        "https://inclasns.sanidad.gob.es/doc/api",
+        "https://sede.mscbs.gob.es/datosabiertos/home.htm",
+        "https://transparencia.gob.es/transparencia/transparencia_Home/index/PublicidadActiva/TaxPorMinisterios/MSND.html"
+      ]
     },
-    {
-      "id": "sanidad_banco_datos",
-      "kind": "estadistica",
-      "name": "Banco de Datos del SNS – Ministerio de Sanidad",
-      "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [],
-      "formats": ["CSV", "XLS", "XLSX", "PDF", "MDB"],
-      "topics": [
-        "Salud",
-        "Encuesta Nacional de Salud",
-        "Encuesta Europea de Salud",
-        "Barómetro Sanitario",
-        "Estadística de Centros Sanitarios de Atención Especializada",
-        "Catálogo Nacional de Hospitales",
-        "Catálogo de Centros de Atención Primaria",
-        "Catálogo de Centros de Atención Urgente",
-        "Microdatos",
-        "Farmacia",
-        "Nomenclátor",
-        "COVID-19",
-        "Vacunación",
-        "REBECA",
-        "Canarias"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": 13,
-      "dataset_count_note": "13 datasets federados en datos.gob.es (última actualización del índice: 2019-02). Microdatos anonimizados de descarga directa: Barómetro Sanitario (desde 1996/97), Encuesta de Salud de España 2023, Encuesta Europea de Salud 2009/2014, Encuesta Nacional de Salud 1987-2017, EERI 1996-2009, ESCAE desde 2010. Directorios de centros: Catálogo Nacional de Hospitales (desde 1995), Catálogo AP (desde 2007), Catálogo Urgente (desde 2015). Alta relevancia para Canarias: Catálogo Nacional de Hospitales y Catálogo AP (búsqueda por CCAA/provincia), FARMACIA Nomenclátor de facturación, REBECA – Estadísticas sanitarias CCAA (formato MDB/Access).",
-      "last_updated": "2019-02",
-      "license_summary": "Reutilización con condiciones – Ley 37/2007 / RD 1495/2011",
-      "licenses": [
-        {
-          "name": "Reutilización información sector público – Ley 37/2007 / RD 1495/2011",
-          "id": null,
-          "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17560"
-        }
-      ],
-      "last_checked": "2026-06"
-    },
-    {
-      "id": "sanidad_portal_estadistico",
-      "kind": "estadistica",
-      "name": "Sistema de Información Sanitaria – Sanidad en Datos",
-      "url": "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [],
-      "formats": ["HTML", "PDF", "XLS", "XLSX"],
-      "topics": [
-        "Salud",
-        "Sistema Nacional de Salud",
-        "Salud y estilos de vida",
-        "Centros y establecimientos sanitarios",
-        "Atención primaria",
-        "Atención especializada",
-        "Medicamentos y productos sanitarios",
-        "Financiación y gasto sanitario",
-        "Barómetro Sanitario",
-        "Experiencia de pacientes",
-        "Informe Anual del SNS",
-        "Recursos humanos sanitarios",
-        "Clasificaciones CIE",
-        "Normalización estadística",
-        "Canarias"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "Portal del SIS desarrollado con las CCAA desde 2004. Informe Anual del SNS última edición: 2024 (publicado 2025-12, datos de 2023-2024, NIPO 133-20-031-6) con monográficos de Prestación Farmacéutica (NIPO 133-22-089-8) y RRHH (NIPO 133-22-098-4). Infografía 'Sanidad en un vistazo' actualizada a 2026-06 en ES/EN/FR. Calendario de difusión: https://www.sanidad.gob.es/estadEstudios/portada/docs/Calendario_DifusionSIS.pdf. No expone catálogo CKAN ni API.",
-      "last_updated": "2025-12",
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    },
-    {
-      "id": "sanidad_aplicaciones_consulta",
-      "kind": "estadistica",
-      "name": "Portal Estadístico – Aplicaciones de Consulta Interactiva",
-      "url": "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
-      "portal_status": "active",
-      "technology": ["web_propia"],
-      "standards": [],
-      "formats": ["HTML"],
-      "topics": [
-        "Salud",
-        "Encuestas de salud",
-        "Mortalidad",
-        "Causas de muerte",
-        "Atención primaria",
-        "Atención especializada",
-        "Hospitalización",
-        "Vacunaciones",
-        "Farmacia",
-        "Drogas",
-        "Directorio centros sanitarios",
-        "Clasificaciones CIE",
-        "Canarias"
-      ],
-      "has_api": false,
-      "apis": [],
-      "dataset_count": null,
-      "dataset_count_note": "13 aplicaciones interactivas sin descarga masiva ni API: Encuestas de Salud 1987-2023, Mortalidad CIE-9/CIE-10 desde 1981, SIAP desde 2004, BDCAP desde 2013, SIAE/ESCAE desde 1997, RAE-CMBD desde 1997, Barómetro Sanitario desde 1995, Población desde 1981, SIVAMIN, Consumo Farmacéutico, ESTUDES, EDADES, i-CMBD. Directorio REGCESS y clasificaciones eCIEmaps (CIE-10-ES, CIE-O-3, CIE-9-MC). Solo consulta en navegador.",
-      "last_updated": null,
-      "license_summary": null,
-      "licenses": [],
-      "last_checked": "2026-06"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-06",
-    "source_urls": [
-      "https://www.sanidad.gob.es/",
-      "https://www.sanidad.gob.es/estadEstudios/home.htm",
-      "https://www.sanidad.gob.es/estadEstudios/estadisticas/bancoDatos.htm",
-      "https://www.sanidad.gob.es/estadEstudios/portada/home.htm",
-      "https://www.sanidad.gob.es/estadEstudios/estadisticas/sisInfSanSNS/aplicacionesConsulta/home.htm",
-      "https://inclasns.sanidad.gob.es/",
-      "https://inclasns.sanidad.gob.es/doc/api",
-      "https://sede.mscbs.gob.es/datosabiertos/home.htm",
-      "https://transparencia.gob.es/transparencia/transparencia_Home/index/PublicidadActiva/TaxPorMinisterios/MSND.html"
-    ]
+    "notes": "CIF: S2827001E. Sede: Paseo del Prado, 18-20, 28071 Madrid (lat: 40.4136, lon: -3.6934) — entidad continental, sin isla asignada, se modela island='Todas' por requerimiento del schema. API INCLASNS: requiere API_KEY (formulario https://inclasns.sanidad.gob.es/contact); plantillas de endpoints: /api/v2/datos?indicador=[INDICADORES]&sexo=[SEXOS]&ccaa=[CCAAs]&anio=[AÑOS]&educativo=[EDUCATIVO]&ingresos=[INGRESOS]&clase=[CLASE]&API_KEY=CLAVE y /api/v2/datos/csv con parámetro social=[SOCIAL]. La URL histórica del ministerio era mscbs.gob.es (Ministerio de Sanidad, Consumo y Bienestar Social). El portal sede.mscbs.gob.es/datosabiertos actúa como índice de 13 enlaces a datos.gob.es (última actualización 2019-02), no como repositorio propio; no se modela como portal independiente. La sección 'Sanidad en la UE' (https://sanidad-ue.es) queda pendiente de investigación como posible entidad separada de scope='europeo'."
   },
-  "notes": "CIF: S2827001E. Sede: Paseo del Prado, 18-20, 28071 Madrid (lat: 40.4136, lon: -3.6934) — entidad continental, sin isla asignada, se modela island='Todas' por requerimiento del schema. API INCLASNS: requiere API_KEY (formulario https://inclasns.sanidad.gob.es/contact); plantillas de endpoints: /api/v2/datos?indicador=[INDICADORES]&sexo=[SEXOS]&ccaa=[CCAAs]&anio=[AÑOS]&educativo=[EDUCATIVO]&ingresos=[INGRESOS]&clase=[CLASE]&API_KEY=CLAVE y /api/v2/datos/csv con parámetro social=[SOCIAL]. La URL histórica del ministerio era mscbs.gob.es (Ministerio de Sanidad, Consumo y Bienestar Social). El portal sede.mscbs.gob.es/datosabiertos actúa como índice de 13 enlaces a datos.gob.es (última actualización 2019-02), no como repositorio propio; no se modela como portal independiente. La sección 'Sanidad en la UE' (https://sanidad-ue.es) queda pendiente de investigación como posible entidad separada de scope='europeo'."
-},
   {
     "id": "datos_justicia",
     "name": "Portal de Datos de Justicia",
