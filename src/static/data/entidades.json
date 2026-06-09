@@ -8637,7 +8637,7 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "portal_transparencia",
         "kind": "open_data",
         "name": "Portal de datos – Fundación Canaria de Juventud IDEO",
         "url": "https://fundacionideo.org/transparencia",
@@ -8827,6 +8827,10 @@
   {
     "id": "gestion_de_servicios_para_la_salud_y_seguridad_en_canarias_s",
     "name": "Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC",
+    "alternate_names": [
+        "GSC",
+        "GSC Canarias"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -8850,8 +8854,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC",
         "url": "https://www.gsccanarias.com/gsc/transparencia",
         "portal_status": "active",
@@ -8865,19 +8869,23 @@
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "urgencias",
+          "emergencias",
+          "salud",
+          "seguridad",
+          "transporte_sanitario"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables (PDF). No es un catálogo de datasets estructurados.",
+        "last_updated": "2025-03",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
-            "name": "Reutilización abierta (Atribución requerida)",
+            "name": "Condiciones de reutilización de la Ley 12/2014",
             "id": null,
             "url": null
           }
@@ -8886,7 +8894,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.gsccanarias.com/gsc/transparencia"
