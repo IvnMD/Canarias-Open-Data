@@ -10849,7 +10849,8 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "CSV"
         ],
         "topics": [
           "Transparencia",
@@ -10870,12 +10871,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://eolicasdefuerteventura.sedelectronica.es/transparency"
       ]
