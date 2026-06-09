@@ -11022,7 +11022,6 @@
     },
     "notes": "Acrónimo: ICDC. Web: https://www.icdcultural.org. Anteriores denominaciones: Festival de Música de Canarias S.A. (1984-1985), Sociedad Canaria de las Artes Escénicas y la Música S.A. (1985-2005), Canarias Cultura en Red S.A. (2005-2021). Dos sedes: Las Palmas de Gran Canaria (C/ León y Castillo 57, 4ª planta) y Santa Cruz de Tenerife (C/ Puerta Canseco 49, piso 2). No concede ayudas ni subvenciones propias. XLS/ODS confirmados en: contratos de patrocinio (§2.4.4, 2022-2025), gastos dietas Dirección Adjunta (§7.3, solo 2024), contratos programados (§9.2, 2024-2025), listado contratos formalizados (§9.8.1, 2022-2025), modificaciones contratos (§9.8.2, 2022-2023), contratos menores trimestrales (§9.9, 2022-2025), adendas convenios (§10.1, 2023-2025). Verificado 2026-05."
   },
- 
   {
     "id": "instituto_canario_de_igualdad_ici",
     "name": "INSTITUTO CANARIO DE IGUALDAD ICI",
@@ -11856,73 +11855,203 @@
     "notes": null
   },
   {
-    "id": "servicio_canario_de_la_salud_scs",
-    "name": "Servicio Canario de la Salud SCS",
+    "id": "servicio_canario_de_la_salud",
+    "name": "Servicio Canario de la Salud",
+    "alternate_names": [
+      "SCS",
+      "Servicio Canario de Salud"
+    ],
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
       "Todas"
     ],
-    "description": "Organismo especializado de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
+    "description": "Organismo autónomo de la Comunidad Autónoma de Canarias (CIF: Q8555011I), adscrito a la Consejería de Sanidad, responsable de la planificación, financiación y gestión de las prestaciones sanitarias públicas en todas las islas. Publica transparencia activa con 15 secciones conforme a la Ley 12/2014 canaria. No dispone de portal de datos abiertos propio; sus datasets reutilizables se publican a través de la Consejería de Sanidad en datos.canarias.es. En 2025–2026 está implantando un Data Lake Sanitario (1.763.834,68 € con fondos Next Generation EU) para integrar datos clínicos de todos sus centros.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Servicio Canario de la Salud SCS",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Avenida Juan XXIII, 17",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 28.1179,
+          "lon": -15.4261
         },
-        "source_url": "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia"
+        "source_url": "https://www3.gobiernodecanarias.org/sanidad/scs/"
+      },
+      {
+        "kind": "headquarters",
+        "address": "Calle Pérez de Rozas, 5",
+        "postal_code": "38004",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4691,
+          "lon": -16.2573
+        },
+        "source_url": "https://www3.gobiernodecanarias.org/sanidad/scs/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Servicio Canario de la Salud SCS",
-        "url": "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia",
+        "id": "scs_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Servicio Canario de la Salud",
+        "url": "https://www3.gobiernodecanarias.org/sanidad/scs/tematica.jsp?idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 12/2014, de 26 de diciembre, de transparencia y de acceso a la información pública de Canarias",
+          "Ley 19/2013, de 9 de diciembre, de transparencia estatal"
+        ],
+        "formats": [
+          "ODS",
+          "ODT",
+          "PDF",
+          "HTML"
+        ],
+        "topics": [
+          "Organización",
+          "Altos cargos y personal directivo",
+          "Empleados públicos",
+          "Retribuciones",
+          "Inventario",
+          "Económico-financiera",
+          "Contratación",
+          "Convenios y encomiendas",
+          "Ayudas y subvenciones",
+          "Infraestructuras",
+          "Planificación",
+          "Servicios y procedimientos",
+          "Normativa",
+          "Salud pública",
+          "Acceso a la información pública"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "15 secciones de transparencia activa verificadas en 2026-06. Publicación sistemática en ODS + PDF (dato reutilizable + copia firmada) para contratos, retribuciones y económico-financiera; ODT + PDF para planes de contratación. Periodicidad: trimestral (contratos, ejecución presupuestaria), anual (retribuciones, inventario, planificación), ad hoc (normativa, convenios). Última actualización global verificada: 2026-05-26 (Importe total adjudicado / Gasto personal). Contacto transparencia: urip.scs@gobiernodecanarias.org | Las Palmas: 928 11 73 87 | Tenerife: 922 95 18 09.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "scs_estadisticas",
+        "kind": "estadistica",
+        "name": "Informes y Estadísticas – Servicio Canario de la Salud",
+        "url": "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=3eb7778a-df0a-11eb-b984-6f2bcbfa916b&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "PDF",
+          "XLS",
+          "HTML"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "Salud pública",
+          "Epidemiología",
+          "Listas de espera",
+          "Actividad asistencial",
+          "Atención primaria",
+          "Atención hospitalaria",
+          "Recursos sanitarios",
+          "Mortalidad",
+          "Enfermedades crónicas",
+          "Vacunación",
+          "Salud mental",
+          "Urgencias",
+          "Profesionales sanitarios"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Publicación de informes periódicos y estadísticas sanitarias en PDF/XLS. Incluye: Observatorio Canario de la Salud (actualizado 2026-04), Encuesta de Salud de Canarias 2021, Encuesta de satisfacción al alta hospitalaria (2025-08), Estadística de listas de espera (vía ISTAC). Los datasets reutilizables del grupo 'salud' se publican en datos.canarias.es; el SCS enlaza directamente a https://datos.canarias.es/catalogos/general/dataset/?q=&sort=score+desc&groups=salud desde su portal de transparencia (última actualización del enlace: 2026-04-13).",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "scs_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Gobierno de Canarias – trámites SCS",
+        "url": "https://sede.gobiernodecanarias.org/sede/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_gobcan"
         ],
-        "last_checked": "2026-05"
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Reclamación sanitaria",
+          "Acceso a la información pública",
+          "Factura electrónica",
+          "Renovación de demanda de empleo"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica compartida del Gobierno de Canarias. Trámites SCS verificados: 1768 (Reclamación ámbito sanitario), 4177 (Acceso a la información pública), 4005 (Factura Electrónica), 4049/4050 (Renovación Demanda). No publica datasets abiertos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "scs_miscs",
+        "kind": "other",
+        "name": "miSCS – Servicios Digitales de Salud",
+        "url": "https://www3.gobiernodecanarias.org/sanidad/scs/tematica.jsp?idCarpeta=f49a382a-c894-11e4-b8de-159dab37263e",
+        "portal_status": "active",
+        "technology": [
+          "app_movil",
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Historia clínica electrónica",
+          "Resultados de pruebas",
+          "Cita previa",
+          "Servicios digitales sanitarios",
+          "Salud digital"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Catálogo de servicios digitales de salud del SCS (app + web). No expone datasets abiertos. Soporte: miscs.scs@gobiernodecanarias.org.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/sanidad/scs/Transparencia"
+        "https://www3.gobiernodecanarias.org/sanidad/scs/",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/tematica.jsp?idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=bfccf3c7-a3fb-11ea-8b8c-f7bac25b9b1e&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=b2540aca-fdab-11dd-b2aa-596c3deb1b4e&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=7c12527c-325f-11ec-9127-196742e38597&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=3eb7778a-df0a-11eb-b984-6f2bcbfa916b&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://www3.gobiernodecanarias.org/sanidad/scs/contenidoGenerico.jsp?idDocument=3d597a94-3266-11ec-9127-196742e38597&idCarpeta=decafabb-b7d9-11e7-a18d-018d8523a46d",
+        "https://sede.gobiernodecanarias.org/sede/",
+        "https://datos.canarias.es/catalogos/general/dataset/noticias-de-la-consejeria-de-sanidad-de-canarias",
+        "https://www3.gobiernodecanarias.org/noticias/sanidad-impulsa-un-data-lake-sanitario-con-una-inversion-de-17-millones-para-la-integracion-y-analisis-de-datos/"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q8555011I. Dos sedes centrales verificadas: Las Palmas de Gran Canaria (Av. Juan XXIII, 17) y Santa Cruz de Tenerife (C/ Pérez de Rozas, 5). Adscrito a la Consejería de Sanidad del Gobierno de Canarias. No gestiona un portal de datos abiertos propio; sus publicaciones reutilizables se canalizan a través de la Consejería de Sanidad en datos.canarias.es (grupo temático 'salud', enlazado directamente desde el portal de transparencia del SCS). El portal de transparencia publica sistemáticamente en ODS + PDF (dato + copia firmada) para contratos, retribuciones y económico-financiera; ODT + PDF para planes de contratación. Formatos XLSX/CSV/DOCX no se usan en el portal del SCS. La sección 'Más información' del portal de transparencia (actualizada 2026-04-13) enlaza a: datos de salud en datos.canarias.es (grupo 'salud'), estadísticas ISTAC de salud y listas de espera, Observatorio Canario de la Salud (actualizado 2026-04-20), Encuesta de Salud de Canarias 2021 (publicada 2023-03-27), Encuesta de satisfacción al alta hospitalaria (2025-08-05), e Indicadores clave del SNS (inclasns.sanidad.gob.es). En 2025–2026 está implantando un Data Lake Sanitario (licitación 1.763.834,68 € con fondos Next Generation EU, PRTR Componente 18 Inversión 6) para integrar datos clínicos de hospitales, centros de salud y laboratorios, con conexión al futuro Data Lake Nacional del SNS. Áreas de Salud: Tenerife, Gran Canaria, Lanzarote–Fuerteventura, La Palma–La Gomera–El Hierro. Contacto: urip.scs@gobiernodecanarias.org | 928 11 73 87 (Las Palmas) | 922 95 18 09 (Tenerife)."
   },
   {
     "id": "sociedad_canaria_de_fomento_economico_sa_proexca",
