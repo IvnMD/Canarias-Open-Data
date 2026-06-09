@@ -135,180 +135,366 @@
   },
   {
     "id": "istac",
-    "name": "ISTAC – Instituto Canario de Estadística",
+    "name": "Instituto Canario de Estadística",
+    "alternate_names": [
+      "ISTAC",
+      "Instituto Canario de Estadística (ISTAC)"
+    ],
     "entity_kind": "organismo",
     "scope": "autonomico",
-    "parent_entity_id": null,
+    "parent_entity_id": "gobierno_canarias",
     "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
+      "Todas"
     ],
-    "description": "Principal fuente estadística de Canarias. 21.755+ datasets con APIs especializadas (eDatos: e-Base, e-Cubos, e-Indicadores, e-Operaciones, e-Semántica). Acceso mediante APIs REST, plugin QGIS, librerías R/Python.",
+    "description": "Organismo estadístico oficial de la Comunidad Autónoma de Canarias (CIF: Q8550002C), adscrito a la Consejería de Economía, Hacienda y Seguridad. Produce y difunde las estadísticas oficiales del sistema estadístico canario. Gestiona datos.canarias.es, el catálogo de datos abiertos más completo de Canarias, con 22.359 datasets (2026-06), 11 APIs REST propias y cobertura temática de toda la actividad socioeconómica, demográfica y territorial de las islas.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "ISTAC – Instituto Canario de Estadística",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Luis Doreste Silva, 101, Planta 7ª",
+        "postal_code": "35004",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.12,
-          "lon": -15.43
+          "lat": 28.1218,
+          "lon": -15.4262
         },
-        "source_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/"
+        "source_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
+      },
+      {
+        "kind": "office",
+        "address": "Plaza Sixto Machado, 3",
+        "postal_code": "38009",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4552,
+          "lon": -16.2709
+        },
+        "source_url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "istac_datos_canarias",
         "kind": "open_data",
-        "name": "Portal de datos – ISTAC – Instituto Canario de Estadística",
-        "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/",
+        "name": "Portal de Datos Abiertos de Canarias – datos.canarias.es",
+        "url": "https://datos.canarias.es/",
         "portal_status": "active",
         "technology": [
-          "eDatos (Infraestructura de Datos y Metadatos Estadísticos)"
+          "CKAN",
+          "eDatos (e-Base, e-Cubos, e-Indicadores, e-Operaciones, e-Semántica)",
+          "GeoServer",
+          "SDMX"
         ],
-        "standards": [],
+        "standards": [
+          "SDMX",
+          "EURO-SDMX Metadata Structure release 4 (2014)",
+          "OGC WMS",
+          "OGC WFS",
+          "OGC SensorThings API Part 1",
+          "INSPIRE – Unidades estadísticas",
+          "INSPIRE – Unidades administrativas",
+          "DCAT",
+          "NTI-RISP",
+          "PC-Axis",
+          "RSS",
+          "OpenAPI"
+        ],
         "formats": [
-          "PC-Axis (.px)",
-          "JSON",
           "CSV",
+          "JSON",
+          "JSONSTAT",
           "XLSX",
+          "XLS",
           "XML",
-          "Google Visualization API",
           "TSV",
-          "RDF"
+          "PC-Axis",
+          "KML",
+          "KMZ",
+          "WMS",
+          "WFS",
+          "GeoJSON",
+          "GML",
+          "GPKG",
+          "TIFF",
+          "JPEG",
+          "PNG",
+          "ODS",
+          "ZIP",
+          "PDF",
+          "HTML",
+          "TXT",
+          "RSS",
+          "NetCDF",
+          "RDF",
+          "SHP/SHX/DBF/PRJ (Shapefile ESRI)",
+          "LAS",
+          "FIP"
         ],
         "topics": [
           "Demografía",
           "Población",
-          "Padrón municipal",
-          "Migraciones",
-          "Mercado laboral",
-          "Empleo registrado",
-          "Paro registrado",
-          "Afiliaciones a SS",
-          "Turismo",
-          "Ocupación hotelera",
-          "Pernoctaciones",
-          "Llegadas de viajeros",
-          "Salud",
-          "Epidemiología",
-          "Hospitales",
-          "Vacunación",
-          "Educación",
-          "Formación Profesional",
-          "Universidades",
+          "Empleo",
           "Economía",
-          "PIB",
-          "Renta per cápita",
-          "Indicadores coyunturales",
-          "Precios",
-          "IPC",
-          "Vivienda",
-          "Régimen de vivienda",
-          "Construcción",
-          "Obras de edificación",
-          "Sector público",
-          "Administración",
-          "Gasto público",
-          "Industria",
-          "Producción industrial",
-          "Energía",
-          "Consumo energético",
+          "Turismo",
+          "Salud",
+          "Sociedad y bienestar",
+          "Educación",
           "Medio ambiente",
-          "Clima",
-          "Temperatura",
-          "Precipitaciones",
-          "Agua",
-          "Recursos hídricos",
+          "Medio rural",
+          "Agricultura y pesca",
+          "Industria",
           "Comercio",
-          "Exportaciones",
-          "Importaciones",
-          "Actividad económica",
-          "CNAE",
-          "Agricultura",
-          "Ganadería",
-          "Pesca",
-          "Minería",
-          "Servicios",
           "Transporte",
-          "Comunicaciones",
-          "Cultura",
-          "Deporte",
-          "Ciencia y Tecnología",
-          "TIC",
-          "I+D"
+          "Vivienda",
+          "Urbanismo e infraestructuras",
+          "Energía",
+          "Hacienda",
+          "Sector público",
+          "Legislación y justicia",
+          "Ciencia y tecnología",
+          "Cultura y ocio",
+          "Deportes",
+          "Seguridad",
+          "Geoespacial",
+          "Meteorología",
+          "Canarias"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "e-Base API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html",
+            "name": "API de operaciones estadísticas (e-Operaciones)",
+            "url": "https://datos.canarias.es/api/estadisticas/operations/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-base.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/operations"
           },
           {
-            "name": "e-Cubos API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html",
+            "name": "API de indicadores (e-Indicadores)",
+            "url": "https://datos.canarias.es/api/estadisticas/indicators/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-cubos.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/indicators"
           },
           {
-            "name": "e-Indicadores API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html",
+            "name": "API de recursos estadísticos (e-Base / e-Cubos)",
+            "url": "https://datos.canarias.es/api/estadisticas/statistical-resources/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-indicadores.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/statistical-resources"
           },
           {
-            "name": "e-Operaciones API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html",
+            "name": "API de recursos estructurales – e-Semántica (SDMX)",
+            "url": "https://datos.canarias.es/api/estadisticas/structural-resources/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-operaciones.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/structural-resources"
           },
           {
-            "name": "e-Semántica API",
-            "url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html",
+            "name": "API de metadatos comunes",
+            "url": "https://datos.canarias.es/api/estadisticas/cmetadata/v1.0/",
             "type": "REST",
-            "documentation_url": "https://www.gobiernodecanarias.org/istac/datos-abiertos/documentacion-api/e-semantica.html"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/cmetadata"
           },
           {
-            "name": "API Georreferenciación",
-            "url": "https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones",
+            "name": "API de georreferenciación estadística",
+            "url": "https://datos.canarias.es/api/estadisticas/georref/latest",
             "type": "REST",
-            "documentation_url": "https://datos.canarias.es/portal/el-istac-lanza-una-herramienta-para-la-georreferenciacion-de-direcciones"
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/georref"
+          },
+          {
+            "name": "API de registro SDMX",
+            "url": "https://datos.canarias.es/api/estadisticas/registry/v2.1/",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/registry"
+          },
+          {
+            "name": "API de exportaciones",
+            "url": "https://datos.canarias.es/api/estadisticas/export/v1.0/",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/export"
+          },
+          {
+            "name": "API de enlaces permanentes (permalinks)",
+            "url": "https://datos.canarias.es/api/estadisticas/permalinks/v1.0/",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/permalinks"
+          },
+          {
+            "name": "API CKAN",
+            "url": "https://datos.canarias.es/api/estadisticas/catalogo/latest",
+            "type": "REST",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/catalogo"
+          },
+          {
+            "name": "API GeoServer OGC (WMS/WFS)",
+            "url": "https://datos.canarias.es/api/estadisticas/geo/latest",
+            "type": "OGC",
+            "documentation_url": "https://datos.canarias.es/api/estadisticas/geo"
           }
         ],
-        "dataset_count": 21755,
-        "dataset_count_note": null,
+        "dataset_count": 22359,
+        "dataset_count_note": "Infraestructura eDatos compuesta por: e-Base (repositorio principal de tablas estadísticas, en migración gradual a e-Cubos), e-Cubos (nuevo repositorio de cubos estadísticos), e-Indicadores (sistemas de indicadores por territorio: CA, isla, municipio; alimentado automáticamente desde e-Base), e-Operaciones (inventario de operaciones estadísticas, solo accesible vía API), e-Semántica (recursos estructurales SDMX: clasificaciones, conceptos, DSD, solo accesible vía API). 22.359 datasets verificados en 2026-06 desde el portal CKAN. Por organización: ISTAC 21.758, Cabildo de Tenerife 281, Consejería de Política Territorial 102, Consejería de Presidencia 63, Consejería de Transición Ecológica 38, Consejería de Agricultura 26, GRAFCAN 23, Presidencia del Gobierno 18, Consejería de Hacienda 15, Consejería de Turismo 11, Servicio Canario de Empleo 6, Consejería de Educación 5, Cabildo de El Hierro 4, Consejería de Sanidad 3, Consejería de Universidades 3, Consejería de Bienestar Social 1, Consejería de Economía 1, Consejería de Obras Públicas 1. Formatos más frecuentes: KML (12.271), WMS (12.226), TIFF (11.917), CSV (9.996), JSON (9.503). Conectores oficiales disponibles: R (istacr/CRAN), Python (istacpy/PyPI), QGIS (plugin istacqgis), Tableau Web Data Connector, widgets incrustables y formato PC-Axis para consulta offline.",
         "last_updated": null,
-        "license_summary": "Aviso Legal ISTAC",
+        "license_summary": "Aviso Legal del ISTAC (21.758 datasets); Aviso Legal Gobierno de Canarias (292); CC BY (281); Aviso Legal SITCAN (24); Aviso Legal Cabildo El Hierro (4).",
         "licenses": [
           {
-            "name": "Aviso Legal ISTAC",
-            "count": 21755,
-            "id": null,
-            "url": null
+            "name": "Aviso Legal del ISTAC",
+            "id": "istac-aviso-legal",
+            "url": "https://www.gobiernodecanarias.org/istac/aviso_legal.html",
+            "count": 21758
+          },
+          {
+            "name": "Aviso Legal del Gobierno de Canarias",
+            "id": "gobcan-aviso-legal",
+            "url": "http://opendata.gobiernodecanarias.org/opendata/datos-abiertos/directrices-y-normas",
+            "count": 292
+          },
+          {
+            "name": "Creative Commons Attribution (CC BY)",
+            "id": "cc-by",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "count": 281
+          },
+          {
+            "name": "Aviso Legal del SITCAN",
+            "id": "sitcan-aviso-legal",
+            "url": "https://datos.canarias.es/portal/aviso-legal-y-condiciones-de-uso",
+            "count": 24
+          },
+          {
+            "name": "Aviso Legal del Cabildo de El Hierro",
+            "id": "cieh-aviso-legal",
+            "url": "https://datos.canarias.es/catalogos/general/dataset/?license_id=cieh-aviso-legal",
+            "count": 4
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "istac_portal_estadistico",
+        "kind": "estadistica",
+        "name": "Portal Estadístico del ISTAC – gobiernodecanarias.org/istac",
+        "url": "https://www.gobiernodecanarias.org/istac/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF",
+          "XLS",
+          "XLSX",
+          "HTML",
+          "PC-Axis"
+        ],
+        "topics": [
+          "Estadística oficial",
+          "Plan Estadístico de Canarias",
+          "Demografía",
+          "Economía",
+          "Turismo",
+          "Mercado de trabajo",
+          "Calidad estadística",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal institucional del ISTAC con acceso a publicaciones estadísticas, calendario de difusión, Plan Estadístico de Canarias y metodología. Los datasets están centralizados en datos.canarias.es.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "istac_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – ISTAC",
+        "url": "https://www.gobiernodecanarias.org/istac/istac/transparencia/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 12/2014, de 26 de diciembre, de transparencia y de acceso a la información pública"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "ODT",
+          "ODS",
+          "XLS",
+          "XLSX",
+          "CSV",
+          "DOCX"
+        ],
+        "topics": [
+          "Instituciones",
+          "Organización",
+          "Alto cargo",
+          "Empleados públicos",
+          "Retribuciones",
+          "Normativa",
+          "Servicios y procedimientos",
+          "Económico financiera",
+          "Patrimonio",
+          "Planificación",
+          "Obras públicas",
+          "Contratación",
+          "Convenios y encomiendas",
+          "Ayudas y subvenciones",
+          "Ordenación del territorio",
+          "Estadísticas"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "16 secciones de transparencia activa conforme a la Ley 12/2014. Responsable: Instituto Canario de Estadística. Periodicidades: anual (economía, patrimonio, planificación, obras, subvenciones, estadísticas), trimestral (contratos menores), semestral (indemnizaciones), y ad hoc (nombramientos, normativa, convenios). Última actualización global: 30 de marzo de 2026.",
+        "last_updated": "2026-03",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
+      },
+      {
+        "id": "istac_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – ISTAC (Gobierno de Canarias)",
+        "url": "https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites?contentTypeId=321b9560-73a9-11df-8da5-bf2cae36f426&titulo=&tema=&departamento=c3254a40-6c07-11e5-8789-faa465ab1552&perfil=&organo=44f44490-6e56-11e5-8789-3a94baacdf31&tipo_tramite=&dirGral=44f44490-6e56-11e5-8789-3a94baacdf31&subtema=&enviado=true",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_gobcan"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "tramites",
+          "certificacion_estadistica",
+          "atencion_ciudadana"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica del Gobierno de Canarias filtrada por el ISTAC. Permite solicitar certificaciones oficiales de resultados estadísticos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.gobiernodecanarias.org/istac/datos-abiertos/"
+        "https://www.gobiernodecanarias.org/istac/",
+        "https://www.gobiernodecanarias.org/istac/aviso_legal.html",
+        "https://datos.canarias.es/portal/",
+        "https://datos.canarias.es/api/estadisticas/",
+        "https://www.gobiernodecanarias.org/istac/datos-abiertos/herramientas-de-consulta/",
+        "https://www3.gobiernodecanarias.org/aplicaciones/appsistac/",
+        "https://datos.canarias.es/catalogos/general/catalog/gobcan.rdf",
+        "https://datos.canarias.es/catalogos/estadisticas/dcat/catalog.rdf",
+        "https://opendata.sitcan.es/catalog.rdf",
+        "https://www.gobiernodecanarias.org/istac/istac/transparencia/"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q8550002C. Adscrito a la Consejería de Economía, Hacienda y Seguridad del Gobierno de Canarias. Contacto: consultas.istac@gobiernodecanarias.org | Las Palmas: 928 89 92 60 | Tenerife: 922 92 28 01. Entidad central del ecosistema de datos abiertos de Canarias. La plataforma datos.canarias.es integra CKAN + 11 APIs REST propias + GeoServer OGC. Las APIs implementan EURO-SDMX Metadata Structure (release 4, 2014) en alineación con Eurostat. La infraestructura eDatos se compone de cinco bancos especializados: e-Base (tablas, en migración a e-Cubos), e-Cubos, e-Indicadores (alimentado automáticamente desde e-Base), e-Operaciones (IOE, solo vía API) y e-Semántica (recursos estructurales SDMX, solo vía API). La API de georreferenciación estadística convierte direcciones/coordenadas con fines estadísticos (precisión no garantizada). El portal actúa como agregador multiorganismo: además de los 21.758 datasets del ISTAC, aloja datasets del Cabildo de Tenerife, GRAFCAN, 9 consejerías del Gobierno de Canarias, Cabildo de El Hierro y Servicio Canario de Empleo. Ofrece conectores oficiales para R (istacr/CRAN), Python (istacpy/PyPI), QGIS (plugin istacqgis), Tableau (Web Data Connector) y widgets incrustables. Visualizador estadístico: https://www3.gobiernodecanarias.org/istac/statistical-visualizer/ Aplicaciones especializadas: Sistema de información electoral (https://www3.gobiernodecanarias.org/istac/elecciones, datos desde 1979), Portal de profesionales del turismo (https://www3.gobiernodecanarias.org/aplicaciones/profesionalesistac), Banco de activos semánticos (clasificaciones, conceptos y definiciones SDMX). Portal de transparencia activa: https://www.gobiernodecanarias.org/istac/istac/transparencia/ — 16 secciones bajo Ley 12/2014, última actualización 2026-03. Catálogos RDF/DCAT verificados en 2026-06: gobcan.rdf (actualizado 2026-06-09), catalog.rdf estadístico (2026-06-08), SITCAN catalog.rdf (2026-06-09)."
   },
   {
     "id": "grafcan_sitcan",
