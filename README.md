@@ -1,8 +1,8 @@
 # Practicas-DAM-Datos-Abiertos
 
-Este proyecto recopila, estructura y presenta información sobre organismos públicos canarios que publican datos abiertos, incluyendo administraciones autonómicas, cabildos, ayuntamientos, organismos estadísticos, entidades geoespaciales y empresas públicas.
+Este proyecto recopila, estructura y presenta información sobre organismos públicos canarios que publican datos abiertos o información de transparencia, incluyendo administraciones autonómicas, los 7 cabildos, los 88 municipios de Canarias, organismos estadísticos y geoespaciales, entidades estatales con datos relevantes para las islas, y portales de referencia europeos.
 
-La aplicación genera automáticamente una web estática a partir de un fichero JSON centralizado, permitiendo explorar entidades, tecnologías, formatos, APIs y tipologías de datasets publicados en Canarias.
+La aplicación genera automáticamente una web dinámica a partir de un fichero JSON centralizado (`entidades.json`), permitiendo explorar entidades, tecnologías, formatos, APIs y tipologías de datasets publicados en Canarias.
 
 ---
 
@@ -10,52 +10,61 @@ La aplicación genera automáticamente una web estática a partir de un fichero 
 
 El proyecto busca:
 
-- Mapear el ecosistema open data de Canarias
-- Centralizar información dispersa sobre portales públicos
-- Facilitar la exploración de datasets y APIs
+- Mapear el ecosistema completo de datos abiertos y transparencia de Canarias
+- Centralizar información dispersa sobre portales públicos canarios
+- Facilitar la exploración de datasets, APIs y portales de transparencia
 - Visualizar el estado de madurez tecnológica del ecosistema
 - Crear una base reutilizable para investigación y transparencia pública
-- Generar una web estática portable y fácilmente desplegable
+- Generar una aplicación Flask portable y fácilmente desplegable
 
 ---
 
 # Qué incluye
 
-## Inventario de entidades públicas
+## Cobertura del catálogo
 
-El repositorio documenta organismos que publican datos abiertos en Canarias, incluyendo:
+El catálogo documenta el ecosistema completo de publicación de datos públicos en Canarias, incluyendo entidades de ámbito autonómico, insular, municipal, estatal y europeo relevantes para las islas.
 
 ### Administración autonómica
-- Gobierno de Canarias
-- Consejerías
-- Organismos dependientes
+- Gobierno de Canarias — Portal de Datos Abiertos (`datos.canarias.es`)
+- Portal de Gobierno Abierto del Gobierno de Canarias
+- ISTAC — Instituto Canario de Estadística (21.755+ datasets, APIs eDatos)
+- GRAFCAN / SITCAN — Sistema de Información Territorial de Canarias
+- Comisionado de Transparencia y Acceso a la Información Pública de Canarias
 
 ### Cabildos insulares
-- Tenerife
-- Gran Canaria
-- Lanzarote
-- Fuerteventura
-- La Palma
-- La Gomera
-- El Hierro
+Los 7 cabildos de Canarias, con sus portales de datos abiertos y de transparencia:
+- Cabildo de Tenerife
+- Cabildo de Gran Canaria — IDE Gran Canaria
+- Cabildo de Lanzarote
+- Cabildo de Fuerteventura
+- Cabildo Insular de La Palma
+- Cabildo de La Gomera
+- Cabildo de El Hierro
 
 ### Ayuntamientos
-- Santa Cruz de Tenerife
-- Las Palmas de Gran Canaria
-- Arona
-- Otros municipios con iniciativas open data
+Los **88 municipios de Canarias**, con documentación de sus portales de transparencia, sedes electrónicas y, donde existen, portales de datos abiertos reutilizables.
 
-### Organismos especializados
-- ISTAC
-- Grafcan
-- Puertos
-- Aeropuertos
-- Universidades públicas
+Municipios con portal de datos abiertos destacado:
+- Las Palmas de Gran Canaria — CKAN (`datosabiertos.laspalmasgc.es`)
+- Santa Cruz de Tenerife — CKAN (`santacruzdetenerife.es/opendata`)
+- Arona — CKAN (`opendataarona`)
 
-### Sector público empresarial
-- Empresas públicas
-- Entidades instrumentales
-- Sociedades mercantiles públicas
+Resto de municipios: portal de transparencia activa conforme a la Ley 12/2014 de Canarias y/o Ley 19/2013 estatal.
+
+### Organismos y entidades estatales
+Fuentes con datos desagregados por Canarias o relevantes para el ecosistema insular:
+- SEPE — Paro registrado y contratos por provincia canaria
+- AENA — Estadísticas de los 8 aeropuertos canarios
+- Autoridad Portuaria de Santa Cruz de Tenerife — CKAN (69 datasets)
+- Policía Nacional — Estadísticas de criminalidad por CC.AA.
+- Ministerio de Justicia — Estadística judicial con datos de Canarias
+
+### Portales de referencia
+- OpenStreetMap — Islas Canarias (Overpass API, ODbL)
+- European Data Portal (`data.europa.eu`) — datasets federados de Canarias
+
+> **Nota:** No todas las entidades disponen de portal de datos abiertos reutilizables. Muchos ayuntamientos publican únicamente portales de transparencia con documentos PDF o HTML. Esta distinción queda reflejada en el campo `portal.kind` de cada entidad.
 
 ---
 
@@ -63,18 +72,18 @@ El repositorio documenta organismos que publican datos abiertos en Canarias, inc
 
 Cada entidad incluye información estructurada sobre:
 
-- Nombre oficial
-- Isla
-- Tipo de organismo
-- URL del portal open data
-- API pública disponible
-- Tecnología utilizada
-- Número aproximado de datasets
-- Formatos soportados
+- Nombre oficial y denominaciones alternativas
+- Isla(s) y ámbito administrativo (`scope`)
+- Tipo de organismo (`entity_kind`) y entidad padre
+- Portales asociados: datos abiertos, transparencia, estadística, geoespacial
+- URL, tecnología y estado de cada portal
+- API pública disponible y endpoints documentados
+- Número aproximado de datasets y formatos soportados
 - Licencias de uso
 - Categorías temáticas
-- Coordenadas geográficas
-- Fecha de actualización
+- Coordenadas geográficas de la sede
+- Fecha de última verificación y fuentes
+- Nivel de confianza del dato (`verified` / `estimated` / `inferred` / `pending`)
 
 ---
 
@@ -85,43 +94,44 @@ El proyecto clasifica datasets en categorías como:
 - Turismo
 - Medio ambiente
 - Demografía
-- Movilidad
-- Transporte
-- Urbanismo
-- Cartografía
-- Economía
+- Movilidad y transporte
+- Urbanismo y territorio
+- Cartografía y geoespacial
+- Economía y hacienda
 - Salud
-- Cultura
+- Cultura y deporte
 - Educación
-- Administración pública
+- Empleo
+- Administración pública y transparencia
+- Seguridad
+- Energía
+- Ciencia y tecnología
 
 ---
 
 # Tecnologías detectadas
 
-El repositorio también analiza las tecnologías utilizadas por los portales de datos abiertos canarios:
-
-## Plataformas
-- CKAN
-- ArcGIS Open Data
-- Socrata
-- Soluciones custom
+## Plataformas de portal
+- CKAN (Gobierno de Canarias, Tenerife, Las Palmas GC, La Palma Smart Open, AP Tenerife…)
+- ArcGIS Hub / ArcGIS Online (Open Data La Palma, IDE Gran Canaria)
+- Portales propios / custom (Lanzarote, Comisionado de Transparencia…)
+- STA / Gestiona — sede electrónica municipal (mayoría de ayuntamientos)
+- eDatos ISTAC — infraestructura estadística propia
 
 ## APIs y estándares
-- REST
-- OData
-- OGC WMS/WFS
-- INSPIRE
-- DCAT
+- REST / CKAN Action API
+- OGC WMS / WFS / WCS
 - SPARQL
+- DCAT-AP 2.1.1
+- INSPIRE
+- NTRIP (red GNSS GRAFCAN)
 
-## Formatos
-- CSV
-- JSON
-- GeoJSON
-- XML
-- KML
-- XLSX
+## Formatos más frecuentes
+- CSV, JSON, GeoJSON, XML
+- KML, KMZ, SHP, GPKG, GML
+- XLSX, ODS, PDF
+- PC-Axis (.px) — estadísticas ISTAC
+- GTFS — transporte público
 
 ---
 
@@ -131,104 +141,55 @@ El repositorio también analiza las tecnologías utilizadas por los portales de 
 proyecto/
 │
 ├── src/
-│   │
-│   ├── app.py
-│   │
+│   ├── app.py                        # Flask: rutas web + API REST
 │   ├── templates/
-│   │   └── index.html
-│   │
-│   ├── static/
-│      ├── css/
-│      │   └── style.css
-│      │
-│      ├── js/
-│      │   └── app.js
-│      │
-│      ├── img/
-│      │
-│      └── data/
-│         └── entidades.json
-│    
-├── README.md
-├── .gitignore
-├── venv/
-└── run.py
+│   │   ├── index.html                # Vista principal — catálogo de entidades
+│   │   ├── mapa.html                 # Vista mapa interactivo (Leaflet)
+│   │   └── estadisticas.html         # Vista estadísticas (Chart.js)
+│   └── static/
+│       ├── css/
+│       ├── js/
+│       ├── img/
+│       └── data/
+│           ├── entidades.json        # Fuente de verdad del catálogo
+│           ├── entidades.schema.json # JSON Schema 2020-12 (referencia normativa)
+│           └── fecha.py              # Script actualización last_updated (CKAN APIs)
+│
+├── docker/                           # Configuración Docker dev/prod
+├── .github/                          # Workflows CI/CD, templates issues y PRs
+├── tests/                            # Tests pytest
+├── run.py
+└── README.md
 ```
 
 ---
 
 # Fuente de verdad: `entidades.json`
 
-Toda la información del proyecto se centraliza en `entidades.json`.
+Toda la información del proyecto se centraliza en `src/static/data/entidades.json`.
 
-El fichero contiene un array de entidades con estructura normalizada:
+El schema oficial está definido en `entidades.schema.json` (JSON Schema 2020-12).
+
+**Campos obligatorios por entidad:** `id` · `name` · `entity_kind` · `scope` · `islands` · `description` · `verification`
 
 ```json
-
 {
   "id": "string",
   "name": "string",
-  "alternate_names": ["string"],
   "entity_kind": "gobierno_autonomico | cabildo | ayuntamiento | organismo | empresa_publica",
   "scope": "autonomico | insular | municipal | estatal | europeo",
   "parent_entity_id": "string|null",
-  "islands": ["Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"],
+  "islands": ["Todas", "Gran Canaria", "Tenerife", "..."],
   "description": "string",
-  "locations": [
-    {
-      "kind": "headquarters | office | delegated_office",
-      "address": "string",
-      "postal_code": "string|null",
-      "municipality": "string|null",
-      "island": "string|null",
-      "coordinates": {
-        "lat": 0.0,
-        "lon": 0.0
-      },
-      "source_url": "string"
-    }
-  ],
   "portals": [
     {
       "id": "string",
-      "kind": "open_data | transparencia | estadistica | geoespacial | agregador",
-      "name": "string",
+      "kind": "open_data | transparencia | estadistica | geoespacial | agregador | other",
       "url": "string",
-      "portal_status": "active | archived | provisional | unknown",
-      "technology": ["CKAN", "ArcGIS", "Custom"],
-      "standards": ["DCAT", "INSPIRE", "OGC"],
-      "formats": ["CSV", "JSON", "GeoJSON"],
-      "topics": ["turismo", "demografia", "medio_ambiente"],
-      "machine_readable": true,
+      "technology": ["CKAN"],
       "has_api": true,
-      "apis": [
-        {
-          "name": "string",
-          "url": "string",
-          "type": "REST | CKAN API | OGC WMS | OGC WFS | SPARQL | other",
-          "documentation_url": "string|null"
-        }
-      ],
-      "dataset_count": 0,
-      "dataset_count_note": "string|null",
-      "last_updated": "YYYY-MM|null",
-      "license_summary": "string|null",
-      "licenses": [
-        {
-          "id": "cc-by-4.0",
-          "name": "CC BY 4.0",
-          "url": "https://creativecommons.org/licenses/by/4.0/",
-          "count": 0
-        }
-      ]
+      "machine_readable": true,
+      "last_checked": "YYYY-MM"
     }
   ],
   "verification": {
@@ -242,301 +203,178 @@ El fichero contiene un array de entidades con estructura normalizada:
 
 ---
 
-# Generación de la web estática
+# Instalación y uso
 
-La web se genera automáticamente mediante `generar_web.py`.
+## Instalación local
 
-El script:
+```bash
+git clone https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos.git
+cd Practicas-DAM-Datos-Abiertos
+pip install flask
+python run.py
+```
 
-- Lee `entidades.json`
-- Procesa los datos
-- Genera un `index.html` autocontenido
-- Inserta CSS y JavaScript embebidos
-- Construye visualizaciones y filtros dinámicos
+Abre en el navegador: `http://localhost:5000`
+
+---
+
+## 🐳 Ejecución con Docker
+
+```bash
+cd docker
+docker compose build
+docker compose up
+```
+
+Disponible en:
+- Web: `http://localhost:8000/`
+- API entidades: `http://localhost:8000/api/entidades`
+- API stats: `http://localhost:8000/api/stats`
+
+El fichero `entidades.json` se monta como volumen — edita y recarga sin reconstruir.
+
+```bash
+cd docker && docker compose down
+```
+
+---
+## API REST
+
+La aplicación expone una API REST ligera servida por Flask.  
+URL base (local): `http://localhost:5000` · Docker: `http://localhost:8000`
+
+---
+
+### `GET /api/entidades`
+
+Devuelve el catálogo completo de entidades como array JSON.  
+Todos los parámetros son opcionales y combinables entre sí.
+
+| Parámetro | Tipo | Descripción | Valores válidos |
+|-----------|------|-------------|-----------------|
+| `island` | `string` | Filtra por isla. Coincidencia exacta con el campo `islands`. | `Tenerife` · `Gran Canaria` · `La Palma` · `Lanzarote` · `Fuerteventura` · `La Gomera` · `El Hierro` · `La Graciosa` · `Todas` |
+| `kind` | `string` | Filtra por tipo de entidad. Coincidencia exacta. | `cabildo` · `ayuntamiento` · `organismo` · `gobierno_autonomico` · `empresa_publica` |
+| `scope` | `string` | Filtra por ámbito administrativo. Coincidencia exacta. | `autonomico` · `insular` · `municipal` · `estatal` · `europeo` |
+| `topic` | `string` | Búsqueda parcial sin distinción de mayúsculas contra `topics` de cada portal. | Libre — ej. `turismo`, `medio_ambiente` |
+| `has_api` | `boolean` | `true` → solo entidades con al menos una API declarada. `false` → sin ninguna. | `true` · `false` |
+
+**Ejemplos**
+
+```bash
+# Todas las entidades
+curl http://localhost:5000/api/entidades
+
+# Cabildos de Tenerife
+curl "http://localhost:5000/api/entidades?island=Tenerife&kind=cabildo"
+
+# Ayuntamientos con datos de turismo que tengan API
+curl "http://localhost:5000/api/entidades?scope=municipal&topic=turismo&has_api=true"
+
+# Entidades sin ninguna API
+curl "http://localhost:5000/api/entidades?has_api=false"
+```
+
+Devuelve `[]` cuando ninguna entidad coincide con los filtros — nunca devuelve error por falta de resultados.
+
+---
+
+### `GET /api/stats`
+
+Devuelve KPIs agregados del catálogo. No admite parámetros.
+
+```bash
+curl http://localhost:5000/api/stats
+```
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| `total_entidades` | `int` | Número total de entidades en el catálogo |
+| `total_portales` | `int` | Número total de portales entre todas las entidades |
+| `total_datasets` | `int` | Suma de `dataset_count` de todos los portales |
+| `con_api` | `int` | Entidades con al menos una API declarada |
+| `machine_readable_pct` | `int` | Porcentaje de portales con formatos legibles por máquina |
+| `por_tipo` | `object` | Distribución de entidades por `entity_kind` |
+| `por_isla` | `object` | Distribución de entidades por isla |
+
+**Ejemplo de respuesta**
+
+```json
+{
+  "total_entidades": 120,
+  "total_portales": 310,
+  "total_datasets": 45000,
+  "con_api": 38,
+  "machine_readable_pct": 72,
+  "por_tipo": {
+    "ayuntamiento": 87,
+    "organismo": 18,
+    "cabildo": 8,
+    "gobierno_autonomico": 4,
+    "empresa_publica": 3
+  },
+  "por_isla": {
+    "Tenerife": 52,
+    "Gran Canaria": 41,
+    "La Palma": 12
+  }
+}
+```
+
+> Los valores reflejan el estado actual de `entidades.json` en tiempo de ejecución.
+
+---
+
+# Actualizar el catálogo
+
+1. Editar `src/static/data/entidades.json` cumpliendo el schema
+2. Campos obligatorios en cada entidad nueva: `id`, `name`, `entity_kind`, `scope`, `islands`, `description`, `verification`
+3. Indicar siempre `verification.status`, `verification.last_checked` (formato `YYYY-MM`) y `verification.source_urls`
+4. Para actualizar `last_updated` consultando las APIs CKAN:
+
+```bash
+python src/static/data/fecha.py
+```
 
 ---
 
 # Características de la web
 
-## Exploración interactiva
-- Buscador global
-- Filtros por isla
-- Filtros por tecnología
-- Filtros por tipo de entidad
-- Filtros por temática
-
-## Visualización
-- Tarjetas por entidad
-- Mapa interactivo con Leaflet
-- Gráficos estadísticos con Chart.js
-- Contadores automáticos
-
-## Diseño
-- Responsive mobile-first
-- Modo claro/oscuro
-- Inspirado en Nexus Design System
-- Paleta beige cálida con acento teal `#01696f`
+- `/` — Catálogo principal con tarjetas y filtros
+- `/mapa` — Mapa interactivo (Leaflet)
+- `/estadisticas` — Gráficos y KPIs (Chart.js)
+- Responsive mobile-first · Modo claro/oscuro · Paleta teal `#01696f`
 
 ---
 
 # Tecnologías utilizadas
 
-## Backend de generación
-- Python 3.9+
-
-## Frontend generado
-- HTML5
-- CSS3
-- JavaScript vanilla
-
-## Librerías CDN
-- Leaflet.js
-- Chart.js
+| Capa | Tecnología |
+|------|------------|
+| Backend | Python 3.9+ · Flask · Jinja2 |
+| Frontend | HTML5 · CSS3 · JavaScript vanilla |
+| Mapas | Leaflet.js (CDN) |
+| Gráficos | Chart.js (CDN) |
+| Datos | JSON (sin base de datos) |
+| CI/CD | GitHub Actions |
+| Contenedores | Docker · Docker Compose |
+| Tests | pytest |
 
 ---
 
-# Instalación
+# Roadmap
 
-Clona el repositorio:
-
-```bash
-git clone https://github.com/usuario/open-data-canarias.git
-cd open-data-canarias
-```
+- Integración automática con APIs CKAN para sincronizar `dataset_count`
+- Validación automática de disponibilidad de portales
+- Exportación DCAT-AP del catálogo completo
+- Índice de madurez open data por entidad y por isla
+- Métricas comparativas entre islas
+- Ampliar cobertura de empresas públicas y universidades
 
 ---
 
 # 📚 Documentación del equipo
 - [Guía de contribución](./CONTRIBUTING.md)
 - [Gestión de tareas](./GESTION_PROYECTO.md)
-
----
-# Uso
-
-Generar la web:
-
-Para que el servidor funciones habra que seguir los siguientes pasos.
-
-1.instalar Pip si no lo tienes.
-```bash
-sudo apt install python3 python-pip
-```  
-2.Instalar flask.
-```bash
-sudo apt install python3 python-flask
-```
-3.instalar flask en el proyecto.
-```bash
-Pip install flask
-```
-despues seria iniciar la web con.
-
-```bash
-python run.py 
-```
-
-Abrir localmente:
-
-```bash
-open index.html
-```
-
-o simplemente abrir el fichero en el navegador.
-
----
-
-## 🐳 Ejecución con Docker
-
-Además de la ejecución local con Python y Flask, el proyecto puede levantarse con Docker usando la configuración incluida en la carpeta `docker/`.
-
-### Requisitos previos
-
-- Docker instalado
-- Docker Compose (v2 o superior)
-
-### Construir la imagen
-
-Desde la carpeta `docker/`:
-
-```bash
-cd docker
-docker compose build
-```
-
-Esto creará la imagen `docker-web` a partir del código de `src/` y `run.py`.
-
-### Ejecutar la aplicación
-
-```bash
-cd docker
-docker compose up
-```
-
-Una vez levantado el contenedor, la aplicación estará disponible en:
-
-- Web: `http://localhost:8000/`
-- API de entidades: `http://localhost:8000/api/entidades`
-
-El servidor Flask se ejecuta dentro del contenedor en el puerto 5000 y se expone hacia el host en el puerto 8000.
-
-### Actualizar los datos
-
-El fichero `src/static/data/entidades.json` se monta dentro del contenedor como volumen de solo lectura.  
-Esto significa que puedes editar `entidades.json` en tu máquina y ver los cambios al recargar el navegador, sin necesidad de reconstruir la imagen:
-
-- Ruta en el host: `src/static/data/entidades.json`
-- Ruta dentro del contenedor: `/app/src/static/data/entidades.json`
-
-Si cambias la estructura de datos o el código Python, entonces sí debes volver a construir la imagen:
-
-```bash
-cd docker
-docker compose down
-docker compose build
-docker compose up
-```
-
-### Parar los contenedores
-
-```bash
-cd docker
-docker compose down
-```
-
----
-
-# Actualizar datos
-
-1. Editar `entidades.json`
-2. Añadir nuevas entidades manteniendo el schema
-3. Regenerar la web:
-
-```bash
-python generar_web.py
-```
-
----
-
-# API
-
-El servidor Flask expone los siguientes endpoints REST.
-
-## `GET /api/entidades`
-
-Devuelve la lista de entidades en formato JSON.  
-Todos los parámetros son **opcionales y combinables**. Si no hay coincidencias devuelve `[]`.
-
-| Parámetro | Tipo | Descripción | Ejemplo |
-|-----------|------|-------------|---------|
-| `island` | string | Filtra por isla (coincidencia en la lista `islands`) | `?island=Tenerife` |
-| `kind` | string | Filtra por tipo de entidad (`entitykind`) | `?kind=cabildo` |
-| `scope` | string | Filtra por ámbito administrativo | `?scope=insular` |
-| `topic` | string | Filtra por temática (coincidencia parcial, case-insensitive) | `?topic=turismo` |
-| `has_api` | `true`/`false` | Filtra por presencia de API declarada | `?has_api=true` |
-
-### Ejemplos
-
-```bash
-# Todos los ayuntamientos de Gran Canaria
-GET /api/entidades?island=Gran+Canaria&kind=ayuntamiento
-
-# Entidades con API que publican datos de turismo
-GET /api/entidades?topic=turismo&has_api=true
-
-# Cabildos de ámbito insular
-GET /api/entidades?kind=cabildo&scope=insular
-```
-
-## `GET /api/stats`
-
-Devuelve un resumen agregado de KPIs del catálogo, calculado en servidor.
-
-```json
-{
-  "total_entidades": 24,
-  "total_portales": 31,
-  "total_datasets": 4820,
-  "con_api": 12,
-  "machine_readable_pct": 78,
-  "por_tipo": { "cabildo": 8, "ayuntamiento": 6 },
-  "por_isla": { "Tenerife": 9, "Gran Canaria": 8 }
-}
-```
-
----
-
-# Publicación en GitHub Pages
-
-## Opción rápida
-
-1. Subir el repositorio a GitHub
-2. Ir a:
-
-```text
-Settings → Pages
-```
-
-3. Seleccionar:
-- Branch: `main`
-- Folder: `/root`
-
-4. Guardar
-
-GitHub Pages publicará automáticamente `index.html`.
-
----
-
-# Fuentes de información
-
-El proyecto prioriza fuentes oficiales:
-
-- datos.gob.es
-- gobcan.es
-- istac.es
-- grafcan.es
-- cabildos insulares
-- ayuntamientos
-- portales institucionales
-
----
-
-# Principios del proyecto
-
-- Open Data
-- Transparencia pública
-- Reutilización de información
-- Interoperabilidad
-- Minimalismo técnico
-- Portabilidad
-- Web estática sin backend
-
----
-
-# Roadmap
-
-Posibles mejoras futuras:
-
-- Integración automática con APIs
-- Validación de disponibilidad de datasets
-- Exportación DCAT
-- Índice de madurez open data
-- Métricas comparativas entre islas
-- Históricos de datasets
-- Automatización CI/CD
-- Sincronización periódica
-
----
-
-# Compatibilidad
-
-## Python
-- 3.9+
-
-## Navegadores
-- Chrome
-- Firefox
-- Safari
-- Edge
 
 ---
 

@@ -121,7 +121,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -365,7 +366,8 @@
             "count": 4
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "istac_portal_estadistico",
@@ -401,7 +403,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "istac_transparencia",
@@ -450,7 +453,8 @@
         "last_updated": "2026-03",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "istac_sede_electronica",
@@ -475,7 +479,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -655,7 +660,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -752,7 +758,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -838,7 +845,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -934,7 +942,8 @@
           }
         ],
         "last_updated": "2023-05",
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "notes": "SALUD DEL PORTAL (evaluación 2026-06): Portal CKAN activo y accesible. API REST funcional verificada. 104 datasets disponibles con descarga directa en múltiples formatos. SEÑALES DE ALERTA: el dataset más reciente modificado según API es de 2023-05-25, lo que indica que el catálogo lleva más de 3 años sin actualizaciones nuevas — riesgo de datos desactualizados. Los datasets electorales más recientes corresponden a las elecciones de mayo 2023, coherente con la fecha de última modificación. PUNTOS FUERTES: cobertura geoespacial muy destacada (la mayoría de datasets incluyen SHP, GeoJSON, KML/KMZ, además de CSV/XLS); datasets de numeración y arbolado desglosados por distrito (Suroeste, Salud-La Salle, Ofra-Costa Sur, Centro-Ifara, Anaga); licencia abierta CC BY en todos los datasets verificados. PENDIENTE: verificar si existen datasets fuera del portal principal (ej. transparencia, contratación). La versión exacta de la licencia CC BY no está especificada en el portal (CKAN devuelve 'cc-by' genérico sin versión).",
@@ -1023,7 +1032,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1102,7 +1112,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "comisionado_transparencia",
@@ -1143,7 +1154,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "comisionado_datos",
@@ -1174,7 +1186,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "comisionado_sede_electronica",
@@ -1206,7 +1219,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -1302,7 +1316,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1400,7 +1415,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1493,7 +1509,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1577,7 +1594,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1645,7 +1663,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "cabildo_lapalma_transparencia",
@@ -1694,7 +1713,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "cabildo_lapalma_ckan",
@@ -1769,7 +1789,8 @@
             "url": "https://opendatacommons.org/licenses/by/1-0/"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "cabildo_lapalma_arcgis_hub",
@@ -1838,7 +1859,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -1920,7 +1942,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2013,7 +2036,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia",
@@ -2056,7 +2080,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2143,7 +2168,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2225,7 +2251,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2304,7 +2331,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2384,7 +2412,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2454,7 +2483,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "candelaria_sede",
@@ -2478,7 +2508,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "candelaria_web",
@@ -2502,7 +2533,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2601,7 +2633,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "sanmiguel_web",
@@ -2621,7 +2654,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3803500B. Portal de transparencia propio (tecnología custom), alineado con Ley 12/2014 canaria. La sede STA/Gestiona no incluye sección /transparency/. Existe sede tributaria adicional en sede.sanmigueldeabona.es (perfil del contratante). Teléfono: 922 700 000.",
@@ -2692,7 +2726,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2780,7 +2815,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia_deportes",
@@ -2815,7 +2851,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia_sasac",
@@ -2851,7 +2888,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica",
@@ -2878,7 +2916,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "notes": "No se ha detectado portal de datos abiertos (CKAN u equivalente). La transparencia se canaliza a través de tres portales independientes: ayuntamiento, Sociedad de Deportes y SASAC, todos bajo la plataforma GobiernoAbierto/Fernandopoo. Sociedades municipales: Sociedad de Deportes de La Aldea S.L. (sede: https://sociedaddedeportesdelaaldea.sedelectronica.es/info.0) y SASAC (https://sasac.laaldeasanicolas.es/). Integrada en la Mancomunidad de Ayuntamientos del Norte de Gran Canaria.",
@@ -2951,7 +2990,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3020,7 +3060,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3088,7 +3129,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sanandresysauces_sede",
@@ -3112,7 +3154,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3184,7 +3227,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3253,7 +3297,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3326,7 +3371,8 @@
         "dataset_count_note": null,
         "last_updated": "2026-04",
         "license_summary": null,
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "sede_electronica_tias",
@@ -3357,7 +3403,8 @@
         "dataset_count_note": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3430,7 +3477,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3499,7 +3547,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3567,7 +3616,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "agaete_web",
@@ -3587,7 +3637,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3500100G. Portal de transparencia (STA/Gestiona) con dos secciones: Ayuntamiento (1.610 docs, DOCX/ODT/PDF) y Sociedad Municipal ACUDE (129 docs, DOCX/ODT/PDF/XLS/XLSX). Sin CKAN ni sección de datos abiertos reutilizables. last_updated no declarado explícitamente en el índice.",
@@ -3658,7 +3709,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3727,7 +3779,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3787,7 +3840,8 @@
         "dataset_count_note": null,
         "last_updated": null,
         "license_summary": null,
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3858,7 +3912,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3927,7 +3982,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3999,7 +4055,8 @@
         "last_updated": "2026-04",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "arico_web",
@@ -4019,7 +4076,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3800500E. Portal de transparencia (STA/Gestiona) con ~4.551 docs en 18 secciones, última revisión 27-04-2026 (sección Económica-Financiera). Formato '.word' publicado por la plataforma equivale a DOCX. Sin CKAN ni sección de datos abiertos reutilizables.",
@@ -4090,7 +4148,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4159,7 +4218,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4231,7 +4291,8 @@
         "last_updated": "2026-05",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "arucas_web",
@@ -4251,7 +4312,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "Portal de transparencia (STA/Gestiona) con tres secciones: Ayuntamiento (~9.895 docs, PDF/ODT, actualización semanal), Sociedad Municipal Arucas S.A. (697 docs, PDF/ODT/ODG/ODS/ODF/TXT/DOCX/XML) y Organismo Autónomo de Cultura (892 docs, PDF/ODT). Sin portal CKAN ni datos abiertos propios (0% open data según dyntra.org, 2024). Coordenadas aproximadas al casco urbano (inferred).",
@@ -4322,7 +4384,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4391,7 +4454,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4460,7 +4524,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "brena_alta_sede",
@@ -4481,7 +4546,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "brena_alta_web",
@@ -4502,7 +4568,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4574,7 +4641,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4643,7 +4711,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4710,7 +4779,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "elpinar_sede",
@@ -4734,7 +4804,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4806,7 +4877,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4875,7 +4947,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4944,7 +5017,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5018,7 +5092,8 @@
         "last_updated": "2022-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5089,7 +5164,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5158,7 +5234,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5227,7 +5304,8 @@
         "last_updated": "2026-03",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "fuencaliente_web",
@@ -5247,7 +5325,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "Portal de transparencia integrado en la sede electrónica (STA/Gestiona), sin dominio independiente. 711 documentos en 18 secciones; última revisión verificada 2026-03. No se detecta portal CKAN ni sección de datos abiertos reutilizables. CIF: P3801400G. Índice ITCanarias: 3,04 (anterior corporación) → 8,59 (julio 2024).",
@@ -5317,7 +5396,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5386,7 +5466,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5481,7 +5562,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "guiadeisora_web",
@@ -5501,7 +5583,8 @@
         "last_updated": "2026-04",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "CIF: P3801900F. Portal de transparencia basado en Gesgocom SL (https://www.gesgocom.es). La sede STA/Gestiona no incluye sección /transparency/. 44,57% en índice dyntra.org (82/184 indicadores, posición 168, 2026).",
@@ -5573,7 +5656,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5642,7 +5726,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5708,7 +5793,8 @@
         "dataset_count": null,
         "last_updated": null,
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -5777,7 +5863,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5846,7 +5933,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -5877,7 +5965,7 @@
         "island": "El Hierro",
         "coordinates": {
           "lat": 27.7667,
-          "lon": -18.0050
+          "lon": -18.005
         },
         "source_url": "https://www.aytofrontera.org"
       }
@@ -5912,7 +6000,8 @@
         "last_updated": "2026-06",
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": true
       },
       {
         "id": "lafrontera_sede",
@@ -5933,7 +6022,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       },
       {
         "id": "lafrontera_web",
@@ -5953,7 +6043,8 @@
         "last_updated": null,
         "standards": [],
         "apis": [],
-        "licenses": []
+        "licenses": [],
+        "machine_readable": false
       }
     ],
     "notes": "Portal de transparencia con dominio propio (transparencia.aytofrontera.org), plataforma distinta a la sede electrónica. Existe sección 'Datos' (https://transparencia.aytofrontera.org/data/1) pendiente de verificar si contiene datasets reutilizables o es solo documental. Si contiene datasets descargables en CSV, reclasificar portal como kind: 'open_data'. Coordenadas aproximadas al casco urbano de Frontera (inferred). Confirmar CIF antes de commitear.",
@@ -6024,7 +6115,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6093,7 +6185,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6170,7 +6263,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica_la_orotava",
@@ -6204,7 +6298,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "calidad_agua_la_orotava",
@@ -6235,7 +6330,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "perfil_contratante_la_orotava",
@@ -6264,7 +6360,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6338,7 +6435,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6407,7 +6505,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6476,7 +6575,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6545,7 +6645,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6614,7 +6715,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6698,7 +6800,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica",
@@ -6732,7 +6835,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "transparencia_empresa_municipal",
@@ -6758,7 +6862,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6830,7 +6935,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6899,7 +7005,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6981,7 +7088,8 @@
         "last_updated": "2025-12",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sede_electronica_puntagorda",
@@ -7013,7 +7121,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7087,7 +7196,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7156,7 +7266,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7235,7 +7346,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica_san_bartolome",
@@ -7262,7 +7374,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "notes": "Portal opendata vacío a fecha 2026-06. Plataforma de transparencia gestionada por ATM Gruppo Maggioli. CIF: P3501900I. Sede electrónica en eadmin.sanbartolome.es. Alcalde 2023-2027: Isidro Pérez Martín (PSOE).",
@@ -7334,7 +7447,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7403,7 +7517,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7472,7 +7587,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7541,7 +7657,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7610,7 +7727,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7792,7 +7910,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7861,7 +7980,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7930,7 +8050,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -7999,7 +8120,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8068,7 +8190,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8147,7 +8270,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "portal_transparencia_sede_tazacorte",
@@ -8183,7 +8307,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sede_electronica_tazacorte",
@@ -8213,7 +8338,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8289,7 +8415,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8358,7 +8485,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8425,7 +8553,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "portal_transparencia",
@@ -8470,7 +8599,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8540,7 +8670,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8609,7 +8740,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8696,7 +8828,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sede_electronica_tinajo",
@@ -8725,7 +8858,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "notes": "Sin portal de datos abiertos detectado a junio 2026. La transparencia se canaliza a través de https://transparencia.tinajo.es/, plataforma del Comisionado de Transparencia de Canarias (transparenciacanarias.org), compartida con otros municipios canarios. El visor presupuestario ofrece exportación en XLS y XML, pero el XML presenta errores de formato. Evaluación disponible: 'IT-Canarias Ayuntamiento 2024'. Padrón municipal aproximado ~6.760 hab. (estimado por cálculo inverso: 11.896.478 € / 1.760,09 €/hab.). Contacto: registro@tinajo.es / 928 84 00 21.",
@@ -8797,7 +8931,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8866,7 +9001,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8934,7 +9070,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "valleseco_sede",
@@ -8958,7 +9095,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9028,7 +9166,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9097,7 +9236,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9156,7 +9296,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "vegadesanmateo_sede",
@@ -9180,7 +9321,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "vegadesanmateo_transparencia",
@@ -9212,7 +9354,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9283,7 +9426,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9352,7 +9496,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9421,7 +9566,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9456,7 +9602,7 @@
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.1154,
-          "lon": -15.4170
+          "lon": -15.417
         },
         "source_url": "https://www3.gobiernodecanarias.org/tributos/atc/"
       }
@@ -9508,7 +9654,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "atc_sede_electronica",
@@ -9548,7 +9695,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9623,7 +9771,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9692,7 +9841,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9761,7 +9911,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9823,7 +9974,7 @@
           "XLS"
         ],
         "has_api": false,
-        "machine_readable": false,
+        "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
         "last_updated": null,
@@ -9926,7 +10077,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -9995,7 +10147,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10069,7 +10222,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10245,7 +10399,8 @@
         "last_updated": "2025-12",
         "license_summary": "Todos los derechos reservados (copyright FUCAS). Uso permitido únicamente en ámbito doméstico y sin fines públicos o comerciales. No se permite reproducción, distribución ni comunicación pública sin autorización expresa de FUCAS. Fuente: Aviso Legal fucas.org (actualizado 08-03-2023).",
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -10318,7 +10473,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10387,7 +10543,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10466,7 +10623,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10535,7 +10693,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10604,7 +10763,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -10878,7 +11038,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -10949,7 +11110,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11018,7 +11180,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11073,7 +11236,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -11143,7 +11307,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11212,7 +11377,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11356,7 +11522,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11425,7 +11592,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11642,7 +11810,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11711,7 +11880,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11780,7 +11950,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -11836,7 +12007,8 @@
         "last_checked": "2026-06",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -11906,7 +12078,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12002,7 +12175,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "scs_estadisticas",
@@ -12041,7 +12215,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "scs_sede_electronica",
@@ -12068,7 +12243,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "scs_miscs",
@@ -12096,7 +12272,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12174,7 +12351,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12243,7 +12421,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12325,7 +12504,8 @@
         "last_checked": "2026-06",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -12397,7 +12577,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12466,7 +12647,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12535,7 +12717,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12592,7 +12775,8 @@
         "last_updated": "2025-03",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       },
       {
         "id": "gorona_transparencia_web",
@@ -12617,7 +12801,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12690,7 +12875,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12759,7 +12945,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12839,7 +13026,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "caaf_sede_electronica",
@@ -12867,7 +13055,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "caaf_web",
@@ -12891,7 +13080,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12965,7 +13155,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13010,7 +13201,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       },
       {
         "id": "ptfue_transparencia_cabildo",
@@ -13034,7 +13226,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       },
       {
         "id": "ptfue_sede_electronica",
@@ -13053,7 +13246,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13125,7 +13319,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13194,7 +13389,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13263,7 +13459,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13342,7 +13539,8 @@
             "url": "https://www.aguasgrancanaria.com"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "ciagc_sede_electronica",
@@ -13374,7 +13572,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13447,7 +13646,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13516,7 +13716,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13585,7 +13786,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13654,7 +13856,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13705,7 +13908,8 @@
         "last_checked": "2026-05",
         "last_updated": "2026-04",
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       },
       {
         "id": "fcgccb_sede_electronica",
@@ -13725,7 +13929,8 @@
         "last_checked": "2026-05",
         "last_updated": null,
         "dataset_count": null,
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13797,7 +14002,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13866,7 +14072,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13946,7 +14153,8 @@
         "dataset_count_note": null,
         "last_updated": "2025-12",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -14021,7 +14229,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14108,7 +14317,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "ias_sede_electronica",
@@ -14142,7 +14352,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "ias_visor_centros",
@@ -14175,7 +14386,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14248,7 +14460,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14317,7 +14530,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14386,7 +14600,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14450,7 +14665,8 @@
         "dataset_count": null,
         "last_updated": "2026-04",
         "last_checked": "2026-05",
-        "license_summary": null
+        "license_summary": null,
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -14522,7 +14738,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14699,7 +14916,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14768,7 +14986,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14837,7 +15056,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14906,7 +15126,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14992,7 +15213,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "balten_sede_electronica",
@@ -15024,7 +15246,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15107,7 +15330,8 @@
         "dataset_count": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "titsa_open_data",
@@ -15141,7 +15365,8 @@
         "dataset_count": null,
         "last_updated": "2026-05",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -15213,7 +15438,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15282,7 +15508,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15361,7 +15588,8 @@
         "dataset_count": null,
         "last_updated": "2025-12",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -15433,7 +15661,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15502,7 +15731,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15571,7 +15801,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15640,7 +15871,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15914,7 +16146,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15983,7 +16216,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16196,7 +16430,8 @@
         "last_updated": "2026-04",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "fecam_sede_electronica",
@@ -16225,7 +16460,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "fecam_web",
@@ -16251,7 +16487,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16325,7 +16562,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16394,7 +16632,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16463,7 +16702,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16533,7 +16773,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16623,7 +16864,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16719,7 +16961,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16810,7 +17053,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16903,7 +17147,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -16984,7 +17229,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17092,7 +17338,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sanidad_banco_datos",
@@ -17141,7 +17388,8 @@
             "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17560"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sanidad_portal_estadistico",
@@ -17183,7 +17431,8 @@
         "last_updated": "2025-12",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sanidad_aplicaciones_consulta",
@@ -17220,7 +17469,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -17309,7 +17559,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17392,7 +17643,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17473,7 +17725,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17592,7 +17845,8 @@
             "url": "https://creativecommons.org/licenses/by/4.0/"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "bne_linked_open_data",
@@ -17646,7 +17900,8 @@
             "url": "https://creativecommons.org/publicdomain/zero/1.0/"
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17730,7 +17985,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17807,7 +18063,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -17875,7 +18132,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -17953,7 +18211,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18038,7 +18297,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18123,7 +18383,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18169,7 +18430,8 @@
         "dataset_count_note": "Portal documental de transparencia con publicación periódica de información institucional, organizativa y económico-financiera. No funciona como catálogo estructurado de datasets.",
         "last_updated": null,
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "estadisticas_trafico_aereo",
@@ -18196,7 +18458,8 @@
         "dataset_count_note": "Publica informes estadísticos mensuales y anuales por aeropuerto y por red. La fuente no muestra un número estable de datasets.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "consultas_personalizadas",
@@ -18225,7 +18488,8 @@
         "dataset_count_note": "Portal interactivo con registro para visualizar cuadros de mando y consultas personalizadas. No se aprecia descarga directa de datos desde la sección principal.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sostenibilidad",
@@ -18252,7 +18516,8 @@
         "dataset_count_note": "Sección corporativa con estrategia 2021-2030, políticas y memorias anuales de sostenibilidad. No es un catálogo de datasets estructurados.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "principales_datos_indicadores",
@@ -18281,7 +18546,8 @@
         "dataset_count_note": "Página de visualización de indicadores anuales y trimestrales con gráficos y descargas documentales asociadas. Canarias aparece como grupo agregado en el desglose.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "publicaciones_financieras_operativas",
@@ -18308,7 +18574,8 @@
         "dataset_count_note": "Agrupa resultados, presentaciones e informes periódicos anuales, semestrales y trimestrales.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "presupuestos_generales_estado",
@@ -18336,7 +18603,8 @@
         "dataset_count_note": "Los estados presupuestarios del Aena consolidado están disponibles en HTML, XML, CSV y PDF dentro del portal de los Presupuestos Generales del Estado.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "cnmv_ipp_aena",
@@ -18362,7 +18630,8 @@
         "dataset_count_note": "La herramienta permite seleccionar informes IPP de Aena y descargar ficheros XBRL originales, además de visualizar informes en la interfaz.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "transparencia_fiscal",
@@ -18398,7 +18667,8 @@
         "dataset_count_note": "Bloque temático único que agrupa los subapartados: Política Fiscal Corporativa, Contribución tributaria por impuestos, Contribución tributaria por territorios, Buenas prácticas tributarias, Resultado contable y gasto del impuesto de sociedades, Litigios, Paraísos fiscales, Blanqueo de capitales, Conducta ética, Compromiso con la transparencia fiscal y Relación con el auditor externo.",
         "last_updated": "2026-06",
         "license_summary": null,
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -18485,7 +18755,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18568,7 +18839,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       },
       {
         "id": "portal_transparencia_interior",
@@ -18598,7 +18870,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       },
       {
         "id": "estadistica_interior",
@@ -18638,7 +18911,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "notes": "La sección de Archivos y Documentación incluye servicios al ciudadano y a la administración, más de 100 bibliotecas y centros de documentación, publicaciones y enlaces de interés. La sección de Anuarios Estadísticos ofrece la serie histórica en PDF desde 1989 hasta 2024, con información reutilizable desde 2012. La sección de Estadísticas incluye la coordinación estadística, operaciones en el Inventario de Operaciones Estadísticas del INE, estadísticas del Programa anual 2025 del Plan Estadístico Nacional y resultados difundidos por varios organismos. La sección de Metodologías reúne proyectos técnicos e informes metodológicos estandarizados para las principales operaciones estadísticas. El enlace de transparencia redirige al portal general transparencia.gob.es. El portal de datos abiertos está alojado en la Sede electrónica del ministerio y enlaza a portales estadísticos oficiales y PDFs."
@@ -18708,7 +18982,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18785,7 +19060,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18866,7 +19142,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -18951,7 +19228,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19034,7 +19312,8 @@
             "url": "https://www.ine.es/aviso_legal.htm"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19116,7 +19395,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19195,7 +19475,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19276,7 +19557,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19359,7 +19641,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       },
       {
         "id": "datos_abiertos_cultura",
@@ -19427,7 +19710,8 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19514,7 +19798,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19596,7 +19881,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19677,7 +19963,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19758,7 +20045,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19839,7 +20127,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19918,7 +20207,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -19997,7 +20287,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20076,7 +20367,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20157,7 +20449,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20238,7 +20531,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20319,7 +20613,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20399,7 +20694,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20482,7 +20778,8 @@
             "url": "https://www.miteco.gob.es/es/aviso-legal.html"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -20560,7 +20857,8 @@
             "url": "https://datos.gob.es/es/aviso-legal"
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": true
       }
     ],
     "verification": {
