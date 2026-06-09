@@ -10172,6 +10172,10 @@
   {
     "id": "sociedad_para_el_desarrollo_economico_de_canarias_sa_sodecan",
     "name": "Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN",
+    "alternate_names": [
+        "SODECAN",
+        "Sodecan"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -10195,8 +10199,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN",
         "url": "https://www.sodecan.es/portal-de-transparencia",
         "portal_status": "active",
@@ -10206,20 +10210,22 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "sector_publico",
+          "desarrollo_economico",
+          "gobierno_abierto",
+          "ods16"
         ],
-        "machine_readable": true,
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables (PDF y ODT). No es un catálogo de datasets estructurados. El portal menciona la futura Ley de Gobierno Abierto de Canarias.",
+        "last_updated": "2026-04",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -10227,12 +10233,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.sodecan.es/portal-de-transparencia"
       ]
