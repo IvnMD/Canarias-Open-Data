@@ -10458,8 +10458,12 @@
   {
     "id": "empresa_insular_de_servicios_el_meridiano_sa",
     "name": "Empresa Insular de Servicios El Meridiano, S.A.",
+    "alternate_names": [
+        "El Meridiano S.A.U.",
+        "Meridiano SAU"
+    ],
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
+    "scope": "insular",
     "parent_entity_id": null,
     "islands": [
       "El Hierro"
@@ -10481,8 +10485,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Empresa Insular de Servicios El Meridiano, S.A.",
         "url": "https://www.meridianosau.es/portal-de-transparencia-n",
         "portal_status": "active",
@@ -10492,20 +10496,23 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "TXT",
+          "ODT",
+          "DOCX",
+          "CSV"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
           "Administración"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa con contenido muy básico (párrafo introductorio). No se encontraron documentos descargables ni datasets estructurados.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -10513,12 +10520,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.meridianosau.es/portal-de-transparencia-n"
       ]
