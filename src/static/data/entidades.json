@@ -9068,8 +9068,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Hoteles Escuela de Canarias, S.A. HECANSA",
         "url": "https://www.hecansa.com/nosotros/compromiso/portal-de-transparencia",
         "portal_status": "active",
@@ -9083,16 +9083,18 @@
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "turismo",
+          "formacion",
+          "hosteleria"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa. La verificación automática fue bloqueada por requerir navegador moderno, pero el sitio está activo.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -9100,11 +9102,11 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.hecansa.com/nosotros/compromiso/portal-de-transparencia"
