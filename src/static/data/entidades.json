@@ -8598,6 +8598,10 @@
   {
     "id": "fundacion_canaria_de_juventud_ideo",
     "name": "Fundación Canaria de Juventud IDEO",
+    "alternate_names": [
+        "Fundación IDEO",
+        "IDEO"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -8606,18 +8610,30 @@
     ],
     "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
     "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Fundación Canaria de Juventud IDEO",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+        {
+            "kind": "headquarters",
+            "address": "Avd. Primero de Mayo, 12, 3ª planta, 35002, Las Palmas de Gran Canaria",
+            "postal_code": "35002",
+            "municipality": "Las Palmas de Gran Canaria",
+            "island": "Gran Canaria",
+            "coordinates": {
+                "lat": 28.1047,
+                "lon": -15.4154
+            },
+            "source_url": "https://fundacionideo.org/transparencia"
         },
-        "source_url": "https://fundacionideo.org/transparencia"
-      }
+        {
+            "kind": "office",
+            "address": "Ctra. Subida el Mayorazgo, 3, 2ª y 4ª planta, 38110, Santa Cruz de Tenerife",
+            "postal_code": "38110",
+            "municipality": "Santa Cruz de Tenerife",
+            "island": "Tenerife",
+            "coordinates": {
+                "lat": 28.4636,
+                "lon": -16.2518
+            },
+            "source_url": "https://fundacionideo.org/transparencia"
+        }
     ],
     "portals": [
       {
@@ -8635,17 +8651,20 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "contratacion",
+          "subvenciones",
+          "personal",
+          "juventud",
+          "infancia"
         ],
-        "machine_readable": true,
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables (PDF). No es un catálogo de datasets estructurados.",
+        "last_updated": "2026-04",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -8657,7 +8676,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://fundacionideo.org/transparencia"
