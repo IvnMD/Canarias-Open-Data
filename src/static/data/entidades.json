@@ -18363,84 +18363,196 @@
     "notes": "El portal indica que el ministerio pone a disposición conjuntos de datos abiertos reutilizables bajo modalidad general básica. La página de datos abiertos enlaza al catálogo nacional datos.gob.es como agregador."
   },
   {
-    "id": "ministerio_industria_turismo",
-    "name": "Ministerio de Industria y Turismo",
-    "alternate_names": [
-      "Industria y Turismo"
-    ],
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Ministerio relevante para competitividad, industria, turismo y datos económicos de ámbito estatal.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Paseo de la Castellana 160, 28046 Madrid",
-        "postal_code": "28046",
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.467,
-          "lon": -3.688
+  "id": "ministerio_industria_turismo",
+  "name": "Ministerio de Industria y Turismo",
+  "alternate_names": [
+    "MINTUR",
+    "Industria y Turismo",
+    "Ministerio de Industria y Turismo"
+  ],
+  "entity_kind": "organismo",
+  "scope": "estatal",
+  "parent_entity_id": null,
+  "islands": [
+    "Todas"
+  ],
+  "description": "Ministerio del Gobierno de España responsable de la política industrial, turística y comercial de ámbito nacional. Relevante para Canarias por ser el principal destino turístico de España: publica datos de competitividad, industria y turismo federados en datos.gob.es. Las estadísticas turísticas (FRONTUR, EGATUR, EOH) se producen en convenio con el INE con desagregación por CCAA y provincias canarias (Las Palmas / Santa Cruz de Tenerife).",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Paseo de la Castellana 160, 28046 Madrid",
+      "postal_code": "28046",
+      "municipality": "Madrid",
+      "island": "Todas",
+      "coordinates": {
+        "lat": 40.467,
+        "lon": -3.688
+      },
+      "source_url": "https://www.mintur.gob.es/es-es/Paginas/index.aspx"
+    }
+  ],
+  "portals": [
+    {
+      "id": "mintur_datos_abiertos",
+      "kind": "open_data",
+      "name": "Datos Abiertos – Sede Electrónica Ministerio de Industria y Turismo",
+      "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
+      "portal_status": "active",
+      "technology": [
+        "web_corporativa"
+      ],
+      "standards": [],
+      "formats": [
+        "CSV",
+        "HTML",
+        "JSON",
+        "KML",
+        "ODS",
+        "PDF",
+        "REST",
+        "WMS",
+        "XLS",
+        "XLSX",
+        "XML"
+      ],
+      "topics": [
+        "Industria",
+        "Energía",
+        "Economía",
+        "Transporte",
+        "Turismo",
+        "Empleo",
+        "Urbanismo e infraestructuras",
+        "Ciencia y tecnología",
+        "Comercio",
+        "Medio ambiente",
+        "Hacienda",
+        "Sector público"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "REST – Registro de Firmas de Fabricantes de Vehículos (GIAVEH)",
+          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/registro-de-firmas-de-fabricantes-de-vehiculos",
+          "type": "REST",
+          "documentation_url": null
         },
-        "source_url": "https://www.mintur.gob.es/en-us/gobierno-abierto"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "other",
-        "name": "Ministerio de Industria y Turismo - Gobierno Abierto",
-        "url": "https://www.mintur.gob.es/en-us/gobierno-abierto",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "HTML",
-          "CSV"
-        ],
-        "formats": [
-          "HTML",
-          "CSV"
-        ],
-        "topics": [
-          "industria",
-          "turismo",
-          "comercio",
-          "competitividad"
-        ],
-        "has_api": null,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta MINTUR",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.mintur.gob.es/en-us/gobierno-abierto",
-        "https://www.mintur.gob.es/en-us/gobierno-abierto/paginas/datos-abiertos.aspx"
-      ]
+        {
+          "name": "REST – Consulta Fichas Reducidas GIAVEH",
+          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-fichas-reducidas",
+          "type": "REST",
+          "documentation_url": null
+        },
+        {
+          "name": "REST – Consulta Productores Registro AEE",
+          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-productores-rii-aee",
+          "type": "REST",
+          "documentation_url": null
+        },
+        {
+          "name": "Catálogo DCAT/RDF – Ministerio de Industria y Turismo",
+          "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf",
+          "type": "RDF",
+          "documentation_url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx"
+        }
+      ],
+      "dataset_count": 33,
+      "dataset_count_note": "33 datasets verificados en 2026-06 desde el catálogo oficial de la sede (sede.serviciosmin.gob.es/es-es/datosabiertos). Distribución por área responsable: Industria y PYME (24), Energía (9), Turismo (0 en área propia — los 4 datasets con temática 'Turismo' están bajo otras áreas). Distribución por temática: Industria (24), Energía (12), Economía (7), Transporte (7), Turismo (4), Empleo (3). Formatos por número de datasets: CSV (22), XLSX (21), HTML (18), XLS (6), PDF (3), REST (3), WMS (3), XML (3), KML (2), ODS (2), JSON (1). Catálogo disponible también en DCAT/RDF: https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf""last_updated": null,
+      "license_summary": "Ley 37/2007 – Reutilización información sector público",
+      "licenses": [
+        {
+          "id": null,
+          "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+          "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
+          "count": null
+        }
+      ],
+      "last_checked": "2026-06",
+      "machine_readable": true
     },
-    "notes": null
+    {
+      "id": "mintur_sede_electronica",
+      "kind": "other",
+      "name": "Sede Electrónica – Ministerio de Industria y Turismo",
+      "url": "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
+      "portal_status": "active",
+      "technology": [
+        "sede_electronica_estatal"
+      ],
+      "standards": [],
+      "formats": [
+        "HTML",
+        "PDF"
+      ],
+      "topics": [
+        "Trámites electrónicos",
+        "Industria",
+        "Turismo",
+        "Ayudas y subvenciones",
+        "Perfil del contratante",
+        "Notificaciones electrónicas",
+        "Recursos y reclamaciones"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Sede electrónica compartida por la Subsecretaría, S.E. de Industria, S.E. de Turismo, Turespaña y SEPIDES. Incluye sección propia de Datos Abiertos en /es-es/datosabiertos/.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": false
+    },
+    {
+      "id": "mintur_transparencia",
+      "kind": "transparencia",
+      "name": "Transparencia – Ministerio de Industria y Turismo",
+      "url": "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
+      "portal_status": "active",
+      "technology": [
+        "web_corporativa"
+      ],
+      "standards": [
+        "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+      ],
+      "formats": [
+        "HTML"
+      ],
+      "topics": [
+        "Organización",
+        "Empleo público",
+        "Altos cargos",
+        "Planificación y estadística",
+        "Normativa",
+        "Contratos",
+        "Convenios",
+        "Subvenciones",
+        "Presupuestos"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "machine_readable": false,
+      "dataset_count_note": "Portal de publicidad activa que actúa exclusivamente como índice de enlaces hacia el Portal de Transparencia estatal (transparencia.gob.es). No aloja documentos propios ni datasets descargables. Las solicitudes de derecho de acceso se tramitan en sede.transparencia.gob.es. Contenido verificado en 2026-06: todas las secciones redirigen a transparencia.gob.es salvo 'Información pública: normas', que enlaza a la sección de participación pública del propio portal ministerial.""last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": false
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://www.mintur.gob.es/es-es/Paginas/index.aspx",
+      "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/datos-abiertos.aspx",
+      "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
+      "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
+      "https://datos.gob.es/es/catalogo?publisher%5B0%5D=E05062701"
+    ]
   },
+  "notes": "Entidad estatal incluida por relevancia directa para Canarias como principal destino turístico nacional. Las estadísticas FRONTUR/EGATUR/EOH se producen en convenio con el INE con desagregación provincial (Las Palmas / Santa Cruz de Tenerife), sin desagregación insular propia. El catálogo de datos abiertos está federado en datos.gob.es (publisher E05062701). La sede electrónica está en sede.serviciosmin.gob.es (dominio compartido con otros ministerios históricos). Organismos dependientes con tramitación propia en la sede: Turespaña (Instituto de Turismo de España) y SEPIDES (Sociedad Estatal de Promoción Industrial y Desarrollo Empresarial). La URL correcta del portal es /es-es/ (no /en-us/ como constaba en la versión anterior)."
+},
   {
     "id": "oepm",
     "name": "Oficina Española de Patentes y Marcas",
