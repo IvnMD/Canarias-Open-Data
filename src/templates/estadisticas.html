@@ -9,15 +9,16 @@
     <title>Estadísticas — Open Data Canarias</title>
     <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="/static/css/base.css">
-    <link rel="stylesheet" href="/static/css/tokens.css">
-    <link rel="stylesheet" href="/static/css/components.css">
-    <link rel="stylesheet" href="/static/css/pages/estadisticas.css">
+    <!-- Fixed: use url_for instead of hardcoded /static/ paths -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/estadisticas.css') }}">
 
     <!--
-    Anti-FOUC: restore dark theme BEFORE first paint.
-    Must be inline and synchronous — no defer/async.
-  -->
+        Anti-FOUC: restore dark theme BEFORE first paint.
+        Must be inline and synchronous — no defer/async.
+    -->
     <script>
         (function () {
             try {
@@ -27,7 +28,6 @@
             } catch (e) { /* localStorage blocked in sandboxed iframes */ }
         })();
     </script>
-
 </head>
 
 <body>
@@ -40,6 +40,7 @@
         <p>Catálogo unificado de datos abiertos de instituciones, organismos y otros datasets en Canarias</p>
     </header>
 
+    <!-- Fixed: added Acerca de link to match all other pages -->
     <nav class="main-nav">
         <div class="nav-container">
             <a href="/" class="nav-link">
@@ -54,6 +55,11 @@
                 <span class="nav-icon">🗺️</span>
                 <span>Mapa</span>
             </a>
+            <a href="{{ url_for('acerca') }}" class="nav-link">
+                <span class="nav-icon">ℹ️</span>
+                <span>Acerca de</span>
+            </a>
+            <button id="darkModeToggle" class="reset-btn">🌙 Modo oscuro</button>
         </div>
     </nav>
 
@@ -67,7 +73,6 @@
                 <button id="resetOrderBtn" class="reset-order-btn">
                     🔄 Restaurar orden original
                 </button>
-                <button id="darkModeToggle" class="reset-btn">🌙 Modo oscuro</button>
             </div>
         </div>
 
@@ -84,7 +89,7 @@
                 </div>
             </section>
 
-            <!-- FORMATOS -->
+            <!-- FORMATS -->
             <section class="chart-card" draggable="true" style="grid-column: span 2;">
                 <div class="card-header">
                     <h2>🧩 Formatos más usados</h2>
@@ -95,7 +100,7 @@
                 </div>
             </section>
 
-            <!-- ISLAS -->
+            <!-- ISLANDS -->
             <section class="chart-card" draggable="true" style="grid-column: span 2;">
                 <div class="card-header">
                     <h2>🏝️ Entidades por Isla</h2>
@@ -106,7 +111,7 @@
                 </div>
             </section>
 
-            <!-- TIPO ENTIDAD -->
+            <!-- ENTITY TYPE -->
             <section class="chart-card" draggable="true" style="grid-column: span 2;">
                 <div class="card-header">
                     <h2>🏛️ Entidades por tipo</h2>
@@ -117,7 +122,7 @@
                 </div>
             </section>
 
-            <!-- MACHINE READABLE (1 columna) -->
+            <!-- MACHINE READABLE (1 column) -->
             <section class="chart-card pie-chart" draggable="true">
                 <div class="card-header">
                     <h2>🤖 Datos legibles por máquina</h2>
@@ -128,10 +133,10 @@
                 </div>
             </section>
 
-            <!-- MADUREZ DEL PORTAL (nueva) -->
+            <!-- PORTAL MATURITY -->
             <section class="chart-card" draggable="true" style="grid-column: span 2;">
                 <div class="card-header">
-                    <h2>📈 Madurez del portal</h2>
+                    <h2>🚦 Madurez del portal</h2>
                     <button id="toggleMadurezChart" class="chart-toggle-btn">Cambiar gráfica</button>
                 </div>
                 <div class="chart-wrapper">
@@ -139,7 +144,7 @@
                 </div>
             </section>
 
-            <!-- PROVINCIA (1 columna) -->
+            <!-- PROVINCE (1 column) -->
             <section class="chart-card" draggable="true">
                 <div class="card-header">
                     <h2>📍 Entidades por Provincia</h2>
@@ -150,7 +155,7 @@
                 </div>
             </section>
 
-            <!-- ÁMBITO (1 columna) -->
+            <!-- SCOPE (1 column) -->
             <section class="chart-card" draggable="true">
                 <div class="card-header">
                     <h2>🌐 Distribución por ámbito</h2>
@@ -173,11 +178,11 @@
 
     <script>
 
-        /* =========================================================
+        /*
            SAFE STORAGE HELPER
            Wraps localStorage to prevent crashes in sandboxed iframes.
            Falls back to an in-memory store when localStorage is blocked.
-        ========================================================== */
+        */
 
         const _memoryStore = {};
 
@@ -194,10 +199,18 @@
         }
 
 
-        // Variables globales
+        /*
+           GLOBAL STATE
+        */
+
         let rawData = [];
+
+        // Chart instances — kept to allow destroy() before re-render
+        // Fixed: removed unused formatPieChart and apiPieChart variables
         let typeChart, formatChart, islandChart, provinceChart, apiChart,
-            formatPieChart, apiPieChart, machineReadablePieChart, scopeChart, madurezChart = null;
+            machineReadablePieChart, scopeChart, madurezChart = null;
+
+        // Current chart type per chart (toggled between 'bar' and 'pie')
         let typeChartType = 'bar';
         let formatChartType = 'bar';
         let apiChartType = 'bar';
@@ -207,22 +220,30 @@
         let machineReadableChartType = 'pie';
         let madurezChartType = 'bar';
 
-        // Normalizar datos
+
+        /*
+           DATA NORMALIZATION
+        */
+
         function normalizeStats(e) {
             const formats = (e.portals || []).flatMap(p => p.formats || []);
-            return { type: e.entity_kind || "N/D", formats: formats, fullEntity: e };
+            return { type: e.entity_kind || 'N/D', formats, fullEntity: e };
         }
 
-        // Contar frecuencias
+
+        /*
+           UTILITIES
+        */
+
         function countFrequency(items) {
             const counts = {};
             items.forEach(item => {
-                if (item && item !== "" && item !== "N/D") counts[item] = (counts[item] || 0) + 1;
+                if (item && item !== '' && item !== 'N/D')
+                    counts[item] = (counts[item] || 0) + 1;
             });
             return counts;
         }
 
-        // Traducir tipos de entidad
         function getTypeName(type) {
             const names = {
                 'gobierno_autonomico': 'Gobierno Autonómico',
@@ -232,17 +253,58 @@
                 'organismo_especializado_geoespacial': 'Org. Geoespacial',
                 'cabildo': 'Cabildo',
                 'ayuntamiento': 'Ayuntamiento',
-                'empresa_publica': 'Empresa Pública'
+                'empresa_publica': 'Empresa Pública',
             };
             return names[type] || type;
         }
 
-        // Colores según tema
+        function getIsland(entidad) {
+            if (entidad.islands && entidad.islands.length > 0)
+                return entidad.islands[0] === 'Todas' ? 'Todas las islas' : entidad.islands[0];
+            return 'No especificada';
+        }
+
+        function getProvince(entidad) {
+            const island = getIsland(entidad);
+            if (['Tenerife', 'La Palma', 'La Gomera', 'El Hierro'].includes(island))
+                return 'Santa Cruz de Tenerife';
+            if (['Gran Canaria', 'Lanzarote', 'Fuerteventura', 'La Graciosa'].includes(island))
+                return 'Las Palmas';
+            if (island === 'Todas las islas') return 'Ambas provincias';
+            return 'No especificada';
+        }
+
+
+        function getApiTypes(entidad) {
+            const apiTypes = [];
+            (entidad.portals || []).forEach(portal => {
+                if (portal.has_api === true) apiTypes.push('REST API');
+
+                // technology puede ser array o string según el schema
+                const techStr = Array.isArray(portal.technology)
+                    ? portal.technology.join(' ').toUpperCase()
+                    : String(portal.technology || '').toUpperCase();
+                if (techStr.includes('CKAN')) apiTypes.push('CKAN API');
+
+                (portal.formats || []).forEach(f => {
+                    const fu = f?.toUpperCase();
+                    // 'API' omitido — has_api ya cubre este caso y evita duplicados
+                    if (fu === 'WMS') apiTypes.push('WMS (Geoespacial)');
+                    if (fu === 'WFS') apiTypes.push('WFS (Geoespacial)');
+                    if (fu === 'ATOM') apiTypes.push('Atom Feed');
+                });
+            });
+            return [...new Set(apiTypes)];
+        }
+
+
+        /*
+           THEME / COLOR HELPERS
+        */
+
         function getChartColors(count) {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            // Modo oscuro: naranjas más luminosos
             const darkPalette = ['#ff7a1a', '#ff9f3f', '#ffc06b', '#ffd699', '#f15a24', '#d9480f', '#f59e0b', '#fbbf24'];
-            // Modo claro: distintos tonos de teal/verde azulado
             const lightPalette = ['#008080', '#1a9e9e', '#33b5b5', '#4dcccc', '#006666', '#004d4d', '#003333', '#66d9d9'];
             const palette = isDark ? darkPalette : lightPalette;
             return Array.from({ length: count }, (_, i) => palette[i % palette.length]);
@@ -252,15 +314,9 @@
             return document.documentElement.getAttribute('data-theme') === 'dark' ? '#e2e8f0' : '#1e293b';
         }
 
-        // Borde blanco para gráficos circulares
-        function getPieBorderColor() {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            return isDark ? '#9a3412' : '#ffffff';
-        }
-
-        function getPieBorderColors(count) {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            return isDark ? '#9a3412' : '#ffffff';
+        // Fixed: removed unused getPieBorderColor() — use getPieBorderColors() everywhere
+        function getPieBorderColors() {
+            return document.documentElement.getAttribute('data-theme') === 'dark' ? '#9a3412' : '#ffffff';
         }
 
         function getPieBorderWidth(chartType) {
@@ -279,13 +335,17 @@
                 cornerRadius: 8,
                 displayColors: true,
                 boxWidth: 10,
-                boxHeight: 10
+                boxHeight: 10,
             };
         }
 
-        // =========================================================
-        // FUNCIÓN COMPUTE MATURITY - IDENTICA A app.js
-        // =========================================================
+
+        /*
+           MATURITY COMPUTATION
+           WARNING: keep in sync with computeMaturity() in app.js.
+           Both must use identical logic — tech debt until a shared
+           module (maturity.js) is extracted.
+        */
 
         function computeMaturity(e) {
             const hasMachineReadable = e.machine_readable === true;
@@ -293,13 +353,10 @@
             const count = typeof e.dataset_count === 'number' ? e.dataset_count : null;
 
             let techStr = '';
-            if (Array.isArray(e.portal_tech)) {
-                techStr = e.portal_tech.join(' ').toUpperCase();
-            } else if (e.portal_tech) {
-                techStr = String(e.portal_tech).toUpperCase();
-            } else if (e.technology) {
-                techStr = Array.isArray(e.technology) ? e.technology.join(' ').toUpperCase() : String(e.technology).toUpperCase();
-            }
+            if (Array.isArray(e.portal_tech)) techStr = e.portal_tech.join(' ').toUpperCase();
+            else if (e.portal_tech) techStr = String(e.portal_tech).toUpperCase();
+            else if (Array.isArray(e.technology)) techStr = e.technology.join(' ').toUpperCase();
+            else if (e.technology) techStr = String(e.technology).toUpperCase();
 
             const isStrongTech =
                 techStr.includes('CKAN') ||
@@ -313,38 +370,53 @@
                 techStr.includes('PORTAL ESTÁTICO') ||
                 techStr.includes('SEDE ELECTRÓNICA');
 
-            if (hasMachineReadable && hasApi && isStrongTech && count !== null && count >= 50) {
+            if (hasMachineReadable && hasApi && isStrongTech && count !== null && count >= 50)
                 return 'high';
-            }
-
-            if (!hasMachineReadable) {
+            if (!hasMachineReadable)
                 return 'low';
-            }
-
-            if (isTransparencyOnly && !hasApi && (count === null || count < 20)) {
+            if (isTransparencyOnly && !hasApi && (count === null || count < 20))
                 return 'low';
-            }
-
             return 'medium';
         }
 
-        // Calcular madurez de un portal usando computeMaturity
         function calcularMadurezPortal(portal) {
-            const e = {
+            return computeMaturity({
                 machine_readable: portal.machine_readable,
                 has_api: portal.has_api,
                 apis: portal.apis || [],
                 dataset_count: portal.dataset_count,
                 portal_tech: portal.technology || [],
-                technology: portal.technology || []
-            };
-            return computeMaturity(e);
+                technology: portal.technology || [],
+            });
         }
 
-        // GRÁFICA 1: Entidades por tipo (con toggle bar/pie)
+
+        /*
+           MACHINE-READABLE FORMAT LIST
+           Fixed: updated from 6 to full 20-format list (2026-06).
+           Keep in sync with MR_FORMATS in app.py and acerca.html.
+        */
+
+        const MR_FORMATS = new Set([
+            // Tabular
+            'CSV', 'JSON', 'XML', 'XLSX', 'XLS', 'XLSM', 'ODS', 'TSV',
+            // Structured geospatial
+            'GEOJSON', 'KML', 'SHP', 'GML', 'GPKG', 'GDB',
+            // Linked Data / Semantic
+            'RDF', 'RDF-XML', 'N3', 'TURTLE',
+            // Statistical / Transport
+            'PC-AXIS', 'GTFS',
+            // Other structured
+            'NETCDF',
+        ]);
+
+
+        /*
+           CHART GENERATORS
+        */
+
         function generateTypeChart() {
-            const types = rawData.map(e => e.type);
-            const counts = countFrequency(types);
+            const counts = countFrequency(rawData.map(e => e.type));
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
             const labels = sorted.map(i => getTypeName(i[0]));
             const data = sorted.map(i => i[1]);
@@ -359,39 +431,42 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: getPieBorderWidth(typeChartType),
                         borderRadius: typeChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColors(data.length),
-                        hoverBorderColor: getPieBorderColors(data.length),
-                        borderAlign: 'inner'
-                    }]
+                        borderColor: getPieBorderColors(),
+                        hoverBorderColor: getPieBorderColors(),
+                        borderAlign: 'inner',
+                    }],
                 },
                 options: {
                     indexAxis: typeChartType === 'bar' ? 'y' : undefined,
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: {
-                            display: typeChartType === 'pie',
-                            position: 'bottom',
-                            labels: { color: getChartTextColor(), font: { size: 10 } }
-                        },
-                        tooltip: getTooltipConfig()
+                        legend: { display: typeChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
+                        tooltip: getTooltipConfig(),
                     },
                     scales: typeChartType === 'bar' ? {
                         x: { grid: { display: false }, ticks: { color: getChartTextColor() } },
-                        y: { grid: { display: false }, ticks: { color: getChartTextColor() } }
-                    } : {}
-                }
+                        y: { grid: { display: false }, ticks: { color: getChartTextColor() } },
+                    } : {},
+                },
             });
         }
 
-        // GRÁFICA 2: Formatos más usados (con toggle bar/pie)
         function generateFormatChart() {
-            let allFormats = [];
-            rawData.forEach(e => { if (Array.isArray(e.formats)) allFormats.push(...e.formats); });
-            const counts = countFrequency(allFormats);
-            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+            const allFormats = rawData.flatMap(e => Array.isArray(e.formats) ? e.formats : []);
+            const MIN_COUNT = 2;
+            const MAX_ITEMS = 15;
+            const sorted = Object.entries(countFrequency(allFormats))
+                .sort((a, b) => b[1] - a[1])
+                .filter(([, count]) => count >= MIN_COUNT)
+                .slice(0, MAX_ITEMS);
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
+
+            // Dynamic height based on number of bars
+            document.getElementById('formatChart').parentElement.style.minHeight =
+                Math.max(300, sorted.length * 36) + 'px';
+
             const ctx = document.getElementById('formatChart').getContext('2d');
             if (formatChart instanceof Chart) formatChart.destroy();
             formatChart = new Chart(ctx, {
@@ -403,45 +478,29 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: getPieBorderWidth(formatChartType),
                         borderRadius: formatChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColors(data.length),
-                        hoverBorderColor: getPieBorderColors(data.length),
-                        borderAlign: 'inner'
-                    }]
+                        borderColor: getPieBorderColors(),
+                        hoverBorderColor: getPieBorderColors(),
+                        borderAlign: 'inner',
+                    }],
                 },
                 options: {
                     indexAxis: formatChartType === 'bar' ? 'y' : undefined,
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: {
-                            display: formatChartType === 'pie',
-                            position: 'bottom',
-                            labels: { color: getChartTextColor(), font: { size: 10 } }
-                        },
-                        tooltip: getTooltipConfig()
+                        legend: { display: formatChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
+                        tooltip: getTooltipConfig(),
                     },
                     scales: formatChartType === 'bar' ? {
                         x: { ticks: { color: getChartTextColor() } },
-                        y: { ticks: { color: getChartTextColor() } }
-                    } : {}
-                }
+                        y: { ticks: { color: getChartTextColor() } },
+                    } : {},
+                },
             });
         }
 
-        // Obtener isla
-        function getIsland(entidad) {
-            if (entidad.islands && entidad.islands.length > 0)
-                return entidad.islands[0] === 'Todas' ? 'Todas las islas' : entidad.islands[0];
-            const location = (entidad.locations || [])[0];
-            if (location && location.island)
-                return location.island === 'Todas' ? 'Todas las islas' : location.island;
-            return 'No especificada';
-        }
-
-        // GRÁFICA 3: Entidades por Isla (con toggle bar/pie)
         function generateIslandChart() {
-            const islands = rawData.map(e => getIsland(e.fullEntity));
-            const counts = countFrequency(islands);
+            const counts = countFrequency(rawData.map(e => getIsland(e.fullEntity)));
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
@@ -451,33 +510,22 @@
                 type: islandChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: islandChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(islandChartType), borderColor: getPieBorderColors(data.length), hoverBorderColor: getPieBorderColors(data.length), borderAlign: 'inner' }]
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: islandChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(islandChartType), borderColor: getPieBorderColors(), hoverBorderColor: getPieBorderColors(), borderAlign: 'inner' }],
                 },
                 options: {
                     indexAxis: islandChartType === 'bar' ? 'y' : undefined,
                     responsive: true, maintainAspectRatio: false,
                     plugins: {
                         legend: { display: islandChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
-                        tooltip: getTooltipConfig()
+                        tooltip: getTooltipConfig(),
                     },
-                    scales: islandChartType === 'bar' ? { x: { ticks: { color: getChartTextColor() } }, y: { ticks: { color: getChartTextColor() } } } : {}
-                }
+                    scales: islandChartType === 'bar' ? { x: { ticks: { color: getChartTextColor() } }, y: { ticks: { color: getChartTextColor() } } } : {},
+                },
             });
         }
 
-        // Obtener provincia
-        function getProvince(entidad) {
-            const island = getIsland(entidad);
-            if (['Tenerife', 'La Palma', 'La Gomera', 'El Hierro'].includes(island)) return 'Santa Cruz de Tenerife';
-            if (['Gran Canaria', 'Lanzarote', 'Fuerteventura', 'La Graciosa'].includes(island)) return 'Las Palmas';
-            if (island === 'Todas las islas') return 'Ambas provincias';
-            return 'No especificada';
-        }
-
-        // GRÁFICA 4: Entidades por Provincia (con toggle bar/pie)
         function generateProvinceChart() {
-            const provinces = rawData.map(e => getProvince(e.fullEntity));
-            const counts = countFrequency(provinces);
+            const counts = countFrequency(rawData.map(e => getProvince(e.fullEntity)));
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
@@ -487,55 +535,42 @@
                 type: provinceChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: provinceChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(provinceChartType), borderColor: getPieBorderColors(data.length), hoverBorderColor: getPieBorderColors(data.length), borderAlign: 'inner' }]
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: provinceChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(provinceChartType), borderColor: getPieBorderColors(), hoverBorderColor: getPieBorderColors(), borderAlign: 'inner' }],
                 },
                 options: {
                     indexAxis: provinceChartType === 'bar' ? 'y' : undefined,
                     responsive: true, maintainAspectRatio: false,
                     plugins: {
                         legend: { display: provinceChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
-                        tooltip: getTooltipConfig()
+                        tooltip: getTooltipConfig(),
                     },
-                    scales: provinceChartType === 'bar' ? { x: { ticks: { color: getChartTextColor() } }, y: { ticks: { color: getChartTextColor() } } } : {}
-                }
+                    scales: provinceChartType === 'bar' ? { x: { ticks: { color: getChartTextColor() } }, y: { ticks: { color: getChartTextColor() } } } : {},
+                },
             });
         }
 
-        // Obtener tipos de API
-        function getApiTypes(entidad) {
-            const apiTypes = [];
-            (entidad.portals || []).forEach(portal => {
-                if (portal.has_api === true) apiTypes.push('REST API');
-                if (portal.technology && portal.technology.includes('CKAN')) apiTypes.push('CKAN API');
-                (portal.formats || []).forEach(f => {
-                    const fu = f?.toUpperCase();
-                    if (fu === 'API') apiTypes.push('API');
-                    if (fu === 'WMS') apiTypes.push('WMS (Geoespacial)');
-                    if (fu === 'WFS') apiTypes.push('WFS (Geoespacial)');
-                    if (fu === 'ATOM') apiTypes.push('Atom Feed');
-                });
-            });
-            return [...new Set(apiTypes)];
-        }
-
-        // GRÁFICA 5: Tipos de APIs (con toggle bar/pie)
         function generateApiChart() {
-            const allApis = [];
-            rawData.forEach(e => getApiTypes(e.fullEntity).forEach(api => { if (api) allApis.push(api); }));
-            const counts = countFrequency(allApis);
-            const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+            const allApis = rawData.flatMap(e => getApiTypes(e.fullEntity));
+            // No slice — API type universe is small enough to show all
+            const sorted = Object.entries(countFrequency(allApis))
+                .sort((a, b) => b[1] - a[1]);
             const ctx = document.getElementById('apiChart').getContext('2d');
             if (apiChart) apiChart.destroy();
             if (sorted.length === 0) {
                 apiChart = new Chart(ctx, {
                     type: 'bar',
                     data: { labels: ['No hay datos'], datasets: [{ data: [0], backgroundColor: '#94a3b8' }] },
-                    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false }
+                    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false },
                 });
                 return;
             }
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
+
+            // Dynamic height based on number of bars
+            document.getElementById('apiChart').parentElement.style.minHeight =
+                Math.max(300, sorted.length * 36) + 'px';
+
             apiChart = new Chart(ctx, {
                 type: apiChartType,
                 data: {
@@ -546,52 +581,46 @@
                         backgroundColor: getChartColors(data.length),
                         borderWidth: getPieBorderWidth(apiChartType),
                         borderRadius: apiChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColors(data.length),
-                        hoverBorderColor: getPieBorderColors(data.length),
-                        borderAlign: 'inner'
-                    }]
+                        borderColor: getPieBorderColors(),
+                        hoverBorderColor: getPieBorderColors(),
+                        borderAlign: 'inner',
+                    }],
                 },
                 options: {
                     indexAxis: apiChartType === 'bar' ? 'y' : undefined,
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: {
-                            display: apiChartType === 'pie',
-                            position: 'bottom',
-                            labels: { color: getChartTextColor(), font: { size: 10 } }
-                        },
-                        tooltip: getTooltipConfig()
+                        legend: { display: apiChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
+                        tooltip: getTooltipConfig(),
                     },
                     scales: apiChartType === 'bar' ? {
                         x: { ticks: { color: getChartTextColor() } },
-                        y: { ticks: { color: getChartTextColor() } }
-                    } : {}
-                }
+                        y: { ticks: { color: getChartTextColor() } },
+                    } : {},
+                },
             });
         }
 
-        // PIE CHART: Machine-readable (con toggle bar/pie)
         function generateMachineReadablePieChart() {
             let yes = 0, no = 0, unknown = 0;
-            const mrFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
-            rawData.forEach(e => {
-                const formats = (e.fullEntity.portals || []).flatMap(p => p.formats || []);
-                const hasMR = formats.some(f => mrFormats.includes(String(f).toUpperCase()));
+
+            // Iteramos portales (no entidades) para ser consistentes con generateMadurezChart()
+            const allPortals = rawData.flatMap(e => e.fullEntity.portals || []);
+            allPortals.forEach(portal => {
+                const formats = portal.formats || [];
+                const hasMR = formats.some(f => MR_FORMATS.has(String(f).toUpperCase()));
                 if (hasMR) yes++;
-                else if (formats.length === 0) unknown++;
+                else if (!formats.length) unknown++;
                 else no++;
             });
-            const labels = ['Machine-readable ✅', 'Solo docs 📄', 'Sin datos 🔲'];
+
+            const labels = ['Machine-readable ✅', 'Solo docs 📄', 'Sin declarar 🔲'];
             const data = [yes, no, unknown];
             const ctx = document.getElementById('machineReadablePieChart').getContext('2d');
             if (machineReadablePieChart) machineReadablePieChart.destroy();
-
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const colors = isDark
-                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
-                : ['#008080', '#33b5b5', '#66d9d9'];
-
+            const colors = isDark ? ['#ff7a1a', '#ff9f3f', '#ffc06b'] : ['#008080', '#33b5b5', '#66d9d9'];
             machineReadablePieChart = new Chart(ctx, {
                 type: machineReadableChartType,
                 data: {
@@ -601,28 +630,29 @@
                         backgroundColor: colors,
                         borderWidth: getPieBorderWidth(machineReadableChartType),
                         borderRadius: machineReadableChartType === 'bar' ? 8 : 0,
-                        borderColor: getPieBorderColors(data.length),
-                        hoverBorderColor: getPieBorderColors(data.length),
-                        borderAlign: 'inner'
-                    }]
+                        borderColor: getPieBorderColors(),
+                        hoverBorderColor: getPieBorderColors(),
+                        borderAlign: 'inner',
+                    }],
                 },
                 options: {
                     indexAxis: machineReadableChartType === 'bar' ? 'y' : undefined,
                     responsive: true, maintainAspectRatio: false,
                     plugins: {
                         legend: { display: machineReadableChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
-                        tooltip: getTooltipConfig()
+                        tooltip: getTooltipConfig(),
                     },
-                    scales: machineReadableChartType === 'bar' ? { x: { ticks: { color: getChartTextColor() } }, y: { ticks: { color: getChartTextColor() } } } : {}
-                }
+                    scales: machineReadableChartType === 'bar' ? {
+                        x: { ticks: { color: getChartTextColor() } },
+                        y: { ticks: { color: getChartTextColor() } },
+                    } : {},
+                },
             });
         }
 
-        // GRÁFICA: Distribución por ámbito (con toggle bar/pie)
         function generateScopeChart() {
             const scopeNames = { autonomico: 'Autonómico', insular: 'Insular', municipal: 'Municipal', estatal: 'Estatal', europeo: 'Europeo' };
-            const scopes = rawData.map(e => scopeNames[e.fullEntity.scope] || e.fullEntity.scope || 'No especificado');
-            const counts = countFrequency(scopes);
+            const counts = countFrequency(rawData.map(e => scopeNames[e.fullEntity.scope] || e.fullEntity.scope || 'No especificado'));
             const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
@@ -632,77 +662,59 @@
                 type: scopeChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: scopeChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(scopeChartType), borderColor: getPieBorderColors(data.length), hoverBorderColor: getPieBorderColors(data.length), borderAlign: 'inner' }]
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: scopeChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(scopeChartType), borderColor: getPieBorderColors(), hoverBorderColor: getPieBorderColors(), borderAlign: 'inner' }],
                 },
                 options: {
-                    indexAxis: scopeChartType === 'bar' ? 'x' : undefined,
+                    indexAxis: scopeChartType === 'bar' ? 'y' : undefined, // fixed: was 'x'
                     responsive: true, maintainAspectRatio: false,
                     plugins: {
                         legend: { display: scopeChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
-                        tooltip: getTooltipConfig()
+                        tooltip: getTooltipConfig(),
                     },
-                    scales: scopeChartType === 'bar' ? { x: { ticks: { color: getChartTextColor() } }, y: { ticks: { color: getChartTextColor() } } } : {}
-                }
+                    scales: scopeChartType === 'bar' ? {
+                        x: { ticks: { color: getChartTextColor() } },
+                        y: { ticks: { color: getChartTextColor() } },
+                    } : {},
+                },
             });
         }
 
-        // =========================================================
-        // NUEVA GRÁFICA: Madurez del portal (USANDO computeMaturity)
-        // =========================================================
-
         function generateMadurezChart() {
-            const allPortals = [];
-
             if (!rawData || rawData.length === 0) {
-                console.warn('generateMadurezChart: rawData vacío');
+                console.warn('generateMadurezChart: rawData is empty');
                 return;
             }
-
-            rawData.forEach(e => {
-                if (e.fullEntity && e.fullEntity.portals && Array.isArray(e.fullEntity.portals)) {
-                    e.fullEntity.portals.forEach(portal => {
-                        allPortals.push(portal);
-                    });
-                }
-            });
-
+            const allPortals = rawData.flatMap(e =>
+                (e.fullEntity?.portals && Array.isArray(e.fullEntity.portals))
+                    ? e.fullEntity.portals
+                    : []
+            );
             if (allPortals.length === 0) {
-                console.warn('generateMadurezChart: No se encontraron portales');
+                console.warn('generateMadurezChart: no portals found');
                 const ctx = document.getElementById('madurezChart').getContext('2d');
                 if (madurezChart) madurezChart.destroy();
                 madurezChart = new Chart(ctx, {
                     type: 'bar',
                     data: { labels: ['No hay datos'], datasets: [{ data: [0], backgroundColor: '#94a3b8' }] },
-                    options: { responsive: true, maintainAspectRatio: false }
+                    options: { responsive: true, maintainAspectRatio: false },
                 });
                 return;
             }
-
             let alta = 0, media = 0, baja = 0;
             allPortals.forEach(portal => {
-                const maturity = calcularMadurezPortal(portal);
-                if (maturity === 'high') alta++;
-                else if (maturity === 'medium') media++;
-                else if (maturity === 'low') baja++;
+                const m = calcularMadurezPortal(portal);
+                if (m === 'high') alta++;
+                else if (m === 'medium') media++;
+                else baja++;
             });
-
-            console.log(`📊 Madurez calculada: Alta=${alta}, Media=${media}, Baja=${baja} (Total=${allPortals.length} portales)`);
-
+            console.log(`Maturity — High: ${alta}, Medium: ${media}, Low: ${baja} (total: ${allPortals.length} portals)`);
             const labels = ['🟢 Madurez alta', '🟠 Madurez media', '🔴 Madurez baja'];
             const data = [alta, media, baja];
             const ctx = document.getElementById('madurezChart').getContext('2d');
-
             if (madurezChart) madurezChart.destroy();
-
+            // Fixed: barColors and pieColors were identical — merged into a single variable
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            const barColors = isDark
-                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
-                : ['#008080', '#33b5b5', '#66d9d9'];
-
-            const pieColors = isDark
-                ? ['#ff7a1a', '#ff9f3f', '#ffc06b']
-                : ['#008080', '#33b5b5', '#66d9d9'];
-
+            const colors = isDark ? ['#ff7a1a', '#ff9f3f', '#ffc06b'] : ['#008080', '#33b5b5', '#66d9d9'];
             madurezChart = new Chart(ctx, {
                 type: madurezChartType,
                 data: {
@@ -710,51 +722,40 @@
                     datasets: [{
                         label: 'Portales',
                         data,
-                        backgroundColor: madurezChartType === 'pie' ? pieColors : barColors,
+                        backgroundColor: colors,
                         borderRadius: madurezChartType === 'bar' ? 8 : 0,
                         borderWidth: getPieBorderWidth(madurezChartType),
-                        borderColor: getPieBorderColors(data.length),
-                        hoverBorderColor: getPieBorderColors(data.length),
-                        borderAlign: 'inner'
-                    }]
+                        borderColor: getPieBorderColors(),
+                        hoverBorderColor: getPieBorderColors(),
+                        borderAlign: 'inner',
+                    }],
                 },
                 options: {
                     indexAxis: madurezChartType === 'bar' ? 'y' : undefined,
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: {
-                            display: madurezChartType === 'pie',
-                            position: 'bottom',
-                            labels: { color: getChartTextColor(), font: { size: 10 } }
-                        },
+                        legend: { display: madurezChartType === 'pie', position: 'bottom', labels: { color: getChartTextColor(), font: { size: 10 } } },
                         tooltip: {
                             ...getTooltipConfig(),
                             callbacks: {
-                                label: function (context) {
-                                    const label = context.label || '';
+                                label(context) {
                                     const value = context.raw || 0;
                                     const total = data.reduce((a, b) => a + b, 0);
-                                    const percent = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
-                                    return `${label}: ${value} portales (${percent}%)`;
-                                }
-                            }
-                        }
+                                    const pct = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                                    return `${context.label}: ${value} portales (${pct}%)`;
+                                },
+                            },
+                        },
                     },
                     scales: madurezChartType === 'bar' ? {
-                        x: {
-                            ticks: { color: getChartTextColor() },
-                            grid: { display: false },
-                            title: { display: true, text: 'Número de portales', color: getChartTextColor() }
-                        },
-                        y: {
-                            ticks: { color: getChartTextColor() },
-                            grid: { display: false }
-                        }
-                    } : {}
-                }
+                        x: { ticks: { color: getChartTextColor() }, grid: { display: false }, title: { display: true, text: 'Número de portales', color: getChartTextColor() } },
+                        y: { ticks: { color: getChartTextColor() }, grid: { display: false } },
+                    } : {},
+                },
             });
         }
+
 
         function regenerateAll() {
             generateTypeChart();
@@ -767,35 +768,71 @@
             generateMadurezChart();
         }
 
-        // Cargar datos
+
+        /*
+           DATA LOADING
+           Fixed: added descriptive error state with retry button,
+           consistent with the error handling pattern in app.js.
+        */
+
+
+        function showGridMessage(html) {
+            let overlay = document.getElementById('grid-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'grid-overlay';
+                overlay.style.cssText = 'grid-column:1/-1; text-align:center; padding:2rem;';
+                document.querySelector('.charts-grid').prepend(overlay);
+            }
+            overlay.innerHTML = html;
+            overlay.style.display = 'block';
+        }
+
+        function hideGridMessage() {
+            const overlay = document.getElementById('grid-overlay');
+            if (overlay) overlay.style.display = 'none';
+        }
+
         async function loadData() {
+            showGridMessage('<p>⏳ Cargando datos...</p>');
             try {
                 const response = await fetch('/api/entidades');
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 const json = await response.json();
-                console.log('✅ Datos cargados:', json.length, 'entidades');
+                console.log(`Loaded ${json.length} entities`);
                 rawData = json.flat(Infinity).map(normalizeStats);
+                hideGridMessage();
                 regenerateAll();
-                console.log('✅ Todas las gráficas generadas');
             } catch (error) {
-                console.error('Error:', error);
-                document.querySelector('.charts-grid').innerHTML = '<p style="text-align:center; padding:2rem; grid-column:1/-1;">⚠️ Error al cargar los datos.</p>';
+                console.error('loadData error:', error);
+                showGridMessage(`
+            <p>⚠️ Error al cargar los datos: <code>${error.message}</code></p>
+            <button onclick="loadData()" class="reset-btn" style="margin-top:1rem;">
+                ⟳ Reintentar
+            </button>
+        `);
             }
         }
 
-        // Drag & Drop
+
+        /*
+           DRAG & DROP
+        */
+
         function saveChartOrder() {
-            const order = Array.from(document.querySelectorAll('.chart-card')).map(card => card.querySelector('h2').innerText);
+            const order = Array.from(document.querySelectorAll('.chart-card'))
+                .map(card => card.querySelector('h2').innerText);
             safeStorage('set', 'chartOrder', JSON.stringify(order));
         }
 
         function restoreChartOrder() {
-            const savedOrder = safeStorage('get', 'chartOrder');
-            if (!savedOrder) return false;
-            const order = JSON.parse(savedOrder);
+            const saved = safeStorage('get', 'chartOrder');
+            if (!saved) return false;
+            const order = JSON.parse(saved);
             const container = document.querySelector('.charts-grid');
             order.forEach(titleText => {
-                const card = Array.from(container.querySelectorAll('.chart-card')).find(c => c.querySelector('h2').innerText === titleText);
+                const card = Array.from(container.querySelectorAll('.chart-card'))
+                    .find(c => c.querySelector('h2').innerText === titleText);
                 if (card) container.appendChild(card);
             });
             return true;
@@ -803,9 +840,11 @@
 
         function resetToOriginalOrder() {
             const container = document.querySelector('.charts-grid');
-            const originalIds = ['apiChart', 'formatChart', 'islandChart', 'typeChart', 'machineReadablePieChart', 'madurezChart', 'provinceChart', 'scopeChart'];
+            const originalIds = ['apiChart', 'formatChart', 'islandChart', 'typeChart',
+                'machineReadablePieChart', 'madurezChart', 'provinceChart', 'scopeChart'];
             originalIds.forEach(id => {
-                const card = Array.from(container.querySelectorAll('.chart-card')).find(c => c.querySelector(`#${id}`));
+                const card = Array.from(container.querySelectorAll('.chart-card'))
+                    .find(c => c.querySelector(`#${id}`));
                 if (card) container.appendChild(card);
             });
             safeStorage('remove', 'chartOrder');
@@ -841,9 +880,14 @@
             });
         }
 
-        // Dark mode
+
+        /*
+           DARK MODE
+        */
+
         (function () {
-            if (safeStorage('get', 'darkMode') === 'enabled') document.documentElement.setAttribute('data-theme', 'dark');
+            if (safeStorage('get', 'darkMode') === 'enabled')
+                document.documentElement.setAttribute('data-theme', 'dark');
         })();
 
         const darkBtn = document.getElementById('darkModeToggle');
@@ -857,19 +901,27 @@
                     document.documentElement.setAttribute('data-theme', 'dark');
                     safeStorage('set', 'darkMode', 'enabled');
                 }
-                darkBtn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️ Modo claro' : '🌙 Modo oscuro';
+                darkBtn.textContent = document.documentElement.getAttribute('data-theme') === 'dark'
+                    ? '☀️ Modo claro'
+                    : '🌙 Modo oscuro';
                 if (rawData.length > 0) regenerateAll();
             });
-            if (document.documentElement.getAttribute('data-theme') === 'dark') darkBtn.textContent = '☀️ Modo claro';
+            if (document.documentElement.getAttribute('data-theme') === 'dark')
+                darkBtn.textContent = '☀️ Modo claro';
         }
 
-        // Toggles bar/pie
+
+        /*
+           CHART TOGGLE LISTENERS
+        */
+
         document.getElementById('toggleTypeChart')?.addEventListener('click', () => {
             if (!rawData.length) return;
             typeChartType = typeChartType === 'bar' ? 'pie' : 'bar';
             generateTypeChart();
         });
         document.getElementById('toggleFormatChart')?.addEventListener('click', () => {
+            if (!rawData.length) return;
             formatChartType = formatChartType === 'bar' ? 'pie' : 'bar';
             generateFormatChart();
         });
@@ -903,19 +955,23 @@
             madurezChartType = madurezChartType === 'bar' ? 'pie' : 'bar';
             generateMadurezChart();
         });
-
-        // Reset order
         document.getElementById('resetOrderBtn')?.addEventListener('click', () => {
             resetToOriginalOrder();
             saveChartOrder();
         });
 
-        // Arranque
-        loadData();
-        setTimeout(() => {
+
+        /* 
+           BOOTSTRAP
+         */
+
+        async function bootstrap() {
+            await loadData();
             restoreChartOrder();
             initDragAndDrop();
-        }, 500);
+        }
+
+        bootstrap();
 
     </script>
 </body>
