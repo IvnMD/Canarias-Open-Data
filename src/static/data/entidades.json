@@ -16914,7 +16914,7 @@
             "documentation_url": "https://datos.gob.es/es/apidata"
           }
         ],
-        "dataset_count": null,
+        "dataset_count": "112403",
         "dataset_count_note": "Agregador nacional; el número varía por catálogo federado.",
         "last_updated": "2026-05",
         "license_summary": "Múltiples licencias según el conjunto de datos",
