@@ -4669,9 +4669,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Paso",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Islas Canarias, 12",
+        "postal_code": "38750",
+        "municipality": "El Paso",
         "island": "La Palma",
         "coordinates": {
           "lat": 28.6572,
@@ -4718,10 +4718,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.elpaso.es"
+        "https://transparencia.elpaso.es",
+        "https://sede.elpaso.es/"
       ]
     },
     "notes": null
@@ -4905,9 +4906,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Sauzal",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle La Constitución, 3",
+        "postal_code": "38360",
+        "municipality": "El Sauzal",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4711,
@@ -4918,8 +4919,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de El Sauzal",
         "url": "https://transparencia.elsauzal.es",
         "portal_status": "active",
@@ -4949,13 +4950,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.elsauzal.es"
       ]
@@ -5192,9 +5193,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Firgas",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza San Roque, 1",
+        "postal_code": "35430",
+        "municipality": "Firgas",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0647,
@@ -5205,8 +5206,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Firgas",
         "url": "https://firgas.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -5236,13 +5237,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://firgas.sedelectronica.es/transparency"
       ]
@@ -5437,8 +5438,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Garafía",
         "url": "https://transparencia.garafia.es",
         "portal_status": "active",
@@ -5468,15 +5469,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.garafia.es"
+        "https://transparencia.garafia.es",
+        "https://www.garafia.es/contacto/"
       ]
     },
     "notes": null
@@ -5684,9 +5686,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Haría",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Constitución, 1",
+        "postal_code": "35520",
+        "municipality": "Haría",
         "island": "Lanzarote",
         "coordinates": {
           "lat": 29.1436,
@@ -5697,8 +5699,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Haría",
         "url": "https://sede.ayuntamientodeharia.com/transparencia",
         "portal_status": "active",
@@ -5733,7 +5735,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.ayuntamientodeharia.com/transparencia"
@@ -5891,23 +5893,23 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Ingenio",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Candelaria, 1",
+        "postal_code": "35250",
+        "municipality": "Ingenio",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 27.9222,
           "lon": -15.4358
         },
-        "source_url": "https://ingenio.es"
+        "source_url": "https://transparencia.ingenio.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Ingenio",
-        "url": "https://ingenio.es",
+        "url": "https://transparencia.ingenio.es/",
         "portal_status": "active",
         "technology": [
           "Portal Transparencia"
@@ -5940,10 +5942,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ingenio.es"
+        "https://transparencia.ingenio.es/",
+        "https://ingenio.sedelectronica.es/info.0"
       ]
     },
     "notes": null
@@ -6143,9 +6146,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Matanza de Acentejo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Tinguaro, 20",
+        "postal_code": "38370",
+        "municipality": "La Matanza de Acentejo",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.448117,
@@ -6156,8 +6159,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de La Matanza de Acentejo",
         "url": "https://sede.matanceros.es/transparencia",
         "portal_status": "active",
@@ -6187,13 +6190,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://sede.matanceros.es/transparencia"
       ]
@@ -6463,9 +6465,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Villa de Mazo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza Pedro Pérez Díaz, 1",
+        "postal_code": "38730",
+        "municipality": "Villa de Mazo",
         "island": "La Palma",
         "coordinates": {
           "lat": 28.6061,
@@ -6476,8 +6478,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de La Villa de Mazo",
         "url": "https://villademazo.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -6507,15 +6509,15 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://villademazo.sedelectronica.es/transparency"
+        "https://villademazo.sedelectronica.es/transparency",
+        "https://villademazo.com/el-ayuntamiento/"
       ]
     },
     "notes": null
@@ -6673,9 +6675,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Los Silos",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Luz, s/n",
+        "postal_code": "38470",
+        "municipality": "Los Silos",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.3803,
@@ -6686,8 +6688,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Los Silos",
         "url": "https://lossilos.sedelectronica.es/info.0",
         "portal_status": "active",
@@ -6717,13 +6719,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://lossilos.sedelectronica.es/info.0"
       ]
@@ -6963,9 +6965,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Puerto del Rosario",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Fernández Castañeyra, 2",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
         "island": "Fuerteventura",
         "coordinates": {
           "lat": 28.4997,
@@ -6976,8 +6978,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Puerto del Rosario",
         "url": "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia",
         "portal_status": "active",
@@ -7007,15 +7009,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia"
+        "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia",
+        "https://transparencia.puertodelrosario.org",
+        "https://www.puertodelrosario.org/contacto/"
       ]
     },
     "notes": null
@@ -7224,9 +7228,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Pájara",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Nuestra Señora de la Regla, 3",
+        "postal_code": "35628",
+        "municipality": "Pájara",
         "island": "Fuerteventura",
         "coordinates": {
           "lat": 28.3461,
@@ -7237,8 +7241,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Pájara",
         "url": "https://transparencia.pajara.es",
         "portal_status": "active",
@@ -7268,15 +7272,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified"  ,
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.pajara.es"
+        "https://transparencia.pajara.es",
+        "https://www.pajara.es/contacto/"
       ]
     },
     "notes": null
@@ -7475,9 +7480,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de San Juan de la Rambla",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Diecinueve de Marzo, 31",
+        "postal_code": "38428",
+        "municipality": "San Juan de la Rambla",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.379467,
@@ -7488,8 +7493,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de San Juan de la Rambla",
         "url": "https://transparencia.sanjuandelarambla.es",
         "portal_status": "active",
@@ -7519,13 +7524,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.sanjuandelarambla.es"
       ]
@@ -7685,9 +7690,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Santa Brígida",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Nueva, 13",
+        "postal_code": "35300",
+        "municipality": "Santa Brígida",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0519,
@@ -7698,8 +7703,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Santa Brígida",
         "url": "http://www.santabrigida.es/transparencia-indice-de-contenidos",
         "portal_status": "active",
@@ -7734,10 +7739,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "http://www.santabrigida.es/transparencia-indice-de-contenidos"
+        "https://www.santabrigida.es/transparencia-indice-de-contenido/",
+        "https://www.santabrigida.es/ayuntamiento/telefonos-municipales/"
       ]
     },
     "notes": null
@@ -7938,9 +7944,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Santa María de Guía",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Eusebia de Armas, 4",
+        "postal_code": "35450",
+        "municipality": "Santa María de Guía de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.1303,
@@ -7951,8 +7957,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Santa María de Guía",
         "url": "https://santamariadeguia.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -7962,7 +7968,9 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "CSV",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
@@ -7982,13 +7990,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://santamariadeguia.sedelectronica.es/transparency"
       ]
@@ -8148,9 +8156,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tacoronte",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza del Cristo, 1",
+        "postal_code": "38350",
+        "municipality": "Tacoronte",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4758,
@@ -8161,8 +8169,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Tacoronte",
         "url": "https://sede.tacoronte.es/transparencia",
         "portal_status": "active",
@@ -8192,15 +8200,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.tacoronte.es/transparencia"
+        "https://sede.tacoronte.es/transparencia",
+        "https://www.tacoronte.es/ayuntamiento/directorio/"
       ]
     },
     "notes": null
@@ -8443,21 +8452,21 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Teguise",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida General Franco, 1",
+        "postal_code": "35530",
+        "municipality": "Teguise",
         "island": "Lanzarote",
         "coordinates": {
           "lat": 29.0608,
-          "lon": -13.5619
+        "lon": -13.5619
         },
         "source_url": "https://sede.teguise.es/transparencia"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Teguise",
         "url": "https://sede.teguise.es/transparencia",
         "portal_status": "active",
@@ -8487,15 +8496,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.teguise.es/transparencia"
+        "https://sede.teguise.es/transparencia",
+        "https://teguise.es/telefonos-de-interes/"
       ]
     },
     "notes": null
@@ -8698,9 +8708,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Teror",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza Muro Nuevo, 2",
+        "postal_code": "35330",
+        "municipality": "Teror",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0594,
@@ -8711,8 +8721,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Teror",
         "url": "https://teror.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -8747,10 +8757,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://teror.sedelectronica.es/transparency"
+        "https://teror.sedelectronica.es/transparency",
+        "https://teror.es/contacto-2/"
       ]
     },
     "notes": null
