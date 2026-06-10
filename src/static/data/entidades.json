@@ -3952,7 +3952,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Arafo",
         "url": "https://arafo.sedelectronica.es/info.0",
         "portal_status": "active",
@@ -3982,15 +3982,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://arafo.sedelectronica.es/info.0"
+        "https://arafo.sedelectronica.es/info.0",
+        "https://arafo.sedelectronica.es"
       ]
     },
     "notes": null
