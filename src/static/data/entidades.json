@@ -1429,99 +1429,259 @@
     "notes": null
   },
   {
-    "id": "european_data_portal",
-    "name": "European Data Portal (data.europa.eu)",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
-    ],
-    "description": "Portal europeo que agrega datasets de España y Canarias federados desde datos.gob.es y portales autonómicos.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "European Data Portal (data.europa.eu)",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+  "id": "european_data_portal",
+  "name": "Portal Europeo de Datos",
+  "alternate_names": [
+    "European Data Portal",
+    "data.europa.eu",
+    "Espacio Europeo de Datos Jurídicos",
+    "EEDJ",
+    "European Legal Data Space"
+  ],
+  "entity_kind": "organismo",
+  "scope": "europeo",
+  "parent_entity_id": null,
+  "islands": ["Todas"],
+  "description": "Portal europeo de datos abiertos gestionado por la Oficina de Publicaciones de la UE, que agrega datasets de España y Canarias federados desde datos.gob.es y portales autonómicos. Incluye el Espacio Europeo de Datos Jurídicos (EEDJ), creado en el marco de la Estrategia Europea de Datos (feb. 2020), que facilita acceso interoperable y reutilizable a legislación y jurisprudencia de toda la UE mediante estándares ELI y ECLI. Relevante para Canarias como punto de acceso al marco normativo europeo que afecta al ecosistema de datos abiertos de las islas.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Office des Publications de l'Union Européenne",
+      "postal_code": null,
+      "municipality": "Luxemburgo",
+      "island": "Todas",
+      "coordinates": {
+        "lat": 49.6116,
+        "lon": 6.1319
+      },
+      "source_url": "https://data.europa.eu"
+    }
+  ],
+  "portals": [
+    {
+      "id": "data_europa_open_data",
+      "kind": "open_data",
+      "name": "data.europa.eu – Portal de Datos Abiertos",
+      "url": "https://data.europa.eu/data/datasets",
+      "portal_status": "active",
+      "technology": ["CKAN", "Portal europeo"],
+      "standards": ["DCAT-AP", "SPARQL"],
+      "formats": ["CSV", "JSON", "XML", "RDF", "SPARQL"],
+      "topics": [
+        "Turismo", "Demografía", "Economía", "Medio ambiente",
+        "Sector público", "Transporte", "Energía", "Agricultura"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "data.europa.eu Search API",
+          "url": "https://data.europa.eu/api/hub/search/",
+          "type": "REST",
+          "documentation_url": "https://data.europa.eu/api/hub/search/"
         },
-        "source_url": "https://data.europa.eu/euodp/es/data"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – European Data Portal (data.europa.eu)",
-        "url": "https://data.europa.eu/euodp/es/data",
-        "portal_status": "active",
-        "technology": [
-          "CKAN",
-          "Portal europeo"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "RDF",
-          "SPARQL"
-        ],
-        "topics": [
-          "Turismo",
-          "Demografía",
-          "Economía",
-          "Medio ambiente",
-          "Sector público",
-          "Transporte",
-          "Energía",
-          "Agricultura"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "data.europa.eu API",
-            "url": "https://data.europa.eu/api/hub/search/",
-            "type": "REST",
-            "documentation_url": null
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Múltiples",
-        "licenses": [
-          {
-            "name": "Múltiples (CC BY, ODbL, open government)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://data.europa.eu/euodp/es/data"
-      ]
+        {
+          "name": "SPARQL endpoint",
+          "url": "https://data.europa.eu/data/sparql?locale=es",
+          "type": "SPARQL",
+          "documentation_url": "https://data.europa.eu/data/sparql?locale=es"
+        }
+      ],
+      "dataset_count": 1745725,                          
+      "dataset_count_note": "Total datasets indexados globalmente en data.europa.eu a 2026-06. España (datos.gob.es): 105.877 datasets federados. Publisher 'Instituto Canario de Estadística': 21.562. Publisher 'Parlamento de Canarias': 4.346. Fuente: data.europa.no.geo.json, result.count, consultado 2026-06.",
+      "last_updated": null,
+      "license_summary": "Múltiples (CC BY, ODbL, open government)",
+      "licenses": [
+        {
+          "name": "Múltiples (CC BY, ODbL, open government)",
+          "id": null,
+          "url": "https://data.europa.eu/licensing-assistant/licences?locale=es"
+        }
+      ],
+      "last_checked": "2026-06",
+      "machine_readable": true
     },
-    "notes": null
+    {
+      "id": "eedj_registro_juridico",
+      "kind": "other",
+      "name": "EEDJ – Registros jurídicos nacionales y de la UE (ELDS)",
+      "url": "https://data.europa.eu/data/datasets/elds",
+      "portal_status": "active",
+      "technology": ["Portal europeo"],
+      "standards": ["ELI", "ECLI"],
+      "formats": ["RDF", "JSON", "XML", "HTML"],
+      "topics": [
+        "Legislación", "Jurisprudencia", "Derecho", "Normativa",
+        "Sector público", "Registros jurídicos"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Lista de registros jurídicos nacionales y de la UE del Espacio Europeo de Datos Jurídicos (EEDJ). Punto de acceso central a colecciones de legislación y jurisprudencia interoperables.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": true
+    },
+    {
+      "id": "eurlex_reutilizacion",
+      "kind": "open_data",
+      "name": "EUR-Lex – Reutilización de contenido",
+      "url": "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=es",
+      "portal_status": "active",
+      "technology": ["EUR-Lex"],
+      "standards": ["ELI", "CELEX"],
+      "formats": ["XML", "HTML", "PDF", "RDF"],
+      "topics": [
+        "Legislación europea", "Normativa", "Derecho de la UE",
+        "Tratados", "Reglamentos", "Directivas"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "EUR-Lex Data Dump (volcado masivo – sector 3)",
+          "url": "https://datadump.publications.europa.eu/",
+          "type": "bulk_download",
+          "documentation_url": "https://datadump.publications.europa.eu/"
+        }
+      ],
+      "dataset_count": null,
+      "dataset_count_note": "Descarga masiva de todos los actos jurídicos en vigor por idioma (sector CELEX 3). Requiere cuenta EU Login. Permite reutilización de todo el contenido de EUR-Lex conforme a las condiciones publicadas.",
+      "last_updated": null,
+      "license_summary": "Condiciones de reutilización EUR-Lex",
+      "licenses": [
+        {
+          "name": "Condiciones de reutilización EUR-Lex",
+          "id": null,
+          "url": "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=es"
+        }
+      ],
+      "last_checked": "2026-06",
+      "machine_readable": true
+    },
+    {
+      "id": "ecli_buscador",
+      "kind": "other",
+      "name": "Motor de búsqueda ECLI – Portal e-Justicia",
+      "url": "https://e-justice.europa.eu/topics/legislation-and-case-law/european-case-law-identifier-ecli-search-engine_es",
+      "portal_status": "active",
+      "technology": ["Portal e-Justicia"],
+      "standards": ["ECLI"],
+      "formats": ["HTML", "XML"],
+      "topics": [
+        "Jurisprudencia", "Resoluciones judiciales", "Derecho europeo",
+        "Identificadores jurídicos", "Justicia"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Buscador oficial del Identificador Europeo de Jurisprudencia (ECLI). Permite localizar resoluciones judiciales de los Estados miembros y del TJUE mediante identificador normalizado.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": true
+    },
+    {
+      "id": "ejusticia_portal",
+      "kind": "other",
+      "name": "Portal Europeo de Justicia en Red (e-Justicia)",
+      "url": "https://e-justice.europa.eu/home_es",
+      "portal_status": "active",
+      "technology": ["Portal e-Justicia"],
+      "standards": ["ECLI"],
+      "formats": ["HTML", "PDF"],
+      "topics": [
+        "Sistemas judiciales", "Justicia", "Acceso a la justicia",
+        "Legislación", "Procedimientos judiciales"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Ventanilla única electrónica para todos los asuntos relacionados con la justicia en la UE. Proporciona información sobre sistemas judiciales y mejora el acceso a la justicia para ciudadanos y profesionales.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": false
+    },
+    {
+  "id": "edcp_contratacion_publica",
+  "kind": "open_data",
+  "name": "EDCP – Espacio Europeo de Datos sobre Contratación Pública",
+  "url": "https://data.europa.eu/es/PPDS",
+  "portal_status": "active",
+  "technology": ["Portal europeo", "TED"],
+  "standards": ["DCAT-AP", "SPARQL", "eForms", "eCO ontology"],
+  "formats": ["RDF", "XML", "JSON", "SPARQL", "Linked Data"],
+  "topics": [
+    "Contratación pública", "Licitaciones", "Contratos",
+    "Sector público", "Transparencia", "Proveedores"
+  ],
+  "has_api": true,
+  "apis": [
+    {
+      "name": "TED Search API",
+      "url": "https://ted.europa.eu/api/",
+      "type": "REST",
+      "documentation_url": "https://data.europa.eu/es/PPDS"
+    },
+    {
+      "name": "TED Open Data SPARQL",
+      "url": "https://data.europa.eu/data/sparql?locale=es",
+      "type": "SPARQL",
+      "documentation_url": "https://data.europa.eu/es/PPDS"
+    }
+  ],
+  "dataset_count": null,
+  "dataset_count_note": "Espacio común europeo de datos de contratación pública (EDCP), parte de la Estrategia Europea de Datos 2020. Incluye licitaciones, contratos y resultados de contratación pública de toda la UE.",
+  "last_updated": null,
+  "license_summary": null,
+  "licenses": [],
+  "last_checked": "2026-06",
+  "machine_readable": true
+},
+{
+  "id": "data_provider_manual",
+  "kind": "other",
+  "name": "Manual para proveedores de datos – data.europa.eu",
+  "url": "https://dataeuropa.gitlab.io/data-provider-manual/",
+  "portal_status": "active",
+  "technology": ["GitLab Pages"],
+  "standards": ["DCAT-AP"],
+  "formats": ["HTML", "PDF"],
+  "topics": [
+    "Metadatos", "Federación", "DCAT-AP",
+    "Datos abiertos", "Interoperabilidad"
+  ],
+  "has_api": false,
+  "apis": [],
+  "dataset_count": null,
+  "dataset_count_note": "Documentación técnica oficial para entidades que quieran federar sus portales con data.europa.eu. Relevante para datos.canarias.es y datos.gob.es como proveedores federados.",
+  "last_updated": null,
+  "license_summary": null,
+  "licenses": [],
+  "last_checked": "2026-06",
+  "machine_readable": false
+}
+  ],
+  "verification": {
+    "status": "verified",                                            
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://data.europa.eu/data/datasets/elds",
+      "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=es",
+      "https://e-justice.europa.eu/topics/legislation-and-case-law/european-case-law-identifier-ecli-search-engine_es",
+      "https://e-justice.europa.eu/home_es",
+      "https://datadump.publications.europa.eu/",
+      "https://data.europa.eu/data/sparql?locale=es",
+      "https://data.europa.eu/licensing-assistant/licences?locale=es",
+      "https://eur-lex.europa.eu/eli-register/what_is_eli.html?locale=es",
+      "data.europa.no.geo.json"                                     
+    ]
   },
+  "notes": "Entidad de ámbito europeo incluida como referencia cruzada para el ecosistema canario: datos.canarias.es y datos.gob.es están federados con data.europa.eu. El Espacio Europeo de Datos Jurídicos (EEDJ) es uno de los espacios comunes europeos de datos, creado al amparo de la Estrategia Europea de Datos (febrero 2020). Sus estándares clave son ELI (Identificador Europeo de Legislación) y ECLI (Identificador Europeo de Jurisprudencia). El volcado masivo EUR-Lex (sector CELEX 3) requiere cuenta EU Login. islands: [\"Todas\"] — no existe desagregación por isla canaria. El portal ELI Search (https://elisearch.development.op-tech.publications.europa.eu/screen/eliSearch) está en entorno de desarrollo/prototipo (2026-06). dataset_count global verificado a 2026-06 vía data.europa.no.geo.json: 1.745.725 datasets totales; España federada con 105.877 via datos.gob.es; ISTAC como publisher: 21.562; Parlamento de Canarias como publisher: 4.346."
+},
   {
     "id": "cabildo_gran_canaria_ide",
     "name": "Cabildo de Gran Canaria – IDE Gran Canaria",
@@ -20238,7 +20398,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
         "https://www.dsca.gob.es/es",
