@@ -13804,9 +13804,9 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ferrocarriles de Gran Canaria, S.A.",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ferrocarriles de Gran Canaria, S.A.",
         "url": "https://ferrocarrilesgrancanaria.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
@@ -13815,7 +13815,9 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "DOCX",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
@@ -13835,13 +13837,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://ferrocarrilesgrancanaria.sedelectronica.es/transparency"
       ]
@@ -14067,6 +14068,9 @@
   {
     "id": "fundacion_canaria_de_las_artes_escenicas_y_de_la_musica_de_g",
     "name": "Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
+    "alternate_names": [
+        "Fundación de Artes Escénicas y Música de Gran Canaria"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -14090,7 +14094,7 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "portal_transparencia",
         "kind": "open_data",
         "name": "Portal de datos – Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
         "url": "https://teatrocuyas.sedelectronica.es/transparency",
