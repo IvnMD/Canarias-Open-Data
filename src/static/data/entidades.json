@@ -3734,9 +3734,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Agüimes",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Mayor, 1",
+        "postal_code": "35200",
+        "municipality": "Agüimes",  
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 27.9076,
@@ -3763,7 +3763,8 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
@@ -3778,13 +3779,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://aguimes.es/transparencia"
       ]
