@@ -2113,7 +2113,7 @@
     "id": "portal_justicia_datos",
     "name": "Portal La Justicia en Datos – Ministerio de Justicia",
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas",
@@ -2143,18 +2143,16 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Portal La Justicia en Datos – Ministerio de Justicia",
+        "id": "pagina_estadistica_canarias",
+        "kind": "estadistica",
+        "name": "Estadística judicial de Canarias – Ministerio de Justicia",
         "url": "https://www.mjusticia.gob.es/es/AreaTematica/EstadisticaInformacionParlamentaria/Documents/Estadistica_judicial_canarias.html",
         "portal_status": "active",
         "technology": [
-          "Portal estático del MJUST"
+          "Portal estático del Ministerio de Justicia"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "XLSX",
           "PDF"
         ],
         "topics": [
@@ -2178,13 +2176,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.mjusticia.gob.es/es/AreaTematica/EstadisticaInformacionParlamentaria/Documents/Estadistica_judicial_canarias.html"
       ]
