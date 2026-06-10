@@ -785,12 +785,12 @@
       {
         "kind": "headquarters",
         "address": "Ayuntamiento de Las Palmas de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.1248,
-          "lon": -15.43
+          "lat": 28.150579,
+          "lon": -15.420277
         },
         "source_url": "https://datosabiertos.laspalmasgc.es"
       }
@@ -805,7 +805,9 @@
         "technology": [
           "CKAN"
         ],
-        "standards": [],
+        "standards": [
+          "DCAT"
+        ],
         "formats": [
           "CSV",
           "JSON",
@@ -831,7 +833,7 @@
             "name": "CKAN API",
             "url": "https://datosabiertos.laspalmasgc.es/api/3/action/package_search",
             "type": "REST",
-            "documentation_url": null
+            "documentation_url": "http://datosabiertos.laspalmasgc.es/info-api/"
           }
         ],
         "dataset_count": 170,
@@ -845,18 +847,19 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://datosabiertos.laspalmasgc.es"
+        "https://datosabiertos.laspalmasgc.es",
+        "http://datosabiertos.laspalmasgc.es/info-api/",
+        "https://datos.gob.es/es/iniciativas/portal-open-data-las-palmas-de-gran-canaria"
       ]
     },
-    "notes": null
+    "notes": "Portal oficial de datos abiertos del Ayuntamiento, reconocido en datos.gob.es. Dispone de API REST CKAN con documentación pública. El recuento exacto de datasets y la licencia uniforme no se han confirmado oficialmente."
   },
   {
     "id": "ayuntamiento_santa_cruz_tenerife",
@@ -1791,28 +1794,33 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Cabildo de Gran Canaria – IDE Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Cabildo de Gran Canaria",
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1248,
+          "lon": -15.43
         },
         "source_url": "https://www.idegrancanaria.es"
       }
     ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Cabildo de Gran Canaria – IDE Gran Canaria",
-        "url": "https://www.idegrancanaria.es",
-        "portal_status": "active",
+      "portals": [
+        {
+          "id": "portal_principal",
+          "kind": "geoespacial",
+          "name": "Portal de datos – Cabildo de Gran Canaria – IDE Gran Canaria",
+          "url": "https://www.idegrancanaria.es",
+          "portal_status": "active",
         "technology": [
-          "ArcGIS / Portal geoespacial propio"
+          "ArcGIS",
+          "Portal geoespacial"
         ],
-        "standards": [],
+        "standards": [
+          "OGC",
+          "WMS",
+          "WFS"
+        ],
         "formats": [
           "GeoJSON",
           "Shapefile",
@@ -1834,7 +1842,7 @@
         "apis": [
           {
             "name": "IDE Gran Canaria API",
-            "url": "https://www.idegrancanaria.es/api",
+            "url": "http://idegrancanaria.es/api",
             "type": "REST + OGC",
             "documentation_url": null
           }
@@ -1842,7 +1850,7 @@
         "dataset_count": 55,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "CC BY",
+        "license_summary": "Licencia propia del Cabildo / CC BY",
         "licenses": [
           {
             "name": "Aviso legal propio / CC BY",
@@ -1850,15 +1858,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.idegrancanaria.es"
+        "http://idegrancanaria.es",
+        "https://visor.idegrancanaria.es/",
+        "https://www.grafcan.es/noticias/2010-05/2010-05-el-cabildo-de-gran-canaria-presenta-la-ide-de-la-isla/"
       ]
     },
     "notes": null
@@ -2359,7 +2369,7 @@
     "id": "portal_justicia_datos",
     "name": "Portal La Justicia en Datos – Ministerio de Justicia",
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas",
@@ -2389,18 +2399,16 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Portal La Justicia en Datos – Ministerio de Justicia",
+        "id": "pagina_estadistica_canarias",
+        "kind": "estadistica",
+        "name": "Estadística judicial de Canarias – Ministerio de Justicia",
         "url": "https://www.mjusticia.gob.es/es/AreaTematica/EstadisticaInformacionParlamentaria/Documents/Estadistica_judicial_canarias.html",
         "portal_status": "active",
         "technology": [
-          "Portal estático del MJUST"
+          "Portal estático del Ministerio de Justicia"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "XLSX",
           "PDF"
         ],
         "topics": [
@@ -2424,13 +2432,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.mjusticia.gob.es/es/AreaTematica/EstadisticaInformacionParlamentaria/Documents/Estadistica_judicial_canarias.html"
       ]
@@ -2720,7 +2728,7 @@
     "id": "policia_nacional_canarias",
     "name": "Policía Nacional – Datos de Seguridad Canarias",
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas",
@@ -2737,13 +2745,13 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Policía Nacional – Datos de Seguridad Canarias",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Ministerio del Interior",
+        "postal_code": "28006",
+        "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 40.435,
+          "lon": -3.684
         },
         "source_url": "https://estadisticasdecriminalidad.ses.mir.es"
       }
@@ -2751,7 +2759,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "estadistica",
         "name": "Portal de datos – Policía Nacional – Datos de Seguridad Canarias",
         "url": "https://estadisticasdecriminalidad.ses.mir.es",
         "portal_status": "active",
@@ -2773,24 +2781,17 @@
         ],
         "has_api": false,
         "apis": [],
-        "dataset_count": 2,
+        "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta MIR",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://estadisticasdecriminalidad.ses.mir.es"
       ]
@@ -3055,8 +3056,8 @@
       {
         "kind": "headquarters",
         "address": "Ayuntamiento de Güímar",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "38680",
+        "municipality": "Güímar",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.3094,
@@ -3083,28 +3084,22 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://guimar.sedelectronica.es/transparency"
       ]
@@ -3389,8 +3384,8 @@
       {
         "kind": "headquarters",
         "address": "Ayuntamiento de Puerto de la Cruz",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "38490",
+        "municipality": "La Orotava",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4148,
@@ -3417,7 +3412,8 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
@@ -3432,15 +3428,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://puertodelacruz.sedelectronica.es/transparency"
+        "https://www.puertodelacruz.es",
+        "https://www.puertodelacruz.es/transparencia",
+        "https://puertodelacruz.sedelectronica.es"
       ]
     },
     "notes": null
@@ -3619,16 +3617,16 @@
     "scope": "municipal",
     "parent_entity_id": null,
     "islands": [
-      "La Palma"
+      "Tenerife"
     ],
     "description": "Portal de transparencia del Ayuntamiento de Tijarafe. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tijarafe",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Palma",
+        "address": "Plaza de La Paz, 1",
+        "postal_code": "38749",
+        "municipality": "Tijarafe",
+        "island": "Tenerife",
         "coordinates": {
           "lat": 28.7019,
           "lon": -17.9658
@@ -3654,7 +3652,8 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
@@ -3669,15 +3668,15 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.tijarafe.net"
+        "https://transparencia.tijarafe.net",
+        "https://tijarafe.net"
       ]
     },
     "notes": null
@@ -3875,9 +3874,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Adeje",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Real, 1",
+        "postal_code": "38670",
+        "municipality": "Adeje",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.1231,
@@ -3889,7 +3888,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Adeje",
         "url": "https://transparencia.adeje.es",
         "portal_status": "active",
@@ -3919,13 +3918,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.adeje.es"
       ]
@@ -4107,9 +4106,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Agüimes",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Mayor, 1",
+        "postal_code": "35200",
+        "municipality": "Agüimes",  
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 27.9076,
@@ -4136,7 +4135,8 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
@@ -4151,13 +4151,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://aguimes.es/transparencia"
       ]
@@ -4310,9 +4310,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Arafo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Real, 1",
+        "postal_code": "38280",
+        "municipality": "Arafo",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.3381,
@@ -4324,7 +4324,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Arafo",
         "url": "https://arafo.sedelectronica.es/info.0",
         "portal_status": "active",
@@ -4354,15 +4354,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://arafo.sedelectronica.es/info.0"
+        "https://arafo.sedelectronica.es/info.0",
+        "https://arafo.sedelectronica.es"
       ]
     },
     "notes": null
@@ -4546,9 +4547,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Artenara",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Matías Vega, 1",
+        "postal_code": "35350",
+        "municipality": "Artenara",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0105,
@@ -4590,13 +4591,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://artenara.sedelectronica.es/transparency"
       ]
@@ -4782,9 +4782,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Betancuria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "C/ Amador Rodríguez, 4",
+        "postal_code": "35637",
+        "municipality": "Betancuria",
         "island": "Fuerteventura",
         "coordinates": {
           "lat": 28.4227,
@@ -4795,9 +4795,9 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Betancuria",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Betancuria",
         "url": "https://www.aytobetancuria.org/portal-de-transparencia",
         "portal_status": "active",
         "technology": [
@@ -4826,18 +4826,20 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.aytobetancuria.org/portal-de-transparencia"
+        "https://www.aytobetancuria.org/contacto/",
+        "https://gobiernoabierto.cabildofuer.es/es/betancuria",
+        "https://www.lavozdefuerteventura.com/articulo/betancuria/comisionado-transparencia-desvela-que-betancuria-es-unico-municipio-incumplidor-canarias/20260421165741028362.html"
       ]
     },
-    "notes": null
+    "notes": "Betancuria es el municipio más pequeño de Fuerteventura (menos de 1.000 habitantes). En 2024 fue el único municipio incumplidor de Canarias en la evaluación del Comisionado de Transparencia al no presentarse a la evaluación."
   },
   {
     "id": "ayuntamiento_brena_alta",
@@ -5039,9 +5041,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Paso",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Islas Canarias, 12",
+        "postal_code": "38750",
+        "municipality": "El Paso",
         "island": "La Palma",
         "coordinates": {
           "lat": 28.6572,
@@ -5088,10 +5090,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.elpaso.es"
+        "https://transparencia.elpaso.es",
+        "https://sede.elpaso.es/"
       ]
     },
     "notes": null
@@ -5275,9 +5278,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de El Sauzal",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle La Constitución, 3",
+        "postal_code": "38360",
+        "municipality": "El Sauzal",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4711,
@@ -5288,8 +5291,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de El Sauzal",
         "url": "https://transparencia.elsauzal.es",
         "portal_status": "active",
@@ -5319,13 +5322,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.elsauzal.es"
       ]
@@ -5562,9 +5565,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Firgas",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza San Roque, 1",
+        "postal_code": "35430",
+        "municipality": "Firgas",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0647,
@@ -5575,8 +5578,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Firgas",
         "url": "https://firgas.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -5606,13 +5609,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://firgas.sedelectronica.es/transparency"
       ]
@@ -5807,8 +5810,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Garafía",
         "url": "https://transparencia.garafia.es",
         "portal_status": "active",
@@ -5838,15 +5841,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.garafia.es"
+        "https://transparencia.garafia.es",
+        "https://www.garafia.es/contacto/"
       ]
     },
     "notes": null
@@ -6054,9 +6058,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Haría",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Constitución, 1",
+        "postal_code": "35520",
+        "municipality": "Haría",
         "island": "Lanzarote",
         "coordinates": {
           "lat": 29.1436,
@@ -6067,8 +6071,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Haría",
         "url": "https://sede.ayuntamientodeharia.com/transparencia",
         "portal_status": "active",
@@ -6103,7 +6107,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.ayuntamientodeharia.com/transparencia"
@@ -6261,23 +6265,23 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Ingenio",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Candelaria, 1",
+        "postal_code": "35250",
+        "municipality": "Ingenio",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 27.9222,
           "lon": -15.4358
         },
-        "source_url": "https://ingenio.es"
+        "source_url": "https://transparencia.ingenio.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Ingenio",
-        "url": "https://ingenio.es",
+        "url": "https://transparencia.ingenio.es/",
         "portal_status": "active",
         "technology": [
           "Portal Transparencia"
@@ -6310,10 +6314,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://ingenio.es"
+        "https://transparencia.ingenio.es/",
+        "https://ingenio.sedelectronica.es/info.0"
       ]
     },
     "notes": null
@@ -6513,9 +6518,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Matanza de Acentejo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Tinguaro, 20",
+        "postal_code": "38370",
+        "municipality": "La Matanza de Acentejo",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.448117,
@@ -6526,8 +6531,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de La Matanza de Acentejo",
         "url": "https://sede.matanceros.es/transparencia",
         "portal_status": "active",
@@ -6557,13 +6562,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://sede.matanceros.es/transparencia"
       ]
@@ -6833,9 +6837,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de La Villa de Mazo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza Pedro Pérez Díaz, 1",
+        "postal_code": "38730",
+        "municipality": "Villa de Mazo",
         "island": "La Palma",
         "coordinates": {
           "lat": 28.6061,
@@ -6846,8 +6850,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de La Villa de Mazo",
         "url": "https://villademazo.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -6877,15 +6881,15 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://villademazo.sedelectronica.es/transparency"
+        "https://villademazo.sedelectronica.es/transparency",
+        "https://villademazo.com/el-ayuntamiento/"
       ]
     },
     "notes": null
@@ -7043,9 +7047,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Los Silos",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza de la Luz, s/n",
+        "postal_code": "38470",
+        "municipality": "Los Silos",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.3803,
@@ -7056,8 +7060,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Los Silos",
         "url": "https://lossilos.sedelectronica.es/info.0",
         "portal_status": "active",
@@ -7087,13 +7091,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://lossilos.sedelectronica.es/info.0"
       ]
@@ -7333,9 +7337,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Puerto del Rosario",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Fernández Castañeyra, 2",
+        "postal_code": "35600",
+        "municipality": "Puerto del Rosario",
         "island": "Fuerteventura",
         "coordinates": {
           "lat": 28.4997,
@@ -7346,8 +7350,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Puerto del Rosario",
         "url": "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia",
         "portal_status": "active",
@@ -7377,15 +7381,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia"
+        "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia",
+        "https://transparencia.puertodelrosario.org",
+        "https://www.puertodelrosario.org/contacto/"
       ]
     },
     "notes": null
@@ -7594,9 +7600,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Pájara",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Nuestra Señora de la Regla, 3",
+        "postal_code": "35628",
+        "municipality": "Pájara",
         "island": "Fuerteventura",
         "coordinates": {
           "lat": 28.3461,
@@ -7607,8 +7613,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Pájara",
         "url": "https://transparencia.pajara.es",
         "portal_status": "active",
@@ -7638,15 +7644,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified"  ,
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.pajara.es"
+        "https://transparencia.pajara.es",
+        "https://www.pajara.es/contacto/"
       ]
     },
     "notes": null
@@ -7845,9 +7852,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de San Juan de la Rambla",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Diecinueve de Marzo, 31",
+        "postal_code": "38428",
+        "municipality": "San Juan de la Rambla",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.379467,
@@ -7858,8 +7865,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de San Juan de la Rambla",
         "url": "https://transparencia.sanjuandelarambla.es",
         "portal_status": "active",
@@ -7889,13 +7896,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.sanjuandelarambla.es"
       ]
@@ -8055,9 +8062,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Santa Brígida",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Nueva, 13",
+        "postal_code": "35300",
+        "municipality": "Santa Brígida",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0519,
@@ -8068,8 +8075,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Santa Brígida",
         "url": "http://www.santabrigida.es/transparencia-indice-de-contenidos",
         "portal_status": "active",
@@ -8104,10 +8111,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "http://www.santabrigida.es/transparencia-indice-de-contenidos"
+        "https://www.santabrigida.es/transparencia-indice-de-contenido/",
+        "https://www.santabrigida.es/ayuntamiento/telefonos-municipales/"
       ]
     },
     "notes": null
@@ -8308,9 +8316,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Santa María de Guía",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Eusebia de Armas, 4",
+        "postal_code": "35450",
+        "municipality": "Santa María de Guía de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.1303,
@@ -8321,8 +8329,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Santa María de Guía",
         "url": "https://santamariadeguia.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -8332,7 +8340,9 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "CSV",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
@@ -8352,13 +8362,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://santamariadeguia.sedelectronica.es/transparency"
       ]
@@ -8518,9 +8528,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tacoronte",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza del Cristo, 1",
+        "postal_code": "38350",
+        "municipality": "Tacoronte",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4758,
@@ -8531,8 +8541,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Tacoronte",
         "url": "https://sede.tacoronte.es/transparencia",
         "portal_status": "active",
@@ -8562,15 +8572,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.tacoronte.es/transparencia"
+        "https://sede.tacoronte.es/transparencia",
+        "https://www.tacoronte.es/ayuntamiento/directorio/"
       ]
     },
     "notes": null
@@ -8813,21 +8824,21 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Teguise",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida General Franco, 1",
+        "postal_code": "35530",
+        "municipality": "Teguise",
         "island": "Lanzarote",
         "coordinates": {
           "lat": 29.0608,
-          "lon": -13.5619
+        "lon": -13.5619
         },
         "source_url": "https://sede.teguise.es/transparencia"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Teguise",
         "url": "https://sede.teguise.es/transparencia",
         "portal_status": "active",
@@ -8857,15 +8868,16 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://sede.teguise.es/transparencia"
+        "https://sede.teguise.es/transparencia",
+        "https://teguise.es/telefonos-de-interes/"
       ]
     },
     "notes": null
@@ -9068,9 +9080,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Teror",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Plaza Muro Nuevo, 2",
+        "postal_code": "35330",
+        "municipality": "Teror",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0594,
@@ -9081,8 +9093,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Teror",
         "url": "https://teror.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -9117,10 +9129,11 @@
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://teror.sedelectronica.es/transparency"
+        "https://teror.sedelectronica.es/transparency",
+        "https://teror.es/contacto-2/"
       ]
     },
     "notes": null
@@ -10861,6 +10874,10 @@
   {
     "id": "fundacion_canaria_de_juventud_ideo",
     "name": "Fundación Canaria de Juventud IDEO",
+    "alternate_names": [
+        "Fundación IDEO",
+        "IDEO"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -10869,22 +10886,34 @@
     ],
     "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
     "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Fundación Canaria de Juventud IDEO",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+        {
+            "kind": "headquarters",
+            "address": "Avd. Primero de Mayo, 12, 3ª planta, 35002, Las Palmas de Gran Canaria",
+            "postal_code": "35002",
+            "municipality": "Las Palmas de Gran Canaria",
+            "island": "Gran Canaria",
+            "coordinates": {
+                "lat": 28.1047,
+                "lon": -15.4154
+            },
+            "source_url": "https://fundacionideo.org/transparencia"
         },
-        "source_url": "https://fundacionideo.org/transparencia"
-      }
+        {
+            "kind": "office",
+            "address": "Ctra. Subida el Mayorazgo, 3, 2ª y 4ª planta, 38110, Santa Cruz de Tenerife",
+            "postal_code": "38110",
+            "municipality": "Santa Cruz de Tenerife",
+            "island": "Tenerife",
+            "coordinates": {
+                "lat": 28.4636,
+                "lon": -16.2518
+            },
+            "source_url": "https://fundacionideo.org/transparencia"
+        }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "portal_transparencia",
         "kind": "open_data",
         "name": "Portal de datos – Fundación Canaria de Juventud IDEO",
         "url": "https://fundacionideo.org/transparencia",
@@ -10898,16 +10927,20 @@
           "PDF"
         ],
         "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "contratacion",
+          "subvenciones",
+          "personal",
+          "juventud",
+          "infancia"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables (PDF). No es un catálogo de datasets estructurados.",
+        "last_updated": "2026-04",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -10920,7 +10953,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://fundacionideo.org/transparencia"
@@ -11081,6 +11114,10 @@
   {
     "id": "gestion_de_servicios_para_la_salud_y_seguridad_en_canarias_s",
     "name": "Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC",
+    "alternate_names": [
+        "GSC",
+        "GSC Canarias"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -11104,8 +11141,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC",
         "url": "https://www.gsccanarias.com/gsc/transparencia",
         "portal_status": "active",
@@ -11119,18 +11156,23 @@
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "urgencias",
+          "emergencias",
+          "salud",
+          "seguridad",
+          "transporte_sanitario"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables (PDF). No es un catálogo de datasets estructurados.",
+        "last_updated": "2025-03",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
-            "name": "Reutilización abierta (Atribución requerida)",
+            "name": "Condiciones de reutilización de la Ley 12/2014",
             "id": null,
             "url": null
           }
@@ -11140,7 +11182,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.gsccanarias.com/gsc/transparencia"
@@ -11521,8 +11563,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Hoteles Escuela de Canarias, S.A. HECANSA",
         "url": "https://www.hecansa.com/nosotros/compromiso/portal-de-transparencia",
         "portal_status": "active",
@@ -11536,15 +11578,18 @@
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "transparencia",
+          "sector_publico",
+          "turismo",
+          "formacion",
+          "hosteleria"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa. La verificación automática fue bloqueada por requerir navegador moderno, pero el sitio está activo.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -11552,12 +11597,11 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.hecansa.com/nosotros/compromiso/portal-de-transparencia"
@@ -12198,6 +12242,10 @@
   {
     "id": "promotur_turismo_de_canarias_sa",
     "name": "PROMOTUR TURISMO DE CANARIAS, S.A.",
+    "alternate_names": [
+        "Promotur Turismo Canarias",
+        "Promotur"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -12221,13 +12269,13 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – PROMOTUR TURISMO DE CANARIAS, S.A.",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia  – PROMOTUR TURISMO DE CANARIAS, S.A.",
         "url": "https://transparencia.turismodeislascanarias.com",
         "portal_status": "active",
         "technology": [
-          "Portal Transparencia"
+          "Portal personalizado"
         ],
         "standards": [],
         "formats": [
@@ -12236,15 +12284,17 @@
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "sector_publico",
+          "turismo",
+          "marca_islas_canarias",
+          "promocion_turistica"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables. No es un catálogo de datasets estructurados.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -12252,13 +12302,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.turismodeislascanarias.com"
       ]
@@ -12739,6 +12788,10 @@
   {
     "id": "sociedad_para_el_desarrollo_economico_de_canarias_sa_sodecan",
     "name": "Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN",
+    "alternate_names": [
+        "SODECAN",
+        "Sodecan"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -12762,8 +12815,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN",
         "url": "https://www.sodecan.es/portal-de-transparencia",
         "portal_status": "active",
@@ -12773,19 +12826,22 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
-          "Sector público",
-          "Administración"
+          "sector_publico",
+          "desarrollo_economico",
+          "gobierno_abierto",
+          "ods16"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "dataset_count_note": "Portal de transparencia informativa con documentos descargables (PDF y ODT). No es un catálogo de datasets estructurados. El portal menciona la futura Ley de Gobierno Abierto de Canarias.",
+        "last_updated": "2026-04",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -12793,13 +12849,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.sodecan.es/portal-de-transparencia"
       ]
@@ -13035,8 +13090,12 @@
   {
     "id": "empresa_insular_de_servicios_el_meridiano_sa",
     "name": "Empresa Insular de Servicios El Meridiano, S.A.",
+    "alternate_names": [
+        "El Meridiano S.A.U.",
+        "Meridiano SAU"
+    ],
     "entity_kind": "empresa_publica",
-    "scope": "autonomico",
+    "scope": "insular",
     "parent_entity_id": null,
     "islands": [
       "El Hierro"
@@ -13058,8 +13117,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Empresa Insular de Servicios El Meridiano, S.A.",
         "url": "https://www.meridianosau.es/portal-de-transparencia-n",
         "portal_status": "active",
@@ -13069,19 +13128,23 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "TXT",
+          "ODT",
+          "DOCX",
+          "CSV"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
+        "dataset_count_note": "Portal de transparencia informativa con contenido muy básico (párrafo introductorio). No se encontraron documentos descargables ni datasets estructurados.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
+        "license_summary": "Reutilización sujeta a condiciones de la Ley 12/2014 de Transparencia",
         "licenses": [
           {
             "name": "Reutilización abierta (Atribución requerida)",
@@ -13089,13 +13152,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.meridianosau.es/portal-de-transparencia-n"
       ]
@@ -13507,7 +13569,8 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "CSV"
         ],
         "topics": [
           "Transparencia",
@@ -13527,13 +13590,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://eolicasdefuerteventura.sedelectronica.es/transparency"
       ]
@@ -14127,9 +14189,9 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ferrocarriles de Gran Canaria, S.A.",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ferrocarriles de Gran Canaria, S.A.",
         "url": "https://ferrocarrilesgrancanaria.sedelectronica.es/transparency",
         "portal_status": "active",
         "technology": [
@@ -14138,7 +14200,9 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "DOCX",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
@@ -14158,13 +14222,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://ferrocarrilesgrancanaria.sedelectronica.es/transparency"
       ]
@@ -14390,6 +14453,9 @@
   {
     "id": "fundacion_canaria_de_las_artes_escenicas_y_de_la_musica_de_g",
     "name": "Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
+    "alternate_names": [
+        "Fundación de Artes Escénicas y Música de Gran Canaria"
+    ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
     "parent_entity_id": null,
@@ -14413,8 +14479,8 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
         "name": "Portal de datos – Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
         "url": "https://teatrocuyas.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -14423,15 +14489,20 @@
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "DOCX",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XML"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "artes_escenicas",
+          "musica"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14444,13 +14515,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://teatrocuyas.sedelectronica.es/transparency"
       ]
@@ -15455,8 +15525,8 @@
       {
         "kind": "headquarters",
         "address": "AUDITORIO DE TENERIFE, S.A.",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "38003",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4636,
@@ -15468,7 +15538,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – AUDITORIO DE TENERIFE, S.A.",
         "url": "https://auditoriodetenerife.com/es/portal-transparencia",
         "portal_status": "active",
@@ -15478,14 +15548,17 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública",
+          "Buen gobierno"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15498,18 +15571,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://auditoriodetenerife.com/es/portal-transparencia"
       ]
     },
-    "notes": null
+    "notes": "El portal verificado es de transparencia, no un portal de datos abiertos. La información confirmada en la fuente incluye acceso a información pública, solicitud de acceso, declaración de accesibilidad e informe sobre el grado de aplicación de la Ley 12/2014."
   },
   {
     "id": "balten",
@@ -15826,7 +15898,7 @@
   {
     "id": "fundacion_canaria_lucio_de_las_casas",
     "name": "Fundación Canaria Lucio de las Casas",
-    "entity_kind": "empresa_publica",
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
@@ -15836,21 +15908,21 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Fundación Canaria Lucio de las Casas",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Juan de Quesada, 30",
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1092,
+          "lon": -15.4149
         },
-        "source_url": "https://www.ulpgc.es/transparencia/fundacion-lucio-casas"
+        "source_url": "https://www.ulpgc.es/transparencia/patrimonio-flc"
       }
     ],
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Fundación Canaria Lucio de las Casas",
         "url": "https://www.ulpgc.es/transparencia/fundacion-lucio-casas",
         "portal_status": "active",
@@ -15865,33 +15937,36 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Información institucional",
+          "Económico-financiera",
+          "Patrimonio",
+          "Contratos",
+          "Subvenciones",
+          "Ayudas"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
+        "last_updated": "2025-03",
         "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.ulpgc.es/transparencia/fundacion-lucio-casas"
+        "https://www.ulpgc.es/transparencia/fundacion-lucio-casas",
+        "https://www.ulpgc.es/transparencia/fundacion-lucio-casas-informacion-institucional",
+        "https://www.ulpgc.es/transparencia/patrimonio-flc",
+        "https://www.ulpgc.es/transparencia/canal-denuncias-anonimas-fundacion-lucio-casas",
+        "https://www.ulpgc.es/sites/default/files/ArchivosULPGC/transparencia/FLC/20231231_informe_transparencia_flc_2023.pdf"
       ]
     },
-    "notes": null
+    "notes": "La entidad no es una empresa pública, sino una fundación vinculada a la ULPGC. La URL apunta a un portal de transparencia institucional, no a un portal de datos abiertos."
   },
   {
     "id": "fcpct_ulpgc",
@@ -16049,7 +16124,7 @@
   {
     "id": "tic_ulpgc_slu",
     "name": "TIC ULPGC, S.L.U.",
-    "entity_kind": "empresa_publica",
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
@@ -16073,7 +16148,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – TIC ULPGC, S.L.U.",
         "url": "https://www.tic-ulpgc.es/transparencia",
         "portal_status": "active",
@@ -16088,9 +16163,11 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública",
+          "Informes de transparencia"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16103,18 +16180,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.tic-ulpgc.es/transparencia"
       ]
     },
-    "notes": null
+    "notes": "El portal es de transparencia, no de datos abiertos. No se ha confirmado una API ni licencias de reutilización abiertas."
   },
   {
     "id": "universidad_de_la_laguna",
@@ -17175,7 +17251,7 @@
       {
         "kind": "headquarters",
         "address": "C/ Mártires Concepcionistas 2, 28006 Madrid",
-        "postal_code": null,
+        "postal_code": "28006",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
@@ -17203,8 +17279,7 @@
           "CSV",
           "JSON",
           "XML",
-          "RDF",
-          "API"
+          "RDF"
         ],
         "topics": [
           "agregacion",
@@ -17224,7 +17299,7 @@
             "documentation_url": "https://datos.gob.es/es/apidata"
           }
         ],
-        "dataset_count": null,
+        "dataset_count": 112403,
         "dataset_count_note": "Agregador nacional; el número varía por catálogo federado.",
         "last_updated": "2026-05",
         "license_summary": "Múltiples licencias según el conjunto de datos",
@@ -17236,13 +17311,13 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://datos.gob.es/es/",
         "https://datos.gob.es/es/apidata"
