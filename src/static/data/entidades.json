@@ -1429,99 +1429,259 @@
     "notes": null
   },
   {
-    "id": "european_data_portal",
-    "name": "European Data Portal (data.europa.eu)",
-    "entity_kind": "organismo",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
-    ],
-    "description": "Portal europeo que agrega datasets de España y Canarias federados desde datos.gob.es y portales autonómicos.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "European Data Portal (data.europa.eu)",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+  "id": "european_data_portal",
+  "name": "Portal Europeo de Datos",
+  "alternate_names": [
+    "European Data Portal",
+    "data.europa.eu",
+    "Espacio Europeo de Datos Jurídicos",
+    "EEDJ",
+    "European Legal Data Space"
+  ],
+  "entity_kind": "organismo",
+  "scope": "europeo",
+  "parent_entity_id": null,
+  "islands": ["Todas"],
+  "description": "Portal europeo de datos abiertos gestionado por la Oficina de Publicaciones de la UE, que agrega datasets de España y Canarias federados desde datos.gob.es y portales autonómicos. Incluye el Espacio Europeo de Datos Jurídicos (EEDJ), creado en el marco de la Estrategia Europea de Datos (feb. 2020), que facilita acceso interoperable y reutilizable a legislación y jurisprudencia de toda la UE mediante estándares ELI y ECLI. Relevante para Canarias como punto de acceso al marco normativo europeo que afecta al ecosistema de datos abiertos de las islas.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Office des Publications de l'Union Européenne",
+      "postal_code": null,
+      "municipality": "Luxemburgo",
+      "island": "Todas",
+      "coordinates": {
+        "lat": 49.6116,
+        "lon": 6.1319
+      },
+      "source_url": "https://data.europa.eu"
+    }
+  ],
+  "portals": [
+    {
+      "id": "data_europa_open_data",
+      "kind": "open_data",
+      "name": "data.europa.eu – Portal de Datos Abiertos",
+      "url": "https://data.europa.eu/data/datasets",
+      "portal_status": "active",
+      "technology": ["CKAN", "Portal europeo"],
+      "standards": ["DCAT-AP", "SPARQL"],
+      "formats": ["CSV", "JSON", "XML", "RDF", "SPARQL"],
+      "topics": [
+        "Turismo", "Demografía", "Economía", "Medio ambiente",
+        "Sector público", "Transporte", "Energía", "Agricultura"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "data.europa.eu Search API",
+          "url": "https://data.europa.eu/api/hub/search/",
+          "type": "REST",
+          "documentation_url": "https://data.europa.eu/api/hub/search/"
         },
-        "source_url": "https://data.europa.eu/euodp/es/data"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – European Data Portal (data.europa.eu)",
-        "url": "https://data.europa.eu/euodp/es/data",
-        "portal_status": "active",
-        "technology": [
-          "CKAN",
-          "Portal europeo"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "RDF",
-          "SPARQL"
-        ],
-        "topics": [
-          "Turismo",
-          "Demografía",
-          "Economía",
-          "Medio ambiente",
-          "Sector público",
-          "Transporte",
-          "Energía",
-          "Agricultura"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "data.europa.eu API",
-            "url": "https://data.europa.eu/api/hub/search/",
-            "type": "REST",
-            "documentation_url": null
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Múltiples",
-        "licenses": [
-          {
-            "name": "Múltiples (CC BY, ODbL, open government)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://data.europa.eu/euodp/es/data"
-      ]
+        {
+          "name": "SPARQL endpoint",
+          "url": "https://data.europa.eu/data/sparql?locale=es",
+          "type": "SPARQL",
+          "documentation_url": "https://data.europa.eu/data/sparql?locale=es"
+        }
+      ],
+      "dataset_count": 1745725,                          
+      "dataset_count_note": "Total datasets indexados globalmente en data.europa.eu a 2026-06. España (datos.gob.es): 105.877 datasets federados. Publisher 'Instituto Canario de Estadística': 21.562. Publisher 'Parlamento de Canarias': 4.346. Fuente: data.europa.no.geo.json, result.count, consultado 2026-06.",
+      "last_updated": null,
+      "license_summary": "Múltiples (CC BY, ODbL, open government)",
+      "licenses": [
+        {
+          "name": "Múltiples (CC BY, ODbL, open government)",
+          "id": null,
+          "url": "https://data.europa.eu/licensing-assistant/licences?locale=es"
+        }
+      ],
+      "last_checked": "2026-06",
+      "machine_readable": true
     },
-    "notes": null
+    {
+      "id": "eedj_registro_juridico",
+      "kind": "other",
+      "name": "EEDJ – Registros jurídicos nacionales y de la UE (ELDS)",
+      "url": "https://data.europa.eu/data/datasets/elds",
+      "portal_status": "active",
+      "technology": ["Portal europeo"],
+      "standards": ["ELI", "ECLI"],
+      "formats": ["RDF", "JSON", "XML", "HTML"],
+      "topics": [
+        "Legislación", "Jurisprudencia", "Derecho", "Normativa",
+        "Sector público", "Registros jurídicos"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Lista de registros jurídicos nacionales y de la UE del Espacio Europeo de Datos Jurídicos (EEDJ). Punto de acceso central a colecciones de legislación y jurisprudencia interoperables.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": true
+    },
+    {
+      "id": "eurlex_reutilizacion",
+      "kind": "open_data",
+      "name": "EUR-Lex – Reutilización de contenido",
+      "url": "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=es",
+      "portal_status": "active",
+      "technology": ["EUR-Lex"],
+      "standards": ["ELI", "CELEX"],
+      "formats": ["XML", "HTML", "PDF", "RDF"],
+      "topics": [
+        "Legislación europea", "Normativa", "Derecho de la UE",
+        "Tratados", "Reglamentos", "Directivas"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "EUR-Lex Data Dump (volcado masivo – sector 3)",
+          "url": "https://datadump.publications.europa.eu/",
+          "type": "bulk_download",
+          "documentation_url": "https://datadump.publications.europa.eu/"
+        }
+      ],
+      "dataset_count": null,
+      "dataset_count_note": "Descarga masiva de todos los actos jurídicos en vigor por idioma (sector CELEX 3). Requiere cuenta EU Login. Permite reutilización de todo el contenido de EUR-Lex conforme a las condiciones publicadas.",
+      "last_updated": null,
+      "license_summary": "Condiciones de reutilización EUR-Lex",
+      "licenses": [
+        {
+          "name": "Condiciones de reutilización EUR-Lex",
+          "id": null,
+          "url": "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=es"
+        }
+      ],
+      "last_checked": "2026-06",
+      "machine_readable": true
+    },
+    {
+      "id": "ecli_buscador",
+      "kind": "other",
+      "name": "Motor de búsqueda ECLI – Portal e-Justicia",
+      "url": "https://e-justice.europa.eu/topics/legislation-and-case-law/european-case-law-identifier-ecli-search-engine_es",
+      "portal_status": "active",
+      "technology": ["Portal e-Justicia"],
+      "standards": ["ECLI"],
+      "formats": ["HTML", "XML"],
+      "topics": [
+        "Jurisprudencia", "Resoluciones judiciales", "Derecho europeo",
+        "Identificadores jurídicos", "Justicia"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Buscador oficial del Identificador Europeo de Jurisprudencia (ECLI). Permite localizar resoluciones judiciales de los Estados miembros y del TJUE mediante identificador normalizado.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": true
+    },
+    {
+      "id": "ejusticia_portal",
+      "kind": "other",
+      "name": "Portal Europeo de Justicia en Red (e-Justicia)",
+      "url": "https://e-justice.europa.eu/home_es",
+      "portal_status": "active",
+      "technology": ["Portal e-Justicia"],
+      "standards": ["ECLI"],
+      "formats": ["HTML", "PDF"],
+      "topics": [
+        "Sistemas judiciales", "Justicia", "Acceso a la justicia",
+        "Legislación", "Procedimientos judiciales"
+      ],
+      "has_api": false,
+      "apis": [],
+      "dataset_count": null,
+      "dataset_count_note": "Ventanilla única electrónica para todos los asuntos relacionados con la justicia en la UE. Proporciona información sobre sistemas judiciales y mejora el acceso a la justicia para ciudadanos y profesionales.",
+      "last_updated": null,
+      "license_summary": null,
+      "licenses": [],
+      "last_checked": "2026-06",
+      "machine_readable": false
+    },
+    {
+  "id": "edcp_contratacion_publica",
+  "kind": "open_data",
+  "name": "EDCP – Espacio Europeo de Datos sobre Contratación Pública",
+  "url": "https://data.europa.eu/es/PPDS",
+  "portal_status": "active",
+  "technology": ["Portal europeo", "TED"],
+  "standards": ["DCAT-AP", "SPARQL", "eForms", "eCO ontology"],
+  "formats": ["RDF", "XML", "JSON", "SPARQL", "Linked Data"],
+  "topics": [
+    "Contratación pública", "Licitaciones", "Contratos",
+    "Sector público", "Transparencia", "Proveedores"
+  ],
+  "has_api": true,
+  "apis": [
+    {
+      "name": "TED Search API",
+      "url": "https://ted.europa.eu/api/",
+      "type": "REST",
+      "documentation_url": "https://data.europa.eu/es/PPDS"
+    },
+    {
+      "name": "TED Open Data SPARQL",
+      "url": "https://data.europa.eu/data/sparql?locale=es",
+      "type": "SPARQL",
+      "documentation_url": "https://data.europa.eu/es/PPDS"
+    }
+  ],
+  "dataset_count": null,
+  "dataset_count_note": "Espacio común europeo de datos de contratación pública (EDCP), parte de la Estrategia Europea de Datos 2020. Incluye licitaciones, contratos y resultados de contratación pública de toda la UE.",
+  "last_updated": null,
+  "license_summary": null,
+  "licenses": [],
+  "last_checked": "2026-06",
+  "machine_readable": true
+},
+{
+  "id": "data_provider_manual",
+  "kind": "other",
+  "name": "Manual para proveedores de datos – data.europa.eu",
+  "url": "https://dataeuropa.gitlab.io/data-provider-manual/",
+  "portal_status": "active",
+  "technology": ["GitLab Pages"],
+  "standards": ["DCAT-AP"],
+  "formats": ["HTML", "PDF"],
+  "topics": [
+    "Metadatos", "Federación", "DCAT-AP",
+    "Datos abiertos", "Interoperabilidad"
+  ],
+  "has_api": false,
+  "apis": [],
+  "dataset_count": null,
+  "dataset_count_note": "Documentación técnica oficial para entidades que quieran federar sus portales con data.europa.eu. Relevante para datos.canarias.es y datos.gob.es como proveedores federados.",
+  "last_updated": null,
+  "license_summary": null,
+  "licenses": [],
+  "last_checked": "2026-06",
+  "machine_readable": false
+}
+  ],
+  "verification": {
+    "status": "verified",                                            
+    "last_checked": "2026-06",
+    "source_urls": [
+      "https://data.europa.eu/data/datasets/elds",
+      "https://eur-lex.europa.eu/content/help/data-reuse/reuse-contents-eurlex-details.html?locale=es",
+      "https://e-justice.europa.eu/topics/legislation-and-case-law/european-case-law-identifier-ecli-search-engine_es",
+      "https://e-justice.europa.eu/home_es",
+      "https://datadump.publications.europa.eu/",
+      "https://data.europa.eu/data/sparql?locale=es",
+      "https://data.europa.eu/licensing-assistant/licences?locale=es",
+      "https://eur-lex.europa.eu/eli-register/what_is_eli.html?locale=es",
+      "data.europa.no.geo.json"                                     
+    ]
   },
+  "notes": "Entidad de ámbito europeo incluida como referencia cruzada para el ecosistema canario: datos.canarias.es y datos.gob.es están federados con data.europa.eu. El Espacio Europeo de Datos Jurídicos (EEDJ) es uno de los espacios comunes europeos de datos, creado al amparo de la Estrategia Europea de Datos (febrero 2020). Sus estándares clave son ELI (Identificador Europeo de Legislación) y ECLI (Identificador Europeo de Jurisprudencia). El volcado masivo EUR-Lex (sector CELEX 3) requiere cuenta EU Login. islands: [\"Todas\"] — no existe desagregación por isla canaria. El portal ELI Search (https://elisearch.development.op-tech.publications.europa.eu/screen/eliSearch) está en entorno de desarrollo/prototipo (2026-06). dataset_count global verificado a 2026-06 vía data.europa.no.geo.json: 1.745.725 datasets totales; España federada con 105.877 via datos.gob.es; ISTAC como publisher: 21.562; Parlamento de Canarias como publisher: 4.346."
+},
   {
     "id": "cabildo_gran_canaria_ide",
     "name": "Cabildo de Gran Canaria – IDE Gran Canaria",
@@ -2182,87 +2342,203 @@
     "notes": null
   },
   {
-    "id": "sepe_empleo",
-    "name": "SEPE – Datos de Empleo Canarias",
+    "id": "sepe",
+    "name": "Servicio Público de Empleo Estatal",
+    "alternate_names": [
+      "SEPE"
+    ],
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
+      "Todas"
     ],
-    "description": "Datos mensuales del SEPE sobre paro registrado, contratos y demandantes de empleo desagregados por provincia canaria (Las Palmas y Santa Cruz de Tenerife).",
+    "description": "Organismo autónomo estatal adscrito al Ministerio de Trabajo y Economía Social (CIF: Q2819009H), responsable de la gestión de las prestaciones por desempleo, la intermediación laboral y las estadísticas del mercado de trabajo en España. Relevante para Canarias por publicar datos de paro registrado, contratos y demandantes de empleo desagregados por provincia (Las Palmas y Santa Cruz de Tenerife) y municipio, con series históricas desde 1996. Sus datasets están federados en datos.gob.es y son referencia cruzada para el ISTAC y el Servicio Canario de Empleo.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "SEPE – Datos de Empleo Canarias",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
+        "address": "Calle Condesa de Venadito, 9",
+        "postal_code": "28027",
+        "municipality": "Madrid",
+        "island": "",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 40.4471,
+          "lon": -3.6548
         },
-        "source_url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
+        "source_url": "https://www.sepe.es/HomeSepe/es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "sepe_datos_abiertos",
         "kind": "open_data",
-        "name": "Portal de datos – SEPE – Datos de Empleo Canarias",
-        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
+        "name": "Catálogo de Datos Abiertos – SEPE",
+        "url": "https://sede.sepe.gob.es/portalSede/datos-abiertos/catalogo-de-datos-del-SEPE.html",
         "portal_status": "active",
         "technology": [
-          "Portal estático SEPE"
+          "web_propia"
         ],
-        "standards": [],
+        "standards": [
+          "NTI-RISP",
+          "DCAT"
+        ],
         "formats": [
+          "XLS",
           "CSV",
-          "XLSX",
+          "XML",
+          "JSON",
           "PDF"
         ],
         "topics": [
           "Empleo",
           "Paro registrado",
-          "Demandantes",
-          "Contratos",
-          "ERTE",
+          "Contratos registrados",
+          "Demandantes de empleo",
+          "Prestaciones por desempleo",
+          "Gasto en prestaciones",
           "Mercado laboral",
-          "Prestaciones"
+          "Formación profesional para el empleo",
+          "Estadística laboral",
+          "Canarias"
         ],
         "has_api": false,
         "apis": [],
-        "dataset_count": 14,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta SEPE",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
+        "dataset_count": null,
+        "dataset_count_note": "Catálogo de datos reutilizables federado en datos.gob.es (https://datos.gob.es/es/catalogo/conjuntos-datos?publisher_display_name=Servicio+P%C3%BAblico+de+Empleo+Estatal). Datasets principales verificados en 2026-06: Paro Registrado (municipio, sexo, edad, sector), Contratos Registrados (municipio, sexo, tipo, sector), Demandantes de Empleo (municipio, sexo, edad, sector), Gasto en Prestaciones por Desempleo (provincia, tipo). Datos de Canarias desagregados por provincia (Las Palmas y Santa Cruz de Tenerife) y municipio. Series históricas desde 1996 (metodología SISPE desde 2005). Series retrospectivas SISPE: enero 1996–enero 2001 y febrero 2001–abril 2005.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "sepe_estadisticas",
+        "kind": "estadistica",
+        "name": "Estadísticas – Servicio Público de Empleo Estatal",
+        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas.html",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "SISPE"
+        ],
+        "formats": [
+          "PDF",
+          "XLS"
+        ],
+        "topics": [
+          "Paro registrado",
+          "Contratos registrados",
+          "Demandantes de empleo",
+          "Prestaciones por desempleo",
+          "Estadísticas de formación",
+          "Boletines estadísticos",
+          "Mercado laboral",
+          "Canarias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal estadístico con 6 apartados verificados en 2026-06: Resumen estadística mensual, Estadísticas de empleo, Estadísticas por municipios (paro registrado y contratos), Estadísticas de formación, Estadísticas de contratos, Estadísticas de prestaciones por desempleo, Boletines estadísticos. Series históricas disponibles también en Movimiento Laboral Registrado (MITES): http://expinterweb.mites.gob.es/series/. Actualización mensual; datos de avance a principios de mes. Metodología SISPE desde mayo 2005.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "sepe_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Servicio Público de Empleo Estatal",
+        "url": "https://www.sepe.es/HomeSepe/es/que-es-el-sepe/transparencia-sepe.html",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "PDF",
+          "HTML"
+        ],
+        "topics": [
+          "Institucional y organizativa",
+          "Organigrama",
+          "Convocatorias y provisión de puestos",
+          "Carta de servicios",
+          "Planes y programas",
+          "Encuestas de satisfacción",
+          "Relevancia jurídica",
+          "Normativa",
+          "Instrucciones y directrices",
+          "Económica, presupuestaria y estadística",
+          "Contratos suscritos",
+          "Presupuestos y cuentas anuales",
+          "Convenios y encomiendas",
+          "Estadísticas de empleo"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "3 bloques de transparencia activa conforme a arts. 6, 7 y 8 de la Ley 19/2013: (1) Institucional, organizativa y de planificación — incluye informes de satisfacción semestrales de servicios electrónicos (último: 1S-2026) y oficinas de prestaciones (último: 2025). (2) Relevancia jurídica — normativa e instrucciones de prestaciones. (3) Económica, presupuestaria y estadística — contratos, presupuestos, convenios y estadísticas. Complementado por el Portal de Transparencia de la AGE: https://transparencia.gob.es.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "sepe_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – SEPE",
+        "url": "https://sede.sepe.gob.es/portalSede/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Trámites electrónicos",
+          "Prestaciones por desempleo",
+          "Contratos",
+          "Empleo",
+          "Formación en el trabajo",
+          "Formación dual",
+          "Licitaciones",
+          "Notificaciones electrónicas",
+          "Recursos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica propia del SEPE. Trámites para personas y empresas. Incluye perfiles de contratante provinciales: Las Palmas (https://sede.sepe.gob.es/portalSede/licitaciones/servicios-provinciales/perfil-contratante-provincial/perfil-de-contratante-lasPalmas.html) y Tenerife (https://sede.sepe.gob.es/portalSede/licitaciones/servicios-provinciales/perfil-contratante-provincial/perfil-de-contratante-tenerife.html). No publica datasets independientes. Última actualización sede: 2026-05-06.",
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
+        "https://www.sepe.es/HomeSepe/es/",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas.html",
+        "https://www.sepe.es/HomeSepe/es/que-es-el-sepe/transparencia-sepe.html",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe/informacion-institucional-organizativa-planificacion.html",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe/informacion-relevancia-juridica.html",
+        "https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe/informacion-economica-presupuestaria-estadistica.html",
+        "https://sede.sepe.gob.es/portalSede/datos-abiertos/catalogo-de-datos-del-SEPE.html",
+        "https://sede.sepe.gob.es/portalSede/",
+        "https://datos.gob.es/es/catalogo/conjuntos-datos?publisher_display_name=Servicio+P%C3%BAblico+de+Empleo+Estatal",
+        "https://datos.gob.es/es/iniciativas/portal-datos-abiertos-sepe"
       ]
     },
-    "notes": null
+    "notes": "CIF: Q2819009H. Sede central: Calle Condesa de Venadito, 9, 28027 Madrid. Entidad de ámbito estatal incluida en el catálogo por su relevancia directa para Canarias: es la fuente primaria de estadísticas de paro registrado, contratos y demandantes de empleo desagregados hasta nivel municipal para las provincias de Las Palmas y Santa Cruz de Tenerife. En islands se indica 'Todas' aunque la desagregación territorial llega a provincia y municipio, no a isla. Datasets federados en datos.gob.es y referenciados por el ISTAC. Series históricas desde 1996 (metodología SISPE desde 2005; series retrospectivas disponibles en MITES: http://expinterweb.mites.gob.es/series/). Perfiles de contratante provinciales activos para Las Palmas y Tenerife en la sede electrónica. La transparencia activa se complementa con el Portal de Transparencia de la AGE (transparencia.gob.es). Dispone de lectura fácil del portal de transparencia: https://www.sepe.es/HomeSepe/que-es-el-sepe/transparencia-sepe_Lectura-Facil.html."
   },
   {
     "id": "aena_canarios",
@@ -16880,9 +17156,10 @@
   },
   {
     "id": "ine",
-    "name": "Instituto Nacional de Estadística",
+    "name": "Instituto Nacional de Estadística – INEbase / API WSTempus",
     "alternate_names": [
-      "INE"
+      "INE",
+      "Instituto Nacional de Estadística"
     ],
     "entity_kind": "organismo",
     "scope": "estatal",
@@ -16890,91 +17167,194 @@
     "islands": [
       "Todas"
     ],
-    "description": "Organismo estadístico oficial de España, imprescindible para demografía, economía, vivienda, empresas y comparativas territoriales de Canarias.",
+    "description": "Organismo estadístico estatal que produce y difunde las estadísticas oficiales de España. Relevante para Canarias porque todas sus grandes encuestas (EPA, ECV, EPF, IPC, EOH, ETH, Movimientos Turísticos, MNP, Atlas de Renta, Estadística Continua de Población, etc.) desagregan resultados a nivel de CCAA Canarias (ES7) y en muchos casos a nivel provincial (Las Palmas, Santa Cruz de Tenerife). La API REST WSTempus permite filtrar series directamente por Canarias mediante el parámetro g1=70:5.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Paseo de la Castellana 183, 28046 Madrid",
-        "postal_code": null,
+        "address": "Paseo de la Castellana, 183",
+        "postal_code": "28046",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 40.451,
-          "lon": -3.692
+          "lat": 40.4706,
+          "lon": -3.6878
         },
-        "source_url": "https://www.ine.es/datosabiertos/"
+        "source_url": "https://www.ine.es/infoine/?L=0"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "ine_inebase",
         "kind": "estadistica",
-        "name": "INE Datos abiertos",
-        "url": "https://www.ine.es/datosabiertos/",
+        "name": "INEbase – Portal estadístico del INE",
+        "url": "https://www.ine.es/dyngs/INEbase/listaoperaciones.htm",
         "portal_status": "active",
         "technology": [
-          "Custom",
-          "OpenAPI"
+          "INEbase",
+          "Tempus3",
+          "PC-Axis"
         ],
         "standards": [
-          "JSON",
-          "API REST"
+          "PC-Axis",
+          "SDMX",
+          "OpenAPI 3.1"
         ],
         "formats": [
-          "JSON",
+          "PC-Axis",
           "CSV",
+          "JSON",
           "XLSX",
-          "API"
+          "XML",
+          "HTML",
+          "PDF"
         ],
         "topics": [
-          "demografia",
-          "poblacion",
-          "economia",
-          "vivienda",
-          "empresas",
-          "turismo"
+          "Demografía",
+          "Población",
+          "Empleo",
+          "Mercado laboral",
+          "IPC",
+          "Economía",
+          "Turismo",
+          "Comercio",
+          "Industria",
+          "Sociedad",
+          "Salud",
+          "Educación",
+          "Medio ambiente",
+          "Vivienda",
+          "Hacienda",
+          "Justicia",
+          "Elecciones",
+          "Agricultura",
+          "Transporte",
+          "Calidad de vida",
+          "Ciencia y tecnología"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "INEbase OpenAPI",
-            "url": "https://www.ine.es/OpenAPI/en/index.html",
+            "name": "API JSON WSTempus – INEbase",
+            "url": "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
             "type": "REST",
-            "documentation_url": "https://www.ine.es/OpenAPI/en/index.html"
+            "documentation_url": "https://www.ine.es/dyngs/DataLab/manual.html?cid=1259945948443"
           },
           {
-            "name": "API JSON del INE",
-            "url": "https://www.ine.es/dyngs/DAB/index.htm",
-            "type": "REST",
-            "documentation_url": "https://www.ine.es/dyngs/DAB/index.htm"
+            "name": "OpenAPI 3.1 – Especificación WSTempus",
+            "url": "https://www.ine.es/OpenAPI/index.html",
+            "type": "OpenAPI",
+            "documentation_url": "https://www.ine.es/OpenAPI/index.html"
           }
         ],
-        "dataset_count": null,
-        "dataset_count_note": "Publica numerosos datasets y series; el catálogo exacto cambia con frecuencia.",
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
+        "dataset_count": 5353,
+        "dataset_count_note": "Verificado 2026-06 consultando /OPERACIONES_DISPONIBLES + /TABLAS_OPERACION/{Id} para las 112 operaciones activas en Tempus3. Total tablas: 5.353. Top operaciones por número de tablas: EPA (1.039), Atlas de distribución de renta de los hogares (540), IDB – Indicadores Demográficos Básicos (342), ECV – Encuesta de Condiciones de Vida (254), Estadística de Migraciones (171), Estadística de Migraciones y Cambios de Residencia (127), Encuesta Cuatrienal de Estructura Salarial (152), Encuesta de turismo de residentes (103), ICM – Índices de Comercio al por Menor (97), Estadística de Violencia Doméstica y VG (95), EPF – Encuesta de Presupuestos Familiares (126), MNP Matrimonios (114), MNP Nacimientos (74), MNP Defunciones (61), Estadística Continua de Población (78), Estadstica de Nulidades, Separaciones y Divorcios (127), Cifras Oficiales de Población – Padrón Municipal (65), EOH – Encuesta de Ocupación Hotelera (41), Encuesta de Ocupación en Apartamentos Turísticos (40), Encuesta de Ocupación en Campings (42), Encuesta de Ocupación en Albergues (31), Movimientos Turísticos en Fronteras (30). 13 operaciones sin tablas en Tempus3 (datos en PC-Axis/descarga directa): Distribución de Nombres (opid 16), Distribución de Apellidos (opid 49), ePOBa (opid 21), Contabilidad Nacional Base 2000 (opid 20), Contabilidad Nacional Base 2008 (opid 51), Contabilidad Nacional Base 2010 (opid 247), Cifras de Poblacin (opid 72), Proyecciones de Población CP (opid 52), Proyecciones de Población LP (opid 54), Encuesta Industrial Anual de Productos (opid 93), Encuesta de Ocupación en Alojamientos Turísticos – antigua (opid 39), Encuesta Cuatrienal Estructural Salarial – nueva (opid 407), Indicador Multidimensional de Calidad de Vida (opid 433). Filtro Canarias en WSTempus: parámetro g1=70:5 (variable CCAA código 70, valor Canarias código 5). Jerarquía de acceso: OPERACIONES_DISPONIBLES → TABLAS_OPERACION/{Id} → SERIES_TABLA/{IdTabla} → DATOS_SERIE/{IdSerie}. Licencia CC BY 4.0.",
+        "last_updated": null,
+        "license_summary": "CC BY 4.0",
         "licenses": [
           {
-            "id": null,
-            "name": "Reutilización abierta INE",
-            "url": null,
+            "name": "Creative Commons Attribution 4.0",
+            "id": "CC-BY-4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
             "count": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "ine_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – INE",
+        "url": "https://www.ine.es/dyngs/INE/index.htm?cid=401",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLSX",
+          "CSV"
+        ],
+        "topics": [
+          "Instituciones",
+          "Organización",
+          "Alto cargo",
+          "Retribuciones",
+          "Empleo público",
+          "Relación de puestos de trabajo",
+          "Normativa",
+          "Planificación estadística",
+          "Plan Estadístico Nacional",
+          "Calidad",
+          "Contratos",
+          "Convenios",
+          "Encomiendas",
+          "Subvenciones",
+          "Becas",
+          "Presupuestos",
+          "Ejecución presupuestaria",
+          "Cuentas anuales",
+          "Bienes inmuebles",
+          "Disposiciones legales",
+          "Participación pública"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "5 secciones de publicidad activa conforme a Ley 19/2013: (1) Organización, información institucional y empleo — organigrama, currículums y retribuciones de altos cargos, RPT (abril 2026), normativa; (2) Planificación, calidad y servicios — PEN 2025-2028, programas anuales, IOE, Carta de servicios 2026-2029, indicadores de seguimiento; (3) Contratos, Convenios y Subvenciones — perfil del contratante, relación de contratos 2023-2025, modificaciones, encomiendas, convenios; (4) Disposiciones legales — participación pública en proyectos normativos (último: Anteproyecto Ley modificación Ley 12/1989, finalizado 22/05/2026); (5) Información Económico-Presupuestaria — presupuestos gastos/ingresos 2023-2026, ejecución presupuestaria 2023-2025, cuentas anuales, bienes inmuebles. Información complementaria al Portal de Transparencia estatal (transparencia.gob.es). Fechas de actualización verificadas: Organización 20/04/2026, Planificación 06/03/2026, Contratos 09/06/2026, Disposiciones 22/05/2026, Económico-Presupuestaria 26/05/2026.",
+        "last_updated": "2026-06",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "ine_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – INE",
+        "url": "https://sede.ine.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_estatal"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "Padrón municipal",
+          "Padrón de españoles en el extranjero",
+          "Censo electoral",
+          "Certificados IPC",
+          "Sanciones",
+          "Becas",
+          "Registro electrónico",
+          "Protección de datos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica del INE con 4 bloques de trámites: (1) Datos padronales — consulta de inscripción en base padronal, histórico de municipios, certificado PERE, consulta datos PERE; (2) Censo Electoral — manifestación de voluntad de voto UE, impugnación, reclamación, consulta de inscripción, exclusión/inclusión copias propaganda electoral; (3) Sanciones y pagos — pagos web, procedimiento sancionador; (4) Becas, premios y subvenciones — becas postgrado, Premio Nacional de Estadística, proyectos de investigación. Trámites adicionales: certificados telemáticos del IPC, consulta estado tramitación, actuaciones ante DPD, canal protección del informante. Registro electrónico disponible.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.ine.es/datosabiertos/",
-        "https://www.ine.es/OpenAPI/en/index.html",
-        "https://www.ine.es/dyngs/DAB/index.htm"
+        "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
+        "https://www.ine.es/OpenAPI/index.html",
+        "https://www.ine.es/dyngs/DataLab/manual.html?cid=1259945948443",
+        "https://www.ine.es/dyngs/INEbase/listaoperaciones.htm"
       ]
     },
-    "notes": null
+    "notes": "Entidad de ámbito estatal incluida como referencia cruzada por su relevancia directa para Canarias: todas las grandes encuestas (EPA, ECV, EPF, IPC, ETH, EOH, MNP, Atlas de Renta, Estadística Continua de Población) desagregan resultados a nivel CCAA=ES7 (Canarias) y en muchos casos a nivel provincial LP/TF. El parámetro de filtro territorial en WSTempus es g1=70:5. Inventario completo verificado 2026-06: 112 operaciones activas, 5.353 tablas. Las 13 operaciones sin tablas en Tempus3 exponen sus datos en formato PC-Axis descargable desde INEbase. islands=[\"Todas\"] indica cobertura de todas las islas pero sin desagregación insular propia del INE; la desagregación más fina disponible es provincial (Las Palmas / Santa Cruz de Tenerife). Operaciones con mayor relevancia específica para Canarias: EPA (empleo por CCAA), EOH/EOAP (turismo por provincias), Movimientos Turísticos en Fronteras, Encuesta de Turismo de Residentes, Atlas de Distribución de Renta (hasta nivel sección censal), Estadística Continua de Población, Cifras de Población – Padrón Municipal."
   },
   {
     "id": "aemet",
@@ -17063,100 +17443,6 @@
       "source_urls": [
         "https://www.aemet.es/es/datos_abiertos/AEMET_OpenData",
         "https://opendata.aemet.es/"
-      ]
-    },
-    "notes": null
-  },
-  {
-    "id": "miteco",
-    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico",
-    "alternate_names": [
-      "MITECO"
-    ],
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Ministerio clave para medio ambiente, energía, agua, costas, biodiversidad y residuos, con fuerte relevancia para Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Plaza de San Juan de la Cruz 10, 28071 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.431,
-          "lon": -3.69
-        },
-        "source_url": "https://www.datosabiertos.miteco.gob.es/en.html"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de Datos Abiertos MITECO",
-        "url": "https://www.datosabiertos.miteco.gob.es/en.html",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "INSPIRE",
-          "REST",
-          "API"
-        ],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "GeoJSON",
-          "WMS",
-          "WFS",
-          "API"
-        ],
-        "topics": [
-          "medio_ambiente",
-          "energia",
-          "agua",
-          "costas",
-          "biodiversidad",
-          "residuos"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "MITECO API",
-            "url": "https://www.datosabiertos.miteco.gob.es/en/acceso.html",
-            "type": "REST",
-            "documentation_url": "https://www.datosabiertos.miteco.gob.es/en/acceso.html"
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": "Catálogo temático amplio; el conteo no se normaliza en la fuente revisada.",
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta MITECO",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.datosabiertos.miteco.gob.es/en.html",
-        "https://www.datosabiertos.miteco.gob.es/en/acceso.html"
       ]
     },
     "notes": null
@@ -18150,7 +18436,9 @@
     "id": "ministerio_industria_turismo",
     "name": "Ministerio de Industria y Turismo",
     "alternate_names": [
-      "Industria y Turismo"
+      "MINTUR",
+      "Industria y Turismo",
+      "Ministerio de Industria y Turismo"
     ],
     "entity_kind": "organismo",
     "scope": "estatal",
@@ -18158,7 +18446,7 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio relevante para competitividad, industria, turismo y datos económicos de ámbito estatal.",
+    "description": "Ministerio del Gobierno de España responsable de la política industrial, turística y comercial de ámbito nacional. Relevante para Canarias por ser el principal destino turístico de España: publica datos de competitividad, industria y turismo federados en datos.gob.es. Las estadísticas turísticas (FRONTUR, EGATUR, EOH) se producen en convenio con el INE con desagregación por CCAA y provincias canarias (Las Palmas / Santa Cruz de Tenerife).",
     "locations": [
       {
         "kind": "headquarters",
@@ -18170,60 +18458,171 @@
           "lat": 40.467,
           "lon": -3.688
         },
-        "source_url": "https://www.mintur.gob.es/en-us/gobierno-abierto"
+        "source_url": "https://www.mintur.gob.es/es-es/Paginas/index.aspx"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "other",
-        "name": "Ministerio de Industria y Turismo - Gobierno Abierto",
-        "url": "https://www.mintur.gob.es/en-us/gobierno-abierto",
+        "id": "mintur_datos_abiertos",
+        "kind": "open_data",
+        "name": "Datos Abiertos – Sede Electrónica Ministerio de Industria y Turismo",
+        "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
         "portal_status": "active",
         "technology": [
-          "Custom"
+          "web_corporativa"
         ],
-        "standards": [
-          "HTML",
-          "CSV"
-        ],
+        "standards": [],
         "formats": [
+          "CSV",
           "HTML",
-          "CSV"
+          "JSON",
+          "KML",
+          "ODS",
+          "PDF",
+          "REST",
+          "WMS",
+          "XLS",
+          "XLSX",
+          "XML"
         ],
         "topics": [
-          "industria",
-          "turismo",
-          "comercio",
-          "competitividad"
+          "Industria",
+          "Energía",
+          "Economía",
+          "Transporte",
+          "Turismo",
+          "Empleo",
+          "Urbanismo e infraestructuras",
+          "Ciencia y tecnología",
+          "Comercio",
+          "Medio ambiente",
+          "Hacienda",
+          "Sector público"
         ],
-        "has_api": null,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
+        "has_api": true,
+        "apis": [
+          {
+            "name": "REST – Registro de Firmas de Fabricantes de Vehículos (GIAVEH)",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/registro-de-firmas-de-fabricantes-de-vehiculos",
+            "type": "REST",
+            "documentation_url": null
+          },
+          {
+            "name": "REST – Consulta Fichas Reducidas GIAVEH",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-fichas-reducidas",
+            "type": "REST",
+            "documentation_url": null
+          },
+          {
+            "name": "REST – Consulta Productores Registro AEE",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/catalogo/consulta-productores-rii-aee",
+            "type": "REST",
+            "documentation_url": null
+          },
+          {
+            "name": "Catálogo DCAT/RDF – Ministerio de Industria y Turismo",
+            "url": "https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf",
+            "type": "RDF",
+            "documentation_url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx"
+          }
+        ],
+        "dataset_count": 33,
+        "dataset_count_note": "33 datasets verificados en 2026-06 desde el catálogo oficial de la sede (sede.serviciosmin.gob.es/es-es/datosabiertos). Distribución por área responsable: Industria y PYME (24), Energía (9), Turismo (0 en área propia — los 4 datasets con temática 'Turismo' están bajo otras áreas). Distribución por temática: Industria (24), Energía (12), Economía (7), Transporte (7), Turismo (4), Empleo (3). Formatos por número de datasets: CSV (22), XLSX (21), HTML (18), XLS (6), PDF (3), REST (3), WMS (3), XML (3), KML (2), ODS (2), JSON (1). Catálogo disponible también en DCAT/RDF: https://sede.serviciosmin.gob.es/es-ES/datosabiertos/Documents/dcat.rdf",
+        "last_updated": null,
+        "license_summary": "Ley 37/2007 – Reutilización información sector público",
         "licenses": [
           {
             "id": null,
-            "name": "Reutilización abierta MINTUR",
-            "url": null,
+            "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+            "url": "https://sede.serviciosmin.gob.es/es-es/datosabiertos/Paginas/index.aspx",
             "count": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "mintur_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ministerio de Industria y Turismo",
+        "url": "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_estatal"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Trámites electrónicos",
+          "Industria",
+          "Turismo",
+          "Ayudas y subvenciones",
+          "Perfil del contratante",
+          "Notificaciones electrónicas",
+          "Recursos y reclamaciones"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sede electrónica compartida por la Subsecretaría, S.E. de Industria, S.E. de Turismo, Turespaña y SEPIDES. Incluye sección propia de Datos Abiertos en /es-es/datosabiertos/.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mintur_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia – Ministerio de Industria y Turismo",
+        "url": "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Organización",
+          "Empleo público",
+          "Altos cargos",
+          "Planificación y estadística",
+          "Normativa",
+          "Contratos",
+          "Convenios",
+          "Subvenciones",
+          "Presupuestos"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "machine_readable": false,
+        "dataset_count_note": "Portal de publicidad activa que actúa exclusivamente como índice de enlaces hacia el Portal de Transparencia estatal (transparencia.gob.es). No aloja documentos propios ni datasets descargables. Las solicitudes de derecho de acceso se tramitan en sede.transparencia.gob.es. Contenido verificado en 2026-06: todas las secciones redirigen a transparencia.gob.es salvo 'Información pública: normas', que enlaza a la sección de participación pública del propio portal ministerial.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.mintur.gob.es/en-us/gobierno-abierto",
-        "https://www.mintur.gob.es/en-us/gobierno-abierto/paginas/datos-abiertos.aspx"
+        "https://www.mintur.gob.es/es-es/Paginas/index.aspx",
+        "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/datos-abiertos.aspx",
+        "https://www.mintur.gob.es/es-es/gobierno-abierto/paginas/transparencia.aspx",
+        "https://sede.serviciosmin.gob.es/es-es/Paginas/Index.aspx",
+        "https://datos.gob.es/es/catalogo?publisher%5B0%5D=E05062701"
       ]
     },
-    "notes": null
+    "notes": "Entidad estatal incluida por relevancia directa para Canarias como principal destino turístico nacional. Las estadísticas FRONTUR/EGATUR/EOH se producen en convenio con el INE con desagregación provincial (Las Palmas / Santa Cruz de Tenerife), sin desagregación insular propia. El catálogo de datos abiertos está federado en datos.gob.es (publisher E05062701). La sede electrónica está en sede.serviciosmin.gob.es (dominio compartido con otros ministerios históricos). Organismos dependientes con tramitación propia en la sede: Turespaña (Instituto de Turismo de España) y SEPIDES (Sociedad Estatal de Promoción Industrial y Desarrollo Empresarial). La URL correcta del portal es /es-es/ (no /en-us/ como constaba en la versión anterior)."
   },
   {
     "id": "oepm",
@@ -18687,86 +19086,6 @@
       ]
     },
     "notes": "Aena gestiona directamente los aeropuertos canarios (Gran Canaria, Tenerife Norte, Tenerife Sur, Lanzarote, Fuerteventura, La Palma, La Gomera y El Hierro). El portal estadístico publica informes mensuales y anuales de tráfico aéreo en XLS y PDF con desglose por aeropuerto, siendo Canarias uno de los grupos del desglose. El bloque de transparencia fiscal agrupa once subapartados verificados individualmente, incluyendo contribución tributaria, buenas prácticas tributarias, resultado contable y gasto del impuesto de sociedades, litigios, paraísos fiscales, blanqueo de capitales, conducta ética, compromiso con la transparencia fiscal y relación con el auditor externo. Los Presupuestos Generales del Estado incluyen a Aena consolidado con descarga en HTML, XML, CSV y PDF. La herramienta IPP de la CNMV permite descarga de informes XBRL de Aena. El portal de consultas personalizadas requiere registro y no ofrece descarga directa visible desde la pantalla principal. Fecha de consulta: 2026-06."
-  },
-  {
-    "id": "sepe",
-    "name": "Servicio Público de Empleo Estatal",
-    "alternate_names": [
-      "SEPE"
-    ],
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Organismo estatal de empleo con estadísticas mensuales útiles para paro, contratos y demandantes en Canarias.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "C/ Condesa de Venadito 9, 28027 Madrid",
-        "postal_code": null,
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.436,
-          "lon": -3.637
-        },
-        "source_url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "SEPE Datos de Empleo",
-        "url": "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html",
-        "portal_status": "active",
-        "technology": [
-          "Custom"
-        ],
-        "standards": [
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "formats": [
-          "CSV",
-          "XLSX",
-          "PDF"
-        ],
-        "topics": [
-          "empleo",
-          "paro",
-          "contratos",
-          "mercado_laboral"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": "2026-05",
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "id": null,
-            "name": "Reutilización abierta SEPE",
-            "url": null,
-            "count": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/datos-avance/datos.html"
-      ]
-    },
-    "notes": null
   },
   {
     "id": "ministerio_interior",
@@ -19243,90 +19562,6 @@
     "notes": "Nodo estatal al que están federados múltiples portales canarios (datos.canarias.es, cabildos, etc.)."
   },
   {
-    "id": "ine_estadistica_canarias",
-    "name": "INE – Instituto Nacional de Estadística",
-    "entity_kind": "organismo",
-    "scope": "estatal",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas"
-    ],
-    "description": "Organismo estadístico estatal que ofrece datos demográficos, económicos y sociales desagregados para Canarias (comunidad autónoma y provincias), complementando la producción estadística del ISTAC.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Avenida de Manoteras, 50-52",
-        "postal_code": "28050",
-        "municipality": "Madrid",
-        "island": "Todas",
-        "coordinates": {
-          "lat": 40.4874,
-          "lon": -3.6621
-        },
-        "source_url": "https://www.ine.es/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "estadistica",
-        "name": "INEbase – Portal estadístico INE",
-        "url": "https://www.ine.es/inebmenu/indice.htm",
-        "portal_status": "active",
-        "technology": [
-          "Portal estadístico propio"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "XLSX",
-          "JSON",
-          "XML"
-        ],
-        "topics": [
-          "Demografía",
-          "Economía",
-          "Mercado laboral",
-          "Población",
-          "Precios",
-          "Vivienda"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API de servicios INE",
-            "url": "https://servicios.ine.es/wst/ine",
-            "type": "REST",
-            "documentation_url": "https://www.ine.es/dyngs/INEbase/es/categoria.htm?c=Estadistica_P&p=124"
-          }
-        ],
-        "dataset_count": null,
-        "dataset_count_note": "Numerosas operaciones con datos específicos para Canarias.",
-        "last_updated": null,
-        "license_summary": "Reutilización abierta bajo condiciones del INE",
-        "licenses": [
-          {
-            "name": "Condiciones de reutilización INE",
-            "count": null,
-            "id": null,
-            "url": "https://www.ine.es/aviso_legal.htm"
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://www.ine.es/",
-        "https://servicios.ine.es/wst/ine"
-      ]
-    },
-    "notes": "Fuente estatal clave para comparar indicadores canarios con el resto de España."
-  },
-  {
     "id": "ministerio_agricultura_pesca_alimentacion",
     "name": "Ministerio de Agricultura, Pesca y Alimentación",
     "entity_kind": "organismo",
@@ -19498,78 +19733,236 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal que publica datos sobre I+D, innovación, universidades y becas. Relevante para Canarias por la actividad de la ULPGC, ULL y centros de investigación como el IAC.",
+    "description": "Ministerio del Gobierno de España responsable de la política científica, tecnológica, de innovación y universitaria. Relevante para Canarias por su financiación de infraestructuras como el Instituto de Astrofísica de Canarias (IAC), la Plataforma Oceánica de Canarias (PLOCAN) y los Observatorios de Canarias (OOCC), además de gestionar el SICTI y el SIIU con datos desagregados por CCAA.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana, 162",
         "postal_code": "28046",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4583,
-          "lon": -3.6893
+          "lat": 40.4594,
+          "lon": -3.6896
         },
-        "source_url": "https://www.ciencia.gob.es/"
+        "source_url": "https://www.ciencia.gob.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Ciencia en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-ciencia-innovacion-y-universidades",
+        "id": "ciencia_portal_web",
+        "kind": "other",
+        "name": "Portal web del Ministerio de Ciencia, Innovación y Universidades",
+        "url": "https://www.ciencia.gob.es",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "custom"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "HTML",
+          "PDF"
         ],
         "topics": [
-          "Ciencia y Tecnología",
-          "Educación",
-          "I+D",
-          "Universidades"
+          "ciencia",
+          "innovacion",
+          "universidades",
+          "investigacion"
         ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Ciencia en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-ciencia-innovacion-y-universidades",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
-        ],
+        "has_api": false,
+        "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
-        "licenses": [
-          {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
-            "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_sicti",
+        "kind": "estadistica",
+        "name": "Sistema de Información sobre Ciencia, Tecnología e Innovación (SICTI)",
+        "url": "https://www.ciencia.gob.es/Ministerio/Estadisticas/sicti.html",
+        "portal_status": "active",
+        "technology": [
+          "custom"
         ],
-        "last_checked": "2026-05",
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "ciencia",
+          "tecnologia",
+          "innovacion",
+          "IDI",
+          "investigacion",
+          "gasto_IDI",
+          "presupuestos_IDI",
+          "ayudas_publicas",
+          "transferencia_conocimiento",
+          "patentes",
+          "publicaciones_cientificas",
+          "programa_marco_europeo"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "5 secciones temáticas: RECIDI (catálogo de centros I+D+I del SECTI), Principales datos I+D+I, Presupuestos I+D+I (AGE + CCAA), Ayudas públicas a la I+D+I, Transferencia de conocimiento e innovación. Informes de seguimiento PEICTI y EECTI 2021-2027. Solo consulta web y descarga en PDF — no hay tablas estructuradas descargables. Sistema conjunto AGE + CCAA con desagregación por CCAA (Canarias incluida).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_siiu",
+        "kind": "estadistica",
+        "name": "Sistema Integrado de Información Universitaria (SIIU)",
+        "url": "https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU.html",
+        "portal_status": "active",
+        "technology": [
+          "PC-Axis / JaxiPx",
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "XLS",
+          "XLSX",
+          "CSV",
+          "PC-Axis",
+          "TXT"
+        ],
+        "topics": [
+          "universidades",
+          "educacion_superior",
+          "estadisticas",
+          "estudiantes",
+          "becas",
+          "personal_universitario",
+          "tesis_doctorales",
+          "precios_publicos",
+          "financiacion",
+          "rendimiento_academico",
+          "pruebas_acceso",
+          "internacionalizacion"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "11 secciones temáticas: Estudiantes, Internacionalización, Rendimiento académico, Becas y ayudas, Financiación y gastos, Personal, Precios públicos, PAU, Tesis doctorales, Universidades/centros/titulaciones, Afiliación SS de egresados. Tablas interactivas vía visor JaxiPx (estadisticas.ciencia.gob.es) con descarga por tabla individual en XLS, XLSX, CSV (tabulador), CSV (;), PC-Axis (.px), TXT (tabulador), TXT (,), TXT (;). Descargas directas en XLSX por titulación (series 2015–2024). Series históricas desde 1985-86. Últimos datos: curso 2024-2025 (avance, 2025-10-22). Desagregación por CCAA verificada (Canarias incluida). Integrado en el Plan Estadístico Nacional (PEN).",
+        "last_updated": "2025-10",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "ciencia_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Ministerio de Ciencia",
+        "url": "https://ciencia.sede.gob.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_AGE"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "tramites",
+          "transparencia",
+          "administracion"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_subsede_universidades",
+        "kind": "other",
+        "name": "Subsede Electrónica – Secretaría General de Universidades",
+        "url": "https://universidades.sede.gob.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_AGE"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "universidades",
+          "titulos",
+          "becas",
+          "tramites"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_transparencia_investigacion",
+        "kind": "transparencia",
+        "name": "Transparencia en Investigación – Uso de animales en ciencia",
+        "url": "https://www.ciencia.gob.es/Investigar/Transparencia.html",
+        "portal_status": "active",
+        "technology": [
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "investigacion",
+          "bienestar_animal",
+          "transparencia",
+          "normativa",
+          "ciencia"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Página informativa que centraliza: informes anuales y quinquenales del MAPA sobre uso de animales con fines científicos, base de datos ALURES (CE), EU NTS Database en Power BI (acceso abierto), Acuerdo de Transparencia COSCE (158 instituciones adheridas, noviembre 2025), REMA, SECAL y Red de Comités de Ética (RCE).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.ciencia.gob.es/",
-        "https://datos.gob.es/"
+        "https://www.ciencia.gob.es",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/sicti.html",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU.html",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU/Estudiantes.html",
+        "https://estadisticas.ciencia.gob.es/dynPx/inebase/index.htm",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/CatalogoNacional.html",
+        "https://www.ciencia.gob.es/Investigar/Transparencia.html"
       ]
     },
-    "notes": "Relevante por la actividad universitaria canaria (ULL, ULPGC) y centros de excelencia como el IAC."
+    "notes": "CIF: S2801395A. DIR3: E05236301. Entidad de ámbito estatal incluida por su relevancia directa para Canarias: financia y tutela infraestructuras científicas singulares (ICTS) en las islas (IAC, PLOCAN, OOCC, GTC). Datasets federados en datos.gob.es bajo DIR3 E05236301 (https://datos.gob.es/es/catalogo?publisher_display_name=Ministerio+de+Ciencia%2C+Innovaci%C3%B3n+y+Universidades); reutilización bajo Ley 37/2007 + RD 1495/2011 (libre, comercial y no comercial, con atribución obligatoria de fuente y fecha). Datos no publicados solicitables vía ciencia.sede.gob.es (proc. 132379) o buzón datos.gob.es. No existe desagregación por isla en SICTI/SIIU, pero sí por CCAA (Canarias incluida). El visor JaxiPx (estadisticas.ciencia.gob.es) es la infraestructura de descarga del SIIU (8 formatos por tabla). SICTI solo ofrece consulta web y PDF. Transparencia en investigación con uso de animales centraliza informes MAPA, ALURES, EU NTS Database (Power BI), Acuerdo COSCE (158 instituciones, 2025), REMA, SECAL y RCE. Entidades adscritas relevantes para Canarias pendientes de añadir como entidades independientes: IAC, PLOCAN."
   },
   {
     "id": "ministerio_cultura",
@@ -19821,79 +20214,199 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal que publica datos sobre servicios sociales, consumo y agenda 2030. Relevante para Canarias por estadísticas de pobreza, servicios sociales y consumo en el archipiélago.",
+    "description": "Ministerio del Gobierno de España responsable de las políticas de servicios sociales, consumo, dependencia, discapacidad y Agenda 2030. Relevante para Canarias por gestionar el IMSERSO (dependencia, turismo social, mayores), el SAAD con datos de dependencia desagregados por CCAA, los ODS y el Real Patronato sobre Discapacidad.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo del Prado, 18-20",
         "postal_code": "28014",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.413,
-          "lon": -3.693
+          "lat": 40.4136,
+          "lon": -3.6934
         },
-        "source_url": "https://www.mdsocialesa2030.gob.es/"
+        "source_url": "https://www.dsca.gob.es/es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Derechos Sociales en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-derechos-sociales-consumo-y-agenda-2030",
+        "id": "dsca_portal_web",
+        "kind": "other",
+        "name": "Portal web del Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+        "url": "https://www.dsca.gob.es/es",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "derechos_sociales",
+          "consumo",
+          "agenda_2030",
+          "discapacidad",
+          "dependencia",
+          "familias",
+          "inclusion",
+          "servicios_sociales"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "dsca_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+        "url": "https://dsca.sede.gob.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_AGE"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "tramites",
+          "administracion",
+          "transparencia"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "dsca_estadisticas_familias",
+        "kind": "estadistica",
+        "name": "Estadísticas de Familias Numerosas – DSCA",
+        "url": "https://www.dsca.gob.es/es/derechos-sociales/familias/estadisticas",
+        "portal_status": "active",
+        "technology": [
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF",
+          "XLS"
+        ],
+        "topics": [
+          "familias",
+          "familias_numerosas",
+          "titulos_familia_numerosa",
+          "estadisticas",
+          "demografia"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Estadísticas de títulos de familia numerosa concedidos y renovados por año. Desagregación por CCAA probable (Canarias incluida). Descarga en PDF y XLS verificada.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "dsca_consumo_alertas",
+        "kind": "estadistica",
+        "name": "Estadísticas e informes de seguridad de productos – Red de Alertas DSCA",
+        "url": "https://www.dsca.gob.es/es/consumo/vigilamos-mercado/red-alertas/informacion-de-seguridad-y-estadisticas/prod-no-alimenticios-notif-red-alerta",
+        "portal_status": "active",
+        "technology": [
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "consumo",
+          "seguridad_productos",
+          "red_alertas",
+          "vigilancia_mercado",
+          "productos_no_alimenticios"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Memorias anuales y estadísticas de notificaciones a la red de alertas de productos no alimenticios. Solo descarga en PDF.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "dsca_dgoj",
+        "kind": "estadistica",
+        "name": "Datos, estudios y sanciones – Dirección General de Ordenación del Juego (DGOJ)",
+        "url": "https://www.ordenacionjuego.es/datos-estudios",
+        "portal_status": "active",
+        "technology": [
+          "custom",
+          "Alfresco CMIS"
         ],
         "standards": [],
         "formats": [
           "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "XLSX",
+          "PDF",
+          "TXT"
         ],
         "topics": [
-          "Servicios sociales",
-          "Consumo",
-          "Demografía",
-          "Vivienda",
-          "Sector público"
+          "juego",
+          "juego_online",
+          "estadisticas_juego",
+          "sanciones",
+          "operadores_juego",
+          "juego_responsable",
+          "mercado_juego"
         ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Derechos Sociales en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-derechos-sociales-consumo-y-agenda-2030",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
-        ],
+        "has_api": false,
+        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "dataset_count_note": "Descarga directa de datos del mercado de juego online (CSV trimestral: GGR/cantidades jugadas, depósitos/retiradas, número de cuentas, publicidad; actualización trimestral, último dato 1T-2026). Mercado español total en XLSX. Listado de operadores habilitados en XLSX. Metadatos en PDF y TXT. Memorias anuales en PDF (2012–2020). Ficheros servidos vía repositorio Alfresco CMIS. Licencia de reutilización libre con atribución obligatoria de fuente y fecha (aviso legal DGOJ). Sin desagregación territorial por CCAA o isla confirmada.",
+        "last_updated": "2026-01",
+        "license_summary": "Reutilización libre con atribución obligatoria de fuente y fecha. Sin garantía de disponibilidad ni exactitud. Rige legislación española.",
         "licenses": [
           {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
+            "name": "Aviso legal DGOJ – reutilización con atribución",
             "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
+            "url": "https://www.ordenacionjuego.es/datos-estudios/estudios/descarga-datos-mercado-juego"
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.mdsocialesa2030.gob.es/",
-        "https://datos.gob.es/"
+        "https://www.dsca.gob.es/es",
+        "https://dsca.sede.gob.es",
+        "https://www.ordenacionjuego.es/datos-estudios"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2801445D. DIR3: E05235701. Entidad de ámbito estatal incluida por su relevancia directa para Canarias: gestiona el IMSERSO (dependencia, turismo social, termalismo, mayores) con datos desagregados por CCAA; en 2025 Canarias corrigió envío de datos erróneos al SAAD (9.000 prestaciones). Los indicadores ODS/Agenda 2030 están delegados al INE (https://www.ine.es/dyngs/ODS/es/index.htm). Transparencia activa delegada en el portal AGE (transparencia.gob.es). Datasets federados en datos.gob.es bajo DIR3 E05235701. Organismos adscritos relevantes para Canarias pendientes de añadir como entidades independientes: IMSERSO, AESAN, DGOJ. La DGOJ ofrece descarga de datos del mercado de juego (https://www.ordenacionjuego.es/datos-estudios/estudios/descarga-datos-mercado-juego)."
   },
   {
     "id": "ministerio_igualdad",
@@ -20302,7 +20815,7 @@
     "notes": null
   },
   {
-    "id": "ministerio_politica_territorial",
+    "id": "ministerio_politica_territorial_memoria_democratica",
     "name": "Ministerio de Política Territorial y Memoria Democrática",
     "entity_kind": "organismo",
     "scope": "estatal",
@@ -20310,76 +20823,155 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal con datos sobre administración territorial, coordinación con comunidades autónomas y memoria histórica. Incluye datos sobre financiación y competencias del régimen especial canario.",
+    "description": "Ministerio estatal con Delegación del Gobierno en Canarias y Comisionado Especial para la Reconstrucción de La Palma (volcán Tajogaite). Publica datos sobre infraestructuras locales (EIEL), conflictividad competencial Estado-CCAA, conferencias sectoriales y convenios de cooperación. La transparencia se gestiona a través del Portal de Transparencia del Gobierno de España (transparencia.gob.es).",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana, 3",
-        "postal_code": "28046",
+        "postal_code": "28071",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4228,
-          "lon": -3.6927
+          "lat": 40.4262,
+          "lon": -3.6891
         },
-        "source_url": "https://www.mptfd.gob.es/"
+        "source_url": "https://mptmd.gob.es/portal/inicio"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "mptmd_catalogo",
         "kind": "open_data",
-        "name": "Datos abiertos – Política Territorial en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-politica-territorial-y-memoria-democratica",
+        "name": "Catálogo de Datos — MPTMD",
+        "url": "https://mptmd.gob.es/portal/ministerio/catalogo-de-datos",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "other"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
-          "XML"
+          "PDF",
+          "XLS",
+          "XLSX"
         ],
         "topics": [
+          "Gobierno",
+          "Legislación",
+          "Administración local",
+          "Infraestructuras"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sin API CKAN. Datos publicados como PDFs y Excel. Incluye formulario de solicitud de datos abiertos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "mptmd_eiel",
+        "kind": "estadistica",
+        "name": "Encuesta de Infraestructura y Equipamientos Locales (EIEL)",
+        "url": "https://eiel.redsara.es/descargas/",
+        "portal_status": "active",
+        "technology": [
+          "other"
+        ],
+        "standards": [],
+        "formats": [
+          "TXT",
+          "XLS"
+        ],
+        "topics": [
+          "Infraestructuras",
+          "Administración local",
+          "Municipios"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Descarga por municipio en texto y Excel. Visor georreferenciado disponible.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "portal_transparencia_mptmd",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del Gobierno de España — MPTMD",
+        "url": "https://transparencia.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Transparencia",
+          "Acceso a la información pública",
+          "Publicidad activa",
           "Sector público",
-          "Administración",
-          "Legislación"
+          "Expedientes administrativos"
         ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Política Territorial en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-politica-territorial-y-memoria-democratica",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal centralizado del Gobierno de España. Permite consultar expedientes administrativos, ejercer el derecho de acceso a la información pública y acceder a la normativa de publicidad activa del MPTMD.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mptmd_sede",
+        "kind": "other",
+        "name": "Sede Electrónica MPTMD",
+        "url": "https://mptmd.sede.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
         ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Trámites",
+          "Administración electrónica"
+        ],
+        "has_api": false,
+        "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
-        "licenses": [
-          {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
-            "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.mptfd.gob.es/",
-        "https://datos.gob.es/"
+        "https://mptmd.gob.es/portal/inicio",
+        "https://mptmd.gob.es/portal/ministerio/catalogo-de-datos",
+        "https://transparencia.gob.es/",
+        "https://mptmd.sede.gob.es/"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2801452J. La transparencia del MPTMD se gestiona a través del Portal de Transparencia centralizado del Gobierno de España (transparencia.gob.es), conforme a la Ley 19/2013. Comisionado Especial para la Reconstrucción de La Palma activo, con visor GRAFCAN integrado y portal registral de emergencias. islands=['Todas']: sin desagregación por isla en el catálogo general; el comisionado de La Palma es específico de esa isla."
   },
   {
     "id": "ministerio_trabajo_economia_social",
@@ -20548,84 +21140,294 @@
   {
     "id": "ministerio_vivienda_agenda_urbana",
     "name": "Ministerio de Vivienda y Agenda Urbana",
+    "alternate_names": [
+      "MIVAU"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal con datos abiertos sobre vivienda, suelo, rehabilitación y urbanismo. Publica estadísticas de transacciones, precios y parque residencial con desagregación por comunidad autónoma.",
+    "description": "Ministerio estatal competente en política de vivienda, suelo, urbanismo, arquitectura y agenda urbana. Relevante para Canarias por las estadísticas del Observatorio de Vivienda y Suelo con desagregación autonómica (precios de alquiler, compraventa, vivienda protegida, visados), la plataforma URBAN3R de datos abiertos para regeneración urbana, el SERPAVI (Sistema Estatal de Referencia del Precio del Alquiler), el Atlas de Áreas Urbanas y el Sistema de Información Urbana (SIU).",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana, 67",
-        "postal_code": "28046",
+        "postal_code": "28071",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4443,
-          "lon": -3.692
+          "lat": 40.4431,
+          "lon": -3.6923
         },
         "source_url": "https://www.mivau.gob.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Vivienda en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-vivienda-y-agenda-urbana",
+        "id": "mivau_observatorio_vivienda_suelo",
+        "kind": "estadistica",
+        "name": "Observatorio de Vivienda y Suelo (OVS) – MIVAU",
+        "url": "https://www.mivau.gob.es/urbanismo-y-suelo/suelo/observatorio-de-vivienda-y-suelo",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "web_propia"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "PDF"
         ],
         "topics": [
           "Vivienda",
+          "Suelo",
+          "Mercado de suelo",
+          "Precios de vivienda",
+          "Compraventa",
+          "Alquiler",
+          "Vivienda social",
+          "Vivienda protegida",
+          "Rehabilitación",
+          "Hipotecas",
+          "Accesibilidad",
+          "Financiación",
+          "Censo de viviendas",
+          "Parque residencial"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Boletines trimestrales (núm. 1 a 56, desde 1T 2012 hasta 4T 2025), boletines anuales (2012–2024) y boletines especiales temáticos (alquiler residencial, rehabilitación, vivienda social, censo de viviendas). Último boletín publicado: núm. 56 (4T 2025). Boletines especiales: Rehabilitación 2025 (enero 2026), Vivienda Social 2024 (enero 2025). Serie histórica desde 2012. Publicados en PDF sin datos estructurados descargables independientemente. Incluyen desagregación por comunidad autónoma (Canarias).",
+        "last_updated": "2026-01",
+        "license_summary": "Reutilización abierta sector público",
+        "licenses": [
+          {
+            "name": "Ley 37/2007 sobre reutilización de información del sector público",
+            "id": null,
+            "url": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mivau_urban3r",
+        "kind": "open_data",
+        "name": "URBAN3R – Plataforma de Datos Abiertos de Regeneración Urbana",
+        "url": "https://www.mivau.gob.es/urbanismo-y-suelo/urbanismo-y-politica-de-suelo/urban3r",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "SHP",
+          "ZIP"
+        ],
+        "topics": [
           "Urbanismo",
-          "Economía",
-          "Sector público"
+          "Regeneración urbana",
+          "Rehabilitación energética",
+          "Edificación",
+          "Demanda energética",
+          "Costes de rehabilitación",
+          "Eficiencia energética",
+          "Agenda Urbana Española"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Plataforma de visualización e indicadores sobre estado de la edificación residencial: demanda energética actual y tras rehabilitación, costes estimados de intervención. Escala de barrio a municipal, con posibilidad de consulta a escala de edificio (orientativa). Descarga de datos disponible a escala urbana. Municipios sin cobertura pueden procesarse subiendo el fichero Catastro por usuarios registrados. Relevante para municipios canarios: permite diseñar estrategias locales de rehabilitación urbana alineadas con la Agenda Urbana Española.",
+        "last_updated": null,
+        "license_summary": "Datos abiertos – reutilización libre",
+        "licenses": [
+          {
+            "name": "Datos abiertos sector público",
+            "id": null,
+            "url": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "mivau_serpavi",
+        "kind": "estadistica",
+        "name": "SERPAVI – Sistema Estatal de Referencia del Precio del Alquiler de Vivienda",
+        "url": "https://serpavi.mivau.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Alquiler",
+          "Precios de vivienda",
+          "Vivienda",
+          "Zonas tensionadas",
+          "Contratos de arrendamiento"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Herramienta interactiva para consultar valores de referencia del precio del alquiler por zonas. Incluye consulta de zonas de mercado residencial tensionado. Datos relevantes para el mercado de alquiler en Canarias.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mivau_siu",
+        "kind": "geoespacial",
+        "name": "Sistema de Información Urbana (SIU) – MIVAU",
+        "url": "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana",
+        "portal_status": "active",
+        "technology": [
+          "ArcGIS",
+          "OGC (WMS/WFS)",
+          "IDEE"
+        ],
+        "standards": [
+          "OGC WMS",
+          "OGC WFS",
+          "INSPIRE",
+          "TR Ley de Suelo y Rehabilitación Urbana (RDL 7/2015)"
+        ],
+        "formats": [
+          "SHP",
+          "ZIP",
+          "XLSX",
+          "WMS",
+          "WFS"
+        ],
+        "topics": [
+          "Urbanismo",
+          "Suelo",
+          "Clases de suelo",
+          "Sectores residenciales",
+          "Planeamiento urbanístico",
+          "Usos del suelo",
+          "Riesgo de inundación",
+          "Riesgo sísmico",
+          "CORINE Land Cover",
+          "SIOSE",
+          "Dominio público marítimo-terrestre",
+          "Ordenación territorial",
+          "Radón"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "API catálogo Vivienda en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-vivienda-y-agenda-urbana",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
+            "name": "Servicio WMS – SIU (IDEE)",
+            "url": "https://mapas.fomento.gob.es/arcgis/services/SIU/Servicios_OGC/MapServer/WMSServer?service=wms&request=getCapabilities",
+            "type": "OGC WMS",
+            "documentation_url": "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana"
+          },
+          {
+            "name": "Servicio WFS – SIU (IDEE)",
+            "url": "https://mapas.fomento.gob.es/arcgis/services/SIU/Servicios_OGC/MapServer/WFSServer?service=wfs&request=getCapabilities",
+            "type": "OGC WFS",
+            "documentation_url": "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana"
           }
         ],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "dataset_count_note": "Cubre 5.898 municipios (98,61% de la población española, 100% de áreas urbanas). Descargas directas disponibles: clases de suelo, recintos y sectores en SHP (ZIP), e información alfanumérica en XLSX. Última actualización de ficheros: 2025-12-02. Incluye estudio 'Sectores Residenciales en España 2025'. Relevante para Canarias: incluye municipios canarios en clases de suelo, recintos, sectores y capas de riesgo de inundación y dominio público marítimo-terrestre.",
+        "last_updated": "2025-12",
+        "license_summary": "Reutilización abierta sector público",
         "licenses": [
           {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
+            "name": "Ley 37/2007 sobre reutilización de información del sector público",
             "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
+            "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "mivau_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia MIVAU – Portal de la Transparencia del Gobierno de España",
+        "url": "https://www.mivau.gob.es/el-ministerio/transparencia-en-ministerio",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Transparencia",
+          "Publicidad activa",
+          "Información presupuestaria",
+          "Acceso a la información pública",
+          "Sector público"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Página de transparencia del MIVAU que enlaza al Portal de la Transparencia del Gobierno de España (transparencia.gob.es) y a la ejecución presupuestaria de la IGAE.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mivau_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – MIVAU",
+        "url": "https://mivau.sede.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Trámites",
+          "Administración electrónica",
+          "Ayudas vivienda",
+          "Agenda urbana y arquitectura",
+          "Recursos y reclamaciones",
+          "Quejas y sugerencias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Tramitación electrónica: ayuda al ciudadano, recursos y reclamaciones, agenda urbana y arquitectura, vivienda y suelo, Entidad Estatal de Vivienda (CASA 47).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.mivau.gob.es/",
-        "https://datos.gob.es/"
+        "https://www.mivau.gob.es/el-ministerio/transparencia-en-ministerio",
+        "https://www.mivau.gob.es/urbanismo-y-suelo/suelo/observatorio-de-vivienda-y-suelo",
+        "https://www.mivau.gob.es/urbanismo-y-suelo/urbanismo-y-politica-de-suelo/urban3r",
+        "https://serpavi.mivau.gob.es/",
+        "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana",
+        "https://mivau.sede.gob.es/"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2801506C. Código DIR3: E05068801. Dirección oficial: Paseo de la Castellana, 67, 28071 Madrid. Relevancia para Canarias: el Observatorio de Vivienda y Suelo publica indicadores trimestrales y anuales con desagregación por CCAA (Canarias); URBAN3R permite consultar y descargar datos de edificación residencial a escala de barrio o municipio para cualquier municipio canario; SERPAVI incluye zonas de mercado residencial tensionado relevantes para las islas; el SIU/Atlas de Áreas Urbanas cubre municipios canarios. islands=['Todas']: datos publicados a nivel nacional con desagregación autonómica, sin desglose por isla en los datasets estatales. El Plan Estatal de Vivienda 2022-2025 y el Bono Alquiler Joven son gestionados con las CCAA; la gestión en Canarias se canaliza a través del Gobierno de Canarias."
   },
   {
     "id": "ministerio_transformacion_digital",
@@ -20710,86 +21512,327 @@
   },
   {
     "id": "ministerio_transicion_ecologica",
-    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico – Portal de Datos Abiertos",
+    "name": "Ministerio para la Transición Ecológica y el Reto Demográfico",
+    "alternate_names": [
+      "MITECO",
+      "Transición Ecológica",
+      "Ministerio para la Transición Ecológica"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Portal de datos abiertos del MITECO con información ambiental, energética y meteorológica de toda España, incluyendo series e indicadores aplicables a las Islas Canarias (clima, agua, energía, biodiversidad).",
+    "description": "Ministerio del Gobierno de España responsable de la política ambiental, energética, climática, de agua y de reto demográfico. Relevante para Canarias por gestionar datos de calidad del aire, biodiversidad, costas, agua, energía y cambio climático con desagregación territorial que incluye las islas. Publica datos de alto valor (HVD) de las categorías Geoespacial y Observación de la Tierra conforme al Reglamento UE 138/2023, así como el Registro de Autoconsumo con cobertura canaria.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Plaza de San Juan de la Cruz, 10",
         "postal_code": "28071",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4406,
-          "lon": -3.6919
+          "lat": 40.4422,
+          "lon": -3.6925
         },
-        "source_url": "https://www.miteco.gob.es/"
+        "source_url": "https://www.miteco.gob.es/es.html"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "miteco_datos_abiertos",
         "kind": "open_data",
         "name": "Portal de Datos Abiertos MITECO",
         "url": "https://www.datosabiertos.miteco.gob.es/es.html",
         "portal_status": "active",
         "technology": [
-          "Portal propio"
+          "CKAN",
+          "ckanext-miteco (TRAGSA)"
         ],
-        "standards": [],
+        "standards": [
+          "DCAT",
+          "GeoDCAT-AP 2.0",
+          "INSPIRE",
+          "Reglamento de Ejecución (UE) 138/2023 (HVD)",
+          "NTI-RISP"
+        ],
+        "formats": [
+          "CSV",
+          "HTML",
+          "API",
+          "XML",
+          "WFS",
+          "WMS",
+          "ZIP",
+          "PDF",
+          "XLSX",
+          "GeoJSON",
+          "KML",
+          "KMZ",
+          "SHP",
+          "ODS",
+          "XLS",
+          "RSS",
+          "TXT"
+        ],
+        "topics": [
+          "Medio ambiente",
+          "Energía",
+          "Sector público",
+          "Transporte",
+          "Turismo",
+          "Ruido",
+          "Observación de la Tierra",
+          "Emisiones",
+          "Agua",
+          "Lugares protegidos",
+          "Clima",
+          "Biodiversidad",
+          "Geoespacial",
+          "Hidrografía",
+          "Residuos"
+        ],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "API CKAN – Catálogo Datos Abiertos MITECO",
+            "url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/api/3/action/package_list",
+            "type": "REST",
+            "documentation_url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/ckan/"
+          },
+          {
+            "name": "API Datastore – Portal Datos Abiertos MITECO",
+            "url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/datastore/",
+            "type": "REST",
+            "documentation_url": "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/datastore/"
+          }
+        ],
+        "dataset_count": 58,
+        "dataset_count_note": "58 datasets verificados en 2026-06 (publicador: Ministerio para la Transición Ecológica y el Reto Demográfico, Autoridad nacional). Distribución: 34 espaciales + 24 no espaciales. Categorías HVD: Ruido (9), Observación de la Tierra y medio ambiente (8), Emisiones (7), Agua (5), Lugares protegidos (5), Clima (3+3 subtipos), Biodiversidad (2), otros (16). Temas INSPIRE principales: Condiciones atmosféricas AC (12), Lugares protegidos PS (5), Hidrografía HY (3), Hábitats y biotopos HB (3), Regiones marinas SR (3). Temáticas NTI-RISP: Medio ambiente (44), Energía (8), Sector público (5), Transporte (2), Turismo (1). Formatos más frecuentes: CSV (36), HTML (11), API (4), XML (4), WFS (3), WMS (3). Suborganizaciones publicadoras incluyen AEMET (5 datasets). Cobertura geográfica: España (58/58), sin desagregación insular explícita pero los datos ambientales y climáticos cubren Canarias.",
+        "last_updated": "2026-01",
+        "license_summary": "Ley 37/2007 – Reutilización información sector público",
+        "licenses": [
+          {
+            "id": null,
+            "name": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+            "url": "https://www.datosabiertos.miteco.gob.es/es/que-es-el-portal-de-datos-abiertos.html",
+            "count": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "miteco_datos_gob_es",
+        "kind": "agregador",
+        "name": "Catálogo MITECO en datos.gob.es",
+        "url": "https://datos.gob.es/es/catalogo?publisher%5B0%5D=E05068001",
+        "portal_status": "active",
+        "technology": [
+          "datos.gob.es / CKAN"
+        ],
+        "standards": [
+          "DCAT-AP-ES",
+          "NTI-RISP"
+        ],
         "formats": [
           "CSV",
           "JSON",
           "XML",
-          "XLSX"
+          "GeoJSON",
+          "WMS",
+          "WFS",
+          "API"
         ],
         "topics": [
           "Medio ambiente",
           "Energía",
           "Agua",
-          "Cambio climático",
-          "Residuos",
-          "Meteorología"
+          "Biodiversidad",
+          "Geoespacial",
+          "Observación de la Tierra"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "Servicios de datos abiertos MITECO",
-            "url": "https://www.datosabiertos.miteco.gob.es/es/catalogo",
+            "name": "API CKAN – datos.gob.es (publisher MITECO E05068001)",
+            "url": "https://datos.gob.es/apidata/catalog/dataset?publisher=http://datos.gob.es/recurso/sector-publico/org/Organismo/E05068001",
             "type": "REST",
-            "documentation_url": "https://www.datosabiertos.miteco.gob.es/es.html"
+            "documentation_url": "https://datos.gob.es/es/documentacion/api-de-datos-gob-es"
           }
         ],
         "dataset_count": null,
-        "dataset_count_note": "Catálogo con decenas de datasets ambientales y energéticos.",
+        "dataset_count_note": "Datasets del MITECO federados en el catálogo nacional datos.gob.es bajo publisher E05068001. Pendiente verificar conteo exacto.",
         "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones MITECO)",
-        "licenses": [
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "miteco_gis",
+        "kind": "geoespacial",
+        "name": "Infraestructura de Datos Espaciales MITECO (IDE-MITECO)",
+        "url": "https://sig.mapama.gob.es/geoportal/index.html",
+        "portal_status": "active",
+        "technology": [
+          "OGC API",
+          "WMS",
+          "WFS",
+          "INSPIRE"
+        ],
+        "standards": [
+          "INSPIRE",
+          "OGC API Features",
+          "WMS",
+          "WFS"
+        ],
+        "formats": [
+          "SHP",
+          "KMZ",
+          "JPG",
+          "PDF",
+          "XML",
+          "GeoJSON",
+          "GML"
+        ],
+        "topics": [
+          "Geoespacial",
+          "Medio ambiente",
+          "Agua",
+          "Biodiversidad",
+          "Costas",
+          "Energía",
+          "Cartografía",
+          "Ruido ambiental",
+          "Cambio climático",
+          "Emisiones industriales",
+          "Vías pecuarias",
+          "Aguas residuales"
+        ],
+        "has_api": true,
+        "apis": [
           {
-            "name": "Condiciones de reutilización MITECO",
-            "count": null,
-            "id": null,
-            "url": "https://www.miteco.gob.es/es/aviso-legal.html"
+            "name": "OGC API – IDE MITECO",
+            "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicio-ogc-api.html",
+            "type": "OGC API Features",
+            "documentation_url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicio-ogc-api.html"
+          },
+          {
+            "name": "Servicios de visualización WMS/WFS – INSPIRE",
+            "url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicios_web_mapas.html",
+            "type": "WMS",
+            "documentation_url": "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicios_web_mapas.html"
           }
         ],
-        "last_checked": "2026-05",
+        "dataset_count": null,
+        "dataset_count_note": "Geoportal en pruebas (activo en 2026-06) con visores temáticos organizados en categorías: Agua (calidad aguas subterráneas, superficiales, saneamiento, zonas de baño 2022), Banco de Datos de la Naturaleza BDN (espacios protegidos, vías pecuarias), Calidad y Evaluación Ambiental (emisiones industriales, ruido ambiental UME/MER), Cambio Climático. Infraestructura GIS completa con 4 componentes: (1) Catálogo de metadatos INSPIRE; (2) Visores geográficos temáticos; (3) Servicios WMS/WFS INSPIRE; (4) Descargas SHP/KMZ/PDF/XML. OGC API para interoperabilidad geoespacial. URL histórica del antiguo MAPAMA, aún activa. Pendiente URL definitiva del nuevo geoportal y verificar cobertura específica de Canarias en los visores.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "miteco_estadisticas",
+        "kind": "estadistica",
+        "name": "Estadísticas – Ministerio para la Transición Ecológica y el Reto Demográfico",
+        "url": "https://www.miteco.gob.es/es/ministerio/servicios/estadisticas.html",
+        "portal_status": "active",
+        "technology": [
+          "web_corporativa"
+        ],
+        "standards": [
+          "Plan Estadístico Nacional 2025-2028 (PEN2025-2028)",
+          "Programa Anual 2026 (PA2026)",
+          "Inventario de Operaciones Estadísticas (IOE)",
+          "Código de Buenas Prácticas de las Estadísticas Europeas (CBPEE)"
+        ],
+        "formats": [
+          "HTML",
+          "PDF",
+          "XLSX"
+        ],
+        "topics": [
+          "Energía",
+          "Minas",
+          "Agua",
+          "Biodiversidad",
+          "Forestal",
+          "Calidad del aire",
+          "Meteorología",
+          "Economía circular",
+          "Residuos",
+          "Cambio climático",
+          "Desarrollo sostenible",
+          "ODS / Agenda 2030"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal estadístico del MITECO integrado en el Plan Estadístico Nacional 2025-2028. 8 áreas temáticas con operaciones estadísticas delegadas: Energía, Minas, Agua, Biodiversidad, Forestal, Calidad y Evaluación Ambiental, Meteorológica, Recursos y Economía Circular. Incluye indicadores ODS/Agenda 2030 para 9 de los 17 ODS. Calendario de difusión de publicaciones 2026 disponible en PDF. El MITECO fue evaluado en la Ronda de Peer Review 2021-2023 del Sistema Estadístico Europeo. Futuras estadísticas previstas: Cambio Climático, Costas y Medio Marino, Reto Demográfico, Transición Justa. Nota: las Cuentas Medioambientales son competencia del INE, no del MITECO.",
+        "last_updated": "2026-02",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "miteco_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica MITECO",
+        "url": "https://sede.miteco.gob.es/portal/site/seMITECO",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_estatal"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Agua",
+          "Biodiversidad y Bosques",
+          "Calidad y Evaluación Ambiental",
+          "Cambio Climático",
+          "Costas y Medio Marino",
+          "Energía",
+          "Reto Demográfico",
+          "Residuos",
+          "Radiactividad"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "276 procedimientos electrónicos organizados en 8 temas: Energía (109), Agua (60), Biodiversidad y Bosques (26), Otros (23), Calidad y Evaluación Ambiental (20), Cambio Climático (14), Costas y Medio Marino (12), Reto Demográfico (12). Servicios con relevancia canaria: SOTER (suplementos territoriales sistemas no peninsulares, incluye Canarias), RADNE (Registro de Autoconsumo), REPRO (producción eléctrica), ESCILA/ESFINGE (estadísticas energía eléctrica y gas).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.datosabiertos.miteco.gob.es/es.html"
+        "https://www.miteco.gob.es/es.html",
+        "https://www.datosabiertos.miteco.gob.es/es.html",
+        "https://www.datosabiertos.miteco.gob.es/es/que-es-el-portal-de-datos-abiertos.html",
+        "https://www.datosabiertos.miteco.gob.es/es/catalogo-de-datos.html",
+        "https://www.datosabiertos.miteco.gob.es/es/acceso.html",
+        "https://www.datosabiertos.miteco.gob.es/es/gis.html",
+        "https://catalogo.datosabiertos.miteco.gob.es/catalogo/api/3/action/package_list",
+        "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/ckan/",
+        "https://catalogo.datosabiertos.miteco.gob.es/catalogo/openapi/datastore/",
+        "https://sig.mapama.gob.es/geoportal",
+        "https://www.miteco.gob.es/es/cartografia-y-sig/ide/directorio_datos_servicios/servicio-ogc-api.html",
+        "https://sede.miteco.gob.es/portal/site/seMITECO"
       ]
     },
-    "notes": "Complementa a los datasets específicos que ya tienes modelados (precios de carburantes, etc.)."
+    "notes": "Entidad estatal incluida por relevancia directa para Canarias: gestiona datos de costas, biodiversidad, calidad del aire, energías renovables, agua y cambio climático con cobertura insular. El SOTER (sede MITECO) gestiona los suplementos territoriales del sistema eléctrico para territorios no peninsulares incluyendo Canarias. El RADNE incluye datos de instalaciones de autoconsumo por isla. Portal CKAN propio (ckanext-miteco, desarrollado por TRAGSA) en datosabiertos.miteco.gob.es con 58 datasets HVD (2026-06), en expansión progresiva. IDE-MITECO con geoportal en sig.mapama.gob.es/geoportal (URL histórica del antiguo MAPAMA, aún activa). Duplicado eliminado: existía también como id='miteco' con portal en /en.html y topics en snake_case; fusionado en 2026-06. CIF: S2801401G."
   },
   {
     "id": "presidencia_del_gobierno",
