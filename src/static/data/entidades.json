@@ -2356,7 +2356,7 @@
     "id": "policia_nacional_canarias",
     "name": "Policía Nacional – Datos de Seguridad Canarias",
     "entity_kind": "organismo",
-    "scope": "autonomico",
+    "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas",
@@ -2373,13 +2373,13 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Policía Nacional – Datos de Seguridad Canarias",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Ministerio del Interior",
+        "postal_code": "28006",
+        "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
-          "lat": 28.2916,
-          "lon": -16.6291
+          "lat": 40.435,
+          "lon": -3.684
         },
         "source_url": "https://estadisticasdecriminalidad.ses.mir.es"
       }
@@ -2387,7 +2387,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "estadistica",
         "name": "Portal de datos – Policía Nacional – Datos de Seguridad Canarias",
         "url": "https://estadisticasdecriminalidad.ses.mir.es",
         "portal_status": "active",
@@ -2409,24 +2409,17 @@
         ],
         "has_api": false,
         "apis": [],
-        "dataset_count": 2,
+        "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta MIR",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://estadisticasdecriminalidad.ses.mir.es"
       ]
