@@ -2684,8 +2684,8 @@
       {
         "kind": "headquarters",
         "address": "Ayuntamiento de Güímar",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "38680",
+        "municipality": "Güímar",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.3094,
@@ -2712,28 +2712,22 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://guimar.sedelectronica.es/transparency"
       ]
