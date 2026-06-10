@@ -3245,16 +3245,16 @@
     "scope": "municipal",
     "parent_entity_id": null,
     "islands": [
-      "La Palma"
+      "Tenerife"
     ],
     "description": "Portal de transparencia del Ayuntamiento de Tijarafe. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Tijarafe",
-        "postal_code": null,
-        "municipality": null,
-        "island": "La Palma",
+        "address": "Plaza de La Paz, 1",
+        "postal_code": "38749",
+        "municipality": "Tijarafe",
+        "island": "Tenerife",
         "coordinates": {
           "lat": 28.7019,
           "lon": -17.9658
@@ -3280,7 +3280,8 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
@@ -3295,15 +3296,15 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://transparencia.tijarafe.net"
+        "https://transparencia.tijarafe.net",
+        "https://tijarafe.net"
       ]
     },
     "notes": null
@@ -3501,9 +3502,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Adeje",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Real, 1",
+        "postal_code": "38670",
+        "municipality": "Adeje",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.1231,
@@ -3515,7 +3516,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Ayuntamiento de Adeje",
         "url": "https://transparencia.adeje.es",
         "portal_status": "active",
@@ -3545,13 +3546,13 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.adeje.es"
       ]
