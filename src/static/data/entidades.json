@@ -15513,7 +15513,7 @@
   {
     "id": "fundacion_canaria_lucio_de_las_casas",
     "name": "Fundación Canaria Lucio de las Casas",
-    "entity_kind": "empresa_publica",
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
@@ -15523,21 +15523,21 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Fundación Canaria Lucio de las Casas",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Juan de Quesada, 30",
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1092,
+          "lon": -15.4149
         },
-        "source_url": "https://www.ulpgc.es/transparencia/fundacion-lucio-casas"
+        "source_url": "https://www.ulpgc.es/transparencia/patrimonio-flc"
       }
     ],
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Fundación Canaria Lucio de las Casas",
         "url": "https://www.ulpgc.es/transparencia/fundacion-lucio-casas",
         "portal_status": "active",
@@ -15552,33 +15552,36 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Información institucional",
+          "Económico-financiera",
+          "Patrimonio",
+          "Contratos",
+          "Subvenciones",
+          "Ayudas"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
-        "last_updated": null,
+        "last_updated": "2025-03",
         "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "licenses": [],
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.ulpgc.es/transparencia/fundacion-lucio-casas"
+        "https://www.ulpgc.es/transparencia/fundacion-lucio-casas",
+        "https://www.ulpgc.es/transparencia/fundacion-lucio-casas-informacion-institucional",
+        "https://www.ulpgc.es/transparencia/patrimonio-flc",
+        "https://www.ulpgc.es/transparencia/canal-denuncias-anonimas-fundacion-lucio-casas",
+        "https://www.ulpgc.es/sites/default/files/ArchivosULPGC/transparencia/FLC/20231231_informe_transparencia_flc_2023.pdf"
       ]
     },
-    "notes": null
+    "notes": "La entidad no es una empresa pública, sino una fundación vinculada a la ULPGC. La URL apunta a un portal de transparencia institucional, no a un portal de datos abiertos."
   },
   {
     "id": "fcpct_ulpgc",
