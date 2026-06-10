@@ -3012,8 +3012,8 @@
       {
         "kind": "headquarters",
         "address": "Ayuntamiento de Puerto de la Cruz",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "38490",
+        "municipality": "La Orotava",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4148,
@@ -3040,7 +3040,8 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública"
         ],
         "has_api": false,
         "apis": [],
@@ -3055,15 +3056,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://puertodelacruz.sedelectronica.es/transparency"
+        "https://www.puertodelacruz.es",
+        "https://www.puertodelacruz.es/transparencia",
+        "https://puertodelacruz.sedelectronica.es"
       ]
     },
     "notes": null
