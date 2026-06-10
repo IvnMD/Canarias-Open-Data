@@ -785,12 +785,12 @@
       {
         "kind": "headquarters",
         "address": "Ayuntamiento de Las Palmas de Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 28.1248,
-          "lon": -15.43
+          "lat": 28.150579,
+          "lon": -15.420277
         },
         "source_url": "https://datosabiertos.laspalmasgc.es"
       }
@@ -805,7 +805,9 @@
         "technology": [
           "CKAN"
         ],
-        "standards": [],
+        "standards": [
+          "DCAT"
+        ],
         "formats": [
           "CSV",
           "JSON",
@@ -831,7 +833,7 @@
             "name": "CKAN API",
             "url": "https://datosabiertos.laspalmasgc.es/api/3/action/package_search",
             "type": "REST",
-            "documentation_url": null
+            "documentation_url": "http://datosabiertos.laspalmasgc.es/info-api/"
           }
         ],
         "dataset_count": 170,
@@ -845,18 +847,19 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://datosabiertos.laspalmasgc.es"
+        "https://datosabiertos.laspalmasgc.es",
+        "http://datosabiertos.laspalmasgc.es/info-api/",
+        "https://datos.gob.es/es/iniciativas/portal-open-data-las-palmas-de-gran-canaria"
       ]
     },
-    "notes": null
+    "notes": "Portal oficial de datos abiertos del Ayuntamiento, reconocido en datos.gob.es. Dispone de API REST CKAN con documentación pública. El recuento exacto de datasets y la licencia uniforme no se han confirmado oficialmente."
   },
   {
     "id": "ayuntamiento_santa_cruz_tenerife",
