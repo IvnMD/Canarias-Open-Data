@@ -4175,9 +4175,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Artenara",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Avenida Matías Vega, 1",
+        "postal_code": "35350",
+        "municipality": "Artenara",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 28.0105,
@@ -4219,13 +4219,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-05"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://artenara.sedelectronica.es/transparency"
       ]
