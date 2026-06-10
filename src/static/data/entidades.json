@@ -3938,9 +3938,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Arafo",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Calle Real, 1",
+        "postal_code": "38280",
+        "municipality": "Arafo",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.3381,
