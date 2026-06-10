@@ -90,7 +90,11 @@
         <span class="nav-icon">🗺️</span>
         <span>Mapa</span>
       </a>
-
+      <!-- Acerca de page-->
+      <a href="{{ url_for('acerca') }}" class="nav-link">
+        <span class="nav-icon">ℹ️</span>
+        <span>Acerca de</span>
+      </a>
     </div>
   </nav>
 
@@ -296,59 +300,31 @@
              CREATE LEAFLET MARKER
           -------------------------------------------------- */
 
-          L.circleMarker([lat, lon], {
-
-            // Marker size
+                    const marker = L.circleMarker([lat, lon], {
             radius: 8,
-            // Dynamic marker color
             fillColor: getColor(entidad.entity_kind),
-            // White border
             color: '#ffffff',
-            // Border thickness
             weight: 2,
-            // Border opacity
             opacity: 1,
-            // Fill transparency
             fillOpacity: 0.9
           })
-
-            // Add marker to map
-            .addTo(map)
-
-            // Attach popup information
-            .bindPopup(`
-
-  <div style="min-width:220px">
-
-    <h2 style="margin-bottom:0.5rem; font-size:1rem;">
-      ${entidad.name}
-    </h2>
-
-    <p>
-      <strong>Tipo:</strong>
-      ${getTypeName(entidad.entity_kind)}
-    </p>
-
-    <p>
-      <strong>Datasets:</strong>
-      ${datasetCount}
-    </p>
-
-  </div>
-`);
-
-          /* =========================================================
-             ABRIR POPUP Y CENTRAR ENTIDAD
-          ========================================================= */
+          .addTo(map)
+          .bindPopup(`
+            <div style="min-width:220px">
+              <h2 style="margin-bottom:0.5rem; font-size:1rem;">
+                ${entidad.name}
+              </h2>
+              <p><strong>Tipo:</strong> ${getTypeName(entidad.entity_kind)}</p>
+              <p><strong>Datasets:</strong> ${datasetCount}</p>
+            </div>
+          `);
 
           if (
             !isNaN(targetLat) &&
             !isNaN(targetLon) &&
             entidad.name === decodeURIComponent(params.get('name') || '')
           ) {
-
             map.setView([lat, lon], 15);
-
             marker.openPopup();
           }
 
@@ -424,23 +400,12 @@
 
     // Self-executing function — uses safeStorage to prevent iframe crash
     (function () {
-
       try {
-
-        const darkMode = localStorage.getItem('darkMode');
-
-        if (darkMode === 'enabled') {
-          document.body.classList.add('dark-mode');
-        }
-
+        if (localStorage.getItem('darkMode') === 'enabled')
+          document.documentElement.setAttribute('data-theme', 'dark');
       } catch (err) {
-
-        console.warn('No se pudo acceder a localStorage:', err);
-
-        // Apply data-theme attribute on <html>
-        document.documentElement.setAttribute('data-theme', 'dark');
+        console.warn('localStorage no disponible:', err);
       }
-
     })();
 
   </script>

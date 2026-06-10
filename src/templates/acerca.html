@@ -8,26 +8,17 @@
   <meta name="author" content="Datos Abiertos Canarias">
   <title>Acerca de — Open Data Canarias</title>
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='assets/logo.svg') }}">
-  
-  <!-- Theme variables (light + dark juntos) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
-  
-  <!-- Base styles (reset + layout) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-  
-  <!-- Shared components (cards, nav, badges, tables, etc.) -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
-  
-  <!-- About page specific styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/acerca.css') }}">
-  
   <script>
     (function () {
       try {
         if (localStorage.getItem('darkMode') === 'enabled') {
           document.documentElement.setAttribute('data-theme', 'dark');
         }
-      } catch (e) {}
+      } catch (e) { }
     })();
   </script>
 </head>
@@ -60,6 +51,8 @@
         <span class="nav-icon">ℹ️</span>
         <span>Acerca de</span>
       </a>
+      <!-- Dark mode toggle integrado en la nav, igual que el resto de páginas -->
+      <button id="darkModeToggle" class="reset-btn">🌙 Modo oscuro</button>
     </div>
   </nav>
 
@@ -93,6 +86,111 @@
       <li><strong>pending</strong> — pendiente de verificación.</li>
     </ul>
 
+    <!-- ── TIPOS DE ENTIDAD ── -->
+    <h2>🏛️ Tipos de entidad</h2>
+    <p>
+      El campo <code>entity_kind</code> clasifica cada institución según
+      su naturaleza administrativa. La distinción es relevante para
+      entender el alcance y la obligatoriedad de publicación de datos.
+    </p>
+    <table class="schema-table" aria-label="Tipos de entidad del catálogo">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Descripción</th>
+          <th>Ejemplos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>gobierno_autonomico</code></td>
+          <td>Gobierno de la Comunidad Autónoma de Canarias y sus consejerías</td>
+          <td>Gobierno de Canarias, datos.canarias.es</td>
+        </tr>
+        <tr>
+          <td><code>cabildo</code></td>
+          <td>Corporaciones insulares, una por cada isla habitada</td>
+          <td>Cabildo de Tenerife, Cabildo de Gran Canaria</td>
+        </tr>
+        <tr>
+          <td><code>ayuntamiento</code></td>
+          <td>Administración local municipal</td>
+          <td>Ayuntamiento de Las Palmas de Gran Canaria, Santa Cruz de Tenerife</td>
+        </tr>
+        <tr>
+          <td><code>organismo</code></td>
+          <td>Entidades especializadas con misión sectorial: estadística, cartografía, universidades, puertos…</td>
+          <td>ISTAC, GRAFCAN, Universidad de La Laguna</td>
+        </tr>
+        <tr>
+          <td><code>empresa_publica</code></td>
+          <td>Sociedades mercantiles de capital público</td>
+          <td>PROEXCA, Turismo de Canarias</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ── MADUREZ DE PORTAL ── -->
+    <h2>📈 Criterios de madurez de portal</h2>
+    <p>
+      Cada portal recibe automáticamente un nivel de madurez calculado
+      a partir de cuatro factores objetivos: formatos publicados,
+      disponibilidad de API, tecnología del portal y volumen de datasets.
+      El objetivo es reflejar de forma homogénea qué tan reutilizables
+      son los datos publicados.
+    </p>
+    <table class="schema-table" aria-label="Niveles de madurez de portal">
+      <thead>
+        <tr>
+          <th>Nivel</th>
+          <th>Criterios (todos deben cumplirse)</th>
+          <th>Interpretación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="meta-badge maturity-high">🟢 Alta</span></td>
+          <td>
+            Formatos legibles por máquina (CSV, JSON, GeoJSON…)
+            <strong>+</strong> API declarada
+            <strong>+</strong> tecnología robusta (CKAN, ArcGIS, eDAtos, IDE…)
+            <strong>+</strong> ≥ 50 datasets
+          </td>
+          <td>Ecosistema avanzado, datos directamente consumibles por aplicaciones</td>
+        </tr>
+        <tr>
+          <td><span class="meta-badge maturity-medium">🟠 Media</span></td>
+          <td>
+            Formatos legibles por máquina,
+            pero sin API declarada, tecnología básica
+            o volumen de datasets reducido
+          </td>
+          <td>Datos accesibles pero con limitaciones para la reutilización automatizada</td>
+        </tr>
+        <tr>
+          <td><span class="meta-badge maturity-low">🔴 Baja</span></td>
+          <td>
+            Sin formatos legibles por máquina (solo PDFs o HTML),
+            o portal de transparencia estático sin API ni datasets estructurados
+          </td>
+          <td>Información disponible para consulta humana, difícil de reutilizar</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Los formatos considerados legibles por máquina son:
+      <strong>tabulares</strong> (<code>CSV</code>, <code>JSON</code>, <code>XML</code>,
+      <code>XLSX</code>, <code>XLS</code>, <code>ODS</code>, <code>TSV</code>),
+      <strong>geoespaciales</strong> (<code>GeoJSON</code>, <code>KML</code>,
+      <code>SHP</code>, <code>GML</code>, <code>GPKG</code>, <code>GDB</code>),
+      <strong>linked data</strong> (<code>RDF</code>, <code>RDF-XML</code>,
+      <code>N3</code>, <code>Turtle</code>),
+      <strong>estadísticos y transporte</strong> (<code>PC-Axis</code>, <code>GTFS</code>)
+      y <strong>científicos</strong> (<code>NetCDF</code>).
+      Los formatos <code>PDF</code> y <code>HTML</code> no puntúan como
+      machine-readable a efectos de este cálculo.
+    </p>
+
     <!-- ── CAMPOS DEL SCHEMA ── -->
     <h2>🧩 Campos principales del catálogo</h2>
     <table class="schema-table" aria-label="Descripción de los campos del catálogo">
@@ -105,52 +203,63 @@
       </thead>
       <tbody>
         <tr>
-          <td>id</code></td>
+          <td><code>id</code></td>
           <td>Identificador único de la entidad</td>
           <td>Texto en minúsculas con guiones bajos</td>
         </tr>
         <tr>
-          <td>name</code></td>
+          <td><code>name</code></td>
           <td>Nombre oficial de la entidad</td>
           <td>Texto libre</td>
         </tr>
         <tr>
-          <td>entity_kind</code></td>
+          <td><code>entity_kind</code></td>
           <td>Tipo de entidad</td>
           <td>gobierno_autonomico · cabildo · ayuntamiento · organismo · empresa_publica</td>
         </tr>
         <tr>
-          <td>scope</code></td>
+          <td><code>scope</code></td>
           <td>Ámbito administrativo</td>
           <td>autonomico · insular · municipal · estatal · europeo</td>
         </tr>
         <tr>
-          <td>islands</code></td>
+          <td><code>islands</code></td>
           <td>Islas a las que pertenece la entidad</td>
-          <td>Tenerife · Gran Canaria · Lanzarote · Fuerteventura · La Palma · La Gomera · El Hierro · La Graciosa · Todas</td>
+          <td>Tenerife · Gran Canaria · Lanzarote · Fuerteventura · La Palma · La Gomera · El Hierro · La Graciosa ·
+            Todas</td>
         </tr>
         <tr>
-          <td>portals</code></td>
+          <td><code>portals</code></td>
           <td>Lista de portales publicados por la entidad</td>
           <td>Array de objetos (ver schema)</td>
         </tr>
         <tr>
-          <td>portals.kind</code></td>
+          <td><code>portals.kind</code></td>
           <td>Tipo de portal</td>
           <td>open_data · transparencia · estadistica · geoespacial · agregador · other</td>
         </tr>
         <tr>
-          <td>portals.machine_readable</code></td>
+          <td><code>portals.machine_readable</code></td>
           <td>¿Los datos son legibles por máquina?</td>
           <td>true / false</td>
         </tr>
         <tr>
-          <td>portals.has_api</code></td>
+          <td><code>portals.has_api</code></td>
           <td>¿Dispone de API?</td>
           <td>true / false / null</td>
         </tr>
         <tr>
-          <td>verification.status</code></td>
+          <td><code>portals.dataset_count</code></td>
+          <td>Número aproximado de datasets publicados</td>
+          <td>Entero o null si no está disponible</td>
+        </tr>
+        <tr>
+          <td><code>portals.last_updated</code></td>
+          <td>Fecha de última revisión del portal</td>
+          <td>Formato YYYY-MM</td>
+        </tr>
+        <tr>
+          <td><code>verification.status</code></td>
           <td>Nivel de confianza del registro</td>
           <td>verified · estimated · inferred · pending</td>
         </tr>
@@ -216,12 +325,12 @@
     </p>
     <ul>
       <li>
-        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/blob/main/CONTRIBUTING.md"
-          target="_blank" rel="noopener noreferrer">CONTRIBUTING.md</a>
+        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/blob/main/CONTRIBUTING.md" target="_blank"
+          rel="noopener noreferrer">CONTRIBUTING.md</a>
       </li>
       <li>
-        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/issues"
-          target="_blank" rel="noopener noreferrer">Abrir un issue en GitHub</a>
+        <a href="https://github.com/IvnMD/Practicas-DAM-Datos-Abiertos/issues" target="_blank"
+          rel="noopener noreferrer">Abrir un issue en GitHub</a>
       </li>
     </ul>
 
@@ -233,60 +342,44 @@
     <p>Proyecto académico DAM</p>
   </footer>
 
-  <!-- Botón de modo oscuro - AHORA SÍ FUNCIONA -->
-  <button id="darkModeToggle">🌙 Modo oscuro</button>
-
   <script>
-    (function() {
-      // Función segura para localStorage
+    (function () {
       const storage = {
-        get: function(key) {
-          try { return localStorage.getItem(key); } catch(e) { return null; }
-        },
-        set: function(key, value) {
-          try { localStorage.setItem(key, value); } catch(e) {}
-        }
+        get: function (key) { try { return localStorage.getItem(key); } catch (e) { return null; } },
+        set: function (key, value) { try { localStorage.setItem(key, value); } catch (e) { } }
       };
 
-      // Actualizar el texto del botón según el tema actual
       function updateButtonText() {
         const btn = document.getElementById('darkModeToggle');
         if (!btn) return;
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        btn.textContent = isDark ? '☀️ Modo claro' : '🌙 Modo oscuro';
+        btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark'
+          ? '☀️ Modo claro'
+          : '🌙 Modo oscuro';
       }
 
-      // Inicializar el tema desde localStorage
       const savedTheme = storage.get('darkMode');
-      if (savedTheme === 'enabled') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else if (savedTheme === 'disabled') {
-        document.documentElement.removeAttribute('data-theme');
-      }
+      if (savedTheme === 'enabled') document.documentElement.setAttribute('data-theme', 'dark');
+      else if (savedTheme === 'disabled') document.documentElement.removeAttribute('data-theme');
 
-      // Configurar el evento del botón (esperar a que el DOM esté listo)
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         const darkBtn = document.getElementById('darkModeToggle');
-        if (darkBtn) {
+        if (!darkBtn) return;
+        updateButtonText();
+        darkBtn.addEventListener('click', function () {
+          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+            storage.set('darkMode', 'disabled');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            storage.set('darkMode', 'enabled');
+          }
           updateButtonText();
-          
-          darkBtn.addEventListener('click', function() {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            
-            if (isDark) {
-              document.documentElement.removeAttribute('data-theme');
-              storage.set('darkMode', 'disabled');
-            } else {
-              document.documentElement.setAttribute('data-theme', 'dark');
-              storage.set('darkMode', 'enabled');
-            }
-            
-            updateButtonText();
-          });
-        }
+        });
       });
     })();
   </script>
+
 </body>
 
 </html>

@@ -19,10 +19,8 @@ import json
 import argparse
 from pathlib import Path
 
-# ---------------------------------------------------------------------------
 # Formats considered machine-readable
 # Derived from the analysis of entidades.json catalogue (2026-06)
-# ---------------------------------------------------------------------------
 MR_FORMATS: set[str] = {
     # Tabular
     "CSV", "JSON", "XML", "XLSX", "XLS", "XLSM", "ODS", "TSV",
