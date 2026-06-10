@@ -19573,78 +19573,236 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal que publica datos sobre I+D, innovación, universidades y becas. Relevante para Canarias por la actividad de la ULPGC, ULL y centros de investigación como el IAC.",
+    "description": "Ministerio del Gobierno de España responsable de la política científica, tecnológica, de innovación y universitaria. Relevante para Canarias por su financiación de infraestructuras como el Instituto de Astrofísica de Canarias (IAC), la Plataforma Oceánica de Canarias (PLOCAN) y los Observatorios de Canarias (OOCC), además de gestionar el SICTI y el SIIU con datos desagregados por CCAA.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana, 162",
         "postal_code": "28046",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4583,
-          "lon": -3.6893
+          "lat": 40.4594,
+          "lon": -3.6896
         },
-        "source_url": "https://www.ciencia.gob.es/"
+        "source_url": "https://www.ciencia.gob.es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Ciencia en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-ciencia-innovacion-y-universidades",
+        "id": "ciencia_portal_web",
+        "kind": "other",
+        "name": "Portal web del Ministerio de Ciencia, Innovación y Universidades",
+        "url": "https://www.ciencia.gob.es",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "custom"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "HTML",
+          "PDF"
         ],
         "topics": [
-          "Ciencia y Tecnología",
-          "Educación",
-          "I+D",
-          "Universidades"
+          "ciencia",
+          "innovacion",
+          "universidades",
+          "investigacion"
         ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Ciencia en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-ciencia-innovacion-y-universidades",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
-        ],
+        "has_api": false,
+        "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
-        "licenses": [
-          {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
-            "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
-          }
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_sicti",
+        "kind": "estadistica",
+        "name": "Sistema de Información sobre Ciencia, Tecnología e Innovación (SICTI)",
+        "url": "https://www.ciencia.gob.es/Ministerio/Estadisticas/sicti.html",
+        "portal_status": "active",
+        "technology": [
+          "custom"
         ],
-        "last_checked": "2026-05",
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "ciencia",
+          "tecnologia",
+          "innovacion",
+          "IDI",
+          "investigacion",
+          "gasto_IDI",
+          "presupuestos_IDI",
+          "ayudas_publicas",
+          "transferencia_conocimiento",
+          "patentes",
+          "publicaciones_cientificas",
+          "programa_marco_europeo"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "5 secciones temáticas: RECIDI (catálogo de centros I+D+I del SECTI), Principales datos I+D+I, Presupuestos I+D+I (AGE + CCAA), Ayudas públicas a la I+D+I, Transferencia de conocimiento e innovación. Informes de seguimiento PEICTI y EECTI 2021-2027. Solo consulta web y descarga en PDF — no hay tablas estructuradas descargables. Sistema conjunto AGE + CCAA con desagregación por CCAA (Canarias incluida).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_siiu",
+        "kind": "estadistica",
+        "name": "Sistema Integrado de Información Universitaria (SIIU)",
+        "url": "https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU.html",
+        "portal_status": "active",
+        "technology": [
+          "PC-Axis / JaxiPx",
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "XLS",
+          "XLSX",
+          "CSV",
+          "PC-Axis",
+          "TXT"
+        ],
+        "topics": [
+          "universidades",
+          "educacion_superior",
+          "estadisticas",
+          "estudiantes",
+          "becas",
+          "personal_universitario",
+          "tesis_doctorales",
+          "precios_publicos",
+          "financiacion",
+          "rendimiento_academico",
+          "pruebas_acceso",
+          "internacionalizacion"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "11 secciones temáticas: Estudiantes, Internacionalización, Rendimiento académico, Becas y ayudas, Financiación y gastos, Personal, Precios públicos, PAU, Tesis doctorales, Universidades/centros/titulaciones, Afiliación SS de egresados. Tablas interactivas vía visor JaxiPx (estadisticas.ciencia.gob.es) con descarga por tabla individual en XLS, XLSX, CSV (tabulador), CSV (;), PC-Axis (.px), TXT (tabulador), TXT (,), TXT (;). Descargas directas en XLSX por titulación (series 2015–2024). Series históricas desde 1985-86. Últimos datos: curso 2024-2025 (avance, 2025-10-22). Desagregación por CCAA verificada (Canarias incluida). Integrado en el Plan Estadístico Nacional (PEN).",
+        "last_updated": "2025-10",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "ciencia_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Ministerio de Ciencia",
+        "url": "https://ciencia.sede.gob.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_AGE"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "tramites",
+          "transparencia",
+          "administracion"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_subsede_universidades",
+        "kind": "other",
+        "name": "Subsede Electrónica – Secretaría General de Universidades",
+        "url": "https://universidades.sede.gob.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_AGE"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "universidades",
+          "titulos",
+          "becas",
+          "tramites"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "ciencia_transparencia_investigacion",
+        "kind": "transparencia",
+        "name": "Transparencia en Investigación – Uso de animales en ciencia",
+        "url": "https://www.ciencia.gob.es/Investigar/Transparencia.html",
+        "portal_status": "active",
+        "technology": [
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "investigacion",
+          "bienestar_animal",
+          "transparencia",
+          "normativa",
+          "ciencia"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Página informativa que centraliza: informes anuales y quinquenales del MAPA sobre uso de animales con fines científicos, base de datos ALURES (CE), EU NTS Database en Power BI (acceso abierto), Acuerdo de Transparencia COSCE (158 instituciones adheridas, noviembre 2025), REMA, SECAL y Red de Comités de Ética (RCE).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.ciencia.gob.es/",
-        "https://datos.gob.es/"
+        "https://www.ciencia.gob.es",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/sicti.html",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU.html",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/SIIU/Estudiantes.html",
+        "https://estadisticas.ciencia.gob.es/dynPx/inebase/index.htm",
+        "https://www.ciencia.gob.es/Ministerio/Estadisticas/CatalogoNacional.html",
+        "https://www.ciencia.gob.es/Investigar/Transparencia.html"
       ]
     },
-    "notes": "Relevante por la actividad universitaria canaria (ULL, ULPGC) y centros de excelencia como el IAC."
+    "notes": "CIF: S2801395A. DIR3: E05236301. Entidad de ámbito estatal incluida por su relevancia directa para Canarias: financia y tutela infraestructuras científicas singulares (ICTS) en las islas (IAC, PLOCAN, OOCC, GTC). Datasets federados en datos.gob.es bajo DIR3 E05236301 (https://datos.gob.es/es/catalogo?publisher_display_name=Ministerio+de+Ciencia%2C+Innovaci%C3%B3n+y+Universidades); reutilización bajo Ley 37/2007 + RD 1495/2011 (libre, comercial y no comercial, con atribución obligatoria de fuente y fecha). Datos no publicados solicitables vía ciencia.sede.gob.es (proc. 132379) o buzón datos.gob.es. No existe desagregación por isla en SICTI/SIIU, pero sí por CCAA (Canarias incluida). El visor JaxiPx (estadisticas.ciencia.gob.es) es la infraestructura de descarga del SIIU (8 formatos por tabla). SICTI solo ofrece consulta web y PDF. Transparencia en investigación con uso de animales centraliza informes MAPA, ALURES, EU NTS Database (Power BI), Acuerdo COSCE (158 instituciones, 2025), REMA, SECAL y RCE. Entidades adscritas relevantes para Canarias pendientes de añadir como entidades independientes: IAC, PLOCAN."
   },
   {
     "id": "ministerio_cultura",
@@ -19896,79 +20054,199 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal que publica datos sobre servicios sociales, consumo y agenda 2030. Relevante para Canarias por estadísticas de pobreza, servicios sociales y consumo en el archipiélago.",
+    "description": "Ministerio del Gobierno de España responsable de las políticas de servicios sociales, consumo, dependencia, discapacidad y Agenda 2030. Relevante para Canarias por gestionar el IMSERSO (dependencia, turismo social, mayores), el SAAD con datos de dependencia desagregados por CCAA, los ODS y el Real Patronato sobre Discapacidad.",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo del Prado, 18-20",
         "postal_code": "28014",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.413,
-          "lon": -3.693
+          "lat": 40.4136,
+          "lon": -3.6934
         },
-        "source_url": "https://www.mdsocialesa2030.gob.es/"
+        "source_url": "https://www.dsca.gob.es/es"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Derechos Sociales en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-derechos-sociales-consumo-y-agenda-2030",
+        "id": "dsca_portal_web",
+        "kind": "other",
+        "name": "Portal web del Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+        "url": "https://www.dsca.gob.es/es",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "derechos_sociales",
+          "consumo",
+          "agenda_2030",
+          "discapacidad",
+          "dependencia",
+          "familias",
+          "inclusion",
+          "servicios_sociales"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "dsca_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica del Ministerio de Derechos Sociales, Consumo y Agenda 2030",
+        "url": "https://dsca.sede.gob.es",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica_AGE"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "tramites",
+          "administracion",
+          "transparencia"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "dsca_estadisticas_familias",
+        "kind": "estadistica",
+        "name": "Estadísticas de Familias Numerosas – DSCA",
+        "url": "https://www.dsca.gob.es/es/derechos-sociales/familias/estadisticas",
+        "portal_status": "active",
+        "technology": [
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF",
+          "XLS"
+        ],
+        "topics": [
+          "familias",
+          "familias_numerosas",
+          "titulos_familia_numerosa",
+          "estadisticas",
+          "demografia"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Estadísticas de títulos de familia numerosa concedidos y renovados por año. Desagregación por CCAA probable (Canarias incluida). Descarga en PDF y XLS verificada.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "dsca_consumo_alertas",
+        "kind": "estadistica",
+        "name": "Estadísticas e informes de seguridad de productos – Red de Alertas DSCA",
+        "url": "https://www.dsca.gob.es/es/consumo/vigilamos-mercado/red-alertas/informacion-de-seguridad-y-estadisticas/prod-no-alimenticios-notif-red-alerta",
+        "portal_status": "active",
+        "technology": [
+          "custom"
+        ],
+        "standards": [],
+        "formats": [
+          "PDF"
+        ],
+        "topics": [
+          "consumo",
+          "seguridad_productos",
+          "red_alertas",
+          "vigilancia_mercado",
+          "productos_no_alimenticios"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Memorias anuales y estadísticas de notificaciones a la red de alertas de productos no alimenticios. Solo descarga en PDF.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "dsca_dgoj",
+        "kind": "estadistica",
+        "name": "Datos, estudios y sanciones – Dirección General de Ordenación del Juego (DGOJ)",
+        "url": "https://www.ordenacionjuego.es/datos-estudios",
+        "portal_status": "active",
+        "technology": [
+          "custom",
+          "Alfresco CMIS"
         ],
         "standards": [],
         "formats": [
           "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "XLSX",
+          "PDF",
+          "TXT"
         ],
         "topics": [
-          "Servicios sociales",
-          "Consumo",
-          "Demografía",
-          "Vivienda",
-          "Sector público"
+          "juego",
+          "juego_online",
+          "estadisticas_juego",
+          "sanciones",
+          "operadores_juego",
+          "juego_responsable",
+          "mercado_juego"
         ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Derechos Sociales en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-derechos-sociales-consumo-y-agenda-2030",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
-        ],
+        "has_api": false,
+        "apis": [],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "dataset_count_note": "Descarga directa de datos del mercado de juego online (CSV trimestral: GGR/cantidades jugadas, depósitos/retiradas, número de cuentas, publicidad; actualización trimestral, último dato 1T-2026). Mercado español total en XLSX. Listado de operadores habilitados en XLSX. Metadatos en PDF y TXT. Memorias anuales en PDF (2012–2020). Ficheros servidos vía repositorio Alfresco CMIS. Licencia de reutilización libre con atribución obligatoria de fuente y fecha (aviso legal DGOJ). Sin desagregación territorial por CCAA o isla confirmada.",
+        "last_updated": "2026-01",
+        "license_summary": "Reutilización libre con atribución obligatoria de fuente y fecha. Sin garantía de disponibilidad ni exactitud. Rige legislación española.",
         "licenses": [
           {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
+            "name": "Aviso legal DGOJ – reutilización con atribución",
             "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
+            "url": "https://www.ordenacionjuego.es/datos-estudios/estudios/descarga-datos-mercado-juego"
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
       "status": "estimated",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.mdsocialesa2030.gob.es/",
-        "https://datos.gob.es/"
+        "https://www.dsca.gob.es/es",
+        "https://dsca.sede.gob.es",
+        "https://www.ordenacionjuego.es/datos-estudios"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2801445D. DIR3: E05235701. Entidad de ámbito estatal incluida por su relevancia directa para Canarias: gestiona el IMSERSO (dependencia, turismo social, termalismo, mayores) con datos desagregados por CCAA; en 2025 Canarias corrigió envío de datos erróneos al SAAD (9.000 prestaciones). Los indicadores ODS/Agenda 2030 están delegados al INE (https://www.ine.es/dyngs/ODS/es/index.htm). Transparencia activa delegada en el portal AGE (transparencia.gob.es). Datasets federados en datos.gob.es bajo DIR3 E05235701. Organismos adscritos relevantes para Canarias pendientes de añadir como entidades independientes: IMSERSO, AESAN, DGOJ. La DGOJ ofrece descarga de datos del mercado de juego (https://www.ordenacionjuego.es/datos-estudios/estudios/descarga-datos-mercado-juego)."
   },
   {
     "id": "ministerio_igualdad",
