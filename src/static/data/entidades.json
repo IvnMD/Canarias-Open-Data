@@ -2248,7 +2248,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sepe_estadisticas",
@@ -2283,7 +2284,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sepe_transparencia",
@@ -2324,7 +2326,8 @@
         "last_updated": "2026-06",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       },
       {
         "id": "sepe_sede_electronica",
@@ -2355,7 +2358,8 @@
         "last_updated": "2026-05",
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -17146,7 +17150,7 @@
         "license_summary": null,
         "licenses": [],
         "last_checked": "2026-06",
-        "machine_readable": false
+        "machine_readable": true
       },
       {
         "id": "ine_sede_electronica",
@@ -18444,8 +18448,7 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
@@ -20427,7 +20430,7 @@
         "license_summary": null,
         "licenses": [],
         "last_checked": "2026-06",
-        "machine_readable": false
+        "machine_readable": true
       },
       {
         "id": "mptmd_eiel",
@@ -20699,84 +20702,294 @@
   {
     "id": "ministerio_vivienda_agenda_urbana",
     "name": "Ministerio de Vivienda y Agenda Urbana",
+    "alternate_names": [
+      "MIVAU"
+    ],
     "entity_kind": "organismo",
     "scope": "estatal",
     "parent_entity_id": null,
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal con datos abiertos sobre vivienda, suelo, rehabilitación y urbanismo. Publica estadísticas de transacciones, precios y parque residencial con desagregación por comunidad autónoma.",
+    "description": "Ministerio estatal competente en política de vivienda, suelo, urbanismo, arquitectura y agenda urbana. Relevante para Canarias por las estadísticas del Observatorio de Vivienda y Suelo con desagregación autonómica (precios de alquiler, compraventa, vivienda protegida, visados), la plataforma URBAN3R de datos abiertos para regeneración urbana, el SERPAVI (Sistema Estatal de Referencia del Precio del Alquiler), el Atlas de Áreas Urbanas y el Sistema de Información Urbana (SIU).",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana, 67",
-        "postal_code": "28046",
+        "postal_code": "28071",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4443,
-          "lon": -3.692
+          "lat": 40.4431,
+          "lon": -3.6923
         },
         "source_url": "https://www.mivau.gob.es/"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Datos abiertos – Vivienda en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-vivienda-y-agenda-urbana",
+        "id": "mivau_observatorio_vivienda_suelo",
+        "kind": "estadistica",
+        "name": "Observatorio de Vivienda y Suelo (OVS) – MIVAU",
+        "url": "https://www.mivau.gob.es/urbanismo-y-suelo/suelo/observatorio-de-vivienda-y-suelo",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "web_propia"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "XLSX"
+          "PDF"
         ],
         "topics": [
           "Vivienda",
+          "Suelo",
+          "Mercado de suelo",
+          "Precios de vivienda",
+          "Compraventa",
+          "Alquiler",
+          "Vivienda social",
+          "Vivienda protegida",
+          "Rehabilitación",
+          "Hipotecas",
+          "Accesibilidad",
+          "Financiación",
+          "Censo de viviendas",
+          "Parque residencial"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Boletines trimestrales (núm. 1 a 56, desde 1T 2012 hasta 4T 2025), boletines anuales (2012–2024) y boletines especiales temáticos (alquiler residencial, rehabilitación, vivienda social, censo de viviendas). Último boletín publicado: núm. 56 (4T 2025). Boletines especiales: Rehabilitación 2025 (enero 2026), Vivienda Social 2024 (enero 2025). Serie histórica desde 2012. Publicados en PDF sin datos estructurados descargables independientemente. Incluyen desagregación por comunidad autónoma (Canarias).",
+        "last_updated": "2026-01",
+        "license_summary": "Reutilización abierta sector público",
+        "licenses": [
+          {
+            "name": "Ley 37/2007 sobre reutilización de información del sector público",
+            "id": null,
+            "url": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mivau_urban3r",
+        "kind": "open_data",
+        "name": "URBAN3R – Plataforma de Datos Abiertos de Regeneración Urbana",
+        "url": "https://www.mivau.gob.es/urbanismo-y-suelo/urbanismo-y-politica-de-suelo/urban3r",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "SHP",
+          "ZIP"
+        ],
+        "topics": [
           "Urbanismo",
-          "Economía",
-          "Sector público"
+          "Regeneración urbana",
+          "Rehabilitación energética",
+          "Edificación",
+          "Demanda energética",
+          "Costes de rehabilitación",
+          "Eficiencia energética",
+          "Agenda Urbana Española"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Plataforma de visualización e indicadores sobre estado de la edificación residencial: demanda energética actual y tras rehabilitación, costes estimados de intervención. Escala de barrio a municipal, con posibilidad de consulta a escala de edificio (orientativa). Descarga de datos disponible a escala urbana. Municipios sin cobertura pueden procesarse subiendo el fichero Catastro por usuarios registrados. Relevante para municipios canarios: permite diseñar estrategias locales de rehabilitación urbana alineadas con la Agenda Urbana Española.",
+        "last_updated": null,
+        "license_summary": "Datos abiertos – reutilización libre",
+        "licenses": [
+          {
+            "name": "Datos abiertos sector público",
+            "id": null,
+            "url": null
+          }
+        ],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "mivau_serpavi",
+        "kind": "estadistica",
+        "name": "SERPAVI – Sistema Estatal de Referencia del Precio del Alquiler de Vivienda",
+        "url": "https://serpavi.mivau.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML"
+        ],
+        "topics": [
+          "Alquiler",
+          "Precios de vivienda",
+          "Vivienda",
+          "Zonas tensionadas",
+          "Contratos de arrendamiento"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Herramienta interactiva para consultar valores de referencia del precio del alquiler por zonas. Incluye consulta de zonas de mercado residencial tensionado. Datos relevantes para el mercado de alquiler en Canarias.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mivau_siu",
+        "kind": "geoespacial",
+        "name": "Sistema de Información Urbana (SIU) – MIVAU",
+        "url": "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana",
+        "portal_status": "active",
+        "technology": [
+          "ArcGIS",
+          "OGC (WMS/WFS)",
+          "IDEE"
+        ],
+        "standards": [
+          "OGC WMS",
+          "OGC WFS",
+          "INSPIRE",
+          "TR Ley de Suelo y Rehabilitación Urbana (RDL 7/2015)"
+        ],
+        "formats": [
+          "SHP",
+          "ZIP",
+          "XLSX",
+          "WMS",
+          "WFS"
+        ],
+        "topics": [
+          "Urbanismo",
+          "Suelo",
+          "Clases de suelo",
+          "Sectores residenciales",
+          "Planeamiento urbanístico",
+          "Usos del suelo",
+          "Riesgo de inundación",
+          "Riesgo sísmico",
+          "CORINE Land Cover",
+          "SIOSE",
+          "Dominio público marítimo-terrestre",
+          "Ordenación territorial",
+          "Radón"
         ],
         "has_api": true,
         "apis": [
           {
-            "name": "API catálogo Vivienda en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-vivienda-y-agenda-urbana",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
+            "name": "Servicio WMS – SIU (IDEE)",
+            "url": "https://mapas.fomento.gob.es/arcgis/services/SIU/Servicios_OGC/MapServer/WMSServer?service=wms&request=getCapabilities",
+            "type": "OGC WMS",
+            "documentation_url": "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana"
+          },
+          {
+            "name": "Servicio WFS – SIU (IDEE)",
+            "url": "https://mapas.fomento.gob.es/arcgis/services/SIU/Servicios_OGC/MapServer/WFSServer?service=wfs&request=getCapabilities",
+            "type": "OGC WFS",
+            "documentation_url": "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana"
           }
         ],
         "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
+        "dataset_count_note": "Cubre 5.898 municipios (98,61% de la población española, 100% de áreas urbanas). Descargas directas disponibles: clases de suelo, recintos y sectores en SHP (ZIP), e información alfanumérica en XLSX. Última actualización de ficheros: 2025-12-02. Incluye estudio 'Sectores Residenciales en España 2025'. Relevante para Canarias: incluye municipios canarios en clases de suelo, recintos, sectores y capas de riesgo de inundación y dominio público marítimo-terrestre.",
+        "last_updated": "2025-12",
+        "license_summary": "Reutilización abierta sector público",
         "licenses": [
           {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
+            "name": "Ley 37/2007 sobre reutilización de información del sector público",
             "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
+            "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
+      },
+      {
+        "id": "mivau_transparencia",
+        "kind": "transparencia",
+        "name": "Transparencia MIVAU – Portal de la Transparencia del Gobierno de España",
+        "url": "https://www.mivau.gob.es/el-ministerio/transparencia-en-ministerio",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Transparencia",
+          "Publicidad activa",
+          "Información presupuestaria",
+          "Acceso a la información pública",
+          "Sector público"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Página de transparencia del MIVAU que enlaza al Portal de la Transparencia del Gobierno de España (transparencia.gob.es) y a la ejecución presupuestaria de la IGAE.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mivau_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – MIVAU",
+        "url": "https://mivau.sede.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
+        ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Trámites",
+          "Administración electrónica",
+          "Ayudas vivienda",
+          "Agenda urbana y arquitectura",
+          "Recursos y reclamaciones",
+          "Quejas y sugerencias"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Tramitación electrónica: ayuda al ciudadano, recursos y reclamaciones, agenda urbana y arquitectura, vivienda y suelo, Entidad Estatal de Vivienda (CASA 47).",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.mivau.gob.es/",
-        "https://datos.gob.es/"
+        "https://www.mivau.gob.es/el-ministerio/transparencia-en-ministerio",
+        "https://www.mivau.gob.es/urbanismo-y-suelo/suelo/observatorio-de-vivienda-y-suelo",
+        "https://www.mivau.gob.es/urbanismo-y-suelo/urbanismo-y-politica-de-suelo/urban3r",
+        "https://serpavi.mivau.gob.es/",
+        "https://www.mivau.gob.es/urbanismo-y-suelo/sistema-de-informacion-urbana",
+        "https://mivau.sede.gob.es/"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2801506C. Código DIR3: E05068801. Dirección oficial: Paseo de la Castellana, 67, 28071 Madrid. Relevancia para Canarias: el Observatorio de Vivienda y Suelo publica indicadores trimestrales y anuales con desagregación por CCAA (Canarias); URBAN3R permite consultar y descargar datos de edificación residencial a escala de barrio o municipio para cualquier municipio canario; SERPAVI incluye zonas de mercado residencial tensionado relevantes para las islas; el SIU/Atlas de Áreas Urbanas cubre municipios canarios. islands=['Todas']: datos publicados a nivel nacional con desagregación autonómica, sin desglose por isla en los datasets estatales. El Plan Estatal de Vivienda 2022-2025 y el Bono Alquiler Joven son gestionados con las CCAA; la gestión en Canarias se canaliza a través del Gobierno de Canarias."
   },
   {
     "id": "ministerio_transformacion_digital",
@@ -21125,7 +21338,7 @@
         "license_summary": null,
         "licenses": [],
         "last_checked": "2026-06",
-        "machine_readable": false
+        "machine_readable": true
       },
       {
         "id": "miteco_sede_electronica",
