@@ -16866,7 +16866,7 @@
       {
         "kind": "headquarters",
         "address": "C/ Mártires Concepcionistas 2, 28006 Madrid",
-        "postal_code": null,
+        "postal_code": "28006",
         "municipality": "Madrid",
         "island": "Todas",
         "coordinates": {
@@ -16894,8 +16894,7 @@
           "CSV",
           "JSON",
           "XML",
-          "RDF",
-          "API"
+          "RDF"
         ],
         "topics": [
           "agregacion",
@@ -16927,13 +16926,13 @@
             "count": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
       "status": "verified",
-      "last_checked": "2026-05",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://datos.gob.es/es/",
         "https://datos.gob.es/es/apidata"
