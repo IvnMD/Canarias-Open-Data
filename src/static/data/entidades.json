@@ -20374,7 +20374,7 @@
     "notes": null
   },
   {
-    "id": "ministerio_politica_territorial",
+    "id": "ministerio_politica_territorial_memoria_democratica",
     "name": "Ministerio de Política Territorial y Memoria Democrática",
     "entity_kind": "organismo",
     "scope": "estatal",
@@ -20382,76 +20382,155 @@
     "islands": [
       "Todas"
     ],
-    "description": "Ministerio estatal con datos sobre administración territorial, coordinación con comunidades autónomas y memoria histórica. Incluye datos sobre financiación y competencias del régimen especial canario.",
+    "description": "Ministerio estatal con Delegación del Gobierno en Canarias y Comisionado Especial para la Reconstrucción de La Palma (volcán Tajogaite). Publica datos sobre infraestructuras locales (EIEL), conflictividad competencial Estado-CCAA, conferencias sectoriales y convenios de cooperación. La transparencia se gestiona a través del Portal de Transparencia del Gobierno de España (transparencia.gob.es).",
     "locations": [
       {
         "kind": "headquarters",
         "address": "Paseo de la Castellana, 3",
-        "postal_code": "28046",
+        "postal_code": "28071",
         "municipality": "Madrid",
-        "island": "Todas",
+        "island": "",
         "coordinates": {
-          "lat": 40.4228,
-          "lon": -3.6927
+          "lat": 40.4262,
+          "lon": -3.6891
         },
-        "source_url": "https://www.mptfd.gob.es/"
+        "source_url": "https://mptmd.gob.es/portal/inicio"
       }
     ],
     "portals": [
       {
-        "id": "portal_principal",
+        "id": "mptmd_catalogo",
         "kind": "open_data",
-        "name": "Datos abiertos – Política Territorial en datos.gob.es",
-        "url": "https://datos.gob.es/es/organizaciones/ministerio-de-politica-territorial-y-memoria-democratica",
+        "name": "Catálogo de Datos — MPTMD",
+        "url": "https://mptmd.gob.es/portal/ministerio/catalogo-de-datos",
         "portal_status": "active",
         "technology": [
-          "datos.gob.es / CKAN"
+          "other"
         ],
         "standards": [],
         "formats": [
-          "CSV",
-          "JSON",
-          "XML"
+          "PDF",
+          "XLS",
+          "XLSX"
         ],
         "topics": [
+          "Gobierno",
+          "Legislación",
+          "Administración local",
+          "Infraestructuras"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Sin API CKAN. Datos publicados como PDFs y Excel. Incluye formulario de solicitud de datos abiertos.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mptmd_eiel",
+        "kind": "estadistica",
+        "name": "Encuesta de Infraestructura y Equipamientos Locales (EIEL)",
+        "url": "https://eiel.redsara.es/descargas/",
+        "portal_status": "active",
+        "technology": [
+          "other"
+        ],
+        "standards": [],
+        "formats": [
+          "TXT",
+          "XLS"
+        ],
+        "topics": [
+          "Infraestructuras",
+          "Administración local",
+          "Municipios"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Descarga por municipio en texto y Excel. Visor georreferenciado disponible.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "portal_transparencia_mptmd",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia del Gobierno de España — MPTMD",
+        "url": "https://transparencia.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "web_propia"
+        ],
+        "standards": [
+          "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno"
+        ],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Transparencia",
+          "Acceso a la información pública",
+          "Publicidad activa",
           "Sector público",
-          "Administración",
-          "Legislación"
+          "Expedientes administrativos"
         ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API catálogo Política Territorial en datos.gob.es",
-            "url": "https://datos.gob.es/apidata/catalogo/dataset?publisher.name=ministerio-de-politica-territorial-y-memoria-democratica",
-            "type": "REST",
-            "documentation_url": "https://datos.gob.es/es/apidata"
-          }
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": "Portal centralizado del Gobierno de España. Permite consultar expedientes administrativos, ejercer el derecho de acceso a la información pública y acceder a la normativa de publicidad activa del MPTMD.",
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "mptmd_sede",
+        "kind": "other",
+        "name": "Sede Electrónica MPTMD",
+        "url": "https://mptmd.sede.gob.es/",
+        "portal_status": "active",
+        "technology": [
+          "sede_electronica"
         ],
+        "standards": [],
+        "formats": [
+          "HTML",
+          "PDF"
+        ],
+        "topics": [
+          "Trámites",
+          "Administración electrónica"
+        ],
+        "has_api": false,
+        "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "Reutilización abierta (condiciones datos.gob.es)",
-        "licenses": [
-          {
-            "name": "Condiciones datos.gob.es",
-            "count": null,
-            "id": null,
-            "url": "https://datos.gob.es/es/aviso-legal"
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.mptfd.gob.es/",
-        "https://datos.gob.es/"
+        "https://mptmd.gob.es/portal/inicio",
+        "https://mptmd.gob.es/portal/ministerio/catalogo-de-datos",
+        "https://transparencia.gob.es/",
+        "https://mptmd.sede.gob.es/"
       ]
     },
-    "notes": null
+    "notes": "CIF: S2801452J. La transparencia del MPTMD se gestiona a través del Portal de Transparencia centralizado del Gobierno de España (transparencia.gob.es), conforme a la Ley 19/2013. Comisionado Especial para la Reconstrucción de La Palma activo, con visor GRAFCAN integrado y portal registral de emergencias. islands=['Todas']: sin desagregación por isla en el catálogo general; el comisionado de La Palma es específico de esa isla."
   },
   {
     "id": "ministerio_trabajo_economia_social",
