@@ -4410,9 +4410,9 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Ayuntamiento de Betancuria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "C/ Amador Rodríguez, 4",
+        "postal_code": "35637",
+        "municipality": "Betancuria",
         "island": "Fuerteventura",
         "coordinates": {
           "lat": 28.4227,
@@ -16914,7 +16914,7 @@
             "documentation_url": "https://datos.gob.es/es/apidata"
           }
         ],
-        "dataset_count": "112403",
+        "dataset_count": 112403,
         "dataset_count_note": "Agregador nacional; el número varía por catálogo federado.",
         "last_updated": "2026-05",
         "license_summary": "Múltiples licencias según el conjunto de datos",
