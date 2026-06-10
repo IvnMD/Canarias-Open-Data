@@ -15739,7 +15739,7 @@
   {
     "id": "tic_ulpgc_slu",
     "name": "TIC ULPGC, S.L.U.",
-    "entity_kind": "empresa_publica",
+    "entity_kind": "organismo",
     "scope": "autonomico",
     "parent_entity_id": null,
     "islands": [
@@ -15763,7 +15763,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – TIC ULPGC, S.L.U.",
         "url": "https://www.tic-ulpgc.es/transparencia",
         "portal_status": "active",
@@ -15778,9 +15778,11 @@
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública",
+          "Informes de transparencia"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15793,18 +15795,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://www.tic-ulpgc.es/transparencia"
       ]
     },
-    "notes": null
+    "notes": "El portal es de transparencia, no de datos abiertos. No se ha confirmado una API ni licencias de reutilización abiertas."
   },
   {
     "id": "universidad_de_la_laguna",
