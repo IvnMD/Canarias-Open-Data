@@ -14095,7 +14095,7 @@
     "portals": [
       {
         "id": "portal_transparencia",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
         "url": "https://teatrocuyas.sedelectronica.es/transparency",
         "portal_status": "active",
@@ -14104,15 +14104,20 @@
         ],
         "standards": [],
         "formats": [
-          "HTML",
-          "PDF"
+          "DOCX",
+          "ODT",
+          "PDF",
+          "TXT",
+          "XML"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "artes_escenicas",
+          "musica"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14125,13 +14130,12 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://teatrocuyas.sedelectronica.es/transparency"
       ]
