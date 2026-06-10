@@ -4423,9 +4423,9 @@
     ],
     "portals": [
       {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Betancuria",
+        "id": "portal_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Betancuria",
         "url": "https://www.aytobetancuria.org/portal-de-transparencia",
         "portal_status": "active",
         "technology": [
@@ -4454,18 +4454,20 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.aytobetancuria.org/portal-de-transparencia"
+        "https://www.aytobetancuria.org/contacto/",
+        "https://gobiernoabierto.cabildofuer.es/es/betancuria",
+        "https://www.lavozdefuerteventura.com/articulo/betancuria/comisionado-transparencia-desvela-que-betancuria-es-unico-municipio-incumplidor-canarias/20260421165741028362.html"
       ]
     },
-    "notes": null
+    "notes": "Betancuria es el municipio más pequeño de Fuerteventura (menos de 1.000 habitantes). En 2024 fue el único municipio incumplidor de Canarias en la evaluación del Comisionado de Transparencia al no presentarse a la evaluación."
   },
   {
     "id": "ayuntamiento_brena_alta",
