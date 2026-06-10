@@ -15140,8 +15140,8 @@
       {
         "kind": "headquarters",
         "address": "AUDITORIO DE TENERIFE, S.A.",
-        "postal_code": null,
-        "municipality": null,
+        "postal_code": "38003",
+        "municipality": "Santa Cruz de Tenerife",
         "island": "Tenerife",
         "coordinates": {
           "lat": 28.4636,
@@ -15153,7 +15153,7 @@
     "portals": [
       {
         "id": "portal_principal",
-        "kind": "open_data",
+        "kind": "transparencia",
         "name": "Portal de datos – AUDITORIO DE TENERIFE, S.A.",
         "url": "https://auditoriodetenerife.com/es/portal-transparencia",
         "portal_status": "active",
@@ -15163,14 +15163,17 @@
         "standards": [],
         "formats": [
           "HTML",
-          "PDF"
+          "PDF",
+          "ODT"
         ],
         "topics": [
           "Transparencia",
           "Sector público",
-          "Administración"
+          "Administración",
+          "Derecho de acceso a la información pública",
+          "Buen gobierno"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15183,18 +15186,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
-        "machine_readable": false
+        "last_checked": "2026-06"
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
         "https://auditoriodetenerife.com/es/portal-transparencia"
       ]
     },
-    "notes": null
+    "notes": "El portal verificado es de transparencia, no un portal de datos abiertos. La información confirmada en la fuente incluye acceso a información pública, solicitud de acceso, declaración de accesibilidad e informe sobre el grado de aplicación de la Ley 12/2014."
   },
   {
     "id": "balten",
