@@ -1538,28 +1538,33 @@
     "locations": [
       {
         "kind": "headquarters",
-        "address": "Cabildo de Gran Canaria – IDE Gran Canaria",
-        "postal_code": null,
-        "municipality": null,
+        "address": "Cabildo de Gran Canaria",
+        "postal_code": "35001",
+        "municipality": "Las Palmas de Gran Canaria",
         "island": "Gran Canaria",
         "coordinates": {
-          "lat": 27.9202,
-          "lon": -15.5474
+          "lat": 28.1248,
+          "lon": -15.43
         },
         "source_url": "https://www.idegrancanaria.es"
       }
     ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Cabildo de Gran Canaria – IDE Gran Canaria",
-        "url": "https://www.idegrancanaria.es",
-        "portal_status": "active",
+      "portals": [
+        {
+          "id": "portal_principal",
+          "kind": "geoespacial",
+          "name": "Portal de datos – Cabildo de Gran Canaria – IDE Gran Canaria",
+          "url": "https://www.idegrancanaria.es",
+          "portal_status": "active",
         "technology": [
-          "ArcGIS / Portal geoespacial propio"
+          "ArcGIS",
+          "Portal geoespacial"
         ],
-        "standards": [],
+        "standards": [
+          "OGC",
+          "WMS",
+          "WFS"
+        ],
         "formats": [
           "GeoJSON",
           "Shapefile",
@@ -1581,7 +1586,7 @@
         "apis": [
           {
             "name": "IDE Gran Canaria API",
-            "url": "https://www.idegrancanaria.es/api",
+            "url": "http://idegrancanaria.es/api",
             "type": "REST + OGC",
             "documentation_url": null
           }
@@ -1589,7 +1594,7 @@
         "dataset_count": 55,
         "dataset_count_note": null,
         "last_updated": null,
-        "license_summary": "CC BY",
+        "license_summary": "Licencia propia del Cabildo / CC BY",
         "licenses": [
           {
             "name": "Aviso legal propio / CC BY",
@@ -1597,15 +1602,17 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05",
+        "last_checked": "2026-06",
         "machine_readable": true
       }
     ],
     "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
+      "status": "verified",
+      "last_checked": "2026-06",
       "source_urls": [
-        "https://www.idegrancanaria.es"
+        "http://idegrancanaria.es",
+        "https://visor.idegrancanaria.es/",
+        "https://www.grafcan.es/noticias/2010-05/2010-05-el-cabildo-de-gran-canaria-presenta-la-ide-de-la-isla/"
       ]
     },
     "notes": null
