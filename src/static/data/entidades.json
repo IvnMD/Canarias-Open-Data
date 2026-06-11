@@ -832,7 +832,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -2409,7 +2410,7 @@
           }
         ],
         "last_checked": "2026-06",
-        "machine_readable": true
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -2762,7 +2763,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -3070,7 +3072,8 @@
         "last_updated": null,
         "license_summary": null,
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -3644,7 +3647,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -4567,7 +4571,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-05"
+        "last_checked": "2026-05",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6538,7 +6543,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -6857,7 +6863,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -8339,7 +8346,7 @@
           }
         ],
         "last_checked": "2026-06",
-        "machine_readable": false
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -11573,7 +11580,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12278,7 +12286,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -12825,7 +12834,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -13128,7 +13138,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -13566,7 +13577,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -14198,7 +14210,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -14491,7 +14504,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": true
       }
     ],
     "verification": {
@@ -15547,7 +15561,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -15928,7 +15943,8 @@
         "last_updated": "2025-03",
         "license_summary": "Reutilización abierta",
         "licenses": [],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -16156,7 +16172,8 @@
             "url": null
           }
         ],
-        "last_checked": "2026-06"
+        "last_checked": "2026-06",
+        "machine_readable": false
       }
     ],
     "verification": {
@@ -18951,6 +18968,20 @@
       "Todas"
     ],
     "description": "Sociedad mercantil estatal gestora de la red de aeropuertos de interés general en España. Es relevante para Canarias por su actividad aeroportuaria directa, transparencia corporativa, sostenibilidad, estadísticas de tráfico aéreo y gobierno corporativo con impacto sobre el ecosistema aeroportuario del archipiélago.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Calle de las Peonías, 12, Hortaleza, 28042 Madrid",
+        "postal_code": "28042",
+        "municipality": "Madrid",
+        "island": "",
+        "coordinates": {
+          "lat": 40.4505565,
+          "lon": -3.6160019
+        },
+        "source_url": "https://www.aena.es/es/corporativa/sobre-aena/donde-estamos.html"
+      }
+    ],
     "portals": [
       {
         "id": "transparencia",
