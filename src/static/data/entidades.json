@@ -89,7 +89,7 @@
           "Medio rural",
           "Ciencia y Tecnología"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": 22000,
         "dataset_count_note": null,
@@ -673,104 +673,89 @@
     },
     "notes": null
   },
-  {
-    "id": "cabildo_tenerife",
-    "name": "Cabildo de Tenerife",
-    "entity_kind": "cabildo",
-    "scope": "insular",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de datos abiertos del Cabildo de Tenerife con información sobre movilidad, turismo, territorio, medio ambiente, cartografía, equipamientos, infraestructuras, cultura y datos institucionales.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Cabildo de Tenerife",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.4636,
-          "lon": -16.2518
-        },
-        "source_url": "https://datos.tenerife.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Cabildo de Tenerife",
-        "url": "https://datos.tenerife.es",
-        "portal_status": "active",
-        "technology": [
-          "CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "GeoJSON",
-          "XLSX",
-          "XML",
-          "KML",
-          "PDF",
-          "API"
-        ],
-        "topics": [
-          "Turismo",
-          "Movilidad",
-          "Transporte público",
-          "Medio ambiente",
-          "Territorio",
-          "Cartografía",
-          "Equipamientos",
-          "Sector público",
-          "Cultura",
-          "Deportes",
-          "Infraestructuras",
-          "Economía"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "CKAN API",
-            "url": "https://datos.tenerife.es/api/3/action/package_search",
-            "type": "REST",
-            "documentation_url": "https://datos.tenerife.es/es/datos/api"
-          },
-          {
-            "name": "Servicios geográficos",
-            "url": "https://datos.tenerife.es",
-            "type": "OGC",
-            "documentation_url": null
-          }
-        ],
-        "dataset_count": 285,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
-        "licenses": [
-          {
-            "name": "CC BY 4.0",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://datos.tenerife.es"
-      ]
-    },
-    "notes": null
-  },
+ {
+  "id": "cabildo_tenerife",
+  "name": "Cabildo de Tenerife",
+  "entity_kind": "cabildo",
+  "scope": "insular",
+  "islands": [
+    "Tenerife"
+  ],
+  "description": "Portal de datos abiertos del Cabildo de Tenerife con información sobre movilidad, turismo, territorio, medio ambiente, cartografía, equipamientos, infraestructuras, cultura y datos institucionales.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Cabildo de Tenerife",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.4636,
+        "lon": -16.2518
+      },
+      "source_url": "[datos.tenerife.es](https://datos.tenerife.es)"
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_principal",
+      "kind": "open_data",
+      "name": "Portal de datos – Cabildo de Tenerife",
+      "url": "[datos.tenerife.es](https://datos.tenerife.es)",
+      "portal_status": "active",
+      "technology": [
+        "CKAN"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "GeoJSON",
+        "XLSX",
+        "XML",
+        "KML",
+        "PDF",
+        "API"
+      ],
+      "topics": [
+        "Turismo",
+        "Movilidad",
+        "Transporte público",
+        "Medio ambiente",
+        "Territorio",
+        "Cartografía",
+        "Equipamientos",
+        "Sector público",
+        "Cultura",
+        "Deportes",
+        "Infraestructuras",
+        "Economía"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "CKAN Action API",
+          "url": "[datos.tenerife.es](https://datos.tenerife.es/api/3/action)",
+          "type": "REST",
+          "documentation_url": "[datos.tenerife.es](https://datos.tenerife.es/es/datos/api)"
+        }
+      ],
+      "dataset_count": 285,
+      "license_summary": "CC BY 4.0",
+      "licenses": [
+        {
+          "name": "CC BY 4.0"
+        }
+      ],
+      "last_checked": "2026-05"
+    }
+  ],
+  "verification": {
+    "status": "estimated",
+    "last_checked": "2026-05",
+    "source_urls": [
+      "[datos.tenerife.es](https://datos.tenerife.es)"
+    ]
+  }
+}
+,
   {
     "id": "ayuntamiento_las_palmas_gc",
     "name": "Ayuntamiento de Las Palmas de Gran Canaria",
@@ -961,93 +946,84 @@
     }
   },
   {
-    "id": "ayuntamiento_arona",
-    "name": "Ayuntamiento de Arona – Open Data Arona",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de datos abiertos del Ayuntamiento de Arona.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de Arona – Open Data Arona",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.0997,
-          "lon": -16.6817
-        },
-        "source_url": "https://opendataaronapre.grupotecopy.es/"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de Arona – Open Data Arona",
-        "url": "https://opendataaronapre.grupotecopy.es/",
-        "portal_status": "active",
-        "technology": [
-          "CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "PDF",
-          "API"
-        ],
-        "topics": [
-          "Ciencia y Tecnología",
-          "Comercio",
-          "Demografía",
-          "Deporte",
-          "Educación",
-          "Hacienda",
-          "Legislación y justicia",
-          "Salud",
-          "Sector público",
-          "Turismo"
-        ],
-        "has_api": true,
-        "apis": [
-          {
-            "name": "API CKAN",
-            "url": "https://opendataaronapre.grupotecopy.es/es/api",
-            "type": "REST",
-            "documentation_url": null
-          }
-        ],
-        "dataset_count": 14,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "CC BY 4.0",
-        "licenses": [
-          {
-            "name": "CC BY 4.0",
-            "count": 14,
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "estimated",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://opendataaronapre.grupotecopy.es/"
-      ]
-    },
-    "notes": null
-  },
+  "id": "ayuntamiento_arona",
+  "name": "Ayuntamiento de Arona – Open Data Arona",
+  "entity_kind": "ayuntamiento",
+  "scope": "municipal",
+  "islands": [
+    "Tenerife"
+  ],
+  "description": "Portal de datos abiertos del Ayuntamiento de Arona.",
+  "locations": [
+    {
+      "kind": "headquarters",
+      "address": "Ayuntamiento de Arona – Open Data Arona",
+      "island": "Tenerife",
+      "coordinates": {
+        "lat": 28.0997,
+        "lon": -16.6817
+      },
+      "source_url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_principal",
+      "kind": "open_data",
+      "name": "Portal de datos – Ayuntamiento de Arona – Open Data Arona",
+      "url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)",
+      "portal_status": "active",
+      "technology": [
+        "CKAN"
+      ],
+      "formats": [
+        "CSV",
+        "JSON",
+        "XML",
+        "PDF",
+        "API"
+      ],
+      "topics": [
+        "Ciencia y Tecnología",
+        "Comercio",
+        "Demografía",
+        "Deporte",
+        "Educación",
+        "Hacienda",
+        "Legislación y justicia",
+        "Salud",
+        "Sector público",
+        "Turismo"
+      ],
+      "has_api": true,
+      "apis": [
+        {
+          "name": "CKAN Action API",
+          "url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/api/3/action)",
+          "type": "REST",
+          "documentation_url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/es/api)"
+        }
+      ],
+      "dataset_count": 14,
+      "license_summary": "CC BY 4.0",
+      "licenses": [
+        {
+          "name": "CC BY 4.0",
+          "count": 14
+        }
+      ],
+      "last_checked": "2026-05"
+    }
+  ],
+  "verification": {
+    "status": "estimated",
+    "last_checked": "2026-05",
+    "source_urls": [
+      "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
+    ]
+  }
+}
+,
   {
     "id": "comisionado_transparencia_canarias",
     "name": "Comisionado de Transparencia y Acceso a la Información Pública de Canarias",
@@ -5911,7 +5887,7 @@
           "XLSX",
           "XML"
         ],
-        "has_api": null,
+        "has_api": false,
         "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
@@ -8168,7 +8144,7 @@
           "CSV",
           "XLSX"
         ],
-        "has_api": null,
+        "has_api": false,
         "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
@@ -9868,7 +9844,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -9938,7 +9914,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -10143,7 +10119,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -10213,7 +10189,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -10283,7 +10259,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -10449,7 +10425,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -10519,7 +10495,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -10594,7 +10570,7 @@
           "contratacion",
           "subvenciones"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": "Portal de transparencia informativa, no catálogo de datasets estructurados",
@@ -10845,7 +10821,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -11085,7 +11061,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -11710,7 +11686,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -11780,7 +11756,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -11925,7 +11901,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -11995,7 +11971,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -12213,7 +12189,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -12358,7 +12334,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -12486,7 +12462,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -12759,7 +12735,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -12991,7 +12967,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13061,7 +13037,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13296,7 +13272,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13366,7 +13342,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13577,7 +13553,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13740,7 +13716,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13810,7 +13786,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -13880,7 +13856,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14067,7 +14043,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14137,7 +14113,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14209,7 +14185,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14278,7 +14254,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14424,7 +14400,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14658,7 +14634,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14889,7 +14865,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -14959,7 +14935,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15167,7 +15143,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15253,7 +15229,7 @@
           "XLSX",
           "XML"
         ],
-        "has_api": null,
+        "has_api": false,
         "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
@@ -15345,7 +15321,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15415,7 +15391,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -15485,7 +15461,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16095,7 +16071,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16236,7 +16212,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16306,7 +16282,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16447,7 +16423,7 @@
           "XLSX",
           "XML"
         ],
-        "has_api": null,
+        "has_api": false,
         "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
@@ -16472,7 +16448,7 @@
           "medio_ambiente"
         ],
         "formats": [],
-        "has_api": null,
+        "has_api": false,
         "machine_readable": false,
         "dataset_count": null,
         "portal_status": "active",
@@ -16581,7 +16557,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16651,7 +16627,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -16737,7 +16713,7 @@
           "XLSX",
           "XML"
         ],
-        "has_api": null,
+        "has_api": false,
         "machine_readable": true,
         "dataset_count": null,
         "portal_status": "active",
@@ -16997,7 +16973,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -17137,7 +17113,7 @@
           "Sector público",
           "Administración"
         ],
-        "has_api": true,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -18168,7 +18144,7 @@
           "archivos",
           "bibliotecas"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": "El ministerio actúa como productor y coordinador cultural; varios recursos abiertos dependen de organismos adscritos.",
@@ -18428,7 +18404,7 @@
           "fp",
           "deportes"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -18506,7 +18482,7 @@
           "tributos",
           "administracion_financiera"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -19322,7 +19298,7 @@
           "proteccion_civil",
           "penitenciario"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -19353,7 +19329,7 @@
           "estructura",
           "empleo_publico"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -19394,7 +19370,7 @@
           "armas",
           "metodologia"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -19458,7 +19434,7 @@
           "cooperacion",
           "movilidad_internacional"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -19536,7 +19512,7 @@
           "alimentacion",
           "ganaderia"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -19618,7 +19594,7 @@
           "fp",
           "deportes"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": null,
@@ -20191,7 +20167,7 @@
           "cultura",
           "estadistica"
         ],
-        "has_api": null,
+        "has_api": false,
         "apis": [],
         "dataset_count": null,
         "dataset_count_note": "La sección integra numerosas operaciones, visores, PDFs y descargas; no se ha fijado un recuento único y estable de datasets.",
