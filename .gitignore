@@ -21,3 +21,10 @@ __pycache__/
 repomix-output.txt
 repomix-output.md
 repomix-output.xlm
+
+# Scripts experimentales no productivos
+src/static/utils/rdf.py
+
+# Artefactos generados por utils
+src/static/utils/resultadoReparto.txt
+src/static/utils/*.txt

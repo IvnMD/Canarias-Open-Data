@@ -122,17 +122,17 @@ function normalize(e) {
   // Normalize APIs to a guaranteed array
   const apis = portal?.apis && Array.isArray(portal.apis) ? portal.apis : [];
 
-// Formats can come from several places depending on the source entity
-const formats = portal?.formats || e.formats || e.data?.formats || [];
-const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
+  // Formats can come from several places depending on the source entity
+  const formats = portal?.formats || e.formats || e.data?.formats || [];
+  const machineReadableFormats = ['CSV', 'JSON', 'GEOJSON', 'XML', 'XLSX', 'ODS'];
 
-const hasMachineReadableFormat = formats.some(f => {
-  const value = String(f || '').trim().toUpperCase();
-  return machineReadableFormats.includes(value);
-});
+  const hasMachineReadableFormat = formats.some(f => {
+    const value = String(f || '').trim().toUpperCase();
+    return machineReadableFormats.includes(value);
+  });
 
-// Machine-readable se decide SOLO por formatos (ignora lo que venga del JSON)
-const machine_readable = hasMachineReadableFormat;
+  // Machine-readable se decide SOLO por formatos (ignora lo que venga del JSON)
+  const machine_readable = hasMachineReadableFormat;
 
   // Normalize dataset count to number|null
   const rawCount = portal?.dataset_count ?? e.dataset_count ?? e.data?.count ?? null;
@@ -591,12 +591,12 @@ function render(list) {
         </div>
       ` : ''}
 
-      <div class="card-stats">
-        <div class="stat">
-          <span class="stat-value">${e.dataset_count ?? '—'}</span>
-          <span class="stat-label">datasets</span>
+       <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">${typeof e.dataset_count === 'number' ? e.dataset_count.toLocaleString('es-ES') : '—'}</span>
+            <span class="stat-label">datasets</span>
+          </div>
         </div>
-      </div>
 
       ${allCategories.length > 0 ? `
         <div class="card-section" id="${cardId}">

@@ -288,19 +288,17 @@
              DATASET COUNT EXTRACTION
           -------------------------------------------------- */
 
-          // Use first portal available
-          const portal = (entidad.portals || [])[0];
-
-          // Get dataset count or fallback to 0
-          const datasetCount =
-            portal ? (portal.dataset_count || 0) : 0;
+          const datasetCount = (entidad.portals || []).reduce((sum, p) => {
+            const count = p.dataset_count;
+            return sum + (typeof count === 'number' ? count : 0);
+          }, 0);
 
 
           /* -------------------------------------------------
              CREATE LEAFLET MARKER
           -------------------------------------------------- */
 
-                    const marker = L.circleMarker([lat, lon], {
+          const marker = L.circleMarker([lat, lon], {
             radius: 8,
             fillColor: getColor(entidad.entity_kind),
             color: '#ffffff',
@@ -308,14 +306,14 @@
             opacity: 1,
             fillOpacity: 0.9
           })
-          .addTo(map)
-          .bindPopup(`
+            .addTo(map)
+            .bindPopup(`
             <div style="min-width:220px">
               <h2 style="margin-bottom:0.5rem; font-size:1rem;">
                 ${entidad.name}
               </h2>
               <p><strong>Tipo:</strong> ${getTypeName(entidad.entity_kind)}</p>
-              <p><strong>Datasets:</strong> ${datasetCount}</p>
+              <p><strong>Datasets:</strong> ${datasetCount > 0 ? datasetCount.toLocaleString('es-ES') : 'No disponible'}</p>
             </div>
           `);
 

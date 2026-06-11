@@ -1805,13 +1805,13 @@
         "source_url": "https://www.idegrancanaria.es"
       }
     ],
-      "portals": [
-        {
-          "id": "portal_principal",
-          "kind": "geoespacial",
-          "name": "Portal de datos – Cabildo de Gran Canaria – IDE Gran Canaria",
-          "url": "https://www.idegrancanaria.es",
-          "portal_status": "active",
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "geoespacial",
+        "name": "Portal de datos – Cabildo de Gran Canaria – IDE Gran Canaria",
+        "url": "https://www.idegrancanaria.es",
+        "portal_status": "active",
         "technology": [
           "ArcGIS",
           "Portal geoespacial"
@@ -4108,7 +4108,7 @@
         "kind": "headquarters",
         "address": "Calle Mayor, 1",
         "postal_code": "35200",
-        "municipality": "Agüimes",  
+        "municipality": "Agüimes",
         "island": "Gran Canaria",
         "coordinates": {
           "lat": 27.9076,
@@ -5117,8 +5117,8 @@
         "municipality": "El Pinar de El Hierro",
         "island": "El Hierro",
         "coordinates": {
-          "lat": 27.7534,
-          "lon": -18.0267
+          "lat": 27.708972,
+          "lon": -17.979083
         },
         "source_url": "https://elpinardeelhierro.sedelectronica.es/info.0"
       }
@@ -7649,7 +7649,7 @@
       }
     ],
     "verification": {
-      "status": "verified"  ,
+      "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.pajara.es",
@@ -8830,7 +8830,7 @@
         "island": "Lanzarote",
         "coordinates": {
           "lat": 29.0608,
-        "lon": -13.5619
+          "lon": -13.5619
         },
         "source_url": "https://sede.teguise.es/transparencia"
       }
@@ -10875,8 +10875,8 @@
     "id": "fundacion_canaria_de_juventud_ideo",
     "name": "Fundación Canaria de Juventud IDEO",
     "alternate_names": [
-        "Fundación IDEO",
-        "IDEO"
+      "Fundación IDEO",
+      "IDEO"
     ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
@@ -10886,30 +10886,30 @@
     ],
     "description": "Empresa pública de la Comunidad Autónoma de Canarias. Publica información institucional, contratos, subvenciones y datos de buen gobierno a través de su portal de transparencia. No dispone de portal de datos abiertos estructurados.",
     "locations": [
-        {
-            "kind": "headquarters",
-            "address": "Avd. Primero de Mayo, 12, 3ª planta, 35002, Las Palmas de Gran Canaria",
-            "postal_code": "35002",
-            "municipality": "Las Palmas de Gran Canaria",
-            "island": "Gran Canaria",
-            "coordinates": {
-                "lat": 28.1047,
-                "lon": -15.4154
-            },
-            "source_url": "https://fundacionideo.org/transparencia"
+      {
+        "kind": "headquarters",
+        "address": "Avd. Primero de Mayo, 12, 3ª planta, 35002, Las Palmas de Gran Canaria",
+        "postal_code": "35002",
+        "municipality": "Las Palmas de Gran Canaria",
+        "island": "Gran Canaria",
+        "coordinates": {
+          "lat": 28.1047,
+          "lon": -15.4154
         },
-        {
-            "kind": "office",
-            "address": "Ctra. Subida el Mayorazgo, 3, 2ª y 4ª planta, 38110, Santa Cruz de Tenerife",
-            "postal_code": "38110",
-            "municipality": "Santa Cruz de Tenerife",
-            "island": "Tenerife",
-            "coordinates": {
-                "lat": 28.4636,
-                "lon": -16.2518
-            },
-            "source_url": "https://fundacionideo.org/transparencia"
-        }
+        "source_url": "https://fundacionideo.org/transparencia"
+      },
+      {
+        "kind": "office",
+        "address": "Ctra. Subida el Mayorazgo, 3, 2ª y 4ª planta, 38110, Santa Cruz de Tenerife",
+        "postal_code": "38110",
+        "municipality": "Santa Cruz de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4636,
+          "lon": -16.2518
+        },
+        "source_url": "https://fundacionideo.org/transparencia"
+      }
     ],
     "portals": [
       {
@@ -11115,8 +11115,8 @@
     "id": "gestion_de_servicios_para_la_salud_y_seguridad_en_canarias_s",
     "name": "Gestión de Servicios para la Salud y Seguridad en Canarias, S.A. GSC",
     "alternate_names": [
-        "GSC",
-        "GSC Canarias"
+      "GSC",
+      "GSC Canarias"
     ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
@@ -12243,8 +12243,8 @@
     "id": "promotur_turismo_de_canarias_sa",
     "name": "PROMOTUR TURISMO DE CANARIAS, S.A.",
     "alternate_names": [
-        "Promotur Turismo Canarias",
-        "Promotur"
+      "Promotur Turismo Canarias",
+      "Promotur"
     ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
@@ -12789,8 +12789,8 @@
     "id": "sociedad_para_el_desarrollo_economico_de_canarias_sa_sodecan",
     "name": "Sociedad para el Desarrollo Económico de Canarias, S.A. SODECAN",
     "alternate_names": [
-        "SODECAN",
-        "Sodecan"
+      "SODECAN",
+      "Sodecan"
     ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",
@@ -13091,8 +13091,8 @@
     "id": "empresa_insular_de_servicios_el_meridiano_sa",
     "name": "Empresa Insular de Servicios El Meridiano, S.A.",
     "alternate_names": [
-        "El Meridiano S.A.U.",
-        "Meridiano SAU"
+      "El Meridiano S.A.U.",
+      "Meridiano SAU"
     ],
     "entity_kind": "empresa_publica",
     "scope": "insular",
@@ -14454,7 +14454,7 @@
     "id": "fundacion_canaria_de_las_artes_escenicas_y_de_la_musica_de_g",
     "name": "Fundación Canaria de las Artes Escénicas y de la Música de Gran Canaria",
     "alternate_names": [
-        "Fundación de Artes Escénicas y Música de Gran Canaria"
+      "Fundación de Artes Escénicas y Música de Gran Canaria"
     ],
     "entity_kind": "empresa_publica",
     "scope": "autonomico",

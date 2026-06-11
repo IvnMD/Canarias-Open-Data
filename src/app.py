@@ -1,7 +1,9 @@
 import os
 import json
 from flask import Flask, jsonify, render_template, request
+from flask.json.provider import DefaultJSONProvider
 
+DefaultJSONProvider.sort_keys = False
 
 # Application factory and configuration
 

@@ -26,6 +26,7 @@ El proyecto busca:
 El catálogo documenta el ecosistema completo de publicación de datos públicos en Canarias, incluyendo entidades de ámbito autonómico, insular, municipal, estatal y europeo relevantes para las islas.
 
 ### Administración autonómica
+
 - Gobierno de Canarias — Portal de Datos Abiertos (`datos.canarias.es`)
 - Portal de Gobierno Abierto del Gobierno de Canarias
 - ISTAC — Instituto Canario de Estadística (21.755+ datasets, APIs eDatos)
@@ -33,7 +34,9 @@ El catálogo documenta el ecosistema completo de publicación de datos públicos
 - Comisionado de Transparencia y Acceso a la Información Pública de Canarias
 
 ### Cabildos insulares
+
 Los 7 cabildos de Canarias, con sus portales de datos abiertos y de transparencia:
+
 - Cabildo de Tenerife
 - Cabildo de Gran Canaria — IDE Gran Canaria
 - Cabildo de Lanzarote
@@ -43,9 +46,11 @@ Los 7 cabildos de Canarias, con sus portales de datos abiertos y de transparenci
 - Cabildo de El Hierro
 
 ### Ayuntamientos
+
 Los **88 municipios de Canarias**, con documentación de sus portales de transparencia, sedes electrónicas y, donde existen, portales de datos abiertos reutilizables.
 
 Municipios con portal de datos abiertos destacado:
+
 - Las Palmas de Gran Canaria — CKAN (`datosabiertos.laspalmasgc.es`)
 - Santa Cruz de Tenerife — CKAN (`santacruzdetenerife.es/opendata`)
 - Arona — CKAN (`opendataarona`)
@@ -53,7 +58,9 @@ Municipios con portal de datos abiertos destacado:
 Resto de municipios: portal de transparencia activa conforme a la Ley 12/2014 de Canarias y/o Ley 19/2013 estatal.
 
 ### Organismos y entidades estatales
+
 Fuentes con datos desagregados por Canarias o relevantes para el ecosistema insular:
+
 - SEPE — Paro registrado y contratos por provincia canaria
 - AENA — Estadísticas de los 8 aeropuertos canarios
 - Autoridad Portuaria de Santa Cruz de Tenerife — CKAN (69 datasets)
@@ -61,6 +68,7 @@ Fuentes con datos desagregados por Canarias o relevantes para el ecosistema insu
 - Ministerio de Justicia — Estadística judicial con datos de Canarias
 
 ### Portales de referencia
+
 - OpenStreetMap — Islas Canarias (Overpass API, ODbL)
 - European Data Portal (`data.europa.eu`) — datasets federados de Canarias
 
@@ -112,6 +120,7 @@ El proyecto clasifica datasets en categorías como:
 # Tecnologías detectadas
 
 ## Plataformas de portal
+
 - CKAN (Gobierno de Canarias, Tenerife, Las Palmas GC, La Palma Smart Open, AP Tenerife…)
 - ArcGIS Hub / ArcGIS Online (Open Data La Palma, IDE Gran Canaria)
 - Portales propios / custom (Lanzarote, Comisionado de Transparencia…)
@@ -119,6 +128,7 @@ El proyecto clasifica datasets en categorías como:
 - eDatos ISTAC — infraestructura estadística propia
 
 ## APIs y estándares
+
 - REST / CKAN Action API
 - OGC WMS / WFS / WCS
 - SPARQL
@@ -127,6 +137,7 @@ El proyecto clasifica datasets en categorías como:
 - NTRIP (red GNSS GRAFCAN)
 
 ## Formatos más frecuentes
+
 - CSV, JSON, GeoJSON, XML
 - KML, KMZ, SHP, GPKG, GML
 - XLSX, ODS, PDF
@@ -139,17 +150,31 @@ El proyecto clasifica datasets en categorías como:
 
 ```text
 proyecto/
-│
 ├── src/
 │   ├── app.py                        # Flask: rutas web + API REST
 │   ├── templates/
 │   │   ├── index.html                # Vista principal — catálogo de entidades
 │   │   ├── mapa.html                 # Vista mapa interactivo (Leaflet)
-│   │   └── estadisticas.html         # Vista estadísticas (Chart.js)
+│   │   ├── estadisticas.html         # Vista estadísticas (Chart.js)
+│   │   └── acerca.html               # Vista metodología y documentación
 │   └── static/
+│       ├── assets/                   # Logo SVG y otros recursos
 │       ├── css/
+│       │   ├── tokens.css            # Variables de tema (light + dark)
+│       │   ├── base.css              # Reset y layout base
+│       │   ├── components.css        # Componentes compartidos
+│       │   └── pages/
+│       │       ├── acerca.css
+│       │       ├── estadisticas.css
+│       │       └── mapa.css
 │       ├── js/
-│       ├── img/
+│       │   └── app.js                # Lógica del buscador principal
+│       ├── utils/
+│       │   ├── validadorJson.py      # Valida entidades.json contra el schema
+│       │   ├── machineValidator.py   # Comprueba formatos machine-readable
+│       │   ├── inspeccionarEntidadJson.py  # Inspección y diagnóstico del catálogo
+│       │   ├── repartirEntidades.py  # Distribuye entidades por dificultad para validar.
+│       │   └── rdf.py                # Exportación RDF del catálogo
 │       └── data/
 │           ├── entidades.json        # Fuente de verdad del catálogo
 │           ├── entidades.schema.json # JSON Schema 2020-12 (referencia normativa)
@@ -163,6 +188,22 @@ proyecto/
 ```
 
 ---
+
+## Scripts de utilidad (`src/static/utils/`)
+
+| Script | Función |
+|---|---|
+| `validadorJson.py` | Valida `entidades.json` contra `entidades.schema.json` |
+| `machineValidator.py` | Comprueba qué portales tienen formatos machine-readable |
+| `inspeccionarEntidadJson.py` | Diagnóstico y estadísticas del catálogo |
+| `repartirEntidades.py` | Distribuye entidades por isla y tipo para revisión |
+| `rdf.py` | Exporta el catálogo en formato RDF |
+
+Ejecutar desde la raíz del proyecto:
+
+```bash
+python src/static/utils/validadorJson.py
+```
 
 # Fuente de verdad: `entidades.json`
 
@@ -227,6 +268,7 @@ docker compose up
 ```
 
 Disponible en:
+
 - Web: `http://localhost:8000/`
 - API entidades: `http://localhost:8000/api/entidades`
 - API stats: `http://localhost:8000/api/stats`
@@ -238,6 +280,7 @@ cd docker && docker compose down
 ```
 
 ---
+
 ## API REST
 
 La aplicación expone una API REST ligera servida por Flask.  
@@ -300,22 +343,28 @@ curl http://localhost:5000/api/stats
 
 ```json
 {
-  "total_entidades": 120,
-  "total_portales": 310,
-  "total_datasets": 45000,
-  "con_api": 38,
-  "machine_readable_pct": 72,
+  "total_entidades": 228,
+  "total_portales": 348,
+  "total_datasets": 58063,
+  "con_api": 83,
+  "machine_readable_pct": 34,
   "por_tipo": {
     "ayuntamiento": 87,
-    "organismo": 18,
-    "cabildo": 8,
-    "gobierno_autonomico": 4,
-    "empresa_publica": 3
+    "cabildo": 7,
+    "empresa_publica": 37,
+    "gobierno_autonomico": 2,
+    "organismo": 95
   },
   "por_isla": {
-    "Tenerife": 52,
-    "Gran Canaria": 41,
-    "La Palma": 12
+    "Tenerife": 49,
+    "Gran Canaria": 55,
+    "La Palma": 28,
+    "Fuerteventura": 22,
+    "Lanzarote": 19,
+    "El Hierro": 20,
+    "La Gomera": 20,
+    "La Graciosa": 10,
+    "Todas": 93
   }
 }
 ```
@@ -366,13 +415,14 @@ python src/static/data/fecha.py
 - Integración automática con APIs CKAN para sincronizar `dataset_count`
 - Validación automática de disponibilidad de portales
 - Exportación DCAT-AP del catálogo completo
-- Índice de madurez open data por entidad y por isla
 - Métricas comparativas entre islas
 - Ampliar cobertura de empresas públicas y universidades
+- Añadir las mas de 1.000 empresas que publican datos de transparencia en Canarias (datos de <https://transparenciacanarias.org/>)
 
 ---
 
 # 📚 Documentación del equipo
+
 - [Guía de contribución](./CONTRIBUTING.md)
 - [Gestión de tareas](./GESTION_PROYECTO.md)
 
