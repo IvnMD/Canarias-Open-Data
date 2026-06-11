@@ -373,7 +373,7 @@ curl http://localhost:5000/api/stats
 
 ---
 
-# Actualizar el catálogo
+# Actualizar el catálogo(Funcion en desarrollo)
 
 1. Editar `src/static/data/entidades.json` cumpliendo el schema
 2. Campos obligatorios en cada entidad nueva: `id`, `name`, `entity_kind`, `scope`, `islands`, `description`, `verification`
