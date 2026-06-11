@@ -1,140 +1,5 @@
 [
   {
-    "id": "gobierno_canarias",
-    "name": "Gobierno de Canarias – Portal de Datos Abiertos",
-    "entity_kind": "gobierno_autonomico",
-    "scope": "autonomico",
-    "parent_entity_id": null,
-    "islands": [
-      "Todas",
-      "Gran Canaria",
-      "Tenerife",
-      "Lanzarote",
-      "Fuerteventura",
-      "La Palma",
-      "La Gomera",
-      "El Hierro",
-      "La Graciosa"
-    ],
-    "description": "Portal central que integra datos del Gobierno de Canarias, ISTAC y SITCAN. Más de 22.000 datasets federados con datos.gob.es y European Data Portal.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Gobierno de Canarias – Portal de Datos Abiertos",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Todas",
-        "coordinates": {
-          "lat": 28.29,
-          "lon": -16.62
-        },
-        "source_url": "https://datos.canarias.es"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Gobierno de Canarias – Portal de Datos Abiertos",
-        "url": "https://datos.canarias.es",
-        "portal_status": "active",
-        "technology": [
-          "CKAN"
-        ],
-        "standards": [],
-        "formats": [
-          "CSV",
-          "JSON",
-          "XML",
-          "GeoJSON",
-          "KML",
-          "SHP",
-          "GPKG",
-          "PC-Axis",
-          "ODS",
-          "XLSX",
-          "RDF",
-          "RDF-XML",
-          "N3",
-          "Turtle",
-          "HTML",
-          "PDF",
-          "API",
-          "WMS",
-          "WFS",
-          "ATOM",
-          "RSS"
-        ],
-        "topics": [
-          "Turismo",
-          "Demografía",
-          "Economía",
-          "Empleo",
-          "Medio ambiente",
-          "Salud",
-          "Educación",
-          "Sector público",
-          "Administración",
-          "Transporte",
-          "Urbanismo",
-          "Energía",
-          "Industria",
-          "Comercio",
-          "Hacienda",
-          "Cultura",
-          "Deportes",
-          "Legislación",
-          "Seguridad",
-          "Vivienda",
-          "Medio rural",
-          "Ciencia y Tecnología"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": 22000,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Aviso Legal ISTAC",
-        "licenses": [
-          {
-            "name": "Aviso Legal ISTAC",
-            "count": 21755,
-            "id": null,
-            "url": null
-          },
-          {
-            "name": "Aviso Legal Gobierno Canarias",
-            "count": 291,
-            "id": null,
-            "url": null
-          },
-          {
-            "name": "CC BY 4.0",
-            "count": 285,
-            "id": null,
-            "url": null
-          },
-          {
-            "name": "Aviso Legal SITCAN",
-            "count": 24,
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": true
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://datos.canarias.es"
-      ]
-    },
-    "notes": null
-  },
-  {
     "id": "istac",
     "name": "Instituto Canario de Estadística",
     "alternate_names": [
@@ -673,89 +538,89 @@
     },
     "notes": null
   },
- {
-  "id": "cabildo_tenerife",
-  "name": "Cabildo de Tenerife",
-  "entity_kind": "cabildo",
-  "scope": "insular",
-  "islands": [
-    "Tenerife"
-  ],
-  "description": "Portal de datos abiertos del Cabildo de Tenerife con información sobre movilidad, turismo, territorio, medio ambiente, cartografía, equipamientos, infraestructuras, cultura y datos institucionales.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Cabildo de Tenerife",
-      "island": "Tenerife",
-      "coordinates": {
-        "lat": 28.4636,
-        "lon": -16.2518
-      },
-      "source_url": "[datos.tenerife.es](https://datos.tenerife.es)"
+  {
+    "id": "cabildo_tenerife",
+    "name": "Cabildo de Tenerife",
+    "entity_kind": "cabildo",
+    "scope": "insular",
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Portal de datos abiertos del Cabildo de Tenerife con información sobre movilidad, turismo, territorio, medio ambiente, cartografía, equipamientos, infraestructuras, cultura y datos institucionales.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Cabildo de Tenerife",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.4636,
+          "lon": -16.2518
+        },
+        "source_url": "[datos.tenerife.es](https://datos.tenerife.es)"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Portal de datos – Cabildo de Tenerife",
+        "url": "[datos.tenerife.es](https://datos.tenerife.es)",
+        "portal_status": "active",
+        "technology": [
+          "CKAN"
+        ],
+        "formats": [
+          "CSV",
+          "JSON",
+          "GeoJSON",
+          "XLSX",
+          "XML",
+          "KML",
+          "PDF",
+          "API"
+        ],
+        "topics": [
+          "Turismo",
+          "Movilidad",
+          "Transporte público",
+          "Medio ambiente",
+          "Territorio",
+          "Cartografía",
+          "Equipamientos",
+          "Sector público",
+          "Cultura",
+          "Deportes",
+          "Infraestructuras",
+          "Economía"
+        ],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "CKAN Action API",
+            "url": "[datos.tenerife.es](https://datos.tenerife.es/api/3/action)",
+            "type": "REST",
+            "documentation_url": "[datos.tenerife.es](https://datos.tenerife.es/es/datos/api)"
+          }
+        ],
+        "dataset_count": 285,
+        "license_summary": "CC BY 4.0",
+        "licenses": [
+          {
+            "name": "CC BY 4.0"
+          }
+        ],
+        "last_checked": "2026-05",
+        "machine_readable": true
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "[datos.tenerife.es](https://datos.tenerife.es)"
+      ]
     }
-  ],
-  "portals": [
-    {
-      "id": "portal_principal",
-      "kind": "open_data",
-      "name": "Portal de datos – Cabildo de Tenerife",
-      "url": "[datos.tenerife.es](https://datos.tenerife.es)",
-      "portal_status": "active",
-      "technology": [
-        "CKAN"
-      ],
-      "formats": [
-        "CSV",
-        "JSON",
-        "GeoJSON",
-        "XLSX",
-        "XML",
-        "KML",
-        "PDF",
-        "API"
-      ],
-      "topics": [
-        "Turismo",
-        "Movilidad",
-        "Transporte público",
-        "Medio ambiente",
-        "Territorio",
-        "Cartografía",
-        "Equipamientos",
-        "Sector público",
-        "Cultura",
-        "Deportes",
-        "Infraestructuras",
-        "Economía"
-      ],
-      "has_api": true,
-      "apis": [
-        {
-          "name": "CKAN Action API",
-          "url": "[datos.tenerife.es](https://datos.tenerife.es/api/3/action)",
-          "type": "REST",
-          "documentation_url": "[datos.tenerife.es](https://datos.tenerife.es/es/datos/api)"
-        }
-      ],
-      "dataset_count": 285,
-      "license_summary": "CC BY 4.0",
-      "licenses": [
-        {
-          "name": "CC BY 4.0"
-        }
-      ],
-      "last_checked": "2026-05"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-05",
-    "source_urls": [
-      "[datos.tenerife.es](https://datos.tenerife.es)"
-    ]
-  }
-}
-,
+  },
   {
     "id": "ayuntamiento_las_palmas_gc",
     "name": "Ayuntamiento de Las Palmas de Gran Canaria",
@@ -947,84 +812,84 @@
     }
   },
   {
-  "id": "ayuntamiento_arona",
-  "name": "Ayuntamiento de Arona – Open Data Arona",
-  "entity_kind": "ayuntamiento",
-  "scope": "municipal",
-  "islands": [
-    "Tenerife"
-  ],
-  "description": "Portal de datos abiertos del Ayuntamiento de Arona.",
-  "locations": [
-    {
-      "kind": "headquarters",
-      "address": "Ayuntamiento de Arona – Open Data Arona",
-      "island": "Tenerife",
-      "coordinates": {
-        "lat": 28.0997,
-        "lon": -16.6817
-      },
-      "source_url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
+    "id": "ayuntamiento_arona",
+    "name": "Ayuntamiento de Arona – Open Data Arona",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Portal de datos abiertos del Ayuntamiento de Arona.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Ayuntamiento de Arona – Open Data Arona",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.0997,
+          "lon": -16.6817
+        },
+        "source_url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
+      }
+    ],
+    "portals": [
+      {
+        "id": "portal_principal",
+        "kind": "open_data",
+        "name": "Portal de datos – Ayuntamiento de Arona – Open Data Arona",
+        "url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)",
+        "portal_status": "active",
+        "technology": [
+          "CKAN"
+        ],
+        "formats": [
+          "CSV",
+          "JSON",
+          "XML",
+          "PDF",
+          "API"
+        ],
+        "topics": [
+          "Ciencia y Tecnología",
+          "Comercio",
+          "Demografía",
+          "Deporte",
+          "Educación",
+          "Hacienda",
+          "Legislación y justicia",
+          "Salud",
+          "Sector público",
+          "Turismo"
+        ],
+        "has_api": true,
+        "apis": [
+          {
+            "name": "CKAN Action API",
+            "url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/api/3/action)",
+            "type": "REST",
+            "documentation_url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/es/api)"
+          }
+        ],
+        "dataset_count": 14,
+        "license_summary": "CC BY 4.0",
+        "licenses": [
+          {
+            "name": "CC BY 4.0",
+            "count": 14
+          }
+        ],
+        "last_checked": "2026-05",
+        "machine_readable": true
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-05",
+      "source_urls": [
+        "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
+      ]
     }
-  ],
-  "portals": [
-    {
-      "id": "portal_principal",
-      "kind": "open_data",
-      "name": "Portal de datos – Ayuntamiento de Arona – Open Data Arona",
-      "url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)",
-      "portal_status": "active",
-      "technology": [
-        "CKAN"
-      ],
-      "formats": [
-        "CSV",
-        "JSON",
-        "XML",
-        "PDF",
-        "API"
-      ],
-      "topics": [
-        "Ciencia y Tecnología",
-        "Comercio",
-        "Demografía",
-        "Deporte",
-        "Educación",
-        "Hacienda",
-        "Legislación y justicia",
-        "Salud",
-        "Sector público",
-        "Turismo"
-      ],
-      "has_api": true,
-      "apis": [
-        {
-          "name": "CKAN Action API",
-          "url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/api/3/action)",
-          "type": "REST",
-          "documentation_url": "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/es/api)"
-        }
-      ],
-      "dataset_count": 14,
-      "license_summary": "CC BY 4.0",
-      "licenses": [
-        {
-          "name": "CC BY 4.0",
-          "count": 14
-        }
-      ],
-      "last_checked": "2026-05"
-    }
-  ],
-  "verification": {
-    "status": "verified",
-    "last_checked": "2026-05",
-    "source_urls": [
-      "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
-    ]
-  }
-}
-,
+  },
   {
     "id": "comisionado_transparencia_canarias",
     "name": "Comisionado de Transparencia y Acceso a la Información Pública de Canarias",
@@ -2905,10 +2770,10 @@
     "name": "Ayuntamiento de San Miguel de Abona",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
+    "parent_entity_id": "cabildo_tenerife",
     "islands": [
       "Tenerife"
     ],
-    "parent_entity_id": "cabildo_tenerife",
     "description": "Ayuntamiento del municipio de San Miguel de Abona, sur de Tenerife. Publica transparencia activa conforme a la Ley 12/2014 canaria a través de un portal propio en transparencia.sanmigueldeabona.es, con formatos reutilizables (CSV, JSON, XML, ODS). La sede electrónica opera sobre la plataforma STA/Gestiona.",
     "locations": [
       {
@@ -2930,19 +2795,12 @@
         "kind": "transparencia",
         "name": "Portal de Transparencia – Ayuntamiento de San Miguel de Abona",
         "url": "https://transparencia.sanmigueldeabona.es/",
+        "portal_status": "active",
         "technology": [
           "custom"
         ],
-        "topics": [
-          "presupuestos",
-          "contratos",
-          "subvenciones",
-          "personal",
-          "normativa",
-          "patrimonio",
-          "urbanismo",
-          "estadistica",
-          "tramites"
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
         ],
         "formats": [
           "CSV",
@@ -2955,36 +2813,49 @@
           "XLSX",
           "XML"
         ],
-        "has_api": false,
-        "machine_readable": true,
-        "dataset_count": null,
-        "portal_status": "active",
-        "last_updated": "2026-04",
-        "standards": [
-          "Ley 12/2014 Canaria de Transparencia"
+        "topics": [
+          "presupuestos",
+          "contratos",
+          "subvenciones",
+          "personal",
+          "normativa",
+          "patrimonio",
+          "urbanismo",
+          "estadistica",
+          "tramites"
         ],
+        "has_api": false,
         "apis": [],
-        "licenses": []
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
       },
       {
         "id": "sanmiguel_sede_electronica",
         "kind": "other",
         "name": "Sede Electrónica – Ayuntamiento de San Miguel de Abona",
         "url": "https://aytosanmigueldeabona.sedelectronica.es",
+        "portal_status": "active",
         "technology": [
           "sede_electronica"
         ],
+        "standards": [],
+        "formats": [],
         "topics": [
           "tramites"
         ],
-        "formats": [],
         "has_api": false,
-        "dataset_count": null,
-        "portal_status": "active",
-        "last_updated": null,
-        "standards": [],
         "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
         "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": false
       },
       {
@@ -2992,24 +2863,26 @@
         "kind": "other",
         "name": "Web oficial – Ayuntamiento de San Miguel de Abona",
         "url": "https://www.sanmigueldeabona.es",
+        "portal_status": "active",
         "technology": [
           "cms"
         ],
+        "standards": [],
+        "formats": [],
         "topics": [
           "informacion_municipal"
         ],
-        "formats": [],
         "has_api": false,
-        "dataset_count": null,
-        "portal_status": "active",
-        "last_updated": null,
-        "standards": [],
         "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
         "licenses": [],
+        "last_checked": "2026-06",
         "machine_readable": false
       }
     ],
-    "notes": "CIF: P3803500B. Portal de transparencia propio (tecnología custom), alineado con Ley 12/2014 canaria. La sede STA/Gestiona no incluye sección /transparency/. Existe sede tributaria adicional en sede.sanmigueldeabona.es (perfil del contratante). Teléfono: 922 700 000.",
     "verification": {
       "status": "verified",
       "last_checked": "2026-06",
@@ -3018,7 +2891,8 @@
         "https://transparencia.sanmigueldeabona.es/",
         "https://aytosanmigueldeabona.sedelectronica.es"
       ]
-    }
+    },
+    "notes": "CIF: P3803500B. Portal de transparencia propio (tecnología custom), alineado con Ley 12/2014 canaria. La sede STA/Gestiona no incluye sección /transparency/. Existe sede tributaria adicional en sede.sanmigueldeabona.es (perfil del contratante). Teléfono: 922 700 000."
   },
   {
     "id": "ayuntamiento_guimar",
@@ -7888,76 +7762,6 @@
       "last_checked": "2026-06",
       "source_urls": [
         "https://transparencia.sanjuandelarambla.es"
-      ]
-    },
-    "notes": null
-  },
-  {
-    "id": "ayuntamiento_san_miguel_de_abona",
-    "name": "Ayuntamiento de San Miguel de Abona",
-    "entity_kind": "ayuntamiento",
-    "scope": "municipal",
-    "parent_entity_id": null,
-    "islands": [
-      "Tenerife"
-    ],
-    "description": "Portal de transparencia del Ayuntamiento de San Miguel de Abona. Publica información institucional, contratos, subvenciones y datos de buen gobierno. No dispone de portal de datos abiertos estructurados.",
-    "locations": [
-      {
-        "kind": "headquarters",
-        "address": "Ayuntamiento de San Miguel de Abona",
-        "postal_code": null,
-        "municipality": null,
-        "island": "Tenerife",
-        "coordinates": {
-          "lat": 28.0428,
-          "lon": -16.6136
-        },
-        "source_url": "https://aytosanmigueldeabona.sedelectronica.es/transparency"
-      }
-    ],
-    "portals": [
-      {
-        "id": "portal_principal",
-        "kind": "open_data",
-        "name": "Portal de datos – Ayuntamiento de San Miguel de Abona",
-        "url": "https://aytosanmigueldeabona.sedelectronica.es/transparency",
-        "portal_status": "active",
-        "technology": [
-          "Portal Transparencia"
-        ],
-        "standards": [],
-        "formats": [
-          "HTML",
-          "PDF"
-        ],
-        "topics": [
-          "Transparencia",
-          "Sector público",
-          "Administración"
-        ],
-        "has_api": false,
-        "apis": [],
-        "dataset_count": null,
-        "dataset_count_note": null,
-        "last_updated": null,
-        "license_summary": "Reutilización abierta",
-        "licenses": [
-          {
-            "name": "Reutilización abierta (Atribución requerida)",
-            "id": null,
-            "url": null
-          }
-        ],
-        "last_checked": "2026-05",
-        "machine_readable": false
-      }
-    ],
-    "verification": {
-      "status": "verified",
-      "last_checked": "2026-05",
-      "source_urls": [
-        "https://aytosanmigueldeabona.sedelectronica.es/transparency"
       ]
     },
     "notes": null
@@ -17157,7 +16961,7 @@
     "notes": null
   },
   {
-    "id": "ayuntamiento_buena_vista_del_norte",
+    "id": "ayuntamiento_buenavista_del_norte",
     "name": "Ayuntamiento de Buenavista del Norte",
     "entity_kind": "ayuntamiento",
     "scope": "municipal",
@@ -22091,5 +21895,224 @@
       ]
     },
     "notes": null
+  },
+  {
+    "id": "ayuntamiento_granadilla_de_abona",
+    "name": "Ayuntamiento de Granadilla de Abona",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "parent_entity_id": "cabildo_tenerife",
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Ayuntamiento del municipio de Granadilla de Abona, sur de Tenerife. Dispone de portal de transparencia propio actualizado en mayo 2026, estructurado conforme a la Ley 12/2014 canaria y Ley 19/2013 estatal. Sede electrónica sobre plataforma STA/Gestiona.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza de González de Mena s/n, 38600 Granadilla de Abona",
+        "postal_code": "38600",
+        "municipality": "Granadilla de Abona",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.1317,
+          "lon": -16.5726
+        },
+        "source_url": "https://transparencia.granadilladeabona.org/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "granadilla_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Granadilla de Abona",
+        "url": "https://transparencia.granadilladeabona.org/",
+        "portal_status": "active",
+        "technology": [
+          "WordPress"
+        ],
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia",
+          "Ley 19/2013 estatal"
+        ],
+        "formats": [
+          "PDF",
+          "ODT",
+          "HTML",
+          "ODS"
+        ],
+        "topics": [
+          "contratos",
+          "presupuestos",
+          "urbanismo",
+          "normativa",
+          "corporacion",
+          "indicadores"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-05",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": true
+      },
+      {
+        "id": "granadilla_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Granadilla de Abona",
+        "url": "https://sede.granadilladeabona.es/sta/CarpetaPublic/Public?APP_CODE=STA&PAGE_CODE=PTS2_HOME",
+        "portal_status": "active",
+        "technology": [
+          "STA/Gestiona"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "tramites",
+          "contratacion"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://transparencia.granadilladeabona.org/",
+        "https://sede.granadilladeabona.es/sta/CarpetaPublic/Public?APP_CODE=STA&PAGE_CODE=PTS2_HOME"
+      ]
+    },
+    "notes": "CIF: P3801700J. Alcalde: José Domingo Regalado González (CC). Teléfono: 922 759 900 (010 desde el municipio). Email alcaldía: alcaldia@granadilladeabona.org. DPD: dpd.granadilladeabona@seguridadinformacion.com. Fax: 922 759 965. Oficinas de atención al ciudadano en Granadilla de Abona (Plaza González Mena s/n), San Isidro (C/ Castro nº 2) y El Médano (Plaza de la Ermita s/n). Integrante de la Asociación Comarcal Chasna-Isora. Dispone de portal de participación ciudadana en granadillaparticipa.com."
+  },
+  {
+    "id": "ayuntamiento_vilaflor_de_chasna",
+    "name": "Ayuntamiento de Vilaflor de Chasna",
+    "entity_kind": "ayuntamiento",
+    "scope": "municipal",
+    "parent_entity_id": "cabildo_tenerife",
+    "islands": [
+      "Tenerife"
+    ],
+    "description": "Ayuntamiento del municipio de Vilaflor de Chasna, el municipio más alto de España, sur de Tenerife. Publica transparencia activa conforme a la Ley 12/2014 canaria a través del portal de transparencia integrado en la sede electrónica STA/Gestiona.",
+    "locations": [
+      {
+        "kind": "headquarters",
+        "address": "Plaza Doctor Pérez Cáceres, 1, 38613 Vilaflor de Chasna",
+        "postal_code": "38613",
+        "municipality": "Vilaflor de Chasna",
+        "island": "Tenerife",
+        "coordinates": {
+          "lat": 28.1567,
+          "lon": -16.6378
+        },
+        "source_url": "https://vilaflordechasna.es/"
+      }
+    ],
+    "portals": [
+      {
+        "id": "vilaflor_transparencia",
+        "kind": "transparencia",
+        "name": "Portal de Transparencia – Ayuntamiento de Vilaflor de Chasna",
+        "url": "https://vilaflordechasna.sedelectronica.es/transparency",
+        "portal_status": "active",
+        "technology": [
+          "STA/Gestiona"
+        ],
+        "standards": [
+          "Ley 12/2014 Canaria de Transparencia"
+        ],
+        "formats": [
+          "ODT",
+          "DOCX",
+          "PDF",
+          "HTML",
+          "TXT"
+        ],
+        "topics": [
+          "transparencia",
+          "contratos",
+          "presupuestos",
+          "personal",
+          "administracion"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": "2026-04",
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "vilaflor_sede_electronica",
+        "kind": "other",
+        "name": "Sede Electrónica – Ayuntamiento de Vilaflor de Chasna",
+        "url": "https://vilaflordechasna.sedelectronica.es/info.0",
+        "portal_status": "active",
+        "technology": [
+          "STA/Gestiona"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "tramites"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      },
+      {
+        "id": "vilaflor_web",
+        "kind": "other",
+        "name": "Web oficial – Ayuntamiento de Vilaflor de Chasna",
+        "url": "https://vilaflordechasna.es/",
+        "portal_status": "active",
+        "technology": [
+          "cms"
+        ],
+        "standards": [],
+        "formats": [],
+        "topics": [
+          "informacion_municipal"
+        ],
+        "has_api": false,
+        "apis": [],
+        "dataset_count": null,
+        "dataset_count_note": null,
+        "last_updated": null,
+        "license_summary": null,
+        "licenses": [],
+        "last_checked": "2026-06",
+        "machine_readable": false
+      }
+    ],
+    "verification": {
+      "status": "verified",
+      "last_checked": "2026-06",
+      "source_urls": [
+        "https://vilaflordechasna.es/",
+        "https://vilaflordechasna.sedelectronica.es/transparency",
+        "https://vilaflordechasna.sedelectronica.es/info.0"
+      ]
+    },
+    "notes": "Teléfono: 922 709 002. Fax: 922 709 151. Email alcaldía: alcaldia@vilaflordechasna.com. Dirección: Plaza Doctor Pérez Cáceres, 1, 38613 Vilaflor de Chasna. El municipio más alto de España (~1.400 m s.n.m.). Integrante de la Asociación Comarcal Chasna-Isora junto a otros 8 municipios del sur de Tenerife (Adeje, Arico, Arona, Fasnia, Granadilla de Abona, Guía de Isora, San Miguel de Abona, Santiago del Teide). Teléfono móvil alternativo: 638 265 095."
   }
 ]
