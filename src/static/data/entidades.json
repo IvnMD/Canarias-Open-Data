@@ -126,7 +126,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://datos.canarias.es"
@@ -665,7 +665,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.grafcan.es/servicios/portal-de-datos-abiertos-opendata/"
@@ -748,7 +748,7 @@
     }
   ],
   "verification": {
-    "status": "estimated",
+    "status": "verified",
     "last_checked": "2026-05",
     "source_urls": [
       "[datos.tenerife.es](https://datos.tenerife.es)"
@@ -1016,7 +1016,7 @@
     }
   ],
   "verification": {
-    "status": "estimated",
+    "status": "verified",
     "last_checked": "2026-05",
     "source_urls": [
       "[opendataaronapre.grupotecopy.es](https://opendataaronapre.grupotecopy.es/)"
@@ -1300,7 +1300,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.gobiernodecanarias.org/gobiernoabierto/"
@@ -1399,7 +1399,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.openstreetmap.org"
@@ -2189,7 +2189,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://datos.lanzarote.es"
@@ -2413,7 +2413,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
         "https://www.mjusticia.gob.es/es/AreaTematica/EstadisticaInformacionParlamentaria/Documents/Estadistica_judicial_canarias.html"
@@ -2692,7 +2692,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.aena.es/es/estadisticas.html"
@@ -2766,7 +2766,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
         "https://estadisticasdecriminalidad.ses.mir.es"
@@ -3338,7 +3338,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.laoliva.es"
@@ -3578,7 +3578,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.aytolalaguna.es/transparencia"
@@ -3829,7 +3829,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.vallegranrey.es/transparencia"
@@ -4061,7 +4061,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://eadmin.agulo.org/transparencia"
@@ -4265,7 +4265,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://antigua.sedelectronica.es/transparency"
@@ -4502,7 +4502,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.arrecife.es/transparencia"
@@ -4737,7 +4737,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.barlovento.es"
@@ -4996,7 +4996,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://bbaja.transparenciacanaria.es"
@@ -5233,7 +5233,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://elrosario.sedelectronica.es/transparency"
@@ -5520,7 +5520,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.fasnia.com"
@@ -5752,7 +5752,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://eadmin.garachico.es/transparencia"
@@ -6013,7 +6013,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.galdar.es/t"
@@ -6220,7 +6220,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.icoddelosvinos.es"
@@ -6473,7 +6473,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://laguancha.sedelectronica.es/transparency"
@@ -6792,7 +6792,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.lavictoriadeacentejo.es"
@@ -6932,7 +6932,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.aridane.org"
@@ -7002,7 +7002,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://losrealejos.es/portal-de-transparencia/ayuntamiento"
@@ -7292,7 +7292,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://moya.sedelectronica.es/transparency"
@@ -7362,7 +7362,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-06",
       "source_urls": [
         "https://www.puertodelrosario.org/ayuntamiento/areas-tematicas/transparencia",
@@ -7555,7 +7555,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://puntallana.sedelectronica.es/transparency"
@@ -7807,7 +7807,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://eadmin.maspalomas.com/transparencia"
@@ -7947,7 +7947,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://aytosanmigueldeabona.sedelectronica.es/transparency"
@@ -8017,7 +8017,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.sansebastiangomera.org"
@@ -8271,7 +8271,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.santaluciagc.com"
@@ -8413,7 +8413,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.santaursula.es/transparencia"
@@ -8483,7 +8483,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.santiagodelteide.es/transparencia"
@@ -8779,7 +8779,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.tegueste.es/transparencia"
@@ -9035,7 +9035,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://telde.es/transparencia"
@@ -9297,7 +9297,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.tuineje.es"
@@ -9367,7 +9367,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://eadmin.vallehermosoweb.es/transparencia"
@@ -9532,7 +9532,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://valsequillodegrancanaria.sedelectronica.es/transparency"
@@ -9602,7 +9602,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://aytovalverde.sedelectronica.es/transparency"
@@ -9792,7 +9792,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://yaiza.sedelectronica.es/transparency"
@@ -9862,7 +9862,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www3.gobiernodecanarias.org/educacion/accuee/transparencia"
@@ -9932,7 +9932,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "http://www.acapmn.org"
@@ -10137,7 +10137,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://asistacanarias.org/portaltransparencia"
@@ -10207,7 +10207,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.grafcan.es/transparencia"
@@ -10277,7 +10277,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.cescanarias.org/wp-content/uploads/2023/12/"
@@ -10443,7 +10443,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.rtvc.es/transparencia/indice/ET22"
@@ -10513,7 +10513,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://essscan.es/transparencia"
@@ -10839,7 +10839,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.fciisc.org/index.php/transparencia"
@@ -11079,7 +11079,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://gmrcanarias.com/transparencia"
@@ -11505,7 +11505,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.gesturcanarias.es/transparencia"
@@ -11704,7 +11704,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.gobiernodecanarias.org/icigualdad"
@@ -11774,7 +11774,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "http://www.gobiernodecanarias.org/icap/formacion"
@@ -11919,7 +11919,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "http://www3.gobiernodecanarias.org/sanidad/ichh/transparencia"
@@ -11989,7 +11989,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.icia.es/icia/index.php?option=com_content&view=article&id=4194&Itemid=100130"
@@ -12207,7 +12207,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.itccanarias.org/web/es/portal-de-transparencia"
@@ -12352,7 +12352,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://puertoscanarios.sedelectronica.es/transparency"
@@ -12480,7 +12480,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.gobiernodecanarias.org/empleo/sce/transparencia/index.html"
@@ -12753,7 +12753,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "http://transparencia.proexca.es"
@@ -12985,7 +12985,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.visocan.es/transparencia"
@@ -13055,7 +13055,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://aguaselhierro.sedelectronica.es/transparency"
@@ -13216,7 +13216,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.goronadelviento.es",
@@ -13290,7 +13290,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://mercahierro.com/transparencia"
@@ -13360,7 +13360,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "http://transparencia.aguasfuerteventura.com/index.php"
@@ -13734,7 +13734,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.fuerteventuraturismo.es/transparencia-2"
@@ -13804,7 +13804,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://caam.sedelectronica.es/transparency/08c5e924-80de-44be-b1fa-0a690fc15902"
@@ -13874,7 +13874,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://autgc.sedelectronica.es/transparency"
@@ -14061,7 +14061,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://emergenciasgc.sedelectronica.es/transparency"
@@ -14131,7 +14131,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://viviendagc.org/portal-de-transparencia"
@@ -14272,7 +14272,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://fedac.org/transparencia"
@@ -14418,7 +14418,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://ofgrancanaria.com/transparencia"
@@ -14652,7 +14652,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://grancanariadeportes.sedelectronica.es/transparency"
@@ -14883,7 +14883,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.mataderograncanaria.com/portal-de-transparencia"
@@ -14953,7 +14953,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.grancanaria.com/turismo/es/area-profesional/transparencia/portal-de-transparencia"
@@ -15023,7 +15023,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.spegc.org/transparencia"
@@ -15161,7 +15161,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.valoragt.com/transparencia"
@@ -15339,7 +15339,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "http://www.guaguagomera.com/transparencia"
@@ -15409,7 +15409,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.lapalmaaguas.com"
@@ -15479,7 +15479,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.cslapalma.org/portal-de-transparencia"
@@ -15863,7 +15863,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://fg.ull.es/transparencia"
@@ -16089,7 +16089,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://ric.ulpgc.es/transparencia"
@@ -16230,7 +16230,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.ull.es/portaltransparente"
@@ -16300,7 +16300,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.ulpgc.es/transparencia"
@@ -16575,7 +16575,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.cabildofuer.es/es"
@@ -16645,7 +16645,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://transparencia.lagomera.es"
@@ -16991,7 +16991,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://mancomunidaddelnorte.sedelectronica.es/transparency"
@@ -17061,7 +17061,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://surestegc.sedelectronica.es/transparency"
@@ -17131,7 +17131,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://medianias.sedelectronica.es/transparency"
@@ -17202,7 +17202,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://buenavistadelnorte.sedelectronica.es/transparency"
@@ -18163,7 +18163,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.cultura.gob.es/en/portada.html",
@@ -18423,7 +18423,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.educacionfpydeportes.gob.es/en/portada.html"
@@ -18848,7 +18848,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://sede.oepm.gob.es/eSede/datos/en/"
@@ -19453,7 +19453,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.exteriores.gob.es/en/Paginas/Datos-abiertos.aspx"
@@ -19531,7 +19531,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.mapa.gob.es/en/mapa-web",
@@ -19862,7 +19862,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.exteriores.gob.es/",
@@ -20343,7 +20343,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.defensa.gob.es/",
@@ -20628,7 +20628,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.igualdad.gob.es/",
@@ -20710,7 +20710,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.inclusion.gob.es/",
@@ -20792,7 +20792,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.minetur.gob.es/",
@@ -20872,7 +20872,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://datos.gob.es/"
@@ -20952,7 +20952,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.mjusticia.gob.es/",
@@ -22052,7 +22052,7 @@
       }
     ],
     "verification": {
-      "status": "estimated",
+      "status": "verified",
       "last_checked": "2026-05",
       "source_urls": [
         "https://www.lamoncloa.gob.es/",
