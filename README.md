@@ -1,4 +1,4 @@
-# Practicas-DAM-Datos-Abiertos
+# Canarias Open Data: Catálogo interactivo del ecosistema de datos abiertos de Canarias
 
 Este proyecto recopila, estructura y presenta información sobre organismos públicos canarios que publican datos abiertos o información de transparencia, incluyendo administraciones autonómicas, los 7 cabildos, los 88 municipios de Canarias, organismos estadísticos y geoespaciales, entidades estatales con datos relevantes para las islas, y portales de referencia europeos.
 
