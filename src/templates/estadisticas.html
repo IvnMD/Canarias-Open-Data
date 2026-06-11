@@ -78,19 +78,19 @@
 
         <div class="charts-grid">
 
-            <!-- API CHART -->
-            <section class="chart-card" draggable="true" style="grid-column: span 2;">
+            <!-- ISLANDS -->
+            <section class="chart-card pie-chart" draggable="true">
                 <div class="card-header">
-                    <h2>🔌 Tipos de APIs</h2>
-                    <button id="toggleApiChart" class="chart-toggle-btn">Cambiar gráfica</button>
+                    <h2>🏝️ Entidades por Isla</h2>
+                    <button id="toggleIslandChart" class="chart-toggle-btn">Cambiar gráfica</button>
                 </div>
                 <div class="chart-wrapper">
-                    <canvas id="apiChart"></canvas>
+                    <canvas id="islandChart"></canvas>
                 </div>
             </section>
 
             <!-- FORMATS -->
-            <section class="chart-card" draggable="true" style="grid-column: span 2;">
+            <section class="chart-card pie-chart" draggable="true">
                 <div class="card-header">
                     <h2>🧩 Formatos más usados</h2>
                     <button id="toggleFormatChart" class="chart-toggle-btn">Cambiar gráfica</button>
@@ -100,14 +100,14 @@
                 </div>
             </section>
 
-            <!-- ISLANDS -->
+            <!-- API CHART -->
             <section class="chart-card" draggable="true" style="grid-column: span 2;">
                 <div class="card-header">
-                    <h2>🏝️ Entidades por Isla</h2>
-                    <button id="toggleIslandChart" class="chart-toggle-btn">Cambiar gráfica</button>
+                    <h2>🔌 Tipos de APIs</h2>
+                    <button id="toggleApiChart" class="chart-toggle-btn">Cambiar gráfica</button>
                 </div>
                 <div class="chart-wrapper">
-                    <canvas id="islandChart"></canvas>
+                    <canvas id="apiChart"></canvas>
                 </div>
             </section>
 
@@ -123,7 +123,7 @@
             </section>
 
             <!-- MACHINE READABLE (1 column) -->
-            <section class="chart-card pie-chart" draggable="true">
+            <section class="chart-card" draggable="true" style="grid-column: span 2;">
                 <div class="card-header">
                     <h2>🤖 Datos legibles por máquina</h2>
                     <button id="toggleMachineReadableChart" class="chart-toggle-btn">Cambiar gráfica</button>
@@ -463,10 +463,6 @@
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
 
-            // Dynamic height based on number of bars
-            document.getElementById('formatChart').parentElement.style.minHeight =
-                Math.max(300, sorted.length * 36) + 'px';
-
             const ctx = document.getElementById('formatChart').getContext('2d');
             if (formatChart instanceof Chart) formatChart.destroy();
             formatChart = new Chart(ctx, {
@@ -506,11 +502,14 @@
             const data = sorted.map(i => i[1]);
             const ctx = document.getElementById('islandChart').getContext('2d');
             if (islandChart) islandChart.destroy();
+
             islandChart = new Chart(ctx, {
                 type: islandChartType,
                 data: {
                     labels,
-                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: islandChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(islandChartType), borderColor: getPieBorderColors(), hoverBorderColor: getPieBorderColors(), borderAlign: 'inner' }],
+                    datasets: [{ label: 'Entidades', data, backgroundColor: getChartColors(data.length), borderRadius: islandChartType === 'bar' ? 8 : 0, borderWidth: getPieBorderWidth(islandChartType), borderColor: getPieBorderColors(), hoverBorderColor: getPieBorderColors(), borderAlign: 'inner',
+                        ...(islandChartType === 'bar' ? { barThickness: 28 } : {})
+                    }],
                 },
                 options: {
                     indexAxis: islandChartType === 'bar' ? 'y' : undefined,
@@ -566,10 +565,6 @@
             }
             const labels = sorted.map(i => i[0]);
             const data = sorted.map(i => i[1]);
-
-            // Dynamic height based on number of bars
-            document.getElementById('apiChart').parentElement.style.minHeight =
-                Math.max(300, sorted.length * 36) + 'px';
 
             apiChart = new Chart(ctx, {
                 type: apiChartType,
@@ -840,7 +835,7 @@
 
         function resetToOriginalOrder() {
             const container = document.querySelector('.charts-grid');
-            const originalIds = ['apiChart', 'formatChart', 'islandChart', 'typeChart',
+            const originalIds = ['islandChart', 'formatChart', 'apiChart', 'typeChart',
                 'machineReadablePieChart', 'madurezChart', 'provinceChart', 'scopeChart'];
             originalIds.forEach(id => {
                 const card = Array.from(container.querySelectorAll('.chart-card'))
