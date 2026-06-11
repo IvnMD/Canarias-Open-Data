@@ -259,7 +259,7 @@ Abre en el navegador: `http://localhost:5000`
 
 ---
 
-## 🐳 Ejecución con Docker
+## Ejecución con Docker
 
 ```bash
 cd docker
@@ -421,7 +421,7 @@ python src/static/data/fecha.py
 
 ---
 
-# 📚 Documentación del equipo
+# Documentación del equipo
 
 - [Guía de contribución](./CONTRIBUTING.md)
 - [Gestión de tareas](./GESTION_PROYECTO.md)
