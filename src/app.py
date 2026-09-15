@@ -2,16 +2,18 @@ import os
 import json
 from flask import Flask, jsonify, render_template, request
 from flask.json.provider import DefaultJSONProvider
+from flask_cors import CORS 
 
 DefaultJSONProvider.sort_keys = False
 
 # Application factory and configuration
-
 app = Flask(
     __name__,
     template_folder="templates",
     static_folder="static"
 )
+
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
 # Data paths and utilities
@@ -76,6 +78,11 @@ def estadisticas():
 def acerca():
     """Informational page about methodology, sources and catalog schema."""
     return render_template("acerca.html")
+
+@app.route("/api-explorer")
+def api_explorer():
+    """Interactive API explorer page."""
+    return render_template("api_explorer.html")
 
 
 # REST API

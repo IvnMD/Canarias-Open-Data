@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>API Explorer — Catálogo de Datos Abiertos Canarias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666666;
+      --border: #e0e0e0;
+      --accent: #0066cc;
+      --code-bg: #f5f5f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+
+    header {
+      padding: 2rem 1rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: 320px 1fr;
+      }
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fafafa;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+
+    select,
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      filter: brightness(0.95);
+    }
+
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      overflow: auto;
+      font-size: 0.85rem;
+      max-height: 60vh;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .endpoint {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #f0f0f0;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    .examples {
+      margin-top: 1rem;
+    }
+
+    .examples button {
+      width: auto;
+      display: inline-block;
+      margin: 0.25rem 0.25rem 0 0;
+      background: #f0f0f0;
+      color: #333;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Explorador de la API</h1>
+    <p>
+      Prueba los endpoints <span class="endpoint">/api/entidades</span> y
+      <span class="endpoint">/api/stats</span> con filtros en tiempo real.
+      Los datos provienen del catálogo de entidades de Canarias.
+    </p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <!-- Panel de filtros -->
+      <section class="card">
+        <h2>Filtros</h2>
+        <form id="api-form">
+          <label for="island">Isla</label>
+          <select id="island" name="island">
+            <option value="">Todas</option>
+            <option value="Tenerife">Tenerife</option>
+            <option value="Gran Canaria">Gran Canaria</option>
+            <option value="Lanzarote">Lanzarote</option>
+            <option value="Fuerteventura">Fuerteventura</option>
+            <option value="La Palma">La Palma</option>
+            <option value="La Gomera">La Gomera</option>
+            <option value="El Hierro">El Hierro</option>
+            <option value="La Graciosa">La Graciosa</option>
+            <option value="Todas">Todas</option>
+          </select>
+
+          <label for="kind">Tipo de entidad</label>
+          <select id="kind" name="kind">
+            <option value="">Todos</option>
+            <option value="gobierno_autonomico">Gobierno de Canarias</option>
+            <option value="cabildo">Cabildo</option>
+            <option value="ayuntamiento">Ayuntamiento</option>
+            <option value="organismo">Organismo</option>
+            <option value="empresa_publica">Empresa pública</option>
+          </select>
+
+          <label for="scope">Ámbito</label>
+          <select id="scope" name="scope">
+            <option value="">Todos</option>
+            <option value="autonomico">Autonómico</option>
+            <option value="insular">Insular</option>
+            <option value="municipal">Municipal</option>
+            <option value="estatal">Estatal</option>
+            <option value="europeo">Europeo</option>
+          </select>
+
+          <label for="topic">Tema (texto libre)</label>
+          <input id="topic" name="topic" placeholder="ej. turismo, medio_ambiente…" />
+
+          <label for="has_api">¿Tiene API?</label>
+          <select id="has_api" name="has_api">
+            <option value="">Indistinto</option>
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+          </select>
+
+          <button type="submit">Probar /api/entidades</button>
+        </form>
+
+        <div class="examples">
+          <p class="muted">Ejemplos rápidos:</p>
+          <button type="button" data-example="cabildo-tenerife">Cabildos de Tenerife</button>
+          <button type="button" data-example="ayto-gc">Ayuntamientos Gran Canaria</button>
+          <button type="button" data-example="stats">Ver /api/stats</button>
+        </div>
+      </section>
+
+      <!-- Resultados -->
+      <section class="card">
+        <h2>Resultado</h2>
+        <p class="muted">
+          URL generada:
+        </p>
+        <pre id="url-preview" aria-live="polite"></pre>
+
+        <p class="muted" style="margin-top:1rem;">
+          Respuesta JSON:
+        </p>
+        <pre id="response-box" aria-live="polite"></pre>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const API_BASE = "https://TU-API-EN-RENDER.onrender.com"; //! ← reemplazar tras desplegar en Render
+
+    const form = document.getElementById("api-form");
+    const urlPreview = document.getElementById("url-preview");
+    const responseBox = document.getElementById("response-box");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const params = new URLSearchParams();
+
+      const island = document.getElementById("island").value.trim();
+      const kind = document.getElementById("kind").value.trim();
+      const scope = document.getElementById("scope").value.trim();
+      const topic = document.getElementById("topic").value.trim();
+      const hasApi = document.getElementById("has_api").value.trim();
+
+      if (island) params.set("island", island);
+      if (kind) params.set("kind", kind);
+      if (scope) params.set("scope", scope);
+      if (topic) params.set("topic", topic);
+      if (hasApi) params.set("has_api", hasApi);
+
+      const url = `${API_BASE}/api/entidades?${params.toString()}`;
+      urlPreview.textContent = url;
+      responseBox.textContent = "Cargando…";
+
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        responseBox.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        responseBox.textContent = "Error al llamar a la API: " + err.message;
+      }
+    });
+
+    // Ejemplos rápidos
+    document.querySelectorAll("[data-example]").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const ex = btn.getAttribute("data-example");
+
+        if (ex === "cabildo-tenerife") {
+          document.getElementById("kind").value = "cabildo";
+          document.getElementById("island").value = "Tenerife";
+          document.getElementById("scope").value = "";
+          document.getElementById("topic").value = "";
+          document.getElementById("has_api").value = "";
+          form.dispatchEvent(new Event("submit"));
+        } else if (ex === "ayto-gc") {
+          document.getElementById("kind").value = "ayuntamiento";
+          document.getElementById("island").value = "Gran Canaria";
+          document.getElementById("scope").value = "";
+          document.getElementById("topic").value = "";
+          document.getElementById("has_api").value = "";
+          form.dispatchEvent(new Event("submit"));
+        } else if (ex === "stats") {
+          const url = `${API_BASE}/api/stats`;
+          urlPreview.textContent = url;
+          responseBox.textContent = "Cargando…";
+          try {
+            const res = await fetch(url);
+            const data = await res.json();
+            responseBox.textContent = JSON.stringify(data, null, 2);
+          } catch (err) {
+            responseBox.textContent = "Error: " + err.message;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

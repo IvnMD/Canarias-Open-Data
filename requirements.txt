@@ -1,2 +1,4 @@
 Flask
 jsonschema
+flask-cors
+gunicorn
