@@ -82,7 +82,7 @@ def acerca():
 @app.route("/api-explorer")
 def api_explorer():
     """Interactive API explorer page."""
-    return render_template("api_explorer.html")
+    return render_template("api-explorer.html")
 
 @app.route("/api")
 def api_index():
