@@ -84,6 +84,34 @@ def api_explorer():
     """Interactive API explorer page."""
     return render_template("api_explorer.html")
 
+@app.route("/api")
+def api_index():
+    """API entry point with endpoint documentation."""
+    return jsonify({
+        "name": "API del Catálogo de Datos Abiertos de Canarias",
+        "version": "1.0.0",
+        "endpoints": {
+            "entidades": {
+                "url": "/api/entidades",
+                "method": "GET",
+                "description": "Devuelve el catálogo de entidades con filtros opcionales.",
+                "query_params": {
+                    "island": "Tenerife | Gran Canaria | Lanzarote | Fuerteventura | La Palma | La Gomera | El Hierro | La Graciosa | Todas",
+                    "kind": "gobierno_autonomico | cabildo | ayuntamiento | organismo | empresa_publica",
+                    "scope": "autonomico | insular | municipal | estatal | europeo",
+                    "topic": "Texto parcial; por ejemplo, turismo o medio_ambiente",
+                    "has_api": "true | false"
+                },
+                "example": "/api/entidades?kind=ayuntamiento&island=Tenerife"
+            },
+            "stats": {
+                "url": "/api/stats",
+                "method": "GET",
+                "description": "Devuelve indicadores agregados del catálogo."
+            }
+        }
+    })
+
 
 # REST API
 
